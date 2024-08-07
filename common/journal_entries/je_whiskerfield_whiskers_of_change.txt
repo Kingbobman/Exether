@@ -1,0 +1,85 @@
+﻿je_whiskerfield_whiskers_of_change = {
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	group = je_group_historical_content
+
+	scripted_button = whiskers_of_change_VOZ_button
+	scripted_button = whiskers_of_change_wickerrye_button
+	scripted_button = whiskers_of_change_moorweald_button
+	scripted_button = whiskers_of_change_investment_button
+
+
+	immediate = {
+		
+		
+		trigger_event = {
+			id = whiskers_of_change.1
+			days = 1
+			popup = yes
+		}
+		set_variable = {
+			name = whi_steps
+			value = 0
+		}
+		
+		
+		
+		c:VOZ = {
+			save_scope_as = voz_scope
+		}
+
+		c:DAR = {
+			save_scope_as = dar_scope
+		}
+			
+		c:CER = {
+			save_scope_as = cer_scope
+		}
+
+		c:PRI = {
+			save_scope_as = pri_scope
+		}
+
+		c:SMA = {
+			save_scope_as = sma_scope
+		}
+	}
+
+	complete = {
+		has_technology_researched = railroad
+		3 <= var:whi_steps
+	}
+
+	on_complete = {
+		trigger_event = {
+			id = whiskers_of_change.2
+		}
+	}
+
+	fail = {
+		has_technology_researched = railroad
+		3 > var:whi_steps
+	}
+
+	on_fail = {
+		trigger_event = {
+			id = whiskers_of_change.3
+		}
+	}
+
+	can_deactivate = no
+	
+	possible = {
+		root = c:WHI
+	}
+
+
+	status_desc = {
+
+	}
+
+	should_be_pinned_by_default = yes
+	
+	weight = 2000	
+}

@@ -1,0 +1,122 @@
+whiskers_of_change_VOZ_button = {
+    name = "WoC_vozmead_bargain_button_name"
+    desc = "WoC_vozmead_bargain_button_desc"
+
+    visible = {
+        exists = c:VOZ
+        nor = {
+            has_variable = vozmead_bargain_accepted
+            has_variable = vozmead_bargain_denied
+        }
+    }
+
+    possible = {
+        nor = {
+            has_variable = vozmead_bargain_offered
+            has_variable = vozmead_bargain_accepted
+            has_variable = vozmead_bargain_denied
+        }
+        government_legitimacy > 75
+        ig:ig_petty_bourgeoisie = {
+            is_in_government = yes
+        }
+        c:VOZ = {
+            relations:root >= 20
+        }
+    }
+
+    effect = {
+        set_variable = vozmead_bargain_offered
+        trigger_event = {
+            id = whiskers_of_change.4
+        }
+    }
+
+}
+
+whiskers_of_change_wickerrye_button = {
+    name = "WoC_wickerrye_gambit_button_name"
+    desc = "WoC_wickerrye_gambit_button_desc"
+
+    visible = {
+        nor = {
+            has_variable = wickerrye_gambit_completed
+            has_variable = wickerrye_gambit_failed
+        }
+    }
+    possible = {
+        nor = {
+            has_variable = wickerrye_gambit_attempted
+            has_variable = wickerrye_gambit_completed
+            has_variable = wickerrye_gambit_failed
+        }
+    
+        ig:ig_armed_forces = {
+		    is_marginal = no
+	    }
+        ig:ig_landowners = {
+            is_in_government = no
+        }
+        government_legitimacy > 75
+    }
+    effect = {
+        set_variable = wickerrye_gambit_attempted
+        trigger_event = {
+            id = whiskers_of_change.5
+        }
+    }
+}
+
+whiskers_of_change_moorweald_button = {
+    name = "WoC_moorweald_button_name"
+    desc = "WoC_moorweald_button_desc"
+
+    visible = {
+        nor = {
+            has_variable = moorweald_expedition_completed
+            has_variable = moorweald_expedition_failed
+        }
+    }
+    possible = {
+        nor = {
+            has_variable = moorweald_expedition_completed
+            has_variable = moorweald_expedition_attempted
+            has_variable = moorweald_expedition_failed
+        }
+        ig:ig_industrialists = {
+		    is_marginal = no
+	    }
+        ig:ig_rural_folk = {
+            is_in_government = no
+        }
+        government_legitimacy > 75
+    }
+    effect = {
+        set_variable = moorweald_expedition_attempted
+        trigger_event = {
+            id = whiskers_of_change.6
+        }
+    }
+}
+
+whiskers_of_change_investment_button = {
+    name = "WoC_investment_button_name"
+    desc = "WoC_investment_button_desc"
+
+    possible = {
+        NOT = {
+            has_variable = investment_attempted
+        }
+        OR = {
+            c:CER = {
+                relations:root >= 20
+            }
+            c:THI = {
+                relations:root >= 20
+            }
+            c:DAR = {
+                relations:root >= 20
+            }
+        }
+    }
+}
