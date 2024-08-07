@@ -1,4 +1,4 @@
-STATE_CROWNPEAK = {
+﻿STATE_CROWNPEAK = {
     id = 4001
     subsistence_building = "building_subsistence_farms"
     provinces = { "x41C5FD" "x91B3B1" "xABE279" "xAF99FB" "xB7B7E1" "xB8F076" "xD8EA93" "xD9B0B2" "xDAE643" "xECF754" "xEEDD37" "xF08BCE" "xF4B6B2" "xFADD57" "xFAE3EE" "xFDB84F" }
@@ -459,7 +459,7 @@ STATE_CROWNSHADE = {
     id = 4023
     traits = { "state_trait_yanger_steppe" "state_trait_colicier_mountains" }
     subsistence_building = "building_subsistence_pastures"
-    provinces = { "x65A8F5" "x69F9EB" "x94C2B8" "x95E4D4" "x9EEA90" "xBFEE70" "xD1C77D" "xF58BD1" "xF9EC10" "xFC62BD" "xFECE83" "xCADD9E"}
+    provinces = { "x65A8F5" "x69F9EB" "x94C2B8" "x95E4D4" "x9EEA90" "xBFEE70" "xCADD9E" "xD1C77D" "xF58BD1" "xF9EC10" "xFC62BD" "xFECE83" }
     port = xFECE83
     city = xFC62BD
     farm = xF9EC10
@@ -728,10 +728,10 @@ STATE_DRUMAGAR = {
         bg_iron_mining = 16
         bg_wishstone_mining = 17
     }
-        resource = {
-            type = "bg_wishstone_reefs"
-            undiscovered_amount = 16
-        }
+    resource = {
+        type = "bg_wishstone_reefs"
+        undiscovered_amount = 16
+    }
     naval_exit_id = 3039
 }
 STATE_LOCHTYRE = {
@@ -1054,7 +1054,7 @@ STATE_SHROUDGUARD = {
 STATE_THORNWALL = {
     id = 4053
     subsistence_building = "building_subsistence_farms"
-    provinces = { "x7DEAEA" "x81F0C1" "x92F7B5" "x95D2B9" "x97D0C1" "xB1CD9D" "xD4C0D6" "xE3F5C9" "xEE24F1" "xFCDC62" }
+    provinces = { "x92F7B5" "x95D2B9" "x97D0C1" "xD4C0D6" "xEE24F1" "xFCDC62" }
     traits = { "state_trait_purged_woodlands" }
     port = x81F0C1
     city = xFCDC62
@@ -1068,7 +1068,6 @@ STATE_THORNWALL = {
         bg_logging = 13
         bg_fishing = 3
     }
-    naval_exit_id = 3007
 }
 STATE_SNOWBREACH = {
     id = 4054
@@ -1203,18 +1202,21 @@ STATE_BANCFAN = {
     id = 4061
     subsistence_building = "building_subsistence_farms"
     provinces = { "x26E6F4" "x5EC3F0" "x65F8BD" "x71B2D8" "x7DD0B7" "x8CC0C6" "x99D9BF" "xC1C2ED" "xDAF53E" "xDC31FE" "xE3C44F" "xF6A08C" "xF6C8FA" }
+    prime_land = {
+        "xDAF53E" "x8CC0C6"
+    }
     port = x8CC0C6
     city = xF6C8FA
     farm = xF6A08C
     mine = xE3C44F
     wood = xDC31FE
-    arable_land = 53
+    arable_land = 81
     arable_resources = { "bg_rye_farms" "bg_livestock_ranches" "bg_cotton_plantations" }
     capped_resources = {
-        bg_logging = 11
+        bg_logging = 26
         bg_fishing = 10
-        bg_iron_mining = 7
-        bg_sulfur_mining = 5
+        bg_iron_mining = 13
+        bg_sulfur_mining = 7
     }
     naval_exit_id = 3007
 }
@@ -1258,18 +1260,19 @@ STATE_CAECARW = {
 STATE_PONTBRAN = {
     id = 4065
     subsistence_building = "building_subsistence_farms"
-    provinces = { "x56E7F8" "x5CC5F5" "x64C4E9" "x9FD8D8" "xA0F5A3" "xCC92C9" "xCFBE6D" "xE0D5B7" "xECECE7" "xEF82C1" }
+    provinces = { "x56E7F8" "x5CC5F5" "x64C4E9" "x7DEAEA" "x81F0C1" "x9FD8D8" "xA0F5A3" "xB1CD9D" "xCC92C9" "xCFBE6D" "xE0D5B7" "xE3F5C9" "xECECE7" "xEF82C1" }
+    prime_land = { "xcfbe6d" "xB1CD9D" }
     traits = { "state_trait_forests_of_dread" }
     port = x56E7F8
     city = xEF82C1
     farm = xECECE7
     mine = xE0D5B7
     wood = xCFBE6D
-    arable_land = 67
+    arable_land = 70
     arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
     capped_resources = {
-        bg_logging = 13
-        bg_fishing = 10
+        bg_logging = 26
+        bg_fishing = 13
         bg_hunting = 7
         bg_wishstone_mining = 33
     }
@@ -1344,7 +1347,7 @@ STATE_ALLTGLAS = {
     id = 4070
     traits = { "state_trait_everfrost_terrain" }
     subsistence_building = "building_subsistence_fishing_villages"
-    provinces = { "x42E0D4" "x8CEAB2" "xA5E891" "xBEA9EF" "xBF9DF7" "xBFC18E" "xD262ED" "xE579CC" "xE99CC7" "xF554F6" "xFDDCBB" "xDDE46F" "xAAA4E2" "x61F9B2" "xCCDEC0" }
+    provinces = { "x42E0D4" "x61F9B2" "x8CEAB2" "xA5E891" "xAAA4E2" "xBEA9EF" "xBF9DF7" "xBFC18E" "xCCDEC0" "xD262ED" "xDDE46F" "xE579CC" "xE99CC7" "xF554F6" "xFDDCBB" }
     port = x42E0D4
     city = xFDDCBB
     farm = xF554F6
@@ -1796,16 +1799,16 @@ STATE_YGGHAMN = {
         bg_iron_mining = 18
         bg_logging = 11
         bg_coal_mining = 23
-            arable_resources = { "bg_rice_farms" "bg_coffee_plantations" "bg_banana_plantations" }
-    capped_resources = {
-        bg_lead_mining = 8
-        bg_fishing = 3
-        bg_wishstone_mining = 14
-    }
-    resource = {
-        type = "bg_wishstone_reefs"
-        undiscovered_amount = 17
-    }
+        arable_resources = { "bg_rice_farms" "bg_coffee_plantations" "bg_banana_plantations" }
+        capped_resources = {
+            bg_lead_mining = 8
+            bg_fishing = 3
+            bg_wishstone_mining = 14
+        }
+        resource = {
+            type = "bg_wishstone_reefs"
+            undiscovered_amount = 17
+        }
     }
     naval_exit_id = 3034
 }
@@ -1889,7 +1892,7 @@ STATE_HALDORHEIMR = {
     arable_resources = { "bg_livestock_ranches" }
     capped_resources = {
         bg_logging = 17
-    bg_wishstone_mining = 12
+        bg_wishstone_mining = 12
     }
     resource = {
         type = "bg_wishstone_reefs"
@@ -2111,7 +2114,7 @@ STATE_VIGAKULL = {
     farm = xE79C8A
     mine = xE16FED
     wood = xE0F5A5
-    impassable = { "xDCDE7B" "xC3AF88""xD2D164" "xD6B885" "xAEA8C0" }
+    impassable = { "xDCDE7B" "xC3AF88" "xD2D164" "xD6B885" "xAEA8C0" }
     arable_land = 21
     arable_resources = { "bg_livestock_ranches" }
     capped_resources = {
@@ -2245,7 +2248,7 @@ STATE_EIRIKSHOF = {
         bg_logging = 12
     }
     naval_exit_id = 3017
-    arable_resources = { }
+    arable_resources = {}
     capped_resources = {
         bg_lead_mining = 8
         bg_logging = 2

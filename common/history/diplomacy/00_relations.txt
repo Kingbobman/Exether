@@ -66,6 +66,7 @@ DIPLOMACY = {
                 set_relations = { country = c:DAR value = -20 }
                 set_relations = { country = c:SMA value = -20 }
 	}
+	
 c:RVC = {
 set_relations = { country = c:FOX value = -20 }
 		set_relations = { country = c:DOV value = -50 }
@@ -77,8 +78,18 @@ set_relations = { country = c:FOX value = -20 }
 		set_relations = { country = c:ABR value = -50 }
 		set_relations = { country = c:EVR value = -50 }
 		set_relations = { country = c:MBR value = -50 }
+		set_relations = { country = c:RVD value = 60 }
+		set_relations = { country = c:RVE value = 60 }
+		
 }
-	
+c:RVD = {
+	set_relations = { country = c:RVC value = 40 }
+	set_relations = { country = c:RVE value = 60 }
+}
+c:RVE = {
+	set_relations = { country = c:RVC value = 40 }
+	set_relations = { country = c:RVD value = 60 }
+}
         c:DAR = {
                 set_relations = { country = c:WHI value = -20 }
 	}

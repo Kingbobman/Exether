@@ -30,7 +30,30 @@ on_monthly_pulse = {
 	}
 }
 
-on_yearly_pulse = { }
+on_yearly_pulse = { 
+	effect = {
+    random_state = {
+        limit = {
+            owner = c:RVC
+        }
+        save_scope_as = pop_target
+    }
+    
+    every_subject_or_below = {
+        ordered_scope_state = {
+            order_by = state_population
+            every_scope_pop = {
+                random_list = { 
+                    95 = {}
+                    5 = {
+                        move_pop = scope:pop_target
+                    }
+                }        
+            }
+        }
+    }
+} 
+}
 
 # Root = Country
 on_monthly_pulse_country = {
@@ -1951,12 +1974,16 @@ on_political_movement_disbanded = {
 # Root = Colony state
 on_colony_created = {
 	effect = {
-		if = {
-			limit = {
-				exe_is_coastal = yes
-			}
-			set_variable = {
-				name = exe_is_coastal
+		owner = {
+			if = {
+				limit = {
+					has_journal_entry = je_tutorial_colonize_state
+				}
+				root = {
+					set_variable = {
+						name = tut_colony_target
+					}
+				}
 			}
 		}
 	}
