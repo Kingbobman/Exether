@@ -288,12 +288,12 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_mobile_artillery
 				state_region = s:STATE_CROWNPEAK
-				count = 6
+				count = 9
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_lancers
 				state_region = s:STATE_CROWNPEAK
-				count = 6
+				count = 3
 			}
 			save_scope_as = dumarmy1
 		}
@@ -315,7 +315,7 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_SERONTAIN
-				count = 20
+				count = 10
 			}
 
 			combat_unit = {
@@ -327,7 +327,7 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_LOCHTYRE
-				count = 20
+				count = 10
 			}
 
 			combat_unit = {
@@ -400,24 +400,24 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_TAR_PITS
-				count = 10
+				count = 5
 			}
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_SLUDGE_COAST
-				count = 10
+				count = 5
 			}
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_mobile_artillery
 				state_region = s:STATE_ALYEA
-				count = 5
+				count = 3
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_lancers
 				state_region = s:STATE_SLUDGE_COAST
-				count = 5
+				count = 3
 			}
 			save_scope_as = dumarmy3
 		}
@@ -439,19 +439,19 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_KILCREE
-				count = 10
+				count = 5
 			}
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_MELENLECK
-				count = 7
+				count = 5
 			}
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_mobile_artillery
 				state_region = s:STATE_MELENLECK
-				count = 5
+				count = 3
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_lancers
@@ -462,13 +462,131 @@
 		}
 		create_character = {
 			is_general = yes
-			commander_rank = commander_rank_2
+			commander_rank = commander_rank_1
 			hq = sr:region_central_noricum
 			save_scope_as = dumgen4
 		}
 		scope:dumgen4 = {
 			transfer_to_formation = scope:dumarmy4
 		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_southwestern_noricum
+
+			name = "Askalon Seas Fleet"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_SLUDGE_COAST
+				count = 3
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_CALDAMUS
+				count = 3
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_CALDAMUS
+				count = 5
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_SLUDGE_COAST
+				count = 5
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_ALYEA
+				count = 5
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_BANEKERT
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_ZENDEN
+				count = 3
+			}
+
+			save_scope_as = dumnavy
+		}
+			create_character = {
+				is_admiral = yes
+				commander_rank = commander_rank_2
+				save_scope_as = dumadmiral
+			}
+			
+			scope:dumadmiral = {
+				transfer_to_formation = scope:dumnavy
+			}
+
+			create_military_formation = {
+				type = fleet
+				hq_region = sr:region_gulfwatch
+	
+				name = "South Seas Fleet"
+	
+				combat_unit = {
+					type = unit_type:combat_unit_type_man_o_war
+					state_region = s:STATE_GULFWATCH
+					count = 3
+				}
+	
+				combat_unit = {
+					type = unit_type:combat_unit_type_man_o_war
+					state_region = s:STATE_OSTREN
+					count = 3
+				}
+	
+				combat_unit = {
+					type = unit_type:combat_unit_type_frigate
+					state_region = s:STATE_MERCHANT_BAY
+					count = 5
+				}
+	
+				combat_unit = {
+					type = unit_type:combat_unit_type_frigate
+					state_region = s:STATE_MALINMORE
+					count = 5
+				}
+	
+				combat_unit = {
+					type = unit_type:combat_unit_type_frigate
+					state_region = s:STATE_MELENLECK
+					count = 5
+				}
+	
+				combat_unit = {
+					type = unit_type:combat_unit_type_frigate
+					state_region = s:STATE_ARDSHIEL
+					count = 3
+				}
+				combat_unit = {
+					type = unit_type:combat_unit_type_frigate
+					state_region = s:STATE_OSTREN
+					count = 3
+				}
+	
+				save_scope_as = dumnavy2
+			}
+				create_character = {
+					is_admiral = yes
+					commander_rank = commander_rank_2
+					save_scope_as = dumadmiral2
+				}
+				
+				scope:dumadmiral2 = {
+					transfer_to_formation = scope:dumnavy2
+				}
 	}
 	c:ROF ?= {
 		create_military_formation = {
