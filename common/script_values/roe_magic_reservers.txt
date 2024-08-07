@@ -1,0 +1,93 @@
+﻿
+
+magic_institution_level = {
+	value = 0
+
+	if = {
+		limit = {
+			institution_investment_level = {
+				institution = institution_magical_focus
+				value = 1
+			}
+		}
+		add = 1
+	}
+	else_if = {
+		limit = {
+			institution_investment_level = {
+				institution = institution_magical_focus
+				value = 2
+			}
+		}
+		add = 2
+	}
+	else_if = {
+		limit = {
+			institution_investment_level = {
+				institution = institution_magical_focus
+				value = 3
+			}
+		}
+		add = 3
+	}
+	else_if = {
+		limit = {
+			institution_investment_level = {
+				institution = institution_magical_focus
+				value = 4
+			}
+		}
+		add = 4
+	}
+	else_if = {
+		limit = {
+			institution_investment_level = {
+				institution = institution_magical_focus
+				value = 5
+			}
+		}
+		add = 5
+	}
+
+  }
+
+  magic_institution_bonus = {
+	value = 0
+	add = magic_institution_level
+	multiply = 100
+  }
+
+magic_reserves_total = {
+	value = 100
+	add = modifier:country_magic_reserves_total_add
+	subtract = modifier:country_magic_reserves_total_subtract
+}
+
+magic_ritual_costs = {
+	value = 0
+	subtract = modifier:country_magic_reserves_total_subtract
+  }
+
+normalized_magic_surplus = {
+	value = magic_reserves_total
+
+	divide = 600
+	min = -1
+	max = 1
+  }
+
+  normalized_magic_deficit = {
+	value = magic_reserves_total
+
+	divide = 600
+	min = -1
+	max = 0
+  }
+
+  normalized_arcana = {
+	value = magic_reserves_total
+
+	divide = 600
+	min = -1
+	max = 1
+  }

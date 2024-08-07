@@ -1,0 +1,313 @@
+﻿#RVC Unique ideologies 
+#RVC Trade Union Unique 
+ideology_rvc_trade_unions_magic = {
+	icon = "gfx/interface/icons/ideology_icons/abolitionist.dds"
+	priority = 100 
+	lawgroup_magic = {
+    		law_no_magic = disapprove
+    		law_divine_miracles = approve
+    		law_druidic_circles = disapprove
+    		law_artificer_guilds = approve
+   		law_astrological_studies = approve
+    		law_dark_arts = approve
+    		law_mage_hunters = disapprove
+	}
+
+	lawgroup_slavery = {
+		law_slavery_banned = neutral
+		law_legacy_slavery = disapprove
+		law_debt_slavery = strongly_disapprove
+		law_slave_trade = strongly_disapprove
+	}
+
+	lawgroup_land_reform = {
+		law_serfdom = strongly_disapprove
+		law_tenant_farmers = neutral
+		law_homesteading = approve
+		law_collectivized_agriculture = neutral
+		law_commercialized_agriculture = neutral
+	}
+
+
+	lawgroup_governance_principles = {
+		law_council_republic = strongly_approve
+		law_parliamentary_republic = neutral		
+		law_presidential_republic = neutral
+		law_theocracy = strongly_disapprove
+		law_monarchy = strongly_disapprove
+		law_magocracy = strongly_disapprove
+	}
+
+	lawgroup_economic_system = {	
+		law_command_economy = neutral
+		law_cooperative_ownership = strongly_approve
+		law_interventionism = neutral
+		law_agrarianism = neutral
+		law_traditionalism = strongly_disapprove		
+		law_laissez_faire = strongly_disapprove	
+		law_industry_banned = strongly_disapprove	
+	}
+
+	lawgroup_taxation = {
+		law_per_capita_based_taxation = neutral
+		law_land_based_taxation = strongly_disapprove
+		law_proportional_taxation = approve
+		law_consumption_based_taxation = strongly_disapprove
+		law_graduated_taxation = strongly_approve
+	}
+
+
+
+}
+
+#RVC rural folk magic 
+ideology_rvc_rural_folk_magic = {
+	icon = "gfx/interface/icons/ideology_icons/slaver.dds"
+	priority = 100 
+	lawgroup_magic = {
+    		law_no_magic = approve
+    		law_divine_miracles = disapprove
+    		law_druidic_circles = approve
+    		law_artificer_guilds = disapprove
+    		law_astrological_studies = disapprove
+    		law_dark_arts = strongly_disapprove
+    		law_mage_hunters = strongly_approve
+	}
+
+	lawgroup_economic_system = {		
+		law_traditionalism = strongly_approve
+		law_agrarianism = approve
+		law_interventionism = neutral
+		law_industry_banned = disapprove
+		law_laissez_faire = disapprove
+		law_cooperative_ownership = strongly_disapprove
+		law_command_economy = strongly_disapprove
+	}
+
+
+	lawgroup_taxation = {
+		law_per_capita_based_taxation = approve
+		law_land_based_taxation = disapprove
+		law_proportional_taxation = approve
+		law_consumption_based_taxation = strongly_approve
+		law_graduated_taxation = approve
+	}
+
+}
+
+
+
+
+
+#Mages and Devout 
+ideology_rvc_devout_magic = {
+	icon = "gfx/interface/icons/ideology_icons/loyalist.dds"
+
+	lawgroup_magic = {
+  	  law_no_magic = disapprove
+    	  law_divine_miracles = strongly_disapprove
+	  law_druidic_circles = strongly_disapprove
+          law_artificer_guilds = neutral
+          law_astrological_studies = disapprove
+    	  law_dark_arts = strongly_approve
+    	  law_mage_hunters = strongly_disapprove
+
+	}
+}
+
+#armed forces
+ideology_rvc_armed_magic = {
+	icon = "gfx/interface/icons/ideology_icons/stratocratic.dds"
+
+	lawgroup_magic = {
+  	  law_no_magic = disapprove
+    	  law_divine_miracles = strongly_disapprove
+	  law_druidic_circles = strongly_disapprove
+          law_artificer_guilds = neutral
+          law_astrological_studies = disapprove
+    	  law_dark_arts = strongly_approve
+    	  law_mage_hunters = strongly_disapprove
+
+	}
+
+
+
+	lawgroup_land_reform = {
+		law_serfdom = strongly_disapprove
+		law_tenant_farmers = neutral
+		law_homesteading = strongly_approve
+		law_collectivized_agriculture = neutral
+		law_commercialized_agriculture = neutral
+	}
+
+
+
+}
+
+
+
+#PB view on magic 
+ideology_rvc_pb_magic = {
+	icon = "gfx/interface/icons/ideology_icons/pious.dds"
+
+	lawgroup_magic = {
+    law_no_magic = disapprove
+    law_divine_miracles = neutral
+    law_druidic_circles = disapprove
+    law_artificer_guilds = neutral
+    law_astrological_studies = neutral
+    law_dark_arts = strongly_approve
+    law_mage_hunters = neutral
+	}
+}
+
+#RVC industrialist magic
+ideology_rvc_industralist_magic = {
+	icon = "gfx/interface/icons/ideology_icons/Corporatist.dds"
+
+	lawgroup_magic = {
+	 law_no_magic = disapprove
+   	 law_divine_miracles = neutral
+	 law_druidic_circles = neutral
+  	 law_artificer_guilds = strongly_approve
+	 law_astrological_studies = neutral
+ 	 law_dark_arts = approve
+ 	 law_mage_hunters = neutral
+	}
+}
+
+#RVC int magic
+ideology_rvc_intellegentsia_magic = {
+	icon = "gfx/interface/icons/ideology_icons/socialist.dds"
+
+	Priority=100
+	lawgroup_trade_policy = {
+		law_protectionism = approve
+		law_isolationism = strongly_disapprove
+		law_mercantilism = disapprove
+		law_free_trade = neutral
+	}
+
+	lawgroup_childrens_rights = {
+		law_child_labor_allowed = disapprove
+		law_restricted_child_labor = neutral
+		law_compulsory_primary_school = approve
+	}
+
+	lawgroup_economic_system = {
+		law_cooperative_ownership = disapprove
+		law_command_economy = neutral
+		law_interventionism = approve
+		law_agrarianism = disapprove
+		law_traditionalism = strongly_disapprove
+		law_laissez_faire = neutral
+	}
+
+	lawgroup_church_and_state = {
+		law_state_atheism = neutral
+		law_total_separation = strongly_approve
+		law_freedom_of_conscience = approve
+		law_denominational_exclusion = disapprove
+		law_state_religion = strongly_disapprove
+	}
+	
+	lawgroup_education_system = {
+		law_public_schools = approve
+		law_private_schools = approve
+		law_no_schools = disapprove
+		law_religious_schools = disapprove	
+		law_magical_schools = disapprove		
+	}
+
+	lawgroup_bureaucracy = {
+		law_appointed_bureaucrats = approve
+		law_elected_bureaucrats = neutral	
+		law_hereditary_bureaucrats = disapprove
+		law_court_mages = disapprove
+	}
+
+
+	lawgroup_governance_principles = {
+		law_council_republic = approve
+		law_parliamentary_republic = strongly_approve		
+		law_presidential_republic = approve
+		law_theocracy = strongly_disapprove
+		law_monarchy = strongly_disapprove
+		law_magocracy = strongly_disapprove
+	}
+
+	lawgroup_economic_system = {		
+		law_traditionalism = strongly_disapprove
+		law_agrarianism = strongly_disapprove
+		law_interventionism = approve
+		law_industry_banned = strongly_disapprove
+		law_laissez_faire = approve
+		law_cooperative_ownership = strongly_approve
+		law_command_economy = strongly_disapprove
+	}
+
+
+	lawgroup_magic = {
+    law_no_magic = disapprove
+    law_divine_miracles = approve
+    law_druidic_circles = disapprove
+    law_artificer_guilds = approve
+    law_astrological_studies = strongly_approve
+    law_dark_arts = approve
+    law_mage_hunters = strongly_approve
+	}
+}
+
+
+
+ideology_gravis = {
+	icon = "gfx/interface/icons/ideology_icons/buddhist_moralist.dds"
+
+	lawgroup_governance_principles = {
+		law_monarchy = strongly_approve
+		law_presidential_republic = neutral
+		law_theocracy = disapprove
+		law_parliamentary_republic = disapprove
+		law_council_republic = strongly_disapprove
+		law_magocracy = disapprove	
+	}
+
+	lawgroup_land_reform = {
+		law_serfdom = strongly_approve
+		law_tenant_farmers = neutral
+		law_commercialized_agriculture = strongly_disapprove
+		law_homesteading = strongly_disapprove
+		law_collectivized_agriculture = strongly_disapprove
+	}
+
+	lawgroup_distribution_of_power = {
+		law_single_party_state = neutral
+		law_autocracy = strongly_approve
+		law_landed_voting = strongly_approve
+		law_oligarchy = approve
+		law_wealth_voting = disapprove
+		law_census_voting = strongly_disapprove
+		law_universal_suffrage = strongly_disapprove
+		law_anarchy = strongly_disapprove
+		law_technocracy = strongly_disapprove
+	}
+
+	lawgroup_citizenship = {
+		law_ethnostate = strongly_approve
+		law_national_supremacy = strongly_approve
+		law_racial_segregation = disapprove
+		law_cultural_exclusion = strongly_disapprove
+		law_multicultural = strongly_disapprove	
+	}
+
+	lawgroup_magic = {
+  	  law_no_magic = neutral
+    	  law_divine_miracles = neutral
+	  law_druidic_circles = neutral
+          law_artificer_guilds = neutral
+          law_astrological_studies = neutral
+    	  law_dark_arts = strongly_approve
+    	  law_mage_hunters = neutral
+
+	}
+}

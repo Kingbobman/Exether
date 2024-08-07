@@ -1,0 +1,278 @@
+﻿l_english:
+  POP_ARCHMAGES: "$archmages$ [concept_profession]"
+  MAGIC_TOOLTIP: "$MAGIC_BALANCE$[SelectLocalization(GetMetaPlayer.GetPlayedOrObservedCountry.IsValid, 'MAGIC_TOOLTIP_DELAYED', 'OBSERVER_NO_COUNTRY_SELECTED') ]"
+  MAGIC_TOOLTIP_DELAYED: "\n$TOOLTIP_DELIMITER$\n[SelectLocalization( GreaterThan_CFixedPoint( AccessPlayer.MakeScope.ScriptValue('magic_reserves_total'), '(CFixedPoint)0' ), 'MAGIC_EXCESS_EFFECT_HEADER', 'MAGIC_DEFICIT_EFFECT_HEADER')]Your total generation of #v [AccessPlayer.MakeScope.ScriptValue('magic_reserves_total')|=+D]#! @magic![Nbsp][concept_magic_reserves] is due to:$MAGIC_BASE_VALUE_BONUS$ [GetPlayer.GetCustom('magic_institution_bonus_loc')]\n\nYour total usage of #v [AccessPlayer.MakeScope.ScriptValue('magic_ritual_costs')|=+D]#! @magic![Nbsp][concept_magic_reserves] is due to: $MAGIC_COST_VALUE$"
+  MAGIC_BALANCE: "@magic! #bold [concept_magic_reserves]#!\nBalance: [AccessPlayer.MakeScope.ScriptValue('magic_reserves_total')|=+D]"
+  MAGIC_EXCESS_EFFECT_HEADER: "Effects from #v [AccessPlayer.MakeScope.ScriptValue('normalized_arcana')|%0]#! @magic! [concept_magic_reserves] #g excess#! (generation is higher than usage):\n$MAGIC_SURPLUS_EFFECTS$\n\n"
+  MAGIC_DEFICIT_EFFECT_HEADER: "Effects from #v [Multiply_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('normalized_arcana'),'(CFixedPoint)-1')|%0]#! @magic! [concept_magic_reserves] #n deficit#! (usage is higher than generation):\n$MAGIC_DEFICIT_EFFECTS$\n\n"
+  MAGIC_BASE_VALUE_BONUS: "\n#g +100#! from Base Value"
+  MAGIC_COST_VALUE: "\n [AccessPlayer.MakeScope.ScriptValue('magic_ritual_costs')|=+D] from [concept_magic_ritual]"
+  MAGIC_INSTITUTION_RESERVE_BONUS: "\n[AccessPlayer.MakeScope.ScriptValue('magic_institution_bonus')|=+D] from [GetInstitutionType('institution_magical_focus').GetName]"
+  magical_focus_institution_tooltip: "test"
+  MAGIC_SURPLUS_EFFECTS: "[Multiply_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('normalized_arcana'),'(CFixedPoint)10')|=+D%0] #yellow $country_tech_research_speed_mult$ #!"
+  MAGIC_DEFICIT_EFFECTS: "[Multiply_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('normalized_arcana'),'(CFixedPoint)10')|=+D%0] #yellow $country_tech_research_speed_mult$ #!"
+
+
+
+
+
+  surplus_arcana: "Balance"
+
+dlc_roe: "Realms of Exether"
+dlc_roe_desc: "Total Overhaul mod set in the magical world of Exether"
+
+ DAY_MONDAY: "Moonday"
+ DAY_TUESDAY: "Towerday"
+ DAY_WEDNESDAY: "Wineday"
+ DAY_THURSDAY: "Thunderday"
+ DAY_FRIDAY: "Fireday"
+ DAY_SATURDAY: "Swordsday"
+ DAY_SUNDAY: "Saintsday"
+
+OH_DEER: "#italic 'Sup Doc, we have#! #bold [ErrorDeer.NumberOrErrors|v]#! #italic error(s)!#!"
+
+ archmages_industrialist_ig_shift_effect_tt: "The [GetInterestGroupVariant('ig_industrialists',GetPlayer).GetNameWithCountryVariant] will attract $wizards$"
+ archmages_industrialist_ig_shift_effect_negative_tt: "The [GetInterestGroupVariant('ig_industrialists',GetPlayer).GetNameWithCountryVariant] will no longer attract $wizards$"
+ archmages_devout_ig_shift_effect_tt: "The [GetInterestGroupVariant('ig_devout',GetPlayer).GetNameWithCountryVariant] will attract $wizards$"
+ archmages_devout_ig_shift_effect_negative_tt: "The [GetInterestGroupVariant('ig_devout',GetPlayer).GetNameWithCountryVariant] will no longer attract $wizards$"
+ archmages_rural_ig_shift_effect_tt: "The [GetInterestGroupVariant('ig_rural_folk',GetPlayer).GetNameWithCountryVariant] will attract $wizards$"
+ archmages_rural_ig_shift_effect_negative_tt: "The [GetInterestGroupVariant('ig_rural_folk',GetPlayer).GetNameWithCountryVariant] will no longer attract $wizards$"
+ academics_mages_ig_shift_effect_tt: "The [GetInterestGroupVariant('ig_mages',GetPlayer).GetNameWithCountryVariant] will attract $academics$"
+ academics_mages_ig_shift_effect_negative_tt: "The [GetInterestGroupVariant('ig_mages',GetPlayer).GetNameWithCountryVariant] will no longer attract $academics$"
+
+ STATE_ADVENTURER_COVERAGE_CONDENSED: "[AddLocalizationIf(GreaterThan_CFixedPoint(State.MakeScope.ScriptValue('state_adventurer_coverage_demand'),State.MakeScope.ScriptValue('state_adventurer_coverage_value')), 'WARNING')]Using #tooltippable #tooltip:[State.GetTooltipTag],STATE_ADVENTURER_COVERAGE_DEMAND_TOOLTIP [State.MakeScope.ScriptValue('state_adventurer_coverage_demand')|0v]#!#! of #tooltippable #tooltip:[State.GetTooltipTag],STATE_ADVENTURER_COVERAGE_TOOLTIP [State.MakeScope.ScriptValue('state_adventurer_coverage_value')|0v]#!#! [AddLocalizationIf(GreaterThan_CFixedPoint(State.MakeScope.ScriptValue('state_adventurer_coverage_demand'),State.MakeScope.ScriptValue('state_adventurer_coverage_value')), 'STATE_ADVENTURER_COVERAGE_INSUFFICIENT')]"
+ ADVENTURER_COVERAGE_USAGE: "#header [concept_tax_capacity] Usage#!\n[State.GetName] uses $USAGE|1v$ [concept_tax_capacity]\n$TOOLTIP_DELIMITER$\nOne point of [concept_tax_capacity] is required per $POPS_PER_CAPACITY|vK$ [Concept('concept_pop', '$concept_pops$')] and [State.GetName] has a total population of $TOTAL_POPS|vK$"
+ STATE_ADVENTURER_COVERAGE: "[concept_adventurer_coverage]\n$STATE_ADVENTURER_COVERAGE_CONDENSED$"
+ STATE_ADVENTURER_COVERAGE_DESC: "#header [concept_adventurer_coverage]#!\nThe $concept_adventurer_coverage$ balance in [State.GetName] is [State.MakeScope.ScriptValue('state_adventurer_coverage_balance')|1+=]\n$TOOLTIP_DELIMITER$\n$concept_adventurer_coverage$: #tooltippable #tooltip:[State.GetTooltipTag],STATE_ADVENTURER_COVERAGE_TOOLTIP [State.MakeScope.ScriptValue('state_adventurer_coverage_value')|1+]#!#!\n$concept_adventurer_coverage$ Usage: #tooltippable #tooltip:[State.GetTooltipTag],STATE_ADVENTURER_COVERAGE_USAGE_TOOLTIP [State.MakeScope.ScriptValue('state_adventurer_coverage_demand')|1-]#!#![SelectLocalization(GreaterThan_CFixedPoint(State.CalcTaxCapacityUsage, State.CalcTaxCapacity), 'STATE_ADVENTURER_COVERAGE_INSUFFICIENT_LONG', '')]"
+STATE_ADVENTURER_COVERAGE_TOOLTIP: "#bold [concept_adventurer_coverage]#!\n[State.GetName] has an [concept_adventurer_coverage] of #g [State.MakeScope.ScriptValue('state_adventurer_coverage_value')] #!\n$TOOLTIP_DELIMITER$ $ADVENTURER_COVERAGE_BASE_VALUE_BONUS$ [State.GetCustom('adventurer_coverage_bonus_loc')]"
+STATE_ADVENTURER_COVERAGE_DEMAND_TOOLTIP: "#bold [concept_adventurer_coverage]#!\n[State.GetName] has an [concept_adventurer_coverage] Usage of [State.MakeScope.ScriptValue('state_adventurer_coverage_demand')|0v] \n$TOOLTIP_DELIMITER$ $ADVENTURER_COVERAGE_DEMAND_BASE_VALUE$ [State.GetCustom('adventurer_coverage_demand_bonus_loc')] [State.GetCustom('adventurer_coverage_demand_urban_bonus_loc')]"
+ ADVENTURER_COVERAGE_DEMAND_BASE_VALUE: "\n#r +[State.MakeScope.ScriptValue('state_adventurer_coverage_demand_arable_land')]#! from Unused Arable Land"
+ ADVENTURER_COVERAGE_DEMAND_BASE_VALUE_BONUS: "\n#g -[State.MakeScope.ScriptValue('state_adventurer_coverage_demand_urban_center_reduction')]#! from Urban Center"
+ STATE_ADVENTURER_COVERAGE_INSUFFICIENT: "\n Insufficient Coverage"
+ STATE_ADVENTURER_COVERAGE_INSUFFICIENT_LONG: "\n\n@warning! Because usage is higher than capacity, the following effects are applied to the [concept_state]:\n[State.GetTaxCapacityEffectsDesc]"
+ ADVENTURER_COVERAGE_BASE_VALUE_BONUS: "\n#g +50#! from Base Value"
+ ADVENTURER_COVERAGE_BUILDING_BONUS: "\n#g +#![State.GetModifier.GetValueFor('state_adventurer_coverage_add')|D+] from Local Production"
+ ADVENTURER_COVERAGE_POLLUTION: "\n#r +#![State.MakeScope.ScriptValue('state_adventurer_coverage_demand_pollution')|D-] from Pollution"
+
+MAGIC_OVERVIEW: "Arcane Civics"
+BUTTON_MAGIC_OVERVIEW: "#header Magic Tenets#!"
+MAGIC_PANEL_HEADER: "Arcane Civics"
+
+MAGICAL_RITUALS: "Active Civics"
+
+RITUAL_1: "Almsgiving"
+RITUAL_2: "Divine Right"
+RITUAL_3: "Guardian Angels"
+RITUAL_4: "Resplendent Grace"
+RITUAL_5: "Disease Wards"
+RITUAL_6: "Harmonious Construction"
+RITUAL_7: "Environmental Regeneration"
+RITUAL_8: "Rite of Thorns"
+RITUAL_9: "Scenic Landscapes"
+RITUAL_10: "Conjured Rainfall"
+RITUAL_11: "Clockwork Couriers"
+RITUAL_12: "Auto Scribes"
+RITUAL_13: "Everyday Wonders"
+RITUAL_14: "Builder Golems"
+RITUAL_15: "Enchanted Tools"
+RITUAL_16: "Astral Mapping"
+RITUAL_17: "Starlight Academia"
+RITUAL_18: "Guiding Constellations"
+RITUAL_19: "Stellar Revelations"
+RITUAL_20: "Cosmology"
+RITUAL_21: "Bound Thralls"
+RITUAL_22: "Dark Fanatics"
+RITUAL_23: "Cult Initiations"
+RITUAL_24: "Profane Bargains"
+RITUAL_25: "Veil Ascendancy"
+RITUAL_26: "Dampening Collars"
+RITUAL_27: "Material Application"
+RITUAL_28: "Prescient Profiling"
+RITUAL_29: "Surveillance Scrying"
+RITUAL_30: "Preservation"
+RITUAL_31: "Mind Over Matter"
+RITUAL_32: "Telepathy"
+RITUAL_33: "Mental Fortitude"
+RITUAL_34: "Psionic Augmentation"
+RITUAL_35: "Precognitive Insight"
+
+#Rituals
+country_ritual_cooldown: "Recently Changed Civics"
+country_ritual_cooldown_desc: "A recent overhaul in magic civics has introduced significant disruption and society will need time to readjust."
+
+country_magic_tenet_upkeep: "Minor Civic Upkeep"
+country_magic_tenet_upkeep_moderate: "Moderate Civic Upkeep"
+country_magic_tenet_upkeep_high: "High Civic Upkeep"
+
+country_ritual_divine_1: "Almsgiving"
+country_ritual_divine_2: "Divine Right"
+country_ritual_divine_3: "Guardian Angels"
+country_ritual_divine_4: "Resplendent Grace"
+country_ritual_divine_5: "Disease Wards"
+country_ritual_druidic_1: "Harmonious Construction"
+country_ritual_druidic_2: "Environmental Regeneration"
+country_ritual_druidic_3: "Rite of Thorns"
+country_ritual_druidic_4: "Scenic Landscapes"
+country_ritual_druidic_5: "Conjured Rainfall"
+country_ritual_artificer_1: "Clockwork Couriers"
+country_ritual_artificer_2: "Auto Scribes"
+country_ritual_artificer_3: "Everyday Wonders"
+country_ritual_artificer_4: "Builder Golems"
+country_ritual_artificer_5: "Enchanted Tools"
+country_ritual_astrology_1: "Astral Mapping"
+country_ritual_astrology_2: "Starlight Academia"
+country_ritual_astrology_3: "Guiding Constellations"
+country_ritual_astrology_4: "Stellar Revelations"
+country_ritual_astrology_5: "Cosmology"
+country_ritual_dark_1: "Bound Thralls"
+country_ritual_dark_2: "Dark Fanatics"
+country_ritual_dark_3: "Cult Initiations"
+country_ritual_dark_4: "Profane Bargains"
+country_ritual_dark_5: "Veil Ascendancy"
+country_ritual_antimagic_1: "Dampening Collars"
+country_ritual_antimagic_2: "Material Application"
+country_ritual_antimagic_3: "Prescient Profiling"
+country_ritual_antimagic_4: "Surveillance Scrying"
+country_ritual_antimagic_5: "Preservation"
+country_ritual_psionic_1: "Mind Over Matter"
+country_ritual_psionic_2: "Telepathy"
+country_ritual_psionic_3: "Mental Fortitude"
+country_ritual_psionic_4: "Psionic Augmentation"
+country_ritual_psionic_5: "Precognitive Insight"
+
+RITUAL_DRUID_1: "Harmonious Construction"
+RITUAL_DRUID_2: "Environmental Regeneration"
+RITUAL_DRUID_3: "Rite of Thorns"
+RITUAL_DRUID_4: "Scenic Landscapes"
+RITUAL_DRUID_5: "Conjured Rainfall"
+
+RITUAL_ARTIFICER_1: "Clockwork Couriers"
+RITUAL_ARTIFICER_2: "Auto Scribes"
+RITUAL_ARTIFICER_3: "Everyday Wonders"
+RITUAL_ARTIFICER_4: "Builder Golems"
+RITUAL_ARTIFICER_5: "Enchanted Tools"
+
+RITUAL_ASTROLOGY_1: "Astral Mapping"
+RITUAL_ASTROLOGY_2: "Starlight Academia"
+RITUAL_ASTROLOGY_3: "Guiding Constellations"
+RITUAL_ASTROLOGY_4: "Stellar Revelations"
+RITUAL_ASTROLOGY_5: "Cosmology"
+
+RITUAL_DARK_1: "Bound Thralls"
+RITUAL_DARK_2: "Dark Fanatics"
+RITUAL_DARK_3: "Cult Initiations"
+RITUAL_DARK_4: "Profane Bargains"
+RITUAL_DARK_5: "Veil Ascendancy"
+
+RITUAL_ANTIMAGIC_1: "Dampening Collars"
+RITUAL_ANTIMAGIC_2: "Material Application"
+RITUAL_ANTIMAGIC_3: "Prescient Profiling"
+RITUAL_ANTIMAGIC_4: "Surveillance Scrying"
+RITUAL_ANTIMAGIC_5: "Preservation"
+
+RITUAL_PSIONIC_1: "Mind Over Matter"
+RITUAL_PSIONIC_2: "Telepathy"
+RITUAL_PSIONIC_3: "Mental Fortitude"
+RITUAL_PSIONIC_4: "Psionic Augmentation"
+RITUAL_PSIONIC_5: "Precognitive Insight"
+
+RITUAL_SOURCE_DIVINE: "Source: [GetLawType('law_divine_miracles').GetName]"
+RITUAL_SOURCE_DRUIDIC: "Source: [GetLawType('law_druidic_circles').GetName]"
+RITUAL_SOURCE_ARTIFICER: "Source: [GetLawType('law_artificer_guilds').GetName]"
+RITUAL_SOURCE_ASTROLOGY: "Source: [GetLawType('law_astrological_studies').GetName]"
+RITUAL_SOURCE_DARK: "Source: [GetLawType('law_dark_arts').GetName]"
+RITUAL_SOURCE_ANTIMAGIC: "Source: [GetLawType('law_mage_hunters').GetName]"
+RITUAL_SOURCE_PSIONIC: "Source: [GetLawType('law_psionics').GetName]"
+
+RITUAL_NAME: "[AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1'), 'RITUAL_1')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2'), 'RITUAL_2')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3'), 'RITUAL_3')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4'), 'RITUAL_4')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5'), 'RITUAL_5')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)6'), 'RITUAL_6')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)7'), 'RITUAL_7')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)8'), 'RITUAL_8')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)9'), 'RITUAL_9')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)10'), 'RITUAL_10')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)11'), 'RITUAL_11')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)12'), 'RITUAL_12')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)13'), 'RITUAL_13')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)14'), 'RITUAL_14')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)15'), 'RITUAL_15')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)16'), 'RITUAL_16')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)17'), 'RITUAL_17')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)18'), 'RITUAL_18')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)19'), 'RITUAL_19')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)20'), 'RITUAL_20')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)21'), 'RITUAL_21')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)22'), 'RITUAL_22')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)23'), 'RITUAL_23')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)24'), 'RITUAL_24')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)25'), 'RITUAL_25')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)26'), 'RITUAL_26')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)27'), 'RITUAL_27')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)28'), 'RITUAL_28')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)29'), 'RITUAL_29')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)30'), 'RITUAL_30')]"
+
+RITUAL_NAME_DRUIDIC: "[AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1'), 'RITUAL_DRUID_1')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2'), 'RITUAL_DRUID_2')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3'), 'RITUAL_DRUID_3')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4'), 'RITUAL_DRUID_4')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5'), 'RITUAL_DRUID_5')]"
+
+RITUAL_NAME_ARTIFICER: "[AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1'), 'RITUAL_ARTIFICER_1')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2'), 'RITUAL_ARTIFICER_2')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3'), 'RITUAL_ARTIFICER_3')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4'), 'RITUAL_ARTIFICER_4')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5'), 'RITUAL_ARTIFICER_5')]"
+
+RITUAL_NAME_ASTROLOGY: "[AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1'), 'RITUAL_ASTROLOGY_1')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2'), 'RITUAL_ASTROLOGY_2')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3'), 'RITUAL_ASTROLOGY_3')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4'), 'RITUAL_ASTROLOGY_4')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5'), 'RITUAL_ASTROLOGY_5')]"
+
+RITUAL_NAME_DARK: "[AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1'), 'RITUAL_DARK_1')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2'), 'RITUAL_DARK_2')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3'), 'RITUAL_DARK_3')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4'), 'RITUAL_DARK_4')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5'), 'RITUAL_DARK_5')]"
+
+RITUAL_NAME_ANTIMAGIC: "[AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1'), 'RITUAL_ANTIMAGIC_1')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2'), 'RITUAL_ANTIMAGIC_2')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3'), 'RITUAL_ANTIMAGIC_3')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4'), 'RITUAL_ANTIMAGIC_4')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5'), 'RITUAL_ANTIMAGIC_5')]"
+
+RITUAL_NAME_PSIONIC: "[AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1'), 'RITUAL_PSIONIC_1')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2'), 'RITUAL_PSIONIC_2')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3'), 'RITUAL_PSIONIC_3')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4'), 'RITUAL_PSIONIC_4')][AddLocalizationIf(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5'), 'RITUAL_PSIONIC_5')]"
+
+RITUAL_COST: "Cost: #white #underline #bold [Scope.ScriptValue('ritual_cost')]#!#!#! @magic! [concept_magic_reserves]"
+
+RITUAL_SOURCE: "[AddLocalizationIf(Or(Or(Or(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1'),EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2')), Or(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3'),EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4'))), EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5')), 'RITUAL_SOURCE_DIVINE')|0v][AddLocalizationIf(Or(Or(Or(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)6'),EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)7')), Or(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)8'),EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)9'))), EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)10')), 'RITUAL_SOURCE_DRUIDIC')|0v][AddLocalizationIf(Or(Or(Or(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)11'),EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)12')), Or(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)13'),EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)14'))), EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)15')), 'RITUAL_SOURCE_ARTIFICER')|0v][AddLocalizationIf(Or(Or(Or(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)16'),EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)17')), Or(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)18'),EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)19'))), EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)20')), 'RITUAL_SOURCE_ASTROLOGY')|0v][AddLocalizationIf(Or(Or(Or(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)21'),EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)22')), Or(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)23'),EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)24'))), EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)25')), 'RITUAL_SOURCE_DARK')|0v][AddLocalizationIf(Or(Or(Or(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)26'),EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)27')), Or(EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)28'),EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)29'))), EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)30')), 'RITUAL_SOURCE_ANTIMAGIC')|0v]"
+
+DIVINE_MIRACLES_TEXT: "Divine"
+DRUIDIC_TEXT: "Druidry"
+ARTIFICER_TEXT: "Artifice"
+ASTROLOGY_TEXT: "Astrology"
+DARK_TEXT: "Dark"
+ANTIMAGIC_TEXT: "Material"
+PSIONIC_TEXT: "Psionics"
+
+
+CAST_RITUAL: "Embrace"
+CAST_RITUAL_DESC: "#header Cast the $RITUAL_NAME$ ritual#!\n$TOOLTIP_DELIMITER$\n [ScriptedButton.GetEffectDesc]"
+
+DISPEL_RITUAL: "Abandon"
+DISPEL_RITUAL_DESC: "#header Dispel the $RITUAL_NAME$ ritual#!\n$TOOLTIP_DELIMITER$\n [ScriptedButton.GetEffectDesc]"
+
+
+has_reserves_tt: "[SCOPE.GetRootScope.GetCountry.GetName] does not have [Scope.ScriptValue('ritual_cost')|0v] @magic! #bold [concept_magic_reserves]"
+
+VEIL_INTEGRITY_TITLE: "#bold #o Veil Integrity#!"
+VEIL_INTEGRITY_STATUS: "[AddLocalizationIf(GreaterThan_int32(FixedPointToInt(AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')), '(int32)50'), 'VEIL_INTEGRITY_STATUS_STRENGTHENED')][AddLocalizationIf(EqualTo_int32(FixedPointToInt(AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')), '(int32)50'), 'VEIL_INTEGRITY_STATUS_BALANCED')][AddLocalizationIf(LessThan_int32(FixedPointToInt(AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')), '(int32)50'), 'VEIL_INTEGRITY_STATUS_WEAKENED')]"
+VEIL_INTEGRITY_STATUS_BALANCED: "#v Balanced#!"
+VEIL_INTEGRITY_STATUS_WEAKENED: "#bold #u Weakened#!#!"
+VEIL_INTEGRITY_STATUS_STRENGTHENED: "#bold #o Strengthened#!#!"
+
+
+
+  VEIL_INTEGRITY_TOOLTIP: "$VEIL_INTEGRITY_BALANCE$[SelectLocalization(GetMetaPlayer.GetPlayedOrObservedCountry.IsValid, 'VEIL_INTEGRITY_TOOLTIP_DELAYED', 'OBSERVER_NO_COUNTRY_SELECTED') ]"
+  VEIL_INTEGRITY_TOOLTIP_DELAYED: "\n$TOOLTIP_DELIMITER$\nOur Veil Impact:  [AccessPlayer.MakeScope.ScriptValue('country_veil_damage')|1-]\n$TOOLTIP_DELIMITER$\nTop Veil Damage (Past Month):\n1. [GetGlobalVariable('veil_damage_top_1').GetCountry.GetName] - [GetGlobalVariable('veil_damage_top_1_value').GetValue|-1]\n2. [GetGlobalVariable('veil_damage_top_2').GetCountry.GetName] - [GetGlobalVariable('veil_damage_top_2_value').GetValue|-1]\n3. [GetGlobalVariable('veil_damage_top_3').GetCountry.GetName] - [GetGlobalVariable('veil_damage_top_3_value').GetValue|-1]"
+  VEIL_INTEGRITY_BALANCE: "@veil! #bold [concept_veil_integrity]#!\nCurrent integrity: $VEIL_INTEGRITY_STATUS$"
+
+VEIL_INTEGRITY_VALUE_TEXT: "[AddLocalizationIf(GreaterThan_int32(FixedPointToInt(AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')), '(int32)50'), 'VEIL_INTEGRITY_VALUE_GOLD')][AddLocalizationIf(EqualTo_int32(FixedPointToInt(AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')), '(int32)50'), 'VEIL_INTEGRITY_VALUE')][AddLocalizationIf(LessThan_int32(FixedPointToInt(AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')), '(int32)50'), 'VEIL_INTEGRITY_VALUE_BLUE')]"
+VEIL_INTEGRITY_VALUE: "#v [AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')|1]%#!"
+VEIL_INTEGRITY_VALUE_GOLD: "#bold #o [AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')|1]%#!#!"
+VEIL_INTEGRITY_VALUE_BLUE: "#bold #u [AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')|1]%#!#!"
+
+VEIL_DAMAGE_COUNTRY: "[AccessPlayer.MakeScope.ScriptValue('country_veil_damage')]"
+
+STATE_VEIL_DAMAGE: "[Concept('concept_veil_integrity', 'Veil Impact')]\n  [State.MakeScope.ScriptValue('state_veil_damage')|1-] "
+STATE_VEIL_DAMAGE_DESC: "#header [Concept('concept_veil_integrity', 'Veil Impact')]#!: [State.GetModifier.GetFormattedValueFor('state_veil_integrity_contribution')]\n$TOOLTIP_DELIMITER$\n[State.GetModifier.GetDescFor('state_veil_integrity_contribution')]\n\nA decrease to @veilneg! [concept_veil_integrity]"
+
+
+ASTRAL_CALENDAR_YEAR: "Year of the $ASTRAL_CALENDAR_YEAR_SIGN$"
+
+ASTRAL_CALENDAR_YEAR_SIGN: "[AddLocalizationIf(EqualTo_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('current_star_sign_year'), '(CFixedPoint)0'), 'ASTRAL_CALENDAR_SIGN_0')][AddLocalizationIf(EqualTo_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('current_star_sign_year'), '(CFixedPoint)1'), 'ASTRAL_CALENDAR_SIGN_1')][AddLocalizationIf(EqualTo_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('current_star_sign_year'), '(CFixedPoint)2'), 'ASTRAL_CALENDAR_SIGN_2')][AddLocalizationIf(EqualTo_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('current_star_sign_year'), '(CFixedPoint)3'), 'ASTRAL_CALENDAR_SIGN_3')][AddLocalizationIf(EqualTo_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('current_star_sign_year'), '(CFixedPoint)4'), 'ASTRAL_CALENDAR_SIGN_4')][AddLocalizationIf(EqualTo_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('current_star_sign_year'), '(CFixedPoint)5'), 'ASTRAL_CALENDAR_SIGN_5')][AddLocalizationIf(EqualTo_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('current_star_sign_year'), '(CFixedPoint)6'), 'ASTRAL_CALENDAR_SIGN_6')][AddLocalizationIf(EqualTo_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('current_star_sign_year'), '(CFixedPoint)7'), 'ASTRAL_CALENDAR_SIGN_7')][AddLocalizationIf(EqualTo_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('current_star_sign_year'), '(CFixedPoint)8'), 'ASTRAL_CALENDAR_SIGN_8')][AddLocalizationIf(EqualTo_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('current_star_sign_year'), '(CFixedPoint)9'), 'ASTRAL_CALENDAR_SIGN_9')][AddLocalizationIf(EqualTo_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('current_star_sign_year'), '(CFixedPoint)10'), 'ASTRAL_CALENDAR_SIGN_10')][AddLocalizationIf(EqualTo_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('current_star_sign_year'), '(CFixedPoint)11'), 'ASTRAL_CALENDAR_SIGN_11')]"
+
+ASTRAL_CALENDAR_SIGN_0: "[concept_storm_giant]"
+ASTRAL_CALENDAR_SIGN_1: "[concept_hive]"
+ASTRAL_CALENDAR_SIGN_2: "[concept_sphinx]"
+ASTRAL_CALENDAR_SIGN_3: "[concept_golem]"
+ASTRAL_CALENDAR_SIGN_4: "[concept_unicorn]"
+ASTRAL_CALENDAR_SIGN_5: "[concept_fey]"
+ASTRAL_CALENDAR_SIGN_6: "[concept_phoenix]"
+ASTRAL_CALENDAR_SIGN_7: "[concept_djinn]"
+ASTRAL_CALENDAR_SIGN_8: "[concept_horror]"
+ASTRAL_CALENDAR_SIGN_9: "[concept_kraken]"
+ASTRAL_CALENDAR_SIGN_10: "[concept_fiend]"
+ASTRAL_CALENDAR_SIGN_11: "[concept_angel]"
+
+concept_supply_node: "Supply Node"
+concept_supply_nodes:0 "Supply Nodes"
+concept_supply_node_desc: "An intersection or point along a air or naval [concept_shipping_lane] representing a part of the sky or ocean. $concept_shipping_lanes$ always take the route between two coastal or airship [Concept('concept_state','$concept_states$')] that pass through the fewest number of $concept_supply_nodes$. Each additional $concept_supply_node$ beyond the first adds #v [GetDefine('NEconomy','SHIPPING_LANE_CONVOY_COST_SCALING')|=-%0]#! to the [concept_convoy_cost]."
+
+SEA_NODE_TOOLTIP_SKY: "Sky Node"
+SEA_NODE_TOOLTIP: "#header [concept_supply_node] in [StrategicRegion.GetNameNoFormatting]#!\n$TOOLTIP_DELIMITER$\nThere are #v $NUM_CONVOYS$#! [concept_convoys] belonging to our [Concept('concept_shipping_lane', '$concept_shipping_lanes$')] that pass through this node[ConcatIfNeitherEmpty('\n','$SEA_NODE_DAMAGE$')]\n\n$SUPPLY_NETWORK$[ConcatIfNeitherEmpty('\n\n', StrategicRegion.GetConvoyRaidsDesc)]"
+
+SEA_NODE_TOOLTIP_SEA_PART_1: "#header [concept_sea_node] in [StrategicRegion.GetNameNoFormatting]#!\n$TOOLTIP_DELIMITER$\n[ConcatIfNeitherEmpty('\n\n', StrategicRegion.GetConvoyRaidsDesc)]"
+
+
+
+ #SEA_NODE_TOOLTIP: "[AddTextIf(GetScriptedGui('is_sky_region').IsValid( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('node_region', StrategicRegion.MakeScope).End), 'Sky Node')][AddLocalizationIf(Not(GetScriptedGui('is_sky_region').IsValid( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('node_region', StrategicRegion.MakeScope).End)), 'SEA_NODE_TOOLTIP_SEA_PART_1')]" #Simply comment out this entry to make all nodes visible again
+ #SEA_NODE_TOOLTIP_VALID: "[GetScriptedGui('is_sky_region').IsValid( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('node_region', StrategicRegion.MakeScope).End)]" #Use this as SEA_NODE_TOOLTIP is performance tanks too hard
+
+ #COMMAND_CONFIRMATION_DEPLOY_MILITARY_FORMATION_TO_SEA_NODE: "Deploy to Sea Node" Enable if trying to hide sea nodes
+MDF_MOD_DLC_BUTTON_TOOLTIP: "#T [Dlc.GetName]#!\n[Dlc.GetDesc]\n\n#low;emphasis @information! This DLC has been added by a #blue;bold mod#!#!"

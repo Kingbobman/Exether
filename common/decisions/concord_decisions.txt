@@ -1,0 +1,122 @@
+﻿ask_for_concord_intervention = {
+	is_shown = {
+		always = no
+		this = {
+			is_at_war = yes
+			has_variable = concord_member
+			not = {
+				has_variable = asked_for_concord_intervention
+			}
+		}
+	}
+
+	possible = {
+		always = no
+		this = {
+			any_diplomatic_play = {
+				target_is = prev
+				is_war = yes
+			}
+			custom_tooltip = {
+				text = is_concord_member
+				has_variable = concord_member
+			}
+			not = {
+				custom_tooltip = {
+					text = hasnotaskedforintervention
+					has_variable = asking_concord_intervention
+				}
+			}
+		}
+		nor = {
+			custom_tooltip = {
+				text = doesnothavependingresolution
+				has_global_variable = pending_resolution_concord
+			}
+			custom_tooltip = {
+				text = concord_interventionvoteunderway
+				has_global_variable = concord_intervention_vote
+			}
+		}
+	}
+
+	when_taken = {
+		this = {
+			set_variable = asking_concord_intervention
+			set_global_variable = {
+				name = asking_concord_intervention_country
+				value = PREV
+			}
+			set_variable = {
+				name = asked_for_concord_intervention
+				days = 200
+			}
+		}
+		every_country = {
+			limit = {
+				has_war_with = ROOT
+			}
+			set_variable = concord_intervention_enemy_country
+		}
+		custom_tooltip = {
+			text = willsendunvote
+			every_country = {
+				if = {
+					limit = {
+						has_variable = concord_member
+					}
+					add_journal_entry = {
+						type = je_concord_intervention
+					}
+				}
+			}
+		}
+		set_global_variable = {
+			name = pending_resolution_concord_progress_concord
+			value = 0
+		}
+		set_global_variable = concord_intervention_vote
+		set_global_variable = pending_resolution_concord
+	}
+}
+
+join_concord_ai = {
+	is_shown = {
+		this = {
+			is_ai = yes
+			nor = {
+				has_variable = concord_member
+				has_variable = application_progress_concord
+			}
+		}
+	}
+
+	possible = {
+		this = {
+			is_ai = yes
+			is_at_war = no
+			nor = {
+				has_variable = concord_member
+				has_variable = application_progress_concord
+				has_variable = concord_application_rejected
+			}
+		}
+	}
+
+	when_taken = {
+		this = {
+			set_variable = {
+				name = application_progress_concord
+				value = 0
+			}
+			set_variable = {
+				name = concord_supporting_list_size
+				value = 0
+			}
+			add_to_global_variable_list = {
+				name = concord_application_list
+				target = THIS
+			}
+		}
+	}
+}

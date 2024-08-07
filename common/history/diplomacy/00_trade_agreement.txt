@@ -1,0 +1,49 @@
+﻿DIPLOMACY = {
+	c:VAR ?= {
+		create_diplomatic_pact = {
+			country = c:ORO
+			type = trade_agreement
+		}
+		create_diplomatic_pact = {
+			country = c:NRA
+			type = trade_agreement
+		}
+	}
+	c:ORO ?= {
+		create_diplomatic_pact = {
+			country = c:NRA
+			type = trade_agreement
+		}
+	}
+	c:VOZ?= {
+		create_diplomatic_pact = {
+			country = c:DRO
+			type = trade_agreement
+		}		
+	}	
+	
+	c:ARR ?= {
+		create_diplomatic_pact = {
+			country = c:ARR
+			type = trade_agreement
+		}
+		create_diplomatic_pact = {
+			country = c:THI
+			type = trade_agreement
+		}
+	}
+
+	c:DUM?= {
+		create_diplomatic_pact = {
+			country = c:CER
+			type = trade_agreement
+		}		
+	}	
+	c:AHO?= {
+		create_diplomatic_pact = {
+			country = c:ZKW
+			type = trade_agreement
+		}
+		
+	}
+}

@@ -1,0 +1,33 @@
+﻿COUNTRIES = {
+	c:VOZ = {
+		effect_starting_technology_tier_2_tech = yes
+		effect_starting_politics_conservative = yes
+
+		activate_law = law_type:law_cultural_exclusion
+		activate_law = law_type:law_freedom_of_conscience
+		activate_law = law_type:law_dedicated_police
+		activate_law = law_type:law_national_guard
+		activate_law = law_type:law_professional_army
+		activate_law = law_type:law_charitable_health_system
+		activate_law = law_type:law_artificer_guilds
+
+		add_technology_researched = hydraulic_cranes
+		add_technology_researched = airship
+		add_technology_researched = cloudsilver_refining
+		add_technology_researched = stock_exchange
+
+		add_taxed_goods = g:tea
+		add_taxed_goods = g:services
+		add_taxed_goods = g:opium
+
+
+		set_tariffs_import_priority = g:opium
+		set_tariffs_import_priority = g:wood
+		set_tariffs_import_priority = g:paper
+		set_tariffs_import_priority = g:luxury_clothes
+
+		add_journal_entry = {
+			type = je_purpur_wedding
+		}
+	}
+}

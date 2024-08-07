@@ -1,0 +1,619 @@
+﻿# This is executed last among all history
+GLOBAL = {
+
+	every_state = {
+		if = {
+			limit = {
+				exether_is_coastal = yes
+			}
+			set_variable = {
+				name = exe_is_coastal
+			}
+		}
+	}
+
+
+	# Arcane Civis 
+	every_country = {
+		#ORDER OF THE SUN
+		if = {
+			limit = {
+				this ?= c:AUM
+			}
+			ritual_divine_2 = yes
+			get_cost = yes
+			calculate_rituals = yes
+
+		}
+
+		#JURIAN'S INQUSITION
+		if = {
+			limit = {
+				this ?= c:JUR
+			}
+			ritual_divine_2 = yes
+			get_cost = yes
+			calculate_rituals = yes
+
+		}	
+
+		#RAVENCLIFF
+		if = {
+			limit = {
+				this ?= c:RVC
+			}
+			ritual_dark_3 = yes
+			get_cost = yes
+			ritual_dark_4 = yes
+			get_cost = yes
+			calculate_rituals = yes
+
+		}
+
+		#FOXWORTH
+		if = {
+			limit = {
+				this ?= c:FOX
+			}
+			ritual_antimagic_4 = yes
+			get_cost = yes
+			calculate_rituals = yes
+
+		}
+
+		#ROSECROFT
+		if = {
+			limit = {
+				this ?= c:ROF
+			}
+			ritual_antimagic_4 = yes
+			get_cost = yes
+			calculate_rituals = yes
+
+		}	
+
+		#RAVIK
+		if = {
+			limit = {
+				this ?= c:RAV
+			}
+			ritual_dark_1 = yes
+			get_cost = yes
+			ritual_dark_2 = yes
+			get_cost = yes
+			calculate_rituals = yes
+
+		}
+
+		#ARRADOR
+		if = {
+			limit = {
+				this ?= c:ARR
+			}
+			ritual_artificer_5 = yes
+			get_cost = yes
+			calculate_rituals = yes
+
+		}
+
+		#ACHON
+		if = {
+			limit = {
+				this ?= c:AHO
+			}
+			ritual_astrology_2 = yes
+			get_cost = yes
+			ritual_astrology_3 = yes
+			get_cost = yes
+			calculate_rituals = yes
+
+		}
+
+		#SECRET KEEPERS
+		if = {
+			limit = {
+				this ?= c:VHT
+			}
+			ritual_astrology_2 = yes
+			get_cost = yes
+			ritual_astrology_3 = yes
+			get_cost = yes
+			calculate_rituals = yes
+
+		}
+
+		#OAZJARO
+		if = {
+			limit = {
+				this ?= c:OAZ
+			}
+			ritual_antimagic_1 = yes
+			get_cost = yes
+			calculate_rituals = yes
+
+		}
+
+		#ZAHRATIA
+		if = {
+			limit = {
+				this ?= c:ZHR
+			}
+			ritual_antimagic_1 = yes
+			get_cost = yes
+			calculate_rituals = yes
+
+		}
+
+		#SOLNOMO
+		if = {
+			limit = {
+				this ?= c:SNM
+			}
+			ritual_antimagic_1 = yes
+			get_cost = yes
+			calculate_rituals = yes
+
+		}
+
+		#VERKISIRIO
+		if = {
+			limit = {
+				this ?= c:VER
+			}
+			ritual_astrology_5 = yes
+			get_cost = yes
+			calculate_rituals = yes
+
+		}
+
+		#ZUBAYRA
+		if = {
+			limit = {
+				this ?= c:ZUB
+			}
+			ritual_astrology_5 = yes
+			get_cost = yes
+			calculate_rituals = yes
+
+		}
+
+		#LISINIA
+		if = {
+			limit = {
+				this ?= c:LIS
+			}
+			ritual_astrology_5 = yes
+			get_cost = yes
+			calculate_rituals = yes
+
+		}
+
+		#HOUTBLOM
+		if = {
+			limit = {
+				this ?= c:HOU
+			}
+			ritual_druidic_5 = yes
+			get_cost = yes
+			calculate_rituals = yes
+
+		}
+
+		#SEESKAT
+		if = {
+			limit = {
+				this ?= c:SEE
+			}
+			ritual_druidic_5 = yes
+			get_cost = yes
+			calculate_rituals = yes
+
+		}
+
+		#FISKEROER
+		if = {
+			limit = {
+				this ?= c:FIS
+			}
+			ritual_druidic_5 = yes
+			get_cost = yes
+			calculate_rituals = yes
+
+		}	
+	}
+
+
+	every_country = {
+		limit = { NOT = { has_law = law_type:law_slavery_banned } }
+		ig:ig_landowners = { add_ideology = ideology_pro_slavery }
+	}
+
+	# Jack the ripper, prevents the event from happening every game
+
+	every_country = {
+		if = {
+			limit = {
+				is_player = yes
+			}
+		}
+		random_list = {
+			1 = { set_variable = var_jack_ripper_possible }
+			9 = {
+				#Nothing Happens
+			}
+		}
+	}
+
+	# Racial Techs
+
+	every_country = {
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = human_heritage
+				}
+			}
+			add_technology_researched = human_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = dwarf_heritage
+				}
+			}
+			add_technology_researched = dwarf_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = elf_heritage
+				}
+			}
+			add_technology_researched = elf_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = gnome_heritage
+				}
+			}
+			add_technology_researched = gnome_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = dragon_heritage
+				}
+			}
+			add_technology_researched = dragon_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = planetouched_heritage
+				}
+			}
+			add_technology_researched = planetouched_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = ogre_heritage
+				}
+			}
+			add_technology_researched = ogre_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = goblin_heritage
+				}
+			}
+			add_technology_researched = goblin_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = lizardfolk_heritage
+				}
+			}
+			add_technology_researched = lizard_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = giant_heritage
+				}
+			}
+			add_technology_researched = giant_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = mouse_heritage
+				}
+			}
+			add_technology_researched = mouse_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = orc_heritage
+				}
+			}
+			add_technology_researched = orc_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = halfling_heritage
+				}
+			}
+			add_technology_researched = halfling_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = bird_heritage
+				}
+			}
+			add_technology_researched = bird_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = mechanical_heritage
+				}
+			}
+			add_technology_researched = mechanical_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = hippo_heritage
+				}
+			}
+			add_technology_researched = hippo_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					AND = {
+						has_discrimination_trait = monstrous_heritage
+						NOT = { has_discrimination_trait = naga }
+						NOT = { has_discrimination_trait = beast  }
+						
+					}
+					
+				}
+			}
+			add_technology_researched = monster_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					OR = {
+						has_discrimination_trait = namkhazen_heritage
+						has_discrimination_trait = naga
+						has_discrimination_trait = beast
+					}
+					
+				}
+			}
+			add_technology_researched = psionic_tech
+		}
+	}
+
+	# International List
+
+	every_country = {
+		limit = {
+			religion = {
+				OR = {
+					has_discrimination_trait = marktarian_heritage
+					has_discrimination_trait = uriks_pantheon
+				}
+				
+			}
+		}
+		effect_concord_member = yes
+
+	}
+
+	every_country = {
+		limit = {
+			has_variable = concord_member
+		}
+		add_to_global_variable_list = {
+			name = concord_members_list
+			target = THIS
+		}
+	}
+
+	every_country = {
+		limit = {
+			has_variable = concord_major_member
+		}
+		add_to_global_variable_list = {
+			name = concord_major_members_list
+			target = THIS
+		}
+	}
+
+	every_country = {
+		limit = {
+			has_variable = concord_observer
+		}
+		add_to_global_variable_list = {
+			name = concord_observers_list
+			target = THIS
+		}
+	}
+	every_country = {
+		limit = {
+			NOR = {
+				has_variable = concord_observer
+				has_variable = concord_member
+			}
+		}
+		add_to_global_variable_list = {
+			name = concord_nonmember_list
+			target = THIS
+		}
+	}
+	every_country = {
+		limit = {
+			has_variable = concord_headquarters_holder
+		}
+		add_to_global_variable_list = {
+			name = concord_headquarters_holder
+			target = THIS
+		}
+	}
+	## Concord Variables
+	random_country = {
+		set_global_variable = {
+			name = veil_damage_top_1
+			value = 0
+		}
+		set_global_variable = {
+			name = veil_damage_top_1_value
+			value = 0
+		}
+
+		set_global_variable = {
+			name = veil_damage_top_2
+			value = 0
+		}
+		set_global_variable = {
+			name = veil_damage_top_2_value
+			value = 0
+		}
+
+		set_global_variable = {
+			name = veil_damage_top_3
+			value = 0
+		}
+		set_global_variable = {
+			name = veil_damage_top_3_value
+			value = 0
+		}
+
+		set_global_variable = {
+			name = var_concord_memberlist
+			value = 0
+		}
+	}
+	every_country = {
+		limit = {
+			has_variable = concord_member
+		}
+		change_global_variable = {
+			name = var_concord_memberlist
+			add = 1
+		}
+	}
+
+	#Declaration of Independence
+	every_country = {
+		limit = {
+			is_subject = yes
+		}
+		set_variable = declaration_of_independence_ach_possible
+	}
+
+	#Event Variables
+	
+	set_global_variable = {
+		name = number_of_mega_earthquakes
+		value = 0
+	}
+
+	set_global_variable = {
+		name = number_of_mega_floods
+		value = 0
+	}
+	
+	set_global_variable = {
+		name = number_of_mega_eruptions
+		value = 0
+	}
+
+	set_global_variable = {
+		name = veil_integrity_var
+		value = 0
+	}
+
+	setup_ritual_active = yes
+	setup_ritual_divine = yes
+	setup_ritual_druidic = yes
+	setup_ritual_artificer = yes
+	setup_ritual_astrology = yes
+	setup_ritual_dark = yes
+	setup_ritual_antimagic = yes
+	setup_ritual_psionic = yes
+	setup_arcana_surplus = yes
+	
+
+	every_country = {
+
+		add_modifier = {
+			name = surplus_arcana
+		}
+
+		set_variable = {
+			name = veil_damage
+			value = 0
+		}
+
+		set_variable = {
+			name = player_rank
+			value = 99
+		}
+
+
+		calculate_rituals = yes
+
+					### Variable Errors Fixing - HACK!  Fix these eventually
+		
+			fix_variable_error = {
+				X = asked_concord_observer
+			}
+
+			fix_variable_error = {
+				X = napoleon_iii_var
+			}
+
+			fix_variable_error = {
+				X = veil_damage_top_1
+			}
+			fix_variable_error = {
+				X = veil_damage_top_2
+			}
+			fix_variable_error = {
+				X = veil_damage_top_3
+			}
+
+		}
+
+		
+
+		#Union of the Sands JE
+		set_global_variable = {
+			name = yavira_scope
+			value = c:DRO
+		}
+		set_global_variable = {
+			name = vozmead_scope
+			value = c:VOZ
+		}
+		set_global_variable = {
+			name = yavira_gdp
+			value = c:DRO.gdp
+		}
+		set_global_variable = {
+			name = vozmead_gdp
+			value = c:VOZ.gdp
+		}
+
+}

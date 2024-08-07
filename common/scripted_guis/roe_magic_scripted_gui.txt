@@ -1,0 +1,279 @@
+# DIVINE #
+cast_ritual_id_divine_button_effect = {
+	saved_scopes = { ritual_id_divine }
+	effect = {
+		add_modifier = {
+			name = country_ritual_cooldown
+			months = 12
+		}
+		pick_ritual_id_divine = yes
+		get_cost = yes
+	}
+	is_valid = {
+		AND = {
+			has_law = law_type:law_divine_miracles
+			NOT = { 
+				has_modifier = country_ritual_cooldown
+			}
+			scope:ritual_id_divine = {
+				custom_tooltip = {
+					text = has_reserves_tt
+					root.magic_reserves_total >= ritual_cost
+				}
+			}
+		}
+       
+    }
+}
+
+# DRUIDIC #
+cast_ritual_id_druidic_button_effect = {
+	saved_scopes = { ritual_id_druidic }
+	effect = {
+		add_modifier = {
+			name = country_ritual_cooldown
+			months = 12
+		}
+		pick_ritual_id_druidic = yes
+		get_cost = yes
+	}
+	is_valid = {
+		AND = {
+			has_law = law_type:law_druidic_circles
+			NOT = { 
+				has_modifier = country_ritual_cooldown
+			}
+			scope:ritual_id_druidic = {
+				custom_tooltip = {
+					text = has_reserves_tt
+					root.magic_reserves_total >= ritual_cost
+				}
+			}
+		}
+       
+    }
+}
+
+# ARTIFICER #
+cast_ritual_id_artificer_button_effect = {
+	saved_scopes = { ritual_id_artificer }
+	effect = {
+		add_modifier = {
+			name = country_ritual_cooldown
+			months = 12
+		}
+		pick_ritual_id_artificer = yes
+		get_cost = yes
+	}
+	is_valid = {
+		AND = {
+			has_law = law_type:law_artificer_guilds
+			NOT = { 
+				has_modifier = country_ritual_cooldown
+			}
+			scope:ritual_id_artificer = {
+				custom_tooltip = {
+					text = has_reserves_tt
+					root.magic_reserves_total >= ritual_cost
+				}
+			}
+		}
+       
+    }
+}
+
+# ASTROLOGY #
+cast_ritual_id_astrology_button_effect = {
+	saved_scopes = { ritual_id_astrology }
+	effect = {
+		add_modifier = {
+			name = country_ritual_cooldown
+			months = 12
+		}
+		pick_ritual_id_astrology = yes
+		get_cost = yes
+	}
+	is_valid = {
+		AND = {
+			has_law = law_type:law_astrological_studies
+			NOT = { 
+				has_modifier = country_ritual_cooldown
+			}
+			scope:ritual_id_astrology = {
+				custom_tooltip = {
+					text = has_reserves_tt
+					root.magic_reserves_total >= ritual_cost
+				}
+			}
+		}
+       
+    }
+}
+
+# DARK #
+cast_ritual_id_dark_button_effect = {
+	saved_scopes = { ritual_id_dark }
+	effect = {
+		add_modifier = {
+			name = country_ritual_cooldown
+			months = 12
+		}
+		pick_ritual_id_dark = yes
+		get_cost = yes
+	}
+	is_valid = {
+		AND = {
+			has_law = law_type:law_dark_arts
+			NOT = { 
+				has_modifier = country_ritual_cooldown
+			}
+			scope:ritual_id_dark = {
+				custom_tooltip = {
+					text = has_reserves_tt
+					root.magic_reserves_total >= ritual_cost
+				}
+			}
+		}
+       
+    }
+}
+
+# ANTIMAGIC #
+cast_ritual_id_antimagic_button_effect = {
+	saved_scopes = { ritual_id_antimagic }
+	effect = {
+		add_modifier = {
+			name = country_ritual_cooldown
+			months = 12
+		}
+		pick_ritual_id_antimagic = yes
+		get_cost = yes
+	}
+	is_valid = {
+		AND = {
+			has_law = law_type:law_mage_hunters
+			NOT = { 
+				has_modifier = country_ritual_cooldown
+			}
+			scope:ritual_id_antimagic = {
+				custom_tooltip = {
+					text = has_reserves_tt
+					root.magic_reserves_total >= ritual_cost
+				}
+			}
+		}
+       
+    }
+}
+
+# PSIONIC #
+cast_ritual_id_psionic_button_effect = {
+	saved_scopes = { ritual_id_psionic }
+	effect = {
+		add_modifier = {
+			name = country_ritual_cooldown
+			months = 12
+		}
+		pick_ritual_id_psionic = yes
+		get_cost = yes
+	}
+	is_valid = {
+		AND = {
+			has_law = law_type:law_psionics
+			NOT = { 
+				has_modifier = country_ritual_cooldown
+			}
+			scope:ritual_id_psionic = {
+				custom_tooltip = {
+					text = has_reserves_tt
+					root.magic_reserves_total >= ritual_cost
+				}
+			}
+		}
+       
+    }
+}
+
+# ACTIVE #
+cast_ritual_description = {
+	saved_scopes = { ritual_id }
+	effect = {
+		pick_ritual = yes
+	}
+}
+
+# DIVINE #
+cast_ritual_description_divine = {
+	saved_scopes = { ritual_id_divine }
+	effect = {
+		pick_ritual_id_divine = yes
+	}
+}
+
+# DRUIDIC #
+cast_ritual_description_druidic = {
+	saved_scopes = { ritual_id_druidic }
+	effect = {
+		pick_ritual_id_druidic = yes
+	}
+}
+
+# ARTIFICER #
+cast_ritual_description_artificer = {
+	saved_scopes = { ritual_id_artificer }
+	effect = {
+		pick_ritual_id_artificer = yes
+	}
+}
+
+# ASTROLOGY #
+cast_ritual_description_astrology = {
+	saved_scopes = { ritual_id_astrology }
+	effect = {
+		pick_ritual_id_astrology = yes
+	}
+}
+
+# DARK #
+cast_ritual_description_dark = {
+	saved_scopes = { ritual_id_dark }
+	effect = {
+		pick_ritual_id_dark = yes
+	}
+}
+
+# ANTIMAGIC #
+cast_ritual_description_antimagic = {
+	saved_scopes = { ritual_id_antimagic }
+	effect = {
+		pick_ritual_id_antimagic = yes
+	}
+}
+
+# PSIONIC #
+cast_ritual_description_psionic = {
+	saved_scopes = { ritual_id_psionic }
+	effect = {
+		pick_ritual_id_psionic = yes
+	}
+}
+
+# DISPEL #
+dispel_ritual_button_effect = {
+	saved_scopes = { ritual_id }
+	effect = {
+		pick_dispel_ritual = yes
+	}
+	is_valid = {
+		NOT = { 
+			has_modifier = country_ritual_cooldown
+		}
+    }
+}
+
+# RECALC #
+recalculate_ritual_lists = {
+	effect = {
+		calculate_rituals = yes
+	}
+}

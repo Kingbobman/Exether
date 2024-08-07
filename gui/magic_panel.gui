@@ -1,0 +1,1659 @@
+# COPY-PASTED FOR NOW
+@panel_width_minus_10 = 530			# used to be 450
+@panel_width = 540  				# used to be 460
+@panel_width_half = 270				# used to be 230
+@panel_width_plus_10 = 550  		# used to be 470
+@panel_width_plus_14 = 554			# used to be 474
+@panel_width_plus_14_half = 277		# used to be 237
+@panel_width_plus_20 = 560			# used to be 480
+@panel_width_plus_30 = 570			# used to be 490
+@panel_width_plus_70 = 610			# used to be 530
+
+template magic_panel_visibility {
+	visible = "[And(GetVariableSystem.Exists('show_magic'), Not(InformationPanelBar.IsAnyPanelOpen()))]"
+}
+
+types magic_panel
+{
+	type magic_panel = default_block_window {
+		name = "magic_panel"
+		using = magic_panel_visibility
+
+		blockoverride "animation_state_block" {
+			state = {
+				name = _show
+				start_sound = {
+					soundeffect = "event:/SFX/UI/SideBar/companies"
+				}
+			}
+		
+			state = {
+				name = _hide
+				start_sound = {
+					soundeffect = "event:/SFX/UI/SideBar/companies_stop"
+				}
+			}
+		}
+
+		blockoverride "header_close_button" {
+			onclick = "[GetVariableSystem.Toggle('show_magic')]"
+		}
+
+		blockoverride "entire_back_button" {
+			back_button_large = {
+				position = { 8 30 }
+				onclick = "[GetVariableSystem.Toggle('show_magic')]"
+				visible = "[GetVariableSystem.Exists('show_magic')]"
+				input_action = "back"
+			}
+
+			back_button_large = {
+				position = { 8 30 }
+				onclick = "[GetVariableSystem.Toggle('show_magic')]"
+				visible = "[Not(GetVariableSystem.Exists('show_magic'))]"
+				input_action = "back"
+			}
+		}
+		
+		blockoverride "window_header_name" {
+			raw_text = "MAGIC_PANEL_HEADER"
+		}
+
+		#TOP
+		blockoverride "fixed_top"
+		{
+			### TOP PART
+			top_illu = {
+				blockoverride "illu" {
+					texture = "gfx/interface/illustrations/top_illus/top_illu_budget.dds"
+				}
+				textbox = {
+					name = "tutorial_highlight_magic_reserves"
+					parentanchor = center
+					using = fontsize_mega
+					raw_text = "@magic![AccessPlayer.MakeScope.ScriptValue('magic_reserves_total')|=+D]"
+					autoresize = yes
+					align = center|nobaseline
+					tooltip = "MAGIC_TOOLTIP"
+				}
+			}
+			
+			widget = { size = { 1 10 }}
+		}
+		
+		blockoverride "scrollarea_content"
+		{
+			flowcontainer = {
+				using = default_list_position
+				direction = vertical
+				minimumsize = { @panel_width_plus_14 -1 }
+				maximumsize = { @panel_width_plus_14 -1 }
+				datacontext = "[AccessPlayer]"
+
+				### ACTIVE RITUALS
+				flowcontainer = {
+					visible = "[Not(GetVariableSystem.Exists('hide_current_companies'))]"
+					parentanchor = hcenter
+					direction = vertical
+					default_header_2texts = {
+						blockoverride "text1" {
+							text = "MAGICAL_RITUALS"
+						}
+						blockoverride "text2" {
+							text = "[GetDataModelSize(GetPlayer.MakeScope.GetList('active_ritual_id_list'))|0v]"
+						}
+					}
+
+					flowcontainer = {
+						direction = vertical
+						parentanchor = hcenter
+						margin = { 0 10 }
+						spacing = 10
+
+						### COMPANIES
+						flowcontainer = {
+							parentanchor = hcenter
+							minimumsize = { @panel_width -1 }
+							maximumsize = { @panel_width -1 }
+							datamodel = "[GetPlayer.MakeScope.GetList('active_ritual_id_list')]"
+							direction = vertical
+							spacing = 10
+
+							item = {
+								ritual_item = {}
+							}
+						}
+
+
+					}
+				}
+
+				## DIVINE MIRACLES HEADER
+				section_header_button = {
+					blockoverride "left_text" {
+						text = "DIVINE_MIRACLES_TEXT"
+					}
+
+					blockoverride "right_text" {
+						section_header_right_text = {
+							text = "[GetDataModelSize(GetPlayer.MakeScope.GetList('available_ritual_id_divine_list'))]"
+						}
+					}
+					blockoverride "onclick" {
+						onclick = "[GetVariableSystem.Toggle('gui_ritual_id_divine')]"
+					}
+					
+					blockoverride "onclick_showmore" {
+						visible = "[Not(GetVariableSystem.Exists('gui_ritual_id_divine'))]"
+					}
+
+					blockoverride "onclick_showless" {
+						visible = "[GetVariableSystem.Exists('gui_ritual_id_divine')]"
+					}
+				}
+				### DIVINE MIRACLES BODY
+				flowcontainer = {
+					parentanchor = hcenter
+					direction = vertical
+					visible = "[GetVariableSystem.Exists('gui_ritual_id_divine')]"
+
+					flowcontainer = {
+						parentanchor = hcenter
+						visible = "[Not(IsDataModelEmpty(GetPlayer.MakeScope.GetList('available_ritual_id_divine_list')))]"
+						datamodel = "[GetPlayer.MakeScope.GetList('available_ritual_id_divine_list')]"
+						direction = vertical
+						spacing = 5
+
+						item = {
+							ritual_id_divine_item = {}
+						}
+					}
+				}		
+
+				### DRUID HEADER
+				section_header_button = {
+					blockoverride "left_text" {
+						text = "DRUIDIC_TEXT"
+					}
+
+					blockoverride "right_text" {
+						section_header_right_text = {
+							text = "[GetDataModelSize(GetPlayer.MakeScope.GetList('available_ritual_id_druidic_list'))]"
+						}
+					}
+					blockoverride "onclick" {
+						onclick = "[GetVariableSystem.Toggle('gui_ritual_id_druidic')]"
+					}
+					
+					blockoverride "onclick_showmore" {
+						visible = "[Not(GetVariableSystem.Exists('gui_ritual_id_druidic'))]"
+					}
+
+					blockoverride "onclick_showless" {
+						visible = "[GetVariableSystem.Exists('gui_ritual_id_druidic')]"
+					}
+				}
+				### DRUID BODY
+				flowcontainer = {
+					parentanchor = hcenter
+					direction = vertical
+					visible = "[GetVariableSystem.Exists('gui_ritual_id_druidic')]"
+
+					flowcontainer = {
+						parentanchor = hcenter
+						visible = "[Not(IsDataModelEmpty(GetPlayer.MakeScope.GetList('available_ritual_id_druidic_list')))]"
+						datamodel = "[GetPlayer.MakeScope.GetList('available_ritual_id_druidic_list')]"
+						direction = vertical
+						spacing = 5
+
+						item = {
+							ritual_id_druidic_item = {}
+						}
+					}
+				}		
+
+				### ARTIFICER HEADER
+				section_header_button = {
+					blockoverride "left_text" {
+						text = "ARTIFICER_TEXT"
+					}
+
+					blockoverride "right_text" {
+						section_header_right_text = {
+							text = "[GetDataModelSize(GetPlayer.MakeScope.GetList('available_ritual_id_artificer_list'))]"
+						}
+					}
+					blockoverride "onclick" {
+						onclick = "[GetVariableSystem.Toggle('gui_ritual_id_artificer')]"
+					}
+					
+					blockoverride "onclick_showmore" {
+						visible = "[Not(GetVariableSystem.Exists('gui_ritual_id_artificer'))]"
+					}
+
+					blockoverride "onclick_showless" {
+						visible = "[GetVariableSystem.Exists('gui_ritual_id_artificer')]"
+					}
+				}
+				### ARTIFICER BODY
+				flowcontainer = {
+					parentanchor = hcenter
+					direction = vertical
+					visible = "[GetVariableSystem.Exists('gui_ritual_id_artificer')]"
+
+					flowcontainer = {
+						parentanchor = hcenter
+						visible = "[Not(IsDataModelEmpty(GetPlayer.MakeScope.GetList('available_ritual_id_artificer_list')))]"
+						datamodel = "[GetPlayer.MakeScope.GetList('available_ritual_id_artificer_list')]"
+						direction = vertical
+						spacing = 5
+
+						item = {
+							ritual_id_artificer_item = {}
+						}
+					}
+				}		
+
+				### ASTROLOGY HEADER
+				section_header_button = {
+					blockoverride "left_text" {
+						text = "ASTROLOGY_TEXT"
+					}
+
+					blockoverride "right_text" {
+						section_header_right_text = {
+							text = "[GetDataModelSize(GetPlayer.MakeScope.GetList('available_ritual_id_astrology_list'))]"
+						}
+					}
+					blockoverride "onclick" {
+						onclick = "[GetVariableSystem.Toggle('gui_ritual_id_astrology')]"
+					}
+					
+					blockoverride "onclick_showmore" {
+						visible = "[Not(GetVariableSystem.Exists('gui_ritual_id_astrology'))]"
+					}
+
+					blockoverride "onclick_showless" {
+						visible = "[GetVariableSystem.Exists('gui_ritual_id_astrology')]"
+					}
+				}
+				### ASTROLOGY BODY
+				flowcontainer = {
+					parentanchor = hcenter
+					direction = vertical
+					visible = "[GetVariableSystem.Exists('gui_ritual_id_astrology')]"
+
+					flowcontainer = {
+						parentanchor = hcenter
+						visible = "[Not(IsDataModelEmpty(GetPlayer.MakeScope.GetList('available_ritual_id_astrology_list')))]"
+						datamodel = "[GetPlayer.MakeScope.GetList('available_ritual_id_astrology_list')]"
+						direction = vertical
+						spacing = 5
+
+						item = {
+							ritual_id_astrology_item = {}
+						}
+					}
+				}		
+
+				### DARK HEADER
+				section_header_button = {
+					blockoverride "left_text" {
+						text = "DARK_TEXT"
+					}
+
+					blockoverride "right_text" {
+						section_header_right_text = {
+							text = "[GetDataModelSize(GetPlayer.MakeScope.GetList('available_ritual_id_dark_list'))]"
+						}
+					}
+					blockoverride "onclick" {
+						onclick = "[GetVariableSystem.Toggle('gui_ritual_id_dark')]"
+					}
+					
+					blockoverride "onclick_showmore" {
+						visible = "[Not(GetVariableSystem.Exists('gui_ritual_id_dark'))]"
+					}
+
+					blockoverride "onclick_showless" {
+						visible = "[GetVariableSystem.Exists('gui_ritual_id_dark')]"
+					}
+				}
+				### DARK BODY
+				flowcontainer = {
+					parentanchor = hcenter
+					direction = vertical
+					visible = "[GetVariableSystem.Exists('gui_ritual_id_dark')]"
+
+					flowcontainer = {
+						parentanchor = hcenter
+						visible = "[Not(IsDataModelEmpty(GetPlayer.MakeScope.GetList('available_ritual_id_dark_list')))]"
+						datamodel = "[GetPlayer.MakeScope.GetList('available_ritual_id_dark_list')]"
+						direction = vertical
+						spacing = 5
+
+						item = {
+							ritual_id_dark_item = {}
+						}
+					}
+				}		
+				
+				### ANTIMAGIC HEADER
+				section_header_button = {
+					blockoverride "left_text" {
+						text = "ANTIMAGIC_TEXT"
+					}
+
+					blockoverride "right_text" {
+						section_header_right_text = {
+							text = "[GetDataModelSize(GetPlayer.MakeScope.GetList('available_ritual_id_antimagic_list'))]"
+						}
+					}
+					blockoverride "onclick" {
+						onclick = "[GetVariableSystem.Toggle('gui_ritual_id_antimagic')]"
+					}
+					
+					blockoverride "onclick_showmore" {
+						visible = "[Not(GetVariableSystem.Exists('gui_ritual_id_antimagic'))]"
+					}
+
+					blockoverride "onclick_showless" {
+						visible = "[GetVariableSystem.Exists('gui_ritual_id_antimagic')]"
+					}
+				}
+				### ANTIMAGIC BODY
+				flowcontainer = {
+					parentanchor = hcenter
+					direction = vertical
+					visible = "[GetVariableSystem.Exists('gui_ritual_id_antimagic')]"
+
+					flowcontainer = {
+						parentanchor = hcenter
+						visible = "[Not(IsDataModelEmpty(GetPlayer.MakeScope.GetList('available_ritual_id_antimagic_list')))]"
+						datamodel = "[GetPlayer.MakeScope.GetList('available_ritual_id_antimagic_list')]"
+						direction = vertical
+						spacing = 5
+
+						item = {
+							ritual_id_antimagic_item = {}
+						}
+					}
+				}		
+						
+				### PSIONIC HEADER
+				section_header_button = {
+					blockoverride "left_text" {
+						text = "PSIONIC_TEXT"
+					}
+
+					blockoverride "right_text" {
+						section_header_right_text = {
+							text = "[GetDataModelSize(GetPlayer.MakeScope.GetList('available_ritual_id_psionic_list'))]"
+						}
+					}
+					blockoverride "onclick" {
+						onclick = "[GetVariableSystem.Toggle('gui_ritual_id_psionic')]"
+					}
+					
+					blockoverride "onclick_showmore" {
+						visible = "[Not(GetVariableSystem.Exists('gui_ritual_id_psionic'))]"
+					}
+
+					blockoverride "onclick_showless" {
+						visible = "[GetVariableSystem.Exists('gui_ritual_id_psionic')]"
+					}
+				}
+				### PSIONIC BODY
+				flowcontainer = {
+					parentanchor = hcenter
+					direction = vertical
+					visible = "[GetVariableSystem.Exists('gui_ritual_id_psionic')]"
+
+					flowcontainer = {
+						parentanchor = hcenter
+						visible = "[Not(IsDataModelEmpty(GetPlayer.MakeScope.GetList('available_ritual_id_psionic_list')))]"
+						datamodel = "[GetPlayer.MakeScope.GetList('available_ritual_id_psionic_list')]"
+						direction = vertical
+						spacing = 5
+
+						item = {
+							ritual_id_psionic_item = {}
+						}
+					}
+				}		
+										
+
+
+
+
+
+			}
+		}
+	}
+
+	type ritual_item = container {
+
+		flowcontainer = {
+			direction = vertical
+			minimumsize = { @panel_width -1 }		
+			maximumsize = { @panel_width -1 }
+			margin = { 10 10 }
+			spacing = 5		
+			margin_top = 3
+			
+			background = {
+					using = simple_frame
+			}
+
+			container = {
+				minimumsize = { 536 -1 }
+				parentanchor = hcenter
+
+				flowcontainer = {
+					minimumsize = { @panel_width_minus_10 -1 }
+					parentanchor = vcenter
+					spacing = 5
+					margin_left = 10
+
+					background = {
+						using = fade_right_simple
+					}
+
+					flowcontainer = {
+						direction = vertical
+						margin_top = 2
+						margin_bottom = 2
+
+						textbox = {
+							minimumsize = { 450 -1 }
+							maximumsize = { 450 -1 }
+							autoresize = yes
+							multiline = no
+							fontsize_min = 12
+							elide = right
+							text = "RITUAL_NAME"
+							default_format = "#header"
+							using = fontsize_large
+							using = ritual_item_text
+						}
+
+						textbox = {
+							minimumsize = { 450 -1 }
+							maximumsize = { 450 -1 }
+							autoresize = yes
+							multiline = no
+							fontsize_min = 12
+							elide = right
+							text = "COMPANY_ESTABLISHED"
+							using = ritual_item_text
+						}
+					}
+				}	
+			}
+
+			flowcontainer = {
+				spacing = 10
+
+				flowcontainer = {
+					direction = vertical
+					parentanchor = vcenter
+
+					icon = {
+						size = { 130 130 }
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1')]"
+						texture = "gfx/interface/icons/rituals/ext_ritual_almsgiving.dds"
+					}
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/ext_ritual_divine_right.dds"
+					}
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/ext_ritual_guardian_angels.dds"
+					}
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/ext_ritual_grace.dds"
+					}
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/ext_ritual_disease_wards.dds"
+					}
+					#HARMONIUS CONSTRUCTION
+					icon = {
+						size = { 130 130 }
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)6')]"
+						texture = "gfx/interface/icons/rituals/ext_ritual_harmony_construction.dds"
+					}
+					#ENVIRONMENTAL REGENERATION
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)7')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/ext_ritual_environmental_regeneration.dds"
+					}
+					#THORNS
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)8')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/ext_ritual_thorns.dds"
+					}
+					#LANDSCAPES
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)9')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/ext_ritual_scenic_landscapes.dds"
+					}
+					#RAINFALL
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)10')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/ext_ritual_conjured_rainfall.dds"
+					}
+					#CLOCKWORK COURIERS
+					icon = {
+						size = { 130 130 }
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)11')]"
+						texture = "gfx/interface/icons/rituals/ext_ritual_clockwork_courier.dds"
+					}
+					#AUTO SCRIBES
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)12')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/ext_ritual_auto_scribes.dds"
+					}
+					#EVERYDAY WONDERS
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)13')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/ext_ritual_everyday_wonders.dds"
+					}
+					#BUILDER GOLEMS
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)14')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/ext_ritual_builder_golems.dds"
+					}
+					#ENCHANTED TOOLS
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)15')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/ext_ritual_enchanted_tools.dds"
+					}
+					icon = {
+						size = { 130 130 }
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)16')]"
+						texture = "gfx/interface/icons/rituals/ext_ritual_astral_mapping.dds"
+					}
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)17')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/ext_ritual_starlight_academia.dds"
+					}
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)18')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/ext_ritual_guiding_constellations.dds"
+					}
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)19')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/ext_ritual_stellar_guidance.dds"
+					}
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)20')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/ext_ritual_universal_knowledge.dds"
+					}
+					icon = {
+						size = { 130 130 }
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)21')]"
+						texture = "gfx/interface/icons/rituals/ext_ritual_bound_thralls.dds"
+					}
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)22')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/ext_ritual_dark_fanatics.dds"
+					}
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)23')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/ext_ritual_cults.dds"
+					}
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)24')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/ext_ritual_profane_bargains.dds"
+					}
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)25')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/ext_ritual_pierce_veil.dds"
+					}
+					icon = {
+						size = { 130 130 }
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)26')]"
+						texture = "gfx/interface/icons/rituals/ext_ritual_anti_magic_device.dds"
+					}
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)27')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/ext_ritual_ingenunity.dds"
+					}
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)28')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/ext_ritual_profiling.dds"
+					}
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)29')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/ext_ritual_scrying.dds"
+					}
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)30')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/ext_ritual_magic_regulations.dds"
+					}
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)31')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/ext_ritual_mind_over_matter.dds"
+					}
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)32')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/ext_ritual_telepathy.dds"
+					}
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)33')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/ext_ritual_mental_fortress.dds"
+					}
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)34')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/ext_ritual_psionic_augmentation.dds"
+					}
+					icon = {
+						visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)35')]"
+						size = { 130 130 }
+						texture = "gfx/interface/icons/rituals/ext_ritual_precognition.dds"
+					}
+
+					button = {
+						using = default_button_primary_action
+						size = { 130 40 }
+						text = "DISPEL_RITUAL"
+						datacontext = "[GetScriptedGui('dispel_ritual_button_effect')]"
+						onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id', MakeScopeValue(Scope.GetValue)).End)]"
+						enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id', MakeScopeValue(Scope.GetValue)).End)]"
+						tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id', MakeScopeValue(Scope.GetValue)).End)]"
+					}
+				}
+
+				flowcontainer = {
+					direction = vertical
+					parentanchor = vcenter
+					minimumsize = { 380 -1 }
+					maximumsize = { 380 -1 }
+					margin = { 10 10 }
+					spacing = 4
+					datacontext = "[GetScriptedGui('cast_ritual_description')]"
+	
+					background = {
+						texture = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_rice.dds"
+					}
+	
+					background = {
+						visible =  "[And(GreaterThan_int32(FixedPointToInt(Scope.GetValue), '(int32)0'), LessThanOrEqualTo_int32(FixedPointToInt(Scope.GetValue), '(int32)5'))]"
+						texture = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_rye.dds"
+					}
+	
+					background = {
+						visible =  "[And(GreaterThan_int32(FixedPointToInt(Scope.GetValue), '(int32)5'), LessThanOrEqualTo_int32(FixedPointToInt(Scope.GetValue), '(int32)10'))]"
+						texture = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_corn.dds"
+					}
+	
+					background = {
+						visible =  "[And(GreaterThan_int32(FixedPointToInt(Scope.GetValue), '(int32)10'), LessThanOrEqualTo_int32(FixedPointToInt(Scope.GetValue), '(int32)15'))]"
+						texture = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+					}
+	
+					background = {
+						visible =  "[And(GreaterThan_int32(FixedPointToInt(Scope.GetValue), '(int32)15'), LessThanOrEqualTo_int32(FixedPointToInt(Scope.GetValue), '(int32)20'))]"
+						texture = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
+					}
+	
+					background = {
+						visible =  "[And(GreaterThan_int32(FixedPointToInt(Scope.GetValue), '(int32)20'), LessThanOrEqualTo_int32(FixedPointToInt(Scope.GetValue), '(int32)25'))]"
+						texture = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
+					}
+	
+					background = {
+						visible =  "[And(GreaterThan_int32(FixedPointToInt(Scope.GetValue), '(int32)25'), LessThanOrEqualTo_int32(FixedPointToInt(Scope.GetValue), '(int32)30'))]"
+						texture = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+					}
+
+					background = {
+						using = entry_bg_simple
+					}
+	
+					textbox = {				
+						text = "[ScriptedGui.ExecuteTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id', MakeScopeValue(Scope.GetValue)).End)]"
+						tooltip = "COMPANY_TYPE_PRODUCTIVITY_TOOLTIP"
+						using = ritual_item_text
+						margin_top = 5
+					}	
+					
+	
+
+	
+					textbox = {
+						text = "RITUAL_SOURCE"
+						using = ritual_item_text
+					}			
+					
+					textbox = {
+						fontsize_min = 12
+						autoresize = yes
+						multiline = no
+						elide = right
+						text = "RITUAL_COST"
+						using = ritual_item_text
+					}
+				}
+			}
+			
+		}		
+	}
+
+	type ritual_id_divine_item = flowcontainer {
+		direction = vertical
+		minimumsize = { @panel_width -1 }		
+		maximumsize = { @panel_width -1 }
+		margin = { 10 10 }
+		margin_top = 3
+		spacing = 5		
+			
+		background = {
+			using = simple_frame
+		}
+
+		container = {
+			minimumsize = { 536 -1 }
+			parentanchor = hcenter
+
+			flowcontainer = {
+				minimumsize = { 536 -1 }
+				parentanchor = vcenter
+				spacing = 5
+				margin_left = 10
+				margin_top = 2
+				margin_bottom = 2
+
+				background = {
+					using = fade_right_simple
+				}
+
+				textbox = {
+					text = "RITUAL_NAME"
+					default_format = "#header"
+					autoresize = yes
+					multiline = no
+					using = fontsize_large
+					using = ritual_item_text
+					margin_bottom = 5
+				}	
+			}	
+		}
+
+		flowcontainer = {
+			spacing = 10
+
+			# COMPANY LOGO
+			flowcontainer = {
+				direction = vertical
+				parentanchor = vcenter
+				icon = {
+					size = { 130 130 }
+					visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1')]"
+					texture = "gfx/interface/icons/rituals/ext_ritual_almsgiving.dds"
+				}
+				icon = {
+					visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2')]"
+					size = { 130 130 }
+					texture = "gfx/interface/icons/rituals/ext_ritual_divine_right.dds"
+				}
+				icon = {
+					visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3')]"
+					size = { 130 130 }
+					texture = "gfx/interface/icons/rituals/ext_ritual_guardian_angels.dds"
+				}
+				icon = {
+					visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4')]"
+					size = { 130 130 }
+					texture = "gfx/interface/icons/rituals/ext_ritual_grace.dds"
+				}
+				icon = {
+					visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5')]"
+					size = { 130 130 }
+					texture = "gfx/interface/icons/rituals/ext_ritual_disease_wards.dds"
+
+				}
+                button = {
+					using = default_button_primary_action
+                    size = { 130 40 }
+                    text = "CAST_RITUAL"
+                    datacontext = "[GetScriptedGui('cast_ritual_id_divine_button_effect')]"
+                    onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id_divine', MakeScopeValue(Scope.GetValue)).End)]"
+                    enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id_divine', MakeScopeValue(Scope.GetValue)).End)]"
+                    tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id_divine', MakeScopeValue(Scope.GetValue)).End)]"
+                }
+			}
+
+			# COMPANY DETAILS
+			flowcontainer = {
+				direction = vertical
+				parentanchor = vcenter
+				minimumsize = { 380 -1 }
+				maximumsize = { 380 -1 }
+				margin = { 10 10 }
+				spacing = 4
+				datacontext = "[GetScriptedGui('cast_ritual_description_divine')]"
+
+				background = {
+					using = entry_bg_simple
+				}
+
+				textbox = {				
+					text = "[ScriptedGui.ExecuteTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id_divine', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "COMPANY_TYPE_PRODUCTIVITY_TOOLTIP"
+					using = ritual_item_text
+					margin_top = 5
+				}	
+
+				textbox = {
+					text = "RITUAL_SOURCE_DIVINE"
+					using = ritual_item_text
+				}			
+				
+				textbox = {
+					fontsize_min = 12
+					autoresize = yes
+					multiline = no
+					elide = right
+					text = "RITUAL_COST"
+					using = ritual_item_text
+				}	
+			}		
+		}		
+	}
+
+	type ritual_id_druidic_item = flowcontainer {
+		direction = vertical
+		minimumsize = { @panel_width -1 }		
+		maximumsize = { @panel_width -1 }
+		margin = { 10 10 }
+		margin_top = 3
+		spacing = 5		
+			
+		background = {
+			using = simple_frame
+		}
+	
+		container = {
+			minimumsize = { 536 -1 }
+			parentanchor = hcenter
+	
+			flowcontainer = {
+				minimumsize = { 536 -1 }
+				parentanchor = vcenter
+				spacing = 5
+				margin_left = 10
+				margin_top = 2
+				margin_bottom = 2
+	
+				background = {
+					using = fade_right_simple
+				}
+	
+				textbox = {
+					text = "RITUAL_NAME_DRUIDIC"
+					default_format = "#header"
+					autoresize = yes
+					multiline = no
+					using = fontsize_large
+					using = ritual_item_text
+					margin_bottom = 5
+				}	
+			}	
+		}
+	
+		flowcontainer = {
+			spacing = 10
+	
+			# COMPANY LOGO
+			flowcontainer = {
+				direction = vertical
+				parentanchor = vcenter
+			#HARMONIUS CONSTRUCTION
+			icon = {
+				size = { 130 130 }
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1')]"
+				texture = "gfx/interface/icons/rituals/ext_ritual_harmony_construction.dds"
+			}
+			#ENVIRONMENTAL REGENERATION
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/rituals/ext_ritual_environmental_regeneration.dds"
+			}
+			#THORNS
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/rituals/ext_ritual_thorns.dds"
+			}
+			#LANDSCAPES
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/rituals/ext_ritual_scenic_landscapes.dds"
+			}
+			#RAINFALL
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/rituals/ext_ritual_conjured_rainfall.dds"
+			}
+				button = {
+					using = default_button_primary_action
+					size = { 130 40 }
+					text = "CAST_RITUAL"
+					datacontext = "[GetScriptedGui('cast_ritual_id_druidic_button_effect')]"
+					onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id_druidic', MakeScopeValue(Scope.GetValue)).End)]"
+					enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id_druidic', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id_druidic', MakeScopeValue(Scope.GetValue)).End)]"
+				}
+			}
+	
+			# COMPANY DETAILS
+			flowcontainer = {
+				direction = vertical
+				parentanchor = vcenter
+				minimumsize = { 380 -1 }
+				maximumsize = { 380 -1 }
+				margin = { 10 10 }
+				spacing = 4
+				datacontext = "[GetScriptedGui('cast_ritual_description_druidic')]"
+	
+				background = {
+					using = entry_bg_simple
+				}
+	
+				textbox = {				
+					text = "[ScriptedGui.ExecuteTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id_druidic', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "COMPANY_TYPE_PRODUCTIVITY_TOOLTIP"
+					using = ritual_item_text
+					margin_top = 5
+				}	
+	
+				textbox = {
+					text = "RITUAL_SOURCE_DRUIDIC"
+					using = ritual_item_text
+				}			
+				
+				textbox = {
+					fontsize_min = 12
+					autoresize = yes
+					multiline = no
+					elide = right
+					text = "RITUAL_COST"
+					using = ritual_item_text
+				}	
+			}		
+		}		
+	}
+
+	type ritual_id_artificer_item = flowcontainer {
+		direction = vertical
+		minimumsize = { @panel_width -1 }		
+		maximumsize = { @panel_width -1 }
+		margin = { 10 10 }
+		margin_top = 3
+		spacing = 5		
+			
+		background = {
+			using = simple_frame
+		}
+	
+		container = {
+			minimumsize = { 536 -1 }
+			parentanchor = hcenter
+	
+			flowcontainer = {
+				minimumsize = { 536 -1 }
+				parentanchor = vcenter
+				spacing = 5
+				margin_left = 10
+				margin_top = 2
+				margin_bottom = 2
+	
+				background = {
+					using = fade_right_simple
+				}
+	
+				textbox = {
+					text = "RITUAL_NAME_ARTIFICER"
+					default_format = "#header"
+					autoresize = yes
+					multiline = no
+					using = fontsize_large
+					using = ritual_item_text
+					margin_bottom = 5
+				}	
+			}	
+		}
+	
+		flowcontainer = {
+			spacing = 10
+	
+			# COMPANY LOGO
+			flowcontainer = {
+				direction = vertical
+				parentanchor = vcenter
+			#HARMONIUS CONSTRUCTION
+			icon = {
+				size = { 130 130 }
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1')]"
+				texture = "gfx/interface/icons/rituals/ext_ritual_clockwork_courier.dds"
+			}
+			#AUTO SCRIBES
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/rituals/ext_ritual_auto_scribes.dds"
+			}
+			#EVERYDAY WONDERS
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/rituals/ext_ritual_everyday_wonders.dds"
+			}
+			#BUILDER GOLEMS
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/rituals/ext_ritual_builder_golems.dds"
+			}
+			#ENCHANTED TOOLS
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/rituals/ext_ritual_enchanted_tools.dds"
+			}
+				button = {
+					using = default_button_primary_action
+					size = { 130 40 }
+					text = "CAST_RITUAL"
+					datacontext = "[GetScriptedGui('cast_ritual_id_artificer_button_effect')]"
+					onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id_artificer', MakeScopeValue(Scope.GetValue)).End)]"
+					enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id_artificer', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id_artificer', MakeScopeValue(Scope.GetValue)).End)]"
+				}
+			}
+	
+			# COMPANY DETAILS
+			flowcontainer = {
+				direction = vertical
+				parentanchor = vcenter
+				minimumsize = { 380 -1 }
+				maximumsize = { 380 -1 }
+				margin = { 10 10 }
+				spacing = 4
+				datacontext = "[GetScriptedGui('cast_ritual_description_artificer')]"
+	
+				background = {
+					using = entry_bg_simple
+				}
+	
+				textbox = {				
+					text = "[ScriptedGui.ExecuteTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id_artificer', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "COMPANY_TYPE_PRODUCTIVITY_TOOLTIP"
+					using = ritual_item_text
+					margin_top = 5
+				}	
+	
+				textbox = {
+					text = "RITUAL_SOURCE_ARTIFICER"
+					using = ritual_item_text
+				}			
+				
+				textbox = {
+					fontsize_min = 12
+					autoresize = yes
+					multiline = no
+					elide = right
+					text = "RITUAL_COST"
+					using = ritual_item_text
+				}	
+			}		
+		}		
+	}
+
+	type ritual_id_astrology_item = flowcontainer {
+		direction = vertical
+		minimumsize = { @panel_width -1 }		
+		maximumsize = { @panel_width -1 }
+		margin = { 10 10 }
+		margin_top = 3
+		spacing = 5		
+			
+		background = {
+			using = simple_frame
+		}
+	
+		container = {
+			minimumsize = { 536 -1 }
+			parentanchor = hcenter
+	
+			flowcontainer = {
+				minimumsize = { 536 -1 }
+				parentanchor = vcenter
+				spacing = 5
+				margin_left = 10
+				margin_top = 2
+				margin_bottom = 2
+	
+				background = {
+					using = fade_right_simple
+				}
+	
+				textbox = {
+					text = "RITUAL_NAME_ASTROLOGY"
+					default_format = "#header"
+					autoresize = yes
+					multiline = no
+					using = fontsize_large
+					using = ritual_item_text
+					margin_bottom = 5
+				}	
+			}	
+		}
+	
+		flowcontainer = {
+			spacing = 10
+	
+			# COMPANY LOGO
+			flowcontainer = {
+				direction = vertical
+				parentanchor = vcenter
+			#HARMONIUS CONSTRUCTION
+			icon = {
+				size = { 130 130 }
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1')]"
+				texture = "gfx/interface/icons/rituals/ext_ritual_astral_mapping.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/rituals/ext_ritual_starlight_academia.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/rituals/ext_ritual_guiding_constellations.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/rituals/ext_ritual_stellar_guidance.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/rituals/ext_ritual_universal_knowledge.dds"
+			}
+				button = {
+					using = default_button_primary_action
+					size = { 130 40 }
+					text = "CAST_RITUAL"
+					datacontext = "[GetScriptedGui('cast_ritual_id_astrology_button_effect')]"
+					onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id_astrology', MakeScopeValue(Scope.GetValue)).End)]"
+					enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id_astrology', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id_astrology', MakeScopeValue(Scope.GetValue)).End)]"
+				}
+			}
+	
+			# COMPANY DETAILS
+			flowcontainer = {
+				direction = vertical
+				parentanchor = vcenter
+				minimumsize = { 380 -1 }
+				maximumsize = { 380 -1 }
+				margin = { 10 10 }
+				spacing = 4
+				datacontext = "[GetScriptedGui('cast_ritual_description_astrology')]"
+	
+				background = {
+					using = entry_bg_simple
+				}
+	
+				textbox = {				
+					text = "[ScriptedGui.ExecuteTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id_astrology', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "COMPANY_TYPE_PRODUCTIVITY_TOOLTIP"
+					using = ritual_item_text
+					margin_top = 5
+				}	
+	
+				textbox = {
+					text = "RITUAL_SOURCE_ASTROLOGY"
+					using = ritual_item_text
+				}			
+				
+				textbox = {
+					fontsize_min = 12
+					autoresize = yes
+					multiline = no
+					elide = right
+					text = "RITUAL_COST"
+					using = ritual_item_text
+				}	
+			}		
+		}		
+	}
+
+	type ritual_id_dark_item = flowcontainer {
+		direction = vertical
+		minimumsize = { @panel_width -1 }		
+		maximumsize = { @panel_width -1 }
+		margin = { 10 10 }
+		margin_top = 3
+		spacing = 5		
+			
+		background = {
+			using = simple_frame
+		}
+	
+		container = {
+			minimumsize = { 536 -1 }
+			parentanchor = hcenter
+	
+			flowcontainer = {
+				minimumsize = { 536 -1 }
+				parentanchor = vcenter
+				spacing = 5
+				margin_left = 10
+				margin_top = 2
+				margin_bottom = 2
+	
+				background = {
+					using = fade_right_simple
+				}
+	
+				textbox = {
+					text = "RITUAL_NAME_DARK"
+					default_format = "#header"
+					autoresize = yes
+					multiline = no
+					using = fontsize_large
+					using = ritual_item_text
+					margin_bottom = 5
+				}	
+			}	
+		}
+	
+		flowcontainer = {
+			spacing = 10
+	
+			# COMPANY LOGO
+			flowcontainer = {
+				direction = vertical
+				parentanchor = vcenter
+			#HARMONIUS CONSTRUCTION
+			icon = {
+				size = { 130 130 }
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1')]"
+				texture = "gfx/interface/icons/rituals/ext_ritual_bound_thralls.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/rituals/ext_ritual_dark_fanatics.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/rituals/ext_ritual_cults.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/rituals/ext_ritual_profane_bargains.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/rituals/ext_ritual_pierce_veil.dds"
+			}
+				button = {
+					using = default_button_primary_action
+					size = { 130 40 }
+					text = "CAST_RITUAL"
+					datacontext = "[GetScriptedGui('cast_ritual_id_dark_button_effect')]"
+					onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id_dark', MakeScopeValue(Scope.GetValue)).End)]"
+					enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id_dark', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id_dark', MakeScopeValue(Scope.GetValue)).End)]"
+				}
+			}
+	
+			# COMPANY DETAILS
+			flowcontainer = {
+				direction = vertical
+				parentanchor = vcenter
+				minimumsize = { 380 -1 }
+				maximumsize = { 380 -1 }
+				margin = { 10 10 }
+				spacing = 4
+				datacontext = "[GetScriptedGui('cast_ritual_description_dark')]"
+	
+				background = {
+					using = entry_bg_simple
+				}
+	
+				textbox = {				
+					text = "[ScriptedGui.ExecuteTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id_dark', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "COMPANY_TYPE_PRODUCTIVITY_TOOLTIP"
+					using = ritual_item_text
+					margin_top = 5
+				}	
+	
+				textbox = {
+					text = "RITUAL_SOURCE_DARK"
+					using = ritual_item_text
+				}			
+				
+				textbox = {
+					fontsize_min = 12
+					autoresize = yes
+					multiline = no
+					elide = right
+					text = "RITUAL_COST"
+					using = ritual_item_text
+				}	
+			}		
+		}		
+	}
+
+	type ritual_id_antimagic_item = flowcontainer {
+		direction = vertical
+		minimumsize = { @panel_width -1 }		
+		maximumsize = { @panel_width -1 }
+		margin = { 10 10 }
+		margin_top = 3
+		spacing = 5		
+			
+		background = {
+			using = simple_frame
+		}
+	
+		container = {
+			minimumsize = { 536 -1 }
+			parentanchor = hcenter
+	
+			flowcontainer = {
+				minimumsize = { 536 -1 }
+				parentanchor = vcenter
+				spacing = 5
+				margin_left = 10
+				margin_top = 2
+				margin_bottom = 2
+	
+				background = {
+					using = fade_right_simple
+				}
+	
+				textbox = {
+					text = "RITUAL_NAME_ANTIMAGIC"
+					default_format = "#header"
+					autoresize = yes
+					multiline = no
+					using = fontsize_large
+					using = ritual_item_text
+					margin_bottom = 5
+				}	
+			}	
+		}
+	
+		flowcontainer = {
+			spacing = 10
+	
+			# COMPANY LOGO
+			flowcontainer = {
+				direction = vertical
+				parentanchor = vcenter
+			#HARMONIUS CONSTRUCTION
+			icon = {
+				size = { 130 130 }
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1')]"
+				texture = "gfx/interface/icons/rituals/ext_ritual_anti_magic_device.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/rituals/ext_ritual_ingenunity.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/rituals/ext_ritual_profiling.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/rituals/ext_ritual_scrying.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/rituals/ext_ritual_magic_regulations.dds"
+			}
+				button = {
+					using = default_button_primary_action
+					size = { 130 40 }
+					text = "CAST_RITUAL"
+					datacontext = "[GetScriptedGui('cast_ritual_id_antimagic_button_effect')]"
+					onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id_antimagic', MakeScopeValue(Scope.GetValue)).End)]"
+					enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id_antimagic', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id_antimagic', MakeScopeValue(Scope.GetValue)).End)]"
+				}
+			}
+	
+			# COMPANY DETAILS
+			flowcontainer = {
+				direction = vertical
+				parentanchor = vcenter
+				minimumsize = { 380 -1 }
+				maximumsize = { 380 -1 }
+				margin = { 10 10 }
+				spacing = 4
+				datacontext = "[GetScriptedGui('cast_ritual_description_antimagic')]"
+	
+				background = {
+					using = entry_bg_simple
+				}
+	
+				textbox = {				
+					text = "[ScriptedGui.ExecuteTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id_antimagic', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "COMPANY_TYPE_PRODUCTIVITY_TOOLTIP"
+					using = ritual_item_text
+					margin_top = 5
+				}	
+	
+				textbox = {
+					text = "RITUAL_SOURCE_ANTIMAGIC"
+					using = ritual_item_text
+				}			
+				
+				textbox = {
+					fontsize_min = 12
+					autoresize = yes
+					multiline = no
+					elide = right
+					text = "RITUAL_COST"
+					using = ritual_item_text
+				}	
+			}		
+		}		
+	}
+
+	type ritual_id_psionic_item = flowcontainer {
+		direction = vertical
+		minimumsize = { @panel_width -1 }		
+		maximumsize = { @panel_width -1 }
+		margin = { 10 10 }
+		margin_top = 3
+		spacing = 5		
+			
+		background = {
+			using = simple_frame
+		}
+	
+		container = {
+			minimumsize = { 536 -1 }
+			parentanchor = hcenter
+	
+			flowcontainer = {
+				minimumsize = { 536 -1 }
+				parentanchor = vcenter
+				spacing = 5
+				margin_left = 10
+				margin_top = 2
+				margin_bottom = 2
+	
+				background = {
+					using = fade_right_simple
+				}
+	
+				textbox = {
+					text = "RITUAL_NAME_PSIONIC"
+					default_format = "#header"
+					autoresize = yes
+					multiline = no
+					using = fontsize_large
+					using = ritual_item_text
+					margin_bottom = 5
+				}	
+			}	
+		}
+	
+		flowcontainer = {
+			spacing = 10
+	
+			# COMPANY LOGO
+			flowcontainer = {
+				direction = vertical
+				parentanchor = vcenter
+			#HARMONIUS CONSTRUCTION
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)1')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/rituals/ext_ritual_mind_over_matter.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)2')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/rituals/ext_ritual_telepathy.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)3')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/rituals/ext_ritual_mental_fortress.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)4')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/rituals/ext_ritual_psionic_augmentation.dds"
+			}
+			icon = {
+				visible =  "[EqualTo_CFixedPoint(Scope.GetValue, '(CFixedPoint)5')]"
+				size = { 130 130 }
+				texture = "gfx/interface/icons/rituals/ext_ritual_precognition.dds"
+			}
+				button = {
+					using = default_button_primary_action
+					size = { 130 40 }
+					text = "CAST_RITUAL"
+					datacontext = "[GetScriptedGui('cast_ritual_id_psionic_button_effect')]"
+					onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id_psionic', MakeScopeValue(Scope.GetValue)).End)]"
+					enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id_psionic', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id_psionic', MakeScopeValue(Scope.GetValue)).End)]"
+				}
+			}
+	
+			# COMPANY DETAILS
+			flowcontainer = {
+				direction = vertical
+				parentanchor = vcenter
+				minimumsize = { 380 -1 }
+				maximumsize = { 380 -1 }
+				margin = { 10 10 }
+				spacing = 4
+				datacontext = "[GetScriptedGui('cast_ritual_description_psionic')]"
+	
+				background = {
+					using = entry_bg_simple
+				}
+	
+				textbox = {				
+					text = "[ScriptedGui.ExecuteTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('ritual_id_psionic', MakeScopeValue(Scope.GetValue)).End)]"
+					tooltip = "COMPANY_TYPE_PRODUCTIVITY_TOOLTIP"
+					using = ritual_item_text
+					margin_top = 5
+				}	
+	
+				textbox = {
+					text = "RITUAL_SOURCE_PSIONIC"
+					using = ritual_item_text
+				}			
+				
+				textbox = {
+					fontsize_min = 12
+					autoresize = yes
+					multiline = no
+					elide = right
+					text = "RITUAL_COST"
+					using = ritual_item_text
+				}	
+			}		
+		}		
+	}
+
+
+}
+
+
+
+
+
+
+template ritual_item_text {
+	align = nobaseline
+	autoresize = yes
+	maximumsize = { 350 -1 }
+	multiline = yes
+}
+
+template magic_header_texts {
+	minimumsize = { @panel_width_plus_14 -1 }
+	maximumsize = { @panel_width_plus_14 -1 }
+	autoresize = yes
+	multiline = yes
+	align = hcenter|nobaseline
+	parentanchor = hcenter
+}
+

@@ -1,0 +1,234 @@
+﻿je_purpur_wedding = {
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	group = je_group_historical_content
+
+	scripted_progress_bar = union_of_the_sands_progress_bar
+
+	on_weekly_pulse = {
+		effect = {
+			set_global_variable = {
+				name = yavira_gdp
+				value = c:DRO.gdp
+			}
+			set_global_variable = {
+				name = vozmead_gdp
+				value = c:VOZ.gdp
+			}
+		}
+	}
+
+	is_shown_when_inactive = {
+
+
+	exists = c:DRO
+	exists = c:VOZ
+	OR = {
+		root = c:DRO
+		root = c:VOZ
+	}
+	
+
+	}
+
+	can_deactivate = yes
+	
+	possible = {
+		AND = {
+			exists = c:DRO
+			c:DRO = {
+				has_law = law_type:law_monarchy
+			}
+		}
+		AND = {
+			exists = c:VOZ
+			c:VOZ = {
+				has_law = law_type:law_monarchy
+			}
+		}
+		OR = {
+			AND = {
+				exists = c:DRO
+				root = c:DRO
+				exists = c:VOZ
+				c:VOZ = { 
+					relations:root > relations_threshold:cordial 
+				}
+			}
+			AND = {
+				exists = c:VOZ
+				root = c:VOZ
+				exists = c:DRO
+				c:DRO = { 
+					relations:root > relations_threshold:cordial 
+				}
+			}
+		}
+
+		OR = {
+			AND = {
+				c:DRO = {
+					ruler = {
+						is_female = yes
+					}
+				}
+				c:VOZ = {
+					ruler = {
+						is_female = no
+					}
+				}
+			}
+			AND = {
+				c:DRO = {
+					ruler = {
+						is_female = no
+					}
+				}
+				c:VOZ = {
+					ruler = {
+						is_female = yes
+					}
+				}
+			}
+		}
+
+	}
+
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = je_purpur_wedding_status
+			}
+		}
+	}
+
+
+
+	should_be_pinned_by_default = yes
+	
+	weight = 2000
+
+	timeout = 3652
+
+	# effect which is executed when journal entry is timed out
+	on_timeout = {
+		trigger_event = { id = union_of_the_sands.1 popup = yes}
+	}
+}
+
+je_union_of_the_sands = {
+
+	icon = "gfx/interface/icons/event_icons/event_diplomacy.dds"
+
+	group = je_group_historical_content
+
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = je_union_of_the_sands_status
+			}
+		}
+	}
+
+	complete = {
+		has_law = law_type:law_womens_suffrage
+
+		OR = {
+			AND = {
+				exists = c:DRO
+				this = c:DRO
+				exists = C:VOZ
+				c:VOZ = {
+						OR = {
+							has_attitude = {
+								who = c:DRO
+								attitude = genial
+							}
+							has_attitude = {
+								who = c:DRO
+								attitude = conciliatory
+							}							
+							has_attitude = {
+								who = c:DRO
+								attitude = loyal
+							}	
+							has_attitude = {
+								who = c:DRO
+								attitude = cooperative
+							}							
+						}
+				}
+			}
+			AND = {
+				exists = C:VOZ
+				this = c:VOZ
+				exists = C:DRO
+				c:DRO = {
+						OR = {
+							has_attitude = {
+								who = c:VOZ
+								attitude = genial
+							}
+							has_attitude = {
+								who = c:VOZ
+								attitude = conciliatory
+							}							
+							has_attitude = {
+								who = c:VOZ
+								attitude = loyal
+							}	
+							has_attitude = {
+								who = c:VOZ
+								attitude = cooperative
+							}							
+						}
+				}
+			}
+		}
+	}
+
+	on_complete = {
+		trigger_event = { id =  union_of_the_sands.2 popup = yes}
+	}
+
+	fail = {
+		OR = {
+		AND = {
+			exists = c:DRO
+			this = c:DRO
+			NOT = {
+
+				c:DRO = {
+					has_diplomatic_pact = {
+						who = c:VOZ
+						type = personal_union
+						is_initiator = yes
+					}
+				}
+			}
+		}
+		AND = {
+			exists = c:VOZ
+			this = c:VOZ
+				NOT = {
+
+				c:VOZ = {
+					has_diplomatic_pact = {
+						who = c:DRO
+						type = personal_union
+						is_initiator = yes
+					}
+				}
+			}
+		}
+
+		}
+
+	}
+
+
+	should_be_pinned_by_default = yes
+	
+	weight = 2000
+}

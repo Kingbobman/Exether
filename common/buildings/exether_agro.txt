@@ -1,0 +1,77 @@
+﻿building_rice_farm_leechgardens = {
+	building_group = bg_rice_farms_leechgardens
+	
+	texture = "gfx/interface/icons/building_icons/leeches.dds"
+
+	city_type = farm
+	levels_per_mesh = 5
+
+	unlocking_technologies = {
+		enclosure
+	}
+
+	production_method_groups = {
+		pmg_base_building_rice_farm
+		pmg_secondary_building_rice_farm_leechgardens
+		pmg_harvesting_process_building_rice_farm
+		pmg_rice_farms_enhancements
+		
+	}
+
+	required_construction = construction_cost_low
+	
+	terrain_manipulator = farmland_rice
+
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+}
+
+building_mountain_maize_farm = {
+	building_group = bg_mountain_maize_farms
+	
+	texture = "gfx/interface/icons/building_icons/mountain_corn.dds"
+
+	city_type = farm
+	levels_per_mesh = 5
+
+	unlocking_technologies = {
+		enclosure
+	}
+	
+	production_method_groups = {
+		pmg_base_building_mountain_maize_farm
+		pmg_secondary_building_mountain_maize_farm
+		pmg_harvesting_process_building_mountain_maize_farm
+		
+	}
+
+	required_construction = construction_cost_low
+	
+	terrain_manipulator = farmland_maize
+
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+}
+
+building_beekeeping = {
+	building_group = bg_beekeeping
+	texture = "gfx/interface/icons/building_icons/beekeeping.dds"
+
+	city_type = farm
+	levels_per_mesh = 5
+	
+
+	unlocking_technologies = {
+		enclosure
+	}
+
+	production_method_groups = {
+		pmg_base_beekeeping
+		pmg_beekeeping_mead
+		pmg_beekeeping_automation
+	}
+
+	required_construction = construction_cost_low
+}

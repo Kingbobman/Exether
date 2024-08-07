@@ -1,0 +1,101 @@
+AI = {
+    every_country = {
+		limit = { is_subject = yes }
+		if = {
+			limit = { liberty_desire >= 60 }
+			set_strategy = ai_strategy_subject_strengthen_self
+		}
+		else_if = {
+			limit = { liberty_desire <= 20 }
+			set_strategy = ai_strategy_subject_overlord_compliance
+		}
+		else = {
+			set_strategy = ai_strategy_subject_maintain_autonomy
+		}
+	}
+
+    every_country = {
+		limit = {
+			country_rank = rank_value:great_power
+			any_country = {			
+				OR = {
+					country_has_primary_culture = cu:lake_thalorian
+					country_has_primary_culture = cu:west_thalorian
+					country_has_primary_culture = cu:central_thalorian
+				}				
+			}
+		}
+			
+		save_scope_as = first_country
+		every_country = {
+			limit = { 
+				NOT = { country_rank = rank_value:great_power }
+				OR = {
+					country_has_primary_culture = cu:lake_thalorian
+					country_has_primary_culture = cu:west_thalorian
+					country_has_primary_culture = cu:central_thalorian
+				}				
+			}
+			effect_set_non_hostile_mutual_secret_goal_power_difference = yes
+		}
+	}
+
+	every_country = {
+		limit = {
+			country_rank = rank_value:great_power
+			any_country = {			
+				country_has_primary_culture = cu:dorite		
+			}
+		}
+			
+		save_scope_as = first_country
+		every_country = {
+			limit = { 
+				NOT = { country_rank = rank_value:great_power }
+				OR = {
+					country_has_primary_culture = cu:highland_halfling
+					country_has_primary_culture = cu:clearbough
+					country_has_primary_culture = cu:coast_halfling
+				}				
+			}
+			effect_set_non_hostile_mutual_secret_goal_power_difference = yes
+		}
+	}	
+
+    c:ARR ?= {
+		set_strategy = ai_strategy_industrial_expansion
+		set_strategy = ai_strategy_economic_imperialism
+		set_strategy = ai_strategy_progressive_agenda
+	}
+
+    c:DUM ?= {
+		set_strategy = ai_strategy_industrial_expansion
+		set_strategy = ai_strategy_colonial_expansion
+		set_strategy = ai_strategy_conservative_agenda
+	}
+
+    c:RAV ?= {
+		set_strategy = ai_strategy_resource_expansion
+		set_strategy = ai_strategy_territorial_expansion
+		set_strategy = ai_strategy_necromantic_agenda
+	}
+
+    c:TLE ?= {
+		set_strategy = ai_strategy_resource_expansion
+		set_strategy = ai_strategy_territorial_expansion
+		set_strategy = ai_strategy_conservative_agenda
+	}
+
+	c:AHO ?= {
+		set_strategy = ai_strategy_resource_expansion
+		set_strategy = ai_strategy_maintain_power_balance
+		set_strategy = ai_strategy_arcane_agenda
+	}
+
+	c:VHT ?= {
+		set_strategy = ai_strategy_resource_expansion
+		set_strategy = ai_strategy_maintain_power_balance
+		set_strategy = ai_strategy_arcane_agenda
+	}
+
+}
