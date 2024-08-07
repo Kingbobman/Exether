@@ -2063,3 +2063,76 @@ pm_extra_wood = {
 		}
 	}
 }
+
+pm_simple_underfishing = {
+	texture = "gfx/interface/icons/production_method_icons/simple_fishing.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# output
+			goods_output_fish_add = 13 #20 260
+			goods_output_monster_essence_add = 6 #40 240
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 4500
+		}
+	}
+}
+
+pm_underfish_boating = {
+	texture = "gfx/interface/icons/production_method_icons/trawlers.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input
+			goods_input_wood_add = 15 #20 300
+			goods_input_fabric_add = 5 #20 200
+			# output
+			goods_output_fish_add = 25
+			goods_output_monster_essence_add = 13
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 4000
+			building_employment_adventurers_add = 500
+		}
+	}
+}
+
+pm_steamboat_underfishing = {
+	texture = "gfx/interface/icons/production_method_icons/steam_trawlers.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	
+	unlocking_technologies = {
+		gantry_cranes
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input
+			goods_input_engines_add = 7 #60 420
+			goods_input_coal_add = 14 #30  420
+			
+			# output
+			goods_output_fish_add = 50
+			goods_output_monster_essence_add = 25
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 3000
+			building_employment_adventurers_add = 1000
+			building_employment_engineers_add = 500
+		}
+	}
+}

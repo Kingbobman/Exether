@@ -396,6 +396,19 @@ bg_game_hunting = {
 	
 	default_building = building_fur_hunting_lodge
 }
+bg_big_game_hunting = {
+	parent_group = bg_magic_resource
+	
+	default_building = building_grubhub
+}
+
+bg_grubbing = {
+	parent_group = bg_magic_resource
+	
+	land_usage = rural
+	
+	default_building = building_grubhub
+}
 
 bg_logging_stonewood = {
 	
@@ -506,6 +519,17 @@ bg_mushroom_logging = {
 	foreign_investment_ai_factor = 1.0
 }
 
+bg_underways_watch = {
+	category = rural
+	parent_group = bg_underways_watch
+
+	land_usage = rural
+	
+	default_building = building_underways_watch
+
+	cash_reserves_max = 25000
+}
+
 
 bg_magic_manufacturing = {
 	category = urban
@@ -558,4 +582,94 @@ bg_taverns = {
 	parent_group = bg_entertainment
 	
 	default_building = building_tavern
+}
+
+# Deep Mining
+
+bg_deep_coal_mining = {
+	parent_group = bg_mining
+
+	land_usage = rural
+	
+	default_building = building_deep_coal_mine
+
+	can_use_slaves = yes
+
+	economy_of_scale = yes
+	
+	cash_reserves_max = 25000
+	
+}
+
+bg_deep_iron_mining = {
+	parent_group = bg_mining
+
+	land_usage = rural
+	
+	default_building = building_deep_iron_mine
+
+	can_use_slaves = yes
+	economy_of_scale = yes
+	
+	cash_reserves_max = 25000
+	
+}
+
+bg_deep_lead_mining = {
+	parent_group = bg_mining
+
+	land_usage = rural
+	
+	default_building = building_deep_lead_mine
+
+	can_use_slaves = yes
+	economy_of_scale = yes
+	
+	cash_reserves_max = 25000
+	
+}
+
+bg_deep_sulfur_mining = {
+	parent_group = bg_mining
+
+	land_usage = rural
+	
+	default_building = building_deep_sulfur_mine
+
+	can_use_slaves = yes
+	economy_of_scale = yes
+	
+	cash_reserves_max = 25000
+	
+}
+bg_underground_fishing = {
+	parent_group = bg_underground_fishing
+	category = rural
+
+	capped_by_resources = yes
+	
+	land_usage = rural
+
+	economy_of_scale = yes
+	
+	default_building = building_underground_wharf
+	
+	lens = fishing
+	
+	cash_reserves_max = 25000
+	
+	urbanization = 5
+	infrastructure_usage_per_level = 1
+	
+	should_auto_expand = { 
+		default_auto_expand_rule = yes
+	}
+	
+	economy_of_scale_ai_factor = 1.5
+	foreign_investment_ai_factor = 0.75
+}
+bg_undertea = {
+	parent_group = bg_plantations
+	
+	default_building = building_undertea
 }

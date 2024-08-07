@@ -365,6 +365,27 @@ on_battle_lost = {}
 
 # Root = Building
 on_building_built = {
+	on_actions = {
+		underways_built
+	}
+
+}
+
+underways_built = {
+	effect = {
+		if = {
+			limit = {
+				root = {
+					is_building_type = building_underways
+				}
+			}
+			state = {
+				state_region = {
+					add_arable_land = 2
+				}
+			}
+		}
+	}
 }
 
 # Root = Building
