@@ -31,28 +31,7 @@ on_monthly_pulse = {
 }
 
 on_yearly_pulse = { 
-	effect = {
-    random_state = {
-        limit = {
-            owner = c:RVC
-        }
-        save_scope_as = pop_target
-    }
-    
-    every_subject_or_below = {
-        ordered_scope_state = {
-            order_by = state_population
-            every_scope_pop = {
-                random_list = { 
-                    95 = {}
-                    5 = {
-                        move_pop = scope:pop_target
-                    }
-                }        
-            }
-        }
-    }
-} 
+
 }
 
 # Root = Country
@@ -202,6 +181,34 @@ on_yearly_pulse_country = {
 			1 = { }
 		}
 
+		if = {
+			limit = {
+				c:RVC ?= {
+					has_variable = established_blood_tribunals
+				}
+			}
+			random_state = {
+				limit = {
+					owner = c:RVC
+				}
+				save_scope_as = pop_target
+			}
+			
+			every_subject_or_below = {
+				ordered_scope_state = {
+					order_by = state_population
+					every_scope_pop = {
+						random_list = { 
+							96 = {}
+							6 = {
+								change_poptype = pop_type:peasants
+								move_pop = scope:pop_target
+							}
+						}        
+					}
+				}
+			}
+		}
 		if = {
 			limit = {
 				NOR = {
