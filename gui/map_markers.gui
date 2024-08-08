@@ -117,7 +117,7 @@ widget = {
 			container = {
 				visible = "[Not(SeaNodeMarker.ShouldShowInteraction)]"
 				container = {
-					visible = "[Not(EqualTo_string(SeaNodeMarker.GetSupplyNetworkTooltip, 'Sky Node'))]"
+					visible = "[Not(EqualTo_string(SeaNodeMarker.GetSupplyNetworkTooltip, Localize('SEA_NODE_TOOLTIP_SKY')))]"
 		
 					### no supply
 					button = {
@@ -186,7 +186,7 @@ widget = {
 			container = {
 				visible = "[SeaNodeMarker.ShouldShowInteraction]"
 				container = {
-					#visible = "[Not(EqualTo_string(SeaNodeMarker.GetSupplyNetworkTooltip, 'Sky Node'))]"
+					#visible = "[Not(EqualTo_string(SeaNodeMarker.GetSupplyNetworkTooltip, Localize('SEA_NODE_TOOLTIP_SKY')))]"
 		
 					### no supply - in interaction
 					button = {
@@ -242,7 +242,7 @@ widget = {
 				visible = "[Not(SeaNodeMarker.ShouldShowInteraction)]"
 
 				container = {
-					visible = "[EqualTo_string(SeaNodeMarker.GetSupplyNetworkTooltip, 'Sky Node')]"
+					visible = "[EqualTo_string(SeaNodeMarker.GetSupplyNetworkTooltip, Localize('SEA_NODE_TOOLTIP_SKY'))]"
 		
 					### no supply
 					button = {
@@ -296,7 +296,7 @@ widget = {
 					}
 				}
 				container = {
-					visible = "[Not(EqualTo_string(SeaNodeMarker.GetSupplyNetworkTooltip, 'Sky Node'))]"
+					visible = "[Not(EqualTo_string(SeaNodeMarker.GetSupplyNetworkTooltip, Localize('SEA_NODE_TOOLTIP_SKY')))]"
 		
 					### no supply
 					button = {
