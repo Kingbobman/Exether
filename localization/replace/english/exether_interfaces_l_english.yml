@@ -265,13 +265,11 @@ concept_supply_nodes:0 "Supply Nodes"
 concept_supply_node_desc: "An intersection or point along a air or naval [concept_shipping_lane] representing a part of the sky or ocean. $concept_shipping_lanes$ always take the route between two coastal or airship [Concept('concept_state','$concept_states$')] that pass through the fewest number of $concept_supply_nodes$. Each additional $concept_supply_node$ beyond the first adds #v [GetDefine('NEconomy','SHIPPING_LANE_CONVOY_COST_SCALING')|=-%0]#! to the [concept_convoy_cost]."
 
 SEA_NODE_TOOLTIP_SKY: "Sky Node"
-SEA_NODE_TOOLTIP: "#header [concept_supply_node] in [StrategicRegion.GetNameNoFormatting]#!\n$TOOLTIP_DELIMITER$\nThere are #v $NUM_CONVOYS$#! [concept_convoys] belonging to our [Concept('concept_shipping_lane', '$concept_shipping_lanes$')] that pass through this node[ConcatIfNeitherEmpty('\n','$SEA_NODE_DAMAGE$')]\n\n$SUPPLY_NETWORK$[ConcatIfNeitherEmpty('\n\n', StrategicRegion.GetConvoyRaidsDesc)]"
+#SEA_NODE_TOOLTIP: "#header [concept_supply_node] in [StrategicRegion.GetNameNoFormatting]#!\n$TOOLTIP_DELIMITER$\nThere are #v $NUM_CONVOYS$#! [concept_convoys] belonging to our [Concept('concept_shipping_lane', '$concept_shipping_lanes$')] that pass through this node[ConcatIfNeitherEmpty('\n','$SEA_NODE_DAMAGE$')]\n\n$SUPPLY_NETWORK$[ConcatIfNeitherEmpty('\n\n', StrategicRegion.GetConvoyRaidsDesc)]"
 
 SEA_NODE_TOOLTIP_SEA_PART_1: "#header [concept_sea_node] in [StrategicRegion.GetNameNoFormatting]#!\n$TOOLTIP_DELIMITER$\n[ConcatIfNeitherEmpty('\n\n', StrategicRegion.GetConvoyRaidsDesc)]"
 
-
-
- #SEA_NODE_TOOLTIP: "[AddTextIf(GetScriptedGui('is_sky_region').IsValid( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('node_region', StrategicRegion.MakeScope).End), 'Sky Node')][AddLocalizationIf(Not(GetScriptedGui('is_sky_region').IsValid( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('node_region', StrategicRegion.MakeScope).End)), 'SEA_NODE_TOOLTIP_SEA_PART_1')]" #Simply comment out this entry to make all nodes visible again
+SEA_NODE_TOOLTIP: "[AddTextIf(GetScriptedGui('is_sky_region').IsValid( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('node_region', StrategicRegion.MakeScope).End), 'Sky Node')][AddLocalizationIf(Not(GetScriptedGui('is_sky_region').IsValid( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('node_region', StrategicRegion.MakeScope).End)), 'SEA_NODE_TOOLTIP_SEA_PART_1')]" #Simply comment out this entry to make all nodes visible again
  #SEA_NODE_TOOLTIP_VALID: "[GetScriptedGui('is_sky_region').IsValid( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('node_region', StrategicRegion.MakeScope).End)]" #Use this as SEA_NODE_TOOLTIP is performance tanks too hard
 
  #COMMAND_CONFIRMATION_DEPLOY_MILITARY_FORMATION_TO_SEA_NODE: "Deploy to Sea Node" Enable if trying to hide sea nodes
