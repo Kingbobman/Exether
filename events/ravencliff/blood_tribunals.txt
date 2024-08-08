@@ -89,3 +89,129 @@ blood_tribunal.3 = { #event on first tithe
 		set_variable = familiars_handling_tithes
 	}
 }
+
+blood_tribunal.4 = {
+    type = country_event
+    placement = root
+
+    title = blood_tribunal.4.t
+    desc = blood_tribunal.4.d
+    flavor = blood_tribunal.4.f
+
+    trigger = {
+        this = c:RVC
+        any_subject_or_below = yes
+    }
+
+    immediate = {
+        hidden_effect = {
+            every_subject_or_below = {
+                limit = {
+                    any_scope_state = yes
+                }
+                save_scope_as = current_subject
+                ordered_scope_state = {
+                    order_by = total_population
+                    position = 0
+                    save_scope_as = most_populated_state
+                }
+
+                scope:most_populated_state = {
+                    convert_population = {
+                        target = rel:dummy_religion 
+                        value = 0.04
+                    }
+                }
+
+                scope:most_populated_state = {
+                    every_scope_pop = {
+                        limit = {
+                            has_pop_religion = rel:dummy_religion
+                        }
+                        move_pop = c:RVC.capital
+                    }
+                }
+
+                c:RVC.capital = {
+                    every_scope_pop = {
+                        limit = {
+                            has_pop_religion = rel:dummy_religion
+                        }
+                        change_pop_religion = {
+                            target = c:RVC.state_religion
+                            value = 1.0
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    option = {
+        name = blood_tribunal.4.a
+        default_option = yes
+    }
+}
+
+blood_tribunal.5 = {
+    type = country_event
+    placement = root
+
+    title = blood_tribunal.5.t
+    desc = blood_tribunal.5.d
+    flavor = blood_tribunal.5.f
+
+    trigger = {
+        this = c:RVC
+        any_subject_or_below = yes
+    }
+
+    immediate = {
+        hidden_effect = {
+            every_subject_or_below = {
+                limit = {
+                    any_scope_state = yes
+                }
+                save_scope_as = current_subject
+                ordered_scope_state = {
+                    order_by = total_population
+                    position = 0
+                    save_scope_as = most_populated_state
+                }
+
+                scope:most_populated_state = {
+                    convert_population = {
+                        target = rel:dummy_religion 
+                        value = 0.06
+                    }
+                }
+
+                scope:most_populated_state = {
+                    every_scope_pop = {
+                        limit = {
+                            has_pop_religion = rel:dummy_religion
+                        }
+                        move_pop = c:RVC.capital
+                    }
+                }
+
+                c:RVC.capital = {
+                    every_scope_pop = {
+                        limit = {
+                            has_pop_religion = rel:dummy_religion
+                        }
+                        change_pop_religion = {
+                            target = c:RVC.state_religion
+                            value = 1.0
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    option = {
+        name = blood_tribunal.5.a
+        default_option = yes
+    }
+}
