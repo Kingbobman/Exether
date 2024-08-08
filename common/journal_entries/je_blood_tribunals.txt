@@ -35,24 +35,24 @@
 
 	on_yearly_pulse = { #moves 4% of pops to a random state owned by RVC
 		effect = {
-			random_scope_state = {
-				save_scope_as = pop_target
-			}
+			# random_scope_state = {
+			# 	save_scope_as = pop_target
+			# }
 			
-			every_subject_or_below = {
-				ordered_scope_state = {
-					order_by = state_population
-					every_scope_pop = {
-						random_list = { 
-							96 = {}
-							4 = {
-								change_poptype = pop_type:peasants
-								move_pop = scope:pop_target
-							}
-						}        
-					}
-				}
-			}
+			# every_subject_or_below = {
+			# 	ordered_scope_state = {
+			# 		order_by = state_population
+			# 		every_scope_pop = {
+			# 			random_list = { 
+			# 				96 = {}
+			# 				4 = {
+			# 					change_poptype = pop_type:peasants
+			# 					move_pop = scope:pop_target
+			# 				}
+			# 			}        
+			# 		}
+			# 	}
+			# }
 			if = {
 				limit = {
 					NOT = {

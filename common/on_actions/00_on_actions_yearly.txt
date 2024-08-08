@@ -341,3 +341,56 @@ lobby_yearly_events = {
 		5 = lobby_events.60 
 	}
 }
+
+rvc_blood_tithes = {
+	effect = {
+		if = {
+			limit = {
+				this ?= c:RVC
+				has_variable = established_blood_tribunals
+				}
+				random_scope_state = {
+					save_scope_as = pop_target
+				}
+				
+				every_subject_or_below = {
+					ordered_scope_state = {
+						order_by = state_population
+						every_scope_pop = {
+							random_list = { 
+								94 = {}
+								6 = {
+									change_poptype = pop_type:peasants
+									move_pop = scope:pop_target
+								}
+							}        
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					this ?= c:RVC
+					}
+					random_scope_state = {
+						save_scope_as = pop_target
+					}
+					
+					every_subject_or_below = {
+						ordered_scope_state = {
+							order_by = state_population
+							every_scope_pop = {
+								random_list = { 
+									96 = {}
+									4 = {
+										change_poptype = pop_type:peasants
+										move_pop = scope:pop_target
+									}
+								}        
+							}
+						}
+					}
+				}
+				
+	}
+}
