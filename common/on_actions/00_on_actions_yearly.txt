@@ -349,48 +349,34 @@ rvc_blood_tithes = {
 				this ?= c:RVC
 				has_variable = established_blood_tribunals
 				}
-				random_scope_state = {
-					save_scope_as = pop_target
+				random_list = {
+					50 = { trigger_event = {
+						id = blood_tribunal.5
+					}  
 				}
-				
-				every_subject_or_below = {
-					ordered_scope_state = {
-						order_by = state_population
-						every_scope_pop = {
-							random_list = { 
-								94 = {}
-								6 = {
-									change_poptype = pop_type:peasants
-									move_pop = scope:pop_target
-								}
-							}        
-						}
+				50 = { 
+					trigger_event = {
+						id = blood_tribunal.5 #change this to a randomly scoped state
 					}
+				}
 				}
 			}
 			else_if = {
 				limit = {
 					this ?= c:RVC
 					}
-					random_scope_state = {
-						save_scope_as = pop_target
+					random_list = {
+						50 = { trigger_event = {
+							id = blood_tribunal.4
+						}  
 					}
-					
-					every_subject_or_below = {
-						ordered_scope_state = {
-							order_by = state_population
-							every_scope_pop = {
-								random_list = { 
-									96 = {}
-									4 = {
-										change_poptype = pop_type:peasants
-										move_pop = scope:pop_target
-									}
-								}        
-							}
+					50 = { 
+						trigger_event = {
+							id = blood_tribunal.4 #change this to a randomly scoped state
 						}
-					}
+					}	
 				}
 				
-	}
+		}
+	}	
 }
