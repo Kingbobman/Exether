@@ -102,44 +102,42 @@ blood_tribunal.4 = {
 
     trigger = {
         this = c:RVC
+        any_subject_or_below = {
+            exists = this
+        }
     }
 
-
     immediate = {
-        hidden_effect = {
-            every_subject_or_below = {
-                ordered_scope_state = {
-                    order_by = total_population
-                    position = 0
-                    save_scope_as = most_populated_state
+        every_subject_or_below = {
+            ordered_scope_state = {
+                order_by = state_population
+                reverse = yes
+                save_scope_as = most_populated_state
+            }
+
+            scope:most_populated_state = {
+                convert_population = {
+                    target = rel:dummy_religion 
+                    value = 0.04
                 }
 
-                scope:most_populated_state = {
-                    convert_population = {
-                        target = rel:dummy_religion 
-                        value = 0.04
+                every_scope_pop = {
+                    limit = {
+                        religion = rel:dummy_religion
                     }
+                    move_pop = c:RVC.capital
                 }
+            }
+        }
 
-                scope:most_populated_state = {
-                    every_scope_pop = {
-                        limit = {
-                            has_pop_religion = rel:dummy_religion
-                        }
-                        move_pop = c:RVC.capital
-                    }
+        capital = {
+            every_scope_pop = {
+                limit = {
+                    has_pop_religion = rel:dummy_religion
                 }
-
-                c:RVC.capital = {
-                    every_scope_pop = {
-                        limit = {
-                            has_pop_religion = rel:dummy_religion
-                        }
-                        change_pop_religion = {
-                            target = c:RVC.state_religion
-                            value = 1.0
-                        }
-                    }
+                change_pop_religion = {
+                    target = root.state_religion
+                    value = 1.0
                 }
             }
         }
@@ -148,6 +146,7 @@ blood_tribunal.4 = {
 	option = {
 		name = blood_tribunal.4.a
 	}
+
 }
 
 blood_tribunal.5 = {
@@ -162,51 +161,45 @@ blood_tribunal.5 = {
 
     trigger = {
         this = c:RVC
-        any_subject_or_below = yes
+        any_subject_or_below = {
+            exists = this
+        }
     }
 
     immediate = {
-        
-            every_subject_or_below = {
-                limit = {
-                    any_scope_state = yes
-                }
-                save_scope_as = current_subject
-                ordered_scope_state = {
-                    order_by = total_population
-                    position = 0
-                    save_scope_as = most_populated_state
+        every_subject_or_below = {
+            ordered_scope_state = {
+                order_by = state_population
+                reverse = yes
+                save_scope_as = most_populated_state
+            }
+
+            scope:most_populated_state = {
+                convert_population = {
+                    target = rel:dummy_religion 
+                    value = 0.06
                 }
 
-                scope:most_populated_state = {
-                    convert_population = {
-                        target = rel:dummy_religion 
-                        value = 0.06
+                every_scope_pop = {
+                    limit = {
+                        religion = rel:dummy_religion
                     }
-                }
-
-                scope:most_populated_state = {
-                    every_scope_pop = {
-                        limit = {
-                            has_pop_religion = rel:dummy_religion
-                        }
-                        move_pop = c:RVC.capital
-                    }
-                }
-
-                c:RVC.capital = {
-                    every_scope_pop = {
-                        limit = {
-                            has_pop_religion = rel:dummy_religion
-                        }
-                        change_pop_religion = {
-                            target = c:RVC.state_religion
-                            value = 1.0
-                        }
-                    }
+                    move_pop = c:RVC.capital
                 }
             }
-        
+        }
+
+        capital = {
+            every_scope_pop = {
+                limit = {
+                    has_pop_religion = rel:dummy_religion
+                }
+                change_pop_religion = {
+                    target = root.state_religion
+                    value = 1.0
+                }
+            }
+        }
     }
 
 	option = {
