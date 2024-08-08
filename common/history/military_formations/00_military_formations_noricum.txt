@@ -233,7 +233,7 @@
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_dumonian_heartlands
-			name = "Royal Albriarian Army"
+			name = Albriar_Defense_Force
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
@@ -257,218 +257,14 @@
 				count = 5
 			}
 			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
+				type = unit_type:combat_unit_type_cuirassiers
 				state_region = s:STATE_CARREGRICE
 				count = 5
 			}
 
-			save_scope_as = abrarmy
-		}
-		create_character = {
-			is_general = yes
-			commander_rank = commander_rank_2
-			hq = sr:region_dumonian_heartlands
-			save_scope_as = abrgen
-		}
-		scope:abrgen = {
-			transfer_to_formation = scope:abrarmy
-		}
-	}
-	c:DUM ?= {
-		create_military_formation = {
-			type = army
-			hq_region = sr:region_dumonian_heartlands
-			name = "Crownpeak Royal Garrison"
 
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_CROWNPEAK
-				count = 18
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_mobile_artillery
-				state_region = s:STATE_CROWNPEAK
-				count = 6
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
-				state_region = s:STATE_CROWNPEAK
-				count = 6
-			}
-			save_scope_as = dumarmy1
-		}
-		create_character = {
-			is_general = yes
-			hq = sr:region_dumonian_heartlands
-			save_scope_as = dumgen1
-		}
-		scope:dumgen1 = {
-			commander_rank = commander_rank_1
-			transfer_to_formation = scope:dumarmy1
 		}
 
-		create_military_formation = {
-			type = army
-			hq_region = sr:region_dumonian_heartlands
-			name = "Dumonian Heartland Levies"
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_SERONTAIN
-				count = 20
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_mobile_artillery
-				state_region = s:STATE_SERONTAIN
-				count = 5
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_LOCHTYRE
-				count = 20
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_mobile_artillery
-				state_region = s:STATE_MALINMORE
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
-				state_region = s:STATE_CALDAMUS
-				count = 5
-			}
-			save_scope_as = dumarmy3
-		}
-		create_character = {
-			is_general = yes
-			commander_rank = commander_rank_2
-			hq = sr:region_dumonian_heartlands
-			save_scope_as = dumgen5
-		}
-		scope:dumgen5 = {
-			transfer_to_formation = scope:dumarmy5
-		}
-
-		create_military_formation = {
-			type = army
-			hq_region = sr:region_southwestern_noricum
-			name = "Ralaurian Regular Army"
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_LAST_HEARTH
-				count = 10
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_BANEKERT
-				count = 10
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_mobile_artillery
-				state_region = s:STATE_ADRIANSEN
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
-				state_region = s:STATE_ARDSHIEL
-				count = 5
-			}
-			save_scope_as = dumarmy2
-		}
-		create_character = {
-			is_general = yes
-			commander_rank = commander_rank_2
-			hq = sr:region_southwestern_noricum
-			save_scope_as = dumgen2
-		}
-		scope:dumgen2 = {
-			transfer_to_formation = scope:dumarmy2
-		}
-
-		
-		create_military_formation = {
-			type = army
-			hq_region = sr:region_southwestern_noricum
-			name = "Sludge Wardens"
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_TAR_PITS
-				count = 10
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_SLUDGE_COAST
-				count = 10
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_mobile_artillery
-				state_region = s:STATE_ALYEA
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
-				state_region = s:STATE_SLUDGE_COAST
-				count = 5
-			}
-			save_scope_as = dumarmy3
-		}
-		create_character = {
-			is_general = yes
-			commander_rank = commander_rank_2
-			hq = sr:region_southwestern_noricum
-			save_scope_as = dumgen3
-		}
-		scope:dumgen3 = {
-			transfer_to_formation = scope:dumarmy3
-		}
-
-		create_military_formation = {
-			type = army
-			hq_region = sr:region_central_noricum
-			name = "Jalian Volunteer Legion"
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_KILCREE
-				count = 10
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_MELENLECK
-				count = 7
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_mobile_artillery
-				state_region = s:STATE_MELENLECK
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
-				state_region = s:STATE_MELENLECK
-				count = 3
-			}
-			save_scope_as = dumarmy4
-		}
-		create_character = {
-			is_general = yes
-			commander_rank = commander_rank_2
-			hq = sr:region_central_noricum
-			save_scope_as = dumgen4
-		}
-		scope:dumgen4 = {
-			transfer_to_formation = scope:dumarmy4
-		}
 	}
 	c:ROF ?= {
 		create_military_formation = {
