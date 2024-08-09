@@ -44,6 +44,19 @@
 				set_interest_group_name = ig_runeseers
 			}
 		}
+		else_if = {
+			limit = {
+				OR = {
+					AND = {
+						c:CER ?= this
+					}
+					country_has_primary_culture = cu:cerunite
+				}
+			}
+			ig:ig_mages = {
+				set_interest_group_name = ig_alchemists
+			}
+		}
 
 
 
