@@ -9,9 +9,9 @@
 	dependent_wage = 0.5	# per year
 	unemployment = yes
 	
-	# 20% - 80% politically engaged	
-	political_engagement_base = 0.0
-	political_engagement_literacy_factor = 0.80
+	# 20% - 90% politically engaged	
+	political_engagement_base = 0.2
+	political_engagement_literacy_factor = 0.70
 	
 	political_engagement_mult = {
 		value = 1
@@ -27,10 +27,34 @@
 			}		
 		}		
 
+			multiply = {
+			desc = "NO_LABOR_MOVEMENT"	
+			value = 1.0
+			
+			if = {
+				limit = { 
+					owner = {
+						NOT = { has_technology_researched = labor_movement }
+					}
+				}
+				value = 0.5
+			}		
+		}
+
 		multiply = {
 			desc = "HAS_POLITICAL_AGITATION"	
-			value = 1.0	
-		}		
+			value = 1.0
+			
+			if = {
+				limit = { 
+					owner = {
+						has_technology_researched = political_agitation
+					}
+				}
+				value = 1.5
+			}		
+		}			
+	
 	}
 	
 	
@@ -65,6 +89,15 @@
 			multiply = {
 				value = 0.50
 				desc = "QUALIFICATIONS_PEASANTS_UNDER_SERFDOM"
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = peasant
+			}
+			multiply = {
+				value = 1.25
+				desc = "QUALIFICATIONS_FAVORED_TYPE"
 			}
 		}
 		else = {		
