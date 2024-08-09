@@ -59,7 +59,10 @@
 			is_pop_type = engineers
 			is_pop_type = shopkeepers
 			AND = {
-				is_pop_type = wizards
+				OR = {
+					is_pop_type = wizards
+					is_pop_type = artificers
+				}
 				owner = {
 					has_law = law_type:law_artificer_guilds
 				}
@@ -107,7 +110,10 @@
 			desc = "ARTIFICER_LAW"
 			if = {
 				limit = {
+					OR = {
 					is_pop_type = wizards
+					is_pop_type = artificers
+					}
 					owner = {
 						has_law = law_type:law_artificer_guilds
 					}
