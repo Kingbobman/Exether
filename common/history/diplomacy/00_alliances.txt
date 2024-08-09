@@ -5,4 +5,26 @@
 			type = alliance
 		}	
 	}
+
+	c:TEF ?= {
+		create_diplomatic_pact = {
+			country = c:SET
+			type = alliance
+		}	
+	}
+	c:VAI ?= {
+		create_diplomatic_pact = {
+			country = c:XXP
+			type = alliance
+		}	
+	}
+}
+
+DIPLOMACY = {
+	c:XXP ?= {
+		create_diplomatic_pact = {
+			country = c:VAI
+			type = alliance
+		}	
+	}
 }
