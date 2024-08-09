@@ -62,6 +62,30 @@ gov_blood_tribunal = {
 	}
 }
 
+gov_blood_tribunal_2 = {
+	transfer_of_power = dictatorial
+	new_leader_on_reform_government = no
+
+	male_ruler = "RULER_TITLE_THRALL_LORD"
+	female_ruler = "RULER_TITLE_THRALL_LADY"
+	
+	possible = {
+		OR = {
+			has_law = law_type:law_presidential_republic
+			has_law = law_type:law_parliamentary_republic
+		}
+		
+		exists = c:RVC
+		top_overlord = c:RVC
+		}
+
+		on_government_type_change = {
+			change_to_dictatorial = yes
+		}
+		on_post_government_type_change = {
+			post_change_to_dictatorial = yes
+		}
+}
 gov_provisional_government = {
 	transfer_of_power = dictatorial
 
