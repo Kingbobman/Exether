@@ -72,7 +72,7 @@
 				OR = {
 					is_pop_type = archmages
 					is_pop_type = wizards
-					is_pop_type = starbrands
+					is_pop_type = artificers
 				}
 				literacy_rate > 0.25
 			}
@@ -84,7 +84,7 @@
 					is_pop_type = engineers
 					is_pop_type = archmages
 					is_pop_type = wizards
-					is_pop_type = starbrands
+					is_pop_type = artificers
 					is_pop_type = clergymen
 					AND = {
 						is_pop_type = academics
@@ -116,12 +116,22 @@
 		}
 
 		add = {
-			desc = "POP_WIZARDSS"
+			desc = "POP_WIZARDS"
 			if = {
 				limit = {
 					is_pop_type = wizards
 				}
 				value = 100
+			}
+		}
+
+		add = {
+			desc = "POP_ARTIFICERS"
+			if = {
+				limit = {
+					is_pop_type = artificers
+				}
+				value = 50
 			}
 		}
 
@@ -149,6 +159,7 @@
 					OR = {
 						is_pop_type = wizards
 						is_pop_type = archmages
+						is_pop_type = artificers
 					}
 					
 					owner = {
