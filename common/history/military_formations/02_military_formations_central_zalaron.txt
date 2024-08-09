@@ -1144,7 +1144,7 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_POMMELFALL
-				count = 10
+				count = 5
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_lancers
@@ -1175,7 +1175,7 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_AUTUMN_HILLS
-				count = 15
+				count = 10
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mobile_artillery
@@ -1221,7 +1221,7 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_mobile_artillery
 				state_region = s:STATE_PORCELAINGATE
-				count = 10
+				count = 5
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
@@ -1267,7 +1267,7 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_lancers
 				state_region = s:STATE_ASARSHIR
-				count = 10
+				count = 5
 			}
 
 			save_scope_as = tefarmy4
@@ -1285,50 +1285,6 @@
 		}
 
 
-	}
-	c:FLU ?= { # for some reason i get 14 men when there should only be 11 please check if thats happening to you too
-
-		create_military_formation = {
-			type = army
-			hq_region = sr:region_shaking_fields
-			name = Flussholm_Guard
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_JOURNEYEND
-				count = 5
-			}
-						combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_INTOKI
-				count = 2
-			}
-						combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_EISENMORA
-				count = 4
-			}
-
-			save_scope_as = flu_army
-		}
-		create_character = {
-			first_name = "Dietrich"
-			last_name = "Okkonen"
-			age = 37
-			is_general = yes
-			hq = sr:region_shaking_fields
-			interest_group = ig_armed_forces
-			ideology = ideology_jingoist
-			traits = {
-				direct
-				persistent
-			}
-			save_scope_as = flu_general
-		}
-
-		scope:flu_general = {
-			transfer_to_formation = scope:flu_army
-		}
 	}
 }
 

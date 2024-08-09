@@ -233,7 +233,7 @@
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_dumonian_heartlands
-			name = "Royal Albriarian Army"
+			name = Albriar_Defense_Force
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
@@ -257,28 +257,11 @@
 				count = 5
 			}
 			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
+				type = unit_type:combat_unit_type_cuirassiers
 				state_region = s:STATE_CARREGRICE
 				count = 5
 			}
 
-			save_scope_as = abrarmy
-		}
-		create_character = {
-			is_general = yes
-			commander_rank = commander_rank_2
-			hq = sr:region_dumonian_heartlands
-			save_scope_as = abrgen
-		}
-		scope:abrgen = {
-			transfer_to_formation = scope:abrarmy
-		}
-	}
-	c:DUM ?= {
-		create_military_formation = {
-			type = army
-			hq_region = sr:region_dumonian_heartlands
-			name = "Crownpeak Royal Garrison"
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
