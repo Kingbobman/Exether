@@ -1,11 +1,10 @@
 ﻿initiation_rites_decision = {
 	is_shown = {
+		country_has_primary_culture = cu:vampire
 		NOT = { has_modifier = recently_performed_initiations }
 	}
 	
 	possible = {
-		c:RVC ?= this
-		country_has_primary_culture = cu:vampire
 		custom_tooltip = {
 			text = initiations_rites_tt_1
 			NOT = { has_modifier = recently_performed_initiations }
