@@ -551,8 +551,11 @@
 	}
     
     c:LEO ?= { 
-
-    			combat_unit = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_lake_bossard
+ 		
+			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_FAR_SHORE
 				count = 10
@@ -576,6 +579,7 @@
 				count = 3
 			}
 		}
+	}
 
 	c:CER ?= {
 		create_military_formation = {
