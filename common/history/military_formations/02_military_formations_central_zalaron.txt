@@ -620,35 +620,54 @@
 			type = army
 			hq_region = sr:region_vairia
 
+			name = "Sirlian National Army"
+
 			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
+				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_KASKADVIVO
-				count = 6
+				count = 5
 			}
 			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_KASKADVIVO
+				service_type = conscript
+				count = 15
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_RUGAKAMPO
-				count = 3
+				count = 5
 			}
 			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
+				type = unit_type:combat_unit_type_lancers
 				state_region = s:STATE_SENCERBO
-				count = 2
+				count = 5
 			}
 			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_INSULBELA
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_MONTROSO
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_MONTARBORA
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_LAGOEKRANO
 				count = 5
 			}
 			combat_unit = {
-				type = unit_type:combat_unit_type_hussars
-				state_region = s:STATE_KASKADVIVO
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_cannon_artillery
-				state_region = s:STATE_KASKADVIVO
-				count = 2
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_LAGOEKRANO
+				service_type = conscript
+				count = 15
 			}
 
 			save_scope_as = xxp_army
@@ -656,6 +675,7 @@
 
 		create_character = {
 			is_general = yes
+			commander_rank = commander_rank_2
 			hq = region_vairia
 			save_scope_as = xxp_general
 		}
@@ -668,10 +688,12 @@
 			type = fleet
 			hq_region = sr:region_vairia
 
+			name = "Coast Patrol Fleet"
+
 			combat_unit = {
 				type = unit_type:combat_unit_type_frigate
 				state_region = s:STATE_KASKADVIVO
-				count = 10
+				count = 15
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_man_o_war
@@ -682,6 +704,7 @@
 		}
 		create_character = {
 			is_admiral = yes
+			commander_rank = commander_rank_2
 			hq = region_vairia
 			save_scope_as = xxp_admiral
 		}
