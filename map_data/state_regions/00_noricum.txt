@@ -137,7 +137,7 @@ STATE_GULFWATCH = {
 STATE_SLUDGE_COAST = {
     id = 4007
     traits = { "state_trait_sludge_pits" }
-    subsistence_building = "building_rice_paddies"
+    subsistence_building = "building_subsistence_farms"
     provinces = { x27ECE9 x6597FE x6DF7A0 xA4E56E xA597E9 xABF9A3 xB85DE7 xC1F0D7 xC2E7EE xC777DE xC7C792 xC8B29F xCBFC4F xD44FF4 xD684B5 xE5D597 xE5EFDC xEAA6EF xF4F61D xF8F668 xFCF8A6 xFD9F8F }
     port = x6597FE
     city = xFD9F8F
@@ -213,7 +213,7 @@ STATE_ZENDEN = {
 STATE_TAR_PITS = {
     id = 4011
     traits = { "state_trait_sludge_pits" }
-    subsistence_building = "building_rice_paddies"
+    subsistence_building = "building_subsistence_farms"
     provinces = { x3AFCBF x5BE9C2 x68EEBF x69D2D5 x70D6E8 x72D7BF x8BB2BB x96BCEF x99E1B3 xA6F56C xA8DEA6 xB382F6 xB5CB7A xBAA7DB xC4FDE8 xC762E9 xD2F15D xD2F659 xE14ED7 xE6D462 xE853F2 xEA48D3 xEAF2A7 xEAF63A }
     port = xEAF63A
     city = xEAF2A7
@@ -592,7 +592,6 @@ STATE_WYRMBONE_CLIFFS = {
         bg_logging = 11
         bg_whaling = 23
         bg_fishing = 17
-        bg_coal_mining = 10
         bg_wishstone_mining = 27
     }
     resource = {
@@ -1793,16 +1792,9 @@ STATE_YGGHAMN = {
         bg_iron_mining = 18
         bg_logging = 11
         bg_coal_mining = 23
-        arable_resources = { "bg_rice_farms" "bg_coffee_plantations" "bg_banana_plantations" }
-        capped_resources = {
-            bg_lead_mining = 8
-            bg_fishing = 3
-            bg_wishstone_mining = 14
-        }
-        resource = {
-            type = "bg_wishstone_reefs"
-            undiscovered_amount = 17
-        }
+        bg_lead_mining = 8
+        bg_fishing = 3
+        bg_wishstone_mining = 14
     }
     naval_exit_id = 3034
 }
@@ -2240,17 +2232,6 @@ STATE_EIRIKSHOF = {
         bg_logging = 12
     }
     naval_exit_id = 3017
-    arable_resources = {}
-    capped_resources = {
-        bg_lead_mining = 8
-        bg_logging = 2
-        bg_fishing = 3
-        bg_wishstone_mining = 17
-    }
-    resource = {
-        type = "bg_wishstone_reefs"
-        undiscovered_amount = 14
-    }
 }
 
 STATE_HALSTEAD = {
