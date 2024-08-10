@@ -978,7 +978,7 @@
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:KGM"
+						country="c:MGR"
 						levels=4
 						region="STATE_SHKUMBINIA"
 				   }
@@ -1200,7 +1200,7 @@
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:EKA"
+						country="c:MGR"
 						levels=1
 						region="STATE_BREZHKE"
 				   }
@@ -1239,7 +1239,7 @@
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:EKA"
+						country="c:MGR"
 						levels=1
 						region="STATE_TROPOJA"
 				   }
@@ -3327,7 +3327,7 @@
 				add_ownership={ 
 					building={ 
 						type="building_financial_district"
-						country="c:RAV"
+						country="c:EKA"
 						levels=2
 						region="STATE_KRUSHEVA"
 				   }
@@ -3346,7 +3346,7 @@
 				   }
 				}
 			reserves=1
-			activate_production_methods={ "pm_gizmo_waterwrangler_irrigation_building_tobacco_plantation" "pm_road_carts"  }
+			activate_production_methods={ "gizmo_waterwrangler_irrigation_building_tobacco_plantation" "pm_road_carts"  }
 		}
 			create_building={
 			building="building_maize_farm"
@@ -3359,7 +3359,7 @@
 				   }
 				}
 			reserves=1
-			activate_production_methods={ "pm_soil_enriching_farming"  "pm_tools" "pm_gizmo_waterwrangler_irrigation_building_tobacco_plantation"  }
+			activate_production_methods={ "pm_soil_enriching_farming"  "pm_tools"  }
 		}
 			create_building={
 			building="building_vineyard_plantation"
@@ -3420,7 +3420,7 @@
                 add_ownership={ 
                     building={ 
                         type="building_financial_district"
-                        country="c:CER"
+                        country="c:RAV"
                         levels=2
                         region="STATE_PIEPERDORP"
                    }
@@ -3433,7 +3433,7 @@
 					  add_ownership={ 
 						  building={ 
 							  type="building_financial_district"
-							  country="c:RVC"
+							  country="c:RAV"
 							  levels=1
 							  region="STATE_PIEPERDORP"
 						 }
@@ -3456,7 +3456,7 @@
 				   }
 				}
 			reserves=1
-			activate_production_methods={ "pm_gizmo_waterwrangler_irrigation_building_tobacco_plantation" "pm_road_carts"  }
+			activate_production_methods={ "gizmo_waterwrangler_irrigation_building_tobacco_plantation" "pm_road_carts"  }
 		}
 		  create_building={
 			building="building_rice_farm"
@@ -4224,7 +4224,7 @@
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:RAV"
+						country="c:TLE"
 						levels=2
 						region="STATE_KRULWILGEN"
 				   }
@@ -5445,7 +5445,7 @@
                 add_ownership={ 
                     building={ 
                         type="building_financial_district"
-                        country="c:TLE"
+                        country="c:RAV"
                         levels=1
                         region="STATE_DRAAIKUST"
                    }
@@ -5516,8 +5516,7 @@
 		reserves=1
 		activate_production_methods={ "default_building_vineyard_plantation"  }
 	}	
-	}
-  }
+	
   create_building={
 	building="building_songberry_plantation"
 		add_ownership={ 
@@ -5530,6 +5529,8 @@
 		}
 	reserves=1
 	activate_production_methods={ "default_building_songberry_plantation" "pm_road_carts" }
+	}
+}
 }
   s:STATE_HAVENSHIRE = {
 	region_state:TLE = {

@@ -2072,7 +2072,7 @@
 			add_ownership={
 				building={
 					type="building_manor_house"
-					country="c:DRO"
+					country="c:VOZ"
 					levels=4
 					region="STATE_SKYPIERCER_PEAK"
 				}
@@ -2282,20 +2282,7 @@
 			reserves=1
 			activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts"  }
 		}
-		create_building={
-			building="building_railway"
-			add_ownership={ 
-				building={ 
-					type="building_manor_house"
-					country="c:SMA"
-					levels=1
-					region="STATE_OUTER_MOORWEALD"
-				}
-			}
-			reserves=1
-		}
-	reserves=1
-	activate_production_methods={ "pm_steam_trains" "pm_wooden_passenger_carriages" }
+
 		create_building={
 			building="building_port"
 			level=3
@@ -3658,7 +3645,7 @@
                 add_ownership={ 
                     building={ 
                         type="building_financial_district"
-                        country="c:THI"
+                        country="c:LEO"
                         levels=3
                         region="STATE_FAR_SHORE"
                    }
@@ -3800,6 +3787,19 @@
 			activate_production_methods={ "pm_artificial_fertilizers" }
 		}
             create_building={
+			building="building_explosives_factory"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:ARR"
+                        levels=1
+                        region="STATE_GREENCOURT"
+                   }
+                }
+			reserves=1
+			activate_production_methods={ "pm_leblanc_process" }
+		}
+            create_building={
 			building="building_tooling_workshops"
                 add_ownership={ 
                     building={ 
@@ -3818,7 +3818,7 @@
 				add_ownership={ 
 					building={ 
 						type="building_financial_district"
-						country="c:ARR"
+						country="c:LEO"
 						levels=5
 						region="STATE_GREENCOURT"
 				   }
@@ -3844,7 +3844,7 @@
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:ARR"
+						country="c:EME"
 						levels=7
 						region="STATE_GREENCOURT"
 				   }
@@ -5352,7 +5352,7 @@
 				 }
 			  }
 			reserves=1
-			activate_production_methods={ "pm_simple_underfarming"  "pm_tools" "pm_farms_basic_earth_shaping" "pm_no_dyes" }
+			activate_production_methods={ "pm_simple_underfarming"  "pm_tools" "pm_farms_basic_earth_shaping" }
 		  }
 		  create_building={
 			building="building_potion_distillery"
@@ -6169,7 +6169,7 @@
 			  }
 			}
 			reserves=1
-			activate_production_methods={ "pm_atmospheric_engine_pump_building_cloud_collector" "pm_no_explosives" "pm_no_steam_automation" "pm_rail_transport_mine" }
+			activate_production_methods={ "pm_atmospheric_engine_pump_building_cloud_collector" "pm_no_steam_automation" "pm_rail_transport_mine" }
 		}
 	}
   }

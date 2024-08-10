@@ -1426,7 +1426,7 @@ reserves=1
 				   }
 				}
           reserves=1
-          activate_production_methods={ "pm_simple_farming" "pm_no_potatoes" "pm_tools" "pm_farms_basic_earth_shaping" }
+          activate_production_methods={ "pm_simple_farming" "pm_tools" "pm_farms_basic_earth_shaping" }
         }
         create_building={
           building="building_iron_mine"
@@ -3949,7 +3949,7 @@ reserves=1
 				   }
 				}
           reserves=1
-          activate_production_methods={ "pm_simple_farming" "pm_no_potatoes" "pm_farms_basic_earth_shaping" "pm_tools"  }
+          activate_production_methods={ "pm_simple_farming" "pm_farms_basic_earth_shaping" "pm_tools"  }
         }
         create_building={
           building="building_food_industry"
@@ -4675,13 +4675,14 @@ reserves=1
 				}
           reserves=1
           activate_production_methods={ "pm_soil_enriching_farming" "pm_tools_disabled"  }
+        }
         create_building={
           building="building_port"
           level=1
           reserves=1
           activate_production_methods={ "pm_anchorage" }
         }		
-      }
+      
       create_building={
 				building="building_logging_camp"
                 add_ownership={ 
@@ -4798,7 +4799,7 @@ reserves=1
         activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts"  }
       }
   }
-
+  }
 
     s:STATE_GLASINBLAIR = {
       region_state:DOV = {
@@ -4860,6 +4861,7 @@ reserves=1
           reserves=1
           activate_production_methods={ "pm_cannons" "pm_automation_disabled" }
           }
+          create_building = {
           building="building_logging_camp"
           add_ownership={ 
               building={ 
@@ -4871,8 +4873,8 @@ reserves=1
           }
         reserves=1
         activate_production_methods={ "pm_saw_mills" "pm_increased_hardwood" "pm_no_equipment" "pm_road_carts" }
-    }
       }
+    }
   }
 
 
@@ -5066,18 +5068,6 @@ reserves=1
           level=2
           reserves=1
           activate_production_methods={ "pm_basic_port" }
-        }
-            create_building={
-              add_ownership={
-                building={
-                  type="building_adventuring_guild"
-                  country="c:ZKW"
-                  levels=1
-                  region="STATE_NIWKA"
-              }
-            }
-            reserves=1
-          activate_production_methods={ "pm_unrefrigerated" "pm_fishing_trawlers" }
         }
         create_building={
           building="building_potion_distillery"
@@ -5471,8 +5461,8 @@ reserves=1
             }
           }
           reserves=1
-          activate_production_methods={ "pm_simple_ranch" "pm_butchering_tools"" "pm_livestock_no_enhancement" "pm_standard_fences" "pm_unrefrigerated"  }
+          activate_production_methods={ "pm_simple_ranch" "pm_butchering_tools" "pm_livestock_no_enhancement" "pm_standard_fences" "pm_unrefrigerated"  }
         }
       }
   }
-  }
+}
