@@ -26,9 +26,11 @@ blood_tribunal.1 = {
 
 	option = {
 		name = blood_tribunal.1.a #the weak will tithe
-        add_journal_entry = {
-			type = je_blood_tribunal
-		}
+        show_as_tooltip = {
+            add_journal_entry = {
+                type = je_blood_tribunal
+            }
+        }
 	}
 }
 
@@ -42,7 +44,7 @@ blood_tribunal.2 = {
 	duration = 3
 
 	event_image = {
-		video = "africa_construction_colony"
+		texture = "gfx/event_images/dreadmoor.dds"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -109,9 +111,9 @@ blood_tribunal.4 = {
     flavor = blood_tribunal.4.f
     hidden = yes
     duration = 3
-    event_image = {
-        video = "southamerica_slaves_night"
-    }
+	event_image = {
+		texture = "gfx/event_images/dreadmoor.dds"
+	}
     trigger = {
         this = c:RVC
         any_subject_or_below = {
