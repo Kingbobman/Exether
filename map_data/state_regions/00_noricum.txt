@@ -389,6 +389,7 @@ STATE_OSTREN = {
     capped_resources = {
         bg_coal_mining = 36
         bg_iron_mining = 27
+        bg_fishing = 5
         bg_logging = 6
     }
     naval_exit_id = 3007
@@ -939,7 +940,7 @@ STATE_LIGHTSCOURGE = {
     impassable = { x61FEFE xBBD6C6 }
     traits = { "state_trait_whistling_summits" }
     arable_land = 50
-    arable_resources = { "bg_underfarms" "bg_spider_ranch" }
+    arable_resources = { "bg_underfarms" "bg_spider_ranch" "bg_livestock_ranches" }
     capped_resources = {
         bg_cloud_collecting = 38
         bg_coal_mining = 65
@@ -2229,7 +2230,14 @@ STATE_EIRIKSHOF = {
     arable_land = 18
     arable_resources = { "bg_livestock_ranches" }
     capped_resources = {
-        bg_logging = 12
+        bg_lead_mining = 8
+        bg_logging = 10
+        bg_fishing = 3
+        bg_wishstone_mining = 17
+    }
+    resource = {
+        type = "bg_wishstone_reefs"
+        undiscovered_amount = 14
     }
     naval_exit_id = 3017
 }
