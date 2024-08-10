@@ -13,6 +13,19 @@ DIPLOMACY = {
 			type = rivalry
 		}
 	}	
+
+	c:XXP ?= {
+		create_diplomatic_pact = {
+			country = c:OPA
+			type = rivalry
+		}
+	}
+	c:OPA ?= {
+		create_diplomatic_pact = {
+			country = c:XXP
+			type = rivalry
+		}
+	}		
 }	
 
 

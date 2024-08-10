@@ -307,9 +307,10 @@
 				state_region = s:STATE_CAVES_OF_RIMELAC
 				count = 1
 			}
+		save_scope_as = thiarmy1
 		}
 
-		save_scope_as = thiarmy1
+		
 
 		create_character = {
 			is_general = yes
@@ -397,9 +398,10 @@
 				state_region = s:STATE_CASTLECOURT
 				count = 1
 			}
+			save_scope_as = thiarmy2
 		}
 
-		save_scope_as = thiarmy2
+		
 
 		create_character = {
 			is_general = yes
@@ -439,9 +441,10 @@
 				state_region = s:STATE_HAAR_FEN
 				count = 5
 			}
+			save_scope_as = thiarmy3
 		}
 
-		save_scope_as = thiarmy3
+		
 
 		create_character = {
 			is_general = yes
@@ -551,8 +554,11 @@
 	}
     
     c:LEO ?= { 
-
-    			combat_unit = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_lake_bossard
+ 		
+			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_FAR_SHORE
 				count = 10
@@ -576,6 +582,7 @@
 				count = 3
 			}
 		}
+	}
 
 	c:CER ?= {
 		create_military_formation = {
@@ -864,16 +871,21 @@
 				state_region = s:STATE_PENDYM_GWYN
 				count = 5
 			}
-		}	
+			save_scope_as = cernavy
+		}
+		    
 
-		activate_production_method = {
-			building_type = building_naval_base
-			production_method = pm_power_of_the_purse
+		create_character = {
+			is_admiral = yes
+			commander_rank = commander_rank_2
+			hq = region_ceraun
+			save_scope_as = ceradmiral
+		}
+		
+		scope:ceradmiral = {
+			transfer_to_formation = scope:cernavy
 		}	
-		activate_production_method = {
-			building_type = building_barracks
-			production_method = pm_general_training
-		}					
+					
 	}
 
 	c:VOZ ?= {
@@ -918,7 +930,7 @@
 				state_region = s:STATE_DEPHEL_PATH
 				count = 3
 			}
-
+			save_scope_as = heroes_of_hanseath
 		}
 
 			create_military_formation = {
@@ -945,7 +957,6 @@
 				}
 			
 			}
-			save_scope_as = heroes_of_hanseath
 	
 
 		create_character = {
@@ -1040,7 +1051,7 @@
 			}
 				create_character = {
 					is_admiral = yes
-					commander_rank = commander_rank_1
+					commander_rank = commander_rank_3
 					hq = region_lagoon_coast
 					save_scope_as = eme_admiral
 				}
@@ -1123,7 +1134,7 @@
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_moorweald
-			name = Whiskerfield_Guard
+			name = "Whiskerfield Militia"
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
@@ -1136,38 +1147,26 @@
 				count = 5
 			}
 			combat_unit = {
-				type = unit_type:combat_unit_type_hussars
+				type = unit_type:combat_unit_type_cuirassiers
 				state_region = s:STATE_WHISKER_FIELDS
 				count = 5
 			}
 			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_WHISKER_FIELDS
-				count = 25
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
+				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_WICKERRYE
 				count = 5
 			}
-			save_scope_as = ratarmyone
- 
+			save_scope_as = whiarmy
+
 			create_character = {
 				is_general = yes
-				first_name = Tovia
-				last_name = Camondo
-				historical = yes
-				hq = sr:region_moorweald
-				commander_rank = commander_rank_3
-				age = 30
-				traits = {
-					Meticulous 
-					Expert Defensive Strategist
-				}
-				save_scope_as = ratdefender
+				commander_rank = commander_rank_1
+				hq = region_moorweald
+				save_scope_as = whigen
 			}
-			scope:ratdefender = {
-				transfer_to_formation = scope:ratarmyone
+			
+			scope:whigen = {
+				transfer_to_formation = scope:whiarmy
 			}
 		}
 	}
@@ -1319,7 +1318,7 @@
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_smallhills
-			name = Clearbough_National_Guard
+			name = "Clearbough National Guard"
 
 			combat_unit = { 
 				type = unit_type:combat_unit_type_line_infantry
@@ -1329,7 +1328,7 @@
 			combat_unit = { 
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_CLEARBOUGH_ESTATES
-				count = 5
+				count = 10
 			}
 
 			combat_unit = {
@@ -1435,13 +1434,13 @@
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_GCS
+				state_region = s:STATE_PEARFIELDS
 				count = 3
 			}
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_mobile_artillery
-				state_region = s:STATE_GCS
+				state_region = s:STATE_OUTER_MOORWEALD
 				count = 2
 			}
 		}
@@ -1485,4 +1484,38 @@
 			}
 		}
 	}
+
+	c:CDW ?= {
+
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_lagoon_coast
+
+			name = "Estate Garrison"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_skirmish_infantry
+				state_region = s:STATE_CRAGGEDWYN
+				count = 5
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_CRAGGEDWYN
+				count = 3
+			}
+
+
+			save_scope_as = cdwarmy
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			save_scope_as = cdwgen
+		}
+
+		scope:cdwgen = {
+			transfer_to_formation = scope:cdwarmy
+		}
 }

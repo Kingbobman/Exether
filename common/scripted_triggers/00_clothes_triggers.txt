@@ -295,21 +295,21 @@ chinese_manchu_queue_hairstyle_character_trigger = { # hairsyle for Manchu chara
 	}
 }
 
-#chinese_manchu_queue_hairstyle_pops_trigger = { # hairsyle for Manchu pops not living living under discriminatory Han rule, and Han pops living under discriminatory Manchu rule
-#	exists = scope:pop
-#	scope:pop = {
-#		home_country = { 
-#			ruler = { 
-#				culture = {
-#					has_discrimination_trait = hobgoblin
-#				}
-#			}
-#			NOT = { 
-#				has_law = law_type:law_multicultural
-#			}
-#		}
-#	}
-#}
+chinese_manchu_queue_hairstyle_pops_trigger = { # hairsyle for Manchu pops not living living under discriminatory Han rule, and Han pops living under discriminatory Manchu rule
+	exists = scope:pop
+	scope:pop = {
+		home_country = { 
+			ruler = { 
+				culture = {
+					has_discrimination_trait = hobgoblin
+				}
+			}
+			NOT = { 
+				has_law = law_type:law_multicultural
+			}
+		}
+	}
+}
 
 chinese_court_clothes_trigger = {
 	exists = scope:character
@@ -437,8 +437,16 @@ ethiopian_clothes_trigger = {
 }
 
 european_clothes_trigger = {
+	
+
+
+
+
 	exists = scope:character
 	scope:character = {
+		NOT = {
+			is_interest_group_type = ig_mages
+		}
 		OR = {
 			culture = {
 				OR = {
@@ -463,6 +471,7 @@ european_clothes_trigger = {
 		}
 
 		NOT = {
+			
 			OR = {
 				culture = {
 					OR = {
@@ -1082,6 +1091,20 @@ clergy_clothes_pop_trigger = {
 	exists = scope:pop
      scope:pop = {
 		is_pop_type = clergymen
+     }
+}
+
+wizard_clothes_pop_trigger = {
+	exists = scope:pop
+     scope:pop = {
+		is_pop_type = wizards
+     }
+}
+
+archmage_clothes_pop_trigger = {
+	exists = scope:pop
+     scope:pop = {
+		is_pop_type = archmages
      }
 }
 

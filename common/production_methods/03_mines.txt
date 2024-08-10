@@ -79,45 +79,6 @@ pm_condensing_engine_pump_building_coal_mine = {
 	}
 }
 
-pm_godsblood_pump_building_coal_mine = {
-	texture = "gfx/interface/icons/production_method_icons/diesel_pump.dds"
-
-	unlocking_technologies = {
-		watertube_boiler
-	}
-	
-	state_modifiers = {
-		workforce_scaled = {
-			state_veil_integrity_contribution = 15 #magic
-		}
-	}
-
-	building_modifiers = {
-		workforce_scaled = {
-			# input goods
-			goods_input_tools_add = 15
-			goods_input_oil_add = 5
-			
-			# output goods
-			goods_output_coal_add = 75
-		}
-
-		level_scaled = {
-			building_employment_laborers_add = 2000
-			building_employment_machinists_add = 1350
-			building_employment_engineers_add = 400
-			building_employment_wizards_add = 250
-		}
-		
-		unscaled = {
-			building_laborers_mortality_mult = 0.2
-			building_machinists_mortality_mult = 0.1
-			building_engineers_mortality_mult = 0.1
-			building_archmages_mortality_mult = 0.1
-		}
-	}
-}
-
 pm_diesel_pump_building_coal_mine = {
 	texture = "gfx/interface/icons/production_method_icons/diesel_pump.dds"
 
@@ -397,45 +358,6 @@ pm_condensing_engine_pump_building_iron_mine = {
 			building_employment_laborers_add = 3000
 			building_employment_machinists_add = 1000
 			building_employment_engineers_add = 500
-		}
-	}
-}
-
-pm_godsblood_pump_building_iron_mine = {
-	texture = "gfx/interface/icons/production_method_icons/diesel_pump.dds"
-
-	unlocking_technologies = {
-		watertube_boiler
-	}
-	
-	state_modifiers = {
-		workforce_scaled = {
-			state_veil_integrity_contribution = 15 #magic
-		}
-	}
-
-	building_modifiers = {
-		workforce_scaled = {
-			# input goods
-			goods_input_tools_add = 15
-			goods_input_oil_add = 5
-			
-			# output goods
-			goods_output_iron_add = 75
-		}
-
-		level_scaled = {
-			building_employment_laborers_add = 2000
-			building_employment_machinists_add = 1350
-			building_employment_engineers_add = 400
-			building_employment_wizards_add = 250
-		}
-		
-		unscaled = {
-			building_laborers_mortality_mult = 0.2
-			building_machinists_mortality_mult = 0.1
-			building_engineers_mortality_mult = 0.1
-			building_archmages_mortality_mult = 0.1
 		}
 	}
 }
@@ -728,45 +650,6 @@ pm_condensing_engine_pump_building_lead_mine = {
 	}
 }
 
-pm_godsblood_pump_building_lead_mine = {
-	texture = "gfx/interface/icons/production_method_icons/diesel_pump.dds"
-
-	unlocking_technologies = {
-		watertube_boiler
-	}
-	
-	state_modifiers = {
-		workforce_scaled = {
-			state_veil_integrity_contribution = 15 #magic
-		}
-	}
-
-	building_modifiers = {
-		workforce_scaled = {
-			# input goods
-			goods_input_tools_add = 15
-			goods_input_oil_add = 5
-			
-			# output goods
-			goods_output_lead_add = 75
-		}
-
-		level_scaled = {
-			building_employment_laborers_add = 2000
-			building_employment_machinists_add = 1350
-			building_employment_engineers_add = 400
-			building_employment_wizards_add = 250
-		}
-		
-		unscaled = {
-			building_laborers_mortality_mult = 0.25
-			building_machinists_mortality_mult = 0.15
-			building_engineers_mortality_mult = 0.1
-			building_archmages_mortality_mult = 0.1
-		}
-	}
-}
-
 pm_diesel_pump_building_lead_mine = {
 	texture = "gfx/interface/icons/production_method_icons/diesel_pump.dds"
 	state_modifiers = {
@@ -861,7 +744,6 @@ pm_wishstone_building_lead_mine = {
 			building_laborers_mortality_mult = 0.33
 			building_machinists_mortality_mult = 0.25
 			building_engineers_mortality_mult = 0.15
-			building_archmages_mortality_mult = 0.15
 		}
 	}
 }
@@ -973,45 +855,6 @@ pm_condensing_engine_pump_building_sulfur_mine = {
 	}
 }
 
-pm_godsblood_pump_building_sulfur_mine = {
-	texture = "gfx/interface/icons/production_method_icons/diesel_pump.dds"
-
-	unlocking_technologies = {
-		watertube_boiler
-	}
-	
-	state_modifiers = {
-		workforce_scaled = {
-			state_veil_integrity_contribution = 15 #magic
-		}
-	}
-
-	building_modifiers = {
-		workforce_scaled = {
-			# input goods
-			goods_input_tools_add = 15
-			goods_input_oil_add = 5
-			
-			# output goods
-			goods_output_sulfur_add = 75
-		}
-
-		level_scaled = {
-			building_employment_laborers_add = 2000
-			building_employment_machinists_add = 1350
-			building_employment_engineers_add = 400
-			building_employment_wizards_add = 250
-		}
-		
-		unscaled = {
-			building_laborers_mortality_mult = 0.25
-			building_machinists_mortality_mult = 0.15
-			building_engineers_mortality_mult = 0.1
-			building_archmages_mortality_mult = 0.1
-		}
-	}
-}
-
 pm_diesel_pump_building_sulfur_mine = {
 	texture = "gfx/interface/icons/production_method_icons/diesel_pump.dds"
 	state_modifiers = {
@@ -1106,7 +949,6 @@ pm_wishstone_building_sulfur_mine = {
 			building_laborers_mortality_mult = 0.33
 			building_machinists_mortality_mult = 0.25
 			building_engineers_mortality_mult = 0.15
-			building_archmages_mortality_mult = 0.15
 		}
 	}
 }
@@ -1237,51 +1079,6 @@ pm_condensing_engine_pump_building_gold_mine = {
 	}	
 }
 
-pm_godsblood_pump_building_gold_mine = {
-	texture = "gfx/interface/icons/production_method_icons/diesel_pump.dds"
-
-	unlocking_technologies = {
-		watertube_boiler
-	}
-	
-	state_modifiers = {
-		workforce_scaled = {
-			state_veil_integrity_contribution = 15 #magic
-		}
-	}
-
-	building_modifiers = {
-		workforce_scaled = {
-			# input goods
-			goods_input_tools_add = 15
-			goods_input_oil_add = 5
-			
-			# output goods
-			goods_output_gold_add = 35
-		}
-
-		level_scaled = {
-			building_employment_laborers_add = 2000
-			building_employment_machinists_add = 1350
-			building_employment_engineers_add = 400
-			building_employment_wizards_add = 250
-		}
-		
-		unscaled = {
-			building_laborers_mortality_mult = 0.25
-			building_machinists_mortality_mult = 0.1
-			building_engineers_mortality_mult = 0.1
-			building_archmages_mortality_mult = 0.1
-		}
-	}
-
-	country_modifiers = {
-		workforce_scaled = {
-			country_minting_add = 1000
-		}
-	}
-}
-
 pm_diesel_pump_building_gold_mine = {
 	texture = "gfx/interface/icons/production_method_icons/diesel_pump.dds"
 	state_modifiers = {
@@ -1356,41 +1153,6 @@ pm_nitroglycerin_building_gold_mine = {
 			country_minting_add = 125
 		}
 	}	
-}
-
-pm_wishstone_building_gold_mine = {
-	texture = "gfx/interface/icons/production_method_icons/nitroglycerin.dds"
-
-	unlocking_technologies = {
-	 	nitroglycerin
-	}
-	
-	state_modifiers = {
-		workforce_scaled = {
-			state_veil_integrity_contribution = 10 #magic.  we could up this.  we could up this a lot.  in fact, pms like this could be a way 
-		}										#for the player to intentionally trade pop mortality for extra pollution
-	}
-
-	building_modifiers = {
-		workforce_scaled = {
-			# input goods
-			goods_input_wishstone_add = 5
-			
-			# output goods
-			goods_output_gold_add = 10
-		}
-
-		level_scaled = {
-			building_employment_wizards_add = 250
-		}
-
-		unscaled = {
-			building_laborers_mortality_mult = 0.33
-			building_machinists_mortality_mult = 0.25
-			building_engineers_mortality_mult = 0.15
-			building_archmages_mortality_mult = 0.15
-		}
-	}
 }
 
 pm_dynamite_building_gold_mine = {

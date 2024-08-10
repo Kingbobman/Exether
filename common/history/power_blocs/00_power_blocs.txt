@@ -51,6 +51,7 @@
 			principle = principle_external_trade_1
 
 			member = c:WHX
+			member = c:XXP
 		}
 		if = {
 			limit = {
@@ -192,4 +193,32 @@
 
 	}
 
+	c:TEF = {
+		create_power_bloc = {
+			name = ELF_BLOC
+	
+			map_color = { 150 75 5 }
+	
+			founding_date = 1015.6.9 
+			identity = identity_trade_league
+			principle = principle_internal_trade_1
+
+			member = c:SET
+			member = c:OPA
+			member = c:ANW
+		}
+
+		if = {
+			limit = {
+				has_dlc_feature = power_bloc_features
+			}
+			power_bloc = {
+			}
+		}
+	}
+
 }
+
+
+
+
