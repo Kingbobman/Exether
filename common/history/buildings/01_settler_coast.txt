@@ -534,12 +534,12 @@
                     building={ 
                         type="building_financial_district"
                         country="c:CER"
-                        levels=5
+                        levels=3
                         region="STATE_SAINT_MER"
                    }
                 }
 			reserves=1
-			activate_production_methods={ "pm_saw_mills" "pm_hardwood" "pm_no_equipment" "pm_road_carts" }
+			activate_production_methods={ "pm_saw_mills" "pm_hardwood" "pm_no_equipment" "pm_stoneskin_potion" "pm_road_carts" }
 		}
                         create_building={
 			building="building_government_administration"
@@ -571,12 +571,12 @@
                     building={ 
                         type="building_financial_district"
                         country="c:CER"
-                        levels=5
+                        levels=3
                         region="STATE_SAINT_MER_2"
                    }
                 }
 			reserves=1
-			activate_production_methods={ "pm_saw_mills" "pm_hardwood" "pm_no_equipment" "pm_road_carts" }
+			activate_production_methods={ "pm_saw_mills" "pm_hardwood" "pm_stoneskin_potion" "pm_no_equipment" "pm_road_carts" }
 		}
 			create_building={
 			building="building_rye_farm"
@@ -772,7 +772,7 @@
                    }
                 }
 			reserves=1
-			activate_production_methods={ "pm_saw_mills" "pm_no_equipment" "pm_road_carts" "pm_hardwood" }
+			activate_production_methods={ "pm_saw_mills" "pm_no_equipment" "pm_stoneskin_potion" "pm_road_carts" "pm_hardwood" }
 		}
 		create_building={
 			building="building_port"
@@ -1038,7 +1038,7 @@
 		}
 		create_building={
 			building="building_government_administration"
-			level=2
+			level=5
 			reserves=1
 			activate_production_methods={ "pm_professional_bureaucrats" "pm_religious_bureaucrats" "pm_vertical_filing_cabinets" }
 		}
@@ -1048,7 +1048,7 @@
 					building={ 
 						type="building_financial_district"
 						country="c:CER"
-						levels=5
+						levels=2
 						region="STATE_THE_CHASM"
 				   }
 				}
@@ -1056,12 +1056,12 @@
 					building={ 
 						type="building_financial_district"
 						country="c:DUM"
-						levels=3
+						levels=2
 						region="STATE_CROWNPEAK"
 				   }
 				}
 			reserves=1
-			activate_production_methods={ "pm_atmospheric_engine_pump_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation"    "pm_road_carts" }
+			activate_production_methods={ "pm_atmospheric_engine_pump_building_iron_mine" "pm_no_explosives" "pm_iron_mines_potions_of_fortitude" "pm_no_steam_automation" "pm_road_carts" }
 		}
 		create_building={
 			building="building_university"
@@ -1088,7 +1088,7 @@
 					building={ 
 						type="building_financial_district"
 						country="c:CER"
-						levels=5
+						levels=3
 						region="STATE_THE_CHASM"
 				   }
 				}
@@ -1096,12 +1096,12 @@
                                         building={ 
                                                 type="building_financial_district"
                                                 country="c:DUM"
-                                                levels=2
+                                                levels=1
                                                 region="STATE_CROWNPEAK"
                                  }
                                }
 			reserves=1
-			activate_production_methods={ "pm_atmospheric_engine_pump_building_coal_mine"    "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			activate_production_methods={ "pm_atmospheric_engine_pump_building_coal_mine" "pm_coal_mines_potions_of_fortitude" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
 		}
 		create_building={
 			building="building_sulfur_mine"
@@ -1109,12 +1109,12 @@
 				building={ 
 						type="building_financial_district"
 						country="c:DUM"
-						levels=4
+						levels=2
 						region="STATE_CROWNPEAK"
 		 }
 	   }
 			reserves=1
-			activate_production_methods={ "pm_atmospheric_engine_pump_building_sulfur_mine" "pm_no_explosives"    "pm_no_steam_automation" "pm_road_carts" }
+			activate_production_methods={ "pm_atmospheric_engine_pump_building_sulfur_mine" "pm_no_explosives" "pm_sulfur_mines_potions_of_fortitude" "pm_no_steam_automation" "pm_road_carts" }
 		}
 			create_building={
 			building="building_rye_farm"
@@ -1185,7 +1185,7 @@
 						  building={ 
 							  type="building_wizard_tower"
 							  country="c:CDW"
-							  levels=5
+							  levels=8
 							  region="STATE_CRAGGEDWYN"
 						 }
 					  }
@@ -1198,12 +1198,12 @@
                     building={ 
                         type="building_financial_district"
                         country="c:CER"
-                        levels=5
+                        levels=3
                         region="STATE_THE_CHASM"
                    }
                 }
 			reserves=1
-			activate_production_methods={ "pm_saw_mills" "pm_hardwood" "pm_no_equipment" "pm_road_carts" }
+			activate_production_methods={ "pm_saw_mills" "pm_hardwood" "pm_stoneskin_potion" "pm_no_equipment" "pm_road_carts" }
 		}
 			create_building={
 			building="building_rye_farm"
@@ -1348,7 +1348,7 @@
                    }
                 }
 			reserves=1
-			activate_production_methods={ "pm_saw_mills" "pm_no_equipment" "pm_road_carts" "pm_hardwood" }
+			activate_production_methods={ "pm_saw_mills" "pm_no_equipment" "pm_stoneskin_potion" "pm_road_carts" "pm_hardwood" }
 		}
 		create_building={
 			building="building_port"
@@ -1628,7 +1628,7 @@
                     building={
                         type="building_wizard_tower"
                         country="c:CDW"
-                        levels=3
+                        levels=7
                         region="STATE_CRAGGEDWYN"
                 }
 			}
@@ -1700,19 +1700,6 @@
 			reserves=1
 			activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts"  }
 		  } 
-		  create_building={
-			building="building_textile_mills"
-			add_ownership={ 
-				building={ 
-					type="building_wizard_tower"
-					country="c:CDW"
-					levels=2
-					region="STATE_CRAGGEDWYN"
-			   }
-			}
-			reserves=1
-			activate_production_methods={ "pm_dye_workshops" "pm_traditional_looms" "pm_no_luxury_clothes" }
-		}
 		create_building={
 			building="building_dye_plantation"
 				add_ownership={ 
@@ -1736,7 +1723,7 @@
 				   }
 				}
 			reserves=1
-			activate_production_methods={ "pm_picks_and_shovels_building_lead_mine" "pm_no_explosives" "pm_mines_no_potions" "pm_no_steam_automation" "pm_road_carts" }
+			activate_production_methods={ "pm_atmospheric_engine_pump_building_lead_mine" "pm_no_explosives" "pm_lead_mines_potions_of_fortitude" "pm_no_steam_automation" "pm_rail_transport_mine" }
 		}
 		create_building={
 			building="building_livestock_ranch"
