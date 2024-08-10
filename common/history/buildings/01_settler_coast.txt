@@ -854,7 +854,7 @@
                    }
                 }
 			reserves=1
-			activate_production_methods={ "pm_leaded_glass" "pm_manual_glassblowing" "pm_ceramics" }
+			activate_production_methods={ "pm_forest_glass" "pm_manual_glassblowing" "pm_ceramics" }
                 }
 		create_building={
 			building="building_university"
@@ -1063,19 +1063,6 @@
 			reserves=1
 			activate_production_methods={ "pm_atmospheric_engine_pump_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation"    "pm_road_carts" }
 		}
-			create_building={
-			building="building_lead_mine"
-				add_ownership={
-					building={ 
-						type="building_financial_district"
-						country="c:CER"
-						levels=1
-						region="STATE_THE_CHASM"
-				   }
-				}
-			reserves=1
-			activate_production_methods={ "pm_atmospheric_engine_pump_building_lead_mine" "pm_no_explosives"    "pm_no_steam_automation" "pm_road_carts" }
-		}
 		create_building={
 			building="building_university"
 			level=1
@@ -1093,7 +1080,7 @@
                    }
                 }
 			reserves=1
-			activate_production_methods={ "pm_leaded_glass" "pm_manual_glassblowing" "pm_disabled_ceramics" }
+			activate_production_methods={ "pm_forest_glass" "pm_manual_glassblowing" "pm_disabled_ceramics" }
 		}
 			create_building={
 			building="building_coal_mine"
@@ -1424,19 +1411,6 @@
 			reserves=1
 			activate_production_methods={ "pm_soil_enriching_farming" "pm_tools" }
 		}
-			create_building={
-			building="building_livestock_ranch"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:CER"
-						levels=1
-						region="STATE_PENDYM_GWYN"
-				   }
-				}
-			reserves=1
-			activate_production_methods={ "pm_sheep_farms" "pm_open_air_stockyards" "pm_standard_fences" "pm_unrefrigerated"  }
-		}
 	}
 	region_state:GCS={
 		create_building={
@@ -1662,42 +1636,49 @@
             activate_production_methods={ "pm_early_potion_vat_production" "pm_alcohol-based_potions" "pm_base_cosmetic_potion_production" }
         }
 		create_building={
-			building="building_roads"
-			level=2
+			building="building_railway"
+			add_ownership={ 
+				building={ 
+					type="building_wizard_tower"
+					country="c:CDW"
+					levels=1
+					region="STATE_CRAGGEDWYN"
+				}
+			}
 			reserves=1
-			activate_production_methods={ "pm_base_road_quality" "pm_covered_road_wagons" "pm_no_security" }
+			activate_production_methods = { "pm_wooden_passenger_carriages" }
 		}
 			create_building={
 			building="building_wheat_farm"
 				add_ownership={ 
 					building={ 
-						type="building_manor_house"
+						type="building_wizard_tower"
 						country="c:CDW"
 						levels=1
 						region="STATE_CRAGGEDWYN"
 				   }
 				}
 			reserves=1
-			activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled"  }
+			activate_production_methods={ "pm_soil_enriching_farming" "pm_no_secondary" "pm_tools_disabled"  }
 		}
             create_building={
 			building="building_logging_camp"
                 add_ownership={ 
                     building={ 
-                        type="building_financial_district"
+                        type="building_wizard_tower"
                         country="c:CDW"
                         levels=1
                         region="STATE_CRAGGEDWYN"
                    }
                 }
 			reserves=1
-			activate_production_methods={ "pm_simple_forestry" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
+			activate_production_methods={ "pm_saw_mills" "pm_no_hardwood" "pm_no_equipment" "pm_stoneskin_potion" "pm_road_carts" }
 		}
 		create_building={
 			building="building_arms_industry"
                 add_ownership={ 
                     building={ 
-                        type="building_financial_district"
+                        type="building_wizard_tower"
                         country="c:CDW"
                         levels=1
                         region="STATE_CRAGGEDWYN"
@@ -1705,6 +1686,70 @@
                 }
 			reserves=1
 			activate_production_methods={ "pm_muskets" "pm_automation_disabled" }
+		}
+		create_building={
+			building="building_cotton_plantation"
+			  add_ownership={ 
+				building={ 
+				  type="building_wizard_tower"
+				  country="c:CDW"
+				  levels=5
+				  region="STATE_CRAGGEDWYN"
+				 }
+			  }
+			reserves=1
+			activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts"  }
+		  } 
+		  create_building={
+			building="building_textile_mills"
+			add_ownership={ 
+				building={ 
+					type="building_wizard_tower"
+					country="c:CDW"
+					levels=2
+					region="STATE_CRAGGEDWYN"
+			   }
+			}
+			reserves=1
+			activate_production_methods={ "pm_dye_workshops" "pm_traditional_looms" "pm_no_luxury_clothes" }
+		}
+		create_building={
+			building="building_dye_plantation"
+				add_ownership={ 
+					building={ 
+						type="building_wizard_tower"
+						country="c:CDW"
+						levels=1
+						region="STATE_CRAGGEDWYN"
+				   }
+				}
+			reserves=1
+		}
+		create_building={
+			building="building_lead_mine"
+				add_ownership={
+					building={ 
+						type="building_wizard_tower"
+						country="c:CDW"
+						levels=1
+						region="STATE_CRAGGEDWYN"
+				   }
+				}
+			reserves=1
+			activate_production_methods={ "pm_picks_and_shovels_building_lead_mine" "pm_no_explosives" "pm_mines_no_potions" "pm_no_steam_automation" "pm_road_carts" }
+		}
+		create_building={
+			building="building_livestock_ranch"
+				add_ownership={ 
+					building={ 
+						type="building_wizard_tower"
+						country="c:CDW"
+						levels=1
+						region="STATE_CRAGGEDWYN"
+				   }
+				}
+			reserves=1
+			activate_production_methods={ "pm_sheep_farms" "pm_butchering_tools" "pm_standard_fences" "pm_unrefrigerated"  }
 		}
 	}
   }
@@ -6857,7 +6902,7 @@
                    }
                 }
 			reserves=1
-			activate_production_methods={ "pm_leaded_glass" "pm_manual_glassblowing" "pm_disabled_ceramics" }
+			activate_production_methods={ "pm_forest_glass" "pm_manual_glassblowing" "pm_disabled_ceramics" }
 		}
             create_building={
 			building="building_paper_mills"
