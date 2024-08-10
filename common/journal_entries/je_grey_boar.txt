@@ -1,0 +1,42 @@
+﻿je_grey_boar = {
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	group = je_group_historical_content
+
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = je_grey_boar_status
+			}
+		}
+	}
+	modifiers_while_active = {
+	margraves_fist
+	}
+	modifier = {
+		interest_group_ig_armed_forces_pop_attraction_mult = 0.1
+		interest_group_ig_armed_forces_pol_str_mult = 0.3
+		country_officers_pol_str_mult = 0.5
+	}
+
+	should_be_pinned_by_default = yes
+	
+	weight = 2000
+
+	complete = {
+		custom_tooltip = {
+			text = ludric_kicked_bucket
+			ruler = {
+				NOT = {
+					has_variable = is_ludric
+				}
+			}
+		}
+	}
+
+	on_complete = {
+		end_truce = c:BDB
+		end_truce = c:RTD
+	}
+}
