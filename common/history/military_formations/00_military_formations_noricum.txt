@@ -265,17 +265,17 @@
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_CROWNPEAK
+				state_region = s:STATE_FROSTGATE
 				count = 18
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mobile_artillery
-				state_region = s:STATE_CROWNPEAK
+				state_region = s:STATE_FROSTGATE
 				count = 9
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_lancers
-				state_region = s:STATE_CROWNPEAK
+				state_region = s:STATE_FROSTGATE
 				count = 3
 			}
 			save_scope_as = dumarmy1
@@ -289,8 +289,9 @@
 		scope:dumgen1 = {
 			transfer_to_formation = scope:dumarmy1
 		}
-
-		create_military_formation = {
+	}
+		c:DUM ={
+			create_military_formation = {
 			type = army
 			hq_region = sr:region_dumonian_heartlands
 			name = "Dumonian Heartland Levies"
@@ -571,6 +572,8 @@
 					transfer_to_formation = scope:dumnavy2
 				}
 	}
+		}
+		
 	c:ROF ?= {
 		create_military_formation = {
 			type = army
