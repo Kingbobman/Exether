@@ -2164,19 +2164,6 @@ BUILDINGS = {
 				reserves=1
 				activate_production_methods={ "pm_simple_forestry" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
 			}
-            create_building={
-				building="building_fishing_wharf"
-                add_ownership={ 
-                    building={ 
-                        type="building_adventuring_guild"
-                        country="c:STR"
-                        levels=1
-                        region="STATE_EIREKS_WASH"
-                   }
-                }
-				reserves=1
-				activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
-			}
 			create_building={
 				building="building_barracks"
 				level=4
@@ -2200,19 +2187,6 @@ BUILDINGS = {
                 }
 				reserves=1
 				activate_production_methods={ "pm_basic_shipbuilding" }
-			}
-			create_building={
-				building="building_fishing_wharf"
-                add_ownership={ 
-                    building={ 
-                        type="building_financial_district"
-                        country="c:PND"
-                        levels=1
-                        region="STATE_CANDLEMIRE"
-                   }
-                }
-				reserves=1
-				activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
 			}
 			create_building={
 				building="building_cotton_plantation"
@@ -2286,7 +2260,7 @@ BUILDINGS = {
 				activate_production_methods={ "pm_wooden_buildings" }
 			}
 			create_building={
-				building="building_rice_farm"
+				building="building_rice_farm_leechgardens"
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
@@ -2296,7 +2270,7 @@ BUILDINGS = {
 				   }
 				}
 				reserves=1
-				activate_production_methods={ "pm_simple_farming_building_rice_farm" "pm_fig_orchards_building_rice_farm" "pm_tools_disabled"  }
+				activate_production_methods={ "pm_simple_farming_building_rice_farm" "pm_tools_building_rice_farm" "pm_tools_disabled"  }
 			}
 			create_building={
 				building="building_barracks"
@@ -2321,19 +2295,6 @@ BUILDINGS = {
                 }
 				reserves=1
 				activate_production_methods={ "pm_simple_forestry" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
-			}
-			create_building={
-				building="building_fishing_wharf"
-                add_ownership={ 
-                    building={ 
-                        type="building_financial_district"
-                        country="c:PND"
-                        levels=1
-                        region="STATE_GLADEMIRE"
-                   }
-                }
-				reserves=1
-				activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
 			}
 			create_building={
 				building="building_barracks"
@@ -2372,19 +2333,6 @@ BUILDINGS = {
 				activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts"  }
 			}
 			create_building={
-				building="building_fishing_wharf"
-                add_ownership={ 
-                    building={ 
-                        type="building_financial_district"
-                        country="c:PND"
-                        levels=1
-                        region="STATE_THE_CRIMSON_MORASS"
-                   }
-                }
-				reserves=1
-				activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
-			}
-			create_building={
 				building="building_barracks"
 				level=4
 				reserves=1
@@ -2395,19 +2343,6 @@ BUILDINGS = {
 		
 	s:STATE_SOUTHERN_DRAIN={
 		region_state:PND={
-			create_building={
-				building="building_fishing_wharf"
-                add_ownership={ 
-                    building={ 
-                        type="building_financial_district"
-                        country="c:PND"
-                        levels=1
-                        region="STATE_SOUTHERN_DRAIN"
-                   }
-                }
-				reserves=1
-				activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
-			}
 		}
 	}
 		
@@ -7348,19 +7283,6 @@ BUILDINGS = {
                 }
 				reserves=1
 				activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
-			}
-			create_building={
-				building="building_wishstone_mine"
-	                add_ownership={ 
-                    building={ 
-                        type="building_financial_district"
-                        country="c:ZUB"
-                        levels=1
-                        region="STATE_ALMAKSURO"
-                   }
-                }
-				reserves=1
-				activate_production_methods={ "pm_picks_and_shovels_building_wishstone_mine" }
 			}
 		}
 	}

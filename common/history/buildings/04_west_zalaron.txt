@@ -525,7 +525,7 @@
   s:STATE_FIERANA = {
 		region_state:ZIX={
 			create_building={
-				building="building_wheat_farm"
+				building="building_millet_farm"
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
@@ -697,19 +697,6 @@
 				}
 				reserves=1
 				activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled"  }
-			}
-            create_building={
-				building="building_fishing_wharf"
-                add_ownership={ 
-                    building={ 
-                        type="building_adventuring_guild"
-                        country="c:LGZ"
-                        levels=1
-                        region="STATE_VOSKOPOJANA"
-                   }
-                }
-				reserves=1
-				activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
 			}
 			create_building={
 				building="building_barracks"
@@ -1399,19 +1386,6 @@
   }
   s:STATE_KORCOVA = {
 	region_state:ZIN = {
-            create_building={
-        building="building_fishing_wharf"
-                add_ownership={ 
-                    building={ 
-                        type="building_adventuring_guild"
-                        country="c:MGR"
-                        levels=1
-                        region="STATE_TROPOJA"
-                   }
-                }
-        reserves=1
-        activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
-      }
     }
   }
   s:STATE_VITHKUQJA = {
@@ -5300,19 +5274,6 @@
                 }
 			reserves=1
 			activate_production_methods={ "pm_fishing_trawlers" "pm_unrefrigerated" }
-		}
-            create_building={
-			building="building_whaling_station"
-                add_ownership={ 
-                    building={ 
-                        type="building_adventuring_guild"
-                        country="c:RAV"
-                        levels=1
-                        region="STATE_KRULHOVEN"
-                   }
-                }
-			reserves=1
-			activate_production_methods={ "pm_wooden_whaling_ships" "pm_unrefrigerated" }
 		}
 			create_building={
 			building="building_wheat_farm"
