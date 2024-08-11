@@ -30,7 +30,9 @@ on_monthly_pulse = {
 	}
 }
 
-on_yearly_pulse = { }
+on_yearly_pulse = { 
+
+}
 
 # Root = Country
 on_monthly_pulse_country = {
@@ -178,7 +180,6 @@ on_yearly_pulse_country = {
 			}
 			1 = { }
 		}
-
 		if = {
 			limit = {
 				NOR = {
@@ -235,6 +236,7 @@ on_yearly_pulse_country = {
 		#delay = { days = 21 }
 		lobby_yearly_events
 		#delay = { days = 34 }
+		rvc_blood_tithes
 	}
 }
 on_half_yearly_pulse_country = {
@@ -2318,5 +2320,57 @@ on_military_formation_created = {
 				remove_variable = formation_tutorial_ongoing
 			}
 		}
+	}
+}
+rvc_blood_tithes = {
+	effect = {
+		if = {
+			limit = {
+				this ?= c:RVC
+				has_variable = established_blood_tribunals
+				}
+				random_scope_state = {
+					save_scope_as = pop_target
+				}
+				
+				every_subject_or_below = {
+					ordered_scope_state = {
+						order_by = state_population
+						every_scope_pop = {
+							random_list = { 
+								94 = {}
+								6 = {
+									change_poptype = pop_type:peasants
+									move_pop = scope:pop_target
+								}
+							}        
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					this ?= c:RVC
+					}
+					random_scope_state = {
+						save_scope_as = pop_target
+					}
+					
+					every_subject_or_below = {
+						ordered_scope_state = {
+							order_by = state_population
+							every_scope_pop = {
+								random_list = { 
+									96 = {}
+									4 = {
+										change_poptype = pop_type:peasants
+										move_pop = scope:pop_target
+									}
+								}        
+							}
+						}
+					}
+				}
+				
 	}
 }

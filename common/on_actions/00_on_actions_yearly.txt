@@ -341,3 +341,42 @@ lobby_yearly_events = {
 		5 = lobby_events.60 
 	}
 }
+
+rvc_blood_tithes = {
+	effect = {
+		if = {
+			limit = {
+				this ?= c:RVC
+				has_variable = established_blood_tribunals
+				}
+				random_list = {
+					50 = { trigger_event = {
+						id = blood_tribunal.5 #to capital
+					}  
+				}
+				50 = { 
+					trigger_event = {
+						id = blood_tribunal.6 #to a random state
+					}
+				}
+				}
+			}
+			else_if = {
+				limit = {
+					this ?= c:RVC
+					}
+					random_list = {
+						50 = { trigger_event = {
+							id = blood_tribunal.4
+						}  
+					}
+					50 = { 
+						trigger_event = {
+							id = blood_tribunal.7 #change this to a randomly scoped state
+						}
+					}	
+				}
+				
+		}
+	}	
+}

@@ -821,38 +821,13 @@ pm_automagical_harvesting = {
 		level_scaled = {
 			# employment
 			building_employment_laborers_add = -2000
-			building_employment_wizards_add = 500
+			building_employment_artificers_add = 500
 		}
 		unscaled = {
 			# mortality
 			building_laborers_mortality_mult = -0.15
 			building_adventurers_mortality_mult = -0.05
 		}
-	}
-}
-
-pm_leviathan_airplanes = {
-	#texture =
-}
-
-pm_leviathan_airplanes = {
-
-	unlocking_technologies = {
-		military_aviation
-	}
-
-	building_modifiers = {
-
-
-	workforce_scaled = {
-		# input
-		goods_input_aeroplanes_add = 10
-		goods_input_steel_add = 5
-		goods_input_explosives_add = 5
-		goods_output_meat_add = -8
-		goods_output_blubber_add = 25
-		goods_output_monster_essence_add = 15
-	}
 	}
 }
 
@@ -869,9 +844,9 @@ pm_picks_and_shovels_building_wishstone_mine = {
 		}
 
 		level_scaled = {
-			building_employment_laborers_add = 3250
-			building_employment_wizards_add = 250
-			building_employment_starbrands_add = 1000
+			building_employment_laborers_add = 3000
+			building_employment_wizards_add = 500
+			building_employment_artificers_add = 1000
 			building_employment_shopkeepers_add = 500
 		}
 	}
@@ -900,11 +875,11 @@ pm_atmospheric_engine_pump_building_wishstone_mine = {
 		}
 
 		level_scaled = {
-			building_employment_laborers_add = 2000
+			building_employment_laborers_add = 2500
 			building_employment_engineers = 250
 			building_employment_wizards_add = 500
-			building_employment_starbrands_add = 1500
-			building_employment_shopkeepers_add = 750
+			building_employment_artificers_add = 1250
+			building_employment_shopkeepers_add = 500
 		}
 	}
 }
@@ -932,11 +907,11 @@ pm_condensing_engine_pump_building_wishstone_mine = {
 		}
 
 		level_scaled = {
-			building_employment_laborers_add = 1000
+			building_employment_laborers_add = 2300
 			building_employment_engineers = 500
-			building_employment_wizards_add = 750
-			building_employment_starbrands_add = 2500
-			building_employment_shopkeepers_add = 750
+			building_employment_wizards_add = 600
+			building_employment_artificers_add = 1100
+			building_employment_shopkeepers_add = 500
 		}
 	}
 }
@@ -965,11 +940,11 @@ pm_godsblood_pump_building_wishstone_mine = {
 		}
 
 		level_scaled = {
-			building_employment_machinists_add = 1000
-			building_employment_engineers = 500
+			building_employment_laborers_add = 2200
+			building_employment_engineers = 750
 			building_employment_wizards_add = 750
-			building_employment_starbrands_add = 2500
-			building_employment_shopkeepers_add = 750
+			building_employment_artificers_add = 800
+			building_employment_shopkeepers_add = 500
 		}
 		
 		unscaled = {
@@ -1005,11 +980,11 @@ pm_diesel_pump_building_wishstone_mine = {
 		}
 
 		level_scaled = {
-			building_employment_machinists_add = 750
+			building_employment_laborers_add = 2200
 			building_employment_engineers = 750
-			building_employment_wizards_add = 1000
-			building_employment_starbrands_add = 1750
-			building_employment_shopkeepers_add = 750
+			building_employment_wizards_add = 750
+			building_employment_artificers_add = 800
+			building_employment_shopkeepers_add = 500
 		}
 	}
 }
@@ -1772,7 +1747,6 @@ pm_spidey_silk = {
 	texture = "gfx/interface/icons/production_method_icons/sheep_farms.dds"
 	
 	unlocking_technologies = {
-		intensive_agriculture
 	}	
 	
 	building_modifiers = {
@@ -1787,7 +1761,7 @@ pm_spiderman = {
 	texture = "gfx/interface/icons/production_method_icons/large_sheep_ranch.dds"
 
 	unlocking_technologies = {
-		mechanized_farming
+		intensive_agriculture
 	}
 	
 	building_modifiers = {
@@ -1900,8 +1874,6 @@ pm_basic_magic_enclosure = {
 			building_employment_laborers_add = -600
 		}
 	}
-
-	required_input_goods = potions
 }
 
 pm_gizmo_enclosures = {
@@ -1918,8 +1890,6 @@ pm_gizmo_enclosures = {
 			building_employment_laborers_add = -900
 		}
 	}
-
-	required_input_goods = gizmos
 }
 
 pm_no_warding = {
@@ -1942,8 +1912,6 @@ pm_basic_warding = {
 			building_employment_laborers_add = -300
 		}
 	}
-
-	required_input_goods = wishstone
 }
 
 pm_advanced_warding = {
@@ -1962,8 +1930,6 @@ pm_advanced_warding = {
 			building_employment_laborers_add = -600
 		}
 	}
-
-	required_input_goods = gizmos
 }
 
 pm_simple_mushrooms = {
