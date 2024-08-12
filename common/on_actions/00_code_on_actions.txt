@@ -1953,20 +1953,17 @@ on_political_movement_disbanded = {
 # Root = Colony state
 on_colony_created = {
 	effect = {
-		owner = {
-			if = {
-				limit = {
-					has_journal_entry = je_tutorial_colonize_state
-				}
-				root = {
-					set_variable = {
-						name = tut_colony_target
-					}
-				}
+		if = {
+			limit = {
+				exe_is_coastal = yes
+			}
+			set_variable = {
+				name = exe_is_coastal
 			}
 		}
 	}
 }
+
 
 # Root = Strategic Region
 # scope:actor = Aggressor country
