@@ -36,9 +36,10 @@
 				state_region = s:STATE_WÉSSWÚL
 				count = 5
 			}
+		save_scope_as = opaarmy1
 		}
 
-		save_scope_as = opaarmy1
+		
 
 	create_character = {
 		is_general = yes
@@ -315,62 +316,43 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_VENTAFALCO
-				count = 17
+				count = 10
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_SONGBIENO
-				count = 13
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_PLUVPINTO
-				count = 9
+				count = 15
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_VERDFALDO
-				count = 6
+				count = 10
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_lancers
+				state_region = s:STATE_VERDFALDO
+				count = 5
 			}
 			combat_unit = {
-				type = unit_type:combat_unit_type_hussars
+				type = unit_type:combat_unit_type_mobile_artillery
 				state_region = s:STATE_VENTAFALCO
-				count = 1
+				count = 3
 			}
 			combat_unit = {
-				type = unit_type:combat_unit_type_hussars
+				type = unit_type:combat_unit_type_mobile_artillery
 				state_region = s:STATE_SONGBIENO
-				count = 1
+				count = 3
 			}
 			combat_unit = {
-				type = unit_type:combat_unit_type_hussars
+				type = unit_type:combat_unit_type_mobile_artillery
 				state_region = s:STATE_PLUVPINTO
-				count = 1
+				count = 3
 			}
 			combat_unit = {
-				type = unit_type:combat_unit_type_hussars
+				type = unit_type:combat_unit_type_mobile_artillery
 				state_region = s:STATE_VERDFALDO
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_cannon_artillery
-				state_region = s:STATE_VENTAFALCO
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_cannon_artillery
-				state_region = s:STATE_SONGBIENO
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_cannon_artillery
-				state_region = s:STATE_PLUVPINTO
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_cannon_artillery
-				state_region = s:STATE_VERDFALDO
-				count = 2
+				count = 3
 			}
 
 			save_scope_as = vai_army_1
@@ -394,17 +376,12 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_FELICGRUNDO
-				count = 12
+				count = 15
 			}
 			combat_unit = {
-				type = unit_type:combat_unit_type_hussars
+				type = unit_type:combat_unit_type_mobile_artillery
 				state_region = s:STATE_FELICGRUNDO
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_cannon_artillery
-				state_region = s:STATE_FELICGRUNDO
-				count = 1
+				count = 5
 			}
 
 			save_scope_as = vai_army_2
@@ -432,13 +409,20 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_VESPERVIDO
-				count = 15
+				count = 10
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_VESPERVIDO
+				count = 5
 			}
 
 			save_scope_as = vai_army_4
 		}
 		create_character = {
 			is_general = yes
+			set_commander_rank = 1
 			hq = region_vairia
 			save_scope_as = vai_general_4
 		}
@@ -500,11 +484,11 @@
 		}
 		create_character = {
 			is_admiral = yes
+			commander_rank = commander_rank_2
 			hq = region_vairia
 			save_scope_as = vai_admiral_1
 		}
 		scope:vai_admiral_1 = {
-			commander_rank = commander_rank_2
 			transfer_to_formation = scope:vai_fleet_1
 		}
 		
@@ -538,11 +522,11 @@
 		}
 		create_character = {
 			is_admiral = yes
+			commander_rank = commander_rank_2
 			hq = region_vairia
 			save_scope_as = vai_admiral_2
 		}
 		scope:vai_admiral_2 = {
-			commander_rank = commander_rank_2
 			transfer_to_formation = scope:vai_fleet_2
 		}
 	}
@@ -620,35 +604,54 @@
 			type = army
 			hq_region = sr:region_vairia
 
+			name = "Sirlian National Army"
+
 			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
+				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_KASKADVIVO
-				count = 6
+				count = 5
 			}
 			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_KASKADVIVO
+				service_type = conscript
+				count = 15
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_RUGAKAMPO
-				count = 3
+				count = 5
 			}
 			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
+				type = unit_type:combat_unit_type_lancers
 				state_region = s:STATE_SENCERBO
-				count = 2
+				count = 5
 			}
 			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_INSULBELA
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_MONTROSO
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_MONTARBORA
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_LAGOEKRANO
 				count = 5
 			}
 			combat_unit = {
-				type = unit_type:combat_unit_type_hussars
-				state_region = s:STATE_KASKADVIVO
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_cannon_artillery
-				state_region = s:STATE_KASKADVIVO
-				count = 2
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_LAGOEKRANO
+				service_type = conscript
+				count = 15
 			}
 
 			save_scope_as = xxp_army
@@ -656,6 +659,7 @@
 
 		create_character = {
 			is_general = yes
+			commander_rank = commander_rank_2
 			hq = region_vairia
 			save_scope_as = xxp_general
 		}
@@ -668,10 +672,12 @@
 			type = fleet
 			hq_region = sr:region_vairia
 
+			name = "Coast Patrol Fleet"
+
 			combat_unit = {
 				type = unit_type:combat_unit_type_frigate
 				state_region = s:STATE_KASKADVIVO
-				count = 10
+				count = 15
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_man_o_war
@@ -682,6 +688,7 @@
 		}
 		create_character = {
 			is_admiral = yes
+			commander_rank = commander_rank_2
 			hq = region_vairia
 			save_scope_as = xxp_admiral
 		}

@@ -1,0 +1,81 @@
+﻿je_blood_tribunal = {
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	
+	group = je_group_historical_content
+
+
+
+	possible = {
+		c:RVC = ROOT
+	}
+
+	complete = {
+
+		custom_tooltip = {
+			text = je_blood_tribunal_complete_tt
+			any_subject_or_below = {
+				count >= 5
+			}
+		}
+
+		
+	}
+
+	on_complete = {
+		trigger_event = { id = blood_tribunal.2 popup = yes }
+		custom_tooltip = je_blood_tribunal_more_tt
+		set_variable = established_blood_tribunals
+		set_country_type = recognized
+	}
+
+	# on_monthly_pulse = {
+	# 	random_events = {
+
+	# 	}
+	# }
+
+	on_yearly_pulse = { #moves 4% of pops to a random state owned by RVC
+		effect = {
+			# random_scope_state = {
+			# 	save_scope_as = pop_target
+			# }
+			
+			# every_subject_or_below = {
+			# 	ordered_scope_state = {
+			# 		order_by = state_population
+			# 		every_scope_pop = {
+			# 			random_list = { 
+			# 				96 = {}
+			# 				4 = {
+			# 					change_poptype = pop_type:peasants
+			# 					move_pop = scope:pop_target
+			# 				}
+			# 			}        
+			# 		}
+			# 	}
+			# }
+			if = {
+				limit = {
+					NOT = {
+						has_variable = familiars_handling_tithes
+					}
+				}
+				trigger_event = { id = blood_tribunal.3 }
+			}
+
+		}
+
+		random_events = {
+			60 = 0
+			20 = blood_tribunal.8
+			20 = blood_tribunal.9
+		}
+		
+
+		
+
+	}
+
+	weight = 100
+	should_be_pinned_by_default = yes
+}

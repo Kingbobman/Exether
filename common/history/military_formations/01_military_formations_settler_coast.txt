@@ -307,9 +307,10 @@
 				state_region = s:STATE_CAVES_OF_RIMELAC
 				count = 1
 			}
+		save_scope_as = thiarmy1
 		}
 
-		save_scope_as = thiarmy1
+		
 
 		create_character = {
 			is_general = yes
@@ -397,9 +398,10 @@
 				state_region = s:STATE_CASTLECOURT
 				count = 1
 			}
+			save_scope_as = thiarmy2
 		}
 
-		save_scope_as = thiarmy2
+		
 
 		create_character = {
 			is_general = yes
@@ -439,9 +441,10 @@
 				state_region = s:STATE_HAAR_FEN
 				count = 5
 			}
+			save_scope_as = thiarmy3
 		}
 
-		save_scope_as = thiarmy3
+		
 
 		create_character = {
 			is_general = yes
@@ -551,8 +554,11 @@
 	}
     
     c:LEO ?= { 
-
-    			combat_unit = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_lake_bossard
+ 		
+			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_FAR_SHORE
 				count = 10
@@ -576,6 +582,7 @@
 				count = 3
 			}
 		}
+	}
 
 	c:CER ?= {
 		create_military_formation = {
@@ -864,8 +871,9 @@
 				state_region = s:STATE_PENDYM_GWYN
 				count = 5
 			}
+			save_scope_as = cernavy
 		}
-		    save_scope_as = cernavy
+		    
 
 		create_character = {
 			is_admiral = yes
@@ -922,7 +930,7 @@
 				state_region = s:STATE_DEPHEL_PATH
 				count = 3
 			}
-
+			save_scope_as = heroes_of_hanseath
 		}
 
 			create_military_formation = {
@@ -949,7 +957,6 @@
 				}
 			
 			}
-			save_scope_as = heroes_of_hanseath
 	
 
 		create_character = {
@@ -1427,13 +1434,13 @@
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_GCS
+				state_region = s:STATE_PEARFIELDS
 				count = 3
 			}
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_mobile_artillery
-				state_region = s:STATE_GCS
+				state_region = s:STATE_OUTER_MOORWEALD
 				count = 2
 			}
 		}
@@ -1477,4 +1484,40 @@
 			}
 		}
 	}
+
+	c:CDW ?= {
+
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_lagoon_coast
+
+			name = "Estate Garrison"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_skirmish_infantry
+				state_region = s:STATE_CRAGGEDWYN
+				count = 5
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_CRAGGEDWYN
+				count = 3
+			}
+
+
+			save_scope_as = cdwarmy
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			save_scope_as = cdwgen
+		}
+
+		scope:cdwgen = {
+			transfer_to_formation = scope:cdwarmy
+		}
+}
+
 }

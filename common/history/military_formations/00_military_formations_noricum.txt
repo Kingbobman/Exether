@@ -184,10 +184,10 @@
 		create_character = {
 			is_general = yes
 			hq = sr:region_ravencliff
+			commander_rank = commander_rank_2
 			save_scope_as = rvcgen
 		}
 		scope:rvcgen = {
-			commander_rank = commander_rank_2
 			transfer_to_formation = scope:rvcarmy
 		}
 
@@ -265,17 +265,17 @@
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_CROWNPEAK
+				state_region = s:STATE_FROSTGATE
 				count = 18
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mobile_artillery
-				state_region = s:STATE_CROWNPEAK
+				state_region = s:STATE_FROSTGATE
 				count = 9
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_lancers
-				state_region = s:STATE_CROWNPEAK
+				state_region = s:STATE_FROSTGATE
 				count = 3
 			}
 			save_scope_as = dumarmy1
@@ -283,14 +283,15 @@
 		create_character = {
 			is_general = yes
 			hq = sr:region_dumonian_heartlands
+			commander_rank = commander_rank_1
 			save_scope_as = dumgen1
 		}
 		scope:dumgen1 = {
-			commander_rank = commander_rank_1
 			transfer_to_formation = scope:dumarmy1
 		}
-
-		create_military_formation = {
+	}
+	c:DUM ?= {
+			create_military_formation = {
 			type = army
 			hq_region = sr:region_dumonian_heartlands
 			name = "Dumonian Heartland Levies"
@@ -571,6 +572,7 @@
 					transfer_to_formation = scope:dumnavy2
 				}
 	}
+		
 	c:ROF ?= {
 		create_military_formation = {
 			type = army
@@ -603,10 +605,10 @@
 		create_character = {
 			is_general = yes
 			hq = sr:region_worlds_end
+			commander_rank = commander_rank_2
 			save_scope_as = rofgen
 		}
 		scope:rofgen = {
-			commander_rank = commander_rank_2
 			transfer_to_formation = scope:rofarmy
 		}
 
@@ -659,7 +661,7 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_GLYNFFORDD
-				service_type = 10
+				service_type = conscript
 				count = 5
 			}
 			combat_unit = {
@@ -673,10 +675,10 @@
 		create_character = {
 			is_general = yes
 			hq = sr:region_ravencliff
+			commander_rank = commander_rank_2
 			save_scope_as = foxgen
 		}
 		scope:foxgen= {
-			commander_rank = commander_rank_2
 			transfer_to_formation = scope:foxarmy
 		}
 	}
