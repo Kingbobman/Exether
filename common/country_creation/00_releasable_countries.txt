@@ -74,6 +74,63 @@ DRM = {
 	ai_will_do = { always = no }
 }
 
+DRK = {
+	states = { 
+		STATE_CASTELL_DRYSGOLMARK
+	}
+	required_num_states = 1
+
+	ai_will_do = { always = no }
+}
+BCF = {
+	states = { 
+		STATE_BANCFAN
+	}
+	required_num_states = 1
+
+	ai_will_do = { c:RVC ?= this }
+}
+
+GDL = {
+	states = { 
+		STATE_INCHMARA
+		STATE_GLYNFFORDD
+	}
+	required_num_states = 1
+
+	ai_will_do = { c:RVC ?= this }
+}
+
+DOV = {
+	states = { 
+		STATE_ROSKIRK
+		STATE_THORNWALL
+		STATE_BALLYNE
+	}
+	required_num_states = 2
+
+	ai_will_do = { c:RVC ?= this }
+}
+
+FOX = {
+	states = { 
+		STATE_HARTHALGH
+		STATE_GWYNWEN
+		STATE_INCHMARA
+	}
+	required_num_states = 2
+
+	ai_will_do = { c:RVC ?= this }
+}
+HET = {
+	states = { 
+		STATE_GLASINBLAIR
+	}
+	required_num_states = 1
+
+	ai_will_do = { c:RVC ?= this }
+}
+
 GDS = {
 	states = { 
 		STATE_ORCBANE_PASS

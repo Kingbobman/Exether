@@ -17,30 +17,78 @@
 
   POP_BUREAUCRATS_MAGES: "Owner has [GetLawType('law_court_mages').GetName]"
 
-  goods_input_trinkets_add: "@trinkets! Trinkets input"
-  goods_input_trinkets_add_desc: "The amount of @trinkets! Trinkets consumed by buildings"
-  goods_input_cloudsilver_add: "@cloudsilver! Cloudsilver input"
-  goods_input_cloudsilver_add_desc: "The amount of @cloudsilver! Cloudsilver consumed by buildings"
-  goods_input_wishstone_add: "@wishstone! Wishstone input"
-  goods_input_wishstone_add_desc: "The amount of @wishstone! Wishstone consumed by buildings"
+#Building Goods Modifiers
+
+#Hi, Grappes here! If there's some modifiers that you believe are out of place here, I just threw the missing goods mults here while I was here. After all, they're next to the input/output block I reorganized for legibility. Feel free to relocate them!
+
+  building_goods_output_mult: "Building Goods Output"
+  building_goods_output_mult_desc: "A flat multiplier to the amount of goods produced by a building. Seperate from [concept_throughput] by adding a flat bonus or penalty to the amount of goods produced while retaining the same amount of input goods. Applies to all output goods and does not scale."
+
+  goods_output_grain_mult: "Building @grain! Grain output"
+  goods_output_grain_mult_desc: "A bonus or penalty to the amount of @grain! Grain produced by buildings"
+
+
+  goods_input_fertilizer_mult: "Building @fertilizer! Fertilizer input"
+  goods_input_fertilizer_mult_desc: "A bonus or penalty to the amount of @fertilizer! Fertilizer consumed by buildings"
+  goods_output_fertilizer_mult: "Building @fertilizer! Fertilizer output"
+  goods_output_fertilizer_mult_desc: "A bonus or penalty to the amount of @fertilizer! Fertilizer consumed by buildings"
+
+  goods_output_meat_mult: "Building @meat! Meat output"
+  goods_output_meat_mult_desc: "A bonus of penalty to the amount of @meat! Meat produced by buildings"
+
+  
+
+
+  goods_input_gizmos_add: "@gizmos! Wishstone input"
+  goods_input_gizmos_add_desc: "The amount of @gizmos! Gizmos consumed by buildings"
+  goods_output_gizmos_add: "@gizmos! Gizmo output"
+  goods_output_gizmos_add_desc: "The amount of @gizmos! Gizmos produced by buildings"
+
+  goods_input_blubber_add: "@blubber! Blubber input"
+  goods_input_blubber_add_desc: "The amount of @blubber! Blubber consumed by buildings"
+  goods_output_blubber_add: "@blubber! Blubber output"
+  goods_output_blubber_add_desc: "The amount of @blubber! Blubber produced by buildings"
+
   goods_input_entertainment_add: "@entertainment! Entertainment input"
   goods_input_entertainment_add_desc: "The amount of @entertainment! Entertainment consumed by buildings"
+
   goods_input_thaumacores_add: "@thaumacores! Thaumacores input"
   goods_input_thaumacores_add_desc: "The amount of @thaumacores! Thaumacores consumed by buildings"
+  goods_output_thaumacores_add: "@thaumacores! Thaumacores output"
+  goods_output_thaumacores_add_desc: "The amount of @thaumacores! Thaumacores produced by buildings"
+
   goods_input_monster_essence_add: "@monster_essence! Monster Essence input"
   goods_input_monster_essence_add_desc: "The amount of @monster_essence! Monster Essence consumed by buildings"  
+  goods_output_monster_essence_add: "@monster_essence! Monster Essence output"
+  goods_output_monster_essence_add_desc: "The amount of @monster_essence! Monster Essence produced by buildings" 
+
+  goods_input_trinkets_add: "@trinkets! Trinkets input"
+  goods_input_trinkets_add_desc: "The amount of @trinkets! Trinkets consumed by buildings"
   goods_output_trinkets_add: "@trinkets! Trinkets output"
   goods_output_trinkets_add_desc: "The amount of @trinkets! Trinkets produced by buildings"
+
+
+  goods_input_cloudsilver_add: "@cloudsilver! Cloudsilver input"
+  goods_input_cloudsilver_add_desc: "The amount of @cloudsilver! Cloudsilver consumed by buildings"
   goods_output_cloudsilver_add: "@cloudsilver! Cloudsilver output"
   goods_output_cloudsilver_add_desc: "The amount of @cloudsilver! Cloudsilver produced by buildings"
+
+  goods_input_wishstone_add: "@wishstone! Wishstone input"
+  goods_input_wishstone_add_desc: "The amount of @wishstone! Wishstone consumed by buildings"
   goods_output_wishstone_add: "@wishstone! Wishstone output"
   goods_output_wishstone_add_desc: "The amount of @wishstone! Wishstone produced by buildings"
+
   goods_output_entertainment_add: "@entertainment! Entertainment output"
   goods_output_entertainment_add_desc: "The amount of @entertainment! Entertainment produced by buildings"
+
   goods_output_potions_add: "@potions! Potions output"
   goods_output_potions_add_desc: "The amount of @potions! Potions produced by buildings"
+  goods_input_potions_add: "@potions! Potions input"
+  goods_input_potions_add_desc: "The amount of @potions! Potions consumed by buildings"
+
   goods_output_luxury_potions_add: "@luxury_potions! Luxury Potions output"
-  goods_output_luxury_potions_add_desc: "The amount of @luxury_potions! Luxury Potions produced by buildings"  
+  goods_output_luxury_potions_add_desc: "The amount of @luxury_potions! Luxury Potions produced by buildings"
+
   state_building_airship_dock_max_level_add: "$building_airship_dock$ Max Level"
   state_building_airship_dock_max_level_add_desc: "A bonus or penalty to the maximum level of $building_airship_dock$ buildings."
   state_adventurers_mortality_mult: "[Concept('concept_pop_growth', '$concept_pop_growth_mortality$')] of $adventurers$"
@@ -67,10 +115,10 @@
   building_employment_heroes_add_desc: "Modifies the amount of $heroes$ a building can hire per level"
   building_employment_heroes_mult: "$building_employment_heroes_add$"
   building_employment_heroes_mult_desc: "$building_employment_heroes_add_desc$"
-  building_employment_starbrands_add: "$starbrands$ Per Level"
-  building_employment_starbrands_add_desc: "Modifies the amount of $starbrands$ a building can hire per level"
-  building_employment_starbrands_mult: "building_employment_starbrands_mult"
-  building_employment_starbrands_mult_desc: "building_employment_starbrands_mult_desc"
+  building_employment_artificers_add: "$artificers$ Per Level"
+  building_employment_artificers_add_desc: "Modifies the amount of $artificers$ a building can hire per level"
+  building_employment_artificers_mult: "building_employment_artificers_mult"
+  building_employment_artificers_mult_desc: "building_employment_artificers_mult_desc"
   goods_input_opium_add:0 "@chimesilt! Chimesilt input"
   goods_input_opium_add_desc:0 "The amount of @chimesilt! Chimesilt consumed by buildings"
   state_adventurer_coverage_add: "Adventurer Coverage"
@@ -100,3 +148,11 @@
  #Static Modifiers
   thalorian_victor: "Thalorian Crusade Victor"
   thalorian_loser: "Thalorian Crusade Loser"
+  lords_of_ravencliff: "The Lords of Ravencliff"
+  recently_performed_initiations: "Recently Performed Initiations"
+  uneventful_tithe: "Uneventful Tithe"
+  unsavory_tithe: "Unsavory Tithe"
+  seditious_rumors: "Seditious Rumors"
+  crackdown_on_rumormongers: "Crackdown on Rumormongers"
+  ravencliff_high_tribunal: "High Tribunal of Ravencliff"
+  margraves_fist: "Iron Fist"

@@ -367,8 +367,9 @@ pm_ghost_hunters = {
 
 		level_scaled = {
 			# employment
-			building_employment_starbrands_add = 4000
-			building_employment_adventurers_add = 500
+			building_employment_laborers_add = 3500
+			building_employment_clergymen_add = 500
+			building_employment_adventurers_add = 1000
 		}
 		
 	}
@@ -397,9 +398,9 @@ pm_exorcists = {
 
 		level_scaled = {
 			# employment
-			building_employment_starbrands_add = 3500
-			building_employment_adventurers_add = 500
-			building_employment_wizards_add = 500
+			building_employment_laborers_add = 2500
+			building_employment_clergymen_add = 1000
+			building_employment_adventurers_add = 1500
 		}
 	}
 
@@ -428,10 +429,10 @@ pm_paranormal_containment_fields = {
 
 		level_scaled = {
 			# employment
-			building_employment_starbrands_add = 2500
-			building_employment_adventurers_add = 500
-			building_employment_wizards_add = 1000
-			building_employment_engineers_add = 500
+			building_employment_laborers_add = 2000
+			building_employment_adventurers_add = 1500
+			building_employment_clergymen_add = 1000
+			building_employment_artificers_add = 500
 		}
 	}
 
@@ -468,7 +469,8 @@ pm_revealing_field_generators = {
 
 		level_scaled = {
 			# employment
-			building_employment_starbrands_add = -1000
+			building_employment_laborers_add = -1000
+			building_employment_artificers_add = 500
 		}
 	}
 }
@@ -490,9 +492,8 @@ pm_portable_ethereal_vacuums = {
 
 		level_scaled = {
 			# employment
-			building_employment_starbrands_add = -1500
-			building_employment_wizards_add = 200
-			building_employment_engineers_add = 200
+			building_employment_laborers_add = -2000
+			building_employment_artificers_add = 500
 		}
 	}
 }
@@ -709,8 +710,6 @@ pm_heavy_weapons_hunting = {
 			state_adventurer_coverage_add = 15
 		}
 	}
-
-	required_input_goods = ammunition
 }
 
 pm_no_hunting_meat = {
@@ -911,8 +910,6 @@ pm_heavy_weapons_desert_hunting = {
 			state_adventurer_coverage_add = 15
 		}
 	}
-
-	required_input_goods = ammunition
 }
 
 pm_no_hunting_chimesilt = {
@@ -961,10 +958,10 @@ pm_simple_khus_hunting = {
 
 		level_scaled = {
 			# employment
-			building_employment_adventurers_add = 950
-			building_employment_starbrands_add = 200
-			building_employment_heroes_add = 50
-			building_employment_laborers_add = 2800
+			building_employment_adventurers_add = 1000
+			building_employment_laborers_add = 3000
+			building_employment_wizards_add = 500
+			building_employment_shopkeepers_add = 500
 		}
 
 		unscaled = {
@@ -999,12 +996,10 @@ pm_firearms_khus_hunting= {
 
 		level_scaled = {
 			# employment
-			building_employment_adventurers_add = 2000
-			building_employment_laborers_add = 1750
-			building_employment_heroes_add = 100
-			building_employment_wizards_add = 50
-			building_employment_starbrands_add = 100
-			building_employment_soldiers_add = 1000
+			building_employment_adventurers_add = 1500
+			building_employment_laborers_add = 2000
+			building_employment_wizards_add = 1000
+			building_employment_shopkeepers_add = 500
 		}
 		unscaled = {
 			# mortality
@@ -1038,12 +1033,10 @@ pm_heavy_weapons_khus_hunting = {
 
 		level_scaled = {
 			# employment
-			building_employment_adventurers_add = 2500
-			building_employment_laborers_add = 600
-			building_employment_heroes_add = 100
-			building_employment_wizards_add = 100
-			building_employment_starbrands_add = 200
-			building_employment_soldiers_add = 1500
+			building_employment_adventurers_add = 2000
+			building_employment_laborers_add = 1000
+			building_employment_shopkeepers_add = 500
+			building_employment_wizards_add = 1000
 		}
 		unscaled = {
 			# mortality
@@ -1057,8 +1050,6 @@ pm_heavy_weapons_khus_hunting = {
 			state_adventurer_coverage_add = 15
 		}
 	}
-
-	required_input_goods = ammunition
 }
 
 pm_no_hunting_khus_chimesilt = {
@@ -1118,9 +1109,9 @@ pm_astrological_charts = {
 		}
 
 		level_scaled = {
-			building_employment_clerks_add = 2250
-			building_employment_engineers_add = 250
-			building_employment_machinists_add = 500
+			building_employment_clerks_add = 1500
+			building_employment_artificers_add = 1250
+			building_employment_wizards_add = 250
 		}
 	}
 }
@@ -1142,10 +1133,9 @@ pm_enchanted_orreys = {
 		}
 
 		level_scaled = {
-			building_employment_clerks_add = 1125
-			building_employment_starbrands_add = 1125
-			building_employment_engineers_add = 250
-			building_employment_machinists_add = 500
+			building_employment_clerks_add = 1000
+			building_employment_artificers_add = 1750
+			building_employment_wizards_add = 250
 		}
 	}
 }
@@ -1164,9 +1154,10 @@ pm_astral_projection = {
 		}
 
 		level_scaled = {
-			building_employment_starbrands_add = 2250
-			building_employment_engineers_add = 250
-			building_employment_machinists_add = 500
+			building_employment_clerks_add = 1000
+			building_employment_artificers_add = 1000
+			building_employment_bureaucrats_add = 500
+			building_employment_wizards_add = 500
 		}
 	}
 }
@@ -1183,8 +1174,7 @@ pm_self_regulation = {
 	
 	building_modifiers = {
 		level_scaled = {
-			building_employment_wizards_add = 1900
-			building_employment_archmages_add = 100
+			building_employment_wizards_add = 2000
 		}
 	}			
 }
@@ -1202,9 +1192,8 @@ pm_clerical_oversight = {
 	
 	building_modifiers = {
 		level_scaled = {
-			building_employment_wizards_add = 1900
-			building_employment_archmages_add = 60
-			building_employment_clergymen_add = 40
+			building_employment_wizards_add = 1000
+			building_employment_clergymen_add = 1000
 		}
 	}			
 }
@@ -1222,9 +1211,8 @@ pm_government_oversight = {
 	
 	building_modifiers = {
 		level_scaled = {
-			building_employment_wizards_add = 1900
-			building_employment_archmages_add = 60
-			building_employment_bureaucrats_add = 40
+			building_employment_wizards_add = 1000
+			building_employment_bureaucrats_add = 1000
 		}
 	}			
 }

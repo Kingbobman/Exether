@@ -4,9 +4,11 @@
 }
 
 get_net_income_sq = {
-	value = net_income
+	value = get_net_income
+	divide = 1000
+	save_temporary_value_as = small_net_income
 	min = 0
-	multiply = net_income
+	multiply = scope:small_net_income
 }
 
 get_investment_income = {
@@ -14,12 +16,56 @@ get_investment_income = {
 }
 
 get_investment_income_sq = {
-	value = investment_pool_income
+	value = get_investment_income
+	divide = 1000
+	save_temporary_value_as = small_investmnet_income
 	min = 0
-	multiply = investment_pool_income
+	multiply = scope:small_investmnet_income
 }
 
+get_wanted_construction = {
+	value = 10
 
+		add = {
+			value = get_net_income
+			divide = 500		
+		}
+		
+		add = {
+			value = get_investment_income
+			divide = 1000
+		}
+
+		add = {
+			value = get_net_income_sq
+			divide = 50
+		}
+
+		add = {
+			value = get_investment_income_sq
+			divide = 100
+		}
+
+		if = {
+			limit = { country_rank >= rank_value:great_power }
+			multiply = 1.2
+		}		
+		else_if = {
+			limit = { 
+				OR = {
+					country_rank >= rank_value:major_power
+					country_rank >= rank_value:unrecognized_major_power
+				}
+			}
+			multiply = 1.1
+
+		min = {
+			value = income
+			divide = 2000
+		}
+		max = 5000
+}
+}
 
 base_impose_law_weight= {
 	value = 0.01
