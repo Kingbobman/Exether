@@ -57,7 +57,7 @@
 			reserves=1
 			activate_production_methods={ "pm_simple_organization" "pm_professional_bureaucrats" "pm_religious_bureaucrats" }
 		}
-            create_building={
+        create_building={
 			building="building_food_industry"
                 add_ownership={ 
                     building={ 
@@ -356,7 +356,7 @@
 			reserves=1
 			activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled"  }
 		}
-            create_building={
+        create_building={
 			building="building_fishing_wharf"
                 add_ownership={ 
                     building={ 
@@ -1377,7 +1377,7 @@
 						country="c:LGZ"
 						levels=1
 						region="STATE_KURBULL"
-				   }
+                    }
 				}
 			reserves=1
 			activate_production_methods={  "pm_simple_farming" "pm_citrus_orchards" "pm_tools_disabled" }
@@ -1476,9 +1476,9 @@
                 add_ownership={ 
                     building={ 
                         type="building_financial_district"
-                        country="c:KGM"
+                        country="c:SNB"
                         levels=1
-                        region="STATE_SHKODERIA"
+                        region="STATE_KILIMAMAI"
                    }
                 }
 				reserves=1
@@ -1489,9 +1489,9 @@
                 add_ownership={ 
                     building={ 
                         type="building_financial_district"
-                        country="c:KGM"
+                        country="c:SNB"
                         levels=2
-                        region="STATE_SHKODERIA"
+                        region="STATE_KILIMAMAI"
                    }
                 }
 				reserves=1
@@ -1502,9 +1502,9 @@
                 add_ownership={ 
                     building={ 
                         type="building_adventuring_guild"
-                        country="c:VLT"
+                        country="c:SNB"
                         levels=2
-                        region="STATE_VITHKUQJA"
+                        region="STATE_KILIMAMAI"
                    }
                 }
 				reserves=1
@@ -1515,9 +1515,9 @@
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:EKA"
+						country="c:SNB"
 						levels=2
-						region="STATE_STRUGOVA"
+						region="STATE_KILIMAMAI"
 				   }
 				}
 				reserves=1
@@ -1528,9 +1528,9 @@
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:ZIX"
+						country="c:SNB"
 						levels=2
-						region="STATE_DURRESIA"
+						region="STATE_KILIMAMAI"
 				   }
 				}
 				reserves=1
@@ -1541,10 +1541,16 @@
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:KGM"
-						levels=6
-						region="STATE_SHKODERIA"
+						country="c:SNB"
+						levels=3
+						region="STATE_KILIMAMAI"
 				   }
+				   building={
+                        type="building_manor_house"
+                        country="c:SNB"
+                        levels=3
+                        region="STATE_MAJIWAZIRI"
+                   }
 				}
 				reserves=1
 				activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled"  }
@@ -1554,9 +1560,9 @@
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:EKA"
+						country="c:SNB"
 						levels=3
-						region="STATE_STRUGOVA"
+						region="STATE_KILIMAMAI"
 				   }
 				}
 				reserves=1
@@ -1568,7 +1574,6 @@
 				reserves=1
 				activate_production_methods={ "pm_basic_port" }
 			}
-
 		}
   }
   s:STATE_JUACHAI = {
@@ -1576,12 +1581,18 @@
             create_building={
 				building="building_logging_camp"
                 add_ownership={ 
-                    building={ 
+                    building={
                         type="building_financial_district"
                         country="c:ZIN"
                         levels=1
-                        region="STATE_MILOTI"
-                   }
+                        region="STATE_JUACHAI"
+                    }
+                    building={
+                        type="building_financial_district"
+                        country="c:ZIN"
+                        levels=1
+                        region="STATE_KILIMAMAI"
+                    }
                 }
 				reserves=1
 				activate_production_methods={ "pm_saw_mills" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
@@ -1599,7 +1610,26 @@
 				reserves=1
 				activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled"  }
 			}	
-		}
+            create_building={
+                building="building_fishing_wharf"
+                add_ownership={
+                    building={
+                        type="building_adventuring_guild"
+                        country="c:VLT"
+                        levels=1
+                        region="STATE_JUACHAI"
+                   }
+                   building={
+                       type="building_adventuring_guild"
+                       country="c:VLT"
+                       levels=1
+                       region="STATE_KILIMAMAI"
+                  }
+                }
+                reserves=1
+                activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
+            }
+        }
   }
   s:STATE_SAWATHONG = {
 		region_state:SNB={
@@ -1610,7 +1640,7 @@
 						type="building_manor_house"
 						country="c:ZIN"
 						levels=2
-						region="STATE_MILOTI"
+						region="STATE_SAWATHONG"
 				   }
 				}
 				reserves=1
@@ -1636,7 +1666,7 @@
 						type="building_manor_house"
 						country="c:SNB"
 						levels=1
-						region="STATE_JUACHAI"
+						region="STATE_SAWATHONG"
 				   }
 				}
 				reserves=1
@@ -1685,13 +1715,27 @@
 						type="building_manor_house"
 						country="c:SNB"
 						levels=1
-						region="STATE_JUACHAI"
+						region="STATE_MAJISAMAKI"
 				   }
 				}
 				reserves=1
 				activate_production_methods={ "default_building_sugar_plantation" "pm_road_carts"  }
 			}
+            create_building={
+                building="building_fishing_wharf"
+                add_ownership={
+                    building={
+                        type="building_adventuring_guild"
+                        country="c:VLT"
+                        levels=2
+                        region="STATE_KILIMAMAI"
+                   }
+                }
+                reserves=1
+                activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
+            }
 		}
+
   }
   s:STATE_KLONGBARIDI = {
 		region_state:SNB={
@@ -1702,7 +1746,7 @@
                         type="building_financial_district"
                         country="c:SNB"
                         levels=1
-                        region="STATE_SAWATHONG"
+                        region="STATE_KILIMAMAI"
                    }
                 }
 				reserves=1
@@ -1715,7 +1759,7 @@
 						type="building_manor_house"
 						country="c:SNB"
 						levels=1
-						region="STATE_JUACHAI"
+						region="STATE_KLONGBARIDI"
 				   }
 				}
 				reserves=1
@@ -1733,7 +1777,26 @@
 				}
 				reserves=1
 				activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled"  }
-			}	
+			}
+            create_building={
+                building="building_fishing_wharf"
+                add_ownership={
+                    building={
+                        type="building_adventuring_guild"
+                        country="c:SNB"
+                        levels=3
+                        region="STATE_KILIMAMAI"
+                   }
+                   building={
+                       type="building_adventuring_guild"
+                       country="c:SNB"
+                       levels=1
+                       region="STATE_KLONGBARIDI"
+                  }
+                }
+                reserves=1
+                activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
+            }
 		}
   }
   s:STATE_SWAHAILUK = {
@@ -1799,9 +1862,9 @@
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:MGR"
+						country="c:SNB"
 						levels=1
-						region="STATE_HUTSULANE"
+						region="STATE_BONGSAF"
 				   }
 				}
 				reserves=1
@@ -1822,9 +1885,9 @@
                 add_ownership={ 
                     building={ 
                         type="building_financial_district"
-                        country="c:LGZ"
+                        country="c:SNB"
                         levels=1
-                        region="STATE_VLORIANA"
+                        region="STATE_KISIKLONG"
                    }
                 }
 				reserves=1
@@ -1835,9 +1898,9 @@
                 add_ownership={ 
                     building={ 
                         type="building_financial_district"
-                        country="c:REM"
+                        country="c:SNB"
                         levels=1
-                        region="STATE_DIBRA"
+                        region="STATE_KISIKLONG"
                    }
                 }
 				reserves=1
@@ -1850,7 +1913,7 @@
 						type="building_manor_house"
 						country="c:SNB"
 						levels=6
-						region="STATE_MAJISAMAKI"
+						region="STATE_KISIKLONG"
 				   }
 				}
 				reserves=1
@@ -1863,7 +1926,7 @@
 						type="building_manor_house"
 						country="c:SNB"
 						levels=1
-						region="STATE_KLONGBARIDI"
+						region="STATE_KISIKLONG"
 				   }
 				}
 				reserves=1
@@ -1876,7 +1939,7 @@
 						type="building_manor_house"
 						country="c:SNB"
 						levels=6
-						region="STATE_BONGSAF"
+						region="STATE_KISIKLONG"
 				   }
 				}
 				reserves=1
@@ -1889,7 +1952,7 @@
 						type="building_manor_house"
 						country="c:SNB"
 						levels=3
-						region="STATE_BONGSAF"
+						region="STATE_KISIKLONG"
 				   }
 				}
 				reserves=1
@@ -1901,8 +1964,14 @@
                     building={ 
                         type="building_financial_district"
                         country="c:SNB"
-                        levels=4
+                        levels=2
                         region="STATE_KISIKLONG"
+                   }
+                    building={
+                        type="building_financial_district"
+                        country="c:SNB"
+                        levels=2
+                        region="STATE_KILIMAMAI"
                    }
                 }
 				reserves=1
@@ -1915,7 +1984,7 @@
                         type="building_adventuring_guild"
                         country="c:SNB"
                         levels=2
-                        region="STATE_JUACHAI"
+                        region="STATE_KILIMAMAI"
                    }
                 }
 				reserves=1
@@ -1957,7 +2026,7 @@
                         type="building_financial_district"
                         country="c:SNB"
                         levels=1
-                        region="STATE_MAJIPEMBE"
+                        region="STATE_KILIMAMAI"
                    }
                 }
 				reserves=1
@@ -1970,6 +2039,19 @@
 				activate_production_methods={ "pm_basic_port" }
 			}			
 		}
+        create_building={
+            building="building_fishing_wharf"
+            add_ownership={
+                building={
+                    type="building_adventuring_guild"
+                    country="c:SNB"
+                    levels=2
+                    region="STATE_KILIMAMAI"
+               }
+            }
+            reserves=1
+            activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
+        }
   }
   s:STATE_CHANGAVUTA = {
 		region_state:SNB={
@@ -2003,7 +2085,7 @@
 						type="building_manor_house"
 						country="c:SNB"
 						levels=5
-						region="STATE_MAJIPEMBE"
+						region="STATE_SWAHATHAI"
 				   }
 				}
 				reserves=1
@@ -2027,9 +2109,9 @@
                 add_ownership={ 
                     building={ 
                         type="building_financial_district"
-                        country="c:MGR"
+                        country="c:SNB"
                         levels=1
-                        region="STATE_BREZHKE"
+                        region="STATE_SWAHAKLONG"
                    }
                 }
 				reserves=1
@@ -2042,7 +2124,7 @@
 						type="building_manor_house"
 						country="c:SNB"
 						levels=2
-						region="STATE_KLONGBARIDI"
+						region="STATE_SWAHATHAI"
 				   }
 				}
 				reserves=1
@@ -2055,7 +2137,7 @@
                         type="building_financial_district"
                         country="c:SNB"
                         levels=1
-                        region="STATE_CHANGAVUTA"
+                        region="STATE_MAJIWAZIRI"
                    }
                 }
 				reserves=1
@@ -2068,7 +2150,7 @@
                         type="building_financial_district"
                         country="c:SNB"
                         levels=2
-                        region="STATE_JUACHAI"
+                        region="STATE_SWAHAKLONG"
                    }
                 }
 				reserves=1
@@ -2087,7 +2169,7 @@
 						type="building_manor_house"
 						country="c:SNB"
 						levels=4
-						region="STATE_MAJIPEMBE"
+						region="STATE_SWAHAKLONG"
 				   }
 				}
 				reserves=1
@@ -2103,7 +2185,7 @@
 			reserves=1
 			activate_production_methods={ "pm_simple_organization" }
 		}
-			create_building={
+		create_building={
 			building="building_rice_farm"
 				add_ownership={ 
 					building={ 
@@ -2122,7 +2204,7 @@
 			reserves=1
 			activate_production_methods={ "pm_anchorage" }
 		}
-            create_building={
+        create_building={
 			building="building_arms_industry"
                 add_ownership={ 
                     building={ 
@@ -2135,7 +2217,7 @@
 			reserves=1
 			activate_production_methods={ "pm_muskets" }
 		}
-            create_building={
+        create_building={
 			building="building_military_shipyards"
                 add_ownership={ 
                     building={ 
@@ -2152,14 +2234,20 @@
   }
   s:STATE_MAJIWAZIRI = {
 		region_state:SNB={
+            create_building={
+                building="building_government_administration"
+                level=4
+                reserves=1
+                activate_production_methods={ "pm_horizontal_drawer_cabinets"  }
+            }
 			create_building={
 				building="building_maize_farm"
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:XOC"
+						country="c:SNB"
 						levels=1
-						region="STATE_ODADRUEL"
+						region="STATE_MAJIWAZIRI"
 				   }
 				}
 				reserves=1
@@ -2170,22 +2258,35 @@
                 add_ownership={ 
                     building={ 
                         type="building_financial_district"
-                        country="c:XOC"
+                        country="c:SNB"
                         levels=1
-                        region="STATE_ODADRUEL"
+                        region="STATE_MAJIWAZIRI"
                    }
                 }
 				reserves=1
 				activate_production_methods={ "pm_saw_mills" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
 			}		
-			create_building={
-			building="building_port"
-			level=1
-			reserves=1
-			activate_production_methods={ "pm_basic_port" }
-			}	
-  		} 
-	}
+            create_building={
+                building="building_port"
+                level=2
+                reserves=1
+                activate_production_methods={ "pm_basic_port" }
+            }
+            create_building={
+                building="building_fishing_wharf"
+                add_ownership={
+                    building={
+                        type="building_adventuring_guild"
+                        country="c:SNB"
+                        levels=2
+                        region="STATE_MAJIWAZIRI"
+                   }
+                }
+                reserves=1
+                activate_production_methods={ "pm_fishing_trawlers" "pm_unrefrigerated" }
+            }
+        }
+  }
   s:STATE_JUALALA = {
 		region_state:SNB={
 			create_building={
@@ -2193,9 +2294,9 @@
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:KGM"
+						country="c:SNB"
 						levels=1
-						region="STATE_SHKODERIA"
+						region="STATE_JUALALA"
 				   }
 				}
 				reserves=1
@@ -2234,13 +2335,13 @@
                         type="building_adventuring_guild"
                         country="c:SNB"
                         levels=1
-                        region="STATE_MAJIPEMBE"
+                        region="STATE_MAJIWAZIRI"
                    }
                 }
 				reserves=1
-				activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
+				activate_production_methods={ "pm_fishing_trawlers" "pm_unrefrigerated" }
 			}
-      create_building={
+			create_building={
 				building="building_port"
 				level=1
 				reserves=1
@@ -2282,7 +2383,7 @@
                     building={ 
                         type="building_adventuring_guild"
                         country="c:SNB"
-                        levels=1
+                        levels=4
                         region="STATE_SWAHAKLONG"
                    }
                 }
@@ -2313,7 +2414,7 @@
 						type="building_manor_house"
 						country="c:SNB"
 						levels=1
-						region="STATE_MAJIPEMBE"
+						region="STATE_KILIMAKAZI"
 				   }
 				}
 				reserves=1
@@ -2332,13 +2433,26 @@
 				reserves=1
 				activate_production_methods={ "pm_simple_farming_building_rice_farm" "pm_no_secondary" "pm_tools_disabled"  }
 			}
-	create_building={
-		building="building_port"
-		level=1
-		reserves=1
-		activate_production_methods={ "pm_basic_port" }
-		}	
-	}
+            create_building={
+				building="building_fishing_wharf"
+                add_ownership={
+                    building={
+                        type="building_adventuring_guild"
+                        country="c:SNB"
+                        levels=2
+                        region="STATE_KILIMAKAZI"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
+			}
+            create_building={
+                building="building_port"
+                level=1
+                reserves=1
+                activate_production_methods={ "pm_basic_port" }
+            }
+        }
   }
   s:STATE_THASAMAKI = {
 		region_state:SNB={
@@ -2347,9 +2461,9 @@
                 add_ownership={ 
                     building={ 
                         type="building_financial_district"
-                        country="c:REM"
+                        country="c:SNB"
                         levels=1
-                        region="STATE_LEZHANIA"
+                        region="STATE_SWAHAKLONG"
                    }
                 }
 				reserves=1
@@ -2360,9 +2474,9 @@
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:EKA"
+						country="c:SNB"
 						levels=1
-						region="STATE_KLOSI"
+						region="STATE_SWAHAKLONG"
 				   }
 				}
 				reserves=1
@@ -2375,7 +2489,7 @@
 						type="building_manor_house"
 						country="c:SNB"
 						levels=1
-						region="STATE_KILIMAKAZI"
+						region="STATE_THASAMAKI"
 				   }
 				}
 				reserves=1
@@ -2530,7 +2644,7 @@
                         type="building_financial_district"
                         country="c:SNB"
                         levels=1
-                        region="STATE_MAJIPEMBE"
+                        region="STATE_MAJIWAZIRI"
                    }
                 }
 				reserves=1
@@ -2547,9 +2661,9 @@
 				add_ownership={ 
 					building={ 
 						type="building_financial_district"
-						country="c:MGR"
+						country="c:SNB"
 						levels=2
-						region="STATE_BREZHKE"
+						region="STATE_MAJIWAZIRI"
 				   }
 				}
 				reserves=1
@@ -2562,7 +2676,7 @@
                         type="building_financial_district"
                         country="c:SNB"
                         levels=4
-                        region="STATE_YAZHINAVA"
+                        region="STATE_MAJIWAZIRI"
                    }
                 }
 				reserves=1
@@ -2573,9 +2687,9 @@
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:XOC"
+						country="c:SNB"
 						levels=1
-						region="STATE_ODADRUEL"
+						region="STATE_YAZHINAVA"
 				   }
 				}
 				reserves=1
@@ -2586,9 +2700,9 @@
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:COC"
+						country="c:SNB"
 						levels=4
-						region="STATE_NOLOGO_RULL"
+						region="STATE_YAZHINAVA"
 				   }
 				}
 				reserves=1
@@ -2599,9 +2713,9 @@
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:XOC"
+						country="c:SNB"
 						levels=6
-						region="STATE_ODADRUEL"
+						region="STATE_YAZHINAVA"
 				   }
 				}
 				reserves=1
@@ -2614,7 +2728,7 @@
 						type="building_manor_house"
 						country="c:SNB"
 						levels=1
-						region="STATE_THASAMAKI"
+						region="STATE_YAZHINAVA"
 				   }
 				}
 				reserves=1
@@ -2635,9 +2749,9 @@
                 add_ownership={ 
                     building={ 
                         type="building_financial_district"
-                        country="c:COC"
+                        country="c:SNB"
                         levels=3
-                        region="STATE_NOLOGO_RULL"
+                        region="STATE_SWAHAKLONG"
                    }
                 }
 				reserves=1
@@ -2661,9 +2775,9 @@
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:COC"
+						country="c:SNB"
 						levels=1
-						region="STATE_NOLOGO_RULL"
+						region="STATE_SWAHAKLONG"
 				   }
 				}
 				reserves=1
@@ -2675,9 +2789,15 @@
 					building={ 
 						type="building_manor_house"
 						country="c:SNB"
-						levels=4
-						region="STATE_KEEDZAI"
+						levels=2
+						region="STATE_SWAHAKLONG"
 				   }
+                   building={
+                        type="building_manor_house"
+                        country="c:SNB"
+                        levels=2
+                        region="STATE_KEEDZAI"
+                   }
 				}
 				reserves=1
 				activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled"  }
@@ -2689,7 +2809,7 @@
 						type="building_manor_house"
 						country="c:SNB"
 						levels=1
-						region="STATE_KEEDZAI"
+						region="STATE_SWAHAKLONG"
 				   }
 				}
 				reserves=1
@@ -2937,14 +3057,14 @@
 			reserves=1
 			activate_production_methods={ "pm_simple_forestry" "pm_no_equipment" "pm_road_carts" "pm_no_hardwood" }
 		}
-            create_building={
+        create_building={
 			building="building_furniture_manufacturies"
                 add_ownership={ 
                     building={ 
                         type="building_financial_district"
                         country="c:SNB"
                         levels=1
-                        region="STATE_JUACHAI"
+                        region="STATE_KILIMAMAI"
                    }
                 }
 			reserves=1
