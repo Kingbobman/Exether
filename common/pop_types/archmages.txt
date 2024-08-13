@@ -36,17 +36,18 @@
 		if = {
 			limit = {
 				is_peasant_under_serfdom = no
-				literacy_rate > 0.2
+				literacy_rate > 0.5
+				wealth > 10
 			}
-			# baseline: ( literacy - 0.2 ) * 10 + ( wealth / 10 ), norm 5
+			# baseline: literacy * 4 + ( wealth - 10 / 10 ) norm 2 for Wealth 10 and Literacy 50%
 			add = {
 				value = literacy_rate
-				subtract = 0.2
-				multiply = 20
+				multiply = 4
 				desc = "QUALIFICATIONS_LITERACY_FACTOR"
 			}
 			add = {
 				value = wealth
+				subtract = 10
 				divide = 10
 				desc = "QUALIFICATIONS_WEALTH_FACTOR"
 			}
@@ -90,7 +91,7 @@
 		else = {
 			value = {
 				desc = "QUALIFICATIONS_INSUFFICIENT_LITERACY_DECAY"
-				value = -1
+				value = -2
 			}
 		}
 	}

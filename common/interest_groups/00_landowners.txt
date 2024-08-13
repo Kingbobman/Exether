@@ -54,6 +54,19 @@
 				add_ideology = ideology_republican_paternalistic
 			}
 		}
+		else_if = {
+			limit = {
+				OR = {
+					AND = {
+						c:CER ?= this
+					}
+					country_has_primary_culture = cu:cerunite
+				}
+			}
+			ig:ig_landowners = {
+				set_interest_group_name = ig_nobility
+			}
+		}
 
 		if = {
 			limit = {
