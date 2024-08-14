@@ -225,19 +225,17 @@ pm_hostel = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_groceries_add = 2
+			goods_input_groceries_add = 3
 			goods_input_furniture_add = 1
 			
 			
-			
-			goods_output_entertainment_add = 6
-			goods_output_gold_add = 1
-			goods_output_services_add = 3
+			goods_output_services_add = 6
 			}
 
 		level_scaled = {
 				building_employment_laborers_add = 1000
-				building_employment_clerks_add = 500
+				building_employment_adventurers_add = 250
+				building_employment_clerks_add = 200
 				building_employment_shopkeepers_add = 200
 		}
 		state_modifiers = {
@@ -248,7 +246,26 @@ pm_hostel = {
 	}
 }
 
-# pm_inn = {}
+pm_inn = {
+	texture = {"gfx/interface/icons/production_method_icons/watering_hole.dds"}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_groceries_add = 4
+			goods_input_furniture_add = 2
+			goods_input_luxury_furniture_add = 1
+
+			goods_output_services_add = 12
+		}
+
+		level_scaled = {
+				building_employment_laborers_add = 500
+				building_employment_adventurers_add = 500
+				building_employment_clerks_add = 300
+				building_employment_shopkeepers_add = 300
+		}
+	}
+}
 
 # pm_five_star_inn = {}
 
