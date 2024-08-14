@@ -1,0 +1,47 @@
+
+exether.pm.sunken_ruins.no_potions = {
+}
+
+exether.pm.sunken_ruins.safety_potions = {
+
+	unlocking_technologies = {
+		alchemy
+	}
+
+	building_modifiers = {
+        workforce_scaled = {
+            goods_input_potions_add = 10	# x50 = 500
+            goods_input_hardwood_add = 3	# x40 = 120
+
+            goods_output_trinkets_add = 5
+        }
+
+        unscaled = {
+            #building modifiers
+            building_laborers_mortality_mult = -0.1
+    	}
+    }
+}
+
+exether.pm.sunk_ruins.surface_divers = {
+    building_modifiers = {
+        workforce_scaled = {
+            goods_output_trinkets_add = 5
+        }
+
+        level_scaled = {
+            building_employment_adventurers_add = 1000
+            building_employment_laborers_add = 1000
+        }
+
+        unscaled = {
+            building_laborers_mortality_mult = 0.2
+        }
+    }
+}
+
+exether.pm.sunk_ruins.expedition_crews = {
+}
+
+exether.pm.sunk_ruins.advanced_crews = {
+}
