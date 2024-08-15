@@ -1,0 +1,104 @@
+##
+# No potions, no modifiers
+#
+exether.pm.sunken_ruins.no_potions = {
+}
+
+##
+# Potions assist with divers
+#
+exether.pm.sunken_ruins.safety_potions = {
+
+	unlocking_technologies = {
+		alchemy
+	}
+
+	building_modifiers = {
+        workforce_scaled = {
+            goods_input_potions_add = 10	# x50 = 500
+            goods_input_hardwood_add = 3	# x40 = 120
+
+            goods_output_treasure_add = 2
+        }
+
+        unscaled = {
+            #building modifiers
+            building_laborers_mortality_mult = -0.1
+    	}
+    }
+}
+
+##
+# Divers use simple boats and manual diving.
+#
+exether.pm.sunk_ruins.surface_divers = {
+
+    building_modifiers = {
+        workforce_scaled = {
+            goods_output_treasure_add = 5
+        }
+
+        level_scaled = {
+            building_employment_adventurers_add = 1000
+            building_employment_laborers_add = 1000
+        }
+
+        unscaled = {
+            building_laborers_mortality_mult = 0.2
+        }
+    }
+}
+
+##
+# No airships
+#
+exether.pm.sunken_ruins.no_airships = {
+}
+
+##
+# Airships to help find ruins and coordinate efforts
+#
+exether.pm.sunken_ruins.airship_spotting = {
+}
+
+##
+# Wooden expedition ships with diving bells.
+#
+exether.pm.sunk_ruins.expedition_crews = {
+
+    building_modifiers = {
+        workforce_scaled = {
+            goods_output_treasure_add = 10
+        }
+
+        level_scaled = {
+            building_employment_adventurers_add = 1000
+            building_employment_laborers_add = 1000
+        }
+
+        unscaled = {
+            building_laborers_mortality_mult = 0.2
+        }
+    }
+}
+
+##
+# Modernized steamships with mechamagic diving crews.
+#
+exether.pm.sunk_ruins.advanced_crews = {
+
+    building_modifiers = {
+        workforce_scaled = {
+            goods_output_treasure_add = 15
+        }
+
+        level_scaled = {
+            building_employment_adventurers_add = 1000
+            building_employment_laborers_add = 1000
+        }
+
+        unscaled = {
+            building_laborers_mortality_mult = 0.2
+        }
+    }
+}
