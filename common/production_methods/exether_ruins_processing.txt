@@ -2,11 +2,14 @@
 
 exether_pm_artifactory_hand_sorting = {
 
+	texture = "gfx/interface/icons/production_method_icons/crude_tools.dds"
+
 	building_modifiers = {
 	    level_scaled = {
-			building_employment_laborers_add   = 2250
+			building_employment_laborers_add   = 1500
+			building_employment_starbrands_add = 1500
 			building_employment_artificers_add = 1500
-			building_employment_wizards_add    = 250
+			building_employment_wizards_add    = 500
 	    }
 
         workforce_scaled = {
@@ -23,14 +26,17 @@ exether_pm_artifactory_hand_sorting = {
 
 exether_pm_artifactory_lenses_of_identification = {
 
+	texture = "gfx/interface/icons/production_method_icons/pig_iron_tools.dds"
+
     unlocking_technologies = {
 	}
 
 	building_modifiers = {
 	    level_scaled = {
-            building_employment_laborers_add   = 1500
-            building_employment_artificers_add = 2000
-            building_employment_wizards_add    = 500
+            building_employment_laborers_add   = 1000
+			building_employment_starbrands_add = 2000
+            building_employment_artificers_add = 1000
+            building_employment_wizards_add    = 1000
 	    }
 
         # Should have 1.8* costs
@@ -50,6 +56,9 @@ exether_pm_artifactory_lenses_of_identification = {
 # oversight
 
 exether_pm_artifactory_adventurer_crews = {
+
+	texture = "gfx/interface/icons/production_method_icons/state_atheism.dds"
+
 	building_modifiers = {
 	    level_scaled = {
 	        building_employment_adventurers_add = 500
@@ -58,17 +67,23 @@ exether_pm_artifactory_adventurer_crews = {
 }
 
 exether_pm_artifactory_clergy_oversight = {
+
+	texture = "gfx/interface/icons/production_method_icons/ownership_clergy.dds"
+
 	building_modifiers = {
 	    level_scaled = {
-	        building_employment_clergy_add = 500
+	        building_employment_clergy_add = 750
 	    }
     }
 }
 
 exether_pm_artifactory_government_run = {
+
+	texture = "gfx/interface/icons/production_method_icons/ownership_bureacrats.dds"
+
 	building_modifiers = {
 	    level_scaled = {
-	        building_employment_bureaucrat_add = 500
+	        building_employment_bureaucrat_add = 750
 	    }
     }
 }
@@ -76,6 +91,7 @@ exether_pm_artifactory_government_run = {
 # automation
 
 exether_pm_artifactory_no_automation = {
+
     texture = "gfx/interface/icons/production_method_icons/no_automation.dds"
 
 	building_modifiers = {
@@ -85,6 +101,7 @@ exether_pm_artifactory_no_automation = {
 }
 
 exether_pm_artifactory_conveyor_belts = {
+
 	texture = "gfx/interface/icons/production_method_icons/assembly_lines.dds"
 
 	building_modifiers = {
