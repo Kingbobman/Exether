@@ -3,12 +3,13 @@ pm_simple_accumulation_dragon_ruins = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			# input goods
+			goods_input_tools_add     = 5  # 40 * 5   = 400
 
+			goods_output_gold_add     = 4  # 100 * 10 = 400
+			goods_output_treasure_add = 4  # 100 * 10 = 400
 
-			# output goods
-			goods_output_iron_add = 5
-			goods_output_tools_add = 15
+			# Yield of 400 = 800 - 400
+			# Efficiency of 2.0
 		}
 
 		level_scaled = {
@@ -25,14 +26,14 @@ pm_complex_accumulation_dragon_ruins = {
 	}
 	building_modifiers = {
 		workforce_scaled = {
-			# input goods
+			goods_input_tools_add     = 12  # 40 * 10 = 480
+			goods_input_groceries_add = 12  # 30 * 10 = 360
 
-			goods_input_groceries_add = 10
+			goods_output_gold_add     = 8  # 100 * 10 = 800
+			goods_output_treasure_add = 8  # 100 * 10 = 800
 
-
-			# output goods
-			goods_output_iron_add = 10
-			goods_output_tools_add = 35
+            # Yield of 900 = 1600 - 840
+			# Efficiency of 1.9
 		}
 
 		level_scaled = {
@@ -45,18 +46,22 @@ pm_complex_accumulation_dragon_ruins = {
 
 pm_uses_gizmo_accumulation_dragon_ruins = {
 	texture = "gfx/interface/icons/production_method_icons/picks_and_shovels.dds"
+
 	unlocking_technologies = {
-		mechanical_tools #we could change this
+		mechanical_tools
 	}
+
 	building_modifiers = {
 		workforce_scaled = {
-			# input goods
-			goods_input_gizmos_add = 10
-			goods_input_groceries_add = 10
+			goods_input_gizmos_add    = 10  # 60 * 10 = 600
+			goods_input_tools_add     = 12  # 40 * 10 = 480
+			goods_input_groceries_add = 12  # 30 * 10 = 360
 
-			# output goods
-			goods_output_iron_add = 15
-			goods_output_tools_add = 55
+			goods_output_gold_add     = 14  # 100 * 10 = 1400
+			goods_output_treasure_add = 14  # 100 * 10 = 1400
+
+			# Yield of 1500 = 2800 - 1440
+			# Efficiency of 1.94
 		}
 
 		level_scaled = {
@@ -64,39 +69,6 @@ pm_uses_gizmo_accumulation_dragon_ruins = {
 			building_employment_shopkeepers_add = 500
 			building_employment_machinists_add = 500
 			building_employment_wizards_add = 500
-		}
-	}
-}
-
-pm_no_trinkets = {
-	texture = "gfx/interface/icons/production_method_icons/no_hardwood_selection.dds"
-}
-
-pm_a_few_trinkets_as_a_treat = {
-	texture = "gfx/interface/icons/production_method_icons/hardwood_selection.dds"
-	building_modifiers = {
-		workforce_scaled = {
-			# output goods
-			goods_output_iron_add = -5
-			goods_output_tools_add = -6
-			goods_output_trinkets_add = 2
-		}
-	}
-}
-
-pm_trinket_trinket_city_b = {
-	texture = "gfx/interface/icons/production_method_icons/increased_hardwood.dds"
-
-	unlocking_production_methods = {
-		pm_complex_accumulation_dragon_ruins
-		pm_uses_gizmo_accumulation_dragon_ruins
-	}
-
-	building_modifiers = {
-		workforce_scaled = {
-			goods_output_iron_add = -15
-			goods_output_tools_add = -18
-			goods_output_trinkets_add = 6
 		}
 	}
 }
