@@ -2,12 +2,16 @@
 # No potions, no modifiers
 #
 exether.pm.sunken_ruins.no_potions = {
+
+    texture = "gfx/interface/icons/production_method_icons/no_potion_sap.dds"
 }
 
 ##
 # Potions assist with divers
 #
 exether.pm.sunken_ruins.safety_potions = {
+
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
 
 	unlocking_technologies = {
 		alchemy
@@ -33,6 +37,8 @@ exether.pm.sunken_ruins.safety_potions = {
 #
 exether.pm.sunk_ruins.surface_divers = {
 
+	texture = "gfx/interface/icons/production_method_icons/anchorage.dds"
+
     building_modifiers = {
         workforce_scaled = {
             goods_output_treasure_add = 5
@@ -50,21 +56,11 @@ exether.pm.sunk_ruins.surface_divers = {
 }
 
 ##
-# No airships
-#
-exether.pm.sunken_ruins.no_airships = {
-}
-
-##
-# Airships to help find ruins and coordinate efforts
-#
-exether.pm.sunken_ruins.airship_spotting = {
-}
-
-##
 # Wooden expedition ships with diving bells.
 #
 exether.pm.sunk_ruins.expedition_crews = {
+
+	texture = "gfx/interface/icons/production_method_icons/basic_port.dds"
 
     building_modifiers = {
         workforce_scaled = {
@@ -87,6 +83,8 @@ exether.pm.sunk_ruins.expedition_crews = {
 #
 exether.pm.sunk_ruins.advanced_crews = {
 
+	texture = "gfx/interface/icons/production_method_icons/industrial_port.dds"
+
     building_modifiers = {
         workforce_scaled = {
             goods_output_treasure_add = 15
@@ -101,4 +99,18 @@ exether.pm.sunk_ruins.advanced_crews = {
             building_laborers_mortality_mult = 0.2
         }
     }
+}
+
+##
+# No airships
+#
+exether.pm.sunken_ruins.no_airships = {
+	texture = "gfx/interface/icons/production_method_icons/anchorage.dds"
+}
+
+##
+# Airships to help find ruins and coordinate efforts
+#
+exether.pm.sunken_ruins.airship_spotting = {
+	texture = "gfx/interface/icons/production_method_icons/basic_port.dds"
 }
