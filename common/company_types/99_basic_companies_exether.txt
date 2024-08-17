@@ -1,0 +1,35 @@
+﻿company_basic_entertainment = {
+	icon = "gfx/interface/icons/company_icons/basic_agriculture_1.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
+	
+	uses_dynamic_naming = yes
+	
+	dynamic_company_type_names = {
+		"dynamic_company_type_company"
+		"dynamic_company_type_consortium"
+		"dynamic_company_type_guild"
+		"dynamic_company_type_society"
+		"dynamic_company_type_fellowship"
+	}
+	
+	building_types = {  
+		building_tavern
+		
+	}
+
+	possible = { 
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_tavern
+					
+				}
+				level >= 3
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_radicals_from_sol_change_mult = -0.05
+	}	
+}	
