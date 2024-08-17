@@ -14,7 +14,7 @@
 	
 	building_types = {  
 		building_tavern
-		
+		building_tobacco_plantation
 	}
 
 	possible = { 
@@ -22,7 +22,7 @@
 			any_scope_building = {
 				OR = {
 					is_building_type = building_tavern
-					
+					is_building_type = building_tobacco_plantation
 				}
 				level >= 3
 			}
@@ -31,5 +31,79 @@
 	
 	prosperity_modifier = {
 		state_radicals_from_sol_change_mult = -0.05
+	}	
+}	
+
+company_basic_MAriners = {
+	icon = "gfx/interface/icons/company_icons/basic_agriculture_1.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
+	
+	uses_dynamic_naming = yes
+	
+	dynamic_company_type_names = {
+		"dynamic_company_type_company"
+		"dynamic_company_type_consortium"
+		"dynamic_company_type_guild"
+		"dynamic_company_type_society"
+		"dynamic_company_type_fellowship"
+	}
+	
+	building_types = {  
+		building_fishing_wharf_rusttails
+		building_squid_squad
+	}
+
+	possible = { 
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type =  building_fishing_wharf_rusttails
+					is_building_type =  building_squid_squad
+				}
+				level >= 3
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_military_shipyards_throughput_add = 0.1
+		unit_navy_offense_mult = 0.05
+	}	
+}	
+
+company_basic_gizmos = {
+	icon = "gfx/interface/icons/company_icons/basic_agriculture_1.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
+	
+	uses_dynamic_naming = yes
+	
+	dynamic_company_type_names = {
+		"dynamic_company_type_company"
+		"dynamic_company_type_consortium"
+		"dynamic_company_type_guild"
+		"dynamic_company_type_society"
+		"dynamic_company_type_fellowship"
+	}
+	
+	building_types = {  
+		building_gizmo_workshop
+		building_steel_mills
+		
+	}
+
+	possible = { 
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type =  building_gizmo_workshop
+					is_building_type =  building_steel_mills
+				}
+				level >= 3
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_wishstone_mine_throughput_add = 0.1
 	}	
 }	
