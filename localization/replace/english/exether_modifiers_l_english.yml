@@ -3,6 +3,9 @@
   interest_group_ig_mages_pol_str_mult: "$ig_variant_mages$ [concept_political_strength]"
   interest_group_ig_mages_pol_str_mult_desc: "A bonus or penalty to the total [concept_political_strength] of the $ig_variant_mages$ [concept_interest_group]"
 
+  country_adventurers_pol_str_mult: "[concept_political_strength] of $adventurers$"
+  country_adventurers_pol_str_mult_desc: "An increase or descrease in the [concept_political_strength] of $adventurers$"
+
   country_magic_reserves_total_add: "@magic! [concept_magic_reserves]"
   country_magic_reserves_total_add_desc:  "An increase or decrease in @magic! [concept_magic_reserves]"
 
@@ -21,12 +24,17 @@
 
 #Hi, Grappes here! If there's some modifiers that you believe are out of place here, I just threw the missing goods mults here while I was here. After all, they're next to the input/output block I reorganized for legibility. Feel free to relocate them!
 
+  building_gizmo_workshop_throughput_add: "Gizmo Workshop building [concept_throughput]"
+  building_gizmo_workshop_throughput_add_desc: "A bonus or penalty to the [concept_throughput] of Gizmo Workshops"
+
   building_goods_output_mult: "Building Goods Output"
   building_goods_output_mult_desc: "A flat multiplier to the amount of goods produced by a building. Seperate from [concept_throughput] by adding a flat bonus or penalty to the amount of goods produced while retaining the same amount of input goods. Applies to all output goods and does not scale."
 
   goods_output_grain_mult: "Building @grain! Grain output"
   goods_output_grain_mult_desc: "A bonus or penalty to the amount of @grain! Grain produced by buildings"
 
+  goods_output_wood_mult: "Building @wood! Wood output"
+  goods_output_wood_mult_desc: "A bonus or penalty to the amount of @wood! Wood produced by buildings"
 
   goods_input_fertilizer_mult: "Building @fertilizer! Fertilizer input"
   goods_input_fertilizer_mult_desc: "A bonus or penalty to the amount of @fertilizer! Fertilizer consumed by buildings"
