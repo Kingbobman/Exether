@@ -4,19 +4,21 @@
 exether.building.artifactory = {
     building_group = exether.bg.artifactory
 
+    texture = "gfx/interface/icons/building_icons/artifactory.dds"
+	background = "gfx/interface/icons/building_icons/backgrounds/artifactory.dds"
+
+    city_type = city
+    levels_per_mesh = 5
+
+    unlocking_technologies = {
+    }
+
     required_construction = construction_cost_high
 
     production_method_groups = {
         exether.pmg.artifactory_identification
         exether.pmg.artifactory_management
         exether.pmg.artifactory_automation
-    }
-
-    texture = "gfx/interface/icons/building_icons/gizmo_workshop.dds"
-    city_type = city
-    levels_per_mesh = 5
-
-    unlocking_technologies = {
     }
 
     possible = {
