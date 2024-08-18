@@ -12,7 +12,7 @@ state_trait_lake_thalori = {
 	modifier = { state_infrastructure_add = 15 }
 }
 
-state_trait_thornfield_iron = {
+state_trait_silverspine_iron = {
     icon = "gfx/interface/icons/state_trait_icons/resources_ore.dds"   
 	modifier = {
         building_iron_mine_throughput_add = 0.15
@@ -26,10 +26,55 @@ state_trait_salt_wastes_wishstone = {
     }
 }
 
+state_trait_dragon_vein_sulfur_deposits = {
+    icon = "gfx/interface/icons/state_trait_icons/resources_ore.dds"   
+	modifier = {
+        building_sulfur_mine_throughput_add = 0.20
+    }
+}
+
 state_trait_shipshatter_reef_fisheries = {
-    icon = "gfx/interface/icons/state_trait_icons/resources_fish.dds"
+	icon = "gfx/interface/icons/state_trait_icons/resources_fish.dds"
 	
 	modifier = {
 		building_group_bg_fishing_throughput_add = 0.20
 	}
+}
+
+state_trait_ochum_jungles = {
+	icon = "gfx/interface/icons/state_trait_icons/resources_lumber.dds"
+	modifier = {
+		building_group_bg_logging_throughput_add = 0.15
+		goods_output_hardwood_mult = 0.10
+		state_infrastructure_mult = -0.05
+	}
+}
+
+state_trait_silverspine_lead = {
+    icon = "gfx/interface/icons/state_trait_icons/resources_ore.dds"   
+	modifier = {
+        building_lead_mine_throughput_add = 0.15
+    }
+}
+
+state_trait_ember_country = {
+    icon = "gfx/interface/icons/state_trait_icons/resources_ore.dds"   
+	modifier = {
+        building_coal_mine_throughput_add = 0.10
+		building_iron_mine_throughput_add = 0.05
+    }
+}
+
+state_trait_groenveld_coal = {
+    icon = "gfx/interface/icons/state_trait_icons/resources_ore.dds"   
+	modifier = {
+        building_coal_mine_throughput_add = 0.10
+    }
+}
+
+state_trait_glimmervallei_sulfur_deposits = {
+    icon = "gfx/interface/icons/state_trait_icons/resources_ore.dds"   
+	modifier = {
+        building_sulfur_mine_throughput_add = 0.20
+    }
 }

@@ -208,6 +208,8 @@
 			direction = import
 		}			
 	}
+	c:GRA ?= {	
+	}
 	c:OEX ?= {
 		create_trade_route = {
 			goods = fabric
@@ -1224,5 +1226,13 @@ c:DIS ?= {
 		target = c:RAV.market
 		direction = export
 	}		
+}
+c:VLT ?= {
+	create_trade_route = {
+		goods = hardwood
+		level = 2
+		target = c:SNB.market
+		direction = import
+	}	
 }
 }
