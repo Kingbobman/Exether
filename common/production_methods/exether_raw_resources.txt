@@ -1378,27 +1378,35 @@ pm_basic_game_hunting_potions = {
 	}
 	building_modifiers = {
 		unscaled = {
-			building_goods_output_mult = 0.15
+			goods_output_fabric_mult = 0.10
+			goods_output_meat_mult = 0.05
 			building_adventurers_mortality_mult = -0.05
 		}
 		workforce_scaled = {
 			goods_input_potions_add = 2
 			goods_input_liquor_add = 3
 		}
+		level_scaled = {
+			building_employment_laborers_add = -500
+		}
 	}
 }
 pm_wash_it_down = {
 	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
 	unlocking_technologies = {
-    alchemy
+    alchemical_transmutation
 	}
 	building_modifiers = {
 		unscaled = {
-			building_goods_output_mult = 0.30
+			goods_output_fabric_mult = 0.15
+			goods_output_meat_mult = 0.10
 			building_adventurers_mortality_mult = -0.15
 		}
 		workforce_scaled = {
 			goods_input_potions_add = 15
+		}
+		level_scaled = {
+			building_employment_laborers_add = -1250
 		}
 	}
 }
@@ -1651,17 +1659,13 @@ pm_spider_enlargement = {
 			#input goods
 			goods_input_potions_add = 5
 			goods_output_monster_essence_add = 15
+			goods_output_fabric_add = 15
 		}
 
 		level_scaled = {
 			#employment
 			building_employment_wizards_add = 500
 			building_employment_laborers_add = -1000
-		}
-		unscaled = {
-			#building modifiers
-			goods_output_fabric_mult = 0.2
-			goods_output_silk_mult = 0.2
 		}
 		unscaled = {
 	
@@ -1688,17 +1692,13 @@ pm_big_safe_spiders = {
 			#input goods
 			goods_input_potions_add = 10
 			goods_output_monster_essence_add = 25
+			goods_output_fabric_add = 30
 		}
 
 		level_scaled = {
 			#employment
 			building_employment_wizards_add = 500
 			building_employment_laborers_add = -1000
-		}
-		unscaled = {
-			#building modifiers
-			goods_output_fabric_mult = 0.4
-			goods_output_silk_mult = 0.3
 		}
 	}
 }
