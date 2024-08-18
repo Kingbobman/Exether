@@ -1,5 +1,5 @@
-﻿artificers = {
-	texture = "gfx/interface/icons/pops_icons/artificers.dds"
+﻿machinists = {
+	texture = "gfx/interface/icons/pops_icons/machinists.dds"
 	color = hsv{ 0.92 0.40 0.78 }
 	strata = poor
 	start_quality_of_life = 7
@@ -9,9 +9,9 @@
 	dependent_wage = 0.5	# per year
 	unemployment = yes
 	
-	# 20% - 90% politically engaged	
-	political_engagement_base = 0.2
-	political_engagement_literacy_factor = 0.70
+	# 20% - 80% politically engaged	
+	political_engagement_base = 0.20
+	political_engagement_literacy_factor = 0.6
 	
 	political_engagement_mult = {
 		value = 1.0
@@ -48,52 +48,33 @@
 		}
 	}
 	
-	
-	qualifications_growth_desc = "ARTIFICERS_QUALIFICATIONS_DESC"
+	qualifications_growth_desc = "MACHINISTS_QUALIFICATIONS_DESC"
 	qualifications = {
+		# baseline: ( literacy - 0.1 ) * 20, norm 8 for Laborers with Literacy 30%
+		add = {
+			value = literacy_rate
+			subtract = 0.1
+			min = 0
+			multiply = 20
+			desc = "QUALIFICATIONS_LITERACY_FACTOR"
+		}
 		if = {
-			limit = { 
-				is_peasant_under_serfdom = yes 
+			# Serfs can't be laborers
+			limit = {
+				is_peasant_under_serfdom = yes
 			}
 			multiply = {
-				value = 0.50
+				value = 0.05
 				desc = "QUALIFICATIONS_PEASANTS_UNDER_SERFDOM"
 			}
 		}
 		else_if = {
 			limit = {
-				literacy_rate > 0.2
-			}
-			# baseline: ( literacy - 0.05 ) * 20, norm 8 for Laborers with Literacy 30%
-			add = {
-				value = literacy_rate
-				subtract = 0.05
-				multiply = 20
-				desc = "QUALIFICATIONS_LITERACY_FACTOR"
-			}
-			if = {
-				limit = {
-					is_pop_type = laborers
-				}
-				multiply = {
-					value = 1.5
-					desc = "QUALIFICATIONS_FAVORED_TYPE"
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				is_pop_type = peasants
+				is_pop_type = laborers
 			}
 			multiply = {
-				value = 1.25
+				value = 2
 				desc = "QUALIFICATIONS_FAVORED_TYPE"
-			}
-		}
-		else = {		
-			value = {
-				desc = "QUALIFICATIONS_INSUFFICIENT_LITERACY_DECAY"
-				value = -2
 			}
 		}
 	}
