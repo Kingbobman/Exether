@@ -263,7 +263,7 @@ STATE_VIRULENT_EGRESS_2 = {
     capped_resources = {
         bg_logging = 4
         bg_fishing = 4
-        bg_whaling = 8
+        bg_leviathan_outpost = 8
         bg_sulfur_mining = 12
         bg_wishstone_mining = 18
     }
@@ -668,7 +668,7 @@ STATE_RIBAGAR = {
     arable_land = 50
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_vineyard_plantations" }
     capped_resources = {
-        bg_logging = 13
+        bg_logging = 15
     }
     naval_exit_id = 3208
 }
@@ -718,7 +718,7 @@ STATE_MINUPHOSS = {
     arable_land = 80
     arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_silk_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_vineyard_plantations" }
     capped_resources = {
-        bg_logging = 4
+        bg_logging = 10
         bg_fishing = 8
     }
     naval_exit_id = 3048
@@ -776,7 +776,7 @@ STATE_SMALLWOOD = {
         bg_iron_mining = 15
         bg_lead_mining = 15
         bg_logging = 8
-        bg_whaling = 2
+        bg_leviathan_outpost = 2
         bg_fishing = 6
     }
     resource = {
@@ -838,6 +838,7 @@ STATE_WHISKER_FIELDS = {
     farm = xF2A076
     mine = xF1D060
     wood = xEF7DC0
+    port = xd8f644
     impassable = { x75c7bd x8db7c8 xa0e88c xcdde73 xe9a5b9 }
     traits = { "state_trait_stokeford_heights" "state_trait_whiskerfields" }
     arable_land = 320
@@ -852,7 +853,7 @@ STATE_WHISKER_FIELDS = {
         type = "bg_oil_extraction"
         undiscovered_amount = 60
     }
-
+    naval_exit_id = 3205
 }
 STATE_WAYFARE_MEADOWS = {
     id = 4158
@@ -1107,7 +1108,7 @@ STATE_FIRST_BOROUGH = {
     arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_logging = 8
-        bg_whaling = 5
+        bg_leviathan_outpost = 5
         bg_fishing = 15
     }
     resource = {
@@ -1130,7 +1131,7 @@ STATE_BYRIVER = {
     capped_resources = {
         bg_iron_mining = 30
         bg_logging = 8
-        bg_whaling = 5
+        bg_leviathan_outpost = 5
         bg_fishing = 13
     }
     naval_exit_id = 3038
@@ -1345,7 +1346,7 @@ STATE_GLIMMERING_COAST = {
     arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_logging = 17
-        bg_whaling = 4
+        bg_leviathan_outpost = 4
         bg_fishing = 8
         bg_wishstone_mining = 27
     }
@@ -1706,8 +1707,8 @@ STATE_RIRGEN = {
     capped_resources = {
         bg_coal_mining = 36
         bg_iron_mining = 45
-        bg_logging = 4
-        bg_opium_plantations = 20
+        bg_lead_mining = 10
+        bg_opium_plantations = 23
         bg_desert_hunting = 9
     }
     naval_exit_id = 3211
@@ -1725,7 +1726,7 @@ STATE_RICHAR_JEDD = {
     arable_resources = { "bg_livestock_ranches" }
     capped_resources = {
         bg_coal_mining = 32
-        bg_opium_plantations = 20
+        bg_opium_plantations = 25
         bg_desert_hunting = 20
     }
     resource = {
@@ -1752,6 +1753,7 @@ STATE_DEPHEL_PATH = {
         bg_logging = 8
         bg_iron_mining = 35
         bg_sulfur_mining = 20
+        bg_lead_mining = 10
         bg_desert_hunting = 10
     }
     naval_exit_id = 3213
@@ -1771,7 +1773,7 @@ STATE_TOPHNATH = {
         bg_coal_mining = 28
         bg_iron_mining = 24
         bg_sulfur_mining = 20
-        bg_logging = 2
+        bg_logging = 10
         bg_fishing = 4
     }
     naval_exit_id = 3048
@@ -1788,7 +1790,7 @@ STATE_CINPHNPHAINN = {
     arable_land = 60
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" "bg_banana_plantations" "bg_vineyard_plantations" }
     capped_resources = {
-        bg_logging = 4
+        bg_logging = 12
         bg_fishing = 8
     }
     naval_exit_id = 3048
@@ -1805,7 +1807,7 @@ STATE_LHIPH = {
     arable_land = 102
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" "bg_banana_plantations" "bg_vineyard_plantations" }
     capped_resources = {
-        bg_logging = 5
+        bg_logging = 11
         bg_fishing = 5
     }
     naval_exit_id = 3048
@@ -1864,7 +1866,7 @@ STATE_AZURETHORN = {
     capped_resources = {
         bg_logging = 2
         bg_fishing = 9
-        bg_whaling = 4
+        bg_leviathan_outpost = 4
     }
     resource = {
         type = "bg_wishstone_reefs"
@@ -1928,6 +1930,7 @@ STATE_CLOUDSILVER_SPINE = {
         bg_cloud_collecting = 45
         bg_logging = 11
         bg_coal_mining = 30
+        bg_lead_mining = 13
         bg_iron_mining = 55
     }
     naval_exit_id = 3213
@@ -1947,7 +1950,8 @@ STATE_VOZMEAD_LOWLANDS = {
     capped_resources = {
         bg_logging = 4
         bg_fishing = 4
-        bg_desert_hunting = 2
+        bg_opium_plantations = 22
+        bg_desert_hunting = 10
     }
 }
 STATE_SUNKEN_CLIFFS = {
@@ -1982,6 +1986,7 @@ STATE_DWARVENHAMMER = {
     capped_resources = {
         bg_iron_mining = 12
         bg_gold_mining = 4
+        bg_opium_plantations = 23
         bg_desert_hunting = 8
     }
     naval_exit_id = 3213
