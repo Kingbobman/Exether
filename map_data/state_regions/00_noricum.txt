@@ -258,8 +258,8 @@ STATE_SOUTH_YANGER_STEPPE = {
     farm = xFA52F2
     mine = xF4AFBC
     wood = xF0A7DD
-    arable_land = 24
-    arable_resources = { "bg_livestock_ranches" }
+    arable_land = 35
+    arable_resources = { "bg_livestock_ranches" "bg_rye_farms" }
     capped_resources = {
         bg_logging = 14
     }
@@ -275,11 +275,12 @@ STATE_EAST_YANGER_STEPPE = {
     farm = xFDC073
     mine = xFDBC44
     wood = xFD85DF
-    arable_land = 32
+    arable_land = 40
     arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_logging = 10
-        bg_squidding = 10
+        bg_coal_mining = 37
+        bg_squidding = 4
     }
     naval_exit_id = 3025
 }
@@ -296,8 +297,8 @@ STATE_RIDERS_MOOT = {
     arable_land = 100
     arable_resources = { "bg_rye_farms" "bg_livestock_ranches" "bg_tea_plantations" }
     capped_resources = {
-        bg_logging = 6
-        bg_iron_mining = 11
+        bg_logging = 11
+        bg_iron_mining = 42
     }
     naval_exit_id = 3231
 }
@@ -506,9 +507,14 @@ STATE_EOGHANS_SPEAR = {
     arable_land = 24
     capped_resources = {
         bg_logging = 5
+        bg_iron_mining = 13
         bg_squidding = 4
         bg_fishing = 7
-        bg_game_hunting = 2
+        bg_game_hunting = 4
+    }
+    resource = {
+        type = "bg_wishstone_reefs"
+        undiscovered_amount = 6
     }
     naval_exit_id = 3022
 }
@@ -837,14 +843,15 @@ STATE_URIKS_GIFT = {
     farm = xFDA3E6
     mine = xFD46C5
     wood = xFAFEEB
-    arable_land = 45
+    arable_land = 50
     arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_sulfur_mining = 40
         bg_logging = 24
-        bg_squidding = 12
+        bg_iron_mining = 20
         bg_hunting = 12
         bg_wishstone_mining = 45
+        bg_squidding = 12
     }
     resource = {
         type = "bg_oil_extraction"
@@ -1112,10 +1119,14 @@ STATE_GLENKELD = {
     wood = xA29BCD
     arable_land = 18
     capped_resources = {
-        bg_logging = 4
-        bg_squidding = 1
+        bg_logging = 7
+        bg_squidding = 2
         bg_fishing = 5
         bg_game_hunting = 3
+    }
+    resource = {
+        type = "bg_wishstone_reefs"
+        undiscovered_amount = 8
     }
     naval_exit_id = 3022
 }
@@ -1155,6 +1166,11 @@ STATE_COLESSIE = {
         bg_squidding = 7
         bg_fishing = 6
     }
+    resource = {
+        type = "bg_gold_fields"
+        depleted_type = "bg_gold_mining"
+        undiscovered_amount = 4
+    }
     naval_exit_id = 3022
 }
 STATE_TOLFAR = {
@@ -1187,12 +1203,19 @@ STATE_KENLYNE = {
     farm = xF2C84B
     mine = xF1FD8F
     wood = xEB59CD
-    arable_land = 66
-    arable_resources = { "bg_rye_farms" }
+    arable_land = 84
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
     capped_resources = {
-        bg_logging = 4
+        bg_lead_mining = 7
+        bg_logging = 16
         bg_fishing = 4
-        bg_squidding = 2
+        bg_squidding = 5
+        bg_gold_mining = 1
+    }
+    resource = {
+        type = "bg_gold_fields"
+        depleted_type = "bg_gold_mining"
+        undiscovered_amount = 3
     }
     naval_exit_id = 3022
 }
