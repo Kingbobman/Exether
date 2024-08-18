@@ -1,46 +1,37 @@
-﻿engineers = {
-	texture = "gfx/interface/icons/pops_icons/engineers.dds"
-	color = hsv{ 0.07 0.57 0.77 }
+﻿bureaucrats = {
+	texture = "gfx/interface/icons/pops_icons/bureaucrats.dds"
+	color = hsv{ 0.25 0.4 0.5 }
 	strata = middle
 	start_quality_of_life = 10
-	wage_weight = 3
+	wage_weight = 4
 	paid_private_wage = yes
-	literacy_target = 0.80
-	education_access = 0.25
+	literacy_target = 0.40
+	education_access = 0.50
 	dependent_wage = 0.5	# per year
 	unemployment = yes
 	
 	# 50% - 100% politically engaged
 	political_engagement_base = 0.5
-	political_engagement_literacy_factor = 1.0
+	political_engagement_literacy_factor = 0.5
 	
 	political_engagement_mult = {
-		value = 1
+		value = 1	
 
-		if = {
-			limit = {
-				standard_of_living < 5
-			}
-			add = {
-				desc = "POP_STARVATION"	
-				value = 1
-			}
-		}
-		else_if = {
-			limit = {
-				owner = {
-					has_technology_researched = political_agitation
+		add = {
+			desc = "POP_STARVATION"	
+			
+			if = {
+				limit = { 
+					standard_of_living < 5
 				}
-			}
-			add = {
-				desc = "HAS_POLITICAL_AGITATION"	
-				value = 0.5
-			}
+				value = 1
+			}		
 		}
 	}
 	
-	qualifications_growth_desc = "ENGINEERS_QUALIFICATIONS_DESC"
+	qualifications_growth_desc = "BUREAUCRATS_QUALIFICATIONS_DESC"
 	qualifications = {
+		# Removing duplicate serfdom checks
 		if = {
 			limit = { 
 				is_peasant_under_serfdom = yes 
@@ -54,42 +45,43 @@
 			limit = {
 				literacy_rate > 0.2
 			}
-			# baseline: ( literacy - 0.2 ) * 5 + ( wealth / 20 ), norm 2.5 for Wealth 20 and Literacy 50%
+			# baseline: ( literacy - 0.2 ) * 10 * ( 2 if accepted culture and religion), norm 6 for Literacy 50% and Accepted C/R
 			add = {
 				value = literacy_rate
 				subtract = 0.2
-				multiply = 10
+				multiply = 20
 				desc = "QUALIFICATIONS_LITERACY_FACTOR"
 			}
-			add = {
-				value = wealth
-				divide = 20
-				desc = "QUALIFICATIONS_WEALTH_FACTOR"
+			if = {
+				# Removing duplicate culture checks
+				limit = {
+					culture_accepted = no
+				}
+				multiply = {
+					value = 0.1
+					desc = "QUALIFICATIONS_CULTURAL_DISCRIMINATION"
+				}
+			}
+			else_if = {
+				limit = {
+					# Here culture is necessarily accepted
+					religion_accepted = yes
+				}
+				multiply = {
+					value = 2
+					desc = "POTENTIALS_CULTURAL_RELIGIOUS_ACCEPTANCE"
+				}
 			}
 			if = {
 				limit = {
-					is_pop_type = machinists
+					# Merging favored types with same weights
+					OR = {
+						is_pop_type = clerks
+						is_pop_type = clergymen
+					}
 				}
 				multiply = {
 					value = 5
-					desc = "QUALIFICATIONS_FAVORED_TYPE"
-				}
-			}
-			if = {
-				limit = {
-					is_pop_type = clerks
-				}
-				multiply = {
-					value = 4
-					desc = "QUALIFICATIONS_FAVORED_TYPE"
-				}
-			}
-			if = {
-				limit = {
-					is_pop_type = artificers
-				}
-				multiply = {
-					value = 3
 					desc = "QUALIFICATIONS_FAVORED_TYPE"
 				}
 			}
@@ -97,7 +89,7 @@
 		else = {		
 			value = {
 				desc = "QUALIFICATIONS_INSUFFICIENT_LITERACY_DECAY"
-				value = -2
+				value = -1
 			}
 		}
 	}

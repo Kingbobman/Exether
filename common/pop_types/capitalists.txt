@@ -1,22 +1,20 @@
-﻿archmages = {
-	texture = "gfx/interface/icons/pops_icons/archmages.dds"
-	color = hsv{ 0.81 0.56 0.75 }
+﻿capitalists = {
+	texture = "gfx/interface/icons/pops_icons/capitalists.dds"
+	color = hsv{ 0.52 0.32 0.49 }
 	strata = rich
 	start_quality_of_life = 20
-	working_adult_ratio = 0.2
 	wage_weight = 6
-	literacy_target = 0.80
-	education_access = 0.5
+	paid_private_wage = no
+	literacy_target = 0.70
 	dependent_wage = 0.0	# per year
 	unemployment = yes
-
 	
 	# 70% - 100% politically engaged
 	political_engagement_base = 0.7
 	political_engagement_literacy_factor = 0.3
 	
 	political_engagement_mult = {
-		value = 1
+		value = 1	
 
 		add = {
 			desc = "POP_STARVATION"	
@@ -27,12 +25,12 @@
 				}
 				value = 1
 			}		
-		}
-		
-	}
+		}	
+	}	
 	
-	qualifications_growth_desc = "ARCHMAGES_QUALIFICATIONS_DESC"
+	qualifications_growth_desc = "CAPITALISTS_QUALIFICATIONS_DESC"
 	qualifications = {
+		# Removing duplicate serfdom checks
 		if = {
 			limit = { 
 				is_peasant_under_serfdom = yes 
@@ -44,33 +42,27 @@
 		}
 		else_if = {
 			limit = {
-				literacy_rate > 0.5
 				wealth > 10
 			}
-			# baseline: literacy * 4 + ( wealth - 10 / 10 ) norm 2 for Wealth 10 and Literacy 50%
-			add = {
-				value = literacy_rate
-				multiply = 4
-				desc = "QUALIFICATIONS_LITERACY_FACTOR"
-			}
+			# baseline: ( wealth - 10 ) / 10 + ( literacy * 2 ), norm 2 for Wealth 20 and Literacy 50%
 			add = {
 				value = wealth
 				subtract = 10
-				divide = 10
+				divide = 5
 				desc = "QUALIFICATIONS_WEALTH_FACTOR"
 			}
-			if = {
-				limit = {
-					is_pop_type = wizards
-				}
-				multiply = {
-					value = 5
-					desc = "QUALIFICATIONS_FAVORED_TYPE"
-				}
+			add = {
+				value = literacy_rate
+				multiply = 2
+				desc = "QUALIFICATIONS_LITERACY_FACTOR"
 			}
 			if = {
 				limit = {
-					is_pop_type = academics
+					OR = {
+						# Merging favored types with same weights
+						is_pop_type = shopkeepers
+						is_pop_type = engineers
+					}
 				}
 				multiply = {
 					value = 5
@@ -87,15 +79,6 @@
 				}
 			}
 		}
-		else_if = {
-			limit = {
-				literacy_rate <= 0.5
-			}
-			value = {
-				desc = "QUALIFICATIONS_INSUFFICIENT_LITERACY_DECAY"
-				value = -2
-			}
-		}
 		else = {		
 			value = {
 				desc = "QUALIFICATIONS_INSUFFICIENT_WEALTH_DECAY"
@@ -109,7 +92,7 @@
 			min = define:NPortrait|GRACEFUL_AGING_START
 			max = define:NPortrait|GRACEFUL_AGING_END
 		}
-	}			
+	}
 	portrait_pose = { value = 0 }			
 	portrait_is_female = { always = yes }
 }
