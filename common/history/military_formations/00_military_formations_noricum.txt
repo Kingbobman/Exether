@@ -736,29 +736,76 @@
 			type = army
 			hq_region = sr:region_yanger_steppe
 
+			name = "Brackenshire National Army"
+
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_KENLYNE
-				count = 2
+				count = 9
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_COLESSIE
-				count = 2
+				count = 9
 			}
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_cannon_artillery
+				type = unit_type:combat_unit_type_mobile_artillery
 				state_region = s:STATE_KENLYNE
-				count = 1
+				count = 7
 			}
 			combat_unit = {
-				type = unit_type:combat_unit_type_cannon_artillery
+				type = unit_type:combat_unit_type_mobile_artillery
 				state_region = s:STATE_COLESSIE
-				count = 1
+				count = 7
 			}
+			save_scope_as = biearmy
+
+		}
+		create_character = {
+			is_general = yes
+			hq = sr:region_yanger_steppe
+			commander_rank = commander_rank_2
+			save_scope_as = biegen
+		}
+		scope:biegen= {
+			transfer_to_formation = scope:biearmy
 		}
 
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_yanger_steppe
+
+			name = "Coastal Armada"
+		
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_COLESSIE
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_KENLYNE
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_KENLYNE
+				count = 1
+			}
+			save_scope_as = bienavy
+
+		}
+		create_character = {
+			is_admiral = yes
+			hq = sr:region_yanger_steppe
+			commander_rank = commander_rank_2
+			save_scope_as = bieadmiral
+		}
+		scope:bieadmiral= {
+			transfer_to_formation = scope:bienavy
+		}
 	}
 	c:DRK ?= {
 		create_military_formation = {

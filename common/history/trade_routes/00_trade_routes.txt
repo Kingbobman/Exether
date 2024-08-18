@@ -148,25 +148,7 @@
 			direction = import
 		}	
 	}
-	c:SRN ?= {
-		create_trade_route = {
-			goods = manowars
-			level = 1
-			target = c:MBR.market
-			direction = import
-		}
-		create_trade_route = {
-			goods = clippers
-			level = 2
-			target = c:MBR.market
-			direction = import
-		}
-		create_trade_route = {
-			goods = small_arms
-			level = 2
-			target = c:MBR.market
-			direction = import
-		}		
+	c:SRN ?= {	
 	}
 	c:EME ?= {
 		create_trade_route = {
@@ -253,18 +235,6 @@
 	}	
 	c:BIE ?= {
 		create_trade_route = {
-			goods = small_arms
-			level = 1
-			target = c:DUM.market
-			direction = import
-		}	
-		create_trade_route = {
-			goods = artillery
-			level = 1
-			target = c:DUM.market
-			direction = import
-		}
-		create_trade_route = {
 			goods = tea
 			level = 3
 			target = c:YAN.market
@@ -272,8 +242,20 @@
 		}
 		create_trade_route = {
 			goods = luxury_furniture
-			level = 3
+			level = 1
 			target = c:YAN.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = lead
+			level = 1
+			target = c:FOX.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = lead
+			level = 1
+			target = c:DUM.market
 			direction = import
 		}
 	}	
