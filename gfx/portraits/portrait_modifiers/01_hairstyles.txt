@@ -39,6 +39,32 @@
         }
     }
 
+    soranda_hair_styles = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = arabic_hairstyles
+                range = { 0 0.1 } # For the randomness to work correctly
+           }
+         }
+    
+       weight = {
+           base = 0
+           modifier = {
+                add = 90000
+                AND = {
+                    exists = scope:character
+                        scope:character ?= {
+                             has_template = ARR_queen_soranda_template
+                        }
+                }
+                
+              
+          }
+       }
+    }
+
     european_hair_styles = {
         dna_modifiers = {
             accessory = {
