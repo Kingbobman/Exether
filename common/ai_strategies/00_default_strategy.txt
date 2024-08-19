@@ -510,8 +510,8 @@ ai_strategy_default = {
 				limit = {
 					OR = {
 						country_has_primary_culture = cu:lake_thalorian
-						country_has_primary_culture = cu:west_thalorian
-						country_has_primary_culture = cu:central_thalorian
+						country_has_primary_culture = cu:littoral_thalorian
+						country_has_primary_culture = cu:heartland_thalorian
 					}	
 					scope:target_state = {
 						owner = {
@@ -529,8 +529,8 @@ ai_strategy_default = {
 						owner = {
 							OR = {
 								country_has_primary_culture = cu:lake_thalorian
-								country_has_primary_culture = cu:west_thalorian
-								country_has_primary_culture = cu:central_thalorian
+								country_has_primary_culture = cu:littoral_thalorian
+								country_has_primary_culture = cu:heartland_thalorian
 							}	
 						}
 					}
@@ -1200,30 +1200,7 @@ ai_strategy_default = {
 	# How much construction output should the AI aim for
 	# Using this value in other strategies will function additively
 	wanted_construction_output = {
-		value = 10 # Accounts for the 10 free construction from base modifiers
-
-		add = {
-			value = get_net_income
-			divide = 500		
-		}
-		
-		add = {
-			value = get_investment_income
-			divide = 1000
-		}
-
-		add = {
-			value = get_net_income_sq
-			divide = 50000000
-		}
-
-		add = {
-			value = get_investment_income_sq
-			divide = 1000000000
-		}
-
-		min = 1
-		max = 5000
+		value = get_wanted_construction
 	}
 	
 	# How many levels of barracks should the AI have

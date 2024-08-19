@@ -1,4 +1,4 @@
-AI = {
+﻿AI = {
     every_country = {
 		limit = { is_subject = yes }
 		if = {
@@ -20,8 +20,8 @@ AI = {
 			any_country = {			
 				OR = {
 					country_has_primary_culture = cu:lake_thalorian
-					country_has_primary_culture = cu:west_thalorian
-					country_has_primary_culture = cu:central_thalorian
+					country_has_primary_culture = cu:littoral_thalorian
+					country_has_primary_culture = cu:heartland_thalorian
 				}				
 			}
 		}
@@ -32,8 +32,8 @@ AI = {
 				NOT = { country_rank = rank_value:great_power }
 				OR = {
 					country_has_primary_culture = cu:lake_thalorian
-					country_has_primary_culture = cu:west_thalorian
-					country_has_primary_culture = cu:central_thalorian
+					country_has_primary_culture = cu:littoral_thalorian
+					country_has_primary_culture = cu:heartland_thalorian
 				}				
 			}
 			effect_set_non_hostile_mutual_secret_goal_power_difference = yes

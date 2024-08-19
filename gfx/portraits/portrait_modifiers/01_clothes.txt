@@ -303,8 +303,8 @@
                         scope:character ?= {
                             OR = {
                                 AND = {
-                                    exists = cu:west_thalorian
-                                    culture = cu:west_thalorian
+                                    exists = cu:littoral_thalorian
+                                    culture = cu:littoral_thalorian
                                 }
                                 AND = {
                                     exists = cu:lake_thalorian
@@ -2211,7 +2211,7 @@
 
                 has_dlc_feature = ep1_cosmetics
 
-                root ?= {
+                c:RAV ?= {
                     has_technology_researched = bolt_action_rifles
                 }
                 OR = {
@@ -2388,7 +2388,7 @@
 
                 has_dlc_feature = ep1_cosmetics
 
-                root ?= {
+                c:VAI ?= {
                     NOT = { has_technology_researched = rifling }
                 }
                 american_clothes_pop_trigger = yes
@@ -2519,7 +2519,7 @@
 
                 has_dlc_feature = ep1_cosmetics
 
-                root ?= {
+                c:VAI ?= {
                     has_technology_researched = bolt_action_rifles
                 }
                 OR = {
@@ -2829,7 +2829,7 @@
                     officers_clothes_pop_trigger = yes
                 }
 
-                root ?= {
+                c:ARR ?= {
                     has_technology_researched = automatic_machine_guns
                 }
             }
@@ -2857,12 +2857,12 @@
                 OR = {
                     AND = {
                         # innovative generals wear modern uniforms slightly earlier
-                        root ?= {
+                        c:ARR ?= {
                             has_technology_researched = bolt_action_rifles
                         }
                         scope:character ?= { has_trait = innovative }
                     }
-                    root ?= {
+                    c:ARR ?= {
                         has_technology_researched = automatic_machine_guns
                     }
                 }
@@ -5378,7 +5378,7 @@ indigenous_oceanic_high_clothes_recognized = {
                 british_empire_clothes_pop_trigger = yes
                 soldier_clothes_pop_trigger = yes
 
-                root ?= {
+                c:DUM ?= {
                     NOT = { has_technology_researched = repeaters }
                 }
             }
@@ -5482,7 +5482,7 @@ indigenous_oceanic_high_clothes_recognized = {
                     officers_clothes_pop_trigger = yes
                 }
 
-                root ?= {
+                c:DUM ?= {
                     has_technology_researched = bolt_action_rifles
                 }
             }
@@ -5498,7 +5498,7 @@ indigenous_oceanic_high_clothes_recognized = {
                     has_role = general
                 }
 
-                root= {
+                c:DUM ?= {
                     has_technology_researched = bolt_action_rifles
                 }
             }

@@ -74,6 +74,63 @@ DRM = {
 	ai_will_do = { always = no }
 }
 
+DRK = {
+	states = { 
+		STATE_CASTELL_DRYSGOLMARK
+	}
+	required_num_states = 1
+
+	ai_will_do = { always = no }
+}
+BCF = {
+	states = { 
+		STATE_BANCFAN
+	}
+	required_num_states = 1
+
+	ai_will_do = { c:RVC ?= this }
+}
+
+GDL = {
+	states = { 
+		STATE_INCHMARA
+		STATE_GLYNFFORDD
+	}
+	required_num_states = 1
+
+	ai_will_do = { c:RVC ?= this }
+}
+
+DOV = {
+	states = { 
+		STATE_ROSKIRK
+		STATE_THORNWALL
+		STATE_BALLYNE
+	}
+	required_num_states = 2
+
+	ai_will_do = { c:RVC ?= this }
+}
+
+FOX = {
+	states = { 
+		STATE_HARTHALGH
+		STATE_GWYNWEN
+		STATE_INCHMARA
+	}
+	required_num_states = 2
+
+	ai_will_do = { c:RVC ?= this }
+}
+HET = {
+	states = { 
+		STATE_GLASINBLAIR
+	}
+	required_num_states = 1
+
+	ai_will_do = { c:RVC ?= this }
+}
+
 GDS = {
 	states = { 
 		STATE_ORCBANE_PASS
@@ -124,3 +181,85 @@ DEW = {
 	ai_will_do = { always = no }
 
 }
+
+ARR = {
+	use_culture_states = yes
+
+	required_num_states = 7
+	
+	ai_will_do = { always = no }
+
+}
+
+DUM = {
+	use_culture_states = yes
+
+	required_num_states = 9
+	
+	ai_will_do = { always = no }
+
+}
+
+CER = {
+	use_culture_states = yes
+
+	required_num_states = 10
+	
+	ai_will_do = { always = no }
+
+}
+
+EME = {
+	use_culture_states = yes
+
+	required_num_states = 5
+	
+	ai_will_do = { always = no }
+
+}
+
+DAR = {
+	use_culture_states = yes
+
+	required_num_states = 1
+	
+	ai_will_do = { always = no }
+
+}
+
+DAR = {
+	use_culture_states = yes
+
+	required_num_states = 1
+	
+	ai_will_do = { always = no }
+
+}
+
+VHT = {
+	use_culture_states = yes
+
+	required_num_states = 1
+	
+	ai_will_do = { always = no }
+
+}
+
+VOZ = {
+	use_culture_states = yes
+
+	required_num_states = 6
+	
+	ai_will_do = { always = no }
+
+}
+
+DRO = {
+	use_culture_states = yes
+
+	required_num_states = 7
+	
+	ai_will_do = { always = no }
+
+}
+

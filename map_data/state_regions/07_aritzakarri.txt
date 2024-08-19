@@ -28,7 +28,7 @@ STATE_URRATEGI = {
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_logging = 5
-        bg_whaling = 3
+        bg_leviathan_outpost = 3
         bg_fishing = 8
     }
     naval_exit_id = 3059
@@ -46,9 +46,8 @@ STATE_HIRUMENDI = {
     arable_resources = { "bg_livestock_ranches" }
     capped_resources = {
         bg_coal_mining = 32
-        bg_logging = 4
         bg_fishing = 7
-        bg_whaling = 2
+        bg_leviathan_outpost = 2
     }
     resource = {
         type = "bg_wishstone_reefs"
@@ -71,7 +70,7 @@ STATE_KHANZULO = {
         bg_coal_mining = 40
         bg_logging = 2
         bg_fishing = 6
-        bg_whaling = 4
+        bg_leviathan_outpost = 4
         bg_squidding = 2
     }
     resource = {
@@ -275,7 +274,7 @@ STATE_NISHIGARRA = {
     arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_tea_plantations" }
     capped_resources = {
         bg_logging = 3
-        bg_whaling = 2
+        bg_leviathan_outpost = 2
         bg_fishing_glowfish = 8
     }
     resource = {
@@ -294,6 +293,7 @@ STATE_GORRIMENDIA = {
     mine = xF079A9
     wood = xEF67B6
     impassable = { x67f3bb x74c6ed xa9cded }
+    traits = { "state_trait_gorriamundi_mountain" }
     arable_land = 50
     arable_resources = { "bg_maize_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
     capped_resources = {
@@ -441,7 +441,8 @@ STATE_KHIARHI = {
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_tea_plantations" }
     capped_resources = {
         bg_coal_mining = 32
-        bg_logging = 6
+        bg_logging = 8
+        bg_fishing = 9
     }
     naval_exit_id = 3096
 }
@@ -458,7 +459,8 @@ STATE_ONDARA = {
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_tea_plantations" }
     capped_resources = {
         bg_coal_mining = 36
-        bg_logging = 2
+        bg_logging = 8
+        bg_fishing = 7
     }
     naval_exit_id = 3096
 }
@@ -474,7 +476,8 @@ STATE_GARRAMU = {
     arable_land = 10
     arable_resources = { "bg_livestock_ranches" }
     capped_resources = {
-        bg_whaling = 3
+        bg_logging = 8
+        bg_leviathan_outpost = 3
         bg_fishing = 6
     }
     resource = {
@@ -496,7 +499,7 @@ STATE_MUGARA = {
     arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_tea_plantations" }
     capped_resources = {
         bg_logging = 4
-        bg_whaling = 4
+        bg_leviathan_outpost = 4
         bg_fishing_glowfish = 10
     }
     resource = {
@@ -516,6 +519,7 @@ STATE_ARAKALDE = {
     mine = xE7CAA6
     wood = xE5FA27
     impassable = { x49E4E9 x69E4BE x6DBEE9 x85E7F6 xACD3BB xAF76FD xC6F5E3 xCF91EC xE4D4F7 }
+    traits = { "state_trait_wingpalooza_mountains" }
     arable_land = 60
     arable_resources = { "bg_livestock_ranches" }
     capped_resources = {
@@ -594,6 +598,7 @@ STATE_UDABERRI = {
     mine = xF2C5DC
     wood = xEBCC43
     impassable = { x69F79D x85BED4 x8DD890 }
+    traits = { "state_trait_wingpalooza_mountains" }
     arable_land = 40
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_vineyard_plantations" }
     capped_resources = {
@@ -633,13 +638,14 @@ STATE_GARRITXO = {
     mine = xE39AA1
     wood = xD1D66F
     impassable = { xa5e967 }
+    traits = { "state_trait_wingpalooza_mountains" }
     arable_land = 40
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_vineyard_plantations" }
     capped_resources = {
         bg_coal_mining = 20
         bg_logging = 7
         bg_fishing = 2
-        bg_whaling = 2
+        bg_leviathan_outpost = 2
     }
     naval_exit_id = 3096
 }
@@ -741,11 +747,14 @@ STATE_URRIKO = {
     mine = xF0C34E
     wood = xEB8FD7
     impassable = { x3FF0DE x8A87E8 x8D98E6 x8DA0DA xAAEA65 xB4BBBE xB5DB76 xB6F4C5 xB7B9F7 xB8C5EF xBEE094 xD772B0 xDC5AD3 xE3F4ED xEACBCD }
+    traits = { "state_trait_featherpeak_mountains" }
     arable_land = 100
     arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
     capped_resources = {
+        bg_logging = 8
         bg_coal_mining = 28
         bg_iron_mining = 27
+        bg_arritz_ruins = 6
     }
     naval_exit_id = 3064
 }
@@ -781,8 +790,9 @@ STATE_ZUBEROA = {
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_logging = 11
-        bg_whaling = 3
+        bg_leviathan_outpost = 3
         bg_fishing = 8
+        bg_arritz_ruins = 2
     }
     resource = {
         type = "bg_gold_fields"
@@ -804,8 +814,9 @@ STATE_IRAURBE = {
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_logging = 7
-        bg_whaling = 4
+        bg_leviathan_outpost = 4
         bg_fishing = 10
+        bg_arritz_ruins = 2
     }
     resource = {
         type = "bg_gold_fields"
@@ -846,7 +857,7 @@ STATE_KABI = {
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_logging = 8
-        bg_whaling = 4
+        bg_leviathan_outpost = 4
         bg_fishing = 10
     }
     naval_exit_id = 3029
@@ -861,10 +872,12 @@ STATE_LURRA = {
     farm = xF6D283
     mine = xF6A3E4
     wood = xF39674
-    impassable = { x2bf9d9 x44d0f4 x80e8d3 x8cd2bd x98deae xaafeb0 xb9e789 xbfede5 xcd87ed xd3cc9b xdf79ec }
+    impassable = { xd3cc9b x80e8d3 xdf79ec xcd87ed x2bf9d9 x98deae x8cd2bd xb9e789 x44d0f4 xaafeb0 xbfede5 }
+    traits = { "state_trait_featherpeak_mountains" }
     arable_land = 60
     arable_resources = { "bg_livestock_ranches" }
     capped_resources = {
+        bg_logging = 8
         bg_coal_mining = 24
         bg_iron_mining = 22
     }
@@ -883,7 +896,7 @@ STATE_ARGIA = {
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_logging = 12
-        bg_whaling = 6
+        bg_leviathan_outpost = 6
         bg_fishing = 8
     }
     naval_exit_id = 3029
@@ -939,7 +952,7 @@ STATE_XILABA = {
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_tobacco_plantations" }
     capped_resources = {
         bg_logging = 9
-        bg_whaling = 2
+        bg_leviathan_outpost = 2
         bg_fishing = 2
     }
     naval_exit_id = 3040
@@ -1172,6 +1185,7 @@ STATE_GIPUZK = {
     capped_resources = {
         bg_iron_mining = 36
         bg_logging = 14
+        bg_fishing = 8
     }
     resource = {
         type = "bg_rubber"
@@ -1219,6 +1233,7 @@ STATE_ARROLA = {
         bg_logging = 20
         bg_hunting = 12
         bg_fishing = 12
+        bg_dragon_ruins = 6
     }
     resource = {
         type = "bg_rubber"
@@ -1243,7 +1258,7 @@ STATE_OSTATU = {
         bg_iron_mining = 11
         bg_lead_mining = 18
         bg_fishing = 6
-        bg_whaling = 4
+        bg_leviathan_outpost = 4
     }
     naval_exit_id = 3059
 }
@@ -1257,6 +1272,7 @@ STATE_TXORI = {
     mine = xE2B6C9
     wood = xDDD25F
     impassable = { x76a4e4 xb9cd73 }
+    traits = { "state_trait_lore_mountains" }
     arable_land = 38
     arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
     capped_resources = {
@@ -1275,12 +1291,13 @@ STATE_ERDI = {
     mine = xD5C76D
     wood = xB3D97D
     impassable = { xA5F06C }
+    traits = { "state_trait_lore_mountains" }
     arable_land = 25
     arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_logging = 2
         bg_fishing = 12
-        bg_whaling = 4
+        bg_leviathan_outpost = 4
     }
     naval_exit_id = 3093
 }
@@ -1316,7 +1333,7 @@ STATE_ZIENTZI = {
     capped_resources = {
         bg_logging = 6
         bg_fishing = 10
-        bg_whaling = 4
+        bg_leviathan_outpost = 4
     }
     naval_exit_id = 3029
 }
@@ -1330,6 +1347,7 @@ STATE_BAZKA = {
     mine = xCD68E8
     wood = xCBDCFB
     impassable = { xa9f3cd }
+    traits = { "state_trait_lore_mountains" }
     arable_land = 60
     arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
     capped_resources = {
@@ -1379,7 +1397,7 @@ STATE_IBAIA = {
         bg_iron_mining = 15
         bg_lead_mining = 15
         bg_logging = 8
-        bg_whaling = 2
+        bg_leviathan_outpost = 2
         bg_fishing = 6
         bg_squidding = 2
     }
@@ -1404,7 +1422,7 @@ STATE_ARGI = {
     capped_resources = {
         bg_sulfur_mining = 24
         bg_logging = 11
-        bg_whaling = 3
+        bg_leviathan_outpost = 3
         bg_fishing = 8
     }
     resource = {

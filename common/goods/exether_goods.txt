@@ -1,4 +1,4 @@
-##############
+﻿##############
 #  Exether   #
 ##############
 
@@ -13,6 +13,11 @@ entertainment = {
 	consumption_tax_cost = 200
 }
 
+##
+# Enchanted items, historical relics, personal items.
+# Diverse in nature and not useful in large scale industry.
+# See Gizmos for standardized magical tools.
+#
 trinkets = {
 	texture = "gfx/interface/icons/goods_icons/trinkets.dds"
 	cost = 200
@@ -22,6 +27,17 @@ trinkets = {
 	prestige_factor = 15
 
 	traded_quantity = 2
+}
+
+##
+# Used in trinkets production chain
+#
+relics = {
+	texture = "gfx/interface/icons/goods_icons/treasure.dds"
+	cost = 100
+    category = industrial
+
+    prestige_factor = 10
 }
 
 luxury_potions = {
