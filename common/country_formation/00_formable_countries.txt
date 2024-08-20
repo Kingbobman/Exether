@@ -316,3 +316,26 @@ EOA = {
          has_technology_researched = nationalism
     }
 }
+
+KAI = {
+	states = { 
+		STATE_ARTHERA
+		STATE_COCOHAYAT
+		STATE_JERMENION
+		STATE_GRAEA
+		STATE_ARGYSTSIK
+		STATE_MALANJAPORT
+		STATE_MAPACHECO
+	}
+	use_culture_states = yes
+
+	required_states_fraction = 1
+
+	ai_will_do = { always = yes }
+
+	possible = {
+		cu:south_sea_ravager = {
+			is_primary_culture_of = ROOT
+		}
+	}
+}

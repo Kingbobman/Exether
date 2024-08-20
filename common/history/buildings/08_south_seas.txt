@@ -613,12 +613,6 @@
 				level = 1
 				activate_production_methods={ "pm_simple_farming_building_rice_farm"  "pm_tools_disabled" "pm_fig_orchards_building_rice_farm" }
 			}
-			create_building={
-				building="building_barracks"
-				level=3
-				reserves=1
-				activate_production_methods={ "pm_no_organization" }
-			}
 		}
 	}
 
@@ -636,11 +630,20 @@
 				reserves=1
 				activate_production_methods={ "pm_anchorage" }
 			}
-			create_building={
-				building="building_barracks"
-				level=2
-				reserves=1
-				activate_production_methods={ "pm_no_organization" }
+			create_building = {
+				building = "building_military_shipyards"
+				level = 1
+				reserves = 1
+			}
+			create_building = {
+				building = "building_logging_camp"
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_forestry"
+					"pm_hardwood"
+					"pm_no_equipment"
+				}
 			}
 		}
 	}
@@ -1991,6 +1994,205 @@
 				reserves=1
 				level = 1
 				activate_production_methods={ "pm_anchorage" }
+			}
+		}
+	}
+
+		s:STATE_ARTHERA = {
+		region_state:CCO={
+			create_building={
+				building="building_tobacco_plantation"
+				reserves=1
+				level = 1
+				activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }
+			}
+
+			create_building = {
+				building = "building_logging_camp"
+				level = 2
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_forestry"
+					"pm_hardwood"
+					"pm_no_equipment"
+				}
+			}
+			
+			create_building={
+				building="building_port"
+				level = 1
+				reserves=1
+				activate_production_methods={ "pm_anchorage" }
+			}
+			create_building = {
+				building = "building_military_shipyards"
+				level = 1
+				reserves = 1
+			}
+			create_building = {
+				building = "building_iron_mine"
+				level = 1
+				reserves = 1
+			}
+			create_building = {
+				building = "building_construction_sector"
+				level = 1
+			}
+			create_building = {
+				building = "building_cotton_plantation"
+				level = 2
+			}
+		}
+	}
+
+	s:STATE_COCOHAYAT = {
+		region_state:CCO={
+			create_building={
+				building="building_banana_plantation"
+				level = 1
+				reserves=1
+				
+			}
+			create_building={
+				building="building_port"
+				level = 1
+				reserves=1
+				activate_production_methods={ "pm_anchorage" }
+			}
+			create_building = {
+				building = "building_logging_camp"
+				level = 2
+				reserves = 1
+			}
+		}
+	}
+
+	s:STATE_ARGYSTSIK = {
+		region_state:CCO={
+			create_building={
+				building="building_tea_plantation"
+				level = 1
+				reserves=1
+				activate_production_methods={ "default_building_tea_plantation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_tobacco_plantation"
+				level = 1
+				reserves=1
+				activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_banana_plantation"
+				level = 1
+				reserves=1
+
+			}
+			create_building={
+				building="building_port"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_basic_port" }
+			}
+			create_building = {
+				building = "building_logging_camp"
+				level = 2
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_forestry"
+					"pm_hardwood"
+					"pm_no_equipment"
+				}
+			}
+			create_building = {
+				building = "building_shipyards"
+				level = 1
+				reserves = 1
+			}
+			create_building = {
+				building = "building_construction_sector"
+				level = 1
+				reserves = 1
+			}
+		}
+	}
+
+	s:STATE_GRAEA = {
+		region_state:BTR={
+			create_building={
+				building="building_rice_farm"
+				level = 1
+				reserves=1
+				activate_production_methods={ "pm_simple_farming_building_rice_farm" "pm_no_secondary" "pm_tools_disabled"  }
+			}
+            create_building={
+				building="building_fishing_wharf_rusttails"
+                level = 2
+				reserves=1
+				
+			}
+			create_building={
+				building="building_port"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_anchorage" }
+			}
+			create_building = {
+				building = "building_logging_camp"
+				level = 2
+				reserves = 1
+				activate_production_methods = {
+					"pm_simple_forestry"
+					"pm_hardwood"
+					"pm_no_equipment"
+				}
+			}
+		}
+	}
+
+	s:STATE_JERMENION = {
+		region_state:BTR={
+            create_building={
+				building="building_fishing_wharf_rusttails"
+                add_ownership={ 
+                    building={ 
+                        type="building_adventuring_guild"
+                        country="c:BTR"
+                        levels=2
+                        region="STATE_JERMENION"
+                   }
+                }
+				reserves=1
+				
+			}
+
+			create_building = {
+				building = "building_cotton_plantation"
+				level = 2
+				reserves = 1
+			}
+
+			create_building = {
+				building = "building_construction_sector"
+				level = 1
+			}
+
+			create_building={
+				building="building_port"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_anchorage" }
+			}
+
+			create_building = {
+				building = "building_military_shipyards"
+				level = 1
+				reserves = 1
+			}
+
+			create_building = {
+				building = "building_iron_mine"
+				level = 1
+				reserves = 1
 			}
 		}
 	}

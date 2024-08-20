@@ -1,0 +1,515 @@
+namespace = pirate_raid
+
+#Choosign which nation to raid
+pirate_raid.0 = {
+    type = country_event
+    placement = root
+
+    title = pirate_raid.0.t
+    desc = pirate_raid.0.d
+    flavor = pirate_raid.0.f
+    dlc = dlc_roe
+
+    event_image = {
+        video = "europenorthamerica_before_the_battle"
+    }
+
+    is_triggered_only = yes
+
+    duration = 1
+
+    immediate = {
+        random_country = {
+            limit = {
+                any_scope_state = {
+                    check_is_coastal = yes
+                }
+                NOT = {this = root}
+                NOT = { is_country_type = decentralized }
+                OR = {
+                    root = {has_interest_marker_in_region = prev.capital.region}
+                    this.any_scope_state = {
+                        this.state_is_in_locari = yes
+                        this.state_is_in_kailando = yes
+                    }
+                }
+
+            }
+            save_scope_as = raid_random1
+        }
+
+        random_country = {
+            limit = {
+                any_scope_state = {
+                    check_is_coastal = yes
+                }
+                NOT = {this = root}
+                NOT = {this = scope:raid_random1}
+                NOT = { is_country_type = decentralized }
+                OR = {
+                    root = {has_interest_marker_in_region = prev.capital.region}
+                    this.any_scope_state = {
+                        this.state_is_in_locari = yes
+                        this.state_is_in_kailando = yes
+                    }
+                }
+            }
+            save_scope_as = raid_random2
+        }
+
+        if = {
+            limit = {
+                c:SSC = {
+                    is_country_alive = yes
+                    any_scope_state = {
+                        check_is_coastal = yes
+                    }
+                }
+            }
+            c:COV = {
+                save_scope_as = raid_dum
+            }
+        }
+
+        else = {
+            c:DUM = {
+                save_scope_as = raid_dum
+            }
+        }
+    }
+
+    option = {
+        name = pirate_raid.0.a
+        scope:raid_dum = {
+            save_scope_as = target_state
+        }
+    }
+
+    option = {
+        name = pirate_raid.0.b
+        scope:raid_random1 = {
+            save_scope_as = target_country
+        }
+    }
+
+    option = {
+        name = pirate_raid.0.c
+        default_option = yes
+        scope:raid_random2 = {
+            save_scope_as = target_country
+        }
+    }
+
+    after = {
+        set_local_variable = {
+            name = combat_ratio
+            value = {
+                add = root.navy_size
+                divide = scope:target_country.navy_size
+                multiply = 1.5
+            }
+        }
+
+        trigger_if = {
+            limit = {
+                local_var:combat_ratio >= 1
+            }
+            trigger_event = {
+                id = pirate_raid.1
+                days = 7
+                popup = yes
+            }
+        }
+
+        trigger_else = {
+            random_list = {
+                local_var:combat_ratio = {
+                    trigger_event = {
+                        id = pirate_raid.1
+                        days = 7
+                        popup = yes
+                    }
+                }
+                value = {
+                    add = 1
+                    subtract = local_var:combat_ratio
+                } = {
+                    trigger_event = {
+                        id = pirate_raid.3
+                        days = 7
+                        popup = yes
+                    }
+                }
+            }
+        }
+    }
+}
+
+#Kicking off the raids!
+pirate_raid.1 = {
+    type = country_event
+    placement = root
+
+    title = pirate_raid.1.t
+    desc = pirate_raid.1.d
+    flavor = pirate_raid.1.f
+    dlc = dlc_roe
+
+    duration = 1
+
+    event_image = {
+        video = "unspecific_naval_battle"
+    }
+
+    is_triggered_only = yes
+
+    immediate = {
+        set_local_variable = {
+            name = gold_stolen
+            value = {
+                add = local_var:combat_ratio
+                divide = 1.5
+                multiply = 500
+            }
+        }
+    }
+
+    option = {
+        name = pirate_raid.1.a
+        root = {
+            add_treasury = {
+                value = local_var:gold_stolen
+            }
+            change_infamy = 5
+            change_relations = {
+                country = scope:target_country
+                value = -30
+            }
+            ig:ig_landowners = {
+                interest_group_pop_attraction_mult = 0.1
+            }
+            ig:ig_armed_forces = {
+                interest_group_pop_attraction_mult = 0.1
+            }
+        }
+    }
+
+    option = {
+        name = pirate_raid.1.b
+        root = {
+            add_treasury = {
+                value = {
+                    add = local_var:gold_stolen
+                    divide= 2
+                }
+            }
+            add_investment_pool = {
+                value = {
+                    add = local_var:gold_stolen
+                    divide = 2
+                }
+            }
+            change_infamy = 5
+            change_relations = {
+                country = scope:target_country
+                value = -30
+            }
+            ig:ig_landowners = {
+                interest_group_pop_attraction_mult = 0.1
+            }
+            ig:ig_armed_forces = {
+                interest_group_pop_attraction_mult = 0.1
+            }
+        }
+    }
+
+    after = {
+        scope:target_country = {
+            trigger_event = {
+                id = pirate_raid.11
+                popup = yes
+                days = 7
+            }
+        }
+    }
+}
+
+#Failed raid
+pirate_raid.3 = {
+    type = country_event
+    placement = root
+
+    title = pirate_raid.3.t
+    desc = pirate_raid.3.d
+    flavor = pirate_raid.3.f
+    dlc = dlc_roe
+
+    event_image = {
+        video = "unspecific_naval_battle"
+    }
+
+    option = {
+        name = pirate_raid.3.a
+        default_option = yes
+        root = {
+            change_infamy = 2
+            change_relations = {
+                country = scope:target_country
+                value = -15
+            }
+        }
+    }
+}
+
+#Country learning about being raided
+pirate_raid.11 = {
+    type = country_event
+    placement = root
+
+    title = pirate_raid.11.t
+    desc = pirate_raid.11.d
+    flavor = pirate_raid.11.f
+    dlc = dlc_roe
+
+    event_image = {
+        video = "unspecific_naval_battle"
+    }
+
+    option = {
+        name = pirate_raid.11.a
+        root = {
+            add_treasury = {
+                value = {
+                    subtract = local_var:gold_stolen
+                    divide = 2
+                }
+            }
+        }
+    }
+}
+
+
+#A night on the town with the lads
+pirate_raid.2 = {
+    type = country_event
+    placement = root
+
+    title = pirate_raid.2.t
+    desc = pirate_raid.2.d
+    flavor = pirate_raid.2.f
+    dlc = dlc_roe
+
+    event_image = {
+        video = "unspecific_fire"
+    }
+
+    option = {
+        name = pirate_raid.2.a
+        default_option = yes
+
+        scope:main_pirate = {
+            add_investment_pool = 100000
+            create_military_formation = {
+                name = "Converted Traders"
+                type = fleet
+                hq_region = sr:region_elusive_coves
+                combat_unit = {
+                    type = unit_type:combat_unit_type_frigate
+                    state_region = s:STATE_ARGYSTSIK
+                    count = 4
+                }
+            }
+        }
+
+        scope:minor_pirate_1 = {
+            add_investment_pool = 100000
+            create_military_formation = {
+                name = "Converted Traders"
+                type = fleet
+                hq_region = sr:region_elusive_coves
+                combat_unit = {
+                    type = unit_type:combat_unit_type_frigate
+                    state_region = s:STATE_MALANJAPORT
+                    count = 4
+                }
+            }
+            add_liberty_desire = -20
+        }
+
+        scope:minor_pirate_2 = {
+            add_investment_pool = 100000
+            create_military_formation = {
+                name = "Converted Traders"
+                type = fleet
+                hq_region = sr:region_elusive_coves
+                combat_unit = {
+                    type = unit_type:combat_unit_type_frigate
+                    state_region = s:STATE_JERMENION
+                    count = 4
+                }
+            }
+            add_liberty_desire = -20
+        }
+
+        scope:empire_scope = {
+            trigger_event = {
+                id = pirate_raid.21
+                days = 7
+                popup = yes
+            }
+        }
+    }
+    option = {
+        name = pirate_raid.2.b
+
+        scope:main_pirate = {
+            add_investment_pool = 200000
+            create_military_formation = {
+                name = "Converted Traders"
+                type = fleet
+                hq_region = sr:region_elusive_coves
+                combat_unit = {
+                    type = unit_type:combat_unit_type_frigate
+                    state_region = s:STATE_ARGYSTSIK
+                    count = 8
+                }
+            }
+        }
+
+        scope:minor_pirate_1 = {
+            add_investment_pool = 50000
+            create_military_formation = {
+                name = "Converted Traders"
+                type = fleet
+                hq_region = sr:region_elusive_coves
+                combat_unit = {
+                    type = unit_type:combat_unit_type_frigate
+                    state_region = s:STATE_MALANJAPORT
+                    count = 2
+                }
+            }
+            add_liberty_desire = 10
+        }
+
+        scope:minor_pirate_2 = {
+            add_investment_pool = 50000
+            create_military_formation = {
+                name = "Converted Traders"
+                type = fleet
+                hq_region = sr:region_elusive_coves
+                combat_unit = {
+                    type = unit_type:combat_unit_type_frigate
+                    state_region = s:STATE_JERMENION
+                    count = 2
+                }
+            }
+            add_liberty_desire = 10
+        }
+
+        scope:empire_scope = {
+            trigger_event = {
+                id = pirate_raid.21
+                days = 7
+                popup = yes
+            }
+        }
+    }
+}
+
+#And Night of Grief and Fire
+pirate_raid.21 = {
+    type = country_event
+    placement = root
+
+    title = pirate_raid.21.t
+    desc = pirate_raid.21.d
+    flavor = pirate_raid.21.f
+    dlc = dlc_roe
+
+    event_image = {
+        video = "unspecific_fire"
+    }
+
+    option = {
+        name = pirate_raid.21.a
+        default_option = yes
+        scope:empire_scope = {
+            add_treasury = -150000
+            add_radicals = {
+                value = 0.2
+                strata = rich
+            }
+        }
+        scope:cove_colony_scope = {
+            add_treasury = -150000
+            add_liberty_desire = 10
+            add_radicals = {
+                value = 0.2
+            }
+        }
+    }
+    option = {
+        name = pirate_raid.21.b
+        scope:empire_scope = {
+            add_treasury = -300000
+            add_radicals = {
+                value = 0.1
+                strata = rich
+            }
+        }
+        scope:cove_colony_scope = {
+            add_radicals = {
+                value = 0.1
+            }
+        }
+    }
+    option = {
+        name = pirate_raid.21.c
+        scope:empire_scope = {
+            add_radicals = {
+                value = 0.15
+                strata = rich
+            }
+            add_radicals = {
+                value = 0.1
+                strata = middle
+            }
+        }
+        scope:cove_colony_scope = {
+            add_radicals = {
+                value = 0.4
+            }
+            add_treasury = -300000
+        }
+    }
+}
+
+#Raiding Fishing Fleet
+pirate_raid.4 = {
+    type = country_event
+    placement = root
+
+    title = pirate_raid.4.t
+    desc = pirate_raid.4.d
+    flavor = pirate_raid.4.f
+    dlc = dlc_roe
+
+    event_image = {
+        video = "unspecific_naval_battle"
+    }
+}
+
+#Shipwrecked Dunomian Ship
+pirate_raid.5 = {
+    type = country_event
+    placement = root
+
+    title = pirate_raid.5.t
+    desc = pirate_raid.5.d
+    flavor = pirate_raid.5.f
+    dlc = dlc_roe
+
+    event_image = {
+        video = "unspecific_naval_battle"
+    }
+}
