@@ -139,7 +139,7 @@ s:STATE_FROSTGATE = {
 s:STATE_ICEWIND = {
 	create_state = {
 	country = c:ICE
-	owned_provinces = { "x1D320D" "x9AFDF5" "x9BB1F6" "xA8A0DD" "xA8E49C" "xBC89BD" "xD6EB8F" "xDFA3C8" "xE1A978" "xE8EB92" "xFCA88E" }
+	owned_provinces = { x9AFDF5 x9BB1F6 xA8E49C xBC89BD xD6EB8F xDFA3C8 xE1A978 xE8EB92 xFCA88E }
 	}
 	add_homeland = cu:varyngi
 }
@@ -396,8 +396,20 @@ s:STATE_BALATHOUL = {
 s:STATE_LIGHTSCOURGE = {
 	create_state = {
 	country = c:BCT
-	owned_provinces = { "x1E813B" "x31AD8E" "x37E24C" "x61FEFE" "x758062" "x8BE5E5" "xB39559" "xBBD6C6" "xD74092" "xD98B96" "xE69C9B" "xF6F21F" "xFFB809" }
+	owned_provinces = { x37E24C x46C693 x61FEFE x8BE5E5 xA8A0DD xAA9BF5 xB27B5C xB39559 xBBD6C6 xD74092 xD98B96 xE69C9B xF6F21F xFFB809 }
 	}
+	add_homeland = cu:arcthar #Sets the state to be a homeland for whatever culture you put here.
+}
+
+s:STATE_ARCTHARAL = {
+	create_state = {
+	country = c:BCT
+	owned_provinces = { xd64579 x8695EB x87BBE9 xCCF048 xD8D75D xE540FA }
+	}
+	create_state = {
+		country = c:DWF
+		owned_provinces = { x46C694 x4DD295 x64A812 xAE0FFC xB27B5D }
+		}
 	add_homeland = cu:arcthar #Sets the state to be a homeland for whatever culture you put here.
 }
 
@@ -705,7 +717,7 @@ s:STATE_MALDARBLANE = {
 s:STATE_TYMANS_FOLLY = {
 	create_state = {
 	country = c:MBR
-	owned_provinces = { "x46EAC7" "x65B2EC" "x7FF6EC" "xAA9BF5" "xBAF5CA" "xCBF4BA" "xCCF048" "xD1A7CF" "xDD2CFB" "xDFF9CD" "xE0E357" "xE540FA" "xECBBAC" }
+	owned_provinces = { x46EAC7 x65B2EC x7FF6EC xBAF5CA xCBF4BA xD1A7CF xDD2CFB xDFF9CD xE0E357 xECBBAC }
 	}
 	add_homeland = cu:avalorean #Sets the state to be a homeland for whatever culture you put here.
 	add_homeland = cu:nivaskyan
@@ -966,7 +978,7 @@ s:STATE_SIFSKER = {
 s:STATE_GRYTINGARIK = {
 	create_state = {
 	country = c:ICE
-	owned_provinces = { "x8695EB" "x87BBE9" "xA6C7DA" "xC4B5CE" "xD8D75D" "xE884A5" }
+	owned_provinces = { xA6C7DA xC4B5CE xE884A5 }
 	}
 	add_homeland = cu:varyngi
 	add_homeland = cu:nivaskyan
