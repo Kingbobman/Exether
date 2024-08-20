@@ -1,48 +1,24 @@
-﻿pm_wooden_gizmos = {
+﻿pm_basic_gizmos = {
 	texture = "gfx/interface/icons/production_method_icons/crude_tools.dds"
 	
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_wishstone_add = 20
+			goods_input_wishstone_add = 20		#x50 = 1000
 
 			# output goods
-			goods_output_gizmos_add = 30
+			goods_output_gizmos_add = 25		#x60 = 1500
 		}
 
 		level_scaled = {
 			building_employment_shopkeepers_add = 500
-			building_employment_laborers_add = 4500
+			building_employment_wizards_add = 500
+			building_employment_laborers_add = 4000
 		}
 	}
 }
 
-pm_plastic_gizmos = {
-	#texture = "gfx/interface/icons/production_method_icons/pig_iron_tools.dds"
-	
-	unlocking_technologies = {
-		soulforges #placeholder?
-	}	
-	
-	building_modifiers = {
-		workforce_scaled = {
-			# input goods
-			goods_input_trinkets_add = 10
-			goods_input_oil_add = 30
-			goods_input_wishstone_add = 20
-			
-			# output goods
-			goods_output_gizmos_add = 110
-		}
 
-		level_scaled = {
-			building_employment_shopkeepers_add = 500
-			building_employment_laborers_add = 3000
-			building_employment_wizards_add = 1000
-			building_employment_engineers_add = 500
-		}
-	}
-}
 
 pm_steel_gizmos = {
 	texture = "gfx/interface/icons/production_method_icons/bessemer_process.dds"
@@ -91,6 +67,34 @@ pm_rubber_gizmos = {
 		}
 	}
 }
+
+pm_plastic_gizmos = {
+	#texture = "gfx/interface/icons/production_method_icons/pig_iron_tools.dds"
+	
+	unlocking_technologies = {
+		soulforges #placeholder?
+	}	
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_relics_add = 10
+			goods_input_oil_add = 30
+			goods_input_wishstone_add = 20
+			
+			# output goods
+			goods_output_gizmos_add = 110
+		}
+
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 3000
+			building_employment_wizards_add = 1000
+			building_employment_engineers_add = 500
+		}
+	}
+}
+
 #alter workforce for gizmo productiom PMs soon-Grappes
 pm_watertube_boiler_building_gizmo_workshop = {
 	texture = "gfx/interface/icons/production_method_icons/watertube_boiler.dds"
