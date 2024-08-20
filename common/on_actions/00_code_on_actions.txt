@@ -224,6 +224,13 @@ on_yearly_pulse_country = {
 				}
 			}
 		}
+		
+		if = {
+			limit = {
+				has_modifier = salt_waste_half_orcs_birth
+			}
+			trigger_event = { id = salt_waste_narrative_events.2 }
+		}
 	}
 	on_actions = { # delay ensures events won't fire simultaneously
 		on_yearly_events
