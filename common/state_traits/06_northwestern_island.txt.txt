@@ -1,14 +1,23 @@
-﻿state_trait_rimeroot_jungle = {
+﻿state_trait_rimeroot_frost = {
 	icon = "gfx/interface/icons/state_trait_icons/resources_lumber.dds"
 	required_techs_for_colonization = {
-		"airship"
+		"watertube_boiler"
 	}
+	disabling_technologies = {
+		"rubber_mastication"
+	}
+	modifier = {
+		state_construction_mult = -0.2
+		state_infrastructure_mult = -0.1
+	}
+}
+
+state_trait_rimeroot_jungle = {
+	icon = "gfx/interface/icons/state_trait_icons/resources_lumber.dds"
 	modifier = {
 		goods_output_hardwood_mult = 0.2
 		goods_output_wood_mult = 0.25
 		goods_output_coal_mult = 0.15
-		state_construction_mult = -0.2
-		state_infrastructure_mult = -0.1
 	}
 }
 
