@@ -325,13 +325,12 @@ STATE_FROSTGATE = {
 STATE_ICEWIND = {
     id = 4016
     subsistence_building = "building_subsistence_fishing_villages"
-    provinces = { x1D320D x9AFDF5 x9BB1F6 xA8A0DD xA8E49C xBC89BD xD6EB8F xDFA3C8 xE1A978 xE8EB92 xFCA88E }
+    provinces = { x9AFDF5 x9BB1F6 xA8E49C xBC89BD xD6EB8F xDFA3C8 xE1A978 xE8EB92 xFCA88E }
     port = xDFA3C8
     city = xFCA88E
     farm = xE8EB92
     mine = xE1A978
     wood = xD6EB8F
-    impassable = { xA8A0DD }
     traits = { "state_trait_whistling_summits" }
     arable_land = 30
     arable_resources = { "bg_livestock_ranches" }
@@ -609,6 +608,10 @@ STATE_WYRMBONE_CLIFFS = {
         depleted_type = "bg_gold_mining"
         undiscovered_amount = 12
     }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 31
+    }
     naval_exit_id = 3034
 }
 STATE_WHISPERPINE_WOODS = {
@@ -680,6 +683,10 @@ STATE_ELDBERG = {
         bg_wishstone_mining = 17
         bg_fishing = 3
         bg_monuments = 1
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 20
     }
     naval_exit_id = 3022
 }
@@ -945,12 +952,12 @@ STATE_BALATHOUL = {
 STATE_LIGHTSCOURGE = {
     id = 4047
     subsistence_building = "building_subsistence_farms"
-    provinces = { x1E813B x31AD8E x37E24C x61FEFE x758062 x8BE5E5 xB39559 xBBD6C6 xD74092 xD98B96 xE69C9B xF6F21F xFFB809 }
-    city = xF6F21F
-    farm = xE69C9B
-    mine = xD98B96
-    wood = xD74092
-    impassable = { x61FEFE xBBD6C6 }
+    provinces = { x37E24C x46C693 x61FEFE x8BE5E5 xA8A0DD xAA9BF5 xB27B5C xB39559 xBBD6C6 xD74092 xD98B96 xE69C9B xF6F21F xFFB809 }
+    city = x31AD8E
+    farm = x46C693
+    mine = x37E24C
+    wood = xFFB809
+    impassable = { x61FEFE xBBD6C6 xE69C9B xF6F21F x8BE5E5 xAA9BF5 xA8A0DD }
     traits = { "state_trait_whistling_summits" }
     arable_land = 50
     arable_resources = { "bg_underfarms" "bg_spider_ranch" "bg_livestock_ranches" }
@@ -961,6 +968,29 @@ STATE_LIGHTSCOURGE = {
         bg_iron_mining = 45
         bg_sulfur_mining = 10
         bg_lead_mining = 4
+        bg_monuments = 1
+    }
+    naval_exit_id = 3122
+}
+
+STATE_ARCTHARAL = {
+    id = 4102
+    subsistence_building = "building_subsistence_farms"
+    provinces = { x46C694 x4DD295 x64A812 x8695EB x87BBE9 xAE0FFC xB27B5D xCCF048 xD64579 xD8D75D xE540FA }
+    impassable = { x8695EB x87BBE9 xCCF048 xD8D75D xE540FA }
+    prime_land = { xD64579 x64A812 }
+    city = xD64579
+    farm = x64A812
+     mine = xAE0FFC
+    wood = xB27B5D
+    traits = { "state_trait_whistling_summits" }
+    arable_land = 77
+    arable_resources = { "bg_underfarms" "bg_spider_ranch" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_cloud_collecting = 38
+        bg_coal_mining = 65
+        bg_mushroom_logging = 12
+        bg_iron_mining = 45
         bg_monuments = 1
     }
 }
@@ -1175,6 +1205,10 @@ STATE_COLESSIE = {
         bg_fishing = 6
     }
     resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 11
+    }
+    resource = {
         type = "bg_gold_fields"
         depleted_type = "bg_gold_mining"
         undiscovered_amount = 4
@@ -1224,6 +1258,10 @@ STATE_KENLYNE = {
         type = "bg_gold_fields"
         depleted_type = "bg_gold_mining"
         undiscovered_amount = 3
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 14
     }
     naval_exit_id = 3022
 }
@@ -1451,7 +1489,7 @@ STATE_CASTELL_DRYSGOLMARK = {
     }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 10
+        undiscovered_amount = 25
     }
     naval_exit_id = 3025
 }
@@ -1588,6 +1626,10 @@ STATE_FALMAKELD = {
         bg_fishing = 10
         bg_wishstone_mining = 14
     }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 17
+    }
     naval_exit_id = 3039
 }
 STATE_MALDARBLANE = {
@@ -1620,13 +1662,12 @@ STATE_MALDARBLANE = {
 STATE_TYMANS_FOLLY = {
     id = 4083
     subsistence_building = "building_subsistence_farms"
-    provinces = { x46EAC7 x65B2EC x7FF6EC xAA9BF5 xBAF5CA xCBF4BA xCCF048 xD1A7CF xDD2CFB xDFF9CD xE0E357 xE540FA xECBBAC }
+    provinces = { x46EAC7 x65B2EC x7FF6EC xBAF5CA xCBF4BA xD1A7CF xDD2CFB xDFF9CD xE0E357 xECBBAC }
     port = xBAF5CA
     city = xECBBAC
     farm = xE540FA
     mine = xE0E357
     wood = xDFF9CD
-    impassable = { xAA9BF5 xCCF048 }
     traits = { "state_trait_squid_breeding_grounds" "state_trait_whistling_summits" }
     arable_land = 35
     arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
@@ -1658,6 +1699,10 @@ STATE_HJELTIAS_GLACIER = {
         bg_fishing = 9
         bg_wishstone_mining = 13
     }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 13
+    }
     naval_exit_id = 3039
 }
 STATE_NORDFJALL = {
@@ -1681,7 +1726,7 @@ STATE_NORDFJALL = {
     }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 50
+        undiscovered_amount = 80
     }
 
 }
@@ -1750,6 +1795,10 @@ STATE_HRAFNSDALR = {
         type = "bg_gold_fields"
         depleted_type = "bg_gold_mining"
         undiscovered_amount = 12
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 25
     }
     naval_exit_id = 3034
 }
@@ -2098,6 +2147,10 @@ STATE_RAGNARKULL = {
         depleted_type = "bg_gold_mining"
         undiscovered_amount = 4
     }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 15
+    }
     naval_exit_id = 3039
 }
 
@@ -2179,7 +2232,7 @@ STATE_FORRTORP = {
     }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 5
+        undiscovered_amount = 10
     }
     naval_exit_id = 3022
 }
@@ -2348,13 +2401,12 @@ STATE_SIFSKER = {
 STATE_GRYTINGARIK = {
     id = 4134
     subsistence_building = "building_subsistence_fishing_villages"
-    provinces = { x8695EB x87BBE9 xA6C7DA xC4B5CE xD8D75D xE884A5 }
+    provinces = { xA6C7DA xC4B5CE xE884A5 }
     port = xA6C7DA
     city = xE884A5
     farm = xD8D75D
     mine = xC4B5CE
     wood = x87BBE9
-    impassable = { x8695EB }
     traits = { "state_trait_squid_breeding_grounds" "state_trait_whistling_summits" }
     arable_land = 13
     arable_resources = { "bg_livestock_ranches" }

@@ -224,4 +224,85 @@
 			transfer_to_formation = scope:rse_army
 		}
 	}
+	c:GMR ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_north_chin_desert
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_NAWIYANU
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_SAVAGE_REACH
+				count = 4
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_NAWIYANU
+				count = 2
+			}
+			save_scope_as = gmr_army
+		}
+		
+		create_character = {
+			is_general = yes
+			hq = region_north_chin_desert
+			save_scope_as = gmr_general
+		}
+		scope:gmr_general = {
+			transfer_to_formation = scope:gmr_army
+		}
+	}
+	c:SNL ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_salt_wastes
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_SNAILBANE
+				count = 16
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_SNAILBANE
+				count = 4
+			}
+			save_scope_as = snl_army
+		}
+		
+		create_character = {
+			is_general = yes
+			hq = region_salt_wastes
+			save_scope_as = snl_general
+		}
+		scope:snl_general = {
+			transfer_to_formation = scope:snl_army
+		}
+	}
+	c:BGR ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_salt_wastes
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_ROUGHSTONE_TERRITORY_2
+				count = 11
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_FIERCEHOLD
+				count = 6
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_ROUGHSTONE_TERRITORY_2
+				count = 4
+			}
+		}
+	}
 }
