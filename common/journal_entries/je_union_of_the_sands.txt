@@ -140,24 +140,18 @@ je_union_of_the_sands = {
 				this = c:DRO
 				exists = C:VOZ
 				c:VOZ = {
-						OR = {
+					NOT = {
+						OR = {						
 							has_attitude = {
 								who = c:DRO
-								attitude = genial
-							}
-							has_attitude = {
-								who = c:DRO
-								attitude = conciliatory
-							}							
-							has_attitude = {
-								who = c:DRO
-								attitude = loyal
+								attitude = rebellious
 							}	
 							has_attitude = {
 								who = c:DRO
-								attitude = cooperative
+								attitude = defiant
 							}							
 						}
+					}
 				}
 			}
 			AND = {
@@ -165,24 +159,18 @@ je_union_of_the_sands = {
 				this = c:VOZ
 				exists = C:DRO
 				c:DRO = {
-						OR = {
+					NOT = {
+						OR = {						
 							has_attitude = {
 								who = c:VOZ
-								attitude = genial
-							}
-							has_attitude = {
-								who = c:VOZ
-								attitude = conciliatory
-							}							
-							has_attitude = {
-								who = c:VOZ
-								attitude = loyal
+								attitude = rebellious
 							}	
 							has_attitude = {
 								who = c:VOZ
-								attitude = cooperative
+								attitude = defiant
 							}							
 						}
+					}
 				}
 			}
 		}

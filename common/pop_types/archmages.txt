@@ -34,8 +34,16 @@
 	qualifications_growth_desc = "ARCHMAGES_QUALIFICATIONS_DESC"
 	qualifications = {
 		if = {
+			limit = { 
+				is_peasant_under_serfdom = yes 
+			}
+			value = {
+				desc = "QUALIFICATIONS_PEASANTS_UNDER_SERFDOM"
+				value = 0
+			}
+		}
+		else_if = {
 			limit = {
-				is_peasant_under_serfdom = no
 				literacy_rate > 0.5
 				wealth > 10
 			}
@@ -80,17 +88,17 @@
 			}
 		}
 		else_if = {
-			limit = { 
-				is_peasant_under_serfdom = yes 
+			limit = {
+				literacy_rate <= 0.5
 			}
-			value = {
-				desc = "QUALIFICATIONS_PEASANTS_UNDER_SERFDOM"
-				value = 0
-			}
-		}
-		else = {
 			value = {
 				desc = "QUALIFICATIONS_INSUFFICIENT_LITERACY_DECAY"
+				value = -2
+			}
+		}
+		else = {		
+			value = {
+				desc = "QUALIFICATIONS_INSUFFICIENT_WEALTH_DECAY"
 				value = -2
 			}
 		}

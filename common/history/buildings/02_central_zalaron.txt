@@ -1,4 +1,4 @@
-BUILDINGS = {
+﻿BUILDINGS = {
 
 	s:STATE_FUNÉTUN = {
 		region_state:OPA={
@@ -5157,7 +5157,31 @@ BUILDINGS = {
 					building={ 
 						type="building_manor_house"
 						country="c:VAI"
-						levels=10
+						levels=2
+						region="STATE_BLUMETO"
+				   }
+				}
+				reserves=1
+				activate_production_methods={ "pm_simple_farming" "pm_potatoes" "pm_tools_disabled"  }
+			}
+		}
+	}
+
+	s:STATE_BLUMETO = {
+		region_state:TPK = {
+			create_building={
+				building="building_fishing_wharf"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_fishing_trawlers" "pm_unrefrigerated" }
+			}
+			create_building={
+				building="building_rye_farm"
+				add_ownership={ 
+					building={ 
+						type="building_manor_house"
+						country="c:VAI"
+						levels=2
 						region="STATE_BLUMETO"
 				   }
 				}
