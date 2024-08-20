@@ -192,7 +192,7 @@ pm_simple_potion_production = {
 			goods_input_monster_essence_add = 20		# x40 = 800
 
 			# output goods
-			goods_output_potions_add = 30				# x50 = 1500
+			goods_output_potions_add = 25				# x50 = 1250
 		}
 
 		level_scaled = {
@@ -207,16 +207,18 @@ pm_simple_potion_production = {
 pm_early_potion_vat_production = {
 	texture = "gfx/interface/icons/production_method_icons/synthetic_dyes.dds"
 	
-
+	unlocking_technologies = {
+		wishstone_machines
+	}
 
 	building_modifiers = {
 		workforce_scaled = {
             # input goods
-			goods_input_tools_add = 5					# x40 = 200
-			goods_input_monster_essence_add = 30		# x40 = 1200
+			goods_input_gizmos_add = 5					# x60 = 300
+			goods_input_monster_essence_add = 25		# x40 = 1000
 
 			# output goods
-			goods_output_potions_add = 55				# x50 = 2750
+			goods_output_potions_add = 45				# x50 = 2250
 		}
 
 		level_scaled = {
@@ -238,11 +240,11 @@ pm_wishtone_potion_process_production = {
 	building_modifiers = {
 		workforce_scaled = {
 
-			goods_input_monster_essence_add = 35		# x40 = 1400
+			goods_input_monster_essence_add = 30		# x40 = 1200
 			goods_input_wishstone_add = 10				# x50 = 500
-			goods_input_tools_add = 5					# x40 = 200
+			goods_input_gizmos_add = 5					# x60 = 300
 			
-			goods_output_potions_add = 70				# x50 = 3500
+			goods_output_potions_add = 65				# x50 = 3250
 		}
 
 		level_scaled = {
@@ -266,12 +268,11 @@ pm_cool_name_potion_process_production = {
 	building_modifiers = {
 		workforce_scaled = {
 			
-			goods_input_tools_add = 5
-			goods_input_monster_essence_add = 35
-			goods_input_wishstone_add = 5
-			goods_input_sulfur_add = 10
+			goods_input_gizmos_add = 10				#x60 = 600
+			goods_input_monster_essence_add = 40	#x40 = 1600
+			goods_input_wishstone_add = 10			#x50 = 500				
 			
-			goods_output_potions_add = 90
+			goods_output_potions_add = 90			#x50 = 4500
 		}
 
 		level_scaled = {
@@ -288,14 +289,6 @@ pm_cool_name_potion_process_production = {
 
 pm_water-based_potions = {
 	texture = "gfx/interface/icons/production_method_icons/crude_tools.dds"  #change
-	
-	building_modifiers = {
-		workforce_scaled = {
-			
-			goods_output_potions_add = -10
-		}
-
-	}
 }
 
 pm_alcohol-based_potions = {
@@ -304,8 +297,10 @@ pm_alcohol-based_potions = {
 	building_modifiers = {
 		workforce_scaled = {
 			
-			goods_input_liquor_add = 10
-			goods_output_potions_add = 10
+			goods_input_liquor_add = 10				#x40 = 400
+			goods_output_potions_add = -10			#x50 = 500
+			
+			goods_output_luxury_potions_add = 15	#x80 = 1200
 		}
 
 
@@ -318,50 +313,97 @@ pm_oil-based_potions = {
 	building_modifiers = {
 		workforce_scaled = {
 			
-			goods_input_blubber_add = 10
-			goods_output_potions_add = 20
+			goods_input_blubber_add = 15			#x40 = 600
+
+			goods_output_potions_add = 20			#x50 = 1000
 		}
 	}
 }
 
-#pm_super-based_potions  probably a magical base, but something other than godsblood.   Unless????
+pm_universally_based_potions = {
+	texture = "gfx/interface/icons/production_method_icons/steamworks.dds"
 
-pm_no_cosmetic_potion_production = {
+	unlocking_technologies = {
+		soulforges
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_oil_add = 10				#x40 = 400
+			goods_input_ectoplasm_add = 15			#x40 = 600
+		
+			goods_output_luxury_potions_add = 10	#x80 = 800
+			goods_output_potions_add = 15			#x50 = 750
+		}
+	}
+}
+
+pm_no_mixins = {
 texture = "gfx/interface/icons/production_method_icons/no_potion_sap.dds"
 }
 
-pm_base_cosmetic_potion_production = {
+pm_sweet_mixins = {
 	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
 	building_modifiers = {
 		workforce_scaled = {
 			
-			goods_input_lead_add = 3
-			goods_output_potions_add = -15
-			goods_output_luxury_potions_add = 12
-		}
+			goods_input_lead_add = 10				#x50 = 500
+			goods_output_potions_add = -10			#x50 = 500
 
-		unscaled = {
-			building_laborers_mortality_mult = 0.05
+			goods_output_luxury_potions_add = 15	#x80 = 1200
 		}
 	}
 }
 
-pm_advanced_cosmetic_potion_production = {
-texture = "gfx/interface/icons/production_method_icons/increased_potion_sap.dds"
-	unlocking_technologies = {
-		conveyors
-	}
-	#lock to late tech
+pm_functional_mixins = {
+	texture = "gfx/interface/icons/production_method_icons/increased_potion_sap.dds"
+	
 	building_modifiers = {
 		workforce_scaled = {
-			
-			goods_input_lead_add = 6
-			goods_output_potions_add = -30
-			goods_output_luxury_potions_add = 24
-		}
+			goods_input_iron_add = 15				#x30 = 450
 
-		unscaled = {
-			building_laborers_mortality_mult = 0.05
+			goods_output_potions_add = 15			#x50 = 750
+		}
+	}
+}
+
+pm_vile_mixins = {
+	texture = "gfx/interface/icons/production_method_icons/increased_potion_sap.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_wine_add = 10				#x50 = 500
+			goods_input_dye_add = 15				#x40 = 600
+
+			goods_output_luxury_potions_add = 20	#x80 = 1600
+		}
+	}
+}
+
+pm_basic_filters = {
+	texture = "gfx/interface/icons/production_method_icons/canneries.dds"
+}
+
+pm_retaining_filters = {
+	texture = "gfx/interface/icons/production_method_icons/canneries.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 10				#x30 = 300
+
+			goods_input_monster_essence_add = -15	#x30 = 450
+		}
+	}
+}
+
+pm_fine_filters = {
+	texture = "gfx/interface/icons/production_method_icons/canneries.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_coal_add = 10				#x30 = 300
+
+			goods_input_gizmos_add = -5				#x60 = 300
 		}
 	}
 }
