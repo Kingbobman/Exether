@@ -1378,130 +1378,35 @@ pm_basic_game_hunting_potions = {
 	}
 	building_modifiers = {
 		unscaled = {
-			building_goods_output_mult = 0.15
+			goods_output_fabric_mult = 0.10
+			goods_output_meat_mult = 0.05
 			building_adventurers_mortality_mult = -0.05
 		}
 		workforce_scaled = {
 			goods_input_potions_add = 2
 			goods_input_liquor_add = 3
 		}
+		level_scaled = {
+			building_employment_laborers_add = -500
+		}
 	}
 }
 pm_wash_it_down = {
 	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
 	unlocking_technologies = {
-    alchemy
+    alchemical_transmutation
 	}
 	building_modifiers = {
 		unscaled = {
-			building_goods_output_mult = 0.30
+			goods_output_fabric_mult = 0.15
+			goods_output_meat_mult = 0.10
 			building_adventurers_mortality_mult = -0.15
 		}
 		workforce_scaled = {
 			goods_input_potions_add = 15
 		}
-	}
-}
-
-pm_simple_accumulation_dragon_ruins = {
-	texture = "gfx/interface/icons/production_method_icons/picks_and_shovels.dds"
-
-	building_modifiers = {
-		workforce_scaled = {
-			# input goods
-		
-			
-			# output goods
-			goods_output_iron_add = 5
-			goods_output_tools_add = 15
-		}
-
 		level_scaled = {
-			building_employment_laborers_add = 4500
-			building_employment_shopkeepers_add = 500
-		}
-	}
-}
-
-pm_complex_accumulation_dragon_ruins = {
-	texture = "gfx/interface/icons/production_method_icons/picks_and_shovels.dds"
-	unlocking_technologies = {
-		mechanical_tools
-	}
-	building_modifiers = {
-		workforce_scaled = {
-			# input goods
-
-			goods_input_groceries_add = 10
-		
-			
-			# output goods
-			goods_output_iron_add = 10
-			goods_output_tools_add = 35
-		}
-
-		level_scaled = {
-			building_employment_laborers_add = 4000
-			building_employment_shopkeepers_add = 500
-			building_employment_machinists_add = 500
-		}
-	}
-}
-
-pm_uses_gizmo_accumulation_dragon_ruins = {
-	texture = "gfx/interface/icons/production_method_icons/picks_and_shovels.dds"
-	unlocking_technologies = {
-		mechanical_tools #we could change this
-	}
-	building_modifiers = {
-		workforce_scaled = {
-			# input goods
-			goods_input_gizmos_add = 10
-			goods_input_groceries_add = 10
-			
-			# output goods
-			goods_output_iron_add = 15
-			goods_output_tools_add = 55
-		}
-
-		level_scaled = {
-			building_employment_laborers_add = 3500
-			building_employment_shopkeepers_add = 500
-			building_employment_machinists_add = 500
-			building_employment_wizards_add = 500
-		}
-	}
-}
-
-pm_no_trinkets = {
-	texture = "gfx/interface/icons/production_method_icons/no_hardwood_selection.dds"
-}
-
-pm_a_few_trinkets_as_a_treat = {
-	texture = "gfx/interface/icons/production_method_icons/hardwood_selection.dds"
-	building_modifiers = {
-		workforce_scaled = {
-			# output goods										
-			goods_output_iron_add = -5
-			goods_output_tools_add = -6
-			goods_output_trinkets_add = 2
-		}
-	}
-}
-
-pm_trinket_trinket_city_b = {
-	texture = "gfx/interface/icons/production_method_icons/increased_hardwood.dds"
-
-	unlocking_production_methods = {
-		pm_complex_accumulation_dragon_ruins
-		pm_uses_gizmo_accumulation_dragon_ruins
-	}
-
-	building_modifiers = {
-		workforce_scaled = {
-			goods_output_iron_add = -15
-			goods_output_tools_add = -18
-			goods_output_trinkets_add = 6
+			building_employment_laborers_add = -1250
 		}
 	}
 }
@@ -1638,9 +1543,9 @@ pm_advanced_spiders = {
 	texture = "gfx/interface/icons/production_method_icons/butchering_tools.dds"			
 	building_modifiers = {				
 		workforce_scaled = {
-			goods_input_tools_add = 5
-			goods_input_meat_add = 10
-			goods_output_fabric_add = 80
+			goods_input_tools_add = 5  #40 200
+			goods_input_meat_add = 10  #30 300
+			goods_output_fabric_add = 80  #20 1600 = 1100$$
 		}
 
 		level_scaled = {
@@ -1754,17 +1659,13 @@ pm_spider_enlargement = {
 			#input goods
 			goods_input_potions_add = 5
 			goods_output_monster_essence_add = 15
+			goods_output_fabric_add = 15
 		}
 
 		level_scaled = {
 			#employment
 			building_employment_wizards_add = 500
 			building_employment_laborers_add = -1000
-		}
-		unscaled = {
-			#building modifiers
-			goods_output_fabric_mult = 0.2
-			goods_output_silk_mult = 0.2
 		}
 		unscaled = {
 	
@@ -1791,17 +1692,13 @@ pm_big_safe_spiders = {
 			#input goods
 			goods_input_potions_add = 10
 			goods_output_monster_essence_add = 25
+			goods_output_fabric_add = 30
 		}
 
 		level_scaled = {
 			#employment
 			building_employment_wizards_add = 500
 			building_employment_laborers_add = -1000
-		}
-		unscaled = {
-			#building modifiers
-			goods_output_fabric_mult = 0.4
-			goods_output_silk_mult = 0.3
 		}
 	}
 }

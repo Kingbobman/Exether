@@ -1,4 +1,4 @@
-﻿# parent_group = parent_group_key		If set, this group is considered a child of the specified group. Default no parent.
+# parent_group = parent_group_key		If set, this group is considered a child of the specified group. Default no parent.
 # always_possible = yes/no				If yes, building types in this group are always permitted regardless of resources in state. Default no.
 # economy_of_scale = yes/no				If yes, any non-subsistence buildings in or underneath this group will get an economy of scale throughput modifier for each level > 1. Default no.
 # is_subsistence = yes/no				If yes, buildings of types in this group are considered subsistence buildings that follow special rules. Default no.
@@ -130,30 +130,8 @@ bg_beekeeping = {
 	can_use_slaves = no
 }
 
-bg_dragon_ruins = {
-	category = rural
-
-	capped_by_resources = yes
-	
-	economy_of_scale = yes
-	
-	can_use_slaves = yes
-	
-	default_building = building_dragon_ruins
-	
-	lens = forestry	
-	
-	cash_reserves_max = 25000
-	
-	urbanization = 5
-	infrastructure_usage_per_level = 1
-	
-	should_auto_expand = { 
-		default_auto_expand_rule = yes
-	}
-	
-	economy_of_scale_ai_factor = 1.5
-	foreign_investment_ai_factor = 1.0
+bg_relics_processing = {
+    parent_group = bg_magic_light_industry
 }
 
 bg_wishstone_mining_depletable = { 
@@ -302,7 +280,7 @@ bg_wyrmfruit_plantations = {
 }
 
 bg_songberry_plantations = {
-	parent_group = bg_plantations_discoverable
+	parent_group = bg_plantations
 	
 	default_building = building_songberry_plantation
 }
@@ -313,7 +291,7 @@ bg_cold_rubber = {
 }
 
 bg_mint_tea_plantations = {
-	parent_group = bg_plantations_discoverable
+	parent_group = bg_plantations
 
 	default_building = building_mint_tea_plantation
 }
