@@ -51,6 +51,18 @@
 				set_ig_trait = ig_trait:ig_trait_treasury_bonds
 			}
 		}
+
+		if = {
+			limit ={
+				owner ={
+					country_has_primary_culture = cu:south_sea_ravager
+				}
+			}
+			ig:ig_petty_bourgeoisie = {
+				remove_ideology = ideology_reactionary
+				add_ideology = ideology_anarchical_reactionary
+			}
+		}
 	}
 
 	on_disable = {}

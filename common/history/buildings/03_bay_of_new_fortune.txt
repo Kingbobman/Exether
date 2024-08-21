@@ -1,4 +1,4 @@
-BUILDINGS = {
+﻿BUILDINGS = {
 	s:STATE_KILIMASAWA = {
 
 	}
@@ -1056,6 +1056,47 @@ BUILDINGS = {
 				activate_production_methods={ "default_building_opium_plantation" "pm_road_carts"  }
 			}
 		}
+		region_state:GMR = {
+			create_building={
+				building="building_livestock_ranch"
+				add_ownership={ 
+					building={ 
+						type="building_manor_house"
+						country="c:GMR"
+						levels=2
+						region="STATE_NAWIYANU"
+				   }
+				}
+				reserves=5
+				activate_production_methods={ "pm_simple_ranch" "pm_open_air_stockyards" "pm_standard_fences" "pm_unrefrigerated"  }
+			}
+			create_building={
+				building="building_opium_plantation"
+				add_ownership={ 
+					building={ 
+						type="building_manor_house"
+						country="c:GMR"
+						levels=2
+						region="STATE_NAWIYANU"
+				   }
+				}
+				reserves=1
+				activate_production_methods={ "default_building_opium_plantation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_wheat_farm"
+					add_ownership={ 
+						building={ 
+							type="building_manor_house"
+							country="c:GMR"
+							levels=6
+							region="STATE_NAWIYANU"
+						}
+					}
+				reserves=6
+				activate_production_methods={ "pm_simple_farming"  "pm_tools_disabled" "pm_no_secondary" }
+			}
+		}
 	}
 	s:STATE_TINKUYUQ = {
 		region_state:HOR = {
@@ -1139,19 +1180,45 @@ BUILDINGS = {
 		}
 	}
 	s:STATE_ROUGHSTONE_TERRITORY_2 = {
-		region_state:RSE = {
-				create_building={
+		region_state:BGR = {
+			create_building={
 				building="building_livestock_ranch"
-					add_ownership={ 
-						building={ 
-							type="building_manor_house"
-							country="c:RSE"
-							levels=1
-							region="STATE_ROUGHSTONE_TERRITORY_2"
-					}
-					}
+				add_ownership={ 
+					building={ 
+						type="building_manor_house"
+						country="c:BGR"
+						levels=1
+						region="STATE_ROUGHSTONE_TERRITORY_2"
+				   }
+				}
 				reserves=1
 				activate_production_methods={ "pm_simple_ranch" "pm_open_air_stockyards" "pm_standard_fences" "pm_unrefrigerated"  }
+			}
+			create_building={
+				building="building_wheat_farm"
+				add_ownership={ 
+					building={ 
+						type="building_manor_house"
+						country="c:BGR"
+						levels=6
+						region="STATE_ROUGHSTONE_TERRITORY_2"
+					}
+				}
+				reserves=6
+				activate_production_methods={ "pm_simple_farming"  "pm_tools_disabled" "pm_no_secondary" }
+			}
+			create_building={
+				building="building_opium_plantation"
+				add_ownership={ 
+					building={ 
+						type="building_manor_house"
+						country="c:BGR"
+						levels=3
+						region="STATE_ROUGHSTONE_TERRITORY_2"
+				   }
+				}
+				reserves=3
+				activate_production_methods={ "default_building_opium_plantation" "pm_road_carts"  }
 			}
 		}
 	}
@@ -1172,10 +1239,64 @@ BUILDINGS = {
 		}
 	}
 	s:STATE_SAVAGE_REACH = {
-		region_state:RUX = {
+		region_state:GMR = {
+			create_building={
+				building="building_livestock_ranch"
+				add_ownership={ 
+					building={ 
+						type="building_manor_house"
+						country="c:GMR"
+						levels=1
+						region="STATE_NAWIYANU"
+				   }
+				}
+				reserves=1
+				activate_production_methods={ "pm_simple_ranch" "pm_open_air_stockyards" "pm_standard_fences" "pm_unrefrigerated"  }
+			}
+			create_building={
+				building="building_opium_plantation"
+				add_ownership={ 
+					building={ 
+						type="building_manor_house"
+						country="c:GMR"
+						levels=1
+						region="STATE_NAWIYANU"
+				   }
+				}
+				reserves=1
+				activate_production_methods={ "default_building_opium_plantation" "pm_road_carts"  }
+			}
 		}
 	}
 	s:STATE_SNAILBANE = {
+		region_state:SNL = {
+			create_building={
+				building="building_livestock_ranch"
+				add_ownership={ 
+					building={ 
+						type="building_manor_house"
+						country="c:SNL"
+						levels=4
+						region="STATE_SNAILBANE"
+				   }
+				}
+				reserves=4
+				activate_production_methods={ "pm_simple_ranch" "pm_open_air_stockyards" "pm_standard_fences" "pm_unrefrigerated"  }
+			}
+			create_building={
+				building="building_opium_plantation"
+				add_ownership={ 
+					building={ 
+						type="building_manor_house"
+						country="c:SNL"
+						levels=2
+						region="STATE_SNAILBANE"
+				   }
+				}
+				reserves=2
+				activate_production_methods={ "default_building_opium_plantation" "pm_road_carts"  }
+			}
+		}
 	}
 	s:STATE_BLOODTHORN_WASTES = {
 		region_state:BLD = {

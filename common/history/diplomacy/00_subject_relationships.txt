@@ -41,6 +41,12 @@
 			type = dominion
 		}
 	}
+	c:BIE = {
+		create_diplomatic_pact = {
+			country = c:SRN
+			type = protectorate
+		}
+	}
 	c:FOX = {
 		create_diplomatic_pact = {
 			country = c:DRK
@@ -58,7 +64,9 @@
 		create_diplomatic_pact = {
 			country = c:RVE
 			type = vassal
+		}
 	}
+
 	c:BDB = {
 		create_diplomatic_pact = {
 			country = c:RTD
@@ -71,7 +79,6 @@
 			type = protectorate
 		}
 	}
-
 	c:SMA= {
 		create_diplomatic_pact = {
 			country = c:GCS
@@ -164,9 +171,24 @@
 			type =  protectorate
 		}
 	}
+
+c:DKO = {
+	create_diplomatic_pact = {
+		country = c:SBH
+		type = protectorate
+	}
 }
-	
-	
+c:ARD = {
+	create_diplomatic_pact = {
+		country = c:BDT
+		type = puppet
+	}
+	create_diplomatic_pact = {
+		country = c:DHR
+		type = puppet
+	}
+}
+}
 	# Starting liberty desire
 	#c:BIC = {
 	#	add_liberty_desire = -30

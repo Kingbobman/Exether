@@ -581,6 +581,18 @@
 				state_region = s:STATE_FAR_SHORE_2
 				count = 3
 			}
+
+			save_scope_as = leoarmy
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			save_scope_as = leogen
+		}
+
+		scope:leogen = {
+			transfer_to_formation = scope:leoarmy
 		}
 	}
 
@@ -955,9 +967,19 @@
 					state_region = s:STATE_KAATH_SERINE
 					count = 10
 				}
-			
+				save_scope_as = voznavy
 			}
 	
+			create_character = {
+				is_admiral = yes
+				commander_rank = commander_rank_1
+				save_scope_as = vozadm
+			}
+	
+			scope:vozadm = {
+				transfer_to_formation = scope:voznavy
+			}
+			
 
 		create_character = {
 			is_general = yes
@@ -1088,6 +1110,17 @@
 				count = 2
 			}
 		}
+		save_scope_as = ftharmy
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			save_scope_as = fthgen
+		}
+
+		scope:fthgen = {
+			transfer_to_formation = scope:ftharmy
+		}
 	}
 
 	c:BRB ?= {
@@ -1107,6 +1140,17 @@
 				state_region = s:STATE_OVERBURROW
 				count = 3
 			}
+		}
+		save_scope_as = brbarmy
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			save_scope_as = brbgen
+		}
+
+		scope:brbgen = {
+			transfer_to_formation = scope:brbarmy
 		}
 	}
 
@@ -1222,6 +1266,17 @@
 				state_region = s:STATE_VOZMEAD_BORDERLANDS
 				count = 2
 			}
+			save_scope_as = tldarmy
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			save_scope_as = tldgen
+		}
+
+		scope:tldgen = {
+			transfer_to_formation = scope:tldarmy
 		}
 	}
 
@@ -1238,7 +1293,7 @@
 			}
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_cannon_artillery
+				type = unit_type:combat_unit_type_mobile_artillery
 				state_region = s:STATE_CINPHNPHAINN
 				count = 10
 			}
@@ -1248,6 +1303,18 @@
 				state_region = s:STATE_RICHAR_JEDD
 				count = 10
 			}
+
+			save_scope_as = droarmy
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			save_scope_as = drogen
+		}
+
+		scope:drogen = {
+			transfer_to_formation = scope:droarmy
 		}
 
 		create_military_formation = {
@@ -1272,8 +1339,18 @@
 				state_region = s:STATE_LHIPH
 				count = 15
 			}
-		
 		}
+			save_scope_as = dronavy
+	
+			create_character = {
+				is_admiral = yes
+				commander_rank = commander_rank_1
+				save_scope_as = droadm
+			}
+	
+			scope:droadm = {
+				transfer_to_formation = scope:dronavy
+			}
 	}
 
 	c:EMP ?= {
@@ -1311,6 +1388,17 @@
 				state_region = s:STATE_THE_AMBER_RUN_3
 				count = 3
 			}
+			save_scope_as = emparmy
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			save_scope_as = empgen
+		}
+
+		scope:empgen = {
+			transfer_to_formation = scope:emparmy
 		}
 	}
 
@@ -1346,6 +1434,17 @@
 				state_region = s:STATE_CROPHEART_DALE
 				count = 3
 			}
+			save_scope_as = clrarmy
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			save_scope_as = clrgen
+		}
+
+		scope:clrgen = {
+			transfer_to_formation = scope:clrarmy
 		}
 	}
 
@@ -1372,6 +1471,17 @@
 				state_region = s:STATE_MISTREACH_2  
 				count = 3
 			}
+			save_scope_as = priarmy
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			save_scope_as = prigen
+		}
+
+		scope:prigen = {
+			transfer_to_formation = scope:priarmy
 		}
 	}
 
@@ -1398,6 +1508,17 @@
 				state_region = s:STATE_WAYFARE_MEADOWS_2
 				count = 3
 			}
+			save_scope_as = slbarmy
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			save_scope_as = slbgen
+		}
+
+		scope:slbgen = {
+			transfer_to_formation = scope:slbarmy
 		}
 	}
 
@@ -1423,6 +1544,17 @@
 				state_region = s:STATE_MOORESHIRE
 				count = 2
 			}
+			save_scope_as = smaarmy
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			save_scope_as = smagen
+		}
+
+		scope:smagen = {
+			transfer_to_formation = scope:smaarmy
 		}
 	}
 
@@ -1443,6 +1575,17 @@
 				state_region = s:STATE_OUTER_MOORWEALD
 				count = 2
 			}
+			save_scope_as = gcsarmy
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			save_scope_as = gcsgen
+		}
+
+		scope:gcsgen = {
+			transfer_to_formation = scope:gcsarmy
 		}
 	}
 
@@ -1463,6 +1606,17 @@
 				state_region = s:STATE_EASTERN_PLAGUEWOOD
 				count = 25
 			}
+			save_scope_as = rtdarmy
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			save_scope_as = rtdgen
+		}
+
+		scope:rtdgen = {
+			transfer_to_formation = scope:rtdarmy
 		}
 	}
 	c:BDB ?= {
@@ -1482,6 +1636,17 @@
 				state_region = s:STATE_SANDWOOD
 				count = 25
 			}
+			save_scope_as = bdbarmy
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			save_scope_as = bdbgen
+		}
+
+		scope:bdbgen = {
+			transfer_to_formation = scope:bdbarmy
 		}
 	}
 
@@ -1518,4 +1683,6 @@
 		scope:cdwgen = {
 			transfer_to_formation = scope:cdwarmy
 		}
+}
+
 }

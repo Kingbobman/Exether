@@ -14,56 +14,55 @@
 	political_engagement_literacy_factor = 0.70
 	
 	political_engagement_mult = {
-		value = 1
-		
-		add = {
-			desc = "POP_STARVATION"	
-			
-			if = {
-				limit = { 
-					standard_of_living < 5
-				}
+		value = 1.0
+		if = {
+			limit = {
+				standard_of_living < 5
+			}
+			add = {
+				desc = "POP_STARVATION"	
 				value = 1
-			}		
-		}		
-
-			multiply = {
-			desc = "NO_LABOR_MOVEMENT"	
-			value = 1.0
-			
-			if = {
-				limit = { 
-					owner = {
-						NOT = { has_technology_researched = labor_movement }
-					}
-				}
-				value = 0.5
-			}		
+			}
 		}
-
-		multiply = {
-			desc = "HAS_POLITICAL_AGITATION"	
-			value = 1.0
-			
-			if = {
-				limit = { 
-					owner = {
-						has_technology_researched = political_agitation
-					}
+		else_if = {
+			limit = {
+				owner = {
+					NOT = { has_technology_researched = labor_movement }
 				}
-				value = 1.5
-			}		
-		}			
-	
+			}
+			subtract = {
+				desc = "NO_LABOR_MOVEMENT"	
+				value = 0.5
+			}
+		}
+		else_if = {
+			limit = {
+				owner = {
+					has_technology_researched = political_agitation
+				}
+			}
+			add = {
+				desc = "HAS_POLITICAL_AGITATION"	
+				value = 1
+			}
+		}
 	}
 	
 	
 	qualifications_growth_desc = "ARTIFICERS_QUALIFICATIONS_DESC"
 	qualifications = {
 		if = {
+			limit = { 
+				is_peasant_under_serfdom = yes 
+			}
+			multiply = {
+				value = 0.50
+				desc = "QUALIFICATIONS_PEASANTS_UNDER_SERFDOM"
+			}
+		}
+		else_if = {
 			limit = {
-				is_peasant_under_serfdom = no
-				literacy_rate > 0.05
+				literacy_rate > 0.2
 			}
 			# baseline: ( literacy - 0.05 ) * 20, norm 8 for Laborers with Literacy 30%
 			add = {
@@ -80,15 +79,6 @@
 					value = 1.5
 					desc = "QUALIFICATIONS_FAVORED_TYPE"
 				}
-			}
-		}
-		else_if = {
-			limit = { 
-				is_peasant_under_serfdom = yes 
-			}
-			multiply = {
-				value = 0.50
-				desc = "QUALIFICATIONS_PEASANTS_UNDER_SERFDOM"
 			}
 		}
 		else_if = {
