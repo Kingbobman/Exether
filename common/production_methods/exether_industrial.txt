@@ -566,18 +566,19 @@ pm_basic_airships = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_wood_add = 35
-			goods_input_fabric_add = 40
-			
+			goods_input_wood_add = 30				#x20 = 600
+			goods_input_fabric_add = 30				#x20 = 600
+			goods_input_cloudsilver_add = 10		#x45 = 450
+
 			# output goods
-			goods_output_airships_add = 30 
+			goods_output_airships_add = 30 			#x70 = 2100
 		}
 
 		level_scaled = {
 			# employment
 			building_employment_shopkeepers_add = 500
 			building_employment_laborers_add = 3500
-			building_employment_machinists_add = 750
+			building_employment_artificers_add = 750
 			building_employment_engineers_add = 250
 		}
 	}
@@ -592,27 +593,27 @@ pm_complex_airships = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_wood_add = 35
-			goods_input_hardwood_add = 15
-			goods_input_fabric_add = 40
-			goods_input_gizmos_add = 10
-			goods_input_wishstone_add = 10
+			goods_input_wood_add = 20				#x20 = 400
+			goods_input_hardwood_add = 15			#x40 = 600
+			goods_input_fabric_add = 20				#x20 = 400
+			goods_input_gizmos_add = 10				#x60 = 600
+			goods_input_cloudsilver_add = 20		#x45 = 900
 			
 			# output goods
-			goods_output_airships_add = 60
+			goods_output_airships_add = 60			#x70 = 4200
 		}
 
 		level_scaled = {
 			# employment
 			building_employment_shopkeepers_add = 500
 			building_employment_laborers_add = 3000
-			building_employment_machinists_add = 1000
+			building_employment_artificers_add = 1000
 			building_employment_engineers_add = 500
 		}
 	}
 }
 
-#pm_metal_airships = {
+pm_metal_airships = {
 	texture = "gfx/interface/icons/production_method_icons/reinforced_steam_ships.dds"
 	
 	state_modifiers = {
@@ -628,25 +629,27 @@ pm_complex_airships = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_steel_add = 30
-			goods_input_coal_add = 10
-			goods_input_engines_add = 10
+			goods_input_steel_add = 30				#x50 = 1500
+			goods_input_hardwood_add = 10			#x40 = 400
+			goods_input_fabric_add = 10				#x20 = 200
+			goods_input_cloudsilver_add = 25		#x45 = 1175		
+			goods_input_gizmos_add = 20				#x60 = 1200
 			
 			# output goods
-			goods_output_steamers_add = 65
+			goods_output_airships_add = 100			#x70 = 7000
 		}
 
 		level_scaled = {
 			# employment
 			building_employment_shopkeepers_add = 500
 			building_employment_laborers_add = 2000
-			building_employment_machinists_add = 1500
+			building_employment_artificers_add = 1500
 			building_employment_engineers_add = 1000
 		}
 	}
 }
 
-#pm_arc_welding_shipbuilding = {
+pm_arc_welding_airshipbuilding = {
 	texture = "gfx/interface/icons/production_method_icons/arc_welded_steam_ships.dds"
 	
 	unlocking_technologies = {
@@ -662,19 +665,22 @@ pm_complex_airships = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_steel_add = 30
-			goods_input_electricity_add = 30
-			goods_input_engines_add = 10
-			
+			goods_input_steel_add = 40				#x50 = 2000
+			goods_input_electricity_add = 30		#x30 = 900
+			goods_input_gizmos_add = 20				#x60 = 1200
+			goods_input_hardwood_add = 10			#x40 = 400
+			goods_input_fabric_add = 10				#x20 = 200
+			goods_input_cloudsilver_add = 20		#x45 = 900	
+
 			# output goods
-			goods_output_steamers_add = 80
+			goods_output_airships_add = 120			#x70 = 8400
 		}
 
 		level_scaled = {
 			# employment
 			building_employment_shopkeepers_add = 500
 			building_employment_laborers_add = 1000
-			building_employment_machinists_add = 2000
+			building_employment_artificers_add = 2000
 			building_employment_engineers_add = 1500
 		}
 	}
