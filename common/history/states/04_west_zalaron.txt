@@ -419,8 +419,13 @@ add_homeland = cu:jungle_gnoll
 s:STATE_JUACHAI = {
 	create_state = {
 		country = c:SNB
-		owned_provinces = { "x5AE3FC" "x82B3E2" "x88F4F4" "x8EF3BF" "x9896F1" "xAE93FC" "xCA9CA5" "xD8ACFD" "xDC87AA" "xE362D6" "xE37DD8" "xE4D7DB" "xEE9288" "xF19BFA" "xF4D8EA" "xFAF224" }
+		owned_provinces = { "x5AE3FC" "x82B3E2" "x88F4F4" "x8EF3BF" "x9896F1" "xCA9CA5" "xD8ACFD" "xDC87AA" "xE362D6" "xE37DD8" "xE4D7DB" "xEE9288" "xF19BFA" "xFAF224" }
 }
+	create_state = {
+		country = c:LPS
+		owned_provinces = { xF4D8EA xAE93FC }
+	}
+add_homeland = west_lacertian
 add_homeland = cu:pabardian
 add_homeland = cu:jungle_gnoll
 }
@@ -521,10 +526,10 @@ add_homeland = cu:cithrel
 
 s:STATE_MAJIWAZIRI = {
 	create_state = {
-		country = c:SNB
+		country = c:LPS
 		owned_provinces = { "x3CF4D1" "x6EFACF" "x78FEFA" "x89ACD9" "x97C7C6" "x9BEDB3" "xA1C1C6" "xA5B1C7" "xA8E87F" "xB477E0" "xBCDA9F" "xCF8CDC" "xDA49D6" "xE6AF6B" "xEDD94F" "xFD7FBC" "xFD9FD5" }
 }
-add_homeland = cu:pabardian
+#formerly had a padardian homeland
 add_homeland = cu:west_lacertian
 }
 
@@ -619,6 +624,10 @@ s:STATE_KEEDZAI = {
 	create_state = {
 		country = c:SNB
 		owned_provinces = { "x2DFBE1" "x6BABDF" "x8AFAB0" "xA39DD2" "xA886E6" "xB85DF9" "xB9F169"  "xBBEECD" "xC64AF0" "xCFCA9A" "xD1DAD6" "xD9A6B5" "xD9EAF1" "xE3F44B" "xF89CAE" "xF9E423" }
+}
+create_state = {
+	country = c:LPS
+	owned_provinces = { x73C062 }
 }
 add_homeland = cu:pabardian
 add_homeland = cu:jungle_gnoll

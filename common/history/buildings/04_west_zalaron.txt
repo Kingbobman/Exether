@@ -4056,13 +4056,13 @@
 	}
   }
   s:STATE_MAJIWAZIRI = {
-		region_state:SNB={
+		region_state:LPS={
 			create_building={
 				building="building_maize_farm"
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:XOC"
+						country="c:LPS"
 						levels=1
 						region="STATE_ODADRUEL"
 				   }
@@ -4075,7 +4075,7 @@
                 add_ownership={ 
                     building={ 
                         type="building_financial_district"
-                        country="c:XOC"
+                        country="c:LPS"
                         levels=1
                         region="STATE_ODADRUEL"
                    }
@@ -4620,6 +4620,27 @@
 				reserves=1
 				activate_production_methods={ "pm_secular_academia" }
 			}		
+		}
+		region_state:LPS={
+			create_building={
+				building="building_furniture_manufacturies"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:LPS"
+							levels=1
+							region="STATE_JUACHAI"
+					   }
+					}
+				reserves=1
+				activate_production_methods={ "pm_handcrafted_furniture" "pm_automation_disabled" "pm_no_luxuries" }
+			}
+			create_building={
+				building="building_port"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_basic_port" }
+			}	
 		}
   }
   s:STATE_NAKOTHAI = {
