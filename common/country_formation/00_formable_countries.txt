@@ -345,25 +345,29 @@ CDR = {
 	states = {
 		STATE_ANGERTORP
 		STATE_SOLVIK
-		STATE_FRIGGASVEIT 
-		STATE_DRUMAGAR 
-		STATE_FALMAKELD 
-		STATE_COLDSHEAR 
-		STATE_ARCTHARAL 
-		STATE_LIGHTSCOURGE 
-		STATE_SNOWBREACH 
-		STATE_ICEWIND 
-		STATE_HJELTIAS_GLACIER 
-		STATE_GRYTINGARIK 
-		STATE_FROSTGATE 
+		STATE_FRIGGASVEIT
+		STATE_DRUMAGAR
+		STATE_FALMAKELD
+		STATE_COLDSHEAR
+		STATE_ARCTHARAL
+		STATE_LIGHTSCOURGE
+		STATE_SNOWBREACH
+		STATE_ICEWIND
+		STATE_HJELTIAS_GLACIER
+		STATE_GRYTINGARIK
+		STATE_FROSTGATE
 		STATE_KINGOUR
 	}
 
-	required_states_fraction = 0.8
+	required_states_fraction = 1
 
 	ai_will_do = { always = yes }
 
 	possible = {
+		OR = {
+			country_has_primary_culture = cu:varyngi
+			country_has_primary_culture = cu:glethach
+		}
 		has_technology_researched = nationalism
 	}
 }
