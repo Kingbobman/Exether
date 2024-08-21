@@ -288,11 +288,11 @@ pm_cool_name_potion_process_production = {
 #probably need a final tier with 90-110 potion output
 
 pm_water-based_potions = {
-	texture = "gfx/interface/icons/production_method_icons/crude_tools.dds"  #change
+	texture = "gfx/interface/icons/production_method_icons/crude_tools.dds"  
 }
 
 pm_alcohol-based_potions = {
-	texture = "gfx/interface/icons/production_method_icons/crude_tools.dds"  #change
+	texture = "gfx/interface/icons/production_method_icons/crude_tools.dds" 
 	
 	building_modifiers = {
 		workforce_scaled = {
@@ -308,8 +308,8 @@ pm_alcohol-based_potions = {
 }
 
 pm_oil-based_potions = {
-	texture = "gfx/interface/icons/production_method_icons/crude_tools.dds"  #change  #a leviathan-whaling focussed country should unlock this at game start
-	#lock to T3 or T4 tech
+	texture = "gfx/interface/icons/production_method_icons/crude_tools.dds"  
+
 	building_modifiers = {
 		workforce_scaled = {
 			
@@ -342,27 +342,38 @@ pm_no_mixins = {
 texture = "gfx/interface/icons/production_method_icons/no_potion_sap.dds"
 }
 
-pm_sweet_mixins = {
+pm_functional_mixins = {
 	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
+	
+	unlocking_technologies = {
+		distillation
+	}
+
 	building_modifiers = {
 		workforce_scaled = {
-			
-			goods_input_lead_add = 10				#x50 = 500
-			goods_output_potions_add = -10			#x50 = 500
+			goods_input_ectoplasm_add = 10					#x50 = 500
+			goods_output_potions_add = -10					#x50 = 500
 
-			goods_output_luxury_potions_add = 15	#x80 = 1200
+			goods_output_luxury_potions_add = 15			#x80 = 1200
 		}
 	}
 }
 
-pm_functional_mixins = {
+pm_sweet_mixins = {
 	texture = "gfx/interface/icons/production_method_icons/increased_potion_sap.dds"
-	
+
+	unlocking_technologies = {
+		fractional_distillation
+	}
+
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_iron_add = 15				#x30 = 450
+			
+			goods_input_ectoplasm_add = 15			#x50 = 750
+			goods_input_lead_add = 5				#x50 = 250
+			goods_output_potions_add = -10			#x50 = 500
 
-			goods_output_potions_add = 15			#x50 = 750
+			goods_output_luxury_potions_add = 25	#x80 = 2000
 		}
 	}
 }
@@ -370,12 +381,18 @@ pm_functional_mixins = {
 pm_vile_mixins = {
 	texture = "gfx/interface/icons/production_method_icons/increased_potion_sap.dds"
 
+	unlocking_technologies = {
+		aniline
+	}
+
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_wine_add = 10				#x50 = 500
-			goods_input_dye_add = 15				#x40 = 600
+			goods_input_wine_add = 5				#x50 = 250
+			goods_input_ectoplasm_add = 20			#x50 = 1000
+			goods_input_lead_add = 10				#x50 = 500
+			goods_output_potions_add = -5			#x50 = 250
 
-			goods_output_luxury_potions_add = 20	#x80 = 1600
+			goods_output_luxury_potions_add = 30	#x80 = 2400
 		}
 	}
 }
@@ -387,6 +404,10 @@ pm_basic_filters = {
 pm_retaining_filters = {
 	texture = "gfx/interface/icons/production_method_icons/canneries.dds"
 
+	unlocking_production_methods = {
+		chemical_bleaching
+	}
+
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_paper_add = 10				#x30 = 300
@@ -396,14 +417,25 @@ pm_retaining_filters = {
 	}
 }
 
-pm_fine_filters = {
+pm_soul_filters = {
 	texture = "gfx/interface/icons/production_method_icons/canneries.dds"
+
+	unlocking_technologies = {
+		alchemical_transmutation
+	}
+
+	unlocking_production_methods = {
+		pm_functional_mixins
+		pm_sweet_mixins
+		pm_vile_mixins
+		pm_universally_based_potions
+	}
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_coal_add = 10				#x30 = 300
+			goods_input_silk_add = 10				#x40 = 400
 
-			goods_input_gizmos_add = -5				#x60 = 300
+			goods_input_ectoplasm_add = -9			#x50 = 450
 		}
 	}
 }
