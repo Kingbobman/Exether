@@ -7,3 +7,87 @@
 		fallback = yes
 	}
 }
+
+salt_waste_stop_cure = {
+	type = country
+	text = {
+		trigger = {
+			fully_owns_the_salt_wastes = no
+		}
+		localization_key = salt_waste_stop_cure_stop_forced
+	}
+	text = {
+		trigger = {
+			fully_owns_the_salt_wastes = yes
+		}
+		localization_key = salt_waste_stop_cure_stop_choice
+	}
+}
+
+salt_waste_cure_flavor = {
+	type = country
+	text = {
+		trigger = {
+			has_law = law_type:law_mage_hunters
+		}
+		localization_key = salt_waste_cure_flavor_mage_hunters
+	}
+	text = {
+		trigger = {
+			has_variable = harness_the_salt_waste_curse
+			has_law = law_type:law_dark_arts
+		}
+		localization_key = salt_waste_cure_flavor_dark_arts
+	}
+	text = {
+		trigger = {
+			fully_owns_the_salt_wastes = no
+		}
+		localization_key = salt_waste_cure_flavor_lost_control
+	}
+	text = {
+		trigger = {
+			fully_owns_the_salt_wastes = yes
+			NOT = { has_law = law_type:law_mage_hunters }
+			NAND = {
+				has_variable = harness_the_salt_waste_curse
+				has_law = law_type:law_dark_arts
+			}
+		}
+		localization_key = salt_waste_cure_flavor_default
+	}
+}
+
+salt_waste_cure_desciption = {
+	type = country
+	text = {
+		trigger = {
+			has_law = law_type:law_mage_hunters
+		}
+		localization_key = salt_waste_cure_desciption_mage_hunters
+	}
+	text = {
+		trigger = {
+			has_variable = harness_the_salt_waste_curse
+			has_law = law_type:law_dark_arts
+		}
+		localization_key = salt_waste_cure_desciption_dark_arts
+	}
+	text = {
+		trigger = {
+			fully_owns_the_salt_wastes = no
+		}
+		localization_key = salt_waste_cure_desciption_lost_control
+	}
+	text = {
+		trigger = {
+			fully_owns_the_salt_wastes = yes
+			NOT = { has_law = law_type:law_mage_hunters }
+			NAND = {
+				has_variable = harness_the_salt_waste_curse
+				has_law = law_type:law_dark_arts
+			}
+		}
+		localization_key = salt_waste_cure_desciption_default
+	}
+}
