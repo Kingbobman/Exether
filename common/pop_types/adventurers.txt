@@ -32,8 +32,14 @@
 	qualifications = {
 		if = {
 			limit = {
-				is_peasant_under_serfdom = no
+				is_peasant_under_serfdom = yes
 			}
+			multiply = {
+				desc = "QUALIFICATIONS_PEASANTS_UNDER_SERFDOM"
+				value = 3
+			}
+		}
+		else = {
 			# baseline: ( wealth - 5 ) / 2, norm 10 for Clerks with Wealth 15
 			add = {
 				value = wealth
@@ -69,12 +75,7 @@
 				}
 			}
 		}
-		else = {
-			multiply = {
-				desc = "QUALIFICATIONS_PEASANTS_UNDER_SERFDOM"
-				value = 3
-			}
-		}
+		
 	}
 	
 	portrait_age = {
