@@ -1,11 +1,45 @@
 ﻿COUNTRIES = {
 	c:LGZ = {
-		effect_starting_technology_tier_4_tech = yes
-		activate_law = law_type:law_presidential_republic # Liberia did not declare independence until 1847; until then, the American Colonization Society ran the show
-		activate_law = law_type:law_mercantilism
-		activate_law = law_type:law_censorship
-		activate_law = law_type:law_land_based_taxation
+		effect_starting_technology_tier_goblin_tech = yes
+
+		ig:ig_devout = {
+			add_ruling_interest_group = yes
+		}
+
+		set_ruling_interest_groups = {
+        	ig_devout
+        }
+
+		set_institution_investment_level = {
+			institution = institution_school_system
+			level = 1
+		}	
+
+		add_taxed_goods = g:tobacco
+		add_taxed_goods = g:clothes
+		add_taxed_goods = g:furniture
+		add_taxed_goods = g:coal
+		add_taxed_goods = g:services
+		add_taxed_goods = g:fabric
+		
+
 		activate_law = law_type:law_slave_trade
-		activate_law = law_type:law_national_supremacy
+		activate_law = law_type:law_homesteading
+		activate_law = law_type:law_command_economy
+		activate_law = law_type:law_professional_army
+		activate_law = law_type:law_national_guard
+	    activate_law = law_type:law_isolationism
+		activate_law = law_type:law_consumption_based_taxation
+		activate_law = law_type:law_oligarchy
+		activate_law = law_type:law_religious_schools
+		activate_law = law_type:law_theocracy
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_charitable_health_system
+		activate_law = law_type:law_mage_hunters
+		activate_law = law_type:law_appointed_bureaucrats
+		activate_law = law_type:law_slave_trade
+		activate_law = law_type:law_militarized_police
+		activate_law = law_type:law_outlawed_dissent
+
 	}
 }
