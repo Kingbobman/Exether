@@ -140,7 +140,7 @@ add_claim = c:SKR
 s:STATE_PWAWAKATI = {
 	create_state = {
 		country = c:YIP
-		owned_provinces = { "x78DDA0" "xA7B1A4" "xAE9CDA" "xC6F9D0" "xC976F1" "xCCD9AD" "xD9A5DF" }
+		owned_provinces = { xA7B1A4 xAE9CDA xC6F9D0 xC976F1 xCCD9AD xD9A5DF }
 }
 add_homeland = cu:gnoll
 add_claim = c:SKR
@@ -332,11 +332,11 @@ add_homeland = cu:dunaq
 s:STATE_NAWIYANU = {
 	create_state = {
 		country = c:HOR
-		owned_provinces = { "x62BDF5" "x6CF29F" "x70A8EC" "x74D1EC" "x86A9EC" "x89CFA9" "x8A90DB" "x95F78B" "x96B8FB" "xA3BDE3" "xB68CC5" "xB8B48A" "xCEAEA2" "xD34DD5" "xD4C37F" "xD6BE7F" "xE2F75A" "xE5E9D2" "xE88FBA" "xF4CA72" "xF99CAE" }
+		owned_provinces = { "x6CF29F" "x70A8EC" "x74D1EC" "x89CFA9" "x95F78B" "x96B8FB" "xA3BDE3" "xB68CC5" "xB8B48A" "xCEAEA2" "xD34DD5" "xD4C37F" "xD6BE7F" "xE2F75A" "xE88FBA" "xF4CA72" "xF99CAE" }
 	}
 	create_state = {
 		country = c:GMR
-		owned_provinces = { "x86A9EC" "x62BDF5" "x8A90DB" "xE5E9D2" "xC695AF" }
+		owned_provinces = { "x86A9EC" "x62BDF5" "xE5E9D2" "xC695AF" "xF4CA72" "x70A8EC" "xB8B48A" }
 	}
 add_homeland = cu:rahoru
 add_homeland = cu:waste_walker
@@ -388,7 +388,7 @@ add_homeland = cu:waste_walker
 
 s:STATE_ROUGHSTONE_TERRITORY_2 = {
 	create_state = {
-		country = c:RSE
+		country = c:BGR
 		owned_provinces = { "x54E8E8" "x5CE3C0" "x7BD3EE" "x88BECA" "x9DF186" "x9EF09F" "xA8F196" "xAEDFAE" "xC9E188" "xCA42FD" "xDBCDE1" "xDDFB5D" "xE3A39B" "xE8A594" "xE9A578" "xF89BA6" "xFE75B9" }
 }
 add_homeland = cu:tqalt
@@ -411,11 +411,11 @@ add_homeland = cu:waste_walker
 s:STATE_SAVAGE_REACH = {
 	create_state = {
 		country = c:RUX
-		owned_provinces = { "x21EFEE" "x4FF6E0" "x51CCF3" "xADE6D5" "x5ECAFB" "x6DBEEA" "x6DDAC1" "x8AF2D6" "x8CE785" "x8FFE78" "x96B0C8" "x9D9DFB" "xA4E87B" "xA9D37E" "xAB99ED" "xB0B9BD" "xB5ACD4" "xB5C2E1" "xBBA4D9" "xC2A6AB" "xC7DC97" "xC8AA93" "xD4A4D8" "xD882A5" "xD8E5BB" "xD963E0" "xDACB5A" "xDDE371" "xE36CC4" "xE6EEB5" "xF0FC9A" "xF7B3A7" "xF9EBF0" "xFA5AD3" "xFABCE8" "xCAF9F7" "x6CEBB4" "xB693B6" }
+		owned_provinces = { "x21EFEE" "x4FF6E0" "x51CCF3" "xADE6D5" "x5ECAFB" "x6DBEEA" "x6DDAC1" "x8AF2D6" "x8FFE78" "x96B0C8" "x9D9DFB" "xA4E87B" "xA9D37E" "xB5ACD4" "xB5C2E1" "xBBA4D9" "xC2A6AB" "xC7DC97" "xC8AA93" "xD4A4D8" "xD882A5" "xD8E5BB" "xD963E0" "xDACB5A" "xDDE371" "xE36CC4" "xE6EEB5" "xF0FC9A" "xF7B3A7" "xF9EBF0" "xFA5AD3" "xFABCE8" }
 	}
 	create_state = {
 		country = c:GMR
-		owned_provinces = { "xBDF8F3" "x89A6CE" "x9BC2D4" "xDC7CB1" "xD75CD5"  "xE0FCFC" "xCAF4B8" "x7BBCE5" "xB5EECE" "xF4D243" }
+		owned_provinces = { "xBDF8F3" "x89A6CE" "x9BC2D4" "xDC7CB1" "xD75CD5"  "xE0FCFC" "xCAF4B8" "x7BBCE5" "xB5EECE" "xF4D243" "xB693B6" "x6CEBB4" "xCAF9F7" "x8CE785" "xAB99ED" "xB0B9BD" }
 	}
 add_homeland = cu:tqalt
 add_homeland = cu:waste_walker
@@ -424,11 +424,7 @@ add_homeland = cu:waste_walker
 s:STATE_SNAILBANE = {
 	create_state = {
 		country = c:SNL
-		owned_provinces = { "xB5C8F5" "xD5D3A4" "x2CD2FE" "x34F1FD" "x35CBF6" "x42EDCB" "x4DECD5" "x65F69D" "x71B9F0" "x73F4ED" "x7CCCCC" "x8CB9B7" "x90C0C9" "x9489DB" "x9AE5C3" "x9EE3F6" "xA2EB79" "xA4B3A4" "xA5F19E" "xAB88F4" "xAE5EF1" "xB978E5" "xBEEDC2" "xC1CA6A" "xC1F4C4" "xC4B0CC" "xC5FDCF" "xC7A9DD" "xC990EF" "xC9D288" "xCAB6A0" "xCAC76D" "xCDD9B4" "xCE4FE0" "xCFAAF5" "xCFD9B9" "xD0A194" "xD3AB8C" "xD4B6EA" "xD4C863" "xD66EF7" "xDA9597" "xDD74A5" "xDEE2DF" "xDEE9D8" "xE2B371" "xE4D6F9" "xE6F9D2" "xEF7FD9" "xF099EA" "xF0A09C" "xF0F126" "xF2ECCE" "xF3F6E8" "xF44FBE" "xF558E8" "xF95DAA" "xFB80ED" "xFB829F" "xFBF727" "xFC9379" "xFC9889" }
-	}
-	create_state = {
-		country = c:BGR
-		owned_provinces = { "x22F0F1" "x9379FC" "xA5C2EE" "xAFC29C" "xCE86CC" "xEFF797" "xE3EE57" "xD7E1BC" "x9EAFC2" "x61FD9C" "x6B9FFA" "xDB4FD7" }
+		owned_provinces = { "xB5C8F5" "xD5D3A4" "x2CD2FE" "x34F1FD" "x35CBF6" "x42EDCB" "x4DECD5" "x65F69D" "x71B9F0" "x73F4ED" "x7CCCCC" "x8CB9B7" "x90C0C9" "x9489DB" "x9AE5C3" "x9EE3F6" "xA2EB79" "xA4B3A4" "xA5F19E" "xAB88F4" "xAE5EF1" "xB978E5" "xBEEDC2" "xC1CA6A" "xC1F4C4" "xC4B0CC" "xC5FDCF" "xC7A9DD" "xC990EF" "xC9D288" "xCAB6A0" "xCAC76D" "xCDD9B4" "xCE4FE0" "xCFAAF5" "xCFD9B9" "xD0A194" "xD3AB8C" "xD4B6EA" "xD4C863" "xD66EF7" "xDA9597" "xDD74A5" "xDEE2DF" "xDEE9D8" "xE2B371" "xE4D6F9" "xE6F9D2" "xEF7FD9" "xF099EA" "xF0A09C" "xF0F126" "xF2ECCE" "xF3F6E8" "xF44FBE" "xF558E8" "xF95DAA" "xFB80ED" "xFB829F" "xFBF727" "xFC9379" "xFC9889" "x22F0F1" "x9379FC" "xA5C2EE" "xAFC29C" "xCE86CC" "xEFF797" "xE3EE57" "xD7E1BC" "x9EAFC2" "x61FD9C" "x6B9FFA" "xDB4FD7" }
 	}
 add_homeland = cu:tqalt
 add_homeland = cu:waste_walker

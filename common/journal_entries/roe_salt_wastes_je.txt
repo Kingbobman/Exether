@@ -1,0 +1,140 @@
+﻿je_salt_waste_half_orc = {
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	group = je_group_internal_affairs
+
+	is_shown_when_inactive = {
+		is_player = yes
+		NOT = { has_global_variable = salt_waste_half_orc_done }
+		has_technology_researched = nationalism
+		any_primary_culture = {
+			has_discrimination_trait = saltwaste_survivor_culture_group
+		}
+	}
+
+	possible = {
+		has_technology_researched = pan-nationalism
+		any_primary_culture = {
+			has_discrimination_trait = saltwaste_survivor_culture_group
+		}
+		NOT = { has_law = law_type:law_serfdom }
+	}
+
+	complete = {
+		custom_tooltip = {
+			text = control_every_salt_waste_state
+			owns_entire_state_region = STATE_SAVAGE_LANDS
+			owns_entire_state_region = STATE_SAVAGE_LANDS_2
+			owns_entire_state_region = STATE_ROUGHSTONE_TERRITORY
+			owns_entire_state_region = STATE_ROUGHSTONE_TERRITORY_2
+			owns_entire_state_region = STATE_FIERCEHOLD
+			owns_entire_state_region = STATE_SAVAGE_REACH
+			owns_entire_state_region = STATE_SNAILBANE
+			owns_entire_state_region = STATE_BLOODTHORN_WASTES
+			owns_entire_state_region = STATE_BLOODTHORN_WASTES_2
+			owns_entire_state_region = STATE_BLOODAXE_TERRITORY
+			owns_entire_state_region = STATE_THIRSTRIDGE
+			any_scope_state = {
+				percent = 1
+				filter = {
+					OR = {
+						state_region = s:STATE_NAWIYANU
+						state_region = s:STATE_SAVAGE_LANDS
+						state_region = s:STATE_SAVAGE_LANDS_2
+						state_region = s:STATE_ROUGHSTONE_TERRITORY
+						state_region = s:STATE_ROUGHSTONE_TERRITORY_2
+						state_region = s:STATE_FIERCEHOLD
+						state_region = s:STATE_SAVAGE_REACH
+						state_region = s:STATE_SNAILBANE
+						state_region = s:STATE_BLOODTHORN_WASTES
+						state_region = s:STATE_BLOODTHORN_WASTES_2
+						state_region = s:STATE_BLOODAXE_TERRITORY
+						state_region = s:STATE_THIRSTRIDGE
+					}
+				}
+				turmoil < 0.25
+			}
+		}
+		
+		custom_tooltip = {
+			text = no_salt_waste_pop_discriminated
+			NOT = {
+				any_scope_pop = {
+					culture = { has_discrimination_trait = saltwaste_survivor_culture_group }
+					pop_is_discriminated = yes
+				}
+			}
+		}
+	}
+
+	on_complete = {
+		trigger_event = { id = salt_waste_narrative_events.1 }
+		set_global_variable = {
+			name = salt_waste_half_orc_done
+		}
+	}
+	
+	transferable = no
+}
+
+je_salt_waste_cure = {
+	should_be_pinned_by_default = yes
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	group = je_group_objectives
+	
+	on_monthly_pulse = {
+		effect = {
+			random_list = {
+				90 = { } # We want to trigger an event roughly one out of every 6 months, so a chance of 15-to-90
+				2 = { trigger_event = { id = salt_waste_narrative_events.3 popup = yes } }
+				2 = { trigger_event = { id = salt_waste_narrative_events.4 popup = yes } }
+				2 = { trigger_event = { id = salt_waste_narrative_events.5 popup = yes } }
+				2 = { trigger_event = { id = salt_waste_narrative_events.6 popup = yes } }
+				2 = { trigger_event = { id = salt_waste_narrative_events.7 popup = yes } }
+				2 = { trigger_event = { id = salt_waste_narrative_events.8 popup = yes } }
+				1 = { trigger_event = { id = salt_waste_narrative_events.9 popup = yes } }
+				1 = { trigger_event = { id = salt_waste_narrative_events.10 popup = yes } }
+				1 = { trigger_event = { id = salt_waste_narrative_events.11 popup = yes } }
+			}
+		}
+	}
+
+	scripted_button = cast_defensive_wards_button
+	scripted_button = establish_salt_rangers_button
+	scripted_button = fund_wasteland_patrols_button
+	scripted_button = handle_salt_waste_curse_button
+
+	is_shown_when_inactive = {
+		is_player = yes
+		any_primary_culture = {
+			has_discrimination_trait = saltwaste_survivor_culture_group
+		}
+	}
+	
+	possible = {
+		OR = {
+			any_scope_state = {
+				has_state_trait = state_trait_salt_wastes
+			}
+			hidden_trigger = {
+				has_variable = je_salt_waste_curse_resolved
+			}
+		}
+	}
+
+	complete = {
+		custom_tooltip = {
+			text = resolve_the_salt_waste_curse
+			has_variable = je_salt_waste_curse_resolved
+		}
+	}
+
+	on_complete = {
+		add_modifier = {
+			name = salt_waste_curse_resolved
+		}
+	}
+
+	transferable = no
+}

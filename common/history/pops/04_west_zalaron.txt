@@ -677,6 +677,7 @@
 			size = 31000
 	}
   }
+}
   s:STATE_KLOSI = {
 	region_state:EKA = {
 		create_pop = {
@@ -815,16 +816,27 @@
 		region_state:SNB = {
 			create_pop = {
 				culture = pabardian
-				size = 205392
+				size = 185392
 			}
 			create_pop = {
 				pop_type = slaves
 				culture = jungle_gnoll
-				size = 265153
+				size = 225153
 			}
 			create_pop = {
 				culture = jungle_gnoll
 				size = 112263
+			}
+		}
+		region_state:LPS = {
+			create_pop = {
+				culture = west_lacertian
+				size = 77050
+			}
+
+			create_pop = {
+				culture = jungle_gnoll
+				size = 35688
 			}
 		}
   }
@@ -844,21 +856,28 @@
 				size = 13159
 			}
 		}
+		region_state:LPS = {
+			create_pop = {
+				culture = west_lacertian
+				size = 105582
+			}
+			create_pop = {
+				culture = pabardian
+				size = 35582
+			}
+
+		}
   }
   s:STATE_SAWATHONG = {
 		region_state:SNB = {
 			create_pop = {
 				culture = pabardian
-				size = 116681
+				size = 101681
 			}
 			create_pop = {
 				pop_type = slaves
 				culture = jungle_gnoll
 				size = 42176
-			}
-			create_pop = {
-				culture = jungle_gnoll
-				size = 4086
 			}
 			create_pop = {
 				culture = west_lacertian
@@ -951,7 +970,7 @@
 		region_state:SNB = {
 			create_pop = {
 				culture = pabardian
-				size = 335500
+				size = 315500
 			}
 			create_pop = {
 				pop_type = slaves
@@ -960,40 +979,50 @@
 			}
 			create_pop = {
 				culture = jungle_gnoll
-				size = 248737
+				size = 238737
+			}
+		}
+		region_state:LPS = {
+			create_pop = {
+				culture = west_lacertian
+				size = 255500
+			}
+			create_pop = {
+				culture = jungle_gnoll
+				size = 38737
+			}
+			create_pop = {
+				culture = pabardian
+				size = 45705
 			}
 		}
   }
-  s:STATE_MAJIPEMBE = {
-		region_state:SNB = {
+  s:STATE_CHEJATAN_DO = {
+		region_state:FMJ = {
 			create_pop = {
 				culture = pabardian
-				size = 111297
+				size = 21297
 			}
 			create_pop = {
 				pop_type = slaves
 				culture = jungle_gnoll
-				size = 65737
+				size = 25737
 			}
 			create_pop = {
 				culture = jungle_gnoll
-				size = 77642
+				size = 207642
 			}
 			create_pop = {
 				culture = west_lacertian
 				size = 43800
 			}
-			create_pop = {
-				culture = cithrel
-				size = 3646
-			}
 		}
   }
-  s:STATE_CHANGAVUTA = {
-		region_state:SNB = {
+  s:STATE_MDLEMNO_KETHIN = {
+		region_state:FMJ = {
 			create_pop = {
 				culture = jungle_gnoll
-				size = 162000
+				size = 192000
 			}
 			create_pop = {
 				culture = pabardian
@@ -1009,12 +1038,12 @@
 		region_state:SNB = {
 			create_pop = {
 				culture = pabardian
-				size = 172879 
+				size = 262879 
 			}
 			create_pop = {
 				pop_type = slaves
 				culture = jungle_gnoll
-				size = 86933 
+				size = 56933 
 			}
 			create_pop = {
 				culture = jungle_gnoll
@@ -1040,35 +1069,26 @@
 	}
   }
   s:STATE_MAJIWAZIRI = {
-		region_state:SNB = {
+		region_state:LPS = {
 			create_pop = {
 				culture = pabardian
 				size = 31839
 			}
 			create_pop = {
-				culture = kaalkid
-				size = 3000
-			}
-			create_pop = {
-				pop_type = slaves
 				culture = west_lacertian
-				size = 23547
-			}
-			create_pop = {
-				culture = west_lacertian
-				size = 36546
+				size = 166546
 			}
 		}
   }
   s:STATE_JUALALA = {
-		region_state:SNB = {
+		region_state:LPS = {
 			create_pop = {
-				culture = pabardian
-				size = 69779
+				culture = west_lacertian
+				size = 197394
 			}
 			create_pop = {
-				culture = kaalkid
-				size = 2000
+				culture = pabardian
+				size = 49779
 			}
 			create_pop = {
 				pop_type = slaves
@@ -1077,7 +1097,7 @@
 			}
 			create_pop = {
 				culture = jungle_gnoll
-				size = 114270
+				size = 94270
 			}
 		}
   }
@@ -1099,6 +1119,16 @@
 			create_pop = {
 				culture = jungle_gnoll
 				size = 42860
+			}
+		}
+		region_state:LPS = {
+			create_pop = {
+				culture = west_lacertian
+				size = 126242
+			}
+			create_pop = {
+				culture = jungle_gnoll
+				size = 32860
 			}
 		}
   }
@@ -1190,7 +1220,7 @@
 		region_state:SNB = {
 			create_pop = {
 				culture = pabardian
-				size = 367304
+				size = 342304
 			}
       create_pop = {
 				culture = kaalkid
@@ -1199,7 +1229,7 @@
 			create_pop = {
 				pop_type = slaves
 				culture = jungle_gnoll
-				size = 181300
+				size = 171300
 			}
 			create_pop = {
 				culture = jungle_gnoll
@@ -1211,7 +1241,7 @@
 		region_state:SNB = {
 			create_pop = {
 				culture = pabardian
-				size = 188932
+				size = 116932
 			}
 			create_pop = {
 				culture = kaalkid
@@ -1220,11 +1250,26 @@
 			create_pop = {
 				pop_type = slaves
 				culture = jungle_gnoll
-				size = 164812
+				size = 134812
 			}
 			create_pop = {
 				culture = jungle_gnoll
-				size = 324105
+				size = 241405
+			}
+		}
+		region_state:LPS= {
+			create_pop = {
+				culture = west_lacertian
+				size = 128932
+			}
+			create_pop = {
+				culture = pabardian
+				size = 29920
+			}
+
+			create_pop = {
+				culture = jungle_gnoll
+				size = 74105
 			}
 		}
   }
