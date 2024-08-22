@@ -759,7 +759,7 @@ types information_panel_bar_types {
 					enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 					position = { -100 @journal_position }
 					blockoverride "onclick" {
-						onclick = "[InformationPanelBar.OpenPanelCycleTabs('journal', 'default|inactive_journal_entries')]"
+						onclick = "[InformationPanelBar.OpenPanelCycleTabs('journal', 'default|inactive_journal_entries|situations')]"
 						input_action = "open_journal"
 					}
 				}
@@ -784,7 +784,7 @@ types information_panel_bar_types {
 						blockoverride "button_selected" {
 							visible = "[InformationPanelBar.IsPanelOpen('journal')]"
 						}
-						onclick = "[InformationPanelBar.OpenPanelCycleTabs('journal', 'default|inactive_journal_entries')]"
+						onclick = "[InformationPanelBar.OpenPanelCycleTabs('journal', 'default|inactive_journal_entries|situations')]"
 						onclick = "[GetVariableSystem.Clear('show_magic')]"
 						onclick = "[GetVariableSystem.Clear('international_open')]"
 					}
