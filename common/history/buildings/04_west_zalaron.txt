@@ -3515,26 +3515,16 @@
 				reserves=1
 				activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled"  }
 			}	
-            create_building={
-                building="building_fishing_wharf"
-                add_ownership={
-                    building={
-                        type="building_adventuring_guild"
-                        country="c:VLT"
-                        levels=1
-                        region="STATE_JUACHAI"
-                   }
-                   building={
-                       type="building_adventuring_guild"
-                       country="c:VLT"
-                       levels=1
-                       region="STATE_KILIMAMAI"
-                  }
-                }
-                reserves=1
-                activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
-            }
-        }
+		}
+		region_state:LPS={
+			create_building={
+				building="building_port"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_basic_port" }
+			}
+		}
+
   }
   s:STATE_SAWATHONG = {
 		region_state:SNB={
@@ -3922,16 +3912,16 @@
 			}
 		}
   }
-  s:STATE_MAJIPEMBE = {
-		region_state:SNB={
+  s:STATE_CHEJATAN_DO = {
+		region_state:FMJ={
             create_building={
 				building="building_logging_camp"
                 add_ownership={ 
                     building={ 
                         type="building_financial_district"
-                        country="c:SNB"
+                        country="c:FMJ"
                         levels=1
-                        region="STATE_KILIMAMAI"
+                        region="STATE_CHEJATAN_DO"
                    }
                 }
 				reserves=1
@@ -3958,16 +3948,16 @@
             activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
         }
   }
-  s:STATE_CHANGAVUTA = {
-		region_state:SNB={
+  s:STATE_MDLEMNO_KETHIN = {
+		region_state:FMJ={
 			create_building={
 				building="building_sugar_plantation"
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:SNB"
+						country="c:FMJ"
 						levels=2
-						region="STATE_MAJIPEMBE"
+						region="STATE_CHEJATAN_DO"
 				   }
 				}
 				reserves=1
@@ -3990,7 +3980,7 @@
 						type="building_manor_house"
 						country="c:SNB"
 						levels=5
-						region="STATE_SWAHATHAI"
+						region="STATE_CHEJATAN_DO"
 				   }
 				}
 				reserves=1
@@ -4042,7 +4032,7 @@
                         type="building_financial_district"
                         country="c:SNB"
                         levels=1
-                        region="STATE_MAJIWAZIRI"
+                        region="STATE_SWAHATHAI"
                    }
                 }
 				reserves=1
@@ -4055,7 +4045,7 @@
                         type="building_financial_district"
                         country="c:SNB"
                         levels=2
-                        region="STATE_SWAHAKLONG"
+                        region="STATE_YAZHINAVA"
                    }
                 }
 				reserves=1
@@ -4074,7 +4064,7 @@
 						type="building_manor_house"
 						country="c:SNB"
 						levels=4
-						region="STATE_SWAHAKLONG"
+						region="STATE_CHEJATAN_DO"
 				   }
 				}
 				reserves=1
@@ -4129,7 +4119,7 @@
                         type="building_financial_district"
                         country="c:SNB"
                         levels=1
-                        region="STATE_MAJIPEMBE"
+                        region="STATE_CHEJATAN_DO"
                    }
                 }
 			reserves=1
@@ -4138,19 +4128,13 @@
 	}
   }
   s:STATE_MAJIWAZIRI = {
-		region_state:SNB={
-            create_building={
-                building="building_government_administration"
-                level=4
-                reserves=1
-                activate_production_methods={ "pm_horizontal_drawer_cabinets"  }
-            }
+		region_state:LPS={
 			create_building={
 				building="building_maize_farm"
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:SNB"
+						country="c:LPS"
 						levels=1
 						region="STATE_MAJIWAZIRI"
 				   }
@@ -4163,7 +4147,7 @@
                 add_ownership={ 
                     building={ 
                         type="building_financial_district"
-                        country="c:SNB"
+                        country="c:LPS"
                         levels=1
                         region="STATE_MAJIWAZIRI"
                    }
@@ -4193,13 +4177,13 @@
         }
   }
   s:STATE_JUALALA = {
-		region_state:SNB={
+		region_state:LPS={
 			create_building={
 				building="building_cotton_plantation"
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:SNB"
+						country="c:LPS"
 						levels=1
 						region="STATE_JUALALA"
 				   }
@@ -4212,7 +4196,7 @@
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:SNB"
+						country="c:LPS"
 						levels=2
 						region="STATE_JUALALA"
 				   }
@@ -4225,7 +4209,7 @@
                 add_ownership={ 
                     building={ 
                         type="building_financial_district"
-                        country="c:SNB"
+                        country="c:LPS"
                         levels=2
                         region="STATE_JUALALA"
                    }
@@ -4238,9 +4222,9 @@
                 add_ownership={ 
                     building={ 
                         type="building_adventuring_guild"
-                        country="c:SNB"
+                        country="c:LPS"
                         levels=1
-                        region="STATE_MAJIWAZIRI"
+                        region="STATE_CHEJATAN_DO"
                    }
                 }
 				reserves=1
@@ -4296,6 +4280,14 @@
 				activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
 			}
 		}
+		region_state:LPS = {
+			create_building={
+				building="building_port"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_basic_port" }
+			}	
+		}
   }
   s:STATE_KILIMAKAZI = {
 		region_state:SNB={
@@ -4319,7 +4311,7 @@
 						type="building_manor_house"
 						country="c:SNB"
 						levels=1
-						region="STATE_KILIMAKAZI"
+						region="STATE_CHEJATAN_DO"
 				   }
 				}
 				reserves=1
@@ -4549,7 +4541,7 @@
                         type="building_financial_district"
                         country="c:SNB"
                         levels=1
-                        region="STATE_MAJIWAZIRI"
+                        region="STATE_CHEJATAN_DO"
                    }
                 }
 				reserves=1
@@ -4732,6 +4724,27 @@
 				reserves=1
 				activate_production_methods={ "pm_secular_academia" }
 			}		
+		}
+		region_state:LPS={
+			create_building={
+				building="building_furniture_manufacturies"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:LPS"
+							levels=1
+							region="STATE_JUACHAI"
+					   }
+					}
+				reserves=1
+				activate_production_methods={ "pm_handcrafted_furniture" "pm_automation_disabled" "pm_no_luxuries" }
+			}
+			create_building={
+				building="building_port"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_basic_port" }
+			}	
 		}
   }
   s:STATE_NAKOTHAI = {
