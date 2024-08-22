@@ -1498,6 +1498,7 @@ STATE_STELINSULO = {
         bg_iron_mining = 33
         bg_lead_mining = 36
         bg_sulfur_mining = 32
+        bg_game_hunting = 5
         bg_logging = 9
         bg_leviathan_outpost = 8
         bg_fishing = 10
@@ -2313,6 +2314,7 @@ STATE_ALAMARA = {
     arable_resources = { "bg_livestock_ranches" "bg_wheat_farms" "bg_rye_farms" }
     capped_resources = {
         bg_logging = 16
+        bg_game_hunting = 5
         bg_fishing = 6
         bg_leviathan_outpost = 2
     }
@@ -2361,6 +2363,10 @@ STATE_ZAFIRAN = {
         bg_iron_mining = 18
         bg_logging = 14
         bg_fishing = 6
+    }
+    resource = {
+        type = "bg_wishstone_reefs"
+        undiscovered_amount = 14
     }
     naval_exit_id = 3002
 }
@@ -2419,7 +2425,8 @@ STATE_ZAHARIDO = {
     arable_land = 55
     arable_resources = { "bg_livestock_ranches" "bg_wheat_farms" "bg_rye_farms" }
     capped_resources = {
-        bg_logging = 5
+        bg_logging = 9
+        bg_game_hunting = 6
         bg_fishing = 12
     }
     naval_exit_id = 3002
@@ -2440,6 +2447,7 @@ STATE_ALVEKSADO = {
     capped_resources = {
         bg_iron_mining = 30
         bg_sulfur_mining = 80
+        bg_game_hunting = 5
         bg_logging = 10
         bg_haunted_grounds = 1
     }
@@ -2458,6 +2466,7 @@ STATE_ALMARAQI = {
     arable_resources = { "bg_livestock_ranches" "bg_wheat_farms" "bg_rye_farms" }
     capped_resources = {
         bg_logging = 12
+        bg_game_hunting = 8
         bg_fishing = 8
         bg_haunted_grounds = 8
     }
@@ -2494,6 +2503,7 @@ STATE_KASIDA = {
     arable_resources = { "bg_livestock_ranches" "bg_wheat_farms" "bg_rye_farms" }
     capped_resources = {
         bg_logging = 6
+        bg_game_hunting = 8
         bg_iron_mining = 60
     }
     naval_exit_id = 3184
@@ -2513,6 +2523,7 @@ STATE_ESPRASHAD = {
     arable_resources = { "bg_livestock_ranches" "bg_wheat_farms" "bg_rye_farms" }
     capped_resources = {
         bg_logging = 8
+        bg_game_hunting = 8
         bg_fishing = 10
     }
     naval_exit_id = 3005
@@ -2530,7 +2541,12 @@ STATE_RAHMANTO = {
     arable_resources = { "bg_livestock_ranches" "bg_wheat_farms" "bg_rye_farms" }
     capped_resources = {
         bg_logging = 13
+        bg_game_hunting = 6
         bg_fishing = 8
+    }
+    resource = {
+        type = "bg_wishstone_reefs"
+        undiscovered_amount = 18
     }
     naval_exit_id = 3002
 }
@@ -2547,6 +2563,7 @@ STATE_ZAKARIYA = {
     arable_resources = { "bg_livestock_ranches" "bg_logging_crystalwood" }
     capped_resources = {
         bg_logging = 8
+        bg_game_hunting = 3
         bg_haunted_grounds = 6
     }
     naval_exit_id = 3184
@@ -2563,7 +2580,8 @@ STATE_NURADINO = {
     arable_land = 100
     arable_resources = { "bg_livestock_ranches" "bg_wheat_farms" "bg_rye_farms" }
     capped_resources = {
-        bg_logging = 5
+        bg_logging = 8
+        bg_game_hunting = 4
         bg_fishing = 12
     }
     naval_exit_id = 3002
@@ -2580,7 +2598,8 @@ STATE_ALJUMARO = {
     arable_land = 40
     arable_resources = { "bg_livestock_ranches" "bg_wheat_farms" "bg_rye_farms" }
     capped_resources = {
-        bg_logging = 3
+        bg_logging = 7
+        bg_game_hunting = 4
         bg_fishing = 8
     }
     naval_exit_id = 3002
@@ -2603,6 +2622,10 @@ STATE_ZAHIDUMO = {
         bg_fishing = 8
         bg_haunted_grounds = 3
     }
+    resource = {
+        type = "bg_wishstone_reefs"
+        undiscovered_amount = 10
+    }
     naval_exit_id = 3002
 }
 STATE_KAJRANDO = {
@@ -2620,6 +2643,7 @@ STATE_KAJRANDO = {
     arable_resources = { "bg_livestock_ranches" "bg_wheat_farms" "bg_rye_farms" }
     capped_resources = {
         bg_logging = 8
+        bg_game_hunting = 5
         bg_coal_mining = 40
     }
     naval_exit_id = 3185
@@ -2641,6 +2665,14 @@ STATE_SARABENDO = {
         bg_lead_mining = 12
         bg_haunted_grounds = 9
         bg_gold_mining = 4
+    }
+    resource = {
+        type = "bg_wishstone_reefs"
+        undiscovered_amount = 10
+    }
+    resource = {
+        type = "bg_gold_mining"
+        undiscovered_amount = 4
     }
     naval_exit_id = 3002
 }
