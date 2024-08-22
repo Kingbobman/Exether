@@ -1215,44 +1215,81 @@ types journal
 
 				}
 
-				### FLAGS
-				#BLOC MEMBER 1 FLAG
-				small_flag = {
-					datacontext = "[PowerBloc.GetLeader]"
+				### PARTY MEMBER RECRUITMENT
+
+				#PARTY MEMBER 1 BUTTON (LEADER)
+				add_character_button = {
+					size = { 83 83 }
 					position = { 0 -20 }
 					parentanchor = hcenter|bottom
+					
+					blockoverride "tooltip" {
+						tooltip = "RECRUIT_CHARACTER_RETAINER"
+					}
+
+					blockoverride "onclick" {
+						onclick = "[PopupManager.ToggleRecruitFormationGeneral( MilitaryFormation.Self )]"
+					}
 				}
 
-				#BLOC MEMBER 2 FLAG
-				tiny_flag = {
-					visible = "[GreaterThan_int32( GetDataModelSize(PowerBloc.GetMembersWithUniqueHeadsOfState), '(int32)1' )]"
+				#PARTY MEMBER 2 BUTTON
+				add_character_button = {
+					size = { 55 55 }
 					position = { -110 -20 }
 					parentanchor = hcenter|bottom
-					datacontext = "[PowerBloc.GetMemberWithUniqueHeadOfState('(int32)1')]"
+					
+					blockoverride "tooltip" {
+						tooltip = "RECRUIT_CHARACTER_RETAINER"
+					}
+
+					blockoverride "onclick" {
+						onclick = "[PopupManager.ToggleRecruitFormationGeneral( MilitaryFormation.Self )]"
+					}
 				}
 
-				#BLOC MEMBER 3 FLAG
-				tiny_flag = {
-					visible = "[GreaterThan_int32( GetDataModelSize(PowerBloc.GetMembersWithUniqueHeadsOfState), '(int32)2' )]"
+				#PARTY MEMBER 3 BUTTON
+				add_character_button = {
+					size = { 55 55 }
 					position = { 110 -20 }
 					parentanchor = hcenter|bottom
-					datacontext = "[PowerBloc.GetMemberWithUniqueHeadOfState('(int32)2')]"
+					
+					blockoverride "tooltip" {
+						tooltip = "RECRUIT_CHARACTER_RETAINER"
+					}
+
+					blockoverride "onclick" {
+						onclick = "[PopupManager.ToggleRecruitFormationGeneral( MilitaryFormation.Self )]"
+					}
 				}
 
-				#BLOC MEMBER 4 FLAG
-				tiny_flag = {
-					visible = "[GreaterThan_int32( GetDataModelSize(PowerBloc.GetMembersWithUniqueHeadsOfState), '(int32)3' )]"
+				#PARTY MEMBER 4 BUTTON
+				add_character_button = {
+					size = { 55 55 }
 					position = { -210 -20 }
 					parentanchor = hcenter|bottom
-					datacontext = "[PowerBloc.GetMemberWithUniqueHeadOfState('(int32)3')]"
+					
+					blockoverride "tooltip" {
+						tooltip = "RECRUIT_CHARACTER_RETAINER"
+					}
+
+					blockoverride "onclick" {
+						onclick = "[PopupManager.ToggleRecruitFormationGeneral( MilitaryFormation.Self )]"
+					}
 				}
 
-				#BLOC MEMBER 5 FLAG
-				tiny_flag = {
-					visible = "[GreaterThan_int32( GetDataModelSize(PowerBloc.GetMembersWithUniqueHeadsOfState), '(int32)4' )]"
+				#PARTY MEMBER 5 BUTTON
+				add_character_button = {
+					size = { 55 55 }
 					position = { 210 -20 }
 					parentanchor = hcenter|bottom
-					datacontext = "[PowerBloc.GetMemberWithUniqueHeadOfState('(int32)4')]"
+					
+					blockoverride "tooltip" {
+						tooltip = "RECRUIT_CHARACTER_RETAINER"
+					}
+
+					blockoverride "onclick" {
+						onclick = "[PopupManager.ToggleRecruitFormationGeneral( MilitaryFormation.Self )]"
+					}
 				}
 			}
 		}
