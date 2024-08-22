@@ -43,41 +43,40 @@
 		else_if = {
 			limit = {
 				OR = {
-					culture_accepted = yes
+					
 					is_pop_type = soldiers
+					AND = {
+						literacy_rate > 0.3
+						culture_accepted = yes
+					}
 				}
 			}
 			# baseline: ( literacy - 0.2 ) * 10, norm 2 for Soldiers with Literacy 30%
 			add = {
 				value = literacy_rate
-				subtract = 0.2
-				min = 0
+				subtract = 0.3
 				multiply = 10
 				desc = "QUALIFICATIONS_LITERACY_FACTOR"
 			}
 			if = {
 				limit = {
-					is_pop_type = aristocrats
+					OR = {
+						is_pop_type = aristocrats
+						AND = {
+							is_pop_type = soldiers
+							owner = {
+								is_at_war = yes
+							}
+							is_employed = yes
+							workplace = {
+								has_deployed_units = yes
+							}
+						}
+					}
 				}
 				multiply = {
 					value = 5
 					desc = "QUALIFICATIONS_FAVORED_TYPE"
-				}
-			}
-			if = {
-				limit = {
-					is_pop_type = soldiers
-					owner = {
-						is_at_war = yes
-					}
-					is_employed = yes
-					workplace = {
-						has_deployed_units = yes
-					}
-				}
-				multiply = {
-					value = 5
-					desc = "QUALIFICATIONS_DEPLOYED_SERVICEMEN"
 				}
 			}
 			if = {
@@ -93,7 +92,12 @@
 				}
 			}
 		}
-
+		else = {		
+			value = {
+				desc = "QUALIFICATIONS_INSUFFICIENT_LITERACY_DECAY"
+				value = -1
+			}
+		}
 	}
 	
 	portrait_age = {
