@@ -75,19 +75,6 @@
 }
 	s:STATE_HADRA = {
 		region_state:TKR={
-			create_building={
-				building="building_vineyard_plantation"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:TKR"
-						levels=1
-						region="STATE_HADRA"
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "default_building_vineyard_plantation"  }
-			}
 		}
 	}
 	s:STATE_BYRTHAS = {
@@ -473,19 +460,6 @@
 	}
 	s:STATE_SABRATHOS = {
 		region_state:DIS={
-			create_building={
-				building="building_vineyard_plantation"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:DIS"
-						levels=1
-						region="STATE_SABRATHOS"
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "default_building_vineyard_plantation"  }
-			}
             create_building={
 				building="building_fishing_wharf"
                 add_ownership={ 
@@ -509,19 +483,6 @@
 	}
 	s:STATE_MALYBA = {
 		region_state:IMR={
-			create_building={
-				building="building_vineyard_plantation"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:IMR"
-						levels=1
-						region="STATE_MALYBA"
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "default_building_vineyard_plantation"  }
-			}
             create_building={
 				building="building_fishing_wharf"
                 add_ownership={ 
@@ -852,7 +813,7 @@
 				activate_production_methods={ "pm_wooden_buildings" }
 			}
             create_building = {
-                building = "exether.building.artifactory"
+                building = "building_artifactory"
                 add_ownership={
                     building={
                         type="building_adventuring_guild"
@@ -870,7 +831,7 @@
                 reserves = 1
             }
             create_building = {
-                building = "exether.building.sunken_ruin_expedition"
+                building = "building_sunken_ruin_expedition"
                 add_ownership={
                     building={
                         type="building_adventuring_guild"
@@ -905,19 +866,6 @@
 				activate_production_methods={ "pm_fishing_trawlers" "pm_unrefrigerated" }
 			}
 			create_building={
-				building="building_vineyard_plantation"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:DIS"
-						levels=1
-						region="STATE_MOTHYA"
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "default_building_vineyard_plantation"  }
-			}
-			create_building={
 				building="building_port"
 				level=1
 				reserves=1
@@ -940,19 +888,6 @@
 				reserves=1
 				activate_production_methods={ "pm_fishing_trawlers" "pm_unrefrigerated" }
 			  }
-			create_building={
-				building="building_vineyard_plantation"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:DIS"
-						levels=1
-						region="STATE_LILYBAEUM"
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "default_building_vineyard_plantation"  }
-			}
 			create_building={
 				building="building_port"
 				level=1
@@ -1285,7 +1220,7 @@
 				activate_production_methods={ "pm_basic_port" }
 			}
 			create_building = {
-			    building = "exether.building.artifactory"
+			    building = "building_artifactory"
 			    add_ownership={
                     building={
                         type="building_adventuring_guild"
@@ -1297,7 +1232,7 @@
 			    reserves = 1
 			}
             create_building = {
-                building = "exether.building.sunken_ruin_expedition"
+                building = "building_sunken_ruin_expedition"
                 add_ownership={
                     building={
                         type="building_adventuring_guild"
@@ -2649,9 +2584,48 @@
 		region_state:TPK = {
 			create_building={
 				building="building_government_administration"
-				level=2
+				level=5
 				reserves=1
-				activate_production_methods={ "pm_simple_organization" }
+				activate_production_methods={ "pm_horizontal_drawer_cabinets" }
+			}
+			create_building={
+				building="building_tooling_workshops"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:TPK"
+                        levels=1
+                        region="STATE_GARPATIA"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_crude_tools" "pm_automation_disabled" }
+			}
+			create_building={
+				building="building_paper_mills"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:TPK"
+                        levels=1
+                        region="STATE_GARPATIA"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_pulp_pressing" "pm_automation_disabled" }
+			}
+			create_building={
+				building="building_logging_camp"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:TPK"
+                        levels=4
+                        region="STATE_GARPATIA"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_saw_mills" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
 			}
 		}
 	}

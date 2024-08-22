@@ -78,7 +78,16 @@
                 set_relations = { country = c:DAR value = -20 }
                 set_relations = { country = c:SMA value = -20 }
 	}
-	
+		c:BIE = {
+			set_relations = { country = c:YAN value = 40 }
+			set_relations = { country = c:SRN value = 60 }
+		}
+		c:SRN = {
+			set_relations = { country = c:BIE value = 25 }
+		}
+		c:YAN = {
+			set_relations = { country = c:BIE value = 20 }
+		}		
 c:RVC = {
 set_relations = { country = c:FOX value = -20 }
 		set_relations = { country = c:DOV value = -50 }
@@ -158,6 +167,149 @@ c:RVE = {
 	}
 	c:TLD = {
 		set_relations = { country = c:SEB value = -25 }
+	}
+	c:ZIX = {
+		set_relations = { country = c:LGZ value = -50 }
+		set_relations = { country = c:REM value = -50 }
+		set_relations = { country = c:TUF value = -50 }
+		set_relations = { country = c:KGM value = -50 }
+		set_relations = { country = c:MJE value = -50 }
+		set_relations = { country = c:KVG value = -50 }
+		set_relations = { country = c:MGR value = -50 }
+		set_relations = { country = c:DTH value = -50 }
+	}
+	c:LGZ = {
+		set_relations = { country = c:ZIX value = -50 }
+		set_relations = { country = c:REM value = -50 }
+		set_relations = { country = c:TUF value = -50 }
+		set_relations = { country = c:KGM value = -50 }
+		set_relations = { country = c:MJE value = -50 }
+		set_relations = { country = c:KVG value = -50 }
+		set_relations = { country = c:MGR value = -50 }
+		set_relations = { country = c:VLT value = -50 }
+		set_relations = { country = c:EKA value = -50 }
+	}
+	c:REM = {
+		set_relations = { country = c:ZIX value = -50 }
+		set_relations = { country = c:LGZ value = -50 }
+		set_relations = { country = c:TUF value = -50 }
+		set_relations = { country = c:KGM value = -50 }
+		set_relations = { country = c:MJE value = -50 }
+		set_relations = { country = c:KVG value = -50 }
+		set_relations = { country = c:MGR value = -50 }
+		set_relations = { country = c:VLT value = -50 }
+		set_relations = { country = c:TSH value = -50 }
+	}
+	c:TUF = {
+		set_relations = { country = c:ZIX value = -50 }
+		set_relations = { country = c:REM value = -50 }
+		set_relations = { country = c:KGM value = 0 }
+		set_relations = { country = c:MJE value = 0 }
+		set_relations = { country = c:KVG value = -50 }
+		set_relations = { country = c:MGR value = -50 }
+	}
+	c:MJE = {
+		set_relations = { country = c:ZIX value = -50 }
+		set_relations = { country = c:REM value = -50 }
+		set_relations = { country = c:TUF value = 0 }
+		set_relations = { country = c:KGM value = 30 }
+		set_relations = { country = c:KVG value = -50 }
+		set_relations = { country = c:MGR value = -50 }
+		set_relations = { country = c:VLT value = -50 }
+		set_relations = { country = c:EKA value = -50 }
+	}
+	c:KGM = {
+		set_relations = { country = c:ZIX value = -50 }
+		set_relations = { country = c:REM value = -50 }
+		set_relations = { country = c:TUF value = 0 }
+		set_relations = { country = c:MJE value = 30 }
+		set_relations = { country = c:KVG value = -50 }
+		set_relations = { country = c:MGR value = -50 }
+		set_relations = { country = c:VLT value = -50 }
+		set_relations = { country = c:EKA value = -50 }
+	}
+	c:KVG = {
+		set_relations = { country = c:ZIX value = -50 }
+		set_relations = { country = c:LGZ value = -50 }
+		set_relations = { country = c:TUF value = -50 }
+		set_relations = { country = c:KGM value = -50 }
+		set_relations = { country = c:MJE value = -50 }
+		set_relations = { country = c:MGR value = -50 }
+		set_relations = { country = c:REM value = -50 }
+		set_relations = { country = c:DKO value = -10 }
+		set_relations = { country = c:GRA value = -5 }
+		set_relations = { country = c:SBH value = 10 }
+		set_relations = { country = c:BDT value = 30 }
+		set_relations = { country = c:DHR value = 30 }
+		set_relations = { country = c:ARD value = 30 }
+		set_relations = { country = c:VOR value = 50 }
+	}
+	c:VOR = {
+		set_relations = { country = c:ZIX value = -50 }
+		set_relations = { country = c:LGZ value = -50 }
+		set_relations = { country = c:TUF value = -50 }
+		set_relations = { country = c:KGM value = -50 }
+		set_relations = { country = c:MJE value = -50 }
+		set_relations = { country = c:MGR value = -50 }
+		set_relations = { country = c:REM value = -50 }
+		set_relations = { country = c:DKO value = -10 }
+		set_relations = { country = c:GRA value = -5 }
+		set_relations = { country = c:SBH value = 10 }
+		set_relations = { country = c:BDT value = 30 }
+		set_relations = { country = c:DHR value = 30 }
+		set_relations = { country = c:ARD value = 30 }
+		set_relations = { country = c:KVG value = 50 }
+	}
+	c:DKO = {
+		set_relations = { country = c:ZIX value = -50 }
+		set_relations = { country = c:LGZ value = -50 }
+		set_relations = { country = c:TUF value = -50 }
+		set_relations = { country = c:KGM value = -50 }
+		set_relations = { country = c:MJE value = -50 }
+		set_relations = { country = c:MGR value = -50 }
+		set_relations = { country = c:REM value = -50 }
+		set_relations = { country = c:GRA value = 50 }
+		set_relations = { country = c:SBH value = 50 }
+		set_relations = { country = c:BDT value = 30 }
+		set_relations = { country = c:DHR value = 30 }
+		set_relations = { country = c:ARD value = 10 }
+	}
+
+	c:ARD = {
+		set_relations = { country = c:ZIX value = -50 }
+		set_relations = { country = c:LGZ value = -50 }
+		set_relations = { country = c:TUF value = -50 }
+		set_relations = { country = c:KGM value = -50 }
+		set_relations = { country = c:MJE value = -50 }
+		set_relations = { country = c:MGR value = -50 }
+		set_relations = { country = c:REM value = -50 }
+		set_relations = { country = c:GRA value = 30 }
+		set_relations = { country = c:SBH value = 30 }
+		set_relations = { country = c:BDT value = 30 }
+		set_relations = { country = c:DHR value = 30 }
+	}
+	c:DHR = {
+		set_relations = { country = c:ZIX value = -50 }
+		set_relations = { country = c:LGZ value = -50 }
+		set_relations = { country = c:TUF value = -50 }
+		set_relations = { country = c:KGM value = -50 }
+		set_relations = { country = c:MJE value = -50 }
+		set_relations = { country = c:MGR value = -50 }
+		set_relations = { country = c:REM value = -50 }
+		set_relations = { country = c:GRA value = 30 }
+		set_relations = { country = c:SBH value = 30 }
+		set_relations = { country = c:BDT value = 30 }
+	}
+	c:BDT = {
+		set_relations = { country = c:ZIX value = -50 }
+		set_relations = { country = c:LGZ value = -50 }
+		set_relations = { country = c:TUF value = -50 }
+		set_relations = { country = c:KGM value = -50 }
+		set_relations = { country = c:MJE value = -50 }
+		set_relations = { country = c:MGR value = -50 }
+		set_relations = { country = c:REM value = -50 }
+		set_relations = { country = c:GRA value = 30 }
+		set_relations = { country = c:SBH value = 30 }
 	}
 
 }

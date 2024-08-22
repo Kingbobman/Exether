@@ -30,3 +30,54 @@ fund_lobbies_monthly_events = {
 		10 = fund_lobbies_events.5
 	}
 }
+
+queue_port = {
+	effect = {
+		set_variable = {
+			name = convoy_ratio
+			value = {
+				value = num_convoys_available
+				subtract = num_convoys_required
+				min = 0
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+					is_ai = yes
+					num_trade_routes > 0
+					get_net_income > 0
+					var:convoy_ratio <= 800
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						any_scope_building = {
+							is_building_type = building_port
+							can_queue_building_levels = 1
+							is_under_construction = no
+						}
+						NOT = {
+							any_scope_building = {
+								is_building_type = building_port
+								is_under_construction = yes
+								count = 3
+							}
+						}
+					}
+				}
+				random_scope_building = {
+					limit = {
+						is_building_type = building_port
+						can_queue_building_levels = 1
+						is_under_construction = no
+					}
+					state = {
+						start_building_construction = building_port
+					}
+				}				
+			}		
+		}
+	}
+}
