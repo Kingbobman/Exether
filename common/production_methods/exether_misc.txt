@@ -7,9 +7,9 @@ pm_rusttail_fishing = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods										
-			goods_output_fish_add = -10			#x20 = 200
+			goods_output_fish_add = -8			#x20 = 160
 
-			goods_output_iron_add = 5			#x30 = 150
+			goods_output_iron_add = 7			#x30 = 210
 		}
 	}
 }
@@ -24,9 +24,9 @@ pm_intensified_rusttail_fishing = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods										
-			goods_output_fish_add = -20			#x20 = 400
+			goods_output_fish_add = -15			#x20 = 300
 
-			goods_output_iron_add = 10			#x30 = 300
+			goods_output_iron_add = 13			#x30 = 390
 		}
 	}
 }
@@ -41,47 +41,9 @@ pm_magebred_rusttail_fish_farming = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods										
-			goods_output_fish_add = -40
+			goods_output_fish_add = -20			#x20 = 400
 			
-			goods_output_iron_add = 20
-		}
-	}
-}
-
-pm_early_blubberfish_harvesting = {
-	texture = "gfx/interface/icons/production_method_icons/hardwood_selection.dds"
-	building_modifiers = {
-		workforce_scaled = {
-			# output goods										
-			goods_output_fish_add = -4
-			goods_output_blubber_add = 3
-		}
-	}
-}
-
-pm_organized_blubberfish_harvesting = {
-	texture = "gfx/interface/icons/production_method_icons/hardwood_selection.dds"
-	building_modifiers = {
-		workforce_scaled = {
-			# output goods										
-			goods_output_fish_add = -8
-			goods_output_blubber_add = 6
-		}
-	}
-}
-
-pm_dedicated_blubberfish_harvesting = {
-	texture = "gfx/interface/icons/production_method_icons/hardwood_selection.dds"
-
-	unlocking_technologies = {
-		electric_railway
-	}
-
-	building_modifiers = {
-		workforce_scaled = {
-			# output goods										
-			goods_output_fish_add = -13
-			goods_output_blubber_add = 10
+			goods_output_iron_add = 20			#x30 = 600
 		}
 	}
 }
@@ -91,19 +53,26 @@ pm_early_glowfish_harvesting = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods										
-			goods_output_fish_add = -4
-			goods_output_monster_essence_add = 3
+			goods_output_fish_add = -10				#x20 = 200
+
+			goods_output_monster_essence_add = 5	#x40 = 200
 		}
 	}
 }
 
 pm_organized_glowfish_harvesting = {
 	texture = "gfx/interface/icons/production_method_icons/hardwood_selection.dds"
+	
+	unlocking_technologies = {
+		mechanical_tools
+	}
+
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods										
-			goods_output_fish_add = -8
-			goods_output_monster_essence_add = 6
+			goods_output_fish_add = -15				#x20 = 300
+
+			goods_output_monster_essence_add = 10	#x40 = 400
 		}
 	}
 }
@@ -118,8 +87,9 @@ pm_dedicated_glowfish_harvesting = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods										
-			goods_output_fish_add = -13
-			goods_output_monster_essence_add = 10
+			goods_output_fish_add = -13				#x20 = 260
+
+			goods_output_monster_essence_add = 10	#x40 = 400
 		}
 	}
 }
