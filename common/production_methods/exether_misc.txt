@@ -7,8 +7,9 @@ pm_rusttail_fishing = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods										
-			goods_output_fish_add = -10
-			goods_output_iron_add = 5
+			goods_output_fish_add = -8			#x20 = 160
+
+			goods_output_iron_add = 7			#x30 = 210
 		}
 	}
 }
@@ -23,8 +24,9 @@ pm_intensified_rusttail_fishing = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods										
-			goods_output_fish_add = -20
-			goods_output_iron_add = 10
+			goods_output_fish_add = -15			#x20 = 300
+
+			goods_output_iron_add = 13			#x30 = 390
 		}
 	}
 }
@@ -39,46 +41,9 @@ pm_magebred_rusttail_fish_farming = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods										
-			goods_output_fish_add = -40
-			goods_output_iron_add = 20
-		}
-	}
-}
-
-pm_early_blubberfish_harvesting = {
-	texture = "gfx/interface/icons/production_method_icons/hardwood_selection.dds"
-	building_modifiers = {
-		workforce_scaled = {
-			# output goods										
-			goods_output_fish_add = -4
-			goods_output_blubber_add = 3
-		}
-	}
-}
-
-pm_organized_blubberfish_harvesting = {
-	texture = "gfx/interface/icons/production_method_icons/hardwood_selection.dds"
-	building_modifiers = {
-		workforce_scaled = {
-			# output goods										
-			goods_output_fish_add = -8
-			goods_output_blubber_add = 6
-		}
-	}
-}
-
-pm_dedicated_blubberfish_harvesting = {
-	texture = "gfx/interface/icons/production_method_icons/hardwood_selection.dds"
-
-	unlocking_technologies = {
-		electric_railway
-	}
-
-	building_modifiers = {
-		workforce_scaled = {
-			# output goods										
-			goods_output_fish_add = -13
-			goods_output_blubber_add = 10
+			goods_output_fish_add = -20			#x20 = 400
+			
+			goods_output_iron_add = 20			#x30 = 600
 		}
 	}
 }
@@ -88,19 +53,26 @@ pm_early_glowfish_harvesting = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods										
-			goods_output_fish_add = -4
-			goods_output_monster_essence_add = 3
+			goods_output_fish_add = -10				#x20 = 200
+
+			goods_output_monster_essence_add = 5	#x40 = 200
 		}
 	}
 }
 
 pm_organized_glowfish_harvesting = {
 	texture = "gfx/interface/icons/production_method_icons/hardwood_selection.dds"
+	
+	unlocking_technologies = {
+		mechanical_tools
+	}
+
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods										
-			goods_output_fish_add = -8
-			goods_output_monster_essence_add = 6
+			goods_output_fish_add = -15				#x20 = 300
+
+			goods_output_monster_essence_add = 10	#x40 = 400
 		}
 	}
 }
@@ -115,8 +87,9 @@ pm_dedicated_glowfish_harvesting = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods										
-			goods_output_fish_add = -13
-			goods_output_monster_essence_add = 10
+			goods_output_fish_add = -20				#x20 = 400
+
+			goods_output_monster_essence_add = 15	#x40 = 600
 		}
 	}
 }
@@ -126,19 +99,26 @@ pm_early_squidlets_harvesting = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods										
-			goods_output_fish_add = -4
-			goods_output_dyes_add = 3
+			goods_output_fish_add = -10				#x20 = 200
+
+			goods_output_dyes_add = 5				#x40 = 200
 		}
 	}
 }
 
 pm_organized_squidlets_harvesting = {
 	texture = "gfx/interface/icons/production_method_icons/hardwood_selection.dds"
+	
+	unlocking_technologies = {
+		mechanical_tools
+	}
+
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods										
-			goods_output_fish_add = -8
-			goods_output_dyes_add = 6
+			goods_output_fish_add = -15				#x20 = 300
+
+			goods_output_dyes_add = 7				#x40 = 280
 		}
 	}
 }
@@ -153,8 +133,9 @@ pm_dedicated_squidlets_harvesting = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods										
-			goods_output_fish_add = -13
-			goods_output_dyes_add = 10
+			goods_output_fish_add = -20				#x20 = 400
+
+			goods_output_dyes_add = 10				#x40 = 400
 		}
 	}
 }
@@ -164,9 +145,13 @@ pm_early_goldfish_harvesting = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods										
-			goods_output_fish_add = -12
-			goods_output_gold_add = 5
+			goods_output_fish_add = -15				#x20 = 300
+
+			goods_output_gold_add = 5				#x100 = 500
 		}
+	}
+	country_modifiers = {
+		country_minting_add = 100
 	}
 }
 
@@ -174,21 +159,44 @@ pm_organized_goldfish_harvesting = {
 	texture = "gfx/interface/icons/production_method_icons/hardwood_selection.dds"
 
 	unlocking_technologies = {
-		electric_railway
+		mechanical_tools
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods										
-			goods_output_fish_add = -25
-			goods_output_gold_add = 10
+			goods_output_fish_add = -25				#x20 = 500
+
+			goods_output_gold_add = 10				#x100 = 1000
 		}
 	}
-	possible = {
-		error_check = {
-			severity = fail
-			has_state_trait = state_trait_goldfish_fields
+	country_modifiers = {
+		country_minting_add = 200
+	}
+}
+
+pm_dedicated_goldfish_harvesting = {
+	texture = "gfx/interface/icons/production_method_icons/hardwood_selection.dds"
+
+	unlocking_technologies = {
+		mechanical_tools
+	}
+
+	unlocking_production_methods = {
+		pm_fishing_trawlers
+		pm_steam_trawlers
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods										
+			goods_output_fish_add = -40				#x20 = 800
+
+			goods_output_gold_add = 15				#x100 = 1500
 		}
+	}
+	country_modifiers = {
+		country_minting_add = 300
 	}
 }
 
@@ -196,35 +204,6 @@ pm_organized_goldfish_harvesting = {
 
 pm_no_regional_logging = {
 	texture = "gfx/interface/icons/production_method_icons/no_hardwood_selection.dds"
-}
-
-pm_mimosa_trees = {  #this is a reference to dmt extraction methods irl
-	texture = "gfx/interface/icons/production_method_icons/orchards.dds"
-	
-	unlocking_production_methods = {
-		pm_no_hardwood
-		pm_saw_mills
-		pm_electric_saw_mills
-	}
-
-	building_modifiers = {
-		workforce_scaled = {
-			goods_output_wood_add = -15
-			goods_output_tea_add = 9
-			goods_output_glass_add = 3
-		}
-	}
-}
-
-pm_canada_reference_here = {  #maple syrup
-texture = "gfx/interface/icons/production_method_icons/orchards.dds"  #we need a syrup icon
-
-building_modifiers = {
-	workforce_scaled = {
-		goods_output_wood_add = -10
-		goods_output_sugar_add = 10
-	}
-}
 }
 
 pm_simple_forestry_crystalwood = {
@@ -567,8 +546,9 @@ pm_chimesilt_extraction = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_grain_add = -15
-			goods_output_opium_add = 15
+			goods_output_grain_add = -15	#x20 = 300
+
+			goods_output_opium_add = 10		#x50 = 500
 		}
 	}
 }
