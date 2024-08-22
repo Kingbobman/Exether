@@ -1,46 +1,4 @@
-﻿building_logging_camp_mimosa = {
-	building_group = bg_logging_mimosa
-	texture = "gfx/interface/icons/building_icons/logging_camp.dds"
-	city_type = wood
-	required_construction = construction_cost_low
-	terrain_manipulator = forestry
-	levels_per_mesh = 5
-
-	production_method_groups = {
-		pmg_base_building_logging_camp
-		pmg_hardwood
-		pmg_equipment
-		pmg_regional_mimosa
-		pmg_transportation_building_logging_camp
-		
-	}
-	ownership_type = self
-
-	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
-}
-
-building_logging_camp_liquortrees = {
-	building_group = bg_logging_liquortrees
-	texture = "gfx/interface/icons/building_icons/logging_camp.dds"
-	city_type = wood
-	required_construction = construction_cost_low
-	terrain_manipulator = forestry
-	levels_per_mesh = 5
-
-	production_method_groups = {
-		pmg_base_building_logging_camp
-		pmg_hardwood
-		pmg_equipment
-		pmg_liquortrees
-		pmg_transportation_building_logging_camp
-		
-	}
-	ownership_type = self
-
-	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
-}
-
-building_hunting_lodge  = {
+﻿building_hunting_lodge  = {
 	building_group = bg_hunting
 	texture = "gfx/interface/icons/building_icons/essence_temperate.dds"
 	city_type = wood
@@ -175,26 +133,7 @@ building_haunted_grounds = {
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
 }
 
-building_logging_camp_syrup_trees = {
-	building_group = bg_logging_syrup_trees
-	texture = "gfx/interface/icons/building_icons/logging_camp.dds"
-	city_type = wood
-	required_construction = construction_cost_low
-	terrain_manipulator = forestry
-	levels_per_mesh = 5
 
-	production_method_groups = {
-		pmg_base_building_logging_camp
-		pmg_hardwood
-		pmg_equipment
-		pmg_syrup_trees
-		pmg_transportation_building_logging_camp
-		
-	}
-	ownership_type = self
-
-	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
-}
 building_fur_hunting_lodge = {
 	building_group = bg_game_hunting
 	texture = "gfx/interface/icons/building_icons/building_fur_lodge.dds"
@@ -218,4 +157,58 @@ building_fur_hunting_lodge = {
 		NOT = { is_under_construction = yes }
 	}
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+}
+
+building_fishing_wharf_rusttails = {
+	building_group = bg_fishing_rusttails
+	texture = "gfx/interface/icons/building_icons/rusttail.dds"
+	city_type = port
+	required_construction = construction_cost_low
+
+	production_method_groups = {
+		pmg_base_building_fishing_wharf
+		pmg_rusttails
+		pmg_refrigeration_building_fishing_wharf
+		
+	}
+
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_fishing.dds"
+}
+
+building_fishing_wharf_goldfish = {
+	building_group = bg_fishing_goldfish
+	texture = "gfx/interface/icons/building_icons/true_goldfish.dds"
+	city_type = port
+	required_construction = construction_cost_low
+
+	production_method_groups = {
+		pmg_base_building_fishing_wharf
+		pmg_goldfish
+		pmg_refrigeration_building_fishing_wharf
+		
+	}
+
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_fishing.dds"
+}
+
+building_fishing_wharf_glowfish = {
+	building_group = bg_fishing_glowfish
+	texture = "gfx/interface/icons/building_icons/lanternfish.dds"
+	city_type = port
+	required_construction = construction_cost_low
+
+	production_method_groups = {
+		pmg_base_building_fishing_wharf
+		pmg_glowfish
+		pmg_refrigeration_building_fishing_wharf
+		
+	}
+
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_fishing.dds"
 }

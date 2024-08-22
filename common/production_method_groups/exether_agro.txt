@@ -28,11 +28,60 @@ pmg_livestock_enhancements = {
 
 ##Regionals##
 
-pmg_secondary_building_rice_farm_leechgardens = {
+pmg_base_building_mountain_maize_farm = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_simple_farming
+		pm_soil_enriching_farming
+		pm_fertilization
+		pm_chemical_fertilizer
+	}
+}
+
+pmg_secondary_building_mountain_maize_farm = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
 	production_methods = {
 		pm_no_secondary
-		pm_leechgardens
+		pm_chimesilt_extraction
+	}
+}
+
+pmg_harvesting_process_building_mountain_maize_farm = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_tools_disabled
+		pm_tools
+		pm_steam_threshers
+		pm_tractors
+		pm_compression_ignition_tractors
+	}
+}
+
+pmg_base_building_leechgardens = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_leeches
+		pm_bigger_leeches
+		pm_apocalyptic_leeches
+	}
+}
+
+pmg_secondary_building_leechgardens = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_secondary
+		pm_stuffed_leeches
+		pm_magic_leeches
+		
+	}
+}
+
+pmg_armed_harvesting_leechgardens = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_arms
+		pm_small_arms
+		pm_big_arms
 	}
 }
 
