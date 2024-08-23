@@ -1,0 +1,28 @@
+je_coldreach_unification = {
+    icon = "gfx/interface/icons/event_icons/event_military.dds"
+    
+    group = je_group_historical_content
+    should_be_pinned_by_default = yes
+
+    is_shown_when_inactive = {
+        OR = {
+			country_has_primary_culture = cu:varyngi
+			country_has_primary_culture = cu:glethach
+		}
+    }
+
+    possible = {
+        hidden_trigger = {always = yes}
+    }
+
+    complete = {
+        custom_tooltip = {
+            text = coldreach_formed
+            c:CDR ?= THIS
+        }
+    }
+
+    on_complete = {
+        trigger_event = { id = formation.2 popup = yes }
+    }
+}

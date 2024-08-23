@@ -109,3 +109,59 @@ formation.1 = {
 		}
 	}
 }
+
+#Coldreach
+formation.2 = {
+	type = country_event
+	placement = ROOT
+
+	title = formation.2.t
+	desc = formation.2.d
+	flavor = formation.2.f
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	duration = 3
+
+	trigger = {
+		# triggered by je_coldreach_unification
+	}
+
+	immediate = {
+		save_scope_as = formation_country
+		ruler = {
+			save_scope_as = ruler_scope
+		}
+		cu:varyngi = {
+			save_scope_as = unification_culture1
+		}
+		cu:glethach = {
+			save_scope_as = unification_culture2
+		}
+		every_country = {
+			limit = {
+				has_diplomatic_relevance = ROOT
+			}
+			post_notification = unification_notification_one_culture
+		}
+	}
+
+	option = {
+		name = formation.2.a
+		default_option = yes
+		s:STATE_FROSTGATE = {
+			add_claim = ROOT
+		}
+		add_modifier = {
+			name = unification_prestige
+			months = very_long_modifier_time
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
