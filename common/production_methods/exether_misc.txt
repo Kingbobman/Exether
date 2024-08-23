@@ -788,9 +788,8 @@ pm_simple_desert_hunting = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_monster_essence_add = 10  #40 = 400
-			goods_output_opium_add = 5             #50 = 250
-		}                                          #Profit = 650
+			goods_output_monster_essence_add = 15  #40 = 600
+		}                                          #Profit = 600
 
 		level_scaled = {
 			# employment
@@ -826,7 +825,6 @@ pm_firearms_desert_hunting= {
 			goods_input_groceries_add = 5         #30 = 150
 			# output goods
 			goods_output_monster_essence_add = 30 #40 = 1200
-			goods_output_opium_add = 10           #50 = 500
 			                                      #Profit = 750
 		}
 
@@ -861,14 +859,13 @@ pm_heavy_weapons_desert_hunting = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_small_arms_add = 10 #10x60 = 600
-			goods_input_ammunition_add = 5  #5x50 = 250
-			goods_input_groceries_add = 5         #30 = 150
+			goods_input_small_arms_add = 10 		#10x60 = 600
+			goods_input_ammunition_add = 5  		#5x50 = 250
+			goods_input_groceries_add = 5         	#30 = 150
 			
 			# output goods
-			goods_output_monster_essence_add = 50 #40 = 2000
-			goods_output_opium_add = 30           #30x50 = 1500
-		}                                         #Profit = 2500
+			goods_output_monster_essence_add = 50 	#40 = 2000
+		}                                         	#Profit = 1000
 
 		level_scaled = {
 			# employment
@@ -892,22 +889,23 @@ pm_heavy_weapons_desert_hunting = {
 	}
 }
 
-pm_no_hunting_chimesilt = {
+pm_no_hunting_dyes = {
 	texture = "gfx/interface/icons/production_method_icons/no_meat.dds"
 }
 
-pm_hunting_chimesilt = {
+pm_hunting_dyes = {
 	texture = "gfx/interface/icons/production_method_icons/meat.dds"
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods										
-			goods_output_monster_essence_add = -10
-			goods_output_opium_add = 8
+			goods_output_monster_essence_add = -10		#x40 = 400
+
+			goods_output_dye_add = 8					#x40 = 320
 		}
 	}
 }
 
-pm_increased_hunting_chimesilt = {
+pm_increased_hunting_dyes = {
 	texture = "gfx/interface/icons/production_method_icons/increased_meat.dds"
 
 	unlocking_production_methods = {
@@ -918,8 +916,9 @@ pm_increased_hunting_chimesilt = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods
-			goods_output_monster_essence_add = -20
-			goods_output_opium_add = 16
+			goods_output_monster_essence_add = -20		#x40 = 800
+
+			goods_output_dye_add = 16					#x40 = 640
 		}
 	}
 }
@@ -931,10 +930,10 @@ pm_simple_khus_hunting = {
 		workforce_scaled = {
 
 			# input goods
-		    goods_input_small_arms_add = 5       #5x60 = 300
+		    goods_input_small_arms_add = 10       #5x60 = 600
 
-			goods_output_monster_essence_add = 40  #25x50 = 2000
-		}                                          #Profit = 1700
+			goods_output_monster_essence_add = 40  #40x40 = 1600
+		}                                          #Profit = 1000
 
 		level_scaled = {
 			# employment
@@ -946,8 +945,8 @@ pm_simple_khus_hunting = {
 
 		unscaled = {
 			# mortality
-			building_laborers_mortality_mult = 0.40
-			building_adventurers_mortality_mult = 0.70
+			building_laborers_mortality_mult = 0.20
+			building_adventurers_mortality_mult = 0.35
 		}
 	}
 
@@ -967,11 +966,13 @@ pm_firearms_khus_hunting= {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_small_arms_add = 10       #10x60 = 600
-			
+			goods_input_small_arms_add = 10       	#x60 = 600
+			goods_input_luxury_clothes_add = 5		#x60 = 300
+			goods_input_groceries_add = 10			#x30 = 300
+
 			# output goods
-			goods_output_monster_essence_add = 80 #80x50 = 4000
-			                                      #Profit = 3600
+			goods_output_monster_essence_add = 80 	#x40 = 3200
+			                                      	#Profit = 2000
 		}
 
 		level_scaled = {
@@ -983,8 +984,8 @@ pm_firearms_khus_hunting= {
 		}
 		unscaled = {
 			# mortality
-			building_laborers_mortality_mult = 0.35
-			building_adventurers_mortality_mult = 0.55
+			building_laborers_mortality_mult = 0.15
+			building_adventurers_mortality_mult = 0.25
 		}
 	}
 
@@ -1004,12 +1005,14 @@ pm_heavy_weapons_khus_hunting = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_small_arms_add = 20 #20x60 = 1200
-			goods_input_ammunition_add = 10 #10x50 = 500
+			goods_input_small_arms_add = 20 		#x60 = 1200
+			goods_input_ammunition_add = 10 		#x50 = 500
+			goods_input_luxury_clothes_add = 5		#x60 = 300
+			goods_input_groceries_add = 10			#x30 = 300
 			
 			# output goods
-			goods_output_monster_essence_add = 140 #140x50 = 7000
-		}                                         #Profit = 5300
+			goods_output_monster_essence_add = 140 	#140x40 = 5600
+		}                                        	#Profit = 3000
 
 		level_scaled = {
 			# employment
@@ -1020,8 +1023,8 @@ pm_heavy_weapons_khus_hunting = {
 		}
 		unscaled = {
 			# mortality
-			building_laborers_mortality_mult = 0.25
-			building_adventurers_mortality_mult = 0.40
+			building_laborers_mortality_mult = 0.1
+			building_adventurers_mortality_mult = 0.2
 		}
 	}
 
@@ -1041,13 +1044,9 @@ pm_hunting_khus_chimesilt = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods										
-			goods_output_monster_essence_add = -20
-			goods_output_opium_add = 20
-		}
-		unscaled = {
-			# mortality
-			building_laborers_mortality_mult = 0.10
-			building_adventurers_mortality_mult = 0.20
+			goods_output_monster_essence_add = -20		#x40 = 800
+
+			goods_output_opium_add = 15					#x50 = 750
 		}
 	}
 }
@@ -1063,13 +1062,9 @@ pm_increased_hunting_khus_chimesilt = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods
-			goods_output_monster_essence_add = -40
-			goods_output_opium_add = 40
-		}
-		unscaled = {
-			# mortality
-			building_laborers_mortality_mult = 0.30
-			building_adventurers_mortality_mult = 0.50
+			goods_output_monster_essence_add = -40		#x40 = 1600
+
+			goods_output_opium_add = 30					#x50 = 1500
 		}
 	}
 }
