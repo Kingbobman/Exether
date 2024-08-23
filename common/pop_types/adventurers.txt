@@ -32,47 +32,42 @@
 	qualifications = {
 		if = {
 			limit = {
-				is_peasant_under_serfdom = no
+				is_peasant_under_serfdom = yes
+			}
+			add = {
+				desc = "QUALIFICATIONS_PEASANTS_UNDER_SERFDOM"
+				value = 4
+			}
+		}
+		else_if = {
+			limit = {
+				wealth > 5
 			}
 			# baseline: ( wealth - 5 ) / 2, norm 10 for Clerks with Wealth 15
 			add = {
 				value = wealth
 				subtract = 5
-				min = 0
+				multiply = 2
 				desc = "QUALIFICATIONS_WEALTH_FACTOR"
 			}
 			if = {
 				limit = {
-					is_pop_type = soldiers
-				}
-				multiply = {
-					value = 3
-					desc = "QUALIFICATIONS_FAVORED_TYPE"
-				}
-			}
-			if = {
-				limit = {
-					is_pop_type = farmers
+					OR = {
+						is_pop_type = soldiers
+						is_pop_type = farmers
+						is_pop_type = peasants
+					}
 				}
 				multiply = {
 					value = 4
 					desc = "QUALIFICATIONS_FAVORED_TYPE"
 				}
 			}
-			if = {
-				limit = {
-					is_pop_type = peasants
-				}
-				multiply = {
-					value = 2
-					desc = "QUALIFICATIONS_FAVORED_TYPE"
-				}
-			}
 		}
-		else = {
-			multiply = {
-				desc = "QUALIFICATIONS_PEASANTS_UNDER_SERFDOM"
-				value = 3
+		else = {		
+			value = {
+				desc = "QUALIFICATIONS_INSUFFICIENT_WEALTH_DECAY"
+				value = -1
 			}
 		}
 	}

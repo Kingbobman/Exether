@@ -110,6 +110,12 @@ pm_anchorage_airship = {
 	country_modifiers = {
 		workforce_scaled = {
 			country_convoys_capacity_add = 20
+			
+		}
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			state_infrastructure_add = 5
 		}
 	}
 }			
@@ -117,13 +123,18 @@ pm_anchorage_airship = {
 pm_basic_port_airship = {
 	texture = "gfx/interface/icons/production_method_icons/basic_port.dds"
 	
+	unlocking_technologies = {
+		airship
+	}
+
 	building_modifiers = {
 		workforce_scaled = {	
 			goods_input_airships_add = 5
 			goods_input_cloudsilver_add = 5
 		}
 		level_scaled = {
-			building_employment_laborers_add = 3000
+			building_employment_laborers_add = 2500
+			building_employment_artificers_add = 500
 			building_employment_clerks_add = 1500
 			building_employment_bureaucrats_add = 500
 		}
@@ -136,7 +147,7 @@ pm_basic_port_airship = {
 	}
 	state_modifiers = {
 		workforce_scaled = {
-			state_infrastructure_add = 5
+			state_infrastructure_add = 10
 		}
 	}
 }		
@@ -152,11 +163,12 @@ pm_industrial_port_airship = {
 		workforce_scaled = {	
 			goods_input_airships_add = 5
 			goods_input_cloudsilver_add = 10
+			goods_input_blubber_add = 5
 		}
 		level_scaled = {
-			building_employment_laborers_add = 2000
-			building_employment_artificers_add = 500
-			building_employment_clerks_add = 1000
+			building_employment_laborers_add = 2250
+			building_employment_artificers_add = 750
+			building_employment_clerks_add = 1500
 			building_employment_bureaucrats_add = 500
 		}
 	}
@@ -168,27 +180,27 @@ pm_industrial_port_airship = {
 	}
 	state_modifiers = {
 		workforce_scaled = {
-			state_infrastructure_add = 7.5
+			state_infrastructure_add = 15
 		}
 	}	
 }
 
-#pm_modern_port_airship = {
+pm_modern_port_airship = {
 	texture = "gfx/interface/icons/production_method_icons/modern_port.dds"
 	unlocking_technologies = {
-		concrete_dockyards
+		baltendos
 	}
 	
 	building_modifiers = {
 		workforce_scaled = {	
-			goods_input_cloudsilver_add = 10
-			goods_input_skycruisers_add = 5	
-			goods_input_oil_add = 5
+			goods_input_cloudsilver_add = 15
+			goods_input_airships_add = 10	
+			goods_input_blubber_add = 10
 		}
 		level_scaled = {
-			building_employment_laborers_add = 750
-			building_employment_artificers_add = 250
-			building_employment_clerks_add = 500
+			building_employment_laborers_add = 2000
+			building_employment_artificers_add = 1000
+			building_employment_clerks_add = 1500
 			building_employment_bureaucrats_add = 500
 		}
 	}
@@ -200,7 +212,7 @@ pm_industrial_port_airship = {
 	}
 	state_modifiers = {
 		workforce_scaled = {
-			state_infrastructure_add = 10
+			state_infrastructure_add = 20
 		}
 	}
 }
