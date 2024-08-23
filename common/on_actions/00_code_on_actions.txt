@@ -88,6 +88,7 @@ on_monthly_pulse_country = {
 		calculate_arcana_surplus 
 		#delay = { days = 7 }
 		fund_lobbies_monthly_events
+		queue_port
 	}
 }
 
@@ -223,6 +224,13 @@ on_yearly_pulse_country = {
 					}
 				}
 			}
+		}
+		
+		if = {
+			limit = {
+				has_modifier = salt_waste_half_orcs_birth
+			}
+			trigger_event = { id = salt_waste_narrative_events.2 }
 		}
 	}
 	on_actions = { # delay ensures events won't fire simultaneously
@@ -1953,14 +1961,7 @@ on_political_movement_disbanded = {
 # Root = Colony state
 on_colony_created = {
 	effect = {
-		if = {
-			limit = {
-				exether_is_coastal = yes
-			}
-			set_variable = {
-				name = exe_is_coastal
-			}
-		}
+		
 	}
 }
 
