@@ -810,28 +810,42 @@
 	}
 	c:TEF ?= {
 	}
-	c:CLL ?= {
+	c:STR ?= {
 		create_trade_route = {
-			goods = sugar
-			level = 2
-			target = c:TEF.market
+			goods = iron
+			level = 1
+			target = c:PND.market
 			direction = import
 		}
+		create_trade_route = {
+			goods = iron
+			level = 1
+			target = c:ICA.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = furniture
+			level = 1
+			target = c:PND.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = clothes
+			level = 1
+			target = c:PND.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = wood
+			level = 1
+			target = c:PND.market
+			direction = import
+		}
+	}
+	c:CLL ?= {
 		create_trade_route = {
 			goods = paper
 			level = 5
-			target = c:TEF.market
-			direction = import
-		}
-		create_trade_route = {
-			goods = tools
-			level = 4
-			target = c:TEF.market
-			direction = import
-		}
-		create_trade_route = {
-			goods = small_arms
-			level = 1
 			target = c:TEF.market
 			direction = import
 		}

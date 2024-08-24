@@ -1,22 +1,36 @@
 ﻿COUNTRIES = {
 	c:FLU = {
-		effect_starting_technology_tier_3_tech = yes
-		effect_starting_politics_conservative = yes
+		effect_starting_technology_tier_2_tech = yes
 
-		set_tax_level = very_low
+		set_tax_level = medium
 
 		# Laws
-		activate_law = law_type:law_parliamentary_republic
-		activate_law = law_type:law_landed_voting
+		activate_law = law_type:law_presidential_republic
+		activate_law = law_type:law_oligarchy
 		activate_law = law_type:law_state_religion
-		activate_law = law_type:law_women_own_property
-		activate_law = law_type:law_elected_bureaucrats
-		activate_law = law_type:law_national_supremacy
+		activate_law = law_type:law_no_womens_rights
+		activate_law = law_type:law_appointed_bureaucrats
+		activate_law = law_type:law_racial_segregation
+		activate_law = law_type:law_dedicated_police
+		activate_law = law_type:law_colonial_resettlement
+		activate_law = law_type:law_censorship
 		activate_law = law_type:law_mercantilism
-		activate_law = law_type:law_agrarianism
+		activate_law = law_type:law_charitable_health_system
+		activate_law = law_type:law_religious_schools
+		activate_law = law_type:law_interventionism
 		activate_law = law_type:law_homesteading
-		activate_law = law_type:law_land_based_taxation
+		activate_law = law_type:law_per_capita_based_taxation
 		activate_law = law_type:law_national_militia
+		activate_law = law_type:law_professional_army
+
+			add_taxed_goods = g:tobacco
+	        add_taxed_goods = g:services
+
+
+		set_institution_investment_level = {
+			institution = institution_police
+			level = 3
+		}		
 
 	}
 }
