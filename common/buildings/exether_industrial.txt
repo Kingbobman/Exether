@@ -1,5 +1,5 @@
 ﻿building_gizmo_workshop = {
-	building_group = bg_magic_light_industry
+	building_group = bg_magic_heavy_industry
 	texture = "gfx/interface/icons/building_icons/gizmo_workshop.dds"
 	city_type = city
 	levels_per_mesh = 5
@@ -36,7 +36,7 @@
 }
 
 building_potion_distillery = {
-	building_group = bg_magic_heavy_industry
+	building_group = bg_magic_light_industry
 	texture = "gfx/interface/icons/building_icons/potions.dds"
 	city_type = city
 	levels_per_mesh = 5
@@ -48,7 +48,8 @@ building_potion_distillery = {
 	production_method_groups = {
 		pmg_base_building_potion_distillery
 		pmg_base_liquid_potion
-		pmg_cosmetic_potion_production
+		pmg_mix_in_potions
+		pmg_filtering_potions
 		pmg_automation_building_potion_distillery
 		
 	}

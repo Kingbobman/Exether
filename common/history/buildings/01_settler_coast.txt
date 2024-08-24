@@ -5240,6 +5240,19 @@
 			activate_production_methods={ "pm_early_cloudsilver_buildings" }
 		}
 		create_building={
+			building="building_artifactory"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:VHT"
+                        levels=5
+                        region="STATE_VYNDERVOHT"
+                   }
+                }
+			reserves=1
+			activate_production_methods={ "exether_pm_artifactory_hand_sorting" "exether_pm_artifactory_conveyor_belts" }
+		}
+		create_building={
 			building="building_textile_mills"
                 add_ownership={ 
                     building={ 
@@ -5787,9 +5800,22 @@
 		}
 		create_building={
 			building="building_government_administration"
-			level=8
+			level=11
 			reserves=1
 			activate_production_methods={ "pm_horizontal_drawer_cabinets" }
+		}
+		create_building={
+			building="building_munition_plants"
+                add_ownership={ 
+                    building={ 
+                        type="building_wizard_tower"
+                        country="c:DAR"
+                        levels=1
+                        region="STATE_MOUNT_YELFIS"
+                   }
+                }
+			reserves=1
+			activate_production_methods={ "pm_percussion_caps" }
 		}
 		create_building={
             building="building_airshipyards"
@@ -5853,19 +5879,6 @@
 				}
 			reserves=1
 			activate_production_methods={ "pm_atmospheric_engine_pump_building_lead_mine" "pm_no_explosives" "pm_rail_transport_mine" }
-		}
-		create_building={
-			building="building_munition_plants"
-                add_ownership={ 
-                    building={ 
-                        type="building_financial_district"
-                        country="c:DAR"
-                        levels=1
-                        region="STATE_MOUNT_YELFIS"
-                   }
-                }
-			reserves=1
-			activate_production_methods={ "pm_percussion_caps" }
 		}
 		create_building={
 			building="building_food_industry"
@@ -5932,6 +5945,19 @@
 			activate_production_methods={ "pm_artificial_fertilizers" }
 		}
 		create_building={
+			building="building_artifactory"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:DAR"
+                        levels=8
+                        region="STATE_MOUNT_YELFIS"
+                   }
+                }
+			reserves=1
+			activate_production_methods={ "exether_pm_artifactory_hand_sorting" "exether_pm_artifactory_conveyor_belts" }
+		}
+		create_building={
 			building="building_motor_industry"
                 add_ownership={ 
                     building={ 
@@ -5969,7 +5995,7 @@
 					building={ 
 						type="building_financial_district"
 						country="c:DAR"
-						levels=2
+						levels=3
 						region="STATE_MOUNT_YELFIS"
 				   }
 				}
@@ -5982,7 +6008,7 @@
                     building={ 
                         type="building_financial_district"
                         country="c:DAR"
-                        levels=4
+                        levels=5
                         region="STATE_MOUNT_YELFIS"
                    }
                 }
@@ -6019,9 +6045,9 @@
 			building="building_arms_industry"
                 add_ownership={ 
                     building={ 
-                        type="building_financial_district"
+                        type="building_wizard_tower"
                         country="c:DAR"
-                        levels=2
+                        levels=3
                         region="STATE_MOUNT_YELFIS"
                    }
                 }
@@ -6032,7 +6058,7 @@
 			building="building_artillery_foundries"
                 add_ownership={ 
                     building={ 
-                        type="building_financial_district"
+                        type="building_wizard_tower"
                         country="c:DAR"
                         levels=1
                         region="STATE_MOUNT_YELFIS"
@@ -6061,7 +6087,7 @@
 				building={ 
 				  type="building_manor_house"
 				  country="c:DAR"
-				  levels=7
+				  levels=9
 				  region="STATE_MOUNT_YELFIS"
 				 }
 			  }
@@ -6074,7 +6100,7 @@
 					  building={ 
 						  type="building_financial_district"
 						  country="c:DAR"
-						  levels=2
+						  levels=3
 						  region="STATE_MOUNT_YELFIS"
 					 }
 				  }
@@ -6098,7 +6124,7 @@
 			building="building_tooling_workshops"
 					  add_ownership={ 
 						  building={ 
-							  type="building_financial_district"
+							  type="building_wizard_tower"
 							  country="c:DAR"
 							  levels=4
 							  region="STATE_MOUNT_YELFIS"
@@ -6111,7 +6137,7 @@
 			building="building_iron_mine"
 			add_ownership={ 
 				building={ 
-					type="building_financial_district"
+					type="building_wizard_tower"
 					country="c:DAR"
 					levels=4
 					region="STATE_MOUNT_YELFIS"
@@ -6995,11 +7021,24 @@
 			reserves=1
 			activate_production_methods={ "pm_basic_port_airship" }
 		  }
+		  create_building={
+			building="building_artifactory"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:VOZ"
+                        levels=7
+                        region="STATE_SKYPIERCER_PEAK"
+                   }
+                }
+			reserves=1
+			activate_production_methods={ "exether_pm_artifactory_hand_sorting" "exether_pm_artifactory_conveyor_belts" }
+		}
 		create_building={
 			building="building_cloud_collectors"
 			add_ownership={ 
 				building={ 
-					type="building_financial_district"
+					type="building_wizard_tower"
 					country="c:VOZ"
 					levels=1
 					region="STATE_SKYPIERCER_PEAK"
@@ -7038,7 +7077,7 @@
 			building="building_tooling_workshops"
                 add_ownership={ 
                     building={ 
-                        type="building_financial_district"
+                        type="building_wizard_tower"
                         country="c:VOZ"
                         levels=3
                         region="STATE_SKYPIERCER_PEAK"
