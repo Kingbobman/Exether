@@ -15,6 +15,12 @@
 			  level=2
 			  reserves=1
 		  }
+      create_building={
+        building="building_construction_sector"
+        level=1
+        reserves=1
+        activate_production_methods={ "pm_iron_frame_buildings" }
+      }		
             create_building={
         building="building_artillery_foundries"
                 add_ownership={ 
@@ -304,12 +310,6 @@
     s:STATE_NORTH_HIGHLANDS = {
       region_state:DUM={
         create_building={
-          building="building_roads"
-          level=1
-          reserves=1
-          activate_production_methods={ "pm_base_road_quality" "pm_covered_road_wagons" "pm_no_security" }
-        }
-        create_building={
           building="building_government_administration"
           level=3
           reserves=1
@@ -347,7 +347,7 @@
             building={
               type="building_financial_district"
               country="c:DUM"
-              levels=4
+              levels=6
               region="STATE_NORTH_HIGHLANDS"
             }
           }
@@ -359,25 +359,7 @@
 
 
     s:STATE_HIGHPASS = {
-      region_state:DUM={
-        create_building={
-          building="building_roads"
-          level=3
-          reserves=1
-          activate_production_methods={ "pm_base_road_quality" "pm_covered_road_wagons" "pm_no_security" }
-        }
-        create_building={
-          building="building_government_administration"
-          level=3
-          reserves=1
-          activate_production_methods={ "pm_vertical_filing_cabinets" }
-        }
-        create_building={
-          building="building_construction_sector"
-          level=1
-          reserves=1
-          activate_production_methods={ "pm_iron_frame_buildings" }
-        }				
+      region_state:DUM={		
         create_building={
           building="building_food_industry"
           add_ownership={
@@ -436,12 +418,6 @@
 
     s:STATE_SOUTH_HIGHLANDS = {
       region_state:DUM={
-        create_building={
-          building="building_roads"
-          level=2
-          reserves=1
-          activate_production_methods={ "pm_base_road_quality" "pm_covered_road_wagons" "pm_no_security" }
-        }
 			create_building={
           building="building_iron_mine"
 				add_ownership={ 
@@ -474,7 +450,7 @@
             building={
               type="building_financial_district"
               country="c:DUM"
-              levels=4
+              levels=2
               region="STATE_CROWNPEAK"
             }
           }
@@ -1455,12 +1431,6 @@ reserves=1
           activate_production_methods={ "pm_horizontal_drawer_cabinets" }
         }
         create_building={
-          building="building_roads"
-          level=3
-          reserves=1
-          activate_production_methods={ "pm_base_road_quality" "pm_covered_road_wagons" "pm_no_security" }
-        }
-        create_building={
           building="building_tooling_workshops"
                     add_ownership={ 
                         building={ 
@@ -1781,7 +1751,7 @@ reserves=1
               }
     }
           reserves=1
-          activate_production_methods={ "pm_early_potion_vat_production" }
+          activate_production_methods={ "pm_simple_potion_production" }
       }
       }
   }

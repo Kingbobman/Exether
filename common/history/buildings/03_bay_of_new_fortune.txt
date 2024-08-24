@@ -318,16 +318,29 @@
 				activate_production_methods={ "pm_wooden_buildings" }
 			}
 			create_building={
-	            building="building_roads"
-	            level=2
-	            reserves=1
-	            activate_production_methods={ "pm_base_road_quality" "pm_covered_road_wagons" "pm_no_security" }
-            }
+				building="building_airship_dock"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_anchorage" }
+			  }
 			create_building={
 				building="building_government_administration"
 				level=2
 				reserves=1
 				activate_production_methods={ "pm_simple_organization" }
+			}
+			create_building={
+				building="building_cloud_collectors"
+				add_ownership={ 
+				  building={ 
+					type="building_financial_district"
+					country="c:GPK"
+					levels=1
+					region="STATE_SUYANAKU"
+				  }
+				}
+				reserves=1
+				activate_production_methods={ "pm_nets_building_cloud_collector" "pm_no_steam_automation" "pm_road_carts" }
 			}
 			create_building={
 				building="building_spider_ranch"
@@ -379,7 +392,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_early_potion_vat_production" "pm_alcohol-based_potions" "pm_base_cosmetic_potion_production" }
+				activate_production_methods={ "pm_simple_potion_production" "pm_alcohol-based_potions" "pm_base_cosmetic_potion_production" }
 			}
 			create_building={
 				building="building_lead_mine"
@@ -465,11 +478,11 @@
 				activate_production_methods={ "pm_simple_organization" }
 			}
 			create_building={
-	            building="building_roads"
-	            level=2
-	            reserves=1
-	            activate_production_methods={ "pm_base_road_quality" "pm_covered_road_wagons" "pm_no_security" }
-            }
+				building="building_airship_dock"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_anchorage" }
+			  }
 			create_building={
 				building="building_arms_industry"
 					add_ownership={ 
@@ -533,7 +546,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_early_potion_vat_production" "pm_alcohol-based_potions" }
+				activate_production_methods={ "pm_simple_potion_production" "pm_alcohol-based_potions" }
 			}
 			create_building = {
 				building = "building_distillery"
