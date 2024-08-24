@@ -2246,14 +2246,86 @@
 			create_building={
 				building="building_government_administration"
 				reserves=1
-				level = 1
+				level = 2
 				activate_production_methods={ "pm_simple_organization" }
 			}
 			create_building={
-				building="building_port"
-				level=1
+				building="building_iron_mine"
+				add_ownership={ 
+					building={ 
+						type="building_wizard_tower"
+						country="c:STR"
+						levels=1
+						region="STATE_EIREKS_WASH"
+				   }
+				}
 				reserves=1
-				activate_production_methods={ "pm_basic_port" }
+				activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_mines_no_potions" "pm_no_steam_automation" "pm_road_carts" }
+			}
+			create_building={
+				building="building_tooling_workshops"
+                add_ownership={ 
+                    building={ 
+                        type="building_wizard_tower"
+                        country="c:STR"
+                        levels=1
+                        region="STATE_EIREKS_WASH"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_crude_tools" "pm_automation_disabled" }
+			}
+			create_building={
+				building="building_arms_industry"
+                add_ownership={ 
+                    building={ 
+                        type="building_wizard_tower"
+                        country="c:STR"
+                        levels=1
+                        region="STATE_EIREKS_WASH"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_muskets" "pm_automation_disabled" }
+			}
+			create_building={
+				building="building_rice_farm"
+					add_ownership={ 
+						building={ 
+							type="building_wizard_tower"
+							country="c:STR"
+							levels=3
+							region="STATE_EIREKS_WASH"
+					   }
+					}
+				reserves=1
+				activate_production_methods={ "pm_simple_farming_building_rice_farm" "pm_no_secondary" "pm_tools_building_rice_farm"  }
+			}
+			create_building={
+				building="building_shipyards"
+                add_ownership={ 
+                    building={ 
+                        type="building_wizard_tower"
+                        country="c:STR"
+                        levels=1
+                        region="STATE_EIREKS_WASH"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_basic_shipbuilding" }
+			}
+			create_building={
+				building="building_seasnake_wharf"
+				reserves=1
+				add_ownership={ 
+					building={ 
+						type="building_adventuring_guild"
+						country="c:STR"
+						levels=3
+						region="STATE_EIREKS_WASH"
+				   }
+				}
+				activate_production_methods={ "pm_seasnake_trawlers" "pm_unrefrigerated" }
 			}
 			create_building={
 				building="building_shipyards"
@@ -2350,7 +2422,7 @@
 				building="building_cotton_plantation"
 				add_ownership={ 
 					building={ 
-						type="building_manor_house"
+						type="building_wizard_tower"
 						country="c:STR"
 						levels=2
 						region="STATE_EIREKS_WASH"
@@ -2363,7 +2435,7 @@
 				building="building_tobacco_plantation"
 				add_ownership={ 
 					building={ 
-						type="building_manor_house"
+						type="building_wizard_tower"
 						country="c:STR"
 						levels=2
 						region="STATE_EIREKS_WASH"
@@ -2376,14 +2448,14 @@
 				building="building_logging_camp"
                 add_ownership={ 
                     building={ 
-                        type="building_financial_district"
+                        type="building_wizard_tower"
                         country="c:STR"
                         levels=3
                         region="STATE_EIREKS_WASH"
                    }
                 }
 				reserves=1
-				activate_production_methods={ "pm_saw_mills" "pm_hardwood" "pm_no_equipment" "pm_road_carts" }
+				activate_production_methods={ "pm_simple_forestry" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
 			}
 		}
 	}
@@ -2700,7 +2772,7 @@
 					building={ 
 						type="building_financial_district"
 						country="c:PND"
-						levels=1
+						levels=2
 						region="STATE_SOUTHERN_DRAIN"
 				   }
 				}
