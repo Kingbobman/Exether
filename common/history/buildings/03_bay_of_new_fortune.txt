@@ -176,7 +176,7 @@
                     building={ 
                         type="building_adventuring_guild"
                         country="c:KUN"
-                        levels=1
+                        levels=2
                         region="STATE_PACHAQULLU"
                    }
                 }
@@ -212,10 +212,81 @@
 	}
 	s:STATE_INTIWINA = {
 		region_state:KUN={
+			create_building={
+			building="building_livestock_ranch"
+				add_ownership={ 
+					building={ 
+						type="building_manor_house"
+						country="c:KUN"
+						levels=1
+						region="STATE_PACHAQULLU"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_open_air_stockyards" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated"  }
+			}
+			create_building={
+				building="building_opium_plantation"
+				add_ownership={ 
+					building={ 
+						type="building_manor_house"
+						country="c:KUN"
+						levels=1
+						region="STATE_PACHAQULLU"
+				   }
+				}
+				reserves=1
+				activate_production_methods={ "default_building_opium_plantation" "pm_road_carts"  }
+			}
 		}
 	}
 	s:STATE_WAYLLAPAMPA = {
 		region_state:TIT={
+			create_building={
+				building="building_port"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_basic_port" }
+			}
+			create_building={
+				building="building_shipyards"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:TIT"
+                        levels=1
+                        region="STATE_WAYLLAPAMPA"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_basic_shipbuilding" }
+			}
+			create_building={
+				building="building_fishing_wharf"
+                add_ownership={ 
+                    building={ 
+                        type="building_adventuring_guild"
+                        country="c:TIT"
+                        levels=1
+                        region="STATE_TIKAQULLU"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_fishing_trawlers" "pm_unrefrigerated" }
+			}
+			create_building={
+				building="building_logging_camp"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:TIT"
+                        levels=1
+                        region="STATE_WAYLLAPAMPA"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_simple_forestry" "pm_no_equipment" "pm_road_carts" "pm_no_hardwood" }
+			}
 			create_building={
 				building="building_government_administration"
 				level=2
@@ -228,7 +299,7 @@
 					building={ 
 						type="building_manor_house"
 						country="c:TIT"
-						levels=2
+						levels=3
 						region="STATE_WAYLLAPAMPA"
 				   }
 				}
@@ -277,7 +348,7 @@
                     building={ 
                         type="building_adventuring_guild"
                         country="c:KUN"
-                        levels=1
+                        levels=2
                         region="STATE_INTIWINA"
                    }
                 }
@@ -672,6 +743,19 @@
 	}
 	s:STATE_NAWI_OASIS = {
 		region_state:WAQ={
+			create_building={
+				building="building_wheat_farm"
+				add_ownership={ 
+					building={ 
+						type="building_manor_house"
+						country="c:WAQ"
+						levels=1
+						region="STATE_NAWI_OASIS"
+				   }
+				}
+				reserves=1
+				activate_production_methods={ "pm_simple_farming" "pm_tools_disabled"  }
+			}
             create_building={
 				building="building_furniture_manufacturies"
                 add_ownership={ 
@@ -721,6 +805,19 @@
 	}
 	s:STATE_TIKAQULLU = {
 		region_state:TIT={
+			create_building={
+				building="building_fishing_wharf"
+                add_ownership={ 
+                    building={ 
+                        type="building_adventuring_guild"
+                        country="c:TIT"
+                        levels=1
+                        region="STATE_TIKAQULLU"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_fishing_trawlers" "pm_unrefrigerated" }
+			}
             create_building={
 				building="building_textile_mills"
                 add_ownership={ 
@@ -753,7 +850,7 @@
 					building={ 
 						type="building_manor_house"
 						country="c:TIT"
-						levels=2
+						levels=6
 						region="STATE_TIKAQULLU"
 				   }
 				}
@@ -781,7 +878,7 @@
 			}
 			create_building={
 				building="building_port"
-				level=1
+				level=2
 				reserves=1
 				activate_production_methods={ "pm_basic_port" }
 			}
@@ -793,6 +890,19 @@
 	}
 	s:STATE_KUCHUYPATA = {
 		region_state:PAC={
+			create_building={
+				building="building_wheat_farm"
+				add_ownership={ 
+					building={ 
+						type="building_manor_house"
+						country="c:PAC"
+						levels=2
+						region="STATE_KUCHUYPATA"
+				   }
+				}
+				reserves=1
+				activate_production_methods={ "pm_simple_farming" "pm_tools_disabled"  }
+			}
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={ 
@@ -1249,6 +1359,7 @@
 					}
 				reserves=1
 				activate_production_methods={ "pm_simple_forestry" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
+			}
 		}
 	}
 	s:STATE_SAVAGE_REACH = {
