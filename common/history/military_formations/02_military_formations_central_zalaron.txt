@@ -171,7 +171,7 @@
 
 		create_character = {
 			is_general = yes
-			set_commander_rank = 1
+			commander_rank = commander_rank_2
 			hq = region_starshimmer_pool
 			save_scope_as = setgen
 		}
@@ -223,7 +223,7 @@
 
 		create_character = {
 			is_general = yes
-			set_commander_rank = 1
+			commander_rank = commander_rank_2
 			hq = region_starshimmer_pool
 			save_scope_as = setgen2
 		}
@@ -233,7 +233,39 @@
 		}
 	}
 	
+	c:SAZ ?={
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_shaking_fields
 
+			name = "Woodland Patrols"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_SC12
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_KUMASKA
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_dragoons
+				state_region = s:STATE_KUMASKA
+				count = 10
+			}
+			save_scope_as = saz_army
+		}
+		create_character = {
+			is_general = yes
+			hq = region_shaking_fields
+			save_scope_as = saz_general
+		}
+		scope:saz_general = {
+			transfer_to_formation = scope:saz_army
+		}
+	}
 	c:FIS ?= {
 		create_military_formation = {
 			type = army
@@ -359,11 +391,11 @@
 		}
 		create_character = {
 			is_general = yes
+			commander_rank = commander_rank_2
 			hq = region_varinath
 			save_scope_as = vai_general_1
 		}
 		scope:vai_general_1 = {
-			set_commander_rank = 2
 			transfer_to_formation = scope:vai_army_1
 		}
 		
@@ -422,12 +454,12 @@
 		}
 		create_character = {
 			is_general = yes
-			set_commander_rank = 1
+			commander_rank = commander_rank_2
 			hq = region_varinath
 			save_scope_as = vai_general_4
 		}
 		scope:vai_general_4 = {
-			set_commander_rank = 2
+			commander_rank = commander_rank_2
 			transfer_to_formation = scope:vai_army_4
 		}
 		
@@ -486,9 +518,9 @@
 			is_admiral = yes
 			commander_rank = commander_rank_2
 			hq = region_varinath
-			save_scope_as = vai_admiral_1
+			save_scope_as = vaiadm1
 		}
-		scope:vai_admiral_1 = {
+		scope:vaiadm1 = {
 			transfer_to_formation = scope:vai_fleet_1
 		}
 		
@@ -1293,6 +1325,702 @@
 
 
 	}
+
+	c:CLL ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_misthill_range
+
+			name = "Highland Watch"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_FAOLNA_PASS
+				count = 15
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_NORTHERN_FEYSTALK
+				count = 15
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_CAM_NUALA
+				count = 11
+			}
+
+			save_scope_as = cllarmy
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			hq = region_misthill_range
+			save_scope_as = cllgen
+		}
+		
+		scope:cllgen = {
+			transfer_to_formation = scope:cllarmy
+		}
+
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_misthill_range
+
+			name = "Southland Guard"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_CAM_RINNARA
+				count = 15
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_CAM_LIADRINE
+				count = 15
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_CAM_NUALA
+				count = 11
+			}
+
+			save_scope_as = cllarmy2
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			hq = region_misthill_range
+			save_scope_as = cllgen2
+		}
+		
+		scope:cllgen2 = {
+			transfer_to_formation = scope:cllarmy2
+		}
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_misthill_range
+
+			name = "Rannor's Raiders" 
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_CAM_NUALA
+				count = 10
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_CAM_CALLAIRD
+				count = 10
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_SOUTHERN_FEYSTALK
+				count = 20
+			}
+
+			save_scope_as = cllarmy3
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			hq = region_misthill_range
+			save_scope_as = cllgen3
+		}
+		
+		scope:cllgen3 = {
+			transfer_to_formation = scope:cllarmy3
+		}
+	}
+	c:MNN ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_misthill_range
+
+			name = "Søby Garrison"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_dragoons
+				state_region = s:STATE_LILLESO
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_LILLESO
+				service_type = conscript
+				count = 20
+			}
+			
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_KLIPPEBJERG
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_KLIPPEBJERG
+				service_type = conscript
+				count = 10
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_HOJLAND
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_HOJLAND
+				service_type = conscript
+				count = 10
+			}
+
+			save_scope_as = mnnarmy1
+		}
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			hq = region_misthill_range
+			save_scope_as = mnngen1
+		}
+		scope:mnngen1 = {
+			transfer_to_formation = scope:mnnarmy1
+		}
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_shaking_fields
+
+			name = "Homeguard Legion"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_BJERGHOLM
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_BJERGHOLM
+				service_type = conscript				
+				count = 25
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_dragoons
+				state_region = s:STATE_SLETTEJUNGEL
+				
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_SLETTEJUNGEL
+				service_type = conscript
+				count = 25
+			}
+			save_scope_as = mnnarmy2
+		}
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			hq = region_shaking_fields
+			save_scope_as = mnngen2
+		}
+		scope:mnngen2 = {
+			transfer_to_formation = scope:mnnarmy2
+		}
+	}
+	c:SHE ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_shaking_fields
+			name = "Militarized Merchant Marine"
+
+		combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_PINCER_PENINSULA
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_PINCER_PENINSULA
+				count = 5
+			}
+		save_scope_as = she_army_1
+		}
+		create_character = {
+		is_general = yes
+		commander_rank = commander_rank_2
+		hq = region_shaking_fields
+		save_scope_as = she_gen_1
+		}
+		scope:she_gen_1 = {
+			transfer_to_formation = scope:she_army_1
+		}
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_shaking_fields
+
+			name = "Muschel Merchant Fleet"
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_PINCER_PENINSULA
+				count = 7
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_PINCER_PENINSULA
+				count = 3
+			}
+			save_scope_as = she_fleet_1
+		}
+
+		create_character = {
+			is_admiral = yes
+			hq = region_shaking_fields
+			save_scope_as = she_admiral_1
+		}
+
+		scope:she_admiral_1 = {
+			transfer_to_formation = scope:she_fleet_1
+		}
+	}
+
+	c:FLU ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_shaking_fields
+
+			name = "Frontier Guard"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_RIVER_SOLILOQUE_2
+				count = 25
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_RIVER_SOLILOQUE
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_INTOKI
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_KUNCHI
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_EISENMORA
+				count = 15
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_RIVER_SOLILOQUE_2
+				service_type = conscript
+				count = 20
+			}
+			
+
+			save_scope_as = flu_army_1
+		}
+			create_character = {
+				is_general = yes
+				commander_rank = commander_rank_2
+				hq = region_shaking_fields
+				save_scope_as = flu_gen_1
+			}
+			scope:flu_gen_1 ={
+				transfer_to_formation = scope:flu_army_1
+			}
+
+			create_character = {
+				is_general = yes
+				commander_rank = commander_rank_1
+				hq = region_shaking_fields
+				save_scope_as = flu_gen_0
+			}
+			scope:flu_gen_0 ={
+				transfer_to_formation = scope:flu_army_1
+			}
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_shaking_fields
+
+			name = "Flussholm Marine Corps"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_JOURNEYEND
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_INTOKI
+				count = 15
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_INTOKI
+				count = 10
+			}
+			save_scope_as = flu_army_2
+		}
+		create_character = {
+				is_general = yes
+				commander_rank = commander_rank_2
+				hq = region_shaking_fields
+				save_scope_as = flu_gen_2
+			}
+			scope:flu_gen_2 ={
+				transfer_to_formation = scope:flu_army_2
+			}
+			create_military_formation = {
+			type = fleet
+			hq_region = sr:region_shaking_fields
+
+			name = "Expeditionary Fleet"
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_INTOKI
+				count = 15
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_JOURNEYEND
+				count = 18
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_JOURNEYEND
+				count = 2
+			}
+			save_scope_as = flufleet1
+		}
+		create_character = {
+			is_admiral = yes
+			commander_rank = commander_rank_2
+			hq = region_shaking_fields
+			save_scope_as = fluadmiral1
+		}
+		scope:sheadmiral1 = {
+			transfer_to_formation = scope:flufleet1
+		}
+
+	}
+	c:KAM ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_shaking_fields
+
+			name = "Peasant Milita"
+		
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_KORO
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_dragoons
+				state_region = s:STATE_SUKONCO_2
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_KORO
+				service_type = conscript			
+				count = 20
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_UPPER_SUKONCO
+				service_type = conscript
+				count = 10
+			}
+		}
+			save_scope_as = kamarmy1
+	
+		create_character = {
+		is_general = yes
+		commander_rank = commander_rank_1
+		hq = sr:region_shaking_fields
+		save_scope_as = kamgen1
+		}
+		scope:kamgen1 = {
+		transfer_to_formation = scope:kamarmy1
+		}
+	}
+	c:ANW ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_starshimmer_pool
+
+			name = "Anwarthi Guardsmen"
+		
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_ANWARTH_VALLEYS
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_ANWARTH_VALLEYS_2
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_THINSILVER
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_BROKENPILLAR
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_BROKENPILLAR
+				service_type = conscript			
+				count = 20
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_ANWARTH_VALLEYS
+				service_type = conscript
+				count = 10
+			}
+			save_scope_as = anwarmy1
+		}
+		create_character = {
+		is_general = yes
+		commander_rank = commander_rank_2
+		hq = sr:region_starshimmer_pool
+		save_scope_as = anwgen1
+		}
+		scope:anwgen1 = {
+		transfer_to_formation = scope:anwarmy1
+		}
+	}
+
+	c:ICA ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_dark_morass
+
+			name = "Ican Defenders"
+		
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_ROZANGAR
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_STEINZULO
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_ZALDUA
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_BEARTZUNGUL
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_STEINZULO
+				service_type = conscript			
+				count = 15
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_BEARTZUNGUL
+				service_type = conscript			
+				count = 20
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_ROZANGAR
+				service_type = conscript			
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_ZALDUA
+				service_type = conscript
+				count = 25
+			}
+			save_scope_as = icaarmy1
+		}
+		create_character = {
+		is_general = yes
+		commander_rank = commander_rank_2
+		hq = sr:region_dark_morass
+		save_scope_as = icagen1
+		}
+		scope:icagen1 = {
+		transfer_to_formation = scope:icaarmy1
+		}
+	}
+
+	
+	c:PND ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_dark_morass
+
+			name = "Coastline Garrisons"
+		
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_SOUTHERN_DRAIN
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_GLADEMIRE
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_THE_CRIMSON_MORASS
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_CANDLEMIRE
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_SOUTHERN_DRAIN
+				service_type = conscript			
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_GLADEMIRE
+				service_type = conscript			
+				count = 20
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_THE_CRIMSON_MORASS
+				service_type = conscript			
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_CANDLEMIRE
+				service_type = conscript
+				count = 25
+			}
+			save_scope_as = pndarmy1
+		}
+		create_character = {
+		is_general = yes
+		commander_rank = commander_rank_2
+		hq = sr:region_dark_morass
+		save_scope_as = pndgen1
+		}
+		scope:pndgen1 = {
+		transfer_to_formation = scope:pndarmy1
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_dark_morass
+
+			name = "Seasnake Hunting Fleet"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_SOUTHERN_DRAIN
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_GLADEMIRE
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_THE_CRIMSON_MORASS
+				count = 1
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_CANDLEMIRE
+				count = 5
+			}
+			save_scope_as = vai_fleet_1
+		}
+		create_character = {
+			is_admiral = yes
+			commander_rank = commander_rank_2
+			hq = region_varinath
+			save_scope_as = vai_admiral_1
+		}
+		scope:vai_admiral_1 = {
+			transfer_to_formation = scope:vai_fleet_1
+		}
+	}
+
+	c:STR ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_dark_morass
+
+			name = "Marsh Guard"
+		
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_EIREKS_WASH
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_EIREKS_WASH
+				service_type = conscript
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_dragoons
+				state_region = s:STATE_EIREKS_WASH
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_dragoons
+				state_region = s:STATE_EIREKS_WASH
+				service_type = conscript
+				count = 10
+			}
+			save_scope_as = strarmy1
+		}
+		create_character = {
+		is_general = yes
+		commander_rank = commander_rank_1
+		hq = sr:region_dark_morass
+		save_scope_as = strgen1
+		}
+		scope:strgen1 = {
+		transfer_to_formation = scope:strarmy1
+		}
+	}
+
 }
 
 
