@@ -28,7 +28,7 @@ get_wanted_construction = {
 
 		add = {
 			value = get_net_income
-			divide = 500		
+			divide = 400		
 		}
 		
 		add = {
@@ -38,33 +38,46 @@ get_wanted_construction = {
 
 		add = {
 			value = get_net_income_sq
-			divide = 50
+			divide = 45
 		}
 
 		add = {
 			value = get_investment_income_sq
-			divide = 100
+			divide = 300
 		}
 
 		if = {
 			limit = { country_rank >= rank_value:great_power }
 			multiply = 1.2
+		
 		}		
 		else_if = {
 			limit = { 
-				OR = {
-					country_rank >= rank_value:major_power
-					country_rank >= rank_value:unrecognized_major_power
-				}
+				country_rank >= rank_value:major_power
 			}
 			multiply = 1.1
-
-		min = {
-			value = income
-			divide = 2000
 		}
-		max = 5000
-}
+		else_if = {
+			limit = {
+				is_country_type = unrecognized
+			}
+			multiply = 0.20
+		}
+		
+		min = { 
+			value = income
+			if = {
+				limit = {
+					is_country_type = unrecognized
+				}
+				divide = 4000
+			}
+			else = {
+				divide = 2000
+			}
+			
+		}
+		max = 2500
 }
 
 base_impose_law_weight= {

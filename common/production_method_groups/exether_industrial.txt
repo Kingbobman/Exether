@@ -1,10 +1,10 @@
 ﻿pmg_base_building_gizmo_workshop = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
-		pm_wooden_gizmos
-		pm_steel_gizmos
-		pm_rubber_gizmos
-		pm_plastic_gizmos
+		pm_basic_gizmos
+		pm_functional_gizmos
+		pm_exciting_gizmos
+		pm_otherworldly_gizmos
 	}
 }
 
@@ -34,18 +34,28 @@ texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds" #could maybe u
 		pm_water-based_potions
 		pm_alcohol-based_potions
 		pm_oil-based_potions
+		pm_universally_based_potions
 	}
 }
 
-pmg_cosmetic_potion_production = {
+pmg_mix_in_potions = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds" #could maybe use something more flavorful for these
-		production_methods = {
-			pm_no_cosmetic_potion_production
-			pm_base_cosmetic_potion_production
-			pm_advanced_cosmetic_potion_production
-		}
+	production_methods = {
+		pm_no_mixins
+		pm_functional_mixins
+		pm_sweet_mixins
+		pm_vile_mixins
 	}
+}
 
+pmg_filtering_potions = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_basic_filters
+		pm_retaining_filters
+		pm_soul_filters
+	}
+}
 pmg_automation_building_potion_distillery = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
 	production_methods = {
@@ -64,8 +74,8 @@ pmg_base_building_airshipyards = {
 	production_methods = {
 		pm_basic_airships
 		pm_complex_airships
-		#pm_metal_shipbuilding
-		#pm_arc_welding_shipbuilding
+		pm_metal_airships
+		pm_arc_welding_airshipbuilding
 	}
 }
 
@@ -107,5 +117,27 @@ pmg_distillery_container = {
 		pm_bottomless_bottles
 		pm_automated_bottlers
 		
+	}
+}
+
+pmg_base_building_thaumacore_foundry = {
+	texture = ""
+
+	production_methods = {
+		pm_basic_thaumacores
+		pm_frankenstien_thaumacores
+		pm_godsblood_thaumacores
+	}
+}
+
+pmg_automation_building_thaumacore_foundry = {
+	texture = ""
+
+	production_methods = {
+		#these are likely temporary until a magical methods can be cobbled together
+		pm_handmade_thaumacores
+		pm_watertube_boiler_building_thaumacore_foundry
+		pm_rotary_valve_engine_building_thaumacore_foundry
+		pm_assembly_line_building_thaumacore_foundry
 	}
 }
