@@ -4,10 +4,10 @@ GLOBAL = {
 	every_state = {
 		if = {
 			limit = {
-				exether_is_coastal = yes
+				exether_is_inland = yes
 			}
 			set_variable = {
-				name = exe_is_coastal
+				name = exe_is_inland
 			}
 		}
 	}
@@ -554,6 +554,20 @@ GLOBAL = {
 	setup_ritual_psionic = yes
 	setup_arcana_surplus = yes
 	
+
+	every_country = {
+		limit = {
+			is_major_unifier_candidate = yes
+		}
+		effect_has_major_formable = yes
+
+		if = {
+			limit = {
+				can_form_nation = GAV
+			}
+			effect_has_custom_journals = yes 
+		}
+	}
 
 	every_country = {
 

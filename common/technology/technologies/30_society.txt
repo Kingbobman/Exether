@@ -10,7 +10,6 @@ urbanization = {
 		state_infrastructure_from_population_add = 2
 		state_infrastructure_from_population_max_add = 40	
 		state_building_construction_sector_max_level_add = 10
-		state_building_roads_max_level_add = 3
 		country_max_weekly_construction_progress_add = 10
 		market_land_trade_capacity_add = 50
 	}
@@ -29,7 +28,6 @@ urban_planning = {
 		state_infrastructure_from_population_add = 1
 		state_infrastructure_from_population_max_add = 20
 		state_building_construction_sector_max_level_add = 5
-		state_building_roads_max_level_add = 2
 		country_max_weekly_construction_progress_add = 5
 		market_land_trade_capacity_add = 10
 	}
@@ -376,7 +374,7 @@ egalitarianism = {
 	# Unlocks Egalitarian - Citizenship Law
 	# Unlocks Proportional Taxation - Income Taxation Law
 	# New leaders may spawn with the Radical Ideology
-	era = era_2
+	era = era_1
 	texture = "gfx/interface/icons/invention_icons/egalitarianism.dds"
 	category = society
 	
@@ -439,7 +437,6 @@ modern_sewerage = {
 		state_infrastructure_from_population_add = 1
 		state_infrastructure_from_population_max_add = 20
 		state_building_construction_sector_max_level_add = 5
-		state_building_roads_max_level_add = 3
 		country_max_weekly_construction_progress_add = 5
 		market_land_trade_capacity_add = 10
 		state_pollution_reduction_health_mult = -0.1
@@ -629,7 +626,7 @@ realism = {
 nationalism = {
 	# Unlocks the Immigration Controls Law in Migration
 	# New leaders may spawn with the Ethno-Nationalist Ideology
-	era = era_2
+	era = era_1
 	texture = "gfx/interface/icons/invention_icons/nationalism.dds"
 	category = society
 	
@@ -660,7 +657,7 @@ nationalism = {
 		if = {
 			limit = { 
 				OR = {
-					country_has_primary_culture = cu:west_thalorian
+					country_has_primary_culture = cu:littoral_thalorian
 					country_has_primary_culture = cu:lake_thalorian
 					country_has_primary_culture = cu:qinnaat
 					country_has_primary_culture = cu:azmaraan
@@ -909,7 +906,7 @@ civilizing_mission = {
 anarchism = {
 	# Unlocks Anarchy - Distribution of Power Law
 	# New leaders may spawn with the Anarchist Ideology
-	era = era_3
+	era = era_2
 	texture = "gfx/interface/icons/invention_icons/anarchy.dds"
 	category = society
 	
@@ -1082,7 +1079,7 @@ pan-nationalism = {
 		if = {
 			limit = { 
 				OR = {
-					country_has_primary_culture = cu:west_thalorian
+					country_has_primary_culture = cu:littoral_thalorian
 					country_has_primary_culture = cu:lake_thalorian
 					country_has_primary_culture = cu:qinnaat
 					country_has_primary_culture = cu:azmaraan
@@ -1564,7 +1561,6 @@ paved_roads = {
 	modifier = {
 		state_infrastructure_from_automobiles_consumption_add = 0.25
 		market_land_trade_capacity_add = 20
-		state_building_roads_max_level_add = 4
 	}
 	
 	unlocking_technologies = {	

@@ -1,0 +1,74 @@
+pm_simple_accumulation_dragon_ruins = {
+	texture = "gfx/interface/icons/production_method_icons/picks_and_shovels.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_tools_add     = 5  # x40  = 400
+
+			goods_output_gold_add     = 5  # x100 = 500
+			goods_output_relics_add   = 5  # x100 = 500
+
+			# Yield:      600 = 1000 - 400
+			# Efficiency: 2.5
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 4500
+			building_employment_shopkeepers_add = 500
+		}
+	}
+}
+
+pm_complex_accumulation_dragon_ruins = {
+	texture = "gfx/interface/icons/production_method_icons/picks_and_shovels.dds"
+	unlocking_technologies = {
+		mechanical_tools
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_tools_add       = 12  # x40 = 480
+			goods_input_groceries_add   = 12  # x30 = 360
+
+			goods_output_gold_add       = 8  # x100 = 800
+			goods_output_relics_add     = 8  # x100 = 800
+
+            # Yield:        900 = 1600 - 840
+			# Efficiency:   1.9
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 4000
+			building_employment_shopkeepers_add = 500
+			building_employment_machinists_add = 500
+		}
+	}
+}
+
+pm_uses_gizmo_accumulation_dragon_ruins = {
+	texture = "gfx/interface/icons/production_method_icons/picks_and_shovels.dds"
+
+	unlocking_technologies = {
+		mechanical_tools
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_gizmos_add    = 10  # x60 = 600
+			goods_input_tools_add     = 8   # x40 = 320
+			goods_input_groceries_add = 10  # x30 = 300
+
+			goods_output_gold_add     = 10  # x100 = 1000
+			goods_output_relics_add   = 14  # x100 = 1400
+
+			# Yield of:     1180 = 2400 - 1440
+			# Efficiency:   1.94
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 3500
+			building_employment_shopkeepers_add = 500
+			building_employment_machinists_add = 500
+			building_employment_wizards_add = 500
+		}
+	}
+}

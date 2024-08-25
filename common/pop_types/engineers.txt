@@ -16,30 +16,44 @@
 	
 	political_engagement_mult = {
 		value = 1
-		
-		add = {
-			desc = "POP_STARVATION"	
-			
-			if = {
-				limit = { 
-					standard_of_living < 5
-				}
-				value = 1
-			}		
-		}		
 
-		multiply = {
-			desc = "HAS_POLITICAL_AGITATION"	
-			value = 1.0	
-		}		
+		if = {
+			limit = {
+				standard_of_living < 5
+			}
+			add = {
+				desc = "POP_STARVATION"	
+				value = 1
+			}
+		}
+		else_if = {
+			limit = {
+				owner = {
+					has_technology_researched = political_agitation
+				}
+			}
+			add = {
+				desc = "HAS_POLITICAL_AGITATION"	
+				value = 0.5
+			}
+		}
 	}
 	
 	qualifications_growth_desc = "ENGINEERS_QUALIFICATIONS_DESC"
 	qualifications = {
 		if = {
+			limit = { 
+				is_peasant_under_serfdom = yes 
+			}
+			value = {
+				desc = "QUALIFICATIONS_PEASANTS_UNDER_SERFDOM"
+				value = 0
+			}
+		}
+		else_if = {
 			limit = {
-				is_peasant_under_serfdom = no 
-				literacy_rate > 0.2
+				literacy_rate > 0.3
+				wealth > 5
 			}
 			# baseline: ( literacy - 0.2 ) * 5 + ( wealth / 20 ), norm 2.5 for Wealth 20 and Literacy 50%
 			add = {
@@ -50,44 +64,24 @@
 			}
 			add = {
 				value = wealth
+				subtract = 5
 				divide = 20
 				desc = "QUALIFICATIONS_WEALTH_FACTOR"
 			}
 			if = {
 				limit = {
-					is_pop_type = machinists
-				}
-				multiply = {
-					value = 5
-					desc = "QUALIFICATIONS_FAVORED_TYPE"
-				}
-			}
-			if = {
-				limit = {
-					is_pop_type = clerks
+					OR = {
+						is_pop_type = machinists
+						is_pop_type = clerks
+						is_pop_type = artificers
+
+					}
+					
 				}
 				multiply = {
 					value = 4
 					desc = "QUALIFICATIONS_FAVORED_TYPE"
 				}
-			}
-			if = {
-				limit = {
-					is_pop_type = artificers
-				}
-				multiply = {
-					value = 3
-					desc = "QUALIFICATIONS_FAVORED_TYPE"
-				}
-			}
-		}
-		else_if = {
-			limit = { 
-				is_peasant_under_serfdom = yes 
-			}
-			value = {
-				desc = "QUALIFICATIONS_PEASANTS_UNDER_SERFDOM"
-				value = 0
 			}
 		}
 		else = {		

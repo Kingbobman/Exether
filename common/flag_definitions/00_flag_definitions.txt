@@ -47,150 +47,150 @@
 
 
 DEFAULT = {
-	flag_definition = {
-		coa = list "communist"
-		priority = 1000
-		trigger = {
-			coa_def_communist_flag_trigger = yes
-		}
-	}
-	flag_definition = {
-		coa = list "anarchy"
-		priority = 2000
-		trigger = {
-			coa_def_anarchy_flag_trigger = yes
-		}
-	}
-	flag_definition = {
-		coa = colonial_west_mindrend_sands
-		allow_overlord_canton = yes
-		overlord_canton_scale = { 0.39 0.385 }
-		priority = 100
-		trigger = {
-			exists = scope:actor
-			scope:actor ?= {
-				has_variable = west_mindrend_sands_subject_var
-			}
-		}
-	}
-	flag_definition = {
-		coa = colonial_east_mindrend_sands
-		allow_overlord_canton = yes
-		overlord_canton_scale = { 0.39 0.385 }
-		priority = 100
-		trigger = {
-			exists = scope:actor
-			scope:actor ?= {
-				has_variable = east_mindrend_sands_subject_var
-			}
-		}
-	}
-	flag_definition = {
-		coa = colonial_scalethane_realms
-		allow_overlord_canton = yes
-		overlord_canton_scale = { 0.39 0.385 }
-		priority = 100
-		trigger = {
-			exists = scope:actor
-			scope:actor ?= {
-				has_variable = scalethane_realms_subject_var
-			}
-		}
-	}
-	flag_definition = {
-		coa = colonial_new_dumonia
-		allow_overlord_canton = yes
-		overlord_canton_scale = { 0.39 0.385 }
-		priority = 100
-		trigger = {
-			exists = scope:actor
-			scope:actor ?= {
-				has_variable = new_dumonia_subject_var
-			}
-		}
-	}
-	flag_definition = {
-		coa = colonial_thoughtsmith_ridge
-		allow_overlord_canton = yes
-		overlord_canton_scale = { 0.39 0.385 }
-		priority = 100
-		trigger = {
-			exists = scope:actor
-			scope:actor ?= {
-				has_variable = thoughtsmith_ridge_subject_var
-			}
-		}
-	}
-	flag_definition = {
-		coa = colonial_anantadesh
-		allow_overlord_canton = yes
-		overlord_canton_scale = { 0.39 0.385 }
-		priority = 100
-		trigger = {
-			exists = scope:actor
-			scope:actor ?= {
-				has_variable = anantadesh_subject_var
-			}
-		}
-	}
-	flag_definition = {
-		coa = colonial_dreamweaver_jungle
-		allow_overlord_canton = yes
-		overlord_canton_scale = { 0.39 0.385 }
-		priority = 100
-		trigger = {
-			exists = scope:actor
-			scope:actor ?= {
-				has_variable = dreamweaver_jungle_subject_var
-			}
-		}
-	}
-	flag_definition = {
-		coa = colonial_sarpakshetra
-		allow_overlord_canton = yes
-		overlord_canton_scale = { 0.39 0.385 }
-		priority = 100
-		trigger = {
-			exists = scope:actor
-			scope:actor ?= {
-				has_variable = sarpakshetra_subject_var
-			}
-		}
-	}
-	flag_definition = {
-		coa = colonial_west_kailando
-		allow_overlord_canton = yes
-		overlord_canton_scale = { 0.39 0.385 }
-		priority = 100
-		trigger = {
-			exists = scope:actor
-			scope:actor ?= {
-				has_variable = west_kailando_subject_var
-			}
-		}
-	}
-	flag_definition = {
-		coa = colonial_lacertia
-		allow_overlord_canton = yes
-		overlord_canton_scale = { 0.39 0.385 }
-		priority = 100
-		trigger = {
-			exists = scope:actor
-			scope:actor ?= {
-				has_variable = lacertia_subject_var
-			}
-		}
-	}
-	flag_definition = {
-		coa = colonial_elusive_coves
-		allow_overlord_canton = yes
-		overlord_canton_scale = { 0.39 0.385 }
-		priority = 100
-		trigger = {
-			exists = scope:actor
-			scope:actor ?= {
-				has_variable = elusive_coves_subject_var
-			}
-		}
-	}
+	# flag_definition = {
+	# 	coa = list "communist"
+	# 	priority = 1000
+	# 	trigger = {
+	# 		coa_def_communist_flag_trigger = yes
+	# 	}
+	# }
+	# flag_definition = {
+	# 	coa = list "anarchy"
+	# 	priority = 2000
+	# 	trigger = {
+	# 		coa_def_anarchy_flag_trigger = yes
+	# 	}
+	# }
+	# flag_definition = {
+	# 	coa = colonial_west_mindrend_sands
+	# 	allow_overlord_canton = yes
+	# 	overlord_canton_scale = { 0.39 0.385 }
+	# 	priority = 100
+	# 	trigger = {
+	# 		exists = scope:actor
+	# 		scope:actor ?= {
+	# 			has_variable = west_mindrend_sands_subject_var
+	# 		}
+	# 	}
+	# }
+	# flag_definition = {
+	# 	coa = colonial_east_mindrend_sands
+	# 	allow_overlord_canton = yes
+	# 	overlord_canton_scale = { 0.39 0.385 }
+	# 	priority = 100
+	# 	trigger = {
+	# 		exists = scope:actor
+	# 		scope:actor ?= {
+	# 			has_variable = east_mindrend_sands_subject_var
+	# 		}
+	# 	}
+	# }
+	# flag_definition = {
+	# 	coa = colonial_scalethane_realms
+	# 	allow_overlord_canton = yes
+	# 	overlord_canton_scale = { 0.39 0.385 }
+	# 	priority = 100
+	# 	trigger = {
+	# 		exists = scope:actor
+	# 		scope:actor ?= {
+	# 			has_variable = scalethane_realms_subject_var
+	# 		}
+	# 	}
+	# }
+	# flag_definition = {
+	# 	coa = colonial_new_dumonia
+	# 	allow_overlord_canton = yes
+	# 	overlord_canton_scale = { 0.39 0.385 }
+	# 	priority = 100
+	# 	trigger = {
+	# 		exists = scope:actor
+	# 		scope:actor ?= {
+	# 			has_variable = new_dumonia_subject_var
+	# 		}
+	# 	}
+	# }
+	# flag_definition = {
+	# 	coa = colonial_thoughtsmith_ridge
+	# 	allow_overlord_canton = yes
+	# 	overlord_canton_scale = { 0.39 0.385 }
+	# 	priority = 100
+	# 	trigger = {
+	# 		exists = scope:actor
+	# 		scope:actor ?= {
+	# 			has_variable = thoughtsmith_ridge_subject_var
+	# 		}
+	# 	}
+	# }
+	# flag_definition = {
+	# 	coa = colonial_anantadesh
+	# 	allow_overlord_canton = yes
+	# 	overlord_canton_scale = { 0.39 0.385 }
+	# 	priority = 100
+	# 	trigger = {
+	# 		exists = scope:actor
+	# 		scope:actor ?= {
+	# 			has_variable = anantadesh_subject_var
+	# 		}
+	# 	}
+	# }
+	# flag_definition = {
+	# 	coa = colonial_dreamweaver_jungle
+	# 	allow_overlord_canton = yes
+	# 	overlord_canton_scale = { 0.39 0.385 }
+	# 	priority = 100
+	# 	trigger = {
+	# 		exists = scope:actor
+	# 		scope:actor ?= {
+	# 			has_variable = dreamweaver_jungle_subject_var
+	# 		}
+	# 	}
+	# }
+	# flag_definition = {
+	# 	coa = colonial_sarpakshetra
+	# 	allow_overlord_canton = yes
+	# 	overlord_canton_scale = { 0.39 0.385 }
+	# 	priority = 100
+	# 	trigger = {
+	# 		exists = scope:actor
+	# 		scope:actor ?= {
+	# 			has_variable = sarpakshetra_subject_var
+	# 		}
+	# 	}
+	# }
+	# flag_definition = {
+	# 	coa = colonial_west_kailando
+	# 	allow_overlord_canton = yes
+	# 	overlord_canton_scale = { 0.39 0.385 }
+	# 	priority = 100
+	# 	trigger = {
+	# 		exists = scope:actor
+	# 		scope:actor ?= {
+	# 			has_variable = west_kailando_subject_var
+	# 		}
+	# 	}
+	# }
+	# flag_definition = {
+	# 	coa = colonial_lacertia
+	# 	allow_overlord_canton = yes
+	# 	overlord_canton_scale = { 0.39 0.385 }
+	# 	priority = 100
+	# 	trigger = {
+	# 		exists = scope:actor
+	# 		scope:actor ?= {
+	# 			has_variable = lacertia_subject_var
+	# 		}
+	# 	}
+	# }
+	# flag_definition = {
+	# 	coa = colonial_elusive_coves
+	# 	allow_overlord_canton = yes
+	# 	overlord_canton_scale = { 0.39 0.385 }
+	# 	priority = 100
+	# 	trigger = {
+	# 		exists = scope:actor
+	# 		scope:actor ?= {
+	# 			has_variable = elusive_coves_subject_var
+	# 		}
+	# 	}
+	# }
 }

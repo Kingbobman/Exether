@@ -4,6 +4,7 @@
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_arrador
+			name = "Brinewick Expeditionary Force"
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_skirmish_infantry
@@ -34,59 +35,6 @@
 				state_region = s:STATE_GREENCOURT
 				count = 3
 			}
-
-			save_scope_as = secondcorparr
-		}
-
-		create_character = {
-			is_general = yes
-			commander_rank = commander_rank_2
-			save_scope_as = commanderarr_gen
-		}
-
-		scope:commanderarr_gen = {
-			transfer_to_formation = scope:secondcorparr
-		}
-
-		create_military_formation = {
-			type = army
-			hq_region = sr:region_arrador
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_skirmish_infantry
-				state_region = s:STATE_BYRIVER
-				count = 5
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_skirmish_infantry
-				state_region = s:STATE_THE_MATCHES
-				count = 5
-			}
-
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_mobile_artillery
-				state_region = s:STATE_VERDANT_VALE
-				count = 5
-			}
-			save_scope_as = thirdcorparr
-		}
-
-		create_character = {
-			is_general = yes
-			commander_rank = commander_rank_1
-			save_scope_as = commanderarr2_gen			
-		}
-
-		scope:commanderarr2_gen = {
-			transfer_to_formation = scope:thirdcorparr
-		}
-
-		create_military_formation = {
-			type = army
-			hq_region = sr:region_arrador
-
 			combat_unit = {
 				type = unit_type:combat_unit_type_skirmish_infantry
 				state_region = s:STATE_VICEROYS_PEARL
@@ -110,11 +58,120 @@
 				state_region = s:STATE_LOWER_GOLDENLEAF
 				count = 5
 			}
+
+			save_scope_as = secondcorparr
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			save_scope_as = commanderarr_gen
+		}
+
+		scope:commanderarr_gen = {
+			transfer_to_formation = scope:secondcorparr
+		}
+
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_arrador
+			name = "Dorite Home Guard"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_skirmish_infantry
+				state_region = s:STATE_BYRIVER
+				count = 5
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_skirmish_infantry
+				state_region = s:STATE_THE_MATCHES
+				count = 5
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_VERDANT_VALE
+				count = 5
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_skirmish_infantry
+				state_region = s:STATE_VICEROYS_PEARL
+				service_type = conscript
+				count = 10
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_skirmish_infantry
+				state_region = s:STATE_THE_MATCHES
+				service_type = conscript
+				count = 10
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_skirmish_infantry
+				state_region = s:STATE_TWO_BARREL_COAST
+				service_type = conscript
+				count = 10
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_skirmish_infantry
+				state_region = s:STATE_LOWER_GOLDENLEAF
+				service_type = conscript
+				count = 5
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_skirmish_infantry
+				state_region = s:STATE_VERDANT_VALE
+				service_type = conscript
+				count = 5
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_skirmish_infantry
+				state_region = s:STATE_GOLDENACRE
+				service_type = conscript
+				count = 5
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_skirmish_infantry
+				state_region = s:STATE_SHARPWOOD
+				service_type = conscript
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_skirmish_infantry
+				state_region = s:STATE_GREENCOURT
+				service_type = conscript
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_skirmish_infantry
+				state_region = s:STATE_BYRIVER
+				service_type = conscript
+				count = 5
+			}
+			save_scope_as = thirdcorparr
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			save_scope_as = commanderarr2_gen			
+		}
+
+		scope:commanderarr2_gen = {
+			transfer_to_formation = scope:thirdcorparr
 		}
 
 		create_military_formation = {
 			type = fleet
 			hq_region = sr:region_arrador
+			name = "High Sea Fleet"
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_man_o_war
@@ -151,7 +208,15 @@
 				state_region = s:STATE_TWO_BARREL_COAST
 				count = 8
 			}
-
+		save_scope_as = arr_fleet1
+		}
+		create_character = {
+			is_admiral = yes
+			commander_rank = commander_rank_2
+			save_scope_as = arr_admiral_1		
+		}
+		scope:arr_admiral_1 = {
+			transfer_to_formation = scope:arr_fleet1
 		}	
 	}
     c:AHO ?= {
@@ -207,14 +272,23 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_frigate
 				state_region = s:STATE_LEYLINE_COAST
-				count = 3
+				count = 7
 			}
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_man_o_war
 				state_region = s:STATE_LEYLINE_COAST
-				count = 1
+				count = 3
 			}
+			save_scope_as = aho_fleet_1
+		}
+		create_character = {
+			is_admiral = yes
+			commander_rank = commander_rank_1
+			save_scope_as = aho_admiral_1		
+		}
+		scope:aho_admiral_1 = {
+			transfer_to_formation = scope:aho_fleet_1
 		}
 	}
 
@@ -557,7 +631,7 @@
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_lake_bossard
- 		
+			name = "Northen Bossardi Garrison"
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_FAR_SHORE
@@ -581,6 +655,18 @@
 				state_region = s:STATE_FAR_SHORE_2
 				count = 3
 			}
+
+			save_scope_as = leoarmy
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			save_scope_as = leogen
+		}
+
+		scope:leogen = {
+			transfer_to_formation = scope:leoarmy
 		}
 	}
 
@@ -830,7 +916,7 @@
 			last_name = Jaakson
 			historical = yes
 			age = 66
-			hq = region_plaguewood
+			hq = region_ceraun
 			commander_rank = commander_rank_3
 			traits = {
 				plains_commander
@@ -955,9 +1041,19 @@
 					state_region = s:STATE_KAATH_SERINE
 					count = 10
 				}
-			
+				save_scope_as = voznavy
 			}
 	
+			create_character = {
+				is_admiral = yes
+				commander_rank = commander_rank_1
+				save_scope_as = vozadm
+			}
+	
+			scope:vozadm = {
+				transfer_to_formation = scope:voznavy
+			}
+			
 
 		create_character = {
 			is_general = yes
@@ -1088,6 +1184,17 @@
 				count = 2
 			}
 		}
+		save_scope_as = ftharmy
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			save_scope_as = fthgen
+		}
+
+		scope:fthgen = {
+			transfer_to_formation = scope:ftharmy
+		}
 	}
 
 	c:BRB ?= {
@@ -1108,6 +1215,17 @@
 				count = 3
 			}
 		}
+		save_scope_as = brbarmy
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			save_scope_as = brbgen
+		}
+
+		scope:brbgen = {
+			transfer_to_formation = scope:brbarmy
+		}
 	}
 
 	c:GRH ?= {
@@ -1127,7 +1245,17 @@
 				state_region = s:STATE_UPPER_GOLDENLEAF
 				count = 5
 			}
+			save_scope_as = grh_army_1
 		}
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			hq = region_smallhills
+			save_scope_as = scope:grh_gen_1
+		}
+		scope:grh_gen_1 = {
+				transfer_to_formation = scope:grh_army_1
+			}
 	}
 
 	c:WHI ?= {
@@ -1157,17 +1285,16 @@
 				count = 5
 			}
 			save_scope_as = whiarmy
-
-			create_character = {
-				is_general = yes
-				commander_rank = commander_rank_1
-				hq = region_moorweald
-				save_scope_as = whigen
-			}
+		}
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			hq = region_moorweald
+			save_scope_as = whigen
+		}
 			
-			scope:whigen = {
-				transfer_to_formation = scope:whiarmy
-			}
+		scope:whigen = {
+			transfer_to_formation = scope:whiarmy
 		}
 	}
 
@@ -1222,6 +1349,17 @@
 				state_region = s:STATE_VOZMEAD_BORDERLANDS
 				count = 2
 			}
+			save_scope_as = tldarmy
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			save_scope_as = tldgen
+		}
+
+		scope:tldgen = {
+			transfer_to_formation = scope:tldarmy
 		}
 	}
 
@@ -1238,7 +1376,7 @@
 			}
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_cannon_artillery
+				type = unit_type:combat_unit_type_mobile_artillery
 				state_region = s:STATE_CINPHNPHAINN
 				count = 10
 			}
@@ -1248,6 +1386,18 @@
 				state_region = s:STATE_RICHAR_JEDD
 				count = 10
 			}
+
+			save_scope_as = droarmy
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			save_scope_as = drogen
+		}
+
+		scope:drogen = {
+			transfer_to_formation = scope:droarmy
 		}
 
 		create_military_formation = {
@@ -1272,26 +1422,36 @@
 				state_region = s:STATE_LHIPH
 				count = 15
 			}
-		
 		}
+			save_scope_as = dronavy
+	
+			create_character = {
+				is_admiral = yes
+				commander_rank = commander_rank_1
+				save_scope_as = droadm
+			}
+	
+			scope:droadm = {
+				transfer_to_formation = scope:dronavy
+			}
 	}
 
 	c:EMP ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_lake_bossard
-			name = Emparal_Royal_Army
+			name = "Emparal Royal Army"
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_THE_AMBER_RUN
-				count = 10
+				count = 15
 			}
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_THE_AMBER_RUN_2
-				count = 10
+				count = 15
 			}
 
 			combat_unit = {
@@ -1306,11 +1466,17 @@
 				count = 10
 			}
 
-			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
-				state_region = s:STATE_THE_AMBER_RUN_3
-				count = 3
-			}
+			save_scope_as = emparmy
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			save_scope_as = empgen
+		}
+
+		scope:empgen = {
+			transfer_to_formation = scope:emparmy
 		}
 	}
 
@@ -1346,6 +1512,17 @@
 				state_region = s:STATE_CROPHEART_DALE
 				count = 3
 			}
+			save_scope_as = clrarmy
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			save_scope_as = clrgen
+		}
+
+		scope:clrgen = {
+			transfer_to_formation = scope:clrarmy
 		}
 	}
 
@@ -1353,7 +1530,7 @@
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_moorweald
-			name = Prilyran_Guard
+			name = "Prilyran Guard"
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
@@ -1372,6 +1549,17 @@
 				state_region = s:STATE_MISTREACH_2  
 				count = 3
 			}
+			save_scope_as = priarmy
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			save_scope_as = prigen
+		}
+
+		scope:prigen = {
+			transfer_to_formation = scope:priarmy
 		}
 	}
 
@@ -1379,7 +1567,7 @@
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_moorweald
-			name = Estate_Forces
+			name = "Estate Forces"
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
@@ -1398,6 +1586,17 @@
 				state_region = s:STATE_WAYFARE_MEADOWS_2
 				count = 3
 			}
+			save_scope_as = slbarmy
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			save_scope_as = slbgen
+		}
+
+		scope:slbgen = {
+			transfer_to_formation = scope:slbarmy
 		}
 	}
 
@@ -1423,6 +1622,17 @@
 				state_region = s:STATE_MOORESHIRE
 				count = 2
 			}
+			save_scope_as = smaarmy
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			save_scope_as = smagen
+		}
+
+		scope:smagen = {
+			transfer_to_formation = scope:smaarmy
 		}
 	}
 
@@ -1443,6 +1653,17 @@
 				state_region = s:STATE_OUTER_MOORWEALD
 				count = 2
 			}
+			save_scope_as = gcsarmy
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			save_scope_as = gcsgen
+		}
+
+		scope:gcsgen = {
+			transfer_to_formation = scope:gcsarmy
 		}
 	}
 
@@ -1463,6 +1684,17 @@
 				state_region = s:STATE_EASTERN_PLAGUEWOOD
 				count = 25
 			}
+			save_scope_as = rtdarmy
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			save_scope_as = rtdgen
+		}
+
+		scope:rtdgen = {
+			transfer_to_formation = scope:rtdarmy
 		}
 	}
 	c:BDB ?= {
@@ -1482,6 +1714,17 @@
 				state_region = s:STATE_SANDWOOD
 				count = 25
 			}
+			save_scope_as = bdbarmy
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			save_scope_as = bdbgen
+		}
+
+		scope:bdbgen = {
+			transfer_to_formation = scope:bdbarmy
 		}
 	}
 
@@ -1518,6 +1761,5 @@
 		scope:cdwgen = {
 			transfer_to_formation = scope:cdwarmy
 		}
-}
-
+	}
 }

@@ -1,4 +1,4 @@
-##############
+﻿##############
 #  Exether   #
 ##############
 
@@ -13,6 +13,11 @@ entertainment = {
 	consumption_tax_cost = 200
 }
 
+##
+# Enchanted items, historical relics, personal items.
+# Diverse in nature and not useful in large scale industry.
+# See Gizmos for standardized magical tools.
+#
 trinkets = {
 	texture = "gfx/interface/icons/goods_icons/trinkets.dds"
 	cost = 200
@@ -24,9 +29,20 @@ trinkets = {
 	traded_quantity = 2
 }
 
+##
+# Used in trinkets production chain
+#
+relics = {
+	texture = "gfx/interface/icons/goods_icons/relics.dds"
+	cost = 100
+    category = industrial
+
+    prestige_factor = 10
+}
+
 luxury_potions = {
 	texture = "gfx/interface/icons/goods_icons/luxury_potions.dds"
-	cost = 85  #debatable
+	cost = 80  #debatable
 	category = luxury
 
 	obsession_chance = 1.8 #hmmm
@@ -90,7 +106,7 @@ ectoplasm = {
 }
 
 airships = {
-	texture = "gfx/interface/icons/goods_icons/clippers.dds"
+	texture = "gfx/interface/icons/goods_icons/airship.dds"
 	cost = 70
 	category = industrial
 
@@ -98,6 +114,26 @@ airships = {
 	prestige_factor = 6
 	traded_quantity = 3
 	convoy_cost_multiplier = 0.25
+}
+
+thaumacores = {
+	texture = "gfx/interface/icons/goods_icons/gizmo.dds" #Replace icon later
+	cost = 100
+	category = industrial
+	
+	prestige_factor = 10
+	traded_quantity = 4
+}
+
+gizmos = {
+	texture = "gfx/interface/icons/goods_icons/gizmo.dds"
+	cost = 60
+	category = industrial
+	
+	prestige_factor = 10
+	
+	traded_quantity = 4
+	convoy_cost_multiplier = 1.5
 }
 
 #skycruisers = {

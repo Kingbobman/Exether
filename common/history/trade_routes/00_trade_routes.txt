@@ -148,25 +148,7 @@
 			direction = import
 		}	
 	}
-	c:SRN ?= {
-		create_trade_route = {
-			goods = manowars
-			level = 1
-			target = c:MBR.market
-			direction = import
-		}
-		create_trade_route = {
-			goods = clippers
-			level = 2
-			target = c:MBR.market
-			direction = import
-		}
-		create_trade_route = {
-			goods = small_arms
-			level = 2
-			target = c:MBR.market
-			direction = import
-		}		
+	c:SRN ?= {	
 	}
 	c:EME ?= {
 		create_trade_route = {
@@ -207,6 +189,8 @@
 			target = c:MBR.market
 			direction = import
 		}			
+	}
+	c:GRA ?= {	
 	}
 	c:OEX ?= {
 		create_trade_route = {
@@ -251,18 +235,6 @@
 	}	
 	c:BIE ?= {
 		create_trade_route = {
-			goods = small_arms
-			level = 1
-			target = c:DUM.market
-			direction = import
-		}	
-		create_trade_route = {
-			goods = artillery
-			level = 1
-			target = c:DUM.market
-			direction = import
-		}
-		create_trade_route = {
 			goods = tea
 			level = 3
 			target = c:YAN.market
@@ -270,8 +242,20 @@
 		}
 		create_trade_route = {
 			goods = luxury_furniture
-			level = 3
+			level = 1
 			target = c:YAN.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = lead
+			level = 1
+			target = c:FOX.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = lead
+			level = 1
+			target = c:DUM.market
 			direction = import
 		}
 	}	
@@ -826,28 +810,54 @@
 	}
 	c:TEF ?= {
 	}
-	c:CLL ?= {
+	c:STR ?= {
 		create_trade_route = {
-			goods = sugar
-			level = 2
-			target = c:TEF.market
+			goods = iron
+			level = 1
+			target = c:PND.market
 			direction = import
 		}
+		create_trade_route = {
+			goods = iron
+			level = 1
+			target = c:ICA.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = furniture
+			level = 1
+			target = c:PND.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = clothes
+			level = 1
+			target = c:PND.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = wood
+			level = 1
+			target = c:PND.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = hardwood
+			level = 1
+			target = c:ICA.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = hardwood
+			level = 1
+			target = c:PND.market
+			direction = import
+		}
+	}
+	c:CLL ?= {
 		create_trade_route = {
 			goods = paper
 			level = 5
-			target = c:TEF.market
-			direction = import
-		}
-		create_trade_route = {
-			goods = tools
-			level = 4
-			target = c:TEF.market
-			direction = import
-		}
-		create_trade_route = {
-			goods = small_arms
-			level = 1
 			target = c:TEF.market
 			direction = import
 		}
@@ -950,279 +960,295 @@
 			target = c:FOX.market
 			direction = export
 		}
-}
-c:DOV ?= {
-	create_trade_route = {
-		goods = fabric
-		level = 4
-		target = c:DUM.market
-		direction = export
-	}	
-	create_trade_route = {
-		goods = tools
-		level = 2
-		target = c:FOX.market
-		direction = export
 	}
-}
-c:FOX ?= {
-	create_trade_route = {
-		goods = tea
-		level = 4
-		target = c:YAN.market
-		direction = import
-	}	
-	create_trade_route = {
-		goods = luxury_clothes
-		level = 2
-		target = c:DUM.market
-		direction = import
+	c:DOV ?= {
+		create_trade_route = {
+			goods = fabric
+			level = 4
+			target = c:DUM.market
+			direction = export
+		}	
+		create_trade_route = {
+			goods = tools
+			level = 2
+			target = c:FOX.market
+			direction = export
+		}
 	}
-	create_trade_route = {
-		goods = grain
-		level = 2
-		target = c:DOV.market
-		direction = export
+	c:FOX ?= {
+		create_trade_route = {
+			goods = tea
+			level = 4
+			target = c:YAN.market
+			direction = import
+		}	
+		create_trade_route = {
+			goods = luxury_clothes
+			level = 2
+			target = c:DUM.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = grain
+			level = 2
+			target = c:DOV.market
+			direction = export
+		}
+		create_trade_route = {
+			goods = sugar
+			level = 2
+			target = c:DUM.market
+			direction = import
+		}
 	}
-	create_trade_route = {
-		goods = sugar
-		level = 2
-		target = c:DUM.market
-		direction = import
-	}
-}
-c:SEB ?= {
+	c:SEB ?= {
 
-	create_trade_route = {
-		goods = liquor
-		level = 3
-		target = c:CER.market
-		direction = import
-	}	
-	create_trade_route = {
-		goods = fabric
-		level = 2
-		target = c:EME.market
-		direction = export
-	}	
-}
-c:PFL ?= {
-	create_trade_route = {
-		goods = fabric
-		level = 2
-		target = c:ARR.market
-		direction = import
-	}	
-	create_trade_route = {
-		goods = clothes
-		level = 1
-		target = c:ARR.market
-		direction = import
-	}		
+		create_trade_route = {
+			goods = liquor
+			level = 3
+			target = c:CER.market
+			direction = import
+		}	
+		create_trade_route = {
+			goods = fabric
+			level = 2
+			target = c:EME.market
+			direction = export
+		}	
+	}
+	c:PFL ?= {
+		create_trade_route = {
+			goods = fabric
+			level = 2
+			target = c:ARR.market
+			direction = import
+		}	
+		create_trade_route = {
+			goods = clothes
+			level = 1
+			target = c:ARR.market
+			direction = import
+		}		
 
-}
-c:EBR ?= {
-	create_trade_route = {
-		goods = iron
-		level = 2
-		target = c:AHO.market
-		direction = import
-	}	
-	create_trade_route = {
-		goods = fabric
-		level = 2
-		target = c:ARR.market
-		direction = import
-	}	
-	create_trade_route = {
-		goods = fabric
-		level = 2
-		target = c:AHO.market
-		direction = import
-	}		
+	}
+	c:EBR ?= {
+		create_trade_route = {
+			goods = iron
+			level = 2
+			target = c:AHO.market
+			direction = import
+		}	
+		create_trade_route = {
+			goods = fabric
+			level = 2
+			target = c:ARR.market
+			direction = import
+		}	
+		create_trade_route = {
+			goods = fabric
+			level = 2
+			target = c:AHO.market
+			direction = import
+		}		
 
-}
-c:DAR ?= {
-	create_trade_route = {
-		goods = sugar
-		level = 4
-		target = c:THI.market
-		direction = import
-	}	
-	create_trade_route = {
-		goods = hardwood
-		level = 2
-		target = c:THI.market
-		direction = import
-	}	
-	create_trade_route = {
-		goods = hardwood
-		level = 1
-		target = c:CER.market
-		direction = import
 	}
-	create_trade_route = {
-		goods = hardwood
-		level = 1
-		target = c:ARR.market
-		direction = import
-	}	
+	c:DAR ?= {
+		create_trade_route = {
+			goods = sugar
+			level = 4
+			target = c:THI.market
+			direction = import
+		}	
+		create_trade_route = {
+			goods = hardwood
+			level = 2
+			target = c:THI.market
+			direction = import
+		}	
+		create_trade_route = {
+			goods = hardwood
+			level = 1
+			target = c:CER.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = hardwood
+			level = 1
+			target = c:ARR.market
+			direction = import
+		}	
 
-}
-c:EMP ?= {
-	create_trade_route = {
-		goods = iron
-		level = 5
-		target = c:THI.market
-		direction = import
 	}
-	create_trade_route = {
-		goods = lead
-		level = 2
-		target = c:THI.market
-		direction = import
+	c:EMP ?= {
+		create_trade_route = {
+			goods = iron
+			level = 5
+			target = c:THI.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = lead
+			level = 2
+			target = c:THI.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = luxury_potions
+			level = 1
+			target = c:THI.market
+			direction = export
+		}
+		create_trade_route = {
+			goods = fabric
+			level = 2
+			target = c:THI.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = luxury_potions
+			level = 1
+			target = c:DAR.market
+			direction = export
+		}
+		create_trade_route = {
+			goods = luxury_potions
+			level = 4
+			target = c:ARR.market
+			direction = export
+		}
+		create_trade_route = {
+			goods = luxury_clothes
+			level = 2
+			target = c:DAR.market
+			direction = export
+		}		
+		create_trade_route = {
+			goods = wood
+			level = 5
+			target = c:THI.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = sugar
+			level = 4
+			target = c:THI.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = liquor
+			level = 1
+			target = c:THI.market
+			direction = export
+		}
+		create_trade_route = {
+			goods = liquor
+			level = 1
+			target = c:ARR.market
+			direction = export
+		}
+		create_trade_route = {
+			goods = wine
+			level = 3
+			target = c:ARR.market
+			direction = export
+		}
+		create_trade_route = {
+			goods = paper
+			level = 2
+			target = c:ARR.market
+			direction = export
+		}
+		create_trade_route = {
+			goods = paper
+			level = 2
+			target = c:DAR.market
+			direction = export
+		}
+		create_trade_route = {
+			goods = artillery
+			level = 2
+			target = c:THI.market
+			direction = export
+		}
 	}
-	create_trade_route = {
-		goods = luxury_potions
-		level = 1
-		target = c:THI.market
-		direction = export
+	c:THI ?= {
+		create_trade_route = {
+			goods = clippers
+			level = 3
+			target = c:ARR.market
+			direction = import
+		}	
+		create_trade_route = {
+			goods = tools
+			level = 8
+			target = c:EMP.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = sulfur
+			level = 1
+			target = c:DAR.market
+			direction = export
+		}
+		create_trade_route = {
+			goods = sulfur
+			level = 6
+			target = c:ARR.market
+			direction = export
+		}
+		create_trade_route = {
+			goods = sulfur
+			level = 3
+			target = c:EMP.market
+			direction = export
+		}
+		create_trade_route = {
+			goods = fine_art
+			level = 3
+			target = c:ARR.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = artillery
+			level = 1
+			target = c:ARR.market
+			direction = import
+		}
+		create_trade_route = {
+			goods = artillery
+			level = 1
+			target = c:DAR.market
+			direction = import
+		}
 	}
-	create_trade_route = {
-		goods = fabric
-		level = 2
-		target = c:THI.market
-		direction = import
+	c:DIS ?= {
+		create_trade_route = {
+			goods = tea
+			level = 7
+			target = c:RAV.market
+			direction = export
+		}
+		create_trade_route = {
+			goods = wishstone
+			level = 7
+			target = c:RAV.market
+			direction = export
+		}		
 	}
-	create_trade_route = {
-		goods = luxury_potions
-		level = 1
-		target = c:DAR.market
-		direction = export
+	c:VLT ?= {
+		create_trade_route = {
+			goods = hardwood
+			level = 2
+			target = c:SNB.market
+			direction = import
+		}	
 	}
-	create_trade_route = {
-		goods = luxury_potions
-		level = 4
-		target = c:ARR.market
-		direction = export
+	c:PAC ?= {
+		create_trade_route = {
+			goods = wood
+			level = 2
+			target = c:HOR.market
+			direction = export
+		}
 	}
-	create_trade_route = {
-		goods = luxury_clothes
-		level = 2
-		target = c:DAR.market
-		direction = export
-	}		
-	create_trade_route = {
-		goods = wood
-		level = 5
-		target = c:THI.market
-		direction = import
-	}
-	create_trade_route = {
-		goods = sugar
-		level = 4
-		target = c:THI.market
-		direction = import
-	}
-	create_trade_route = {
-		goods = liquor
-		level = 1
-		target = c:THI.market
-		direction = export
-	}
-	create_trade_route = {
-		goods = liquor
-		level = 1
-		target = c:ARR.market
-		direction = export
-	}
-	create_trade_route = {
-		goods = wine
-		level = 3
-		target = c:ARR.market
-		direction = export
-	}
-	create_trade_route = {
-		goods = paper
-		level = 2
-		target = c:ARR.market
-		direction = export
-	}
-	create_trade_route = {
-		goods = paper
-		level = 2
-		target = c:DAR.market
-		direction = export
-	}
-	create_trade_route = {
-		goods = artillery
-		level = 2
-		target = c:THI.market
-		direction = export
-	}
-}
-c:THI ?= {
-	create_trade_route = {
-		goods = clippers
-		level = 3
-		target = c:ARR.market
-		direction = import
-	}	
-	create_trade_route = {
-		goods = tools
-		level = 8
-		target = c:EMP.market
-		direction = import
-	}
-	create_trade_route = {
-		goods = sulfur
-		level = 1
-		target = c:DAR.market
-		direction = export
-	}
-	create_trade_route = {
-		goods = sulfur
-		level = 6
-		target = c:ARR.market
-		direction = export
-	}
-	create_trade_route = {
-		goods = sulfur
-		level = 3
-		target = c:EMP.market
-		direction = export
-	}
-	create_trade_route = {
-		goods = fine_art
-		level = 3
-		target = c:ARR.market
-		direction = import
-	}
-	create_trade_route = {
-		goods = artillery
-		level = 1
-		target = c:ARR.market
-		direction = import
-	}
-	create_trade_route = {
-		goods = artillery
-		level = 1
-		target = c:DAR.market
-		direction = import
-	}
-}
-c:DIS ?= {
-	create_trade_route = {
-		goods = tea
-		level = 7
-		target = c:RAV.market
-		direction = export
-	}
-	create_trade_route = {
-		goods = wishstone
-		level = 7
-		target = c:RAV.market
-		direction = export
-	}		
-}
 }
