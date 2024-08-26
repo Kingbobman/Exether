@@ -6,6 +6,8 @@
 			hq_region = sr:region_arrador
 			name = "Brinewick Expeditionary Force"
 
+			name = "Central Defense Army"
+
 			combat_unit = {
 				type = unit_type:combat_unit_type_skirmish_infantry
 				state_region = s:STATE_DURANS_LAND_2
@@ -35,6 +37,63 @@
 				state_region = s:STATE_GREENCOURT
 				count = 3
 			}
+
+			save_scope_as = secondcorparr
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			save_scope_as = commanderarr_gen
+		}
+
+		scope:commanderarr_gen = {
+			transfer_to_formation = scope:secondcorparr
+		}
+
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_arrador
+
+			name = "Moorweald Frontier Army"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_skirmish_infantry
+				state_region = s:STATE_BYRIVER
+				count = 5
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_skirmish_infantry
+				state_region = s:STATE_THE_MATCHES
+				count = 5
+			}
+
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_VERDANT_VALE
+				count = 5
+			}
+			save_scope_as = thirdcorparr
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			save_scope_as = commanderarr2_gen			
+		}
+
+		scope:commanderarr2_gen = {
+			transfer_to_formation = scope:thirdcorparr
+		}
+
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_arrador
+
+			name = "Highland Garrison"
+
 			combat_unit = {
 				type = unit_type:combat_unit_type_skirmish_infantry
 				state_region = s:STATE_VICEROYS_PEARL
@@ -168,10 +227,21 @@
 			transfer_to_formation = scope:thirdcorparr
 		}
 
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			save_scope_as = commanderarr3_gen			
+		}
+
+		scope:commanderarr3_gen = {
+			transfer_to_formation = scope:fourthcorparr
+		}
 		create_military_formation = {
 			type = fleet
 			hq_region = sr:region_arrador
 			name = "High Sea Fleet"
+
+			name = "Grand Dorite Fleet"
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_man_o_war
@@ -208,15 +278,19 @@
 				state_region = s:STATE_TWO_BARREL_COAST
 				count = 8
 			}
-		save_scope_as = arr_fleet1
-		}
-		create_character = {
-			is_admiral = yes
-			commander_rank = commander_rank_2
-			save_scope_as = arr_admiral_1		
-		}
-		scope:arr_admiral_1 = {
-			transfer_to_formation = scope:arr_fleet1
+
+			save_scope_as = arr_navy
+
+			create_character = {
+				is_admiral = yes
+				commander_rank = commander_rank_2
+				save_scope_as = arr_admiral
+			}
+			
+			scope:arr_admiral = {
+				transfer_to_formation = scope:arr_navy
+			}
+
 		}	
 	}
     c:AHO ?= {
@@ -716,7 +790,8 @@
 			}
 
 			save_scope_as = first_fist
-		}
+		}  
+		
 
 		create_military_formation = {
 			type = army
