@@ -17,7 +17,8 @@ types generate_retainer_types
 
 				item = {
 					container = {
-						datacontext = "[Character.GetCountry]"
+						datacontext = "[Scope.GetCharacter]"
+						datacontext = "[Scope.GetCharacter.GetCountry]"
 
 						using = entry_bg_fancy
 						
@@ -52,23 +53,6 @@ types generate_retainer_types
 										margin = { 10 0 }
 										parentanchor = vcenter
 									}
-									
-									icon = {
-										size = { 30 30 }
-										position = { -5 0 }
-										parentanchor = right|vcenter
-										texture = "gfx/interface/icons/character_role_icons/ruler.dds"
-										visible = "[Character.IsRuler]"
-										tooltip = "RULER_OF_COUNTRY"
-									}
-									icon = {
-										size = { 30 30 }
-										position = { -5 0 }
-										parentanchor = right|vcenter
-										texture = "gfx/interface/icons/character_role_icons/heir.dds"
-										visible = "[Character.IsHeir]"
-										tooltip = "HEIR_OF_COUNTRY"								
-									}
 								}
 								
 								### PORTRAIT
@@ -91,41 +75,8 @@ types generate_retainer_types
 
 									# IG
 									flowcontainer = {
-										name = "tutorial_highlight_recruit_commander_rank"
-										parentanchor = left|vcenter
-										margin_left = 5
-										spacing = 5
-										
-										### RANK
-										icon = {
-											size = { 35 35 }
-											parentanchor = left|vcenter
-											texture = "[Character.GetCommanderRank.GetTexture]"
-											datacontext = "[Character.GetCommanderRank]"
-											tooltipwidget = {
-												FancyTooltip_CommanderRank = {}
-											}
-										}
-										
-										textbox = {
-											text = "COMMANDER_RANK_LOC_KEY"
-											autoresize = yes
-											
-											tooltipwidget = {
-												FancyTooltip_IG = {
-													datacontext = "[Character.AccessInterestGroup]"
-												}
-											}
-											
-											parentanchor = left|vcenter
-											align = left|nobaseline
-										}
-									}
-
-									# IG
-									flowcontainer = {
 										name = "tutorial_highlight_recruit_commander_interest_group"
-										parentanchor = right|vcenter
+										parentanchor = center|vcenter
 										margin_right = 10
 										#visible = "[Not(Character.IsHeir)]"
 										datacontext = "[Character.AccessInterestGroup]"
@@ -216,124 +167,6 @@ types generate_retainer_types
 									}
 								}
 
-								# SPECIAL ORDERS
-								flowcontainer = {
-									visible = yes 
-									parentanchor = hcenter
-									direction = vertical
-									spacing = 5
-									margin_bottom = 10
-
-									# HAS SPECIAL ORDERS
-									textbox = {
-										visible = "[Not(IsDataModelEmpty(Character.AccessPossibleSpecialOrders))]"
-										parentanchor = hcenter
-										autoresize = yes
-										multiline = yes
-										align = nobaseline
-										text = "RECRUIT_COMMANDER_SPECIAL_ORDERS_TITLE"
-									}
-
-									# NO SPECIAL ORDERS
-									textbox = {
-										visible = "[IsDataModelEmpty(Character.AccessPossibleSpecialOrders)]"
-										parentanchor = hcenter
-										autoresize = yes
-										multiline = yes
-										align = nobaseline
-										text = "NO_SPECIAL_ORDERS_TITLE"
-										minimumsize = { -1 73 }
-										alpha = "[TransparentIfTrue('(bool)yes')]"
-									}
-
-									# SPECIAL ORDERS LIST
-									dynamicgridbox = {
-										parentanchor = hcenter
-										visible = "[Not(IsDataModelEmpty(Character.AccessPossibleSpecialOrders))]"
-										datamodel = "[Character.AccessPossibleSpecialOrders]"
-										flipdirection = yes
-										datamodel_wrap = 2
-										minimumsize = { 310 -1 }
-
-										item = {
-											flowcontainer = {
-												margin_right = 5
-												flowcontainer = {
-													minimumsize = { 150 45 }
-													maximumsize = { 150 45 }
-													margin_left = 5
-													spacing = 5
-													tooltipwidget = {
-														FancyTooltip_CommanderOrderType = {
-															blockoverride "text_before" {
-																using = visible_if_either_current_or_next_order
-																text =  "NEXT_OR_CURRENT_ORDER"
-																margin_bottom = 15
-															}
-														}
-													}
-
-													background = {
-														using = entry_bg_simple
-													}
-
-													icon = {
-														parentanchor = vcenter
-														size = { 35 35 }
-														texture = "[CommanderOrderType.GetTexture]"
-													}
-
-													textbox = {
-														parentanchor = vcenter
-														text = "[CommanderOrderType.GetName]"
-														autoresize = yes
-														multiline = yes
-														align = nobaseline
-														fontsize_min = 12
-														elide = right
-														maximumsize = { 100 35 }
-													}
-												}
-											}
-										}
-									}
-								}
-								
-
-								### ORDERS
-								dynamicgridbox = {
-									visible = no
-									datamodel = "[Character.AccessOrders]"
-									flipdirection = yes
-									datamodel_wrap = 2
-									parentanchor = hcenter
-									item = {
-										flowcontainer = {
-											spacing = 10
-											tooltipwidget = {
-												FancyTooltip_CommanderOrderType = {
-													blockoverride "text_before" {
-														using = visible_if_either_current_or_next_order
-														text =  "NEXT_OR_CURRENT_ORDER"
-														margin_bottom = 15
-													}
-												}
-											}
-											icon = {
-												size = { 30 30 }
-												texture = "[CommanderOrderType.GetTexture]"
-											}
-											textbox = {
-												autoresize = yes
-												align = nobaseline
-												text = "[CommanderOrderType.GetName]"
-												parentanchor = vcenter
-												maximumsize = { 120 -1 }
-												elide = right
-											}
-										}
-									}
-								}	
 								### RECRUIT BUTTON
 								button = {
 									name = "tutorial_highlight_recruit_commander_recruit_button"
