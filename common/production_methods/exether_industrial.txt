@@ -236,8 +236,7 @@ pm_wishtone_potion_process_production = {
 		workforce_scaled = {
 
 			goods_input_monster_essence_add = 30		# x40 = 1200
-			goods_input_wishstone_add = 10				# x50 = 500
-			goods_input_gizmos_add = 5					# x60 = 300
+			goods_input_gizmos_add = 10				    # x60 = 600
 			
 			goods_output_potions_add = 65				# x50 = 3250
 		}
@@ -265,7 +264,7 @@ pm_cool_name_potion_process_production = {
 			
 			goods_input_gizmos_add = 10				#x60 = 600
 			goods_input_monster_essence_add = 40	#x40 = 1600
-			goods_input_wishstone_add = 10			#x50 = 500				
+			goods_input_sulfur_add = 10			    #x50 = 500				
 			
 			goods_output_potions_add = 90			#x50 = 4500
 		}
@@ -618,7 +617,7 @@ pm_metal_airships = {
 	}
 	
 	unlocking_technologies = {
-		gantry_cranes
+		ironclad_tech
 	}
 	
 	building_modifiers = {
@@ -788,7 +787,7 @@ pm_automated_bottlers = {
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_glass_add = 5
-			goods_input_oil_add = 10
+			goods_input_blubber_add = 10
 
 		}
 		level_scaled = {
@@ -815,4 +814,143 @@ pm_bottomless_bottles = {
 			building_employment_artificers_add = 500
 		}
 	}
+}
+
+pm_basic_thaumacores = {
+	texture = "gfx/interface/icons/production_method_icons/steamworks.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_ectoplasm_add = 20 #50 x 20 = 1000
+			goods_input_gizmos_add = 10 #60 x 10 = 600
+
+			goods_output_thaumacores_add = 25 #25 x 100 = 2500 (Base Profit = 900, not accounting for wages, just goods. Matches engines base PM!)
+		}
+		
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 2500
+			building_employment_artificers_add = 1500
+			building_employment_wizards_add = 500
+		}
+	}
+}
+
+pm_frankenstien_thaumacores = {
+	texture = "gfx/interface/icons/production_method_icons/electric_engines.dds"
+	unlocking_technologies = {
+		electrical_generation
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_ectoplasm_add = 30 #50 x 30 = 1500
+			goods_input_gizmos_add = 15 #60 x 15 = 900
+			goods_input_electricity_add = 30 #30 x 30 = 900
+			
+			goods_output_thaumacores_add = 50 #50 x 100 = 5,000 (1700 Base Profit)
+		}
+
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 2000
+			building_employment_artificers_add = 1500
+			building_employment_wizards_add = 1000
+		}
+	}
+		required_input_goods = electricity
+}
+
+pm_godsblood_thaumacores = {
+	texture = "gfx/interface/icons/production_method_icons/diesel_engines.dds"
+	unlocking_technologies = {
+		soulforges
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_ectoplasm_add = 40 #50 x 40 = 2000
+			goods_input_gizmos_add = 20 #60 x 20 = 1200
+			goods_input_oil_add = 50 #40 x 50 = 2000
+
+			goods_output_thaumacores_add = 75 #75 x 100 = 7,500 (2.3k Base Profit)
+		}
+
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 1500
+			building_employment_artificers_add = 1500
+			building_employment_wizards_add = 1500
+		}
+	}
+		required_input_goods = oil
+}
+
+pm_handmade_thaumacores = {
+	texture = "gfx/interface/icons/production_method_icons/no_automation.dds"
+}
+pm_watertube_boiler_building_thaumacore_foundry = {
+	texture = "gfx/interface/icons/production_method_icons/watertube_boiler.dds"
+	
+	unlocking_technologies = {
+		watertube_boiler
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_tools_add = 5
+			goods_input_coal_add = 5
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = -500
+			building_employment_artificers_add = -500
+		}
+	}
+}
+pm_rotary_valve_engine_building_thaumacore_foundry = {
+
+	texture = "gfx/interface/icons/production_method_icons/rotary_valve_engine.dds"
+	
+	unlocking_technologies = {
+		rotary_valve_engine
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_tools_add = 5
+			goods_input_coal_add = 10
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = -1000
+			building_employment_artificers_add = -500
+		}
+	}
+}
+pm_assembly_line_building_thaumacore_foundry = {
+
+	texture = "gfx/interface/icons/production_method_icons/assembly_lines.dds"
+
+	unlocking_technologies = {
+		conveyors
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_tools_add = 5
+			goods_input_oil_add = 5
+			goods_input_electricity_add = 5
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = -1500
+			building_employment_artificers_add = -500
+		}
+	}
+
+	required_input_goods = electricity
+
+	required_input_goods = oil 
+
 }

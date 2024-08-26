@@ -612,7 +612,7 @@ types information_panel_bar_types {
 				sidebar_label_button_small = {
 					enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 					position = { -100 @magic_position }
-					datacontext = "[GetScriptedGui('recalculate_ritual_lists')]"
+					datacontext = "[GetScriptedGui('recalculate_arcana_lists')]"
 					blockoverride "onclick" {
 						onclick = "[GetVariableSystem.Toggle('show_magic')]"
 						onclick = "[GetVariableSystem.Clear('international_open')]"
@@ -636,7 +636,7 @@ types information_panel_bar_types {
 						visible = "[GetVariableSystem.Exists('show_magic')]"
 					}
 					sidepanel_button_small = {
-						datacontext = "[GetScriptedGui('recalculate_ritual_lists')]"
+						datacontext = "[GetScriptedGui('recalculate_arcana_lists')]"
 						blockoverride "icon" {
 							texture = "gfx/interface/main_hud/magic_btn.dds"
 						}
@@ -652,8 +652,9 @@ types information_panel_bar_types {
 						parentanchor = right|top
 						position = { -2 2 }
 						autoresize = yes
-						raw_text = "#bold [GetDataModelSize(GetPlayer.MakeScope.GetList('active_ritual_id_list'))]#!"
-						visible = "[GreaterThan_int32(GetDataModelSize(GetPlayer.MakeScope.GetList('active_ritual_id_list')), '(int32)0')]"
+						raw_text = "#bold [GetDataModelSize(GetPlayer.MakeScope.GetList('active_arcana_id_all_list'))]#!"
+						visible = "[GreaterThan_int32(GetDataModelSize(GetPlayer.MakeScope.GetList('active_arcana_id_all_list')), '(int32)0')]"
+
 						align = left|nobaseline
 						using = fontsize_small
 						background = {
