@@ -1323,7 +1323,7 @@ c:MGR ?= {
 		type = army
 		hq_region = sr:region_gavkhan
 
-		name = "Swamp Watchers"
+		name = "Swamp Sirens"
 
 		combat_unit = {
 			type = unit_type:combat_unit_type_line_infantry
@@ -1547,4 +1547,297 @@ c:SBH ?= {
 	scope:sbh_general = {
 		transfer_to_formation = scope:sbh_army
 	}
+}
+
+c:SNB ?= {
+	create_military_formation = {
+		type = army
+		hq_region = sr:region_embervein_arroyo
+
+		name = "Pabardian Northwatch"
+
+		combat_unit = {
+			type = unit_type:combat_unit_type_line_infantry
+			state_region = s:STATE_THASAMAKI
+			service_type = conscript
+			count = 5
+		}
+		combat_unit = {
+			type = unit_type:combat_unit_type_line_infantry
+			state_region = s:STATE_THASAMAKI
+			count = 10
+		}
+		combat_unit = {
+			type = unit_type:combat_unit_type_line_infantry
+			state_region = s:STATE_BONGSAF
+			count = 10
+		}
+		combat_unit = {
+			type = unit_type:combat_unit_type_line_infantry
+			state_region = s:STATE_KEEDZAI
+			count = 5
+		}
+		combat_unit = {
+			type = unit_type:combat_unit_type_mobile_artillery
+			state_region = s:STATE_SWAHATHAI
+			count = 5
+		}
+		save_scope_as = snb_army
+	}
+
+	create_character = {
+		is_general = yes
+		commander_rank = commander_rank_2
+		interest_group = ig_armed_forces
+		hq = region_embervein_arroyo
+		save_scope_as = snb_general
+	}
+	
+	scope:snb_general = {
+		transfer_to_formation = scope:snb_army
+	}
+
+	create_military_formation = {
+		type = army
+		hq_region = sr:region_sanbang
+
+		name = "Republican Guard"
+
+		combat_unit = {
+			type = unit_type:combat_unit_type_line_infantry
+			state_region = s:STATE_SWAHATHAI
+			service_type = conscript
+			count = 5
+		}
+		combat_unit = {
+			type = unit_type:combat_unit_type_line_infantry
+			state_region = s:STATE_KILIMAMAI
+			count = 10
+		}
+		combat_unit = {
+			type = unit_type:combat_unit_type_line_infantry
+			state_region = s:STATE_JUACHAI
+			count = 10
+		}
+		combat_unit = {
+			type = unit_type:combat_unit_type_line_infantry
+			state_region = s:STATE_MAJISAMAKI
+			count = 10
+		}
+		combat_unit = {
+			type = unit_type:combat_unit_type_mobile_artillery
+			state_region = s:STATE_SWAHATHAI
+			count = 10
+		}
+		save_scope_as = snb_army2
+	}
+
+	create_character = {
+		is_general = yes
+		commander_rank = commander_rank_2
+		interest_group = ig_armed_forces
+		hq = sr:region_sanbang
+		save_scope_as = snb_general2
+	}
+	
+	scope:snb_general2 = {
+		transfer_to_formation = scope:snb_army2
+	}
+
+	create_military_formation = {
+		type = army
+		hq_region = sr:region_sanbang
+
+		name = "Thassarcian Marine Corps"
+
+		combat_unit = {
+			type = unit_type:combat_unit_type_line_infantry
+			state_region = s:STATE_KILIMAMAI
+			count = 10
+		}
+		combat_unit = {
+			type = unit_type:combat_unit_type_line_infantry
+			state_region = s:STATE_SWAHATHAI
+			count = 5
+		}
+		combat_unit = {
+			type = unit_type:combat_unit_type_mobile_artillery
+			state_region = s:STATE_SWAHATHAI
+			count = 15
+		}
+		save_scope_as = snb_army3
+	}
+
+	create_character = {
+		is_general = yes
+		commander_rank = commander_rank_2
+		hq = sr:region_sanbang
+		interest_group = ig_armed_forces
+		age = 40
+		traits = {
+			cruel
+			expert_offensive_planner
+		}
+		save_scope_as = snb_general3
+	}
+	
+	scope:snb_general3 = {
+		transfer_to_formation = scope:snb_army3
+	}
+
+	create_military_formation = {
+		type = fleet
+		hq_region = sr:region_sanbang
+		name = "Pabardian Royal Fleet"
+	
+		combat_unit = {
+			type = unit_type:combat_unit_type_man_o_war
+			state_region = s:STATE_SWAHATHAI
+			count = 5
+		}
+
+		combat_unit = {
+			type = unit_type:combat_unit_type_frigate
+			state_region = s:STATE_SWAHATHAI
+			count = 13
+		}
+
+		combat_unit = {
+			type = unit_type:combat_unit_type_frigate
+			state_region = s:STATE_THASAMAKI
+			count = 7
+		}
+		save_scope_as = snb_fleet
+	}
+
+	create_character = {
+		is_admiral = yes
+		commander_rank = commander_rank_2
+		hq = sr:region_sanbang
+		interest_group = ig_armed_forces
+		save_scope_as = snb_admiral
+	}
+	
+	scope:snb_admiral = {
+		transfer_to_formation = scope:snb_fleet
+	}
+}
+
+c:LPS ?= {
+	create_military_formation = {
+		type = army
+		hq_region = sr:region_sanbang
+
+		name = "League Marines"
+
+		combat_unit = {
+			type = unit_type:combat_unit_type_line_infantry
+			state_region = s:STATE_MAJIWAZIRI
+			count = 10
+		}
+
+		combat_unit = {
+			type = unit_type:combat_unit_type_mobile_artillery
+			state_region = s:STATE_MAJIWAZIRI
+			count = 10
+		}
+
+		save_scope_as = lps_army
+	}
+
+	create_character = {
+		is_general = yes
+		hq = sr:region_sanbang
+		interest_group = ig_armed_forces
+		traits = {
+			meticulous
+			ambitious
+		}
+		save_scope_as = lps_general
+	}
+	
+	scope:lps_general = {
+		transfer_to_formation = scope:lps_army
+	}
+
+	create_military_formation = {
+		type = fleet
+		hq_region = sr:region_sanbang
+		name = "Merchant Fleet Escorts"
+
+		combat_unit = {
+			type = unit_type:combat_unit_type_frigate
+			state_region = s:STATE_JUALALA
+			count = 10
+		}
+
+		combat_unit = {
+			type = unit_type:combat_unit_type_frigate
+			state_region = s:STATE_MAJIWAZIRI
+			count = 10
+		}
+
+		combat_unit = {
+			type = unit_type:combat_unit_type_man_o_war
+			state_region = s:STATE_MAJIWAZIRI
+			count = 5
+		}
+
+		save_scope_as = lps_fleet
+	}
+
+	create_character = {
+		is_admiral = yes
+		commander_rank = commander_rank_2
+		interest_group = ig_armed_forces
+		hq = sr:region_sanbang
+		save_scope_as = lps_admiral
+	}
+	
+	scope:lps_admiral = {
+		transfer_to_formation = scope:lps_fleet
+	}
+}
+
+c:FMJ ?= {
+	create_military_formation = {
+		type = army
+		hq_region = sr:region_sanbang
+
+		name = "Bongack Horde"
+
+		combat_unit = {
+			type = unit_type:combat_unit_type_irregular_infantry
+			state_region = s:STATE_MDLEMNO_KETHIN
+			count = 25
+		}
+
+		combat_unit = {
+			type = unit_type:combat_unit_type_line_infantry
+			state_region = s:STATE_CHEJATAN_DO
+			count = 5
+		}
+
+		combat_unit = {
+			type = unit_type:combat_unit_type_mobile_artillery
+			state_region = s:STATE_CHEJATAN_DO
+			count = 5
+		}
+
+		save_scope_as = fmj_army
+	}
+
+	create_character = {
+		is_general = yes
+		hq = sr:region_sanbang
+		commander_rank = commander_rank_2
+		interest_group = ig_armed_forces
+		save_scope_as = fmj_general
+	}
+	
+	scope:fmj_general = {
+		transfer_to_formation = scope:fmj_army
+	}
+}
+
 }
