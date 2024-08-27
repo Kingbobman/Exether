@@ -7238,10 +7238,10 @@
 	s:STATE_KOTIK = {
 		region_state:BLL={
 			create_building={
-				building="building_university"
-				level=1
+				building="building_government_administration"
+				level=2
 				reserves=1
-				activate_production_methods={ "pm_scholastic_education" }
+				activate_production_methods={ "pm_simple_organization" }
 			}
 			create_building={
 				building="building_millet_farm"
@@ -7299,12 +7299,6 @@
 				}
 				reserves=1
 				activate_production_methods={ "pm_simple_farming"  "pm_tools_disabled" "pm_fig_orchards" }
-			}
-			create_building={
-				building="building_barracks"
-				level=6
-				reserves=1
-				activate_production_methods={ "pm_no_organization" }
 			}
 		}
 	}
@@ -7541,12 +7535,7 @@
 		
 	s:STATE_FOBAN = {
 		region_state:RLP={
-			create_building={
-				building="building_barracks"
-				level=4
-				reserves=1
-				activate_production_methods={ "pm_no_organization" }
-			}
+			
 		}
 	}
 		
@@ -7557,10 +7546,10 @@
 	s:STATE_ZIKAN = {
 		region_state:PVA={
 			create_building={
-				building="building_barracks"
-				level=2
+				building="building_government_administration"
+				level=1
 				reserves=1
-				activate_production_methods={ "pm_no_organization" }
+				activate_production_methods={ "pm_simple_organization" }
 			}
 		}
 	}
@@ -7636,12 +7625,6 @@
 				reserves=1
 				activate_production_methods={ "default_building_coffee_plantation" "pm_road_carts"  }
 			}
-			create_building={
-				building="building_barracks"
-				level=10
-				reserves=1
-				activate_production_methods={ "pm_no_organization" }
-			}
 		}
 	}
 		
@@ -7672,6 +7655,12 @@
 	s:STATE_POFIKAN = {
 		region_state:BLL={
 			create_building={
+				building="building_government_administration"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_simple_organization" }
+			}
+			create_building={
 				building="building_livestock_ranch"
 				add_ownership={ 
 					building={ 
@@ -7697,17 +7686,18 @@
 				reserves=1
 				activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }
 			}
-			create_building={
-				building="building_barracks"
-				level=10
-				reserves=1
-				activate_production_methods={ "pm_no_organization" }
-			}
 		}
 	}
 		
 	s:STATE_NOLIPIK = {
-
+		region_state:BLL={
+			create_building={
+				building="building_government_administration"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_simple_organization" }
+			}
+		}
 	}
 		
 	s:STATE_VAVULAN = {
@@ -7729,12 +7719,6 @@
 				reserves=1
 				activate_production_methods={ "pm_simple_farming"  "pm_tools_disabled" "pm_fig_orchards" }
 			}
-			create_building={
-				building="building_barracks"
-				level=7
-				reserves=1
-				activate_production_methods={ "pm_no_organization" }
-			}
 		}
 	}
 		
@@ -7743,7 +7727,14 @@
 	}
 		
 	s:STATE_MIPOLIK = {
-
+		region_state:RLP = {
+			create_building={
+				building="building_government_administration"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_simple_organization" }
+			}
+		}
 	}
 		
 	s:STATE_ALAMARA = {
