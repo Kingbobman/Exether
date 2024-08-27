@@ -27,7 +27,7 @@ building_airship_dock = {
 	ignore_stateregion_max_level = yes
 	port = yes
 
-	unlocking_technologies = { airship }
+	unlocking_technologies = { skyports }
 
 	production_method_groups = {
 		pmg_base_building_airship_dock
@@ -36,17 +36,8 @@ building_airship_dock = {
 	required_construction = construction_cost_medium
 	
 	possible = {
-		error_check = {
-			severity = fail
-			AND = {
-				OR = {
-					state_has_mountain = yes
-				}
-				
-					
-				is_coastal = yes  #god's light does not shine upon us
-			}
-		
+		AND = {
+			state_has_mountain = yes
 		}
 	}
 }

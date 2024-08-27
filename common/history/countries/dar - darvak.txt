@@ -1,21 +1,43 @@
 ﻿COUNTRIES = {
 	c:DAR = {
-		effect_starting_technology_tier_3_tech = yes
-		effect_starting_politics_conservative = yes
+		effect_starting_technology_tier_1_tech = yes
+
+		ig:ig_industrialists = {
+			add_ruling_interest_group = yes
+		}
+		set_ruling_interest_groups = {
+        	ig_industrialists
+        }
 
 		activate_law = law_type:law_women_own_property
 		activate_law = law_type:law_dedicated_police
-		activate_law = law_type:law_charitable_health_system
+		activate_law = law_type:law_private_health_insurance
 		activate_law = law_type:law_secret_police
 		activate_law = law_type:law_denominational_exclusion
 		activate_law = law_type:law_artificer_guilds
+		activate_law = law_type:law_per_capita_based_taxation
+		activate_law = law_type:law_professional_army
+		activate_law = law_type:law_tenant_farmers
+		activate_law = law_type:law_censorship
+		activate_law = law_type:law_appointed_bureaucrats
+		activate_law = law_type:law_magical_schools
+		activate_law = law_type:law_interventionism
+		activate_law = law_type:law_ethnostate
+		activate_law = law_type:law_oligarchy
+		activate_law = law_type:law_restricted_child_labor
 
 		add_technology_researched = hydraulic_cranes
 		add_technology_researched = airship
+		add_technology_researched = skyports
 		add_technology_researched = cloudsilver_refining
+		add_technology_researched = floating_buildings
 
 		set_institution_investment_level = {
 			institution = institution_schools
+			level = 3
+		}
+		set_institution_investment_level = {
+			institution = institution_health_system
 			level = 3
 		}
 		set_institution_investment_level = {
@@ -24,7 +46,8 @@
 		}
 
 		add_taxed_goods = g:liquor
-		add_taxed_goods = g:wine
+		add_taxed_goods = g:services
+		add_taxed_goods = g:luxury_potions
 
 	}
 }

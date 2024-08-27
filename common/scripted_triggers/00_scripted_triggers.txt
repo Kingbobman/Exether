@@ -1342,7 +1342,33 @@ can_have_radical_leader = { # interest_group scope
 }
 
 is_major_unifier = {
-	always = no
+	OR = {
+		AND = {
+			exists = c:GAV # Great Gavkhan
+			this = c:GAV
+		}
+		AND = {
+			exists = c:NEK # New Khus
+			this = c:NEK
+		}
+		AND = {
+			exists = c:TLA # Thaloria
+			this = c:TLA
+		}
+		AND = {
+			exists = c:NBI # Nagabumi
+			this = c:NBI
+		}
+	}
+}
+
+is_major_unifier_candidate = {
+	OR = {
+		can_form_nation = GAV
+		can_form_nation = TLA
+		can_form_nation = NBI
+		can_form_nation = NEK
+	}
 }
 
 is_active_in_diplomatic_play = {
