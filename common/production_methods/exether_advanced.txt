@@ -93,6 +93,10 @@ pm_anchorage_airship = {
 	texture = "gfx/interface/icons/production_method_icons/anchorage.dds"
 	
 	low_pop_method = yes # AI will activate this method for states with low population
+
+	unlocking_technologies = {
+		skyports
+	}
 	
 	building_modifiers = {
 
@@ -131,7 +135,7 @@ pm_basic_port_airship = {
 	building_modifiers = {
 		workforce_scaled = {	
 			goods_input_airships_add = 5
-			goods_input_cloudsilver_add = 5
+			goods_input_coal_add = 5
 		}
 		level_scaled = {
 			building_employment_laborers_add = 2500
@@ -157,14 +161,13 @@ pm_industrial_port_airship = {
 	texture = "gfx/interface/icons/production_method_icons/industrial_port.dds"
 
 	unlocking_technologies = {
-		gantry_cranes
+		zeppelins
 	}
 
 	building_modifiers = {
 		workforce_scaled = {	
-			goods_input_airships_add = 5
-			goods_input_cloudsilver_add = 10
-			goods_input_blubber_add = 5
+			goods_input_airships_add = 10
+			goods_input_coal_add = 10
 		}
 		level_scaled = {
 			building_employment_laborers_add = 2250
@@ -189,14 +192,13 @@ pm_industrial_port_airship = {
 pm_modern_port_airship = {
 	texture = "gfx/interface/icons/production_method_icons/modern_port.dds"
 	unlocking_technologies = {
-		baltendos
+		concrete_dockyards
 	}
 	
 	building_modifiers = {
 		workforce_scaled = {	
-			goods_input_cloudsilver_add = 15
-			goods_input_airships_add = 10	
-			goods_input_blubber_add = 10
+			goods_input_airships_add = 20
+			goods_input_coal_add = 15
 		}
 		level_scaled = {
 			building_employment_laborers_add = 2000
