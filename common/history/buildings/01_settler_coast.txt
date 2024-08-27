@@ -688,7 +688,7 @@
                 }
 			}
             reserves=1
-            activate_production_methods={ "pm_early_potion_vat_production" "pm_water-based_potions" "pm_base_cosmetic_potion_production" }
+            activate_production_methods={ "pm_simple_potion_production" "pm_alcohol-based_potions" }
         }
              create_building={
 			building="building_food_industry"
@@ -1607,7 +1607,7 @@
                 }
 			}
             reserves=1
-            activate_production_methods={ "pm_early_potion_vat_production" "pm_alcohol-based_potions" "pm_base_cosmetic_potion_production" }
+            activate_production_methods={ "pm_simple_potion_production" "pm_alcohol-based_potions" }
         }
 		create_building={
 			building="building_vineyard_plantation"
@@ -3109,7 +3109,7 @@
 				   }
 				}
 				reserves=1
-				activate_production_methods={ "pm_atmospheric_engine_pump_building_coal_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+				activate_production_methods={ "pm_atmospheric_engine_pump_building_coal_mine" "pm_coal_mines_potions_of_fortitude" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
 			}		
             create_building={
           building="building_textile_mills"
@@ -3645,7 +3645,7 @@
                 }
 			}
             reserves=1
-            activate_production_methods={ "pm_simple_potion_production" "pm_water-based_potions" "pm_base_cosmetic_potion_production" }
+            activate_production_methods={ "pm_simple_potion_production" "pm_alcohol-based_potions" "pm_retaining_filters" }
         }
 			create_building={
 				building="building_leviathan_outpost"
@@ -4655,7 +4655,7 @@
 			building="building_construction_sector"
 			level=1
 			reserves=1
-			activate_production_methods={ "pm_early_cloudsilver_buildings" }
+			activate_production_methods={ "pm_iron_frame_buildings" }
 		}	
 		create_building={
 			building="building_artillery_foundries"
@@ -5004,7 +5004,7 @@
 			building="building_construction_sector"
 			level=2
 			reserves=1
-			activate_production_methods={ "pm_early_cloudsilver_buildings" }
+			activate_production_methods={ "pm_iron_frame_buildings" }
 		}
             create_building={
 			building="building_textile_mills"
@@ -5244,7 +5244,7 @@
 			building="building_construction_sector"
 			level=2
 			reserves=1
-			activate_production_methods={ "pm_early_cloudsilver_buildings" }
+			activate_production_methods={ "pm_iron_frame_buildings" }
 		}
 		create_building={
 			building="building_artifactory"
@@ -5257,7 +5257,20 @@
                    }
                 }
 			reserves=1
-			activate_production_methods={ "exether_pm_artifactory_hand_sorting" "exether_pm_artifactory_conveyor_belts" }
+			activate_production_methods={ "pm_artifactory_hand_sorting" "pm_artifactory_conveyor_belts" }
+		}
+		create_building={
+			building="building_artifactory"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:VHT"
+                        levels=5
+                        region="STATE_VYNDERVOHT"
+                   }
+                }
+			reserves=1
+			activate_production_methods={ "pm_artifactory_hand_sorting" "pm_artifactory_conveyor_belts" }
 		}
 		create_building={
 			building="building_textile_mills"
@@ -5278,7 +5291,7 @@
 					building={ 
 					type="building_wizard_tower"
 						country="c:VHT"
-						levels=3
+						levels=11
 						region="STATE_VYNDERVOHT"
 				   }
 				}
@@ -5299,12 +5312,12 @@
 			activate_production_methods={ "pm_basic_distillery" "pm_no_fruit" "pm_monster_grapes" }
 		}
 		create_building={
-			building="building_cloud_collectors"
+			building="building_cloudsilver_mine"
 			add_ownership={ 
 			  building={ 
 					type="building_wizard_tower"
 				country="c:VHT"
-				levels=11
+				levels=1
 				region="STATE_VYNDERVOHT"
 			  }
 			}
@@ -5962,7 +5975,7 @@
                    }
                 }
 			reserves=1
-			activate_production_methods={ "exether_pm_artifactory_hand_sorting" "exether_pm_artifactory_conveyor_belts" }
+			activate_production_methods={ "pm_artifactory_hand_sorting" "pm_artifactory_conveyor_belts" }
 		}
 		create_building={
 			building="building_motor_industry"
@@ -6166,7 +6179,7 @@
 			activate_production_methods={ "pm_philosophy_department" }
 		  }
 		  create_building={
-			building="building_cloud_collectors"
+			building="building_cloudsilver_mine"
 			add_ownership={ 
 			  building={ 
 				type="building_financial_district"
@@ -6176,7 +6189,6 @@
 			  }
 			}
 			reserves=1
-			activate_production_methods={ "pm_atmospheric_engine_pump_building_cloud_collector" "pm_no_steam_automation" "pm_rail_transport_mine" }
 		}
 	}
   }
@@ -7058,10 +7070,10 @@
                    }
                 }
 			reserves=1
-			activate_production_methods={ "exether_pm_artifactory_hand_sorting" "exether_pm_artifactory_conveyor_belts" }
+			activate_production_methods={ "pm_artifactory_hand_sorting" "pm_artifactory_conveyor_belts" }
 		}
 		create_building={
-			building="building_cloud_collectors"
+			building="building_cloudsilver_mine"
 			add_ownership={ 
 				building={ 
 					type="building_wizard_tower"

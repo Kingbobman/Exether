@@ -98,7 +98,7 @@ calculate_arcana_surplus = {
 		add_modifier = {
 			name = surplus_arcana 
 			multiplier = {
-				value = root.magic_reserves_total
+				value = root.arcana
 				divide = 600
 			}
 		}
@@ -782,6 +782,7 @@ on_diplomatic_pact_third_party_auto_break = {
 # scope:target = Released Country
 on_country_released_as_independent = {
 	effect = {
+		calculate_arcanas = yes
 		if = {
 			limit = {
 				scope:target = {
@@ -805,6 +806,7 @@ on_country_released_as_independent = {
 # scope:target = Released Country
 on_country_released_as_own_subject = {
 	effect = {
+		calculate_arcanas = yes
 
 	}
 }
@@ -813,12 +815,14 @@ on_country_released_as_own_subject = {
 # scope:target = Released Country
 on_country_released_as_overlord_subject = {
 	effect = {
+		calculate_arcanas = yes
 	}
 }
 
 # Root = Country
 on_country_formed = {
 	effect = {
+		calculate_arcanas = yes
 		#Add custom unification events here later
 		if = {
 			limit = {
@@ -1573,6 +1577,7 @@ on_secession_end = {
 # This action is triggered after `on_revolution_end`
 on_civil_war_won = {
 	effect = {
+		calculate_arcanas = yes
 		if = {
 			limit = {
 				has_variable = anti_monarchist_revolution
