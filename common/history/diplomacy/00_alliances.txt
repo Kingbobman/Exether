@@ -8,7 +8,7 @@
 
 	c:TEF ?= {
 		create_diplomatic_pact = {
-			country = c:SET
+			country = c:OPA
 			type = alliance
 		}	
 	}
@@ -63,5 +63,11 @@
 			country = c:BLL
 			type = alliance
 		}
+	}
+	c:OPA ?= {
+		create_diplomatic_pact = {
+			country = c:TEF
+			type = alliance
+		}	
 	}
 }
