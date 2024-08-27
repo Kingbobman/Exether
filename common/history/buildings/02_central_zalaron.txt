@@ -294,12 +294,18 @@
 		
 	s:STATE_KÁLMBIQÚIS = {
 		region_state:OPA={
-				create_building={
-					building="building_airship_dock"
-					level=2
-					reserves=1
-					activate_production_methods={ "pm_anchorage_airship" }
-				  }
+			create_building={
+				building="building_airship_dock"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_anchorage_airship" }
+			}
+			create_building={
+				building="building_university"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_scholastic_education" }
+			}
 			create_building={
 				building="building_government_administration"
 				level=10
@@ -3351,6 +3357,12 @@
 				reserves=1
 				activate_production_methods = { "pm_horizontal_drawer_cabinets" }
 			}
+			create_building={
+				building="building_university"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_scholastic_education" }
+			}
 		create_building={
 				building="building_construction_sector"
 				level=3
@@ -3746,6 +3758,12 @@
 	s:STATE_CAM_RINNARA = {
 		region_state:CLL = {
 			create_building={
+				building="building_university"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_scholastic_education" }
+			}
+			create_building={
 				building="building_wheat_farm"
 				add_ownership={ 
 					building={ 
@@ -3794,6 +3812,12 @@
 				level=2
 				reserves=1
 				activate_production_methods={ "pm_horizontal_drawer_cabinets" }
+			}
+			create_building={
+				building="building_university"
+				level=3
+				reserves=1
+				activate_production_methods={ "pm_scholastic_education" }
 			}
 			create_building={
 				building="building_paper_mills"
@@ -4394,6 +4418,12 @@
 				activate_production_methods={ "pm_horizontal_drawer_cabinets" }
 			}
 			create_building={
+				building="building_university"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_scholastic_education" }
+			}
+			create_building={
 				building="building_railway"
 					add_ownership={ 
 						building={ 
@@ -4632,7 +4662,7 @@
 			}			
 			create_building={
 				building="building_university"
-				level=1
+				level=2
 				reserves=1
 				activate_production_methods={ "pm_scholastic_education" }
 			}
@@ -4990,6 +5020,12 @@
 				level=5
 				reserves=1
 				activate_production_methods={ "pm_horizontal_drawer_cabinets" }
+			}
+			create_building={
+				building="building_university"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_scholastic_education" }
 			}
 			create_building={
 				building="building_food_industry"
@@ -6221,6 +6257,12 @@
 				activate_production_methods={ "pm_professional_bureaucrats" "pm_religious_bureaucrats" "pm_vertical_filing_cabinets" }
 			}
 			create_building={
+				building="building_university"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_scholastic_education" }
+			}
+			create_building={
 				building="building_construction_sector"
 				level=2
 				reserves=1
@@ -6891,6 +6933,12 @@
 				activate_production_methods={ "pm_vertical_filing_cabinets" "pm_professional_bureaucrats" "pm_religious_bureaucrats" }
 			}
 			create_building={
+				building="building_university"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_scholastic_education" }
+			}
+			create_building={
 				building="building_paper_mills"
                 add_ownership={ 
                     building={ 
@@ -7191,6 +7239,12 @@
 		
 	s:STATE_KOTIK = {
 		region_state:BLL={
+			create_building={
+				building="building_university"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_scholastic_education" }
+			}
 			create_building={
 				building="building_millet_farm"
 				add_ownership={ 
@@ -9014,6 +9068,12 @@
 			level=3
 			reserves=1
 			activate_production_methods={ "pm_horizontal_drawer_cabinets" "pm_hereditary_bureaucrats" "pm_religious_bureaucrats" }
+		}
+		create_building={
+				building="building_university"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_scholastic_education" }
 		}
 		create_building={
 			building="building_food_industry"
