@@ -1,4 +1,14 @@
-﻿gizmo_waterwrangler_irrigation_building_coffee_plantation = { #I will not name these seedspewers.  I will not name these seedspewers. I will not name these seedspewers.
+﻿pm_no_tech = {
+	texture = "gfx/interface/icons/production_method_icons/no_automation.dds"
+}
+
+pm_coffee_plantalyzers = {
+	texture = "gfx/interface/icons/production_method_icons/orchards.dds"
+
+	
+}
+
+gizmo_waterwrangler_irrigation_building_coffee_plantation = { #I will not name these seedspewers.  I will not name these seedspewers. I will not name these seedspewers.
 	texture = "gfx/interface/icons/production_method_icons/automatic_irrigation.dds"
 
 	state_modifiers = {
@@ -14,15 +24,8 @@
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods
-			goods_input_gizmos_add = 6		#x60 = 360
-			goods_output_coffee_add = 30	#x50 = 1500
-		}
-
-		level_scaled = {
-			# profit
-			building_employment_laborers_add = 3000
-			building_employment_farmers_add = 1000
-			building_employment_artificers_add = 1000
+			goods_input_thaumacores_add = 6		#x100 = 600
+			goods_output_coffee_add = 20	#x50 = 1000
 		}
 	}
 }
@@ -43,8 +46,8 @@ gizmo_waterwrangler_irrigation_building_cotton_plantation = { #I will not name t
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods
-			goods_input_gizmos_add = 6
-			goods_output_fabric_add = 70
+			goods_input_gizmos_add = 6		#x60 = 360
+			goods_output_fabric_add = 70	#x20 = 1400
 		}
 
 		level_scaled = {
