@@ -732,6 +732,7 @@
 
 			save_scope_as = leoarmy
 		}
+	}
 
 		create_character = {
 			is_general = yes
@@ -793,92 +794,7 @@
 		}  
 		
 
-		create_military_formation = {
-			type = army
-			hq_region = sr:region_plaguewood
-			name = plaguewood_garrison
-
-			
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_ORCBANE_PASS
-				count = 10
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
-				state_region = s:STATE_ORCBANE_PASS
-				count = 4
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_mobile_artillery
-				state_region = s:STATE_ORCBANE_PASS
-				count = 2
-			}
-			
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_PENDYM_GWYN
-				count = 10
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
-				state_region = s:STATE_PENDYM_GWYN
-				count = 1
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_mobile_artillery
-				state_region = s:STATE_PENDYM_GWYN
-				count = 1
-			}
-
-			
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_PEARFIELDS
-				count = 5
-			}
-
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
-				state_region = s:STATE_ORCBANE_PASS_2
-				count = 2
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_mobile_artillery
-				state_region = s:STATE_ORCBANE_PASS_2
-				count = 1
-			}
-
-			
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_FERNSEA
-				count = 7
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
-				state_region = s:STATE_FERNSEA
-				count = 4
-			}
-
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_mobile_artillery
-				state_region = s:STATE_FERNSEA
-				count = 1
-			}
-
-			save_scope_as = plaguewood_bulwark
-		}
-
-                create_character = {
+        create_character = {
 			is_general = yes
 			first_name = Endri
 			last_name = Millersson
@@ -911,7 +827,7 @@
 		}
 		
 		scope:wilhem_gen = {
-			transfer_to_formation = scope:plaguewood_bulwark
+			transfer_to_formation = scope:second_fist
 		}
 
 		create_military_formation = {
@@ -1258,8 +1174,8 @@
 				state_region = s:STATE_NEWBANKS
 				count = 2
 			}
-		}
 		save_scope_as = ftharmy
+		}
 
 		create_character = {
 			is_general = yes
@@ -1289,9 +1205,8 @@
 				state_region = s:STATE_OVERBURROW
 				count = 3
 			}
-		}
 		save_scope_as = brbarmy
-
+		}
 		create_character = {
 			is_general = yes
 			commander_rank = commander_rank_1
@@ -1326,7 +1241,7 @@
 			is_general = yes
 			commander_rank = commander_rank_1
 			hq = region_smallhills
-			save_scope_as = scope:grh_gen_1
+			save_scope_as = grh_gen_1
 		}
 		scope:grh_gen_1 = {
 				transfer_to_formation = scope:grh_army_1
@@ -1497,8 +1412,8 @@
 				state_region = s:STATE_LHIPH
 				count = 15
 			}
-		}
 			save_scope_as = dronavy
+		}
 	
 			create_character = {
 				is_admiral = yes

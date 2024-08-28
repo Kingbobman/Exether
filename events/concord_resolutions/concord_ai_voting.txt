@@ -39,8 +39,9 @@ concord_ai_voting.1 = {
 			modifier = {
 				trigger = {
 					and = {
-						has_journal_entry = je_korean_resolution
+						#has_journal_entry = je_korean_resolution
 						is_authoritarian = no
+						always = no
 					}
 				}
 				add = 50
@@ -49,17 +50,18 @@ concord_ai_voting.1 = {
 			modifier = {
 				trigger = {
 					and = {
-						has_journal_entry = je_declaration_of_human_rights
+						#has_journal_entry = je_declaration_of_human_rights
 						is_authoritarian = no
-					}
+						always = no
 				}
 				add = 50
 			}
 			modifier = {
 				trigger = {
 					and = {
-						has_journal_entry = je_decolonization_resolution
+						#has_journal_entry = je_decolonization_resolution
 						country_rank >= rank_value:great_power
+						always = no
 					}
 				}
 				add = 100
@@ -68,10 +70,11 @@ concord_ai_voting.1 = {
 			modifier = {
 				trigger = {
 					and = {
-						has_journal_entry = je_clos1
+						#has_journal_entry = je_clos1
 						any_scope_state = {
 							is_coastal = yes
 						}
+						always = no
 					}
 				}
 				add = 50
@@ -80,10 +83,11 @@ concord_ai_voting.1 = {
 			modifier = {
 				trigger = {
 					and = {
-						has_journal_entry = je_intervention
+						#has_journal_entry = je_intervention
 						scope:asking_concord_intervention_country = {
 							relations:root > relations_threshold:cordial
 						}
+						always = no
 					}
 				}
 				add = 50
@@ -91,10 +95,11 @@ concord_ai_voting.1 = {
 			modifier = {
 				trigger = {
 					and = {
-						has_journal_entry = je_intervention
+						#has_journal_entry = je_intervention
 						scope:concord_intervention_enemy_country = {
 							relations:root < relations_threshold:hostile
 						}
+						always = no
 					}
 				}
 				add = 50
@@ -109,8 +114,9 @@ concord_ai_voting.1 = {
 			modifier = {
 				trigger = {
 					and = {
-						has_journal_entry = je_korean_resolution
+						#has_journal_entry = je_korean_resolution
 						is_authoritarian = yes
+						always = no
 					}
 				}
 				add = 60
@@ -119,7 +125,8 @@ concord_ai_voting.1 = {
 			modifier = {
 				trigger = {
 					and = {
-						has_journal_entry = je_clos1
+						#has_journal_entry = je_clos1
+						always = no
 					}
 				}
 				add = 55
@@ -128,10 +135,11 @@ concord_ai_voting.1 = {
 			modifier = {
 				trigger = {
 					and = {
-						has_journal_entry = je_intervention
+						#has_journal_entry = je_intervention
 						scope:asking_concord_intervention_country = {
 							relations:root < relations_threshold:neutral
 						}
+						always = no
 					}
 				}
 				add = 20
@@ -139,10 +147,11 @@ concord_ai_voting.1 = {
 			modifier = {
 				trigger = {
 					and = {
-						has_journal_entry = je_intervention
+						#has_journal_entry = je_intervention
 						scope:asking_concord_intervention_country = {
 							relations:root < relations_threshold:cold
 						}
+						always = no
 					}
 				}
 				add = 30
@@ -150,10 +159,11 @@ concord_ai_voting.1 = {
 			modifier = {
 				trigger = {
 					and = {
-						has_journal_entry = je_intervention
+						#has_journal_entry = je_intervention
 						scope:asking_concord_intervention_country = {
 							relations:root < relations_threshold:hostile
 						}
+						always = no
 					}
 				}
 				add = 50
@@ -161,10 +171,11 @@ concord_ai_voting.1 = {
 			modifier = {
 				trigger = {
 					and = {
-						has_journal_entry = je_intervention
+						#has_journal_entry = je_intervention
 						scope:concord_intervention_enemy_country = {
 							relations:root > relations_threshold:neutral
 						}
+						always = no
 					}
 				}
 				add = 50
@@ -178,7 +189,8 @@ concord_ai_voting.1 = {
 			base = 5
 			modifier = {
 				trigger = {
-					has_journal_entry = je_korean_resolution
+					#has_journal_entry = je_korean_resolution
+					always = no
 				}
 				add = 30
 			}
@@ -186,8 +198,9 @@ concord_ai_voting.1 = {
 			modifier = {
 				trigger = {
 					and = {
-						has_journal_entry = je_declaration_of_human_rights
+						#has_journal_entry = je_declaration_of_human_rights
 						is_authoritarian = yes
+						always = no
 					}
 				}
 				add = 50
@@ -196,12 +209,13 @@ concord_ai_voting.1 = {
 			modifier = {
 				trigger = {
 					and = {
-						has_journal_entry = je_intervention
+						#has_journal_entry = je_intervention
 						not = {
 							ruler = {
 								has_trait = paranoid
 							}
 						}
+						always = no
 					}
 				}
 				add = 50
@@ -209,10 +223,11 @@ concord_ai_voting.1 = {
 			modifier = {
 				trigger = {
 					and = {
-						has_journal_entry = je_intervention
+						#has_journal_entry = je_intervention
 						scope:asking_concord_intervention_country = {
 							relations:root = relations_threshold:neutral
 						}
+						always = no
 					}
 				}
 				add = 50
@@ -220,10 +235,11 @@ concord_ai_voting.1 = {
 			modifier = {
 				trigger = {
 					and = {
-						has_journal_entry = je_intervention
+						#has_journal_entry = je_intervention
 						scope:concord_intervention_enemy_country = {
 							relations:root > relations_threshold:neutral
 						}
+						always = no
 					}
 				}
 				add = 50

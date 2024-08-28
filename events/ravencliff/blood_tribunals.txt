@@ -147,7 +147,9 @@ blood_tribunal.4 = {
         capital = {
             every_scope_pop = {
                 limit = {
-                    has_pop_religion = rel:dummy_religion
+                    this = { 
+					    religion = rel:dummy_religion 
+				    }
                 }
                 change_pop_religion = {
                     target = root.state_religion
@@ -206,8 +208,9 @@ blood_tribunal.5 = {
         capital = {
             every_scope_pop = {
                 limit = {
-                    has_pop_religion = rel:dummy_religion
-                }
+                    this = { 
+					    religion = rel:dummy_religion 
+				    }
                 change_pop_religion = {
                     target = root.state_religion
                     value = 1.0
@@ -267,8 +270,9 @@ blood_tribunal.6 = {
         scope:tithe_recipient = {
             every_scope_pop = {
                 limit = {
-                    has_pop_religion = rel:dummy_religion
-                }
+                    this = { 
+					    religion = rel:dummy_religion 
+				    }
                 change_pop_religion = {
                     target = root.state_religion
                     value = 1.0
@@ -327,8 +331,9 @@ blood_tribunal.7 = {
         capital = {
             every_scope_pop = {
                 limit = {
-                    has_pop_religion = rel:dummy_religion
-                }
+                    this = { 
+					    religion = rel:dummy_religion 
+				    }
                 change_pop_religion = {
                     target = root.state_religion
                     value = 1.0

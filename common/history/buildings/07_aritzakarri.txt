@@ -86,20 +86,20 @@
                 add_ownership={ 
                     building={ 
                         type="building_adventuring_guild"
-                        country="c:KCH"
+                        country="c:HIZ"
                         levels=1
                         region="STATE_OLARRA"
                    }
                 }
 				reserves=1
-				activate_production_methods={ "pm_fishing_trawlers" "pm_unrefrigerated" }
+				activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
 			}
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:POA"
+						country="c:HIZ"
 						levels=1
 						region="STATE_HIRUMENDI"
 				   }
@@ -136,19 +136,6 @@
 
   s:STATE_KHANBA = {
 		region_state:KCH={
-            create_building={
-				building="building_fishing_wharf"
-                add_ownership={ 
-                    building={ 
-                        type="building_adventuring_guild"
-                        country="c:KCH"
-                        levels=1
-                        region="STATE_BATOHAIN"
-                   }
-                }
-				reserves=1
-				activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
-			}
 			create_building={
 				building="building_barracks"
 				level=1
@@ -796,7 +783,7 @@
   s:STATE_OLABEGI = {
 	region_state:PIU={
             create_building={
-			building="building_fishing_wharf"
+				building="building_fishing_wharf_glowfish"
                 add_ownership={ 
                     building={ 
                         type="building_adventuring_guild"
@@ -805,9 +792,9 @@
                         region="STATE_OLABEGI"
                    }
                 }
-			reserves=1
-			activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
-		}
+				reserves=1
+				activate_production_methods={ "pm_fishing_trawlers" "pm_unrefrigerated" }
+			}
 			create_building={
 			building="building_wheat_farm"
 				add_ownership={ 
