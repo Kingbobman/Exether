@@ -395,19 +395,6 @@
 				activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts"  }
 			}
 			create_building={
-				building="building_vineyard_plantation"
-					add_ownership={ 
-						building={ 
-							type="building_manor_house"
-							country="c:ZIX"
-							levels=1
-							region="STATE_KORCAJA"
-					   }
-					}
-				reserves=1
-				activate_production_methods={ "default_building_vineyard_plantation"  }
-			}
-			create_building={
 				building="building_dye_plantation"
 					add_ownership={ 
 						building={ 
@@ -1183,19 +1170,6 @@
 				activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts"  }
 			}
 			create_building={
-				building="building_wheat_farm"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:ZIX"
-						levels=2
-						region="STATE_FIERANA"
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled"  }
-			}
-			create_building={
 				building="building_coal_mine"
 					add_ownership={ 
 						building={ 
@@ -1835,19 +1809,6 @@
 			activate_production_methods={ "pm_dye_workshops" "pm_no_luxury_clothes" "pm_traditional_looms" }
 		}
 		create_building={
-			building="building_cotton_plantation"
-			add_ownership={ 
-				building={ 
-					type="building_financial_district"
-					country="c:KVG"
-					levels=5
-					region="STATE_KERCOVA"
-			   }
-			}
-			reserves=1
-			activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts"  }
-		}
-		create_building={
 			building="building_dye_plantation"
 				add_ownership={ 
 					building={ 
@@ -2046,12 +2007,6 @@
   }
   s:STATE_KRUSHEVA = {
 	region_state:EKA={
-		create_building={
-			building="building_airship_dock"
-			level=2
-			reserves=1
-			activate_production_methods={ "pm_anchorage_airship" }
-		  }
 			create_building={
 			building="building_iron_mine"
 				add_ownership={ 
@@ -7833,7 +7788,7 @@
                    }
                 }
 			reserves=1
-			activate_production_methods={ "pm_forest_glass" "pm_manual_glassblowing" "pm_no_ceramics" }
+			activate_production_methods={ "pm_forest_glass" "pm_manual_glassblowing" }
 		}
 		create_building={
 			building="building_tooling_workshops"
@@ -9016,7 +8971,7 @@
 				   }
 				}
 			reserves=1
-			activate_production_methods={ "pm_forest_glass" "pm_manual_glassblowing" "pm_no_ceramics" }
+			activate_production_methods={ "pm_forest_glass" "pm_manual_glassblowing" }
 		}
 		create_building={
 			building="building_paper_mills"
@@ -9541,7 +9496,7 @@
                    }
                 }
 			reserves=1
-			activate_production_methods={ "pm_leaded_glass" "pm_manual_glassblowing" "pm_no_ceramics" }
+			activate_production_methods={ "pm_leaded_glass" "pm_manual_glassblowing"}
 		}
 		create_building={
 			building="building_maize_farm"

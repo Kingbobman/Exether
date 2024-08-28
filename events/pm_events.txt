@@ -177,14 +177,7 @@ pm_events.3 = {
 	trigger = {
 		any_scope_state = {
 			OR = {
-				is_production_method_active = {
-					building_type = building_food_industry
-					production_method = pm_pot_stills
-				}
-				is_production_method_active = {
-					building_type = building_food_industry
-					production_method = pm_patent_stills
-				}
+					has_building = building_distillery
 			}
 			NOR = {
 				has_modifier = liquor_production_ban
@@ -203,13 +196,7 @@ pm_events.3 = {
 		random_scope_state = {
 			limit = {
 				OR = {
-					is_production_method_active = {
-						building_type = building_food_industry
-						production_method = pm_pot_stills
-					}
-					is_production_method_active = {
-						building_type = building_food_industry
-						production_method = pm_patent_stills
+					has_building = building_distillery
 					}
 				}
 				NOR = {
