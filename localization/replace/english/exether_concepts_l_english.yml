@@ -1,6 +1,6 @@
 ﻿l_english:
   concept_magic_reserves: "Arcana"
-  concept_magic_reserves_desc: "@magic! Arcana is a [concept_capacity] used for enacting magical civics."
+  concept_magic_reserves_desc: "@magic! Arcana is a [concept_capacity] used to effect internal change to your [concept_country], like playing [concept_arcana_cards] or changing [Concept('concept_production_method', '$concept_production_methods$')]. It represents the mystical and supernatural influence a nation wields. It encapsulates the nation's ability to harness and spread magical knowledge, the populace's awareness and acceptance of the mystical arts, and the overall magical capacity and prowess of the country."
 
   concept_adventurer_coverage_added: "[GetBuildingType('building_adventuring_guild').GetName]"
 
@@ -20,7 +20,7 @@
   concept_alestair_marktaros_desc: "Alestair Marktaros was the first wizard since the [concept_divine_banishment]. He transformed the desert kingdom of [concept_khus] into a [concept_great_power] and taught a new generation of mages. His legacy remains controversial, as his actions indirectly led to the [concept_nightfall]."
 
   concept_nightfall: "Nightfall"
-  concept_nightfall_desc: "During a great war between [concept_khus] and [concept_dumonia], desperate disciples of [concept_alestair_marktaros] performed a reckless ritual to gain more power from the ley lines of Zalaron, and inadvertently cracked open the [concept_veil] above Khus. This resulted in a devastating cataclysm across Zalaron, and unleashed magical storms across all of [concept_exether], which obscured the sun for five days and five nights."
+  concept_nightfall_desc: "During a great war between [concept_khus] and [concept_dumonia], desperate disciples of [concept_alestair_marktaros] performed a reckless arcana to gain more power from the ley lines of Zalaron, and inadvertently cracked open the [concept_veil] above Khus. This resulted in a devastating cataclysm across Zalaron, and unleashed magical storms across all of [concept_exether], which obscured the sun for five days and five nights."
 
   concept_age_of_stars: "Age of Stars"
   concept_age_of_stars_desc: "The Age of Stars is the present era. It began when Alestair Marktaros of Khus rediscovered [concept_magic], and his disciples brought about the [concept_nightfall]. It is named for the [concept_stars] in the night sky, which have only appeared recently as a result of the damage done to the [concept_veil]."
@@ -77,15 +77,16 @@
   concept_coalescence_desc: "The most widely accepted tale of the world's origins is the myth of the Coalescence. The myth holds that the [concept_outer_planes] formed out of the primordial chaos between the Negative and Positive planes at the beginning of time. Soon, the cosmic winds of magic breathed life into the outer planes, giving birth to the first gods who were inextricably bound to their realms and soon sparked the [concept_creation_of_exether]."
 
   concept_astral_calendar: "Astral Calendar"
-  concept_astral_calendar_desc: "The Astral Calendar is the most common interpretation of the movement of the [Concept('concept_constellation','constellations')] across the night sky. Spread across the known world during the height of the [Concept('concept_dumonia','Dumonian Empire')], this calendar categorizes the constellations into twelve star signs: [concept_storm_giant], [concept_hive], [concept_sphinx], [concept_golem], [concept_unicorn], [concept_fey], [concept_phoenix], [concept_djinn], [concept_horror], [concept_kraken], [concept_fiend] and [concept_angel]."
+  concept_astral_calendar_desc: "The Astral Calendar is the most common interpretation of the movement of the [Concept('concept_constellation','constellations')] across the night sky. Spread across the known world during the height of the [Concept('concept_dumonia','Dumonian Empire')], this calendar categorizes the constellations into twelve star signs: [concept_gryphon], [concept_justice], [concept_sphinx], [concept_golem], [concept_unicorn], [concept_fey], [concept_phoenix], [concept_djinn], [concept_horror], [concept_kraken], [concept_fiend] and [concept_angel]."
   concept_zodiac: "Zodiac"
   concept_zodiac_desc: "The Zodiac is a belt-shaped region of the universe created after the [concept_coalescence]. It consists of twelve [Concept('concept_constellation','constellations')] in a ring around the [concept_material_plane]. It is unknown if anything exists beyond the Zodiac."
   concept_constellation: "Constellation"
   concept_constellation_desc: "A constellation is collection of [concept_outer_planes] that have embody similar concepts. The constellations form a ring known as the [concept_zodiac]. On [concept_exether], they have been visible to the naked eye as [concept_stars] since the [concept_nightfall]."
-  concept_storm_giant: "Storm-Giant"
-  concept_storm_giant_desc: "The #bold Storm-Giant#! is the first astrological sign of the [concept_astral_calendar]. The Storm-Giant contains the [concept_outer_planes] of #bold Wind#! that embody freedom and the primal element of air."
-  concept_hive: "Hive"
-  concept_hive_desc: "The #bold Hive#! is the second astrological sign of the [concept_astral_calendar]. The Hive contains the [concept_outer_planes] of #bold Order#! that embody law and cooperation."
+
+  concept_gryphon: "Gryphon"
+  concept_gryphon_desc: "The #bold Gryphon#! is the first astrological sign of the [concept_astral_calendar]. The Gryphon contains the [concept_outer_planes] of #bold Wind#! that embody freedom and the primal element of air."
+  concept_justice: "Justice"
+  concept_justice_desc: "The #bold Justice#! is the second astrological sign of the [concept_astral_calendar]. The Justice contains the [concept_outer_planes] of #bold Order#! that embody law and cooperation."
   concept_sphinx: "Sphinx"
   concept_sphinx_desc: "The #bold Sphinx#! is third second astrological sign of the [concept_astral_calendar]. The Sphinx contains the [concept_outer_planes] of #bold Logic#! that embody reason and learning."
   concept_golem: "Golem"
@@ -98,16 +99,17 @@
   concept_phoenix_desc: "The #bold Phoenix#! is the seventh astrological sign of the [concept_astral_calendar]. The Phoenix contains the [concept_outer_planes] of #bold Flame#! that embody passion and and the primal element of fire."
   concept_djinn: "Djinn"
   concept_djinn_desc: "The #bold Djinn#! is the eighth astrological sign of the [concept_astral_calendar]. The Djinn contains the [concept_outer_planes] of #bold Chaos#! that embody disorder and change."
-  concept_horror: "Horror"
-  concept_horror_desc: "The #bold Horror#! is the ninth astrological sign of the [concept_astral_calendar]. The Horror contains the [concept_outer_planes] of #bold Emotion#! that embody feelings and intuition."
+  concept_siren: "Siren"
+  concept_siren_desc: "The #bold Siren#! is the ninth astrological sign of the [concept_astral_calendar]. The Siren contains the [concept_outer_planes] of #bold Emotion#! that embody feelings and intuition."
   concept_kraken: "Kraken"
   concept_kraken_desc: "The #bold Kraken#! is the tenth astrological sign of the [concept_astral_calendar]. The Kraken contains the [concept_outer_planes] of #bold Water#! that embody calmness and and the primal element of water."
   concept_fiend: "Fiend"
   concept_fiend_desc: "The #bold Fiend#! is the eleventh astrological sign of the [concept_astral_calendar]. The Fiend contains the [concept_outer_planes] of #bold Darkness#! that embody cruelty and apathy."
   concept_angel: "Angel"
   concept_angel_desc: "The #bold Angel#! is the twelfth astrological sign of the [concept_astral_calendar]. The Angel contains the [concept_outer_planes] of #bold Death#! that embody rot and decay."
-  concept_magic_ritual: "Arcane Civics"
-  concept_magic_ritual_desc: "#bold Arcane Civics#! are enacted using your country's [concept_magic_reserves] and provide powerful benefits."
+  
+concept_arcana_cards: "Arcana Cards"
+  concept_arcana_cards_desc: "#bold Arcana Cards#! are played using your country's [concept_magic_reserves] and provide powerful benefits."
 
 
 concept_subsidiary:0 "Subsidiary"
