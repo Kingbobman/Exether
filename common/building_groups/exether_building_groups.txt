@@ -1,4 +1,4 @@
-# parent_group = parent_group_key		If set, this group is considered a child of the specified group. Default no parent.
+﻿# parent_group = parent_group_key		If set, this group is considered a child of the specified group. Default no parent.
 # always_possible = yes/no				If yes, building types in this group are always permitted regardless of resources in state. Default no.
 # economy_of_scale = yes/no				If yes, any non-subsistence buildings in or underneath this group will get an economy of scale throughput modifier for each level > 1. Default no.
 # is_subsistence = yes/no				If yes, buildings of types in this group are considered subsistence buildings that follow special rules. Default no.
@@ -436,7 +436,7 @@ bg_cactus_farm = {
 
 	default_building = building_cactus_farm
 
-	cash_reserves_max + 25000
+	cash_reserves_max = 25000
 
 }
 
@@ -460,6 +460,8 @@ bg_spider_ranch = {
 bg_mushroom_logging = {
 	parent_group = bg_logging
 	default_building = building_mushroom_logging
+
+	cash_reserves_max = 25000
 }
 
 
