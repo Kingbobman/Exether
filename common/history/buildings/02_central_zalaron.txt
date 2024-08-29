@@ -1,4 +1,4 @@
-﻿BUILDINGS = {
+BUILDINGS = {
 
 	s:STATE_FUNÉTUN = {
 		region_state:OPA={
@@ -121,7 +121,6 @@
 	}
 		
 	s:STATE_URSHALSÍ = {
-		region_state:OPA={
 			region_state:OPA={
 				create_building={
 					building="building_airship_dock"
@@ -222,7 +221,7 @@
 			}
 		}
 	}
-		#Wesswul
+	
 	s:STATE_WÉSSWÚL = {
 		region_state:OPA={
 			create_building={
@@ -295,7 +294,6 @@
 		
 	s:STATE_KÁLMBIQÚIS = {
 		region_state:OPA={
-			region_state:OPA={
 				create_building={
 					building="building_airship_dock"
 					level=2
@@ -446,8 +444,8 @@
 			}
 		}
 	}
-}
-		
+
+	
 	s:STATE_SITYU_CÍN = {
 		region_state:OPA={
 			create_building={
@@ -3346,7 +3344,7 @@
 	}
 		#This stuff seems to be nationalised intentionally so I am not touching it
 	s:STATE_LILLESO = {
-	region_state:MNN={
+		region_state:MNN={
 		create_building = {
 				building="building_government_administration"
 				level=4
@@ -3494,21 +3492,21 @@
 				reserves=1
 				activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
 			}
-				create_building={
-					building="building_logging_camp"
-					add_ownership={ 
-						building={ 
-							type="building_wizard_tower"
-							country="c:MNN"
-							levels=2
-							region="STATE_KLIPPEBJERG"
+			create_building={
+				building="building_logging_camp"
+				add_ownership={ 
+					building={ 
+						type="building_wizard_tower"
+						country="c:MNN"
+						levels=2
+						region="STATE_KLIPPEBJERG"
 					}
-					}
-					reserves=1
-					activate_production_methods={ "pm_saw_mills" "pm_no_equipment" "pm_road_carts" "pm_hardwood" }
 				}
+				reserves=1
+				activate_production_methods={ "pm_saw_mills" "pm_no_equipment" "pm_road_carts" "pm_hardwood" }
+			}
+		}
 	}
-}
 
 	s:STATE_HOJLAND = {
 		region_state:MNN = {
@@ -3620,12 +3618,12 @@
 				reserves=1
 				activate_production_methods={ "pm_simple_forestry" "pm_no_equipment" "pm_road_carts" "pm_hardwood" }
 			}
+		}
 	}
-}
 		
 		
 	s:STATE_JOURNEYEND = {
-	region_state:FLU={
+		region_state:FLU={
 			create_building={
 				building="building_government_administration"
 				level=10
@@ -6048,7 +6046,7 @@
 					}
 				reserves=1
 				activate_production_methods={ "pm_manowar_leviathan_ships" }
-		}
+			}
 			create_building={
 				building="building_cotton_plantation"
 				add_ownership={ 
@@ -6974,7 +6972,7 @@
 	}
 		
 	s:STATE_FELICGRUNDO = {
-		region_state:VAI={
+		region_state:WHX={
 			create_building={
 				building="building_government_administration"
 				level=3
@@ -6998,7 +6996,7 @@
 					add_ownership={ 
 						building={ 
 							type="building_financial_district"
-							country="c:VAI"
+							country="c:WHX"
 							levels=1
 							region="STATE_FELICGRUNDO"
 					   }
@@ -7011,7 +7009,7 @@
 					add_ownership={ 
 						building={ 
 							type="building_financial_district"
-							country="c:VAI"
+							country="c:WHX"
 							levels=1
 							region="STATE_FELICGRUNDO"
 					   }
@@ -7024,7 +7022,7 @@
                 add_ownership={ 
                     building={ 
                         type="building_financial_district"
-                        country="c:VAI"
+                        country="c:WHX"
                         levels=1
                         region="STATE_FELICGRUNDO"
                    }
@@ -7050,7 +7048,7 @@
                 add_ownership={ 
                     building={ 
                         type="building_financial_district"
-                        country="c:VAI"
+                        country="c:WHX"
                         levels=2
                         region="STATE_FELICGRUNDO"
                    }
@@ -7063,7 +7061,7 @@
                 add_ownership={ 
                     building={ 
                         type="building_adventuring_guild"
-                        country="c:VAI"
+                        country="c:WHX"
                         levels=13
                         region="STATE_FELICGRUNDO"
                    }
@@ -7076,7 +7074,7 @@
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:VAI"
+						country="c:WHX"
 						levels=3
 						region="STATE_FELICGRUNDO"
 				   }
@@ -8997,7 +8995,7 @@
 	}
 		
 	s:STATE_FARASHIL = {
-	region_state:SET={
+		region_state:SET={
 		create_building={
 			building="building_government_administration"
 			level=3
@@ -9390,7 +9388,7 @@
 	}
 		
 	s:STATE_INTOKI = {
-	region_state:FLU={
+		region_state:FLU={
 		create_building={
 				building="building_government_administration"
 				level=2
@@ -9753,7 +9751,7 @@
 		
 
 	s:STATE_KUNCHI = {
-	region_state:FLU={
+		region_state:FLU={
 			create_building={
 				building="building_wheat_farm"
 				add_ownership={ 
@@ -9794,8 +9792,5 @@
 			activate_production_methods={ "pm_saw_mills" "pm_no_equipment" "pm_road_carts" "pm_increased_hardwood" }
 		}
 	}
-		
-	s:STATE_SANGARI = {
-
-	}
+}
 }
