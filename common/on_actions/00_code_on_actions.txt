@@ -2250,6 +2250,17 @@ build_soulwrought = {
 
                 }
             }
+			if = {
+				limit = {
+					NOT = {
+						has_variable = soulwrought_assemble_count
+					}
+				}
+				set_variable = {
+					name = soulwrought_assemble_count
+					value = 0
+				}
+			}
 			change_variable = {
                 name = soulwrought_assemble_count
                 add = modifier:state_soulwrought_assembled_add
