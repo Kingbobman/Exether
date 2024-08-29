@@ -120,7 +120,7 @@ thaumacores = {
 	texture = "gfx/interface/icons/goods_icons/gizmo.dds" #Replace icon later
 	cost = 100
 	category = industrial
-	
+	convoy_cost_multiplier = 1.25
 	prestige_factor = 10
 	traded_quantity = 4
 }
@@ -136,13 +136,22 @@ gizmos = {
 	convoy_cost_multiplier = 1.5
 }
 
-#skycruisers = {
-	texture = "gfx/interface/icons/goods_icons/steamers.dds"
-	cost = 80
-	category = industrial
-
-	obsession_chance = 0.6
-	prestige_factor = 6
-	traded_quantity = 3
-	convoy_cost_multiplier = 0.25
+intangibles = {
+	texture = "gfx/interface/icons/goods_icons/gold.dds"
+	cost = 100
+	category = luxury
+	tradeable = no
+	fixed_price = yes
+	prestige_factor = 3
 }
+
+# #skycruisers = {
+# 	texture = "gfx/interface/icons/goods_icons/steamers.dds"
+# 	cost = 80
+# 	category = industrial
+
+# 	obsession_chance = 0.6
+# 	prestige_factor = 6
+# 	traded_quantity = 3
+# 	convoy_cost_multiplier = 0.25
+# }

@@ -320,7 +320,9 @@ on_monthly_pulse_state = {
 	random_events = {
 		10 = goldrush.5
 	}
-
+	on_actions = {
+		build_soulwrought
+	}
 }
 on_half_yearly_pulse_state = {}
 on_yearly_pulse_state = {
@@ -330,7 +332,6 @@ on_yearly_pulse_state = {
 		10 = oil_rush.4
 	}
 	on_actions = {
-		build_soulwrought
 	}
 }
 on_five_year_pulse_state = {}
@@ -2239,7 +2240,7 @@ build_soulwrought = {
         if = {
             limit = {
                 any_scope_building = {
-                    is_building_type = building_thaumacore_foundry
+                    is_building_type = building_soulwrought_assembly_plant
 					OR = {
 						has_active_production_method = pm_modern_soulwrought
 						has_active_production_method = pm_clockwork_soulwrought
@@ -2249,10 +2250,23 @@ build_soulwrought = {
 
                 }
             }
-            create_pop = {
-                pop_type = laborers
-                culture  = soulwrought
-                size     = modifier:state_pops_assembled_add
+			change_variable = {
+                name = soulwrought_assemble_count
+                add = modifier:state_soulwrought_assembled_add
+            }
+			if = {
+                limit = {
+                    var:soulwrought_assemble_count > 10000
+                }
+                create_pop = {
+                    pop_type = laborers
+                    culture  = soulwrought
+                    size     = var:soulwrought_assemble_count
+                }
+                change_variable = {
+                    name = soulwrought_assemble_count
+                    value = 0
+                }
             }
 
         }
