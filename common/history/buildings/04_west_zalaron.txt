@@ -3550,6 +3550,19 @@
 				reserves=1
 				activate_production_methods={ "default_building_coffee_plantation" "pm_road_carts"  }
 			}
+            create_building={
+                building="building_fishing_wharf"
+                add_ownership={
+                    building={
+                        type="building_adventuring_guild"
+                        country="c:VLT"
+                        levels=2
+                        region="STATE_KILIMAMAI"
+                   }
+                }
+                reserves=1
+                activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
+            }
 		}
 
   }
@@ -3643,7 +3656,7 @@
 					building={ 
 						type="building_manor_house"
 						country="c:SNB"
-						levels=1
+						levels=5
 						region="STATE_SWAHAILUK"
 				   }
 				}
@@ -4569,6 +4582,19 @@
 }
   s:STATE_KILIMAKAZI = {
 		region_state:SNB={
+			create_building={
+				building="building_tooling_workshops"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:SNB"
+                        levels=1
+                        region="STATE_KILIMAMAI"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_pig_iron" "pm_automation_disabled" }
+			}
             create_building={
 				building="building_logging_camp"
                 add_ownership={ 
@@ -4703,91 +4729,6 @@
 				activate_production_methods={ "pm_soil_enriching_farming" "pm_no_secondary" "pm_tools_disabled" }
 			}
 		}
-  }
-  s:STATE_NOLOGO_RULL = {
-	region_state:COC={
-			create_building={
-			building="building_rice_farm"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:SNB"
-						levels=1
-						region="STATE_THASAMAKI"
-				   }
-				}
-			reserves=1
-			activate_production_methods={ "pm_simple_farming_building_rice_farm" "pm_no_secondary" "pm_tools_disabled"  }
-		}			
-			create_building={
-			building="building_sugar_plantation"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:XOC"
-						levels=1
-						region="STATE_ODADRUEL"
-				   }
-				}
-			reserves=1
-			activate_production_methods={ "default_building_sugar_plantation" "pm_road_carts"  }
-		}
-            create_building={
-			building="building_food_industry"
-                add_ownership={ 
-                    building={ 
-                        type="building_financial_district"
-                        country="c:ZIX"
-                        levels=1
-                        region="STATE_DURRESIA"
-                   }
-                }
-			reserves=1
-			activate_production_methods={ "pm_disabled_canning" "pm_bakery" "pm_manual_dough_processing"}
-		}
-		create_building={
-			building="building_port"
-			level=1
-			reserves=1
-			activate_production_methods={ "pm_anchorage" }
-		}
-	}
-  }
-  s:STATE_NOLOGO_VELPH = {
-	region_state:COC={
-            create_building={
-			building="building_logging_camp"
-                add_ownership={ 
-                    building={ 
-                        type="building_financial_district"
-                        country="c:SNB"
-                        levels=2
-                        region="STATE_THASAMAKI"
-                   }
-                }
-			reserves=1
-			activate_production_methods={ "pm_simple_forestry" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
-		}			
-			create_building={
-			building="building_tea_plantation"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:EKA"
-						levels=2
-						region="STATE_LISIJA"
-				   }
-				}
-			reserves=1
-			activate_production_methods={ "default_building_tea_plantation" "pm_road_carts"  }
-		}
-		create_building={
-			building="building_port"
-			level=1
-			reserves=1
-			activate_production_methods={ "pm_anchorage" }
-		}
-	}
   }
   s:STATE_NAVAKAI = {
 	region_state:GPK = {
@@ -4973,6 +4914,12 @@
 						levels=3
 						region="STATE_KEEDZAI"
 				   }
+                   building={
+                        type="building_manor_house"
+                        country="c:SNB"
+                        levels=2
+                        region="STATE_KEEDZAI"
+                   }
 				}
 				reserves=1
 				activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }

@@ -25,8 +25,12 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_MAWIMBIMAJI
-				service_type = conscript
-				count = 15
+				count = 20
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_PWANIQILIMA
+				count = 20
 			}
 
 			save_scope_as = pro_army
@@ -45,6 +49,7 @@
 			save_scope_as = pro_general
 		}
 		scope:pro_general = {
+			set_commander_rank = 2
 			transfer_to_formation = scope:pro_army
 		}
 	}
