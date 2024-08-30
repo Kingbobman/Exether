@@ -37,9 +37,9 @@
 
 
 		else ={
-		set_ig_trait = ig_trait:ig_trait_be_fruitful_and_multiply
-		set_ig_trait = ig_trait:ig_trait_divine_right
-		set_ig_trait = ig_trait:ig_trait_pious_fiction
+			set_ig_trait = ig_trait:ig_trait_be_fruitful_and_multiply
+			set_ig_trait = ig_trait:ig_trait_divine_right
+			set_ig_trait = ig_trait:ig_trait_pious_fiction
 			}
 
 		}
@@ -66,7 +66,7 @@
 				owner = {
 					religion = {
 						AND = {
-							has_discrimination_trait = nature_domain
+							has_discrimination_trait = earth_domain
 							NOT = {
 								has_discrimination_trait = chivalrous_heritage
 							}
@@ -78,6 +78,9 @@
 				set_interest_group_name = ig_druids
 				remove_ideology = ideology_pious
 				add_ideology = ideology_pious_druidic
+			}
+			owner = {
+				effect_has_flavored_interest_groups = yes 
 			}
 		}
 
@@ -123,7 +126,7 @@
 			limit = {
 				owner = {
 					OR = {
-						religion = rel:orc_mother
+						religion = rel:mothers_embrace
 						any_primary_culture = {
 							has_discrimination_trait = southern_elf
 						}
@@ -144,6 +147,9 @@
 			ig:ig_devout = {
 				remove_ideology = ideology_patriarchal
 				add_ideology = ideology_matriarchal
+			}
+			owner = {
+				effect_has_flavored_interest_groups = yes 
 			}
 		}
 		

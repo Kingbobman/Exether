@@ -1,4 +1,4 @@
-##
+﻿##
 # Sorting center for artifacts. Converts relics into trinkets.
 #
 building_artifactory = {
@@ -16,18 +16,15 @@ building_artifactory = {
     required_construction = construction_cost_high
 
     production_method_groups = {
-        exether.pmg.artifactory_identification
-        exether.pmg.artifactory_management
-        exether.pmg.artifactory_automation
+        pmg_artifactory_identification
+        pmg_artifactory_management
+        pmg_artifactory_automation
     }
 
     possible = {
-        error_check = {
-            severity = fail
-            this = {
-                owner = {
-                    NOT = { has_law = law_type:law_industry_banned }
-                }
+        this = {
+            owner = {
+                NOT = { has_law = law_type:law_industry_banned }
             }
         }
     }
