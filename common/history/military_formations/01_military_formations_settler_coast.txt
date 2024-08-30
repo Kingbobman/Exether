@@ -743,7 +743,6 @@
 		scope:leogen = {
 			transfer_to_formation = scope:leoarmy
 		}
-	}
 
 	c:CER ?= {
 		create_military_formation = {
@@ -794,7 +793,92 @@
 		}  
 		
 
-        create_character = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_ceraun
+			name = plaguewood_garrison
+
+			
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_ORCBANE_PASS
+				count = 10
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_lancers
+				state_region = s:STATE_ORCBANE_PASS
+				count = 4
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_ORCBANE_PASS
+				count = 2
+			}
+			
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_PENDYM_GWYN
+				count = 10
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_lancers
+				state_region = s:STATE_PENDYM_GWYN
+				count = 1
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_PENDYM_GWYN
+				count = 1
+			}
+
+			
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_PEARFIELDS
+				count = 5
+			}
+
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_lancers
+				state_region = s:STATE_ORCBANE_PASS_2
+				count = 2
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_ORCBANE_PASS_2
+				count = 1
+			}
+
+			
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_FERNSEA
+				count = 7
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_lancers
+				state_region = s:STATE_FERNSEA
+				count = 4
+			}
+
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_FERNSEA
+				count = 1
+			}
+
+			save_scope_as = plaguewood_bulwark
+		}
+
+                create_character = {
 			is_general = yes
 			first_name = Endri
 			last_name = Millersson
@@ -817,7 +901,7 @@
 			first_name = Heino
 			last_name = Angelus
 			historical = yes
-			hq = sr:region_lagoon_coast
+			hq = sr:region_ceraun
 			commander_rank = commander_rank_3
 			age = 62
 			traits = {
