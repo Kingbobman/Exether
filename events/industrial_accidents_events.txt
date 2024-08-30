@@ -312,12 +312,7 @@ industrial_accident_events.4 = {
 
 	trigger = {
 		any_scope_state = {
-			has_building = building_food_industry
-			NOT = {
-				is_production_method_active = {
-					building_type = building_food_industry
-					production_method = pm_disabled_distillery
-				}
+			has_building = building_distillery = {
 			}
 		}
 		NOT = {
@@ -327,22 +322,16 @@ industrial_accident_events.4 = {
 	immediate = {
 		random_scope_state = {
 			limit = {
-				has_building = building_food_industry
-				NOT = {
-					is_production_method_active = {
-						building_type = building_food_industry
-						production_method = pm_disabled_distillery
-					}
-				}
+				has_building = building_distillery = {
 			}
 			save_scope_as = molasses_flood_state
 		}
-		set_variable = {
-			name = great_molasses_flood
-			value = yes
+			set_variable = {
+				name = great_molasses_flood
+				value = yes
+			}
 		}
 	}
-
 	option = {
 		name = industrial_accident_events.4.a
 		default_option=yes

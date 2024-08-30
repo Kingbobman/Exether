@@ -1,4 +1,4 @@
-##
+﻿##
 # Sorting center for artifacts. Converts relics into trinkets.
 #
 building_artifactory = {
@@ -22,12 +22,9 @@ building_artifactory = {
     }
 
     possible = {
-        error_check = {
-            severity = fail
-            this = {
-                owner = {
-                    NOT = { has_law = law_type:law_industry_banned }
-                }
+        this = {
+            owner = {
+                NOT = { has_law = law_type:law_industry_banned }
             }
         }
     }

@@ -1,4 +1,4 @@
-MILITARY_FORMATIONS = {
+﻿MILITARY_FORMATIONS = {
 
 	c:OPA ?= {
 		create_military_formation = {
@@ -399,33 +399,7 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:vai_army_1
 		}
 		
-		create_military_formation = {
-			type = army
-			hq_region = sr:region_varinath
 
-			name = "Felicgrundan Army"
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_FELICGRUNDO
-				count = 15
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_mobile_artillery
-				state_region = s:STATE_FELICGRUNDO
-				count = 5
-			}
-
-			save_scope_as = vai_army_2
-		}
-		create_character = {
-			is_general = yes
-			hq = region_varinath
-			save_scope_as = vai_general_2
-		}
-		scope:vai_general_2 = {
-			transfer_to_formation = scope:vai_army_2
-		}
 
 		create_military_formation = {
 			type = army
@@ -575,11 +549,6 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_INSULECO
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_TRANKVILEJO
 				count = 1
 			}
 			combat_unit = {
@@ -1713,7 +1682,7 @@ MILITARY_FORMATIONS = {
 			hq = region_shaking_fields
 			save_scope_as = fluadmiral1
 		}
-		scope:sheadmiral1 = {
+		scope:fluadmiral1 = {
 			transfer_to_formation = scope:flufleet1
 		}
 
@@ -1743,7 +1712,7 @@ MILITARY_FORMATIONS = {
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_UPPER_SUKONCO
+				state_region = s:STATE_SUKONCO_2
 				service_type = conscript
 				count = 10
 			}

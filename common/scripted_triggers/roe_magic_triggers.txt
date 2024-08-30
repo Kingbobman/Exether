@@ -1,4 +1,4 @@
-has_magic_gryphon_traits = {
+﻿has_magic_gryphon_traits = {
     custom_tooltip = {
         text = magic_gryphon_traits_tt
         religion = {
@@ -314,6 +314,12 @@ cast_arcana_id_dragon_is_valid = {
     has_magic_dragon_traits = yes
     NOT = { 
         has_modifier = country_arcana_card_cooldown
+    }
+    root = {
+        custom_tooltip = {
+            text = has_low_veil_damage_tt
+            root.veil_damage <= 1000
+        }
     }
     root = {
         custom_tooltip = {

@@ -102,9 +102,33 @@ building_dwarf_tunnels = {
 			state_region = s:STATE_BAZKA
 			state_region = s:STATE_ALQADIM
 		}
-
 	}
 	
+	required_construction = construction_cost_monument
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+
+building_lighthouse = {
+	building_group = bg_monuments
+	texture = "gfx/interface/icons/building_icons/lighthouse.dds"
+	expandable = no
+	downsizeable = no
+	unique = yes
+	
+	production_method_groups = {
+		pmg_base_building_lighthouse
+	}
+	
+	possible = {
+		state_region = s:STATE_NGURULAN
+		s:STATE_NGURULAN = {
+			any_scope_state = {
+				has_modifier = modifier_lighthouse_site
+			}
+		}
+	}
+
 	required_construction = construction_cost_monument
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
