@@ -27,11 +27,164 @@ pirate_devil.1 = {
     option = {
         name = pirate_devil.1.b
         default_option = no
-        every_state = {
-            modify_pop = {
-                pop_type = all_pops
-                mortality_rate = 0.01
+        kill_population_percent = 0.1
+    }
+}
+
+#A buyout
+pirate_devil.2 = {
+    type = country_event
+    id = pirate_devil.2
+    title = pirate_devil.2.t
+    desc = pirate_devil.2.d
+    flavor = pirate_devil.2.f
+    popup = yes
+	event_image = {
+		video = "europenorthamerica_capitalists_meeting"
+	}
+
+    immediate = {
+        random_country = {
+            limit = {
+                country_rank = rank_value:great_power
+                relations:root > 60
             }
+            save_scope_as = target_country
+        }
+    }
+
+    option = {
+        name = pirate_devil.2.a
+        custom_tooltip = {
+            text = pirate_devil.2.b.tt
+        }
+        scope:target_country = {
+            trigger_event = {
+                id = pirate_devil.3
+                popup = yes
+                days = 2
+            }
+        }
+        add_modifier = {
+            name = selling_ourselves
+            months = 4
+        }
+    }
+
+    option = {
+        name = pirate_devil.2.b
+        custom_tooltip = {
+            text = pirate_devil.2.b.tt
+        }
+        add_modifier = {
+            name = selling_ourselves
+            days = 15
         }
     }
 }
+
+#Country considering offer
+pirate_devil.3 = {
+    type = country_event
+    id = pirate_devil.3
+    title = pirate_devil.3.t
+    desc = pirate_devil.3.d
+    flavor = pirate_devil.3.f
+    
+    event_image = {
+        video = "europenorthamerica_capitalists_meeting"
+    }
+
+    option = {
+        name = pirate_devil.3.a
+        custom_tooltip = {
+            text = pirate_devil.3.b.tt
+        }
+        FROM = {
+            trigger_event = {
+                id = pirate_devil.4
+                popup = yes
+            }
+        }
+        add_treasury = -50000
+    }
+
+    option = {
+        name = pirate_devil.3.b
+        custom_tooltip = {
+            text = pirate_devil.3.b.tt
+        }
+    }
+}
+
+#Offer accepted
+pirate_devil.4 = {
+    type = country_event
+    id = pirate_devil.4
+    title = pirate_devil.4.t
+    desc = pirate_devil.4.d
+    flavor = pirate_devil.4.f
+    event_image = {
+        video = "europenorthamerica_capitalists_meeting"
+    }
+
+    option = {
+        name = pirate_devil.4.a
+        custom_tooltip = {
+            text = pirate_devil.4.b.tt
+        }
+        add_treasury = 50000
+        FROM = {
+            create_diplomatic_pact = {
+                country = scope:target_country
+                type = protectorate
+            }
+        }
+        remove_modifier = selling_ourselves
+        add_modifier = {
+            name = sold_off
+            months = 3
+        }
+    }
+}
+
+#Offer rejected
+pirate_devil.5 = {
+    type = country_event
+    id = pirate_devil.5
+    title = pirate_devil.5.t
+    desc = pirate_devil.5.d
+    flavor = pirate_devil.5.f
+    event_image = {
+        video = "europenorthamerica_capitalists_meeting"
+    }
+
+    option = {
+        name = pirate_devil.5.a
+        custom_tooltip = {
+            text = pirate_devil.5.b.tt
+        }
+    }
+}
+
+#Finding the target
+pirate_devil.6 = {
+    type = country_event
+    id = pirate_devil.6
+    title = pirate_devil.6.t
+    desc = pirate_devil.6.d
+    flavor = pirate_devil.6.f
+    event_image = {
+        video = "europenorthamerica_capitalists_meeting"
+    }
+
+    immediate = {
+    }
+
+    option = {
+    }
+
+    option = {
+    }
+}
+

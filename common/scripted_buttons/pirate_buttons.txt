@@ -98,3 +98,49 @@ pirate_consolidation_1_button = {
         }
     }
 }
+
+pirate_buyout_button = {
+    name = "pirate_buyout_button_name"
+    desc = "pirate_buyout_button_desc"
+
+    possible = {
+        is_subject = no
+        any_country = {
+            country_rank = rank_value:great_power
+            relations:root > 60
+        }
+        prestige > 100
+        NOT = { has_modifier = selling_ourselves }
+    }
+
+    effect = {
+        trigger_event = {
+            id = pirate_devil.2
+            popup = yes
+        }
+    }
+}
+
+pirate_pass_devil_button = {
+    name = "pirate_pass_devil_button_name"
+    desc = "pirate_pass_devil_button_desc"
+
+    visible = {
+        is_subject = yes
+    }
+
+    possible = {
+        is_subject = yes
+        NOT = { has_modifier = selling_ourselves }
+        NOT = { has_modifier = sold_off }
+        scaled_gold_reserves >= 0.3
+    }
+
+    effect = {
+        trigger_event = {
+            id = pirate_devil.6
+            popup = yes
+        }
+    }
+}
+

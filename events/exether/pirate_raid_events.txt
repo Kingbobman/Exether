@@ -26,6 +26,7 @@ pirate_raid.1 = {
                     any_scope_state = {
                         check_is_coastal = yes
                     }
+                    NOT = { has_subject_relation_with = ROOT }
                     NOT = { this = root }
                     NOT = { this = c:COV }
                     NOT = { is_country_type = decentralized }
@@ -50,6 +51,7 @@ pirate_raid.1 = {
                     any_scope_state = {
                         check_is_coastal = yes
                     }
+                    NOT = { has_subject_relation_with = ROOT }
                     NOT = { this = root }
                     NOT = { this = c:COV }
                     NOT = { this = scope:raid_random1 }
@@ -70,7 +72,7 @@ pirate_raid.1 = {
         
         if = {
             limit = {
-                c:SSC = {
+                c:COV = {
                     is_country_alive = yes
                     any_scope_state = {
                         check_is_coastal = yes
@@ -207,6 +209,17 @@ pirate_raid.2 = {
                 interest_group_pop_attraction_mult = 0.1
             }
         }
+        scope:raid_target = {
+            every_rival_country = {
+                root = {
+                    change_relations = {
+                        country = local_var:raid_target
+                        value = 10
+                    }
+                }
+
+            }
+        }
     }
 
     option = {
@@ -234,6 +247,17 @@ pirate_raid.2 = {
             }
             ig:ig_armed_forces = {
                 interest_group_pop_attraction_mult = 0.1
+            }
+        }
+        scope:raid_target = {
+            every_rival_country = {
+                root = {
+                    change_relations = {
+                        country = local_var:raid_target
+                        value = 10
+                    }
+                }
+
             }
         }
     }
@@ -455,6 +479,43 @@ pirate_raid.21 = {
             add_treasury = {
                 value = {
                     subtract = local_var:gold_stolen
+                }
+            }
+            add_modifier = {
+                name = pirate_raided
+                months = 6
+            }
+
+        }
+    }
+
+    option = {
+        name = pirate_raid.21.b
+        root = {
+            add_treasury = {
+                value = {
+                    subtract = local_var:gold_stolen
+                }
+            }
+            add_modifier = {
+                name = pirate_raided
+                months = 6
+            }
+            add_modifier = {
+                name = bulking_army
+                months = 6
+            }
+        }
+    }
+
+    option = {
+        name = pirate_raid.21.c
+        default_option = yes
+        root = {
+            add_treasury = {
+                value = {
+                    subtract = local_var:gold_stolen
+                    multiply = 0.9
                 }
             }
         }
