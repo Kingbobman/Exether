@@ -1,4 +1,20 @@
 ﻿DIPLOMACY = {
+	c:XOC ?= {
+		create_diplomatic_pact = {
+			country = c:COC
+			type = trade_agreement
+		}
+		create_diplomatic_pact = {
+			country = c:EOO
+			type = trade_agreement
+		}
+	}
+	c:EOO ?= {
+		create_diplomatic_pact = {
+			country = c:COC
+			type = trade_agreement
+		}
+	}
 	c:VAR ?= {
 		create_diplomatic_pact = {
 			country = c:ORO

@@ -108,16 +108,23 @@
 			type = army
 			hq_region = sr:region_lotus_isles
 
+			name = "Grand Expeditionary Force"
+
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_LHEIPH_VA
-				count = 4
+				state_region = s:STATE_NOLOGO_VELPH
+				count = 15
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_NOLOGO_RULL
+				count = 15
 			}
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_cannon_artillery
+				type = unit_type:combat_unit_type_mobile_artillery
 				state_region = s:STATE_LHEIPH_VA
-				count = 1
+				count = 15
 			}
 			save_scope_as = coc_army
 		}
@@ -125,6 +132,7 @@
 		create_character = {
 			is_general = yes
 			hq = region_lotus_isles
+			commander_rank = commander_rank_2
 			interest_group = ig_armed_forces
 			save_scope_as = coc_general
 		}
@@ -135,17 +143,19 @@
 		create_military_formation = {
 			type = fleet
 			hq_region = sr:region_lotus_isles
+
+			name = "Spearhead Fleet"
 		
 			combat_unit = {
 				type = unit_type:combat_unit_type_man_o_war
 				state_region = s:STATE_LHEIPH_VA
-				count = 2
+				count = 10
 			}
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_frigate
 				state_region = s:STATE_LHEIPH_VA
-				count = 4
+				count = 25
 			}
 			save_scope_as = coc_fleet
 		}
@@ -153,6 +163,7 @@
 		create_character = {
 			is_admiral = yes
 			hq = region_lotus_isles
+			commander_rank = commander_rank_2
 			interest_group = ig_armed_forces
 			save_scope_as = coc_admiral
 		}
@@ -164,40 +175,70 @@
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_sanbang
+			name = "Continental Garrison"
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_ODADRUEL
-				count = 3
+				count = 15
 			}
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_hussars
+				type = unit_type:combat_unit_type_mobile_artillery
 				state_region = s:STATE_ODADRUEL
-				count = 1
+				count = 5
 			}
 
-			save_scope_as = xoc_army
+			save_scope_as = xoc_army1
 		}
 
 		create_character = {
 			is_general = yes
 			hq = region_sanbang
-			interest_group = ig_landowners
-			save_scope_as = xoc_general
+			interest_group = ig_armed_forces
+			save_scope_as = xoc_general1
 		}
-		scope:xoc_general = {
-			transfer_to_formation = scope:xoc_army
+		scope:xoc_general1 = {
+			transfer_to_formation = scope:xoc_army1
+		}
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_lotus_isles
+			name = "Capital Garrison"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_BYS_CEIRDH
+				count = 5
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_BYS_LOWAE
+				count = 5
+			}
+
+			save_scope_as = xoc_army2
+		}
+		create_character = {
+			is_general = yes
+			hq = region_lotus_isles
+			interest_group = ig_armed_forces
+			save_scope_as = xoc_general2
+		}
+		scope:xoc_general2 = {
+			transfer_to_formation = scope:xoc_army2
 		}
 
 		create_military_formation = {
 			type = fleet
 			hq_region = sr:region_sanbang
+			name = "Coastal Patrol Fleet"
 		
 			combat_unit = {
 				type = unit_type:combat_unit_type_frigate
 				state_region = s:STATE_ODADRUEL
-				count = 2
+				count = 8
 			}
 			save_scope_as = xoc_fleet
 		}
@@ -212,155 +253,84 @@
 			transfer_to_formation = scope:xoc_fleet
 		}
 	}
-
-	c:IMA ?= {
+	c:LIR ?= {
 		create_military_formation = {
 			type = army
-			hq_region = sr:region_elusive_coves
+			hq_region = sr:region_fahavalo
+			
+			name = "Fahavalo Garrison"
+
 			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_MALANJAPORT
-				count = 3
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_SUISGOIL
+				count = 15
 			}
+			save_scope_as = lir_army1
+		}
+
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_fahavalo
+
+			name = "Capital Garrison"
+			
 			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_MAPACHECO
-				count = 2
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_MASC_PEIW
+				count = 5
 			}
-			save_scope_as = ima_army
+			save_scope_as = lir_army2
 		}
 
 		create_character = {
 			is_general = yes
-			hq = region_elusive_coves
-			save_scope_as = ima_general
+			hq = region_fahavalo
+			save_scope_as = lir_general1
+		}
+		scope:lir_general1 = {
+			transfer_to_formation = scope:lir_army1
+		}
+		create_character = {
+			is_general = yes
+			hq = region_fahavalo
+			save_scope_as = lir_general2
+		}
+		scope:lir_general2 = {
+			transfer_to_formation = scope:lir_army2
 		}
 
-		scope:ima_general = {
-			transfer_to_formation = scope:ima_army
-		}
-
-		create_military_formation = {
-			type = fleet
-			hq_region = sr:region_elusive_coves
-			name = Silver_Serpent_Fleet
-			combat_unit = {
-				type = unit_type:combat_unit_type_man_o_war
-				state_region = s:STATE_MALANJAPORT
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_frigate
-				state_region = s:STATE_MALANJAPORT
-				count = 7
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_frigate
-				state_region = s:STATE_MAPACHECO
-				count = 5
-			}
-						combat_unit = {
-				type = unit_type:combat_unit_type_man_o_war
-				state_region = s:STATE_MAPACHECO
-				count = 1
-			}
-		}
 	}
+	C:DEV ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_fahavalo
+			name = "Devil's Dragoons"
 
-	c:CCO ?= {
-		create_military_formation = {
-			type = army
-			hq_region = sr:region_elusive_coves
 			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_ARGYSTSIK
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_VAROTSOA
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_IVONDRO
 				count = 5
 			}
 			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_ARTHERA
-				count = 2
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_FIANARIVO
+				count = 15
 			}
-			save_scope_as = cco_army
+			save_scope_as = dev_army1
 		}
 		create_character = {
 			is_general = yes
-			hq = region_elusive_coves
-			save_scope_as = cco_general
+			hq = region_fahavalo
+			interest_group = ig_armed_forces
+			save_scope_as = dev_gen1
 		}
-		scope:cco_general = {
-			transfer_to_formation = scope:cco_army
-		}
-		create_military_formation = {
-			type = fleet
-			hq_region = sr:region_elusive_coves
-			name = Crimson_Corsairs_Fleet
-			combat_unit = {
-				type = unit_type:combat_unit_type_man_o_war
-				state_region = s:STATE_ARGYSTSIK
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_frigate
-				state_region = s:STATE_ARGYSTSIK
-				count = 4
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_frigate
-				state_region = s:STATE_ARTHERA
-				count = 5
-			}			
-			combat_unit = {
-				type = unit_type:combat_unit_type_frigate
-				state_region = s:STATE_COCOHAYAT
-				count = 3
-			}
-		}
-	}
-	
-	c:BTR ?= {
-		create_military_formation = {
-			type = army
-			hq_region = sr:region_elusive_coves
-			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_GRAEA
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_JERMENION
-				count = 3
-			}
-			save_scope_as = btr_army
-		}
-		create_character = {
-			is_general = yes
-			hq = region_elusive_coves
-			save_scope_as = btr_general
-		}
-		scope:btr_general = {
-			transfer_to_formation = scope:btr_army
-		}
-		create_military_formation = {
-			type = fleet
-			hq_region = sr:region_elusive_coves
-			name = Bonetide_Raiders_Fleet
-			combat_unit = {
-				type = unit_type:combat_unit_type_man_o_war
-				state_region = s:STATE_GRAEA
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_frigate
-				state_region = s:STATE_GRAEA
-				count = 8
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_frigate
-				state_region = s:STATE_JERMENION
-				count = 4
-			}
+		scope:dev_gen1 = {
+			transfer_to_formation = scope:dev_army1
 		}
 	}
 }
