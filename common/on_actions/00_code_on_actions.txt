@@ -377,17 +377,17 @@ on_battle_lost = {}
 
 # Root = Building
 on_building_built = {
-	# effect = {  #look man I sobered up and this was in the file I don't remember writing it but I'm afraid to remove it
-	# 	    if = {
-	# 	        limit = {
-	# 	            is_building_type = building_thaumacore_foundry
-	# 	        }
-	# 	        set_variable = {
-	# 	            name = soulwrought_assemble_count
-	# 	            value = modifier:state_soulwrought_assembled_add
-	# 	        }
-	# 		}		
-	# }
+	effect = {  
+		    if = {
+		        limit = {
+		            is_building_type = building_soulwrought_assembly_plant
+		        }
+		        set_variable = {
+		            name = soulwrought_assemble_count
+		            value = modifier:state_soulwrought_assembled_add
+		        }
+			}		
+	}
 }
 
 # Root = Building
@@ -2249,36 +2249,11 @@ build_soulwrought = {
 
                 }
             }
-			if = {
-				limit = {
-					NOT = {
-						has_variable = soulwrought_assemble_count
-					}
-				}
-				set_variable = {
-					name = soulwrought_assemble_count
-					value = 0
-				}
+			create_pop = {
+				pop_type = laborers
+				culture  = soulwrought
+				size     = 20000
 			}
-
-			change_variable = {
-                name = soulwrought_assemble_count
-                add = modifier:state_soulwrought_assembled_add
-            }
-			if = {
-                limit = {
-                    var:soulwrought_assemble_count > 10000
-                }
-                create_pop = {
-                    pop_type = laborers
-                    culture  = soulwrought
-                    size     = var:soulwrought_assemble_count
-                }
-                change_variable = {
-                    name = soulwrought_assemble_count
-                    value = 0
-                }
-            }
 
         }
     }
