@@ -112,10 +112,7 @@ building_wishstone_reefs = {
 	}
 
 	possible = {
-		error_check = {
-			severity = fail
-			is_sea_adjacent = yes
-		}
+		#is_sea_adjacent = yes #removed to give more possiblitys to devs, Copying building_fishing_wharf
 	}
 	ownership_type = self
 }
@@ -139,13 +136,8 @@ building_blubber_plants = {
 	required_construction = construction_cost_very_high
 
 	possible = {
-		error_check = {
-			severity = fail
-			this = {
-				owner = { 
-					NOT = { has_law = law_type:law_industry_banned } 
-				}
-			}
+		owner = { 
+			NOT = { has_law = law_type:law_industry_banned } 
 		}
 	}
 }
@@ -164,10 +156,7 @@ building_squid_squad = {
 	}
 		
 	possible = {
-		error_check = {
-			severity = fail
-			is_sea_adjacent = yes
-		}
+		#is_sea_adjacent = yes #removed to give more possiblitys to devs, Copying building_fishing_wharf
 	}
 
 	ownership_type = self
@@ -188,10 +177,7 @@ building_seasnake_wharf = {
 	}
 	
 	possible = {
-		error_check = {
-			severity = fail
-			is_sea_adjacent = yes
-		}
+		is_sea_adjacent = yes
 	}
 
 	ownership_type = self
@@ -212,10 +198,7 @@ building_krakeneer_outpost = {
 	}
 	
 	possible = {
-		error_check = {
-			severity = fail
-			is_sea_adjacent = yes
-		}
+		is_sea_adjacent = yes
 	}
 
 	ownership_type = self
@@ -235,10 +218,7 @@ building_medium_sea_monster_outpost = { #sharks?  hydro-hydras??
 	}
 	
 	possible = {
-		error_check = {
-			severity = fail
-			is_sea_adjacent = yes
-		}
+		is_sea_adjacent = yes
 	}
 
 	ownership_type = self
@@ -258,10 +238,7 @@ building_leviathan_outpost = {
 	}
 	
 	possible = {
-		error_check = {
-			severity = fail
-			is_sea_adjacent = yes
-		}
+		is_sea_adjacent = yes
 	}
 
 	ownership_type = self
