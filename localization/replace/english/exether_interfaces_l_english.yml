@@ -372,6 +372,7 @@ DISPEL_RITUAL: "Discard"
 ARCANAS: "Arcana"
 
 has_reserves_tt: "[SCOPE.GetRootScope.GetCountry.GetName] does not have [Scope.ScriptValue('arcana_cost')|0v] @magic! #bold [concept_magic_reserves]"
+has_low_veil_damage_tt: "[SCOPE.GetRootScope.GetCountry.GetName] does not have more than [Scope.ScriptValue('dragon_threshold')|0v] @veilneg! [concept_veil_impact]\n"
 
 VEIL_INTEGRITY_TITLE: "#bold #o Veil Integrity#!"
 VEIL_INTEGRITY_STATUS: "[AddLocalizationIf(GreaterThan_int32(FixedPointToInt(AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')), '(int32)50'), 'VEIL_INTEGRITY_STATUS_STRENGTHENED')][AddLocalizationIf(EqualTo_int32(FixedPointToInt(AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')), '(int32)50'), 'VEIL_INTEGRITY_STATUS_BALANCED')][AddLocalizationIf(LessThan_int32(FixedPointToInt(AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')), '(int32)50'), 'VEIL_INTEGRITY_STATUS_WEAKENED')]"

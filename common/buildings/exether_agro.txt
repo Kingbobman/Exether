@@ -73,3 +73,41 @@ building_beekeeping = {
 	ownership_type = self
 	required_construction = construction_cost_low
 }
+building_snail_herder_ranch = {
+	building_group = bg_snail_herders
+	texture = "gfx/interface/icons/building_icons/cattle_ranch.dds"
+
+	city_type = farm
+	levels_per_mesh = 5
+
+	unlocking_technologies = {
+		enclosure
+	}
+	production_method_groups = {
+		pmg_base_building_snail_herder_ranch
+		pmg_snail_ranch
+		pmg_fencing
+		pmg_refrigeration_building_livestock_ranch
+	}
+	required_construction = construction_cost_low
+
+	terrain_manipulator = pasture
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+}
+
+building_shrimp_farm = {
+	building_group = bg_shrimp_farms
+	texture = "gfx/interface/icons/building_icons/fishing_wharf.dds"
+	city_type = farm
+	required_construction = construction_cost_low
+
+	production_method_groups = {
+		pmg_base_building_shrimp_farms
+		pmg_refrigeration_building_fishing_wharf
+	}
+	
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_fishing.dds"
+}

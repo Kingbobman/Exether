@@ -1,4 +1,4 @@
-BUILDINGS = {
+﻿BUILDINGS = {
 	s:STATE_CARTHI = {
 		region_state:DIS={
 			create_building={
@@ -25,7 +25,7 @@ BUILDINGS = {
 				   }
 				}
 				  reserves=1
-				  activate_production_methods={ "pm_manowar_leviathan_ships" "pm_manual_harvesting" }
+				  activate_production_methods={ "pm_shore_leviathan_hunting" "pm_manual_harvesting" }
 			}
 			create_building={
 				building="building_potion_distillery"
@@ -81,7 +81,7 @@ BUILDINGS = {
 			   }
 			}
 			reserves=1
-			activate_production_methods={ "pm_manowar_leviathan_ships" "pm_manual_harvesting" }
+			activate_production_methods={ "pm_shore_leviathan_hunting" "pm_manual_harvesting" }
 		}
 		
 	}
@@ -463,17 +463,17 @@ BUILDINGS = {
 				activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts"  }
 			}
             create_building={
-				building="building_fishing_wharf"
-                add_ownership={ 
-                    building={ 
-                        type="building_adventuring_guild"
-                        country="c:DIS"
-                        levels=1
-                        region="STATE_CARTHALIA"
-                   }
-                }
+				building="building_fishing_wharf_glowfish"
+					add_ownership={ 
+						building={ 
+							type="building_adventuring_guild"
+							country="c:DIS"
+							levels=1
+							region="STATE_CARTHALIA"
+						}
+					}
 				reserves=1
-				activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
+				activate_production_methods={ "pm_fishing_trawlers" "pm_unrefrigerated" }
 			}
 			create_building={
 				building="building_port"
@@ -790,7 +790,7 @@ BUILDINGS = {
 				   }
 				}
 				reserves=1
-				activate_production_methods={ "pm_simple_accumulation_dragon_ruins" "pm_no_trinkets"  }
+				activate_production_methods={ "pm_simple_accumulation_dragon_ruins" }
 			}
 			create_building={
 				building="building_shipyards"
@@ -1249,7 +1249,7 @@ BUILDINGS = {
 				   }
 				}
 				reserves=1
-				activate_production_methods={ "pm_simple_accumulation_dragon_ruins" "pm_no_trinkets"  }
+				activate_production_methods={ "pm_simple_accumulation_dragon_ruins"  }
 			}
 			create_building={
 				building="building_port"
@@ -1650,7 +1650,7 @@ BUILDINGS = {
 				   }
 				}
 				reserves=1
-				activate_production_methods={ "pm_simple_accumulation_dragon_ruins" "pm_no_trinkets"  }
+				activate_production_methods={ "pm_simple_accumulation_dragon_ruins"  }
 			}
 		}
 	}
@@ -1662,7 +1662,7 @@ BUILDINGS = {
                     building={ 
                         type="building_financial_district"
                         country="c:DIS"
-                        levels=3
+                        levels=2
                         region="STATE_KLYPYRA"
                    }
                 }
@@ -1829,7 +1829,7 @@ BUILDINGS = {
 				   }
 				}
 				reserves=1
-				activate_production_methods={ "pm_simple_accumulation_dragon_ruins" "pm_no_trinkets"  }
+				activate_production_methods={ "pm_simple_accumulation_dragon_ruins"  }
 			}
 			create_building={
 				building="building_tobacco_plantation"
@@ -1885,7 +1885,7 @@ BUILDINGS = {
 				   }
 				}
 				reserves=1
-				activate_production_methods={ "pm_simple_accumulation_dragon_ruins" "pm_no_trinkets"  }
+				activate_production_methods={ "pm_simple_accumulation_dragon_ruins"  }
 			}
 		}
 	}
@@ -1947,7 +1947,7 @@ BUILDINGS = {
 				   }
 				}
 				reserves=1
-				activate_production_methods={ "pm_simple_accumulation_dragon_ruins" "pm_no_trinkets"  }
+				activate_production_methods={ "pm_simple_accumulation_dragon_ruins"  }
 			}
 			create_building={
 				building="building_logging_camp"
@@ -2061,7 +2061,7 @@ BUILDINGS = {
 				   }
 				}
 				reserves=1
-				activate_production_methods={ "pm_simple_accumulation_dragon_ruins" "pm_no_trinkets"  }
+				activate_production_methods={ "pm_simple_accumulation_dragon_ruins"   }
 			}
 		}
 	}
@@ -2091,7 +2091,7 @@ BUILDINGS = {
 				   }
 				}
 				reserves=1
-				activate_production_methods={ "pm_simple_accumulation_dragon_ruins" "pm_no_trinkets"  }
+				activate_production_methods={ "pm_simple_accumulation_dragon_ruins"   }
 			}
             create_building={
 				building="building_logging_camp"
@@ -2188,7 +2188,7 @@ BUILDINGS = {
 				   }
 				}
 				  reserves=1
-				  activate_production_methods={ "pm_manowar_leviathan_ships" "pm_manual_harvesting" }
+				  activate_production_methods={ "pm_shore_leviathan_hunting" "pm_manual_harvesting" }
 			}
             create_building={
 				building="building_textile_mills"
@@ -2546,19 +2546,19 @@ BUILDINGS = {
 				reserves=1
 				activate_production_methods={ "pm_anchorage" }
 			}
-            create_building={
-				building="building_whaling_station"
-                add_ownership={ 
+			create_building={
+				building="building_leviathan_outpost"
+				 add_ownership={ 
                     building={ 
                         type="building_adventuring_guild"
-                        country="c:DIS"
+                        country="c:ORO"
                         levels=2
-                        region="STATE_CARTHI"
-                   }
-                }
+						region="STATE_SILENTWISP"
+					}
+				}
 				reserves=1
-			}
-
+				activate_production_methods={ "pm_shore_leviathan_hunting" "pm_manual_harvesting" }
+      		}
 		}
 	}
 	s:STATE_RAHKIS = {

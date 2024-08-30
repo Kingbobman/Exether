@@ -1,4 +1,4 @@
-interest_group_ig_mages_pol_str_mult = {
+﻿interest_group_ig_mages_pol_str_mult = {
 	decimals=0
 	color=neutral
 	percent = yes
@@ -41,7 +41,9 @@ building_goods_output_mult = {
 		ai_value=0
 	}
 }
-building_gizmo_workshop_throughput_add = {
+
+building_group_bg_magic_manufacturing_throughput_add = {
+	decimals = 1
 	color = good
 	percent = yes
 	game_data={
@@ -186,6 +188,15 @@ country_archmages_pol_str_mult={
 	decimals=1
 	color=neutral
 	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+
+country_archmages_voting_power_add={
+	decimals=1
+	color=neutral
 	game_data={
 		ai_value=0
 	}
@@ -406,7 +417,7 @@ building_group_bg_military_throughput_add={
 }
 
 building_group_bg_rice_farms_leechgardens_throughput_add={
-	decimals=0
+	decimals=1
 	color=good
 	percent=yes
 	game_data={
@@ -415,7 +426,7 @@ building_group_bg_rice_farms_leechgardens_throughput_add={
 }
 
 building_group_bg_wishstone_mining_throughput_add={
-	decimals=0
+	decimals=1
 	color=good
 	percent=yes
 	game_data={
@@ -424,7 +435,7 @@ building_group_bg_wishstone_mining_throughput_add={
 }
 
 building_leviathan_outpost_throughput_add={
-	decimals=0
+	decimals=1
 	color=good
 	percent=yes
 	game_data={
@@ -504,15 +515,6 @@ building_group_bg_trade_tax_mult = {
 	}
 }
 
-state_wizards_standard_of_living_add = {
-	color=good
-	percent = no
-	decimals=0
-	game_data={
-		ai_value=0
-	}
-}
-
 state_archmages_standard_of_living_add = {
 	color=good
 	percent = no
@@ -522,7 +524,23 @@ state_archmages_standard_of_living_add = {
 	}
 }
 
+state_wizards_standard_of_living_add = {
+	color=good
+	percent = no
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
 
+state_artificers_standard_of_living_add = {
+	color=good
+	percent = no
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
 
 unit_combat_unit_group_cavalry_offense_mult = { #look bro I have no idea if this works
 	decimals=0
@@ -608,6 +626,15 @@ unit_combat_unit_type_cuirassiers_defense_mult = {
 
 unit_combat_unit_type_lancers_defense_mult = {
 	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_group_bg_hunting_throughput_add = {
+	decimals=1
 	color=good
 	percent=yes
 	game_data={
