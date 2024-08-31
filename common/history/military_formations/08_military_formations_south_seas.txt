@@ -333,4 +333,92 @@
 			transfer_to_formation = scope:dev_army1
 		}
 	}
+	C:AZI ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_west_kailando
+			name = "Amanzi National Guard"
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_MALANDA
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_GONJOLA
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_BEXAMBA
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_AMALUMA
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_UMAGAMA
+				count = 4
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_XABELO
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_BEXAMBA
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_GONJOLA
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_MALANDA
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_AMALUMA
+				count = 3
+			}
+			save_scope_as = azi_army1
+		}
+		create_character = {
+			is_general = yes
+			hq = region_west_kailando
+			interest_group = ig_armed_forces
+			save_scope_as = azi_gen1
+		}
+		scope:azi_gen1 = {
+			transfer_to_formation = scope:azi_army1
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_west_kailando
+			name = "Amanzi Fleet"
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_MALANDA
+				count = 4
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_GONJOLA
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_BEXAMBA
+				count = 2
+			}
+		}
+	}
 }
