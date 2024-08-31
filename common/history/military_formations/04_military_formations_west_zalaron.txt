@@ -742,7 +742,7 @@
 				count = 7
 			}
 
-			save_scope_as = tle_army3
+			save_scope_as = tle_army6
 		}
 
 		create_character = {
@@ -908,7 +908,7 @@
 	c:VLT ?= {
 		create_military_formation = {
 			type = army
-			hq_region = sr:region_kengurudal
+			hq_region = sr:region_embervein_arroyo
 
 			name = "Viletok Horde"
 
@@ -929,7 +929,7 @@
 
 		create_character = {
 			is_general = yes
-			hq = sr:region_kengurudal
+			hq = sr:region_embervein_arroyo
 			save_scope_as = vltgen
 		}
 		
@@ -1705,83 +1705,6 @@
 		transfer_to_formation = scope:kvgarmy2
 	}
 
-c:MGR ?= {
-	create_military_formation = {
-		type = army
-		hq_region = sr:region_gavkhan
-
-		name = "Swamp Sirens"
-
-		combat_unit = {
-			type = unit_type:combat_unit_type_line_infantry
-			state_region = s:STATE_NYZHNE_SENIA
-			count = 15
-		}
-
-		combat_unit = {
-			type = unit_type:combat_unit_type_line_infantry
-			state_region = s:STATE_TROPOJA
-			count = 10
-		}
-
-		combat_unit = {
-			type = unit_type:combat_unit_type_dragoons
-			state_region = s:STATE_HUTSULANE
-			count = 15
-		}
-
-		save_scope_as = mgrarmy
-	}
-
-	create_character = {
-		is_general = yes
-		commander_rank = commander_rank_2
-		hq = sr:region_gavkhan
-		save_scope_as = mgrgen
-	}
-	
-	scope:mgrgen = {
-		transfer_to_formation = scope:mgrarmy
-	}
-
-	create_military_formation = {
-		type = army
-		hq_region = sr:region_gavkhan
-
-		name = "Marsh Stalkers"
-
-		combat_unit = {
-			type = unit_type:combat_unit_type_line_infantry
-			state_region = s:STATE_SHKUMBINIA
-			count = 15
-		}
-
-		combat_unit = {
-			type = unit_type:combat_unit_type_line_infantry
-			state_region = s:STATE_BREZHKE
-			count = 10
-		}
-
-		combat_unit = {
-			type = unit_type:combat_unit_type_cuirassiers
-			state_region = s:STATE_BREZHKE
-			count = 20
-		}
-
-		save_scope_as = mgrarmy2
-	}
-
-	create_character = {
-		is_general = yes
-		commander_rank = commander_rank_2
-		hq = sr:region_gavkhan
-		save_scope_as = mgrgen2
-	}
-	
-	scope:mgrgen2 = {
-		transfer_to_formation = scope:mgrarmy2
-	}
-}
 c:DKO ?= {
 	create_military_formation = {
 		type = army
