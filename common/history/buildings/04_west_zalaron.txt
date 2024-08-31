@@ -3936,21 +3936,21 @@
 				reserves=1
 				activate_production_methods={ "pm_basic_port" }
 			}			
+			create_building={
+				building="building_fishing_wharf"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:SNB"
+						levels=2
+						region="STATE_SWAHATHAI"
+				}
+				}
+				reserves=1
+				activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
+			}
 		}
-        create_building={
-            building="building_fishing_wharf"
-            add_ownership={
-                building={
-                    type="building_financial_district"
-                    country="c:SNB"
-                    levels=2
-                    region="STATE_SWAHATHAI"
-               }
-            }
-            reserves=1
-            activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
-        }
-  }
+  	}
   s:STATE_MDLEMNO_KETHIN = {
 		region_state:FMJ={
 			create_building={
