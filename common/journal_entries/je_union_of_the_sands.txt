@@ -215,6 +215,25 @@ je_union_of_the_sands = {
 
 	}
 
+	on_fail = {
+		c:DRO ?= {
+			if = {
+				limit = {
+					has_modifier = union_of_the_sands_junior_partner
+				}
+				remove_modifier = union_of_the_sands_junior_partner
+			}
+		}
+		c:VOZ ?= {
+			if = {
+				limit = {
+					has_modifier = union_of_the_sands_junior_partner
+				}
+				remove_modifier = union_of_the_sands_junior_partner
+			}
+		}
+	}
+
 
 	should_be_pinned_by_default = yes
 	
