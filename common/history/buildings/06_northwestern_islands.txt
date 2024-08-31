@@ -483,29 +483,6 @@
 			}
 		}
 	}
-	s:STATE_SABRATHOS = {
-		region_state:DIS={
-            create_building={
-				building="building_fishing_wharf"
-                add_ownership={ 
-                    building={ 
-                        type="building_adventuring_guild"
-                        country="c:DIS"
-                        levels=1
-                        region="STATE_SABRATHOS"
-                   }
-                }
-				reserves=1
-				activate_production_methods={ "pm_fishing_trawlers" "pm_unrefrigerated" }
-			}
-			create_building={
-				building="building_port"
-				level=1
-				reserves=1
-				activate_production_methods={ "pm_anchorage" }
-			}
-		}
-	}
 	s:STATE_MALYBA = {
 		region_state:IMR={
             create_building={
@@ -991,7 +968,7 @@
                     building={ 
                         type="building_adventuring_guild"
                         country="c:IAL"
-                        levels=2
+                        levels=3
                         region="STATE_RUSARYA"
                    }
                 }
@@ -1019,52 +996,6 @@
 			}
 		}
 	}
-	s:STATE_EBRUS = {
-		region_state:DIS={
-            create_building={
-				building="building_fishing_wharf"
-                add_ownership={ 
-                    building={ 
-                        type="building_adventuring_guild"
-                        country="c:DIS"
-                        levels=1
-                        region="STATE_EBRUS"
-                   }
-                }
-				reserves=1
-				activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
-			}
-			create_building={
-				building="building_port"
-				level=1
-				reserves=1
-				activate_production_methods={ "pm_basic_port" }
-			}
-		}
-	}
-	s:STATE_ACRAS = {
-		region_state:DIS={
-            create_building={
-				building="building_fishing_wharf"
-                add_ownership={ 
-                    building={ 
-                        type="building_adventuring_guild"
-                        country="c:DIS"
-                        levels=1
-                        region="STATE_ACRAS"
-                   }
-                }
-				reserves=1
-				activate_production_methods={ "pm_unrefrigerated" "pm_fishing_trawlers" }
-			}
-			create_building={
-				building="building_port"
-				level=1
-				reserves=1
-				activate_production_methods={ "pm_basic_port" }
-			}
-		}
-	}
 	s:STATE_BYSSYRA = {
 		region_state:MVI={
 			create_building={
@@ -1080,7 +1011,7 @@
 						type="building_manor_house"
 						country="c:DIS"
 						levels=1
-						region="STATE_EBRUS"
+						region="STATE_THASPIA"
 				   }
 				}
 				reserves=1
@@ -1362,7 +1293,7 @@
                     building={ 
                         type="building_adventuring_guild"
                         country="c:DIS"
-                        levels=2
+                        levels=4
                         region="STATE_THASPIA"
                    }
                 }
