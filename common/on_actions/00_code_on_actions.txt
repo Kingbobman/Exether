@@ -320,7 +320,9 @@ on_monthly_pulse_state = {
 	random_events = {
 		10 = goldrush.5
 	}
-
+	on_actions = {
+		build_soulwrought
+	}
 }
 on_half_yearly_pulse_state = {}
 on_yearly_pulse_state = {
@@ -375,6 +377,17 @@ on_battle_lost = {}
 
 # Root = Building
 on_building_built = {
+	effect = { 
+		    if = {
+		        limit = {
+		            is_building_type = building_soulwrought_assembly_plant
+		        }
+		        set_variable = {
+		            name = soulwrought_assemble_count
+		            value = modifier:state_soulwrought_assembled_add
+		        }
+			}		
+	}
 }
 
 # Root = Building
@@ -2220,6 +2233,58 @@ on_power_bloc_struggle_started = {
 			set_variable = achievement_im_the_captain_now_challanger_var
 		}
 	}
+}
+
+build_soulwrought = {
+    effect = {
+        if = {
+            limit = {
+                any_scope_building = {
+                    is_building_type = building_soulwrought_assembly_plant
+                }
+            }
+
+			if = {
+				limit = {
+					NOT = {
+						has_variable = soulwrought_assemble_count
+					}
+				}
+				set_variable = {
+					name = soulwrought_assemble_count
+					value = 0
+				}
+			}
+
+			set_variable = {
+                name = assembly
+                value = modifier:state_soulwrought_assembled_add
+            }
+
+			change_variable = {
+                name = soulwrought_assemble_count
+                add = var:assembly
+            }
+			
+			if = {
+                limit = {
+                    var:soulwrought_assemble_count > 10000
+                }
+                create_pop = {
+                    pop_type = laborers
+                    culture  = soulwrought
+                    size     = 40000
+                }
+                change_variable = {
+					name = soulwrought_assemble_count
+					subtract = 10000
+				}
+            }
+
+			remove_variable = assembly
+
+        }
+    }
 }
 
 # This on-action is triggered every time a Power Bloc's Power Struggle concludes (after the changes in leadership have been made).
