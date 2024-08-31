@@ -1,0 +1,80 @@
+arcana_psionic_admin_create = {
+    every_scope_state = {
+        if = {
+            limit = {
+                any_scope_building = {
+                    is_building_type = building_government_administration
+                }
+            }
+            random_scope_building = {
+                limit = {
+                    is_building_type = building_government_administration
+                }
+
+                save_scope_as = origin
+                
+                level = {
+                    save_scope_as = amount_to_add
+                }
+            }
+
+            add_building_level_spam = {
+                BUILDING = "building_psi_corps"
+            }
+
+            scope:origin = {
+                activate_correct_psionic_pms = yes
+            }
+
+            deactivate_building = {
+                building = building_government_administration
+            }
+
+            remove_building = building_government_administration
+
+        }
+    }
+}
+
+arcana_psionic_remove_admin = {
+    every_scope_state = {
+        if = {
+            limit = {
+                any_scope_building = {
+                    is_building_type = building_psi_corps
+                }
+            }
+
+            random_scope_building = {
+                limit = {
+                    is_building_type = building_psi_corps
+                }
+
+                save_scope_as = origin
+                
+                level = {
+                    save_scope_as = amount_to_add
+                }
+            }
+
+            add_building_level_spam = {
+                BUILDING = "building_government_administration"
+            }
+
+            activate_building = {
+                building = building_government_administration
+            }
+
+            scope:origin = {
+                activate_correct_government_pms = yes
+            }
+
+            deactivate_building = {
+                building = building_psi_corps
+            }
+
+            remove_building = building_psi_corps
+
+        }
+    }
+}

@@ -632,10 +632,15 @@ dispel_arcana_djinn_5 = {
 # SIREN
 dispel_arcana_siren_1 = {
     remove_modifier = country_arcana_siren_1
+    deactivate_law = law_type:law_applied_telekinesis
     remove_cost = yes
 }
 dispel_arcana_siren_2 = {
     remove_modifier = country_arcana_siren_2
+    custom_tooltip = {
+        text = dispel_arcana_siren_2_tt
+        arcana_psionic_remove_admin = yes
+    }
     remove_cost = yes
 }
 dispel_arcana_siren_3 = {
@@ -644,10 +649,14 @@ dispel_arcana_siren_3 = {
 }
 dispel_arcana_siren_4 = {
     remove_modifier = country_arcana_siren_4
+    custom_tooltip = {
+        text = dispel_arcana_siren_4_tt
+    }
     remove_cost = yes
 }
 dispel_arcana_siren_5 = {
     remove_modifier = country_arcana_siren_5
+    
     remove_cost = yes
 }
 
@@ -937,11 +946,17 @@ arcana_siren_1 = {
     add_modifier = {
         name = country_arcana_siren_1
     }
+    activate_law = law_type:law_applied_telekinesis
 }
 arcana_siren_2 = {
     add_modifier = {
         name = country_arcana_siren_2
     }
+    custom_tooltip = {
+        text = arcana_siren_2_tt
+        arcana_psionic_admin_create = yes
+    }
+    
 }
 arcana_siren_3 = {
     add_modifier = {
@@ -951,6 +966,10 @@ arcana_siren_3 = {
 arcana_siren_4 = {
     add_modifier = {
         name = country_arcana_siren_4
+    }
+
+    custom_tooltip = {
+        text = arcana_siren_4_tt
     }
 }
 arcana_siren_5 = {

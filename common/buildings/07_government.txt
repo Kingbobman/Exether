@@ -55,6 +55,12 @@ building_government_administration = {
 
 	required_construction = construction_cost_medium
 
+	possible = {
+        owner = {
+            NOT = { has_modifier = country_arcana_siren_2 }
+        }
+    }
+
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 }
 
