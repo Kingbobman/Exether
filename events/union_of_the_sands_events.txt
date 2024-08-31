@@ -222,6 +222,18 @@
 		else = {
 			annex = c:DRO
 		}
+		every_scope_state = {
+			limit = {
+				owner = ROOT
+				state_region = {
+					OR = {
+						is_homeland = cu:aridrun
+						is_homeland = cu:vozi
+					}
+				}
+			}
+			set_state_type = incorporated
+		}
 		if = {
 			limit = {
 				country_has_primary_culture = cu:vozi
@@ -261,5 +273,18 @@
 			add_primary_culture = cu:vozi
 		}
 		change_tag = UTS
+
+		every_scope_state = {
+			limit = {
+				owner = ROOT
+				state_region = {
+					OR = {
+					is_homeland = cu:aridrun
+					is_homeland = cu:vozi
+					}
+				}
+			}
+			set_state_type = incorporated
+		}
 	}
 }
