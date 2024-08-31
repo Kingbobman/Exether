@@ -272,11 +272,6 @@
 			commander_rank = commander_rank_2
 			hq = region_ravik
 			save_scope_as = rav_general
-			on_created = {
-				set_variable = {
-					name = is_general_1
-				}				
-			}
 		}
 		
 		scope:rav_general = {
@@ -313,11 +308,6 @@
 			commander_rank = commander_rank_2
 			hq = region_ravik
 			save_scope_as = rav_general
-			on_created = {
-				set_variable = {
-					name = is_general_1
-				}				
-			}
 		}
 		
 		scope:rav_general = {
@@ -365,11 +355,6 @@
 			commander_rank = commander_rank_3
 			hq = region_ravik
 			save_scope_as = rav_general
-			on_created = {
-				set_variable = {
-					name = is_general_1
-				}				
-			}
 		}
 		
 		scope:rav_general = {
@@ -417,11 +402,6 @@
 			commander_rank = commander_rank_5
 			hq = region_ravik
 			save_scope_as = rav_general
-			on_created = {
-				set_variable = {
-					name = is_general_1
-				}				
-			}
 		}
 		
 		scope:rav_general = {
@@ -451,6 +431,11 @@
 		create_character = {
 			is_admiral = yes
 			hq = region_ravik
+			on_created = {
+				set_variable = {
+					name = is_commander_adminal
+				}				
+			}
 			save_scope_as = rav_admiral
 		}
 		
