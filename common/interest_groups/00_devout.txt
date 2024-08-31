@@ -66,7 +66,7 @@
 				owner = {
 					religion = {
 						AND = {
-							has_discrimination_trait = earth_domain
+							has_discrimination_trait = fey_domain
 							NOT = {
 								has_discrimination_trait = chivalrous_heritage
 							}
@@ -92,10 +92,11 @@
 				owner = {
 					OR = {
 						religion = {
-							has_discrimination_trait = death_domain
-						}
-						religion = {
-							has_discrimination_trait = evil_heritage
+							OR = {
+								has_discrimination_trait = angel_domain
+								has_discrimination_trait = fiend_domain
+								has_discrimination_trait = evil_heritage
+							}
 						}
 					}
 				}
@@ -110,7 +111,7 @@
 				OR = {
 					owner = {
 						religion = {
-							has_discrimination_trait = magoclast
+							has_discrimination_trait = dragon_domain
 						}
 					}
 				}
