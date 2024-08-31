@@ -153,7 +153,7 @@ ai_strategy_default = {
 			value = 10		
 		}
 		institution_magical_focus = {	
-			value = 10		
+			value = 50		
 		}			
 	}	
 	
@@ -1368,6 +1368,18 @@ ai_strategy_default = {
 			value = cached_ai_incorporated_coastal_population
 			divide = 400000 
 		}
+
+		# 1 level of naval base per 2 million coastal unincorporated population					
+		add = {
+			value = cached_ai_unincorporated_coastal_population
+			divide = 2000000 
+		}
+
+		# 1 level of naval base per 5 million population in direct overseas subjects	
+		add = {
+			value = cached_ai_overseas_subject_population
+			divide = 5000000 
+		}	
 
 		max = 100 # No more than 100 from population		
 

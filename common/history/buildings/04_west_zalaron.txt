@@ -180,7 +180,7 @@
 			activate_production_methods={ "pm_anchorage_airship" }
 		  }
 		create_building={
-			building="building_cloud_collectors"
+			building="building_cloudsilver_mine"
 			add_ownership={ 
 			  building={ 
 				type="building_financial_district"
@@ -190,7 +190,6 @@
 			  }
 			}
 			reserves=1
-			activate_production_methods={ "pm_nets_building_cloud_collector" "pm_no_steam_automation" "pm_road_carts" }
 		}
 		create_building={
 			building="building_shipyards"
@@ -394,19 +393,6 @@
 					}
 				reserves=1
 				activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts"  }
-			}
-			create_building={
-				building="building_vineyard_plantation"
-					add_ownership={ 
-						building={ 
-							type="building_manor_house"
-							country="c:ZIX"
-							levels=1
-							region="STATE_KORCAJA"
-					   }
-					}
-				reserves=1
-				activate_production_methods={ "default_building_vineyard_plantation"  }
 			}
 			create_building={
 				building="building_dye_plantation"
@@ -803,10 +789,9 @@
   s:STATE_ELBASHTIA = {
 		region_state:TUF={
 			create_building={
-				building="building_cloud_collectors"
+				building="building_cloudsilver_mine"
 				level=1
 				reserves=1
-				activate_production_methods={ "pm_nets_building_cloud_collector" "pm_no_steam_automation" "pm_road_carts" }
 			}
 			create_building={
 				building="building_airship_dock"
@@ -1183,19 +1168,6 @@
 				}
 				reserves=1
 				activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts"  }
-			}
-			create_building={
-				building="building_wheat_farm"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:ZIX"
-						levels=2
-						region="STATE_FIERANA"
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled"  }
 			}
 			create_building={
 				building="building_coal_mine"
@@ -1837,19 +1809,6 @@
 			activate_production_methods={ "pm_dye_workshops" "pm_no_luxury_clothes" "pm_traditional_looms" }
 		}
 		create_building={
-			building="building_cotton_plantation"
-			add_ownership={ 
-				building={ 
-					type="building_financial_district"
-					country="c:KVG"
-					levels=5
-					region="STATE_KERCOVA"
-			   }
-			}
-			reserves=1
-			activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts"  }
-		}
-		create_building={
 			building="building_dye_plantation"
 				add_ownership={ 
 					building={ 
@@ -2048,12 +2007,6 @@
   }
   s:STATE_KRUSHEVA = {
 	region_state:EKA={
-		create_building={
-			building="building_airship_dock"
-			level=2
-			reserves=1
-			activate_production_methods={ "pm_anchorage_airship" }
-		  }
 			create_building={
 			building="building_iron_mine"
 				add_ownership={ 
@@ -2725,6 +2678,19 @@
 				   }
 				}
 			reserves=1
+			activate_production_methods={ "pm_open_air_stockyards" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated"  }
+		}
+			create_building={
+			building="building_tobacco_plantation"
+				add_ownership={ 
+					building={ 
+						type="building_manor_house"
+						country="c:MGR"
+						levels=1
+						region="STATE_TROPOJA"
+				   }
+				}
+			reserves=1
 			activate_production_methods={ "pm_butchering_tools" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated"  }
 		}
 			create_building={
@@ -3046,7 +3012,7 @@
 						country="c:LGZ"
 						levels=1
 						region="STATE_KURBULL"
-				   }
+                    }
 				}
 			reserves=1
 			activate_production_methods={  "pm_simple_farming" "pm_citrus_orchards" "pm_tools_disabled" }
@@ -3342,38 +3308,77 @@
 				activate_production_methods={ "pm_horizontal_drawer_cabinets"  }
 			}
 			create_building={
-				building="building_university"
-				level=2
-				reserves=1
-				activate_production_methods={ "pm_secular_academia" }
-			}
-			create_building={
 				building="building_construction_sector"
 				level=1
 				reserves=1
-				activate_production_methods={ "pm_wooden_buildings" }
+				activate_production_methods={ "pm_iron_frame_buildings" }
+			}	
+			create_building={
+				building="building_port"
+				level=3
+				reserves=1
+				activate_production_methods={ "pm_basic_port" }
+			}
+			create_building={
+				building="building_tooling_workshops"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:SNB"
+							levels=3
+							region="STATE_KILIMAMAI"
+					   }
+					}
+				reserves=1
+				activate_production_methods={ "pm_pig_iron" "pm_automation_disabled" }
+			}
+			create_building={
+				building="building_iron_mine"
+				add_ownership={ 
+					building={ 
+						type="building_financial_district"
+						country="c:SNB"
+						levels=4
+						region="STATE_KILIMAMAI"
+				   }
+				}
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+			create_building={
+				building="building_dye_plantation"
+					add_ownership={ 
+						building={ 
+							type="building_manor_house"
+							country="c:SNB"
+							levels=1
+							region="STATE_KILIMAMAI"
+					   }
+					}
+				reserves=1
+				activate_production_methods={ "default_building_dye_plantation" "pm_road_carts"  }
 			}	
             create_building={
 				building="building_furniture_manufacturies"
                 add_ownership={ 
                     building={ 
                         type="building_financial_district"
-                        country="c:KGM"
-                        levels=1
-                        region="STATE_SHKODERIA"
+                        country="c:SNB"
+                        levels=6
+                        region="STATE_KILIMAMAI"
                    }
                 }
 				reserves=1
-				activate_production_methods={ "pm_handcrafted_furniture" "pm_no_luxuries" "pm_automation_disabled" }
+				activate_production_methods={ "pm_lathe" "pm_no_luxuries" "pm_automation_disabled" }
 			}
             create_building={
 				building="building_paper_mills"
                 add_ownership={ 
                     building={ 
                         type="building_financial_district"
-                        country="c:KGM"
+                        country="c:SNB"
                         levels=2
-                        region="STATE_SHKODERIA"
+                        region="STATE_KILIMAMAI"
                    }
                 }
 				reserves=1
@@ -3384,127 +3389,125 @@
                 add_ownership={ 
                     building={ 
                         type="building_adventuring_guild"
-                        country="c:VLT"
+                        country="c:SNB"
                         levels=2
                         region="STATE_KILIMAMAI"
                    }
                 }
 				reserves=1
-				activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
+				activate_production_methods={ "pm_fishing_trawlers" "pm_unrefrigerated" }
 			}
-			create_building={
-				building="building_coffee_plantation"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:EKA"
-						levels=2
-						region="STATE_STRUGOVA"
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "default_building_coffee_plantation" "pm_road_carts"  }
-			}
-			create_building={
-				building="building_sugar_plantation"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:ZIX"
-						levels=2
-						region="STATE_DURRESIA"
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "default_building_sugar_plantation" "pm_road_carts"  }
-			}
-			create_building={
-				building="building_maize_farm"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:KGM"
-						levels=6
-						region="STATE_SHKODERIA"
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled"  }
-			}
-			create_building={
-				building="building_banana_plantation"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:EKA"
-						levels=3
-						region="STATE_STRUGOVA"
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "default_building_banana_plantation" "pm_road_carts"  }
-			}
-			create_building={
-				building="building_port"
-				level=3
-				reserves=1
-				activate_production_methods={ "pm_basic_port" }
-			}
-
 		}
   }
+  s:STATE_KILIMAMAI = {
+	region_state:LPS={
+		create_building={
+			building="building_silk_plantation"
+				add_ownership={ 
+					building={ 
+						type="building_financial_district"
+						country="c:LPS"
+						levels=1
+						region="STATE_JUALALA"
+				   }
+				}
+			reserves=1
+		}
+		create_building={
+			building="building_textile_mills"
+			add_ownership={ 
+				building={ 
+					type="building_financial_district"
+					country="c:LPS"
+					levels=2
+					region="STATE_JUALALA"
+			   }
+			}
+			reserves=1
+			activate_production_methods={ "pm_handsewn_clothes" "pm_craftsman_sewing" "pm_traditional_looms" }
+		}
+	}
+}
   s:STATE_JUACHAI = {
 		region_state:SNB={
             create_building={
 				building="building_logging_camp"
                 add_ownership={ 
-                    building={ 
+                    building={
                         type="building_financial_district"
                         country="c:ZIN"
                         levels=1
-                        region="STATE_MILOTI"
-                   }
+                        region="STATE_JUACHAI"
+                    }
+                    building={
+                        type="building_financial_district"
+                        country="c:ZIN"
+                        levels=1
+                        region="STATE_KILIMAMAI"
+                    }
                 }
 				reserves=1
 				activate_production_methods={ "pm_saw_mills" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
 			}
 			create_building={
-				building="building_maize_farm"
+				building="building_dye_plantation"
+					add_ownership={ 
+						building={ 
+							type="building_manor_house"
+							country="c:SNB"
+							levels=1
+							region="STATE_JUACHAI"
+					   }
+					}
+				reserves=1
+				activate_production_methods={ "default_building_dye_plantation" "pm_road_carts"  }
+			}	
+			create_building={
+				building="building_textile_mills"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:SNB"
+                        levels=3
+                        region="STATE_JUACHAI"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_dye_workshops" "pm_no_luxury_clothes" "pm_traditional_looms" }
+			}
+			create_building={
+				building="building_cotton_plantation"
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
 						country="c:SNB"
-						levels=1
+						levels=2
 						region="STATE_JUACHAI"
 				   }
 				}
 				reserves=1
-				activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled"  }
-			}	
+				activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts"  }
+			}
 		}
+		region_state:LPS={
+			create_building={
+				building="building_port"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_basic_port" }
+			}
+		}
+
   }
   s:STATE_SAWATHONG = {
 		region_state:SNB={
-			create_building={
-				building="building_livestock_ranch"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:ZIN"
-						levels=2
-						region="STATE_MILOTI"
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "pm_simple_ranch" "pm_open_air_stockyards" "pm_standard_fences" "pm_unrefrigerated"  }
-			}
 			create_building={
 				building="building_maize_farm"
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
 						country="c:SNB"
-						levels=2
+						levels=13
 						region="STATE_SAWATHONG"
 				   }
 				}
@@ -3517,8 +3520,8 @@
 					building={ 
 						type="building_manor_house"
 						country="c:SNB"
-						levels=1
-						region="STATE_JUACHAI"
+						levels=2
+						region="STATE_SAWATHONG"
 				   }
 				}
 				reserves=1
@@ -3535,45 +3538,33 @@
   s:STATE_MAJISAMAKI = {
 		region_state:SNB={
 			create_building={
-				building="building_livestock_ranch"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:SNB"
-						levels=1
-						region="STATE_MAJISAMAKI"
-				   }
-				}
+				building="building_coffee_plantation"
+					add_ownership={ 
+						building={ 
+							type="building_manor_house"
+							country="c:SNB"
+							levels=3
+							region="STATE_MAJIWAZIRI"
+					   }
+					}
 				reserves=1
-				activate_production_methods={ "pm_simple_ranch" "pm_open_air_stockyards" "pm_standard_fences" "pm_unrefrigerated"  }
+				activate_production_methods={ "default_building_coffee_plantation" "pm_road_carts"  }
 			}
-			create_building={
-				building="building_maize_farm"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:SNB"
-						levels=1
-						region="STATE_MAJISAMAKI"
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "pm_simple_farming"  "pm_tools_disabled" "pm_no_secondary" }
-			}
-			create_building={
-				building="building_sugar_plantation"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:SNB"
-						levels=1
-						region="STATE_JUACHAI"
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "default_building_sugar_plantation" "pm_road_carts"  }
-			}
+            create_building={
+                building="building_fishing_wharf"
+                add_ownership={
+                    building={
+                        type="building_adventuring_guild"
+                        country="c:VLT"
+                        levels=2
+                        region="STATE_KILIMAMAI"
+                   }
+                }
+                reserves=1
+                activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
+            }
 		}
+
   }
   s:STATE_KLONGBARIDI = {
 		region_state:SNB={
@@ -3583,25 +3574,12 @@
                     building={ 
                         type="building_financial_district"
                         country="c:SNB"
-                        levels=1
-                        region="STATE_SAWATHONG"
+                        levels=5
+                        region="STATE_KLONGBARIDI"
                    }
                 }
 				reserves=1
 				activate_production_methods={ "pm_saw_mills" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
-			}
-			create_building={
-				building="building_banana_plantation"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:SNB"
-						levels=1
-						region="STATE_JUACHAI"
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "default_building_banana_plantation" "pm_road_carts"  }
 			}
 			create_building={
 				building="building_maize_farm"
@@ -3609,17 +3587,43 @@
 					building={ 
 						type="building_manor_house"
 						country="c:SNB"
-						levels=2
+						levels=5
 						region="STATE_KLONGBARIDI"
 				   }
 				}
 				reserves=1
 				activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled"  }
-			}	
+			}
 		}
   }
   s:STATE_SWAHAILUK = {
 		region_state:SNB={
+			create_building={
+				building="building_tooling_workshops"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:SNB"
+							levels=1
+							region="STATE_SWAHAILUK"
+					   }
+					}
+				reserves=1
+				activate_production_methods={ "pm_pig_iron" "pm_automation_disabled" }
+			}
+			create_building={
+				building="building_iron_mine"
+				add_ownership={ 
+					building={ 
+						type="building_financial_district"
+						country="c:SNB"
+						levels=1
+						region="STATE_SWAHAILUK"
+				   }
+				}
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
 			create_building={
 				building="building_banana_plantation"
 				add_ownership={ 
@@ -3639,7 +3643,7 @@
                     building={ 
                         type="building_financial_district"
                         country="c:SNB"
-                        levels=1
+                        levels=4
                         region="STATE_SWAHAILUK"
                    }
                 }
@@ -3652,7 +3656,7 @@
 					building={ 
 						type="building_manor_house"
 						country="c:SNB"
-						levels=1
+						levels=5
 						region="STATE_SWAHAILUK"
 				   }
 				}
@@ -3663,31 +3667,31 @@
   }
   s:STATE_BONGSAF = {
 		region_state:SNB={
+			create_building={
+				building="building_livestock_ranch"
+				add_ownership={ 
+					building={ 
+						type="building_manor_house"
+						country="c:SNB"
+						levels=10
+						region="STATE_BONGSAF"
+				   }
+				}
+				reserves=1
+				activate_production_methods={ "pm_butchering_tools" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated"  }
+			}
             create_building={
 				building="building_logging_camp"
                 add_ownership={ 
                     building={ 
                         type="building_financial_district"
                         country="c:SNB"
-                        levels=1
+                        levels=2
                         region="STATE_BONGSAF"
                    }
                 }
 				reserves=1
 				activate_production_methods={ "pm_saw_mills" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
-			}
-			create_building={
-				building="building_rice_farm"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:SNB"
-						levels=1
-						region="STATE_BONGSAF"
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "pm_simple_farming_building_rice_farm" "pm_no_secondary" "pm_tools_disabled"  }
 			}
 		}
   }
@@ -3699,12 +3703,50 @@
 				reserves=1
 				activate_production_methods={ "pm_horizontal_drawer_cabinets"  }
 			}
+			create_building={
+				building="building_port"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_basic_port" }
+			}
+			create_building={
+				building="building_construction_sector"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_wooden_buildings" }
+			}
+			create_building={
+				building="building_logging_camp"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:SNB"
+                        levels=4
+                        region="STATE_KISIKLONG"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_saw_mills" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
+			}
+			create_building={
+				building="building_iron_mine"
+				add_ownership={ 
+					building={ 
+						type="building_financial_district"
+						country="c:SNB"
+						levels=2
+						region="STATE_KISIKLONG"
+				   }
+				}
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
             create_building={
 				building="building_shipyards"
                 add_ownership={ 
                     building={ 
                         type="building_financial_district"
-                        country="c:LGZ"
+                        country="c:SNB"
                         levels=1
                         region="STATE_KISIKLONG"
                    }
@@ -3731,25 +3773,12 @@
 					building={ 
 						type="building_manor_house"
 						country="c:SNB"
-						levels=6
-						region="STATE_MAJISAMAKI"
+						levels=3
+						region="STATE_KISIKLONG"
 				   }
 				}
 				reserves=1
 				activate_production_methods={ "default_building_coffee_plantation" "pm_road_carts"  }
-			}
-			create_building={
-				building="building_sugar_plantation"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:SNB"
-						levels=1
-						region="STATE_KLONGBARIDI"
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "default_building_sugar_plantation" "pm_road_carts"  }
 			}
 			create_building={
 				building="building_maize_farm"
@@ -3758,7 +3787,7 @@
 						type="building_manor_house"
 						country="c:SNB"
 						levels=6
-						region="STATE_BONGSAF"
+						region="STATE_KISIKLONG"
 				   }
 				}
 				reserves=1
@@ -3770,25 +3799,12 @@
 					building={ 
 						type="building_manor_house"
 						country="c:SNB"
-						levels=3
-						region="STATE_BONGSAF"
+						levels=1
+						region="STATE_KISIKLONG"
 				   }
 				}
 				reserves=1
 				activate_production_methods={ "default_building_banana_plantation" "pm_road_carts"  }
-			}
-            create_building={
-				building="building_logging_camp"
-                add_ownership={ 
-                    building={ 
-                        type="building_financial_district"
-                        country="c:SNB"
-                        levels=4
-                        region="STATE_KISIKLONG"
-                   }
-                }
-				reserves=1
-				activate_production_methods={ "pm_saw_mills" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
 			}
             create_building={
 				building="building_fishing_wharf"
@@ -3797,49 +3813,118 @@
                         type="building_adventuring_guild"
                         country="c:SNB"
                         levels=2
-                        region="STATE_JUACHAI"
+                        region="STATE_KILIMAMAI"
                    }
                 }
 				reserves=1
 				activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
-			}
-			create_building={
-				building="building_port"
-				level=2
-				reserves=1
-				activate_production_methods={ "pm_basic_port" }
-			}
-			create_building={
-				building="building_construction_sector"
-				level=1
-				reserves=1
-				activate_production_methods={ "pm_wooden_buildings" }
 			}
             create_building={
 				building="building_tooling_workshops"
                 add_ownership={ 
                     building={ 
                         type="building_financial_district"
-                        country="c:MGR"
+                        country="c:SNB"
                         levels=1
                         region="STATE_KISIKLONG"
                    }
                 }
 				reserves=1
-				activate_production_methods={ "pm_crude_tools" "pm_automation_disabled" }
+				activate_production_methods={ "pm_pig_iron" "pm_automation_disabled" }
 			}
 		}
   }
-  s:STATE_MAJIPEMBE = {
-		region_state:SNB={
-            create_building={
+  s:STATE_KISIKLONG = {
+	region_state:LPS={
+		create_building={
+			building="building_port"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_basic_port" }
+		}
+		create_building={
+			building="building_arms_industry"
+			add_ownership={ 
+				building={ 
+					type="building_financial_district"
+					country="c:LPS"
+					levels=2
+					region="STATE_JUALALA"
+			   }
+			}
+			reserves=1
+			activate_production_methods={ "pm_muskets" }
+		}
+		create_building={
+			building="building_iron_mine"
+				add_ownership={ 
+					building={ 
+						type="building_financial_district"
+						country="c:LPS"
+						levels=3
+						region="STATE_JUALALA"
+				   }
+				}
+			reserves=1
+			activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+		}
+		create_building={
+			building="building_logging_camp"
+			add_ownership={ 
+				building={ 
+					type="building_financial_district"
+					country="c:LPS"
+					levels=1
+					region="STATE_JUALALA"
+			   }
+			}
+			reserves=1
+			activate_production_methods={ "pm_saw_mills" "pm_increased_hardwood" "pm_no_equipment" "pm_road_carts" }
+		}	
+		create_building={
+			building="building_tooling_workshops"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:LPS"
+                        levels=1
+                        region="STATE_JUALALA"
+                   }
+                }
+			reserves=1
+			activate_production_methods={ "pm_pig_iron" "pm_automation_disabled" }
+		}
+	}
+}
+  s:STATE_CHEJATAN_DO = {
+		region_state:FMJ={
+			create_building={
+				building="building_government_administration"
+				level=3
+				reserves=1
+				activate_production_methods={ "pm_horizontal_drawer_cabinets"  }
+			}
+			create_building={
+				building="building_tobacco_plantation"
+				add_ownership={ 
+					building={ 
+						type="building_manor_house"
+						country="c:SNB"
+						levels=3
+						region="STATE_SWAHATHAI"
+				   }
+				}
+				reserves=1
+				activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }
+			}
+			create_building={
 				building="building_logging_camp"
                 add_ownership={ 
                     building={ 
                         type="building_financial_district"
                         country="c:SNB"
-                        levels=1
-                        region="STATE_MAJIPEMBE"
+                        levels=6
+                        region="STATE_SWAHATHAI"
                    }
                 }
 				reserves=1
@@ -3852,57 +3937,147 @@
 				activate_production_methods={ "pm_basic_port" }
 			}			
 		}
+        create_building={
+            building="building_fishing_wharf"
+            add_ownership={
+                building={
+                    type="building_adventuring_guild"
+                    country="c:FMJ"
+                    levels=2
+                    region="STATE_CHEJATAN_DO"
+               }
+            }
+            reserves=1
+            activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
+        }
   }
-  s:STATE_CHANGAVUTA = {
-		region_state:SNB={
-			create_building={
-				building="building_sugar_plantation"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:SNB"
-						levels=2
-						region="STATE_MAJIPEMBE"
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "default_building_sugar_plantation" "pm_road_carts"  }
-			}
+  s:STATE_MDLEMNO_KETHIN = {
+		region_state:FMJ={
 			create_building={
 				building="building_port"
 				level=1
 				reserves=1
 				activate_production_methods={ "pm_anchorage" }
 			}
-		}
-  }
-  s:STATE_SWAHATHAI = {
-		region_state:SNB={
 			create_building={
-				building="building_coffee_plantation"
+				building="building_maize_farm"
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
 						country="c:SNB"
 						levels=5
-						region="STATE_MAJIPEMBE"
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "default_building_coffee_plantation" "pm_road_carts"  }
-			}
-			create_building={
-				building="building_sugar_plantation"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:SNB"
-						levels=1
 						region="STATE_SWAHATHAI"
 				   }
 				}
 				reserves=1
-				activate_production_methods={ "default_building_sugar_plantation" "pm_road_carts"  }
+				activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled"  }
+			}
+			create_building={
+				building="building_coffee_plantation"
+					add_ownership={ 
+						building={ 
+							type="building_manor_house"
+							country="c:SNB"
+							levels=3
+							region="STATE_SWAHATHAI"
+					   }
+					}
+				reserves=1
+				activate_production_methods={ "default_building_coffee_plantation" "pm_road_carts"  }
+			}
+		}
+  }
+  s:STATE_SWAHATHAI = {
+		region_state:SNB={
+			create_building={
+				building="building_university"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_secular_academia" }
+			}
+			create_building={
+				building="building_government_administration"
+				level=9
+				reserves=1
+				activate_production_methods={ "pm_horizontal_drawer_cabinets"  }
+			}
+			create_building={
+				building="building_tooling_workshops"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:SNB"
+                        levels=2
+                        region="STATE_SWAHATHAI"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_pig_iron" "pm_automation_disabled" }
+			}
+			create_building = {
+				building = "building_distillery"
+				add_ownership = {
+				  building={
+					type="building_financial_district"
+					country="c:SNB"
+					levels=3
+					region="STATE_SWAHATHAI"
+				  }
+				}
+				reserves = 1
+				activate_production_methods = {"pm_some_fruit" "pm_no_spice"}
+			  }  
+			create_building={
+				building="building_paper_mills"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:SNB"
+                        levels=3
+                        region="STATE_SWAHATHAI"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_pulp_pressing" "pm_automation_disabled" }
+			}
+			create_building={
+				building="building_artillery_foundries"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:SNB"
+							levels=3
+							region="STATE_SWAHATHAI"
+					   }
+					}
+				reserves=1
+				activate_production_methods={ "pm_cannons" "pm_automation_disabled" }
+			}
+			create_building={
+				building="building_arts_academy"
+				add_ownership={
+				  building={
+					  type="building_wizard_tower"
+					  country="c:SNB"
+					  levels=2
+					  region="STATE_SWAHATHAI"
+				  }
+			  }
+				reserves=1
+				activate_production_methods={ "pm_traditional_art" }
+			  }	
+			  create_building={
+				building="building_iron_mine"
+				add_ownership={ 
+					building={ 
+						type="building_financial_district"
+						country="c:SNB"
+						levels=3
+						region="STATE_SWAHATHAI"
+				   }
+				}
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
 			}
             create_building={
 				building="building_arms_industry"
@@ -3917,63 +4092,18 @@
 				reserves=1
 				activate_production_methods={ "pm_muskets" }
 			}
-			create_building={
-				building="building_livestock_ranch"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:SNB"
-						levels=2
-						region="STATE_KLONGBARIDI"
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "pm_simple_ranch" "pm_open_air_stockyards" "pm_standard_fences" "pm_unrefrigerated"  }
-			}
             create_building={
 				building="building_logging_camp"
                 add_ownership={ 
                     building={ 
                         type="building_financial_district"
                         country="c:SNB"
-                        levels=1
-                        region="STATE_CHANGAVUTA"
+                        levels=4
+                        region="STATE_SWAHATHAI"
                    }
                 }
 				reserves=1
 				activate_production_methods={ "pm_saw_mills" "pm_hardwood" "pm_no_equipment" "pm_road_carts" }
-			}
-            create_building={
-				building="building_paper_mills"
-                add_ownership={ 
-                    building={ 
-                        type="building_financial_district"
-                        country="c:SNB"
-                        levels=2
-                        region="STATE_JUACHAI"
-                   }
-                }
-				reserves=1
-				activate_production_methods={ "pm_pulp_pressing" "pm_automation_disabled" }
-			}
-			create_building={
-				building="building_university"
-				level=1
-				reserves=1
-				activate_production_methods={ "pm_secular_academia" }
-			}
-			create_building={
-				building="building_maize_farm"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:SNB"
-						levels=4
-						region="STATE_MAJIPEMBE"
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled"  }
 			}
 		}
   }
@@ -3985,14 +4115,14 @@
 			reserves=1
 			activate_production_methods={ "pm_simple_organization" }
 		}
-			create_building={
+		create_building={
 			building="building_rice_farm"
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:SNB"
+						country="c:XOC"
 						levels=2
-						region="STATE_KISIKLONG"
+						region="STATE_ODADRUEL"
 				   }
 				}
 			reserves=1
@@ -4004,7 +4134,7 @@
 			reserves=1
 			activate_production_methods={ "pm_anchorage" }
 		}
-            create_building={
+        create_building={
 			building="building_arms_industry"
                 add_ownership={ 
                     building={ 
@@ -4017,14 +4147,14 @@
 			reserves=1
 			activate_production_methods={ "pm_muskets" }
 		}
-            create_building={
+        create_building={
 			building="building_military_shipyards"
                 add_ownership={ 
                     building={ 
                         type="building_financial_district"
-                        country="c:SNB"
+                        country="c:XOC"
                         levels=1
-                        region="STATE_MAJIPEMBE"
+                        region="STATE_ODADRUEL"
                    }
                 }
 			reserves=1
@@ -4033,15 +4163,131 @@
 	}
   }
   s:STATE_MAJIWAZIRI = {
-		region_state:SNB={
+		region_state:LPS={
+			create_building={
+				building="building_government_administration"
+				level=6
+				reserves=1
+				activate_production_methods={ "pm_horizontal_drawer_cabinets"  }
+			}
+			create_building={
+                building="building_port"
+                level=1
+                reserves=1
+                activate_production_methods={ "pm_basic_port" }
+            }
+			create_building={
+				building="building_tobacco_plantation"
+				add_ownership={ 
+					building={ 
+						type="building_manor_house"
+						country="c:LPS"
+						levels=1
+						region="STATE_MAJIWAZIRI"
+				   }
+				}
+				reserves=1
+				activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_arms_industry"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:LPS"
+                        levels=1
+                        region="STATE_MAJIWAZIRI"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_muskets" }
+			}
+			create_building={
+				building="building_military_shipyards"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:LPS"
+							levels=1
+							region="STATE_MAJIWAZIRI"
+					   }
+					}
+				reserves=1
+				activate_production_methods={ "pm_military_shipbuilding_wooden" }
+			}
+			create_building={
+				building="building_paper_mills"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:LPS"
+							levels=1
+							region="STATE_MAJIWAZIRI"
+					   }
+					}
+				reserves=1
+				activate_production_methods={ "pm_pulp_pressing" "pm_automation_disabled" }
+			}
+			create_building={
+				building="building_shipyards"
+						  add_ownership={ 
+							  building={ 
+								  type="building_financial_district"
+								  country="c:LPS"
+								  levels=2
+								  region="STATE_MAJIWAZIRI"
+							 }
+						  }
+				reserves=1
+				activate_production_methods={ "pm_basic_shipbuilding" }
+			  }
+			  create_building={
+				building="building_fishing_wharf"
+                add_ownership={ 
+                    building={ 
+                        type="building_adventuring_guild"
+                        country="c:LPS"
+                        levels=10
+                        region="STATE_MAJIWAZIRI"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_fishing_trawlers" "pm_unrefrigerated" }
+			}
+			create_building = {
+				building = "building_distillery"
+				add_ownership = {
+				  building={
+					type="building_financial_district"
+					country="c:LPS"
+					levels=4
+					region="STATE_MAJIWAZIRI"
+				  }
+				}
+				reserves = 1
+				activate_production_methods = {"pm_some_fruit" "pm_no_spice"}
+			  }   
+			create_building={
+				building="building_banana_plantation"
+				add_ownership={ 
+					building={ 
+						type="building_manor_house"
+						country="c:LPS"
+						levels=1
+						region="STATE_MAJIWAZIRI"
+				   }
+				}
+				reserves=1
+				activate_production_methods={ "default_building_banana_plantation" "pm_road_carts"  }
+			}
 			create_building={
 				building="building_maize_farm"
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:XOC"
+						country="c:LPS"
 						levels=1
-						region="STATE_ODADRUEL"
+						region="STATE_MAJIWAZIRI"
 				   }
 				}
 				reserves=1
@@ -4052,32 +4298,148 @@
                 add_ownership={ 
                     building={ 
                         type="building_financial_district"
-                        country="c:XOC"
-                        levels=1
-                        region="STATE_ODADRUEL"
+                        country="c:LPS"
+                        levels=3
+                        region="STATE_MAJIWAZIRI"
                    }
                 }
 				reserves=1
-				activate_production_methods={ "pm_saw_mills" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
+				activate_production_methods={ "pm_saw_mills" "pm_hardwood" "pm_no_equipment" "pm_road_carts" }
 			}		
-			create_building={
-			building="building_port"
-			level=1
-			reserves=1
-			activate_production_methods={ "pm_basic_port" }
-			}	
-  		} 
-	}
+            create_building={
+                building="building_fishing_wharf"
+                add_ownership={
+                    building={
+                        type="building_adventuring_guild"
+                        country="c:SNB"
+                        levels=5
+                        region="STATE_MAJIWAZIRI"
+                   }
+                }
+                reserves=1
+                activate_production_methods={ "pm_fishing_trawlers" "pm_unrefrigerated" }
+            }
+        }
+  }
   s:STATE_JUALALA = {
-		region_state:SNB={
+		region_state:LPS={
+			create_building={
+				building="building_government_administration"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_horizontal_drawer_cabinets"  }
+			}
+			create_building={
+				building="building_construction_sector"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_iron_frame_buildings" }
+			}
+			create_building={
+				building="building_university"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_secular_academia" }
+			}
+			create_building={
+				building="building_paper_mills"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:LPS"
+							levels=3
+							region="STATE_JUALALA"
+					   }
+					}
+				reserves=1
+				activate_production_methods={ "pm_pulp_pressing" "pm_automation_disabled" }
+			}
+			create_building={
+				building="building_iron_mine"
+				add_ownership={ 
+					building={ 
+						type="building_financial_district"
+						country="c:LPS"
+						levels=2
+						region="STATE_JUALALA"
+				   }
+				}
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+			create_building={
+				building="building_tooling_workshops"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:LPS"
+                        levels=1
+                        region="STATE_JUALALA"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_pig_iron" "pm_automation_disabled" }
+			}
+			create_building={
+				building="building_fishing_wharf"
+                add_ownership={ 
+                    building={ 
+                        type="building_adventuring_guild"
+                        country="c:LPS"
+                        levels=7
+                        region="STATE_JUALALA"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_fishing_trawlers" "pm_unrefrigerated" }
+			}
+			create_building={
+				building="building_shipyards"
+						  add_ownership={ 
+							  building={ 
+								  type="building_financial_district"
+								  country="c:LPS"
+								  levels=2
+								  region="STATE_JUALALA"
+							 }
+						  }
+				reserves=1
+				activate_production_methods={ "pm_basic_shipbuilding" }
+			  }
+			create_building = {
+				building = "building_distillery"
+				add_ownership = {
+				  building={
+					type="building_financial_district"
+					country="c:LPS"
+					levels=4
+					region="STATE_JUALALA"
+				  }
+				}
+				reserves = 1
+				activate_production_methods = {"pm_some_fruit" "pm_no_spice"}
+			  }   
+			create_building={
+				building="building_banana_plantation"
+				add_ownership={ 
+					building={ 
+						type="building_manor_house"
+						country="c:LPS"
+						levels=1
+						region="STATE_JUALALA"
+				   }
+				}
+				reserves=1
+				activate_production_methods={ "default_building_banana_plantation" "pm_road_carts"  }
+			}
 			create_building={
 				building="building_cotton_plantation"
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:KGM"
+						country="c:LPS"
 						levels=1
-						region="STATE_SHKODERIA"
+						region="STATE_JUALALA"
 				   }
 				}
 				reserves=1
@@ -4088,7 +4450,7 @@
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:SNB"
+						country="c:LPS"
 						levels=2
 						region="STATE_JUALALA"
 				   }
@@ -4101,28 +4463,15 @@
                 add_ownership={ 
                     building={ 
                         type="building_financial_district"
-                        country="c:SNB"
-                        levels=2
+                        country="c:LPS"
+                        levels=3
                         region="STATE_JUALALA"
                    }
                 }
 				reserves=1
-				activate_production_methods={ "pm_saw_mills" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
+				activate_production_methods={ "pm_saw_mills" "pm_hardwood" "pm_no_equipment" "pm_road_carts" }
 			}
-            create_building={
-				building="building_fishing_wharf"
-                add_ownership={ 
-                    building={ 
-                        type="building_adventuring_guild"
-                        country="c:SNB"
-                        levels=1
-                        region="STATE_MAJIPEMBE"
-                   }
-                }
-				reserves=1
-				activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
-			}
-      create_building={
+			create_building={
 				building="building_port"
 				level=1
 				reserves=1
@@ -4133,17 +4482,23 @@
   s:STATE_SWAHAKLONG = {
 		region_state:SNB={
 			create_building={
-				building="building_maize_farm"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:SNB"
-						levels=1
-						region="STATE_SWAHAKLONG"
-				   }
-				}
+				building="building_university"
+				level=2
 				reserves=1
-				activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled"  }
+				activate_production_methods={ "pm_secular_academia" }
+			}
+			create_building={
+				building="building_furniture_manufacturies"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:SNB"
+							levels=2
+							region="STATE_SWAHAKLONG"
+					   }
+					}
+				reserves=1
+				activate_production_methods={ "pm_handcrafted_furniture" "pm_automation_disabled" "pm_luxury_furniture" }
 			}
             create_building={
 				building="building_logging_camp"
@@ -4156,7 +4511,7 @@
                    }
                 }
 				reserves=1
-				activate_production_methods={ "pm_saw_mills" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
+				activate_production_methods={ "pm_saw_mills" "pm_hardwood" "pm_no_equipment" "pm_road_carts" }
 			}
             create_building={
 				building="building_fishing_wharf"
@@ -4164,7 +4519,7 @@
                     building={ 
                         type="building_adventuring_guild"
                         country="c:SNB"
-                        levels=1
+                        levels=4
                         region="STATE_SWAHAKLONG"
                    }
                 }
@@ -4172,9 +4527,74 @@
 				activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
 			}
 		}
+		region_state:LPS = {
+			create_building={
+				building="building_port"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_basic_port" }
+			}	
+			create_building={
+				building="building_fishing_wharf"
+                add_ownership={ 
+                    building={ 
+                        type="building_adventuring_guild"
+                        country="c:LPS"
+                        levels=4
+                        region="STATE_JUALALA"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
+			}
+		}
   }
+  s:STATE_SWAHAKLONG = {
+	region_state:LPS={
+		create_building={
+			building="building_fishing_wharf"
+			add_ownership={
+				building={
+					type="building_adventuring_guild"
+					country="c:LPS"
+					levels=3
+					region="STATE_SWAHAKLONG"
+			   }
+			}
+			reserves=1
+			activate_production_methods={ "pm_fishing_trawlers" "pm_unrefrigerated" }
+		}
+		create_building={
+			building="building_tobacco_plantation"
+			add_ownership={ 
+				building={ 
+					type="building_manor_house"
+					country="c:LPS"
+					levels=3
+					region="STATE_SWAHAKLONG"
+			   }
+			}
+			reserves=1
+			activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }
+		}
+
+	}
+}
   s:STATE_KILIMAKAZI = {
 		region_state:SNB={
+			create_building={
+				building="building_tooling_workshops"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:SNB"
+                        levels=1
+                        region="STATE_KILIMAMAI"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_pig_iron" "pm_automation_disabled" }
+			}
             create_building={
 				building="building_logging_camp"
                 add_ownership={ 
@@ -4195,56 +4615,101 @@
 						type="building_manor_house"
 						country="c:SNB"
 						levels=1
-						region="STATE_MAJIPEMBE"
+						region="STATE_KILIMAKAZI"
 				   }
 				}
 				reserves=1
 				activate_production_methods={ "default_building_banana_plantation" "pm_road_carts"  }
 			}
+            create_building={
+				building="building_fishing_wharf"
+                add_ownership={
+                    building={
+                        type="building_adventuring_guild"
+                        country="c:SNB"
+                        levels=2
+                        region="STATE_KILIMAKAZI"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
+			}
+            create_building={
+                building="building_port"
+                level=1
+                reserves=1
+                activate_production_methods={ "pm_basic_port" }
+            }
+        }
+  }
+  s:STATE_THASAMAKI = {
+		region_state:SNB={
 			create_building={
-				building="building_rice_farm"
+                building="building_port"
+                level=1
+                reserves=1
+                activate_production_methods={ "pm_basic_port" }
+            }
+			create_building={
+				building="building_livestock_ranch"
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
 						country="c:SNB"
-						levels=1
-						region="STATE_MAJIWAZIRI"
+						levels=6
+						region="STATE_THASAMAKI"
 				   }
 				}
 				reserves=1
-				activate_production_methods={ "pm_simple_farming_building_rice_farm" "pm_no_secondary" "pm_tools_disabled"  }
+				activate_production_methods={ "pm_simple_ranch" "pm_butchering_tools" "pm_standard_fences" "pm_unrefrigerated"  }
 			}
-	create_building={
-		building="building_port"
-		level=1
-		reserves=1
-		activate_production_methods={ "pm_basic_port" }
-		}	
-	}
-  }
-  s:STATE_THASAMAKI = {
-		region_state:SNB={
+			create_building={
+				building="building_cotton_plantation"
+				add_ownership={ 
+					building={ 
+						type="building_manor_house"
+						country="c:SNB"
+						levels=2
+						region="STATE_THASAMAKI"
+				   }
+				}
+				reserves=1
+				activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts"  }
+			}	
+			create_building={
+				building="building_logging_camp"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:SNB"
+                        levels=4
+                        region="STATE_THASAMAKI"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_saw_mills" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
+			}	
             create_building={
 				building="building_textile_mills"
                 add_ownership={ 
                     building={ 
                         type="building_financial_district"
-                        country="c:REM"
-                        levels=1
-                        region="STATE_LEZHANIA"
+                        country="c:SNB"
+                        levels=3
+                        region="STATE_THASAMAKI"
                    }
                 }
 				reserves=1
-				activate_production_methods={ "pm_handsewn_clothes" "pm_no_luxury_clothes" "pm_traditional_looms" }
+				activate_production_methods={ "pm_dye_workshops" "pm_no_luxury_clothes" "pm_traditional_looms" }
 			}
 			create_building={
 				building="building_tobacco_plantation"
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:EKA"
-						levels=1
-						region="STATE_KLOSI"
+						country="c:SNB"
+						levels=3
+						region="STATE_THASAMAKI"
 				   }
 				}
 				reserves=1
@@ -4257,98 +4722,13 @@
 						type="building_manor_house"
 						country="c:SNB"
 						levels=1
-						region="STATE_KILIMAKAZI"
+						region="STATE_THASAMAKI"
 				   }
 				}
 				reserves=1
 				activate_production_methods={ "pm_soil_enriching_farming" "pm_no_secondary" "pm_tools_disabled" }
 			}
 		}
-  }
-  s:STATE_NOLOGO_RULL = {
-	region_state:COC={
-			create_building={
-			building="building_rice_farm"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:SNB"
-						levels=1
-						region="STATE_THASAMAKI"
-				   }
-				}
-			reserves=1
-			activate_production_methods={ "pm_simple_farming_building_rice_farm" "pm_no_secondary" "pm_tools_disabled"  }
-		}			
-			create_building={
-			building="building_sugar_plantation"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:XOC"
-						levels=1
-						region="STATE_ODADRUEL"
-				   }
-				}
-			reserves=1
-			activate_production_methods={ "default_building_sugar_plantation" "pm_road_carts"  }
-		}
-            create_building={
-			building="building_food_industry"
-                add_ownership={ 
-                    building={ 
-                        type="building_financial_district"
-                        country="c:ZIX"
-                        levels=1
-                        region="STATE_DURRESIA"
-                   }
-                }
-			reserves=1
-			activate_production_methods={ "pm_disabled_canning" "pm_bakery" "pm_manual_dough_processing"}
-		}
-		create_building={
-			building="building_port"
-			level=1
-			reserves=1
-			activate_production_methods={ "pm_anchorage" }
-		}
-	}
-  }
-  s:STATE_NOLOGO_VELPH = {
-	region_state:COC={
-            create_building={
-			building="building_logging_camp"
-                add_ownership={ 
-                    building={ 
-                        type="building_financial_district"
-                        country="c:SNB"
-                        levels=2
-                        region="STATE_THASAMAKI"
-                   }
-                }
-			reserves=1
-			activate_production_methods={ "pm_simple_forestry" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
-		}			
-			create_building={
-			building="building_tea_plantation"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:EKA"
-						levels=2
-						region="STATE_LISIJA"
-				   }
-				}
-			reserves=1
-			activate_production_methods={ "default_building_tea_plantation" "pm_road_carts"  }
-		}
-		create_building={
-			building="building_port"
-			level=1
-			reserves=1
-			activate_production_methods={ "pm_anchorage" }
-		}
-	}
   }
   s:STATE_NAVAKAI = {
 	region_state:GPK = {
@@ -4405,22 +4785,29 @@
 				reserves=1
 				activate_production_methods={ "pm_horizontal_drawer_cabinets"  }
 			}		
-            create_building={
-				building="building_tooling_workshops"
-                add_ownership={ 
-                    building={ 
-                        type="building_financial_district"
-                        country="c:SNB"
-                        levels=1
-                        region="STATE_MAJIPEMBE"
-                   }
-                }
+			create_building={
+				building="building_livestock_ranch"
+				add_ownership={ 
+					building={ 
+						type="building_manor_house"
+						country="c:SNB"
+						levels=9
+						region="STATE_YAZHINAVA"
+				   }
+				}
 				reserves=1
-				activate_production_methods={ "pm_pig_iron" "pm_automation_disabled" }
+				activate_production_methods={ "pm_simple_ranch" "pm_butchering_tools" "pm_standard_fences" "pm_unrefrigerated"  }
 			}
 			create_building={
 				building="building_gold_mine"
-				level=2
+				add_ownership={ 
+					building={ 
+						type="building_financial_district"
+						country="c:SNB"
+						levels=2
+						region="STATE_YAZHINAVA"
+				   }
+				}
 				reserves=1
 				activate_production_methods={ "pm_picks_and_shovels_building_gold_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
 			}				
@@ -4444,64 +4831,25 @@
                         type="building_financial_district"
                         country="c:SNB"
                         levels=4
-                        region="STATE_YAZHINAVA"
+                        region="STATE_YAZHIDZI"
                    }
                 }
 				reserves=1
 				activate_production_methods={ "pm_saw_mills" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
 			}
 			create_building={
-				building="building_livestock_ranch"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:XOC"
-						levels=1
-						region="STATE_ODADRUEL"
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "pm_simple_ranch" "pm_open_air_stockyards" "pm_standard_fences" "pm_unrefrigerated"  }
-			}
-			create_building={
 				building="building_maize_farm"
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:COC"
+						country="c:SNB"
 						levels=4
-						region="STATE_NOLOGO_RULL"
+						region="STATE_YAZHINAVA"
 				   }
 				}
 				reserves=1
 				activate_production_methods={ "pm_soil_enriching_farming" "pm_no_secondary" "pm_tools_disabled" }
 			}		
-			create_building={
-				building="building_coffee_plantation"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:XOC"
-						levels=6
-						region="STATE_ODADRUEL"
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "default_building_coffee_plantation" "pm_road_carts"  }
-			}
-			create_building={
-				building="building_banana_plantation"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:SNB"
-						levels=1
-						region="STATE_THASAMAKI"
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "default_building_banana_plantation" "pm_road_carts"  }
-			}
 		}
   }
   s:STATE_KEEDZAI = {
@@ -4512,57 +4860,69 @@
 				reserves=1
 				activate_production_methods={ "pm_horizontal_drawer_cabinets"  }
 			}
+			create_building={
+				building="building_port"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_basic_port" }
+			}		
             create_building={
 				building="building_textile_mills"
                 add_ownership={ 
                     building={ 
                         type="building_financial_district"
-                        country="c:COC"
+                        country="c:SNB"
                         levels=3
-                        region="STATE_NOLOGO_RULL"
+                        region="STATE_KEEDZAI"
                    }
                 }
 				reserves=1
-				activate_production_methods={ "pm_handsewn_clothes" "pm_no_luxury_clothes" "pm_traditional_looms" }
+				activate_production_methods={ "pm_dye_workshops" "pm_no_luxury_clothes" "pm_traditional_looms" }
 			}
 			create_building={
-				building="building_cotton_plantation"
+				building="building_livestock_ranch"
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
 						country="c:SNB"
-						levels=5
-						region="STATE_SWAHAKLONG"
+						levels=7
+						region="STATE_KEEDZAI"
 				   }
 				}
 				reserves=1
-				activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts"  }
-			}			
+				activate_production_methods={ "pm_simple_ranch" "pm_butchering_tools" "pm_standard_fences" "pm_unrefrigerated"  }
+			}
+				create_building={
+					building="building_cotton_plantation"
+					add_ownership={ 
+						building={ 
+							type="building_manor_house"
+							country="c:SNB"
+							levels=2
+							region="STATE_KEEDZAI"
+					}
+					}
+					reserves=1
+					activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts"  }
+				}			
 			create_building={
 				building="building_tobacco_plantation"
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:COC"
-						levels=1
-						region="STATE_NOLOGO_RULL"
+						country="c:SNB"
+						levels=3
+						region="STATE_KEEDZAI"
 				   }
+                   building={
+                        type="building_manor_house"
+                        country="c:SNB"
+                        levels=2
+                        region="STATE_KEEDZAI"
+                   }
 				}
 				reserves=1
 				activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }
-			}
-			create_building={
-				building="building_maize_farm"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:SNB"
-						levels=4
-						region="STATE_KEEDZAI"
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled"  }
 			}
 			create_building={
 				building="building_banana_plantation"
@@ -4571,24 +4931,40 @@
 						type="building_manor_house"
 						country="c:SNB"
 						levels=1
-						region="STATE_KEEDZAI"
+						region="STATE_SWAHAKLONG"
 				   }
 				}
 				reserves=1
 				activate_production_methods={ "default_building_banana_plantation" "pm_road_carts"  }
+			}	
+		}
+		region_state:LPS={
+			create_building={
+				building="building_furniture_manufacturies"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:LPS"
+							levels=1
+							region="STATE_JUALALA"
+					   }
+					}
+				reserves=1
+				activate_production_methods={ "pm_handcrafted_furniture" "pm_automation_disabled" "pm_luxury_furniture" }
 			}
 			create_building={
-				building="building_port"
-				level=1
+				building="building_logging_camp"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:LPS"
+							levels=1
+							region="STATE_JUALALA"
+					   }
+					}
 				reserves=1
-				activate_production_methods={ "pm_basic_port" }
-			}	
-			create_building={
-				building="building_university"
-				level=1
-				reserves=1
-				activate_production_methods={ "pm_secular_academia" }
-			}		
+				activate_production_methods={ "pm_simple_forestry" "pm_no_equipment" "pm_road_carts" "pm_increased_hardwood" }
+			}
 		}
   }
   s:STATE_NAKOTHAI = {
@@ -4605,19 +4981,6 @@
                 }
 			reserves=1
 			activate_production_methods={ "pm_simple_forestry" "pm_no_equipment" "pm_road_carts" "pm_no_hardwood" }
-		}
-			create_building={
-			building="building_coffee_plantation"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:SNB"
-						levels=2
-						region="STATE_KEEDZAI"
-				   }
-				}
-			reserves=1
-			activate_production_methods={ "default_building_coffee_plantation" "pm_road_carts"  }
 		}
 	}
   }
@@ -4819,14 +5182,14 @@
 			reserves=1
 			activate_production_methods={ "pm_simple_forestry" "pm_no_equipment" "pm_road_carts" "pm_no_hardwood" }
 		}
-            create_building={
+        create_building={
 			building="building_furniture_manufacturies"
                 add_ownership={ 
                     building={ 
                         type="building_financial_district"
-                        country="c:SNB"
+                        country="c:KHD"
                         levels=1
-                        region="STATE_JUACHAI"
+                        region="STATE_SHIMAKAI"
                    }
                 }
 			reserves=1
@@ -5328,7 +5691,7 @@
 			activate_production_methods={ "gizmo_waterwrangler_irrigation_building_tobacco_plantation" "pm_road_carts"  }
 		}
 		  create_building={
-			building="building_rice_farm"
+			building="building_wheat_farm"
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
@@ -5338,7 +5701,7 @@
 				   }
 				}
 			reserves=1
-			activate_production_methods={ "pm_soil_enriching_farming_building_rice_farm" "pm_no_secondary" "pm_rice_farms_basic_earth_shaping" }
+			activate_production_methods={ "pm_soil_enriching_farming" "pm_no_secondary" "pm_farms_basic_earth_shaping" }
 		}
 	}
   }
@@ -7385,7 +7748,7 @@
                    }
                 }
 			reserves=1
-			activate_production_methods={ "pm_forest_glass" "pm_manual_glassblowing" "pm_no_ceramics" }
+			activate_production_methods={ "pm_forest_glass" "pm_manual_glassblowing" }
 		}
 		create_building={
 			building="building_tooling_workshops"
@@ -8568,7 +8931,7 @@
 				   }
 				}
 			reserves=1
-			activate_production_methods={ "pm_forest_glass" "pm_manual_glassblowing" "pm_no_ceramics" }
+			activate_production_methods={ "pm_forest_glass" "pm_manual_glassblowing" }
 		}
 		create_building={
 			building="building_paper_mills"
@@ -9093,7 +9456,7 @@
                    }
                 }
 			reserves=1
-			activate_production_methods={ "pm_leaded_glass" "pm_manual_glassblowing" "pm_no_ceramics" }
+			activate_production_methods={ "pm_leaded_glass" "pm_manual_glassblowing"}
 		}
 		create_building={
 			building="building_maize_farm"

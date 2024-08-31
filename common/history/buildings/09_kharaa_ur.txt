@@ -138,41 +138,35 @@
 
   s:STATE_ORONK = {
     region_state:YUL = {
-	  create_building={
-        building="building_government_administration"
-        level=21
-        reserves=1
-        activate_production_methods={ "pm_horizontal_drawer_cabinets" }
+      create_building={
+          building="building_government_administration"
+          level=21
+          reserves=1
+          activate_production_methods={ "pm_horizontal_drawer_cabinets" }
       }
     }
   }
 
   s:STATE_KHAIRI = {
     region_state:YUL = {
-	  create_building={
-        building="building_iron_mine"
-        level=4
-        reserves=1
-        activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
-      }
-	  create_building={
-        building="building_tooling_workshops"
-        level=3
-        reserves=1
-        activate_production_methods={ "pm_pig_iron" "pm_automation_disabled" }
-      }
-	  create_building={
-        building="building_fishing_wharf"
-        level=4
-        reserves=1
-        activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
-      }
-	  create_building={
-        building="building_tobacco_plantation"
-        level=20
-        reserves=1
-        activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }
-      }
+      create_building={
+          building="building_iron_mine"
+          level=4
+          reserves=1
+          activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+        }
+      create_building={
+          building="building_tooling_workshops"
+          level=3
+          reserves=1
+          activate_production_methods={ "pm_pig_iron" "pm_automation_disabled" }
+        }
+      create_building={
+          building="building_tobacco_plantation"
+          level=20
+          reserves=1
+          activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }
+        }
     }
   }
 
@@ -324,11 +318,18 @@
 
   s:STATE_DALAI = {
     region_state:YUL = {
-	  create_building={
-        building="building_fishing_wharf"
-        level=2
-        reserves=1
-        activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
+      create_building={
+        building="building_fishing_wharf_glowfish"
+         add_ownership={ 
+          building={ 
+          type="building_adventuring_guild"
+          country="c:YUL"
+          levels=2
+           region="STATE_DALAI"
+         }
+       }
+      reserves=1
+      activate_production_methods={ "pm_fishing_trawlers" "pm_unrefrigerated" }
       }
     }
   }
@@ -404,11 +405,11 @@
         reserves=1
         activate_production_methods={ "default_building_silk_plantation" "pm_road_carts"  }
       }
-	  create_building={
-        building="building_whaling_station"
+	   create_building={
+        building="building_leviathan_outpost"
         level=1
         reserves=1
-        activate_production_methods={ "pm_simple_whaling" "pm_unrefrigerated" }
+        activate_production_methods={ "pm_manowar_leviathan_ships" "pm_manual_harvesting" }
       }
     }
   }
@@ -539,45 +540,65 @@
   s:STATE_GULTHYR = {
     region_state:ZHU = {
       create_building={
-        building="building_whaling_station"
-        level=1
-        reserves=1
-        activate_production_methods={ "pm_simple_whaling" "pm_unrefrigerated" }
-      }
+				building="building_fishing_wharf_glowfish"
+                add_ownership={ 
+                    building={ 
+                        type="building_adventuring_guild"
+                        country="c:ZHU"
+                        levels=2
+                        region="STATE_KYRKAZ"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_fishing_trawlers" "pm_unrefrigerated" }
+			}
     }
   }
 
   s:STATE_THARKYR = {
     region_state:ZHU = {
       create_building={
-        building="building_fishing_wharf"
-        level=1
-        reserves=1
-        activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
-      }
+				building="building_fishing_wharf_glowfish"
+                add_ownership={ 
+                    building={ 
+                        type="building_adventuring_guild"
+                        country="c:ZHU"
+                        levels=2
+                        region="STATE_URTHOR"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_fishing_trawlers" "pm_unrefrigerated" }
+			}
     }
   }
 
   s:STATE_URTHOR = {
     region_state:ZHU = {
       create_building={
-        building="building_fishing_wharf"
-        level=1
-        reserves=1
-        activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
-      }
+				building="building_fishing_wharf_glowfish"
+                add_ownership={ 
+                    building={ 
+                        type="building_adventuring_guild"
+                        country="c:ZHU"
+                        levels=2
+                        region="STATE_URTHOR"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
+			}
     }
   }
-
   s:STATE_KYRTHAL = {
     region_state:QON = {
-	  create_building={
+      create_building={
         building="building_port"
         level=1
         reserves=1
         activate_production_methods={ "pm_basic_port" }
       }
-	}
+	  }
   }
 
   s:STATE_GROMKYL = {
@@ -586,11 +607,11 @@
   s:STATE_DROKYN = {
     region_state:ZHU = {
 	  create_building={
-        building="building_whaling_station"
+        building="building_leviathan_outpost"
         level=1
         reserves=1
-        activate_production_methods={ "pm_simple_whaling" "pm_unrefrigerated" }
-      }
+        activate_production_methods={ "pm_manowar_leviathan_ships" "pm_manual_harvesting" }
+    }
 	  create_building={
         building="building_port"
         level=1
@@ -634,12 +655,6 @@
         activate_production_methods={ "pm_simple_farming"  "pm_tools_disabled" "pm_no_secondary" }
       }
 	  create_building={
-        building="building_opium_plantation"
-        level=1
-        reserves=1
-        activate_production_methods={ "default_building_opium_plantation" "pm_road_carts"  }
-      }
-	  create_building={
         building="building_fishing_wharf"
         level=1
         reserves=1
@@ -661,12 +676,6 @@
         level=30
         reserves=1
         activate_production_methods={ "pm_simple_farming"  "pm_tools_disabled" "pm_no_secondary" }
-      }
-      create_building={
-        building="building_opium_plantation"
-        level=1
-        reserves=1
-        activate_production_methods={ "default_building_opium_plantation" "pm_road_carts"  }
       }
 	  create_building={
         building="building_fishing_wharf"
@@ -837,12 +846,6 @@
         reserves=1
         activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }
       }
-      create_building={
-        building="building_opium_plantation"
-        level=3
-        reserves=1
-        activate_production_methods={ "default_building_opium_plantation" "pm_road_carts"  }
-      }
 	  create_building={
         building="building_fishing_wharf"
         level=1
@@ -854,13 +857,7 @@
 
   s:STATE_DORAZ = {
     region_state:SHJ = {
-	  create_building={
-        building="building_fishing_wharf"
-        level=1
-        reserves=1
-        activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
-      }
-	}
+    }
   }
 
   s:STATE_BALDBAN = {
@@ -1063,7 +1060,7 @@
       }
 	  create_building={
         building="building_shipyards"
-        level=2
+        level=4
         reserves=1
         activate_production_methods={ "pm_basic_shipbuilding" }
       }
@@ -1361,12 +1358,12 @@
   s:STATE_PLACEHOLDER_EMPTY_2 = {
     region_state:ONG={
 			create_building={
-				building="building_wheat_farm"
+				building="building_livestock_ranch"
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
 						country="c:ONG"
-						levels=1
+						levels=2
 						region="STATE_PLACEHOLDER_EMPTY_1"
 				   }
 				}

@@ -4,10 +4,33 @@
 			type = army
 			hq_region = sr:region_hyena_plains
 
+			name = "Prowlhold Militia"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_PWANIQILIMA
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_MAWIMBIMAJI
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_PWANIQILIMA
+				service_type = conscript
+				count = 10
+			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_MAWIMBIMAJI
-				count = 5
+				count = 20
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_PWANIQILIMA
+				count = 20
 			}
 
 			save_scope_as = pro_army
@@ -15,11 +38,78 @@
 
 		create_character = {
 			is_general = yes
-			hq = region_hyena_plains
+			commander_rank = commander_rank_2
+			hq = sr:region_hyena_plains
+			interest_group = ig_armed_forces
+			age = 35
+			traits = {
+				stalwart_defender
+				expert_defensive_strategist
+			}
 			save_scope_as = pro_general
 		}
 		scope:pro_general = {
+			set_commander_rank = 2
 			transfer_to_formation = scope:pro_army
+		}
+	}
+
+	c:SKR ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_hyena_plains
+
+			name = "Reformed Skravend Army"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_PWANIQWA
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_KIJITOQWA
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_MAWINGUCHANYA
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_dragoons
+				state_region = s:STATE_SAWAMAJI
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_PWANIQWA
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_MAWIMBIMAJI
+				service_type = conscript
+				count = 15
+			}
+
+			save_scope_as = skr_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			hq = sr:region_hyena_plains
+			interest_group = ig_armed_forces
+			age = 32
+			traits = {
+				plains_commander
+				surveyor
+			}
+			save_scope_as = skr_general
+		}
+		scope:skr_general = {
+			transfer_to_formation = scope:skr_army
 		}
 	}
 	c:GPK ?= {

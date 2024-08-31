@@ -1004,7 +1004,7 @@ salt_waste_narrative_events.13 = {
 		default_option = yes
 		trigger = {
 			fully_owns_the_salt_wastes = yes
-			magic_reserves_total >= 400
+			country_arcana >= 400
 		}
 		add_modifier = {
 			name = salt_waste_cure_ritual_2
@@ -1026,7 +1026,7 @@ salt_waste_narrative_events.13 = {
 	# 	trigger = {
 	# 		fully_owns_the_salt_wastes = yes
 	# 		has_law = law_type:law_divine_miracles
-	# 		magic_reserves_total >= 200
+	# 		country_arcana >= 200
 	# 	}
 	# 	add_modifier = {
 	# 		name = salt_waste_cure_ritual_2_clerics
@@ -1044,7 +1044,7 @@ salt_waste_narrative_events.13 = {
 	# 	trigger = {
 	# 		fully_owns_the_salt_wastes = yes
 	# 		has_law = law_type:law_druidic_circles
-	# 		magic_reserves_total >= 200
+	# 		country_arcana >= 200
 	# 	}
 	# 	add_modifier = {
 	# 		name = salt_waste_cure_ritual_2_druids
@@ -1062,7 +1062,7 @@ salt_waste_narrative_events.13 = {
 	# 	trigger = {
 	# 		fully_owns_the_salt_wastes = yes
 	# 		has_law = law_type:law_mage_hunters
-	# 		magic_reserves_total >= 200
+	# 		country_arcana >= 200
 	# 	}
 	# 	add_modifier = {
 	# 		name = salt_waste_cure_ritual_2_mage_hunters
@@ -1077,11 +1077,11 @@ salt_waste_narrative_events.13 = {
 	option = {
 		name = salt_waste_narrative_events.12.continued.b
 		trigger = {
-			magic_reserves_total >= 400
+			country_arcana >= 400
 			# OR = {
-			# 	magic_reserves_total >= 400
+			# 	country_arcana >= 400
 			# 	AND = {
-			# 		magic_reserves_total >= 200
+			# 		country_arcana >= 200
 			# 		OR = {
 			# 			has_law = law_type:law_divine_miracles
 			# 			has_law = law_type:law_druidic_circles
@@ -1095,11 +1095,11 @@ salt_waste_narrative_events.13 = {
 	option = {
 		name = salt_waste_narrative_events.12.continued.c
 		trigger = {
-			magic_reserves_total < 400
+			country_arcana < 400
 			# OR = {
-			# 	magic_reserves_total < 200
+			# 	country_arcana < 200
 			# 	AND = {
-			# 		magic_reserves_total < 400
+			# 		country_arcana< 400
 			# 		AND = {
 			# 			NOT = { has_law = law_type:law_divine_miracles }
 			# 			NOT = { has_law = law_type:law_druidic_circles }
@@ -1155,7 +1155,7 @@ salt_waste_narrative_events.14 = {
 		default_option = yes
 		trigger = {
 			fully_owns_the_salt_wastes = yes
-			magic_reserves_total >= 500
+			country_arcana >= 500
 		}
 		add_modifier = {
 			name = salt_waste_cure_ritual_3
@@ -1183,7 +1183,7 @@ salt_waste_narrative_events.14 = {
 	# 	trigger = {
 	# 		fully_owns_the_salt_wastes = yes
 	# 		has_law = law_type:law_divine_miracles
-	# 		magic_reserves_total >= 300
+	# 		country_arcana >= 300
 	# 	}
 	# 	add_modifier = {
 	# 		name = salt_waste_cure_ritual_3_clerics
@@ -1201,7 +1201,7 @@ salt_waste_narrative_events.14 = {
 	# 	trigger = {
 	# 		fully_owns_the_salt_wastes = yes
 	# 		has_law = law_type:law_druidic_circles
-	# 		magic_reserves_total >= 300
+	# 		country_arcana >= 300
 	# 	}
 	# 	add_modifier = {
 	# 		name = salt_waste_cure_ritual_3_druids
@@ -1219,7 +1219,7 @@ salt_waste_narrative_events.14 = {
 	# 	trigger = {
 	# 		fully_owns_the_salt_wastes = yes
 	# 		has_law = law_type:law_mage_hunters
-	# 		magic_reserves_total >= 300
+	# 		country_arcana >= 300
 	# 	}
 	# 	add_modifier = {
 	# 		name = salt_waste_cure_ritual_3_mage_hunters
@@ -1234,11 +1234,11 @@ salt_waste_narrative_events.14 = {
 	option = {
 		name = salt_waste_narrative_events.12.continued.b
 		trigger = {
-			magic_reserves_total >= 500
+			country_arcana >= 500
 			# OR = {
-			# 	magic_reserves_total >= 500
+			# 	country_arcana >= 500
 			# 	AND = {
-			# 		magic_reserves_total >= 300
+			# 		country_arcana >= 300
 			# 		OR = {
 			# 			has_law = law_type:law_divine_miracles
 			# 			has_law = law_type:law_druidic_circles
@@ -1252,11 +1252,11 @@ salt_waste_narrative_events.14 = {
 	option = {
 		name = salt_waste_narrative_events.12.continued.c
 		trigger = {
-			magic_reserves_total < 500
+			country_arcana < 500
 			# OR = {
-			# 	magic_reserves_total < 300
+			# 	country_arcana < 300
 			# 	AND = {
-			# 		magic_reserves_total < 500
+			# 		country_arcana < 500
 			# 		AND = {
 			# 			NOT = { has_law = law_type:law_divine_miracles }
 			# 			NOT = { has_law = law_type:law_druidic_circles }

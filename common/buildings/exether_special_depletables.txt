@@ -6,10 +6,7 @@
 	buildable = no
 	expandable = no
 		possible = {
-		error_check = {
-			severity = fail
 			is_sea_adjacent = yes
-		}
 	}
 	production_method_groups = {
 		pmg_base_building_ship_graveyard
@@ -76,12 +73,9 @@ building_jellyfish_wharf = {
 	levels_per_mesh = 5
 	buildable = yes #this might be wonky
 	expandable = yes #ibid
-		possible = {
-		error_check = {
-			severity = fail
-			is_sea_adjacent = yes
-		}
-	}
+	possible = {
+		is_sea_adjacent = yes
+	}	
 	production_method_groups = {
 		pmg_base_building_jellyfish_wharf
 	}

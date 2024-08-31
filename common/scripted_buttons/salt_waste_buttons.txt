@@ -106,14 +106,14 @@ cast_defensive_wards_button = {
 		base = 0
 		modifier = {
 			trigger = {
-				magic_reserves_total < 0
+				country_arcana < 0
 				has_modifier = salt_waste_wards
 			}
 			add = 100
 		}
 		modifier = {
 			trigger = {
-				magic_reserves_total >= 100
+				country_arcana >= 100
 				NOT = { has_modifier = salt_waste_wards }
 			}
 			add = 50
@@ -230,7 +230,7 @@ handle_salt_waste_curse_button = {
 		}
 		custom_tooltip = {
 			text = at_least_two_hundred_arcana
-			magic_reserves_total >= 200
+			country_arcana >= 200
 		}
 		custom_tooltip = {
 			text = control_every_salt_waste_state
@@ -252,7 +252,7 @@ handle_salt_waste_curse_button = {
 		modifier = {
 			trigger = {
 				has_healthy_economy = yes
-				magic_reserves_total >= 500
+				country_arcana >= 500
 			}
 			add = 100
 		}
