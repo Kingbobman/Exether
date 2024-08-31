@@ -25,11 +25,11 @@
 				set_ig_trait = ig_trait:ig_trait_clausura_pecoris
 				set_ig_trait = ig_trait:ig_trait_libri_arma
 			}
-		else = {
-			set_ig_trait = ig_trait:ig_arcane_enlightenment
-			set_ig_trait = ig_trait:ig_mystical_traditions
-			set_ig_trait = ig_trait:ig_isolationist
-			}		
+			else = {
+				set_ig_trait = ig_trait:ig_arcane_enlightenment
+				set_ig_trait = ig_trait:ig_mystical_traditions
+				set_ig_trait = ig_trait:ig_isolationist
+			}	
 		}
 
 		if = {
@@ -44,6 +44,7 @@
 				set_interest_group_name = ig_runeseers
 			}
 		}
+
 		else_if = {
 			limit = {
 				OR = {
@@ -58,9 +59,18 @@
 			}
 		}
 
-
-
-
+		if = {
+			limit ={
+				owner ={
+					country_has_primary_culture = cu:south_sea_ravager
+				}
+			}
+			ig:ig_mages = {
+				set_interest_group_name = ig_necromancers
+				remove_ideology = ideology_arcane_scholars
+				add_ideology = ideology_pious_dark
+			}
+		}
 	}
 
 	on_disable = {}
@@ -126,7 +136,7 @@
 		}
 
 		add = {
-			desc = "POP_ARTIFICERS"
+			desc = "POP_PHOENIXS"
 			if = {
 				limit = {
 					is_pop_type = artificers

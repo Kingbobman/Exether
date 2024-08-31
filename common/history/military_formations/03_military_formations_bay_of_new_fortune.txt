@@ -4,10 +4,33 @@
 			type = army
 			hq_region = sr:region_hyena_plains
 
+			name = "Prowlhold Militia"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_PWANIQILIMA
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_MAWIMBIMAJI
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_PWANIQILIMA
+				service_type = conscript
+				count = 10
+			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_MAWIMBIMAJI
-				count = 5
+				count = 20
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_PWANIQILIMA
+				count = 20
 			}
 
 			save_scope_as = pro_army
@@ -15,11 +38,78 @@
 
 		create_character = {
 			is_general = yes
-			hq = region_hyena_plains
+			commander_rank = commander_rank_2
+			hq = sr:region_hyena_plains
+			interest_group = ig_armed_forces
+			age = 35
+			traits = {
+				stalwart_defender
+				expert_defensive_strategist
+			}
 			save_scope_as = pro_general
 		}
 		scope:pro_general = {
+			set_commander_rank = 2
 			transfer_to_formation = scope:pro_army
+		}
+	}
+
+	c:SKR ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_hyena_plains
+
+			name = "Reformed Skravend Army"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_PWANIQWA
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_KIJITOQWA
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_MAWINGUCHANYA
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_dragoons
+				state_region = s:STATE_SAWAMAJI
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_PWANIQWA
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_MAWIMBIMAJI
+				service_type = conscript
+				count = 15
+			}
+
+			save_scope_as = skr_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			hq = sr:region_hyena_plains
+			interest_group = ig_armed_forces
+			age = 32
+			traits = {
+				plains_commander
+				surveyor
+			}
+			save_scope_as = skr_general
+		}
+		scope:skr_general = {
+			transfer_to_formation = scope:skr_army
 		}
 	}
 	c:GPK ?= {
@@ -222,6 +312,212 @@
 		}
 		scope:rse_general = {
 			transfer_to_formation = scope:rse_army
+		}
+	}
+	c:GMR ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_north_chin_desert
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_NAWIYANU
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_SAVAGE_REACH
+				count = 4
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_NAWIYANU
+				count = 2
+			}
+			save_scope_as = gmr_army
+		}
+		
+		create_character = {
+			is_general = yes
+			hq = region_north_chin_desert
+			save_scope_as = gmr_general
+		}
+		scope:gmr_general = {
+			transfer_to_formation = scope:gmr_army
+		}
+	}
+	c:SNL ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_salt_wastes
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_SNAILBANE
+				count = 16
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_SNAILBANE
+				count = 4
+			}
+			save_scope_as = snl_army
+		}
+		
+		create_character = {
+			is_general = yes
+			hq = region_salt_wastes
+			save_scope_as = snl_general
+		}
+		scope:snl_general = {
+			transfer_to_formation = scope:snl_army
+		}
+	}
+	c:BGR ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_salt_wastes
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_ROUGHSTONE_TERRITORY_2
+				count = 11
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_FIERCEHOLD
+				count = 6
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_ROUGHSTONE_TERRITORY_2
+				count = 4
+			}
+		}
+	}
+	c:KUN ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_south_chin_desert
+			name = "Raider Defence Force"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_PACHAQULLU
+				count = 15
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_MALLKIYAKU
+				count = 15
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_MALLKIYAKU
+				service_type = conscript
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_PACHAQULLU
+				service_type = conscript
+				count = 5
+			}
+			save_scope_as = kun_army_1
+		}
+		create_character = {
+			is_general = yes
+			hq = region_south_chin_desert
+			save_scope_as = kun_general_1
+		}
+		scope:kun_general_1 = {
+			set_commander_rank = 2
+			transfer_to_formation = scope:kun_army_1
+		}
+	}
+	c:TIT ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_north_chin_desert
+			name = "Raider Defence Force"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_WAYLLAPAMPA
+				count = 15
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_TIKAQULLU
+				count = 15
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_WAYLLAPAMPA
+				service_type = conscript
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_TIKAQULLU
+				service_type = conscript
+				count = 10
+			}
+			save_scope_as = tit_army_1
+		}
+		create_character = {
+			is_general = yes
+			hq = region_north_chin_desert
+			save_scope_as = tit_general_1
+		}
+		scope:tit_general_1 = {
+			set_commander_rank = 2
+			transfer_to_formation = scope:tit_army_1
+		}
+	}
+	c:PAC ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_north_chin_desert
+			name = "Raider Defence Force"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_KUCHUYPATA
+				count = 20
+			}
+			save_scope_as = pac_army_1
+		}
+		create_character = {
+			is_general = yes
+			hq = region_north_chin_desert
+			save_scope_as = pac_general_1
+		}
+		scope:pac_general_1 = {
+			set_commander_rank = 2
+			transfer_to_formation = scope:pac_army_1
+		}
+	}
+	c:WAQ ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_south_chin_desert
+			name = "The Oasis Guards"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_NAWI_OASIS
+				count = 20
+			}
+			save_scope_as = waq_army_1
+		}
+		create_character = {
+			is_general = yes
+			hq = region_south_chin_desert
+			save_scope_as = waq_general_1
+		}
+		scope:waq_general_1 = {
+			transfer_to_formation = scope:waq_army_1
 		}
 	}
 }

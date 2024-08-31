@@ -28,7 +28,7 @@
 					owner = { 
 						religion = {
 							AND = {
-								has_discrimination_trait = nature_domain
+								has_discrimination_trait = fey_domain
 								NOT = {
 									has_discrimination_trait = chivalrous_heritage
 								}
@@ -55,15 +55,25 @@
 				set_ig_trait = ig_trait:ig_trait_substitutio_tributi
 			}
 
-
-
-
 			else = {
 				set_ig_trait = ig_trait:ig_trait_old_ways
 				set_ig_trait = ig_trait:ig_trait_honest_work
 				set_ig_trait = ig_trait:ig_trait_farmers_markets
 			}
 		}
+
+		if = {
+				limit ={
+					owner ={
+						country_has_primary_culture = cu:south_sea_ravager
+					}
+				}
+				ig:ig_rural_folk = {
+					remove_ideology = ideology_agrarian
+					add_ideology = ideology_liberal_agrarian
+				}
+		}
+
 	}
 
 	on_disable = {}
@@ -126,7 +136,7 @@
 		}
 
 		add = {
-			desc = "DRUIDIC_LAW"
+			desc = "GOLEM_LAW"
 			if = {
 				limit = {
 					OR = {

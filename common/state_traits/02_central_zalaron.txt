@@ -1,6 +1,8 @@
 ﻿state_trait_dark_morass = {
 	icon = "gfx/interface/icons/state_trait_icons/swamp.dds"
-	
+	disabling_technologies = {
+		"railways"
+	}
 	modifier = {
 		state_construction_mult = -0.15
 		state_infrastructure_mult = -0.15
@@ -11,7 +13,7 @@ state_trait_starshimmer_pool = {
 	icon = "gfx/interface/icons/state_trait_icons/river.dds"
 	
 	modifier = {
-		state_infrastructure_add = 15
+		state_infrastructure_add = 20
 	}	
 }
 
@@ -65,6 +67,7 @@ state_trait_thiralian_forest = {
 	
 	modifier = {
 		building_group_bg_logging_throughput_add = 0.20
+		building_group_bg_hunting_throughput_add = 0.20
 	}
 }
 
@@ -73,6 +76,7 @@ state_trait_feylight_forest = {
 	
 	modifier = {
 		building_group_bg_logging_throughput_add = 0.25
+		building_group_bg_hunting_throughput_add = 0.25
 	}
 }
 

@@ -4,223 +4,22 @@ GLOBAL = {
 	every_state = {
 		if = {
 			limit = {
-				exether_is_coastal = yes
+				exether_is_inland = yes
 			}
 			set_variable = {
-				name = exe_is_coastal
+				name = exe_is_inland
 			}
 		}
 	}
 
 
-	# Arcane Civis 
+	# Arcane Civics
 	every_country = {
-		#ORDER OF THE SUN
-		if = {
-			limit = {
-				this ?= c:AUM
-			}
-			ritual_divine_2 = yes
-			get_cost = yes
-			calculate_rituals = yes
-
-		}
-
-		#JURIAN'S INQUSITION
-		if = {
-			limit = {
-				this ?= c:JUR
-			}
-			ritual_divine_2 = yes
-			get_cost = yes
-			calculate_rituals = yes
-
-		}	
-
-		#RAVENCLIFF
-		if = {
-			limit = {
-				this ?= c:RVC
-			}
-			ritual_dark_3 = yes
-			get_cost = yes
-			ritual_dark_4 = yes
-			get_cost = yes
-			calculate_rituals = yes
-
-		}
-
-		#FOXWORTH
-		if = {
-			limit = {
-				this ?= c:FOX
-			}
-			ritual_antimagic_4 = yes
-			get_cost = yes
-			calculate_rituals = yes
-
-		}
-
-		#ROSECROFT
-		if = {
-			limit = {
-				this ?= c:ROF
-			}
-			ritual_antimagic_4 = yes
-			get_cost = yes
-			calculate_rituals = yes
-
-		}	
-
-		#RAVIK
-		if = {
-			limit = {
-				this ?= c:RAV
-			}
-			ritual_dark_1 = yes
-			get_cost = yes
-			ritual_dark_2 = yes
-			get_cost = yes
-			calculate_rituals = yes
-
-		}
-
-		#ARRADOR
-		if = {
-			limit = {
-				this ?= c:ARR
-			}
-			ritual_artificer_5 = yes
-			get_cost = yes
-			calculate_rituals = yes
-
-		}
-
-		#ACHON
-		if = {
-			limit = {
-				this ?= c:AHO
-			}
-			ritual_astrology_2 = yes
-			get_cost = yes
-			ritual_astrology_3 = yes
-			get_cost = yes
-			calculate_rituals = yes
-
-		}
-
-		#SECRET KEEPERS
-		if = {
-			limit = {
-				this ?= c:VHT
-			}
-			ritual_astrology_2 = yes
-			get_cost = yes
-			ritual_astrology_3 = yes
-			get_cost = yes
-			calculate_rituals = yes
-
-		}
-
-		#OAZJARO
-		if = {
-			limit = {
-				this ?= c:OAZ
-			}
-			ritual_antimagic_1 = yes
-			get_cost = yes
-			calculate_rituals = yes
-
-		}
-
-		#ZAHRATIA
-		if = {
-			limit = {
-				this ?= c:ZHR
-			}
-			ritual_antimagic_1 = yes
-			get_cost = yes
-			calculate_rituals = yes
-
-		}
-
-		#SOLNOMO
-		if = {
-			limit = {
-				this ?= c:SNM
-			}
-			ritual_antimagic_1 = yes
-			get_cost = yes
-			calculate_rituals = yes
-
-		}
-
-		#VERKISIRIO
-		if = {
-			limit = {
-				this ?= c:VER
-			}
-			ritual_astrology_5 = yes
-			get_cost = yes
-			calculate_rituals = yes
-
-		}
-
-		#ZUBAYRA
-		if = {
-			limit = {
-				this ?= c:ZUB
-			}
-			ritual_astrology_5 = yes
-			get_cost = yes
-			calculate_rituals = yes
-
-		}
-
-		#LISINIA
-		if = {
-			limit = {
-				this ?= c:LIS
-			}
-			ritual_astrology_5 = yes
-			get_cost = yes
-			calculate_rituals = yes
-
-		}
-
-		#HOUTBLOM
-		if = {
-			limit = {
-				this ?= c:HOU
-			}
-			ritual_druidic_5 = yes
-			get_cost = yes
-			calculate_rituals = yes
-
-		}
-
-		#SEESKAT
-		if = {
-			limit = {
-				this ?= c:SEE
-			}
-			ritual_druidic_5 = yes
-			get_cost = yes
-			calculate_rituals = yes
-
-		}
-
-		#FISKEROER
-		if = {
-			limit = {
-				this ?= c:FIS
-			}
-			ritual_druidic_5 = yes
-			get_cost = yes
-			calculate_rituals = yes
-
-		}	
+		trigger_event = {
+            id = civic_setup.1
+        }
 	}
+
 
 
 	every_country = {
@@ -544,16 +343,30 @@ GLOBAL = {
 		value = 0
 	}
 
-	setup_ritual_active = yes
-	setup_ritual_divine = yes
-	setup_ritual_druidic = yes
-	setup_ritual_artificer = yes
-	setup_ritual_astrology = yes
-	setup_ritual_dark = yes
-	setup_ritual_antimagic = yes
-	setup_ritual_psionic = yes
+	setup_arcana_active = yes
+	setup_arcana_unicorn = yes
+	setup_arcana_golem = yes
+	setup_arcana_phoenix = yes
+	setup_arcana_sphinx = yes
+	setup_arcana_fiend = yes
+	setup_arcana_justice = yes
+	setup_arcana_siren = yes
 	setup_arcana_surplus = yes
 	
+
+	every_country = {
+		limit = {
+			is_major_unifier_candidate = yes
+		}
+		effect_has_major_formable = yes
+
+		if = {
+			limit = {
+				can_form_nation = GAV
+			}
+			effect_has_custom_journals = yes 
+		}
+	}
 
 	every_country = {
 
@@ -571,8 +384,7 @@ GLOBAL = {
 			value = 99
 		}
 
-
-		calculate_rituals = yes
+		calculate_arcanas = yes
 
 					### Variable Errors Fixing - HACK!  Fix these eventually
 		

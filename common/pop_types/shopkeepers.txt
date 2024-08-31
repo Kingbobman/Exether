@@ -30,14 +30,6 @@
 	
 	qualifications_growth_desc = "SHOPKEEPERS_QUALIFICATIONS_DESC"
 	qualifications = {
-		# baseline: ( wealth - 5 ) / 2, norm 10 for Clerks with Wealth 15
-		add = {
-			value = wealth
-			subtract = 5
-			min = 0
-			desc = "QUALIFICATIONS_WEALTH_FACTOR"
-		}
-		# Reducing the number of checks
 		if = {
 			limit = { 
 				is_peasant_under_serfdom = yes 
@@ -49,23 +41,33 @@
 		}
 		else_if = {
 			limit = {
-				is_pop_type = clerks
+				wealth > 5
 			}
-			multiply = {
-				value = 5
-				desc = "QUALIFICATIONS_FAVORED_TYPE"
+			add = {
+				value = wealth
+				subtract = 5
+				desc = "QUALIFICATIONS_WEALTH_FACTOR"
+			}
+			if = {
+				limit = {
+					OR = {
+						is_pop_type = clerks
+						is_pop_type = farmers
+					}
+					
+				}
+				multiply = {
+					value = 5
+					desc = "QUALIFICATIONS_FAVORED_TYPE"
+				}
 			}
 		}
-		else_if = {
-			limit = {
-				is_pop_type = farmers
-			}
-			multiply = {
-				value = 4
-				desc = "QUALIFICATIONS_FAVORED_TYPE"
+		else = {		
+			value = {
+				desc = "QUALIFICATIONS_INSUFFICIENT_WEALTH_DECAY"
+				value = -1
 			}
 		}
-
 	}
 	
 	portrait_age = {

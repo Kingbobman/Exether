@@ -33,7 +33,7 @@ trinkets = {
 # Used in trinkets production chain
 #
 relics = {
-	texture = "gfx/interface/icons/goods_icons/treasure.dds"
+	texture = "gfx/interface/icons/goods_icons/relics.dds"
 	cost = 100
     category = industrial
 
@@ -42,7 +42,7 @@ relics = {
 
 luxury_potions = {
 	texture = "gfx/interface/icons/goods_icons/luxury_potions.dds"
-	cost = 85  #debatable
+	cost = 80  #debatable
 	category = luxury
 
 	obsession_chance = 1.8 #hmmm
@@ -106,7 +106,7 @@ ectoplasm = {
 }
 
 airships = {
-	texture = "gfx/interface/icons/goods_icons/clippers.dds"
+	texture = "gfx/interface/icons/goods_icons/airship.dds"
 	cost = 70
 	category = industrial
 
@@ -116,13 +116,42 @@ airships = {
 	convoy_cost_multiplier = 0.25
 }
 
-#skycruisers = {
-	texture = "gfx/interface/icons/goods_icons/steamers.dds"
-	cost = 80
+thaumacores = {
+	texture = "gfx/interface/icons/goods_icons/thaumacores.dds" #Replace icon later
+	cost = 100
 	category = industrial
-
-	obsession_chance = 0.6
-	prestige_factor = 6
-	traded_quantity = 3
-	convoy_cost_multiplier = 0.25
+	convoy_cost_multiplier = 1.25
+	prestige_factor = 10
+	traded_quantity = 4
 }
+
+gizmos = {
+	texture = "gfx/interface/icons/goods_icons/gizmo.dds"
+	cost = 60
+	category = industrial
+	
+	prestige_factor = 10
+	
+	traded_quantity = 4
+	convoy_cost_multiplier = 1.5
+}
+
+soulwrought_intangible = {
+	texture = "gfx/interface/icons/generic_icons/population.dds"
+	cost = 100
+	category = luxury
+	tradeable = no
+	fixed_price = yes
+	prestige_factor = 3
+}
+
+# #skycruisers = {
+# 	texture = "gfx/interface/icons/goods_icons/steamers.dds"
+# 	cost = 80
+# 	category = industrial
+
+# 	obsession_chance = 0.6
+# 	prestige_factor = 6
+# 	traded_quantity = 3
+# 	convoy_cost_multiplier = 0.25
+# }

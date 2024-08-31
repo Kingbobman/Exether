@@ -10,12 +10,11 @@
 	}	
 
 	lawgroup_magic = {
-		law_no_magic = strongly_disapprove
-		law_divine_miracles = approve
+		law_no_magic = disapprove
+		law_divine_miracles = neutral
 		law_druidic_circles = approve
-		law_artificer_guilds = approve
+		law_artificer_guilds = neutral
 		law_astrological_studies = strongly_approve
-		law_dark_arts = neutral
 		law_mage_hunters = strongly_disapprove
 	}
 }
@@ -63,7 +62,7 @@ ideology_pious_dark = {
 		law_druidic_circles = neutral
 		law_artificer_guilds = neutral
 		law_astrological_studies = neutral
-		law_dark_arts = strongly_approve
+		
 		law_mage_hunters = neutral
 	}
 }
@@ -91,7 +90,7 @@ ideology_pious_light = {
 		law_druidic_circles = neutral
 		law_artificer_guilds = neutral
 		law_astrological_studies = neutral
-		law_dark_arts = strongly_disapprove
+		
 		law_mage_hunters = disapprove
 	}
 
@@ -119,7 +118,7 @@ ideology_pious_inventors = {
 		law_druidic_circles = neutral
 		law_artificer_guilds = strongly_approve
 		law_astrological_studies = neutral
-		law_dark_arts = disapprove
+		
 		law_mage_hunters = disapprove
 	}
 
@@ -150,7 +149,7 @@ ideology_pious_knowledge = {
 		law_druidic_circles = neutral
 		law_artificer_guilds = approve
 		law_astrological_studies = strongly_approve
-		law_dark_arts = neutral
+		
 		law_mage_hunters = disapprove
 	}
 
@@ -183,7 +182,7 @@ ideology_pious_magoclast = {
 		law_druidic_circles = disapprove
 		law_artificer_guilds = disapprove
 		law_astrological_studies = strongly_disapprove
-		law_dark_arts = disapprove
+		
 		law_mage_hunters = strongly_approve
 	}
 }
@@ -211,7 +210,7 @@ ideology_pious_druidic = {
 		law_druidic_circles = strongly_approve
 		law_artificer_guilds = strongly_disapprove
 		law_astrological_studies = neutral
-		law_dark_arts = neutral
+		
 		law_mage_hunters = disapprove
 	}
 
@@ -263,7 +262,7 @@ ideology_corporatist_magoclast = {
 		law_druidic_circles = disapprove
 		law_artificer_guilds = disapprove
 		law_astrological_studies = strongly_disapprove
-		law_dark_arts = disapprove
+		
 		law_mage_hunters = strongly_approve
 	}
 }
@@ -304,7 +303,7 @@ ideology_corporatist_dark = {
 		law_druidic_circles = neutral
 		law_artificer_guilds = neutral
 		law_astrological_studies = neutral
-		law_dark_arts = strongly_approve
+		
 		law_mage_hunters = neutral
 	}
 }
@@ -345,7 +344,7 @@ ideology_corporatist_druidic = {
 		law_druidic_circles = strongly_approve
 		law_artificer_guilds = strongly_disapprove
 		law_astrological_studies = neutral
-		law_dark_arts = neutral
+		
 		law_mage_hunters = disapprove
 	}
 
@@ -396,7 +395,7 @@ ideology_corporatist_light = {
 		law_druidic_circles = neutral
 		law_artificer_guilds = neutral
 		law_astrological_studies = neutral
-		law_dark_arts = strongly_disapprove
+		
 		law_mage_hunters = disapprove
 	}
 }
@@ -438,7 +437,7 @@ ideology_corporatist_inventor = {
 		law_druidic_circles = neutral
 		law_artificer_guilds = strongly_approve
 		law_astrological_studies = neutral
-		law_dark_arts = disapprove
+		
 		law_mage_hunters = disapprove
 	}
 
@@ -489,7 +488,7 @@ ideology_corporatist_knowledge = {
 		law_druidic_circles = neutral
 		law_artificer_guilds = approve
 		law_astrological_studies = strongly_approve
-		law_dark_arts = neutral
+		
 		law_mage_hunters = disapprove
 	}
 
@@ -514,5 +513,124 @@ ideology_luddite_ig = {
 	lawgroup_magic = {
 		law_artificer_guilds = strongly_disapprove
 	}
+}
 
+#Same as caudillos
+ideology_admiralty ={
+	icon = "gfx/interface/icons/ideology_icons/jingoist.dds"
+
+	lawgroup_bureaucracy ={
+		law_elected_bureaucrats = disapprove
+		law_hereditary_bureaucrats = approve
+		law_appointed_bureaucrats = approve
+	}
+
+	lawgroup_distribution_of_power = {
+		law_anarchy = strongly_disapprove
+		law_universal_suffrage = strongly_disapprove
+		law_census_voting = disapprove
+		law_technocracy = neutral
+		law_wealth_voting = neutral
+		law_oligarchy = approve
+		law_single_party_state = approve
+		law_autocracy = strongly_approve
+		law_landed_voting = strongly_approve
+	}
+
+	lawgroup_governance_principles = {
+		law_council_republic = strongly_disapprove
+		law_theocracy = disapprove
+		law_monarchy = neutral
+		law_parliamentary_republic = neutral
+		law_presidential_republic = strongly_approve
+	}
+
+	lawgroup_policing = {
+		law_no_police = disapprove
+		law_dedicated_police = neutral
+		law_militarized_police = neutral
+		law_local_police = approve
+	}
+}
+
+#Same as jeffersonian
+ideology_liberal_agrarian = {
+	icon = "gfx/interface/icons/ideology_icons/jeffersonian.dds"
+
+	lawgroup_economic_system = {
+		law_industry_banned = neutral
+		law_agrarianism = approve
+		law_command_economy = strongly_disapprove
+		law_laissez_faire = disapprove
+		law_interventionism = neutral
+		law_cooperative_ownership = disapprove
+		law_traditionalism = neutral
+	}
+
+	lawgroup_distribution_of_power = {
+		law_anarchy = neutral
+		law_universal_suffrage = strongly_approve
+		law_census_voting = approve
+		law_technocracy = strongly_disapprove
+		law_wealth_voting = disapprove
+		law_oligarchy = strongly_disapprove
+		law_single_party_state = disapprove
+		law_autocracy = strongly_disapprove
+		law_landed_voting = disapprove
+	}
+
+	lawgroup_land_reform = {
+		law_serfdom = strongly_disapprove
+		law_collectivized_agriculture = disapprove
+		law_commercialized_agriculture = disapprove
+		law_tenant_farmers = neutral
+		law_homesteading = strongly_approve
+	}
+
+	lawgroup_taxation = {
+		law_land_based_taxation = disapprove
+		law_graduated_taxation = neutral
+		law_per_capita_based_taxation = neutral
+		law_proportional_taxation = neutral
+		law_consumption_based_taxation = approve
+	}
+}
+
+ideology_anarchical_reactionary = {
+	icon = "gfx/interface/icons/ideology_icons/reactionary.dds"
+	
+	lawgroup_governance_principles = {
+		law_monarchy = approve
+		law_theocracy = approve
+		law_magocracy = approve		
+		law_presidential_republic = neutral
+		law_parliamentary_republic = neutral
+		law_council_republic = disapprove
+	}
+
+	lawgroup_citizenship = {
+		law_ethnostate = approve
+		law_national_supremacy = strongly_approve
+		law_racial_segregation = approve
+		law_cultural_exclusion = neutral
+		law_multicultural = disapprove	
+	}
+
+	lawgroup_migration = {
+		law_closed_borders = approve
+		law_migration_controls = strongly_approve
+		law_no_migration_controls = disapprove
+	}
+
+	lawgroup_distribution_of_power = {
+		law_universal_suffrage = approve
+		law_anarchy = strongly_approve
+		law_census_voting = neutral
+		law_single_party_state = neutral
+		law_wealth_voting = disapprove
+		law_landed_voting = disapprove
+		law_technocracy = disapprove
+		law_oligarchy = strongly_disapprove
+		law_autocracy = strongly_disapprove		
+	}
 }

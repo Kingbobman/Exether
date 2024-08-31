@@ -1,0 +1,260 @@
+﻿establish_salt_rangers_button = {
+	name = "establish_salt_rangers_button"
+	desc = "establish_salt_rangers_button_desc"
+
+	selected = {
+		has_modifier = salt_waste_rangers
+	}
+	
+	visible = {
+		NOT = { has_modifier = salt_waste_extra_evil }
+	}
+
+	possible = {
+		NOT = { has_modifier = salt_waste_rangers_cooldown }
+		any_scope_state = {
+			has_state_trait = state_trait_salt_wastes
+		}
+		hidden_trigger = {
+			NOT = { has_variable = salt_waste_rangers_consequences_happening }
+			NOT = { has_variable = block_clicking_any_salt_waste_buttons }	
+		}
+	}
+
+	effect = {
+		add_modifier = {
+			name = salt_waste_rangers_cooldown
+			months = 3
+		}
+		if = {
+			limit = {
+				has_modifier = salt_waste_rangers
+			}
+			remove_modifier = salt_waste_rangers
+		}
+		else = {
+			add_modifier = {
+				name = salt_waste_rangers
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 0
+		modifier = {
+			trigger = {
+				bureaucracy < 0
+				has_healthy_economy = no
+				has_modifier = salt_waste_rangers
+			}
+			add = 100
+		}
+		modifier = {
+			trigger = {
+				has_healthy_economy = yes
+				bureaucracy >= 0
+				approaching_bureaucracy_shortage = no 
+				NOT = { has_modifier = salt_waste_rangers }
+			}
+			add = 50
+		}
+	}
+}
+
+cast_defensive_wards_button = {
+	name = "cast_defensive_wards_button"
+	desc = "cast_defensive_wards_button_desc"
+
+	selected = {
+		has_modifier = salt_waste_wards
+	}
+	
+	visible = {
+		NOT = { has_modifier = salt_waste_extra_evil }
+	}
+
+	possible = {
+		NOT = { has_modifier = salt_waste_wards_cooldown }
+		any_scope_state = {
+			has_state_trait = state_trait_salt_wastes
+		}
+		hidden_trigger = {
+			NOT = { has_variable = salt_waste_wards_consequences_happening }
+			NOT = { has_variable = block_clicking_any_salt_waste_buttons }
+		}
+	}
+
+	effect = {
+		add_modifier = {
+			name = salt_waste_wards_cooldown
+			months = 3
+		}
+		if = {
+			limit = {
+				has_modifier = salt_waste_wards
+			}
+			remove_modifier = salt_waste_wards
+		}
+		else = {
+			add_modifier = {
+				name = salt_waste_wards
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 0
+		modifier = {
+			trigger = {
+				country_arcana < 0
+				has_modifier = salt_waste_wards
+			}
+			add = 100
+		}
+		modifier = {
+			trigger = {
+				country_arcana >= 100
+				NOT = { has_modifier = salt_waste_wards }
+			}
+			add = 50
+		}
+	}
+}
+
+fund_wasteland_patrols_button = {
+	name = "fund_wasteland_patrols_button"
+	desc = "fund_wasteland_patrols_button_desc"
+
+	selected = {
+		has_modifier = salt_waste_patrols
+	}
+	
+	visible = {
+		NOT = { has_modifier = salt_waste_extra_evil }
+	}
+
+	possible = {
+		NOT = { has_modifier = salt_waste_patrols_cooldown }
+		any_scope_state = {
+			has_state_trait = state_trait_salt_wastes
+		}
+		hidden_trigger = {
+			NOT = { has_variable = salt_waste_patrols_consequences_happening }
+			NOT = { has_variable = block_clicking_any_salt_waste_buttons }
+		}
+	}
+
+	effect = {
+		add_modifier = {
+			name = salt_waste_patrols_cooldown
+			months = 3
+		}
+		if = {
+			limit = {
+				has_modifier = salt_waste_patrols
+			}
+			remove_modifier = salt_waste_patrols
+		}
+		else = {
+			add_modifier = {
+				name = salt_waste_patrols
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 0
+		modifier = {
+			trigger = {
+				has_healthy_economy = no
+				has_modifier = salt_waste_patrols
+			}
+			add = 100
+		}
+		modifier = {
+			trigger = {
+				has_healthy_economy = yes
+				NOT = { has_modifier = salt_waste_patrols }
+			}
+			add = 50
+		}
+	}
+}
+
+handle_salt_waste_curse_button = {
+	name = "handle_salt_waste_curse_button"
+	desc = "handle_salt_waste_curse_button_desc"
+
+	selected = {
+		OR = {
+			has_modifier = salt_waste_cure_ritual_1
+			has_modifier = salt_waste_cure_ritual_2
+			has_modifier = salt_waste_cure_ritual_2_clerics
+			has_modifier = salt_waste_cure_ritual_2_druids
+			has_modifier = salt_waste_cure_ritual_2_mage_hunters
+			has_modifier = salt_waste_cure_ritual_3
+			has_modifier = salt_waste_cure_ritual_3_clerics
+			has_modifier = salt_waste_cure_ritual_3_druids
+			has_modifier = salt_waste_cure_ritual_3_mage_hunters
+		}
+	}
+
+	visible = {
+		NOT = { has_modifier = salt_waste_extra_evil }
+		NOT = { exists = c:SWF }
+	}
+
+	possible = {
+		hidden_trigger = {
+			NOT = { has_variable = handle_salt_waste_curse_button_clicked }
+			NOT = { has_variable = block_clicking_any_salt_waste_buttons }
+			any_scope_state = {
+				has_state_trait = state_trait_salt_wastes
+			}
+		}
+		custom_tooltip = {
+			text = not_ending_salt_waste_curse_tt
+			NOT = { has_modifier = salt_waste_cure_ritual_1 }
+			NOT = { has_modifier = salt_waste_cure_ritual_2 }
+			NOT = { has_modifier = salt_waste_cure_ritual_2_clerics }
+			NOT = { has_modifier = salt_waste_cure_ritual_2_druids }
+			NOT = { has_modifier = salt_waste_cure_ritual_2_mage_hunters }
+			NOT = { has_modifier = salt_waste_cure_ritual_3 }
+			NOT = { has_modifier = salt_waste_cure_ritual_3_clerics }
+			NOT = { has_modifier = salt_waste_cure_ritual_3_druids }
+			NOT = { has_modifier = salt_waste_cure_ritual_3_mage_hunters }
+		}
+		institution_investment_level = {
+			institution = institution_magical_focus
+			value >= 4
+		}
+		custom_tooltip = {
+			text = at_least_two_hundred_arcana
+			country_arcana >= 200
+		}
+		custom_tooltip = {
+			text = control_every_salt_waste_state
+			fully_owns_the_salt_wastes = yes
+		}
+	}
+
+	effect = {
+		trigger_event = {
+			id = salt_waste_narrative_events.12
+			days = 1
+			popup = yes
+		}
+		set_variable = handle_salt_waste_curse_button_clicked
+	}
+	
+	ai_chance = {
+		base = 0
+		modifier = {
+			trigger = {
+				has_healthy_economy = yes
+				country_arcana >= 500
+			}
+			add = 100
+		}
+	}
+}

@@ -1,4 +1,4 @@
-##
+﻿##
 # Very expensive building to bring in additional relics.
 # Intentionally high cost to operate.
 #
@@ -8,16 +8,16 @@ building_sunken_ruin_expedition = {
 
     # TODO: New port textures
 	texture = "gfx/interface/icons/building_icons/diving_bell.dds"
-	background = "gfx/interface/icons/building_icons/backgrounds/diving_bell.dds"
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_fishing.dds"
 	naval = yes
 	unlocking_technologies = { admiralty }
 
 	required_construction = construction_cost_very_high
 
     production_method_groups = {
-        exether.pmg.sunken_ruin_expedition
-        exether.pmg.sunken_ruin_expedition_airship_sighting
-        exether.pmg.sunken_ruin_expedition_potions
+        pmg_sunken_ruin_expedition
+        pmg_sunken_ruin_expedition_airship_sighting
+        pmg_sunken_ruin_expedition_potions
     }
 
 	# Can only build naval bases on the coast
@@ -26,6 +26,5 @@ building_sunken_ruin_expedition = {
 	}
 
     # TODO: Change to match adventurer ownership methods
-	cannot_switch_owner = yes
 	ownership_type = self
 }

@@ -88,6 +88,7 @@ on_monthly_pulse_country = {
 		calculate_arcana_surplus 
 		#delay = { days = 7 }
 		fund_lobbies_monthly_events
+		queue_port
 	}
 }
 
@@ -97,7 +98,7 @@ calculate_arcana_surplus = {
 		add_modifier = {
 			name = surplus_arcana 
 			multiplier = {
-				value = root.magic_reserves_total
+				value = root.arcana
 				divide = 600
 			}
 		}
@@ -224,6 +225,13 @@ on_yearly_pulse_country = {
 				}
 			}
 		}
+		
+		if = {
+			limit = {
+				has_modifier = salt_waste_half_orcs_birth
+			}
+			trigger_event = { id = salt_waste_narrative_events.2 }
+		}
 	}
 	on_actions = { # delay ensures events won't fire simultaneously
 		on_yearly_events
@@ -312,7 +320,9 @@ on_monthly_pulse_state = {
 	random_events = {
 		10 = goldrush.5
 	}
-
+	on_actions = {
+		build_soulwrought
+	}
 }
 on_half_yearly_pulse_state = {}
 on_yearly_pulse_state = {
@@ -367,6 +377,17 @@ on_battle_lost = {}
 
 # Root = Building
 on_building_built = {
+	effect = { 
+		    if = {
+		        limit = {
+		            is_building_type = building_soulwrought_assembly_plant
+		        }
+		        set_variable = {
+		            name = soulwrought_assemble_count
+		            value = modifier:state_soulwrought_assembled_add
+		        }
+			}		
+	}
 }
 
 # Root = Building
@@ -774,6 +795,7 @@ on_diplomatic_pact_third_party_auto_break = {
 # scope:target = Released Country
 on_country_released_as_independent = {
 	effect = {
+		calculate_arcanas = yes
 		if = {
 			limit = {
 				scope:target = {
@@ -797,6 +819,7 @@ on_country_released_as_independent = {
 # scope:target = Released Country
 on_country_released_as_own_subject = {
 	effect = {
+		calculate_arcanas = yes
 
 	}
 }
@@ -805,12 +828,14 @@ on_country_released_as_own_subject = {
 # scope:target = Released Country
 on_country_released_as_overlord_subject = {
 	effect = {
+		calculate_arcanas = yes
 	}
 }
 
 # Root = Country
 on_country_formed = {
 	effect = {
+		calculate_arcanas = yes
 		#Add custom unification events here later
 		if = {
 			limit = {
@@ -1565,6 +1590,7 @@ on_secession_end = {
 # This action is triggered after `on_revolution_end`
 on_civil_war_won = {
 	effect = {
+		calculate_arcanas = yes
 		if = {
 			limit = {
 				has_variable = anti_monarchist_revolution
@@ -1953,14 +1979,7 @@ on_political_movement_disbanded = {
 # Root = Colony state
 on_colony_created = {
 	effect = {
-		if = {
-			limit = {
-				exether_is_coastal = yes
-			}
-			set_variable = {
-				name = exe_is_coastal
-			}
-		}
+		
 	}
 }
 
@@ -2214,6 +2233,58 @@ on_power_bloc_struggle_started = {
 			set_variable = achievement_im_the_captain_now_challanger_var
 		}
 	}
+}
+
+build_soulwrought = {
+    effect = {
+        if = {
+            limit = {
+                any_scope_building = {
+                    is_building_type = building_soulwrought_assembly_plant
+                }
+            }
+
+			if = {
+				limit = {
+					NOT = {
+						has_variable = soulwrought_assemble_count
+					}
+				}
+				set_variable = {
+					name = soulwrought_assemble_count
+					value = 0
+				}
+			}
+
+			set_variable = {
+                name = assembly
+                value = modifier:state_soulwrought_assembled_add
+            }
+
+			change_variable = {
+                name = soulwrought_assemble_count
+                add = var:assembly
+            }
+			
+			if = {
+                limit = {
+                    var:soulwrought_assemble_count > 10000
+                }
+                create_pop = {
+                    pop_type = laborers
+                    culture  = soulwrought
+                    size     = 40000
+                }
+                change_variable = {
+					name = soulwrought_assemble_count
+					subtract = 10000
+				}
+            }
+
+			remove_variable = assembly
+
+        }
+    }
 }
 
 # This on-action is triggered every time a Power Bloc's Power Struggle concludes (after the changes in leadership have been made).
