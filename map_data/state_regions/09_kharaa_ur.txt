@@ -1221,6 +1221,7 @@ STATE_KHULANJO = {
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_tea_plantations" "bg_silk_plantations" "bg_tobacco_plantations" }
     capped_resources = {
         bg_logging = 2
+        bg_opium_plantations = 15
     }
     naval_exit_id = 3114
 }
@@ -1238,6 +1239,7 @@ STATE_HOKUDAIHAN = {
     capped_resources = {
         bg_fishing = 10
         bg_logging = 4
+        bg_opium_plantations = 10
     }
     naval_exit_id = 3027
 }
@@ -1322,7 +1324,7 @@ STATE_KIYOMORIN = {
     wood = xC870E7
     traits = { "state_trait_gwitiz_mountains" }
     arable_land = 5
-    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_tea_plantations" "bg_silk_plantations" "bg_tobacco_plantations" }
+    arable_resources = { "bg_mountain_maize_farms" "bg_livestock_ranches" "bg_tea_plantations" "bg_silk_plantations" "bg_tobacco_plantations" }
     capped_resources = {
         bg_coal_mining = 36
         bg_iron_mining = 33
@@ -1343,7 +1345,7 @@ STATE_BATOKYOAN = {
     wood = xD8F3C8
     traits = { "state_trait_gwitiz_mountains" }
     arable_land = 32
-    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_tea_plantations" "bg_silk_plantations" "bg_tobacco_plantations" }
+    arable_resources = { "bg_mountain_maize_farms" "bg_livestock_ranches" "bg_tea_plantations" "bg_silk_plantations" "bg_tobacco_plantations" }
     capped_resources = {
         bg_coal_mining = 32
         bg_lead_mining = 36
@@ -1363,7 +1365,7 @@ STATE_KHULEKKA = {
     impassable = { x8DD6E1 }
     traits = { "state_trait_gwitiz_mountains" }
     arable_land = 16
-    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_tea_plantations" "bg_silk_plantations" "bg_tobacco_plantations" }
+    arable_resources = { "bg_mountain_maize_farms" "bg_livestock_ranches" "bg_tea_plantations" "bg_silk_plantations" "bg_tobacco_plantations" }
     capped_resources = {
         bg_coal_mining = 20
         bg_iron_mining = 39
@@ -1387,6 +1389,7 @@ STATE_HOKUKHAN = {
         bg_coal_mining = 48
         bg_iron_mining = 45
         bg_logging = 3
+        bg_opium_plantations = 20
     }
     naval_exit_id = 3114
 
@@ -1400,11 +1403,11 @@ STATE_TSURUKHAN = {
     farm = xF433ED
     mine = xE3AEEF
     wood = xE386F8
-    traits = { "state_trait_kharaa_ur_desert" }
     arable_land = 24
     arable_resources = { "bg_livestock_ranches" }
     capped_resources = {
         bg_fishing = 3
+        bg_opium_plantations = 25
     }
     naval_exit_id = 3027
 }
@@ -1420,6 +1423,9 @@ STATE_ARASHIHARA = {
     traits = { "state_trait_kharaa_ur_desert" }
     arable_land = 59
     arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_opium_plantations = 32
+    }
     resource = {
         type = "bg_oil_extraction"
         undiscovered_amount = 30
@@ -1440,6 +1446,7 @@ STATE_KITAYAMAO = {
     arable_resources = { "bg_livestock_ranches" }
     capped_resources = {
         bg_logging = 8
+        bg_opium_plantations = 14
     }
     resource = {
         type = "bg_gold_fields"
@@ -1537,6 +1544,7 @@ STATE_KHASUNEN = {
         bg_logging = 8
         bg_fishing = 6
         bg_squidding = 2
+        bg_opium_plantations = 12
     }
     naval_exit_id = 3003
 }
@@ -1553,6 +1561,7 @@ STATE_KHULEKI = {
     arable_resources = { "bg_livestock_ranches" }
     capped_resources = {
         bg_fishing = 9
+        bg_opium_plantations = 15
     }
     naval_exit_id = 3027
 }
@@ -1571,6 +1580,7 @@ STATE_KAMITAI = {
         bg_fishing = 12
         bg_coal_mining = 24
         bg_lead_mining = 27
+        bg_opium_plantations = 24
     }
     naval_exit_id = 3027
 }
@@ -1591,6 +1601,7 @@ STATE_HARUGAWASAI = {
         bg_squidding = 3
         bg_coal_mining = 40
         bg_logging = 12
+        bg_opium_plantations = 26
     }
     naval_exit_id = 3003
 }
@@ -1610,6 +1621,7 @@ STATE_TSUKHANJUKU = {
         bg_fishing = 5
         bg_squidding = 5
         bg_lead_mining = 36
+        bg_opium_plantations = 15
     }
     naval_exit_id = 3003
 }
@@ -1646,6 +1658,7 @@ STATE_JARGALYO = {
     capped_resources = {
         bg_logging = 8
         bg_fishing = 7
+        bg_opium_plantations = 14
     }
     naval_exit_id = 3003
 }
@@ -1661,8 +1674,10 @@ STATE_SHINKANBATA = {
     traits = { "state_trait_kharaa_ur_desert" }
     arable_land = 35
     arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_opium_plantations = 34
+    }
     naval_exit_id = 3116
-
 }
 STATE_HIRAKHANJO = {
     id = 4619
@@ -1680,6 +1695,7 @@ STATE_HIRAKHANJO = {
         bg_coal_mining = 36
         bg_iron_mining = 36
         bg_sulfur_mining = 40
+        bg_opium_plantations = 38
     }
     resource = {
         type = "bg_oil_extraction"
@@ -1701,6 +1717,7 @@ STATE_MONGOGAWA = {
     arable_resources = { "bg_livestock_ranches" }
     capped_resources = {
         bg_fishing = 8
+        bg_opium_plantations = 21
     }
     naval_exit_id = 3027
 }
@@ -1720,6 +1737,7 @@ STATE_HAYAKHAMURA = {
         bg_coal_mining = 36
         bg_iron_mining = 33
         bg_sulfur_mining = 32
+        bg_opium_plantations = 17
     }
     naval_exit_id = 3027
 }
