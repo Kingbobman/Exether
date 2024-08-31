@@ -1,0 +1,36 @@
+decree_sirensong = {
+	texture = "gfx/interface/icons/decree/sirensong.dds"		
+	
+	unlocking_laws = {
+		law_sirensongs
+	}
+	
+	valid = {
+		turmoil >= 0.25	
+	}
+	modifier = {
+		state_turmoil_effects_mult = -0.50
+        state_loyalists_from_sol_change_mult = 0.50
+        state_radicals_from_sol_change_mult = -0.50
+	}
+	cost = 100
+	
+	ai_weight = {
+		value = 100
+		
+		if = {
+			limit = { 
+				turmoil >= 0.5	
+			
+			}
+			add = 100
+		}
+		if = {
+			limit = { 
+				turmoil >= 0.75	
+			
+			}
+			add = 100
+		}
+	}
+}
