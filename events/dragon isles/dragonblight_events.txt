@@ -154,7 +154,7 @@ dragonblight.3 = { #event for Thassarcia receiving dragonblight migrants
 	}
 }
 
-dragonblight.4 = { #event for Thassarcia receiving dragonblight migrants
+dragonblight.4 = { #hidden event
 	type = country_event
 	placement = root
 	hidden = yes
@@ -574,7 +574,7 @@ immediate = {
 				duration = 3
 			
 				event_image = {
-					video = "europenorthamerica_opium_smoker"
+					video = "europenorthamerica_rich_and_poor"
 				}
 			
 				on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -621,12 +621,12 @@ immediate = {
 				option = {
 					name = dragonblight_pulse.1.a #there is nothing we can do
 					}
-				option = {
-					name = dragonblight_pulse.1.b #perhaps we should take special measures
-					possible = {
-						authority >= 100
-					}
-					}
+				# option = { #yeah so there's no effect to enable a decree
+				# 	name = dragonblight_pulse.1.b #perhaps we should take special measures
+				# 	possible = {
+				# 		authority >= 100
+				# 	}
+				# 	}
 			}	
 
 			dragonblight_pulse.2 = { #adjacent spread
@@ -642,7 +642,7 @@ immediate = {
 				duration = 3
 			
 				event_image = {
-					video = "europenorthamerica_opium_smoker"
+					texture = "gfx/event_images/angry_kobold.dds"
 				}
 			
 				on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -651,45 +651,47 @@ immediate = {
 			
 				trigger = {
 					any_scope_state = {
-							any_neighbouring_state = {
-								owner = {
-									country_has_primary_culture = cu:kotskarvi
-										country_has_primary_culture = cu:lomarash
-										country_has_primary_culture = cu:drogori
-										country_has_primary_culture = cu:garagoz								country_has_primary_culture = cu:mgzavri
-										country_has_primary_culture = cu:mgzavri
-								}
-							}
+						any_neighbouring_state = {
+							owner = root
+							NOT = { has_modifier = modifier_active_dragonblight_outbreak }
+						}
 							has_modifier = modifier_active_dragonblight_outbreak
 						}
-						save_scope_as = infected_neighbour
+						
 				}		
 				immediate = {
 					random_scope_state = {
 						limit = {
 								has_modifier = modifier_active_dragonblight_outbreak
+								any_neighbouring_state = {
+									owner = root
+									NOT = { has_modifier = modifier_active_dragonblight_outbreak }
+								}
+							}
+							save_scope_as = infected_neighbour
+							random_neighbouring_state = {
+								limit = {
+									owner = root
+									NOT = { has_modifier = modifier_active_dragonblight_outbreak }
+									NOT = { has_decree = decree_special_measures }
+								}
+								
+								add_modifier = modifier_active_dragonblight_outbreak 
+								save_scope_as = neighbour_infection
 							}
 						}
-						random_neighbouring_state = {
-							limit = {
-								owner = root
-								NOT = { has_modifier = modifier_active_dragonblight_outbreak }
-							#	NOT = { has_decree = decree_special_measures }
-							}
-							
-							add_modifier = modifier_active_dragonblight_outbreak
-							save_scope_as = neighbour_infection
-						}
+						
+
 				}
 				option = {
 					name = dragonblight_pulse.2.a #there is nothing we can do
 					}
-				option = {
-					name = dragonblight_pulse.2.b #perhaps we should take special measures
-					possible = {
-						authority >= 100
-					}
-					}
+				# option = {
+				# 	name = dragonblight_pulse.2.b #perhaps we should take special measures
+				# 	possible = {
+				# 		authority >= 100
+				# 	}
+				# 	}
 			}
 			
 			dragonblight_pulse.3 = { #woe be upon ye
@@ -705,7 +707,7 @@ immediate = {
 				duration = 3
 			
 				event_image = {
-					video = "europenorthamerica_opium_smoker"
+					video = "unspecific_sick_in_hospital"
 				}
 			
 				on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -721,7 +723,6 @@ immediate = {
 				immediate = {
 					random_scope_state = {
 						limit = {
-							owner = root
 							NOT = { has_modifier = modifier_active_dragonblight_outbreak }
 						}
 						add_modifier = modifier_active_dragonblight_outbreak
@@ -732,12 +733,12 @@ immediate = {
 				option = {
 					name = dragonblight_pulse.3.a #there is nothing we can do
 					}
-				option = {
-					name = dragonblight_pulse.3.b #perhaps we should take special measures
-					possible = {
-						authority >= 100
-					}
-					}
+				# option = {
+				# 	name = dragonblight_pulse.3.b #perhaps we should take special measures
+				# 	possible = {
+				# 		authority >= 100
+				# 	}
+				# 	}
 			}
 			dragonblight_pulse.4 = { #shoulda took the decision lmao nerd
 				type = country_event
@@ -779,12 +780,12 @@ immediate = {
 				option = {
 					name = dragonblight_pulse.4.a #there is nothing we can do
 					}
-				option = {
-					name = dragonblight_pulse.4.b #perhaps we should take special measures
-					possible = {
-						authority >= 100
-					}
-					}
+				# option = {
+				# 	name = dragonblight_pulse.4.b #perhaps we should take special measures
+				# 	possible = {
+				# 		authority >= 100
+				# 	}
+				# 	}
 			}
 
 			dragonblight_pulse.5 = { #adjacent spread, no health system
@@ -800,7 +801,7 @@ immediate = {
 				duration = 3
 			
 				event_image = {
-					video = "europenorthamerica_opium_smoker"
+					texture = "gfx/event_images/sad_kobold.dds"
 				}
 			
 				on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -810,6 +811,7 @@ immediate = {
 				trigger = {
 					any_scope_state = {
 								any_neighbouring_state = {
+									owner = root
 									NOT = { has_decree = decree_special_measures }
 								}
 								has_modifier = modifier_active_dragonblight_outbreak
@@ -823,28 +825,37 @@ immediate = {
 					random_scope_state = {
 						limit = {
 								has_modifier = modifier_active_dragonblight_outbreak
+								any_neighbouring_state = {
+									owner = root
+									NOT = { 
+										has_decree = decree_special_measures
+										has_modifier = modifier_active_dragonblight_outbreak }
+									
+								}
+							}
+							save_scope_as = blighter_state
+							random_neighbouring_state = {
+								limit = {
+									owner = root
+									NOT = { has_modifier = modifier_active_dragonblight_outbreak }
+									NOT = { has_decree = decree_special_measures }
+								}
+								
+								add_modifier = modifier_active_dragonblight_outbreak 
+								save_scope_as = blighted_state
 							}
 						}
-						random_neighbouring_state = {
-							limit = {
-								owner = root
-								NOT = { has_modifier = modifier_active_dragonblight_outbreak }
-								NOT = { has_decree = decree_special_measures }
-							}
-							
-							add_modifier = modifier_active_dragonblight_outbreak
-							save_scope_as = blighted_state
-						}
+
 				}
 				option = {
 					name = dragonblight_pulse.5.a #there is nothing we can do
 					}
-				option = {
-					name = dragonblight_pulse.5.b #perhaps we should take special measures
-					possible = {
-						authority >= 100
-					}
-					}
+				# option = {
+				# 	name = dragonblight_pulse.5.b #perhaps we should take special measures
+				# 	possible = {
+				# 		authority >= 100
+				# 	}
+				# 	}
 			}
 
 			dragonblight_pulse.6 = { #heal-by-decree
@@ -860,7 +871,7 @@ immediate = {
 				duration = 3
 			
 				event_image = {
-					video = "europenorthamerica_opium_smoker"
+					video = "europenorthamerica_london_center"
 				}
 			
 				on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -903,7 +914,7 @@ immediate = {
 				duration = 3
 			
 				event_image = {
-					video = "europenorthamerica_opium_smoker"
+					video = "unspecific_sick_in_hospital"
 				}
 			
 				on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -948,7 +959,7 @@ immediate = {
 				duration = 3
 			
 				event_image = {
-					video = "europenorthamerica_opium_smoker"
+					texture = "gfx/event_images/sad_kobold.dds"
 				}
 			
 				on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
