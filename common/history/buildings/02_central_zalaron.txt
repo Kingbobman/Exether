@@ -1,4 +1,4 @@
-﻿BUILDINGS = {
+BUILDINGS = {
 
 	s:STATE_FUNÉTUN = {
 		region_state:OPA={
@@ -5589,7 +5589,7 @@
 					building={ 
 						type="building_manor_house"
 						country="c:VAI"
-						levels=10
+						levels=12
 						region="STATE_VERDFALDO"
 				   }
 				}
@@ -5743,7 +5743,7 @@
 					building={ 
 						type="building_manor_house"
 						country="c:VAI"
-						levels=3
+						levels=4
 						region="STATE_SUNFLORO"
 				   }
 				}
@@ -5756,6 +5756,19 @@
 				reserves=1
 				activate_production_methods={ "pm_basic_port" }
 			}
+			create_building={
+				building="building_shipyards"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:VAI"
+                        levels=1
+                        region="STATE_SUNFLORO"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_complex_shipbuilding" }
+			}	
 		}
 	}
 		
@@ -5817,6 +5830,19 @@
 				reserves=1
 				activate_production_methods={ "pm_simple_farming_building_rice_farm"  "pm_tools_disabled" "pm_no_secondary" }
 			}
+			create_building={
+				building="building_fishing_wharf"
+                add_ownership={ 
+                    building={ 
+                        type="building_adventuring_guild"
+                        country="c:VAI"
+                        levels=4
+                        region="STATE_STELINSULO"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_fishing_trawlers" "pm_unrefrigerated" }
+			}
 		}
 	}
 		
@@ -5840,6 +5866,19 @@
 				level=1
 				reserves=1
 				activate_production_methods={ "pm_anchorage" }
+			}
+			create_building={
+				building="building_fishing_wharf"
+                add_ownership={ 
+                    building={ 
+                        type="building_adventuring_guild"
+                        country="c:VAI"
+                        levels=6
+                        region="STATE_NOVAJLANDIO"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_fishing_trawlers" "pm_unrefrigerated" }
 			}
 		}
 	}
@@ -5999,7 +6038,137 @@
 	}
 		
 	s:STATE_MONTEGO = {
-
+		region_state:VAI={
+			create_building={
+				building="building_government_administration"
+				level=3
+				reserves=1
+				activate_production_methods={ "pm_horizontal_drawer_cabinets" }
+			}
+			create_building={
+				building="building_construction_sector"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_iron_frame_buildings" }
+			}
+			create_building={
+				building="building_steel_mills"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:VAI"
+							levels=2
+							region="STATE_MONTEGO"
+					   }
+					}
+				reserves=1
+				activate_production_methods={ "pm_blister_steel_process" "pm_automation_disabled" }
+			}
+			create_building={
+				building="building_furniture_manufacturies"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:VAI"
+                        levels=3
+                        region="STATE_MONTEGO"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_lathe"  "pm_automation_disabled" "pm_precision_tools" }
+			}
+			create_building={
+				building="building_tobacco_plantation"
+				add_ownership={ 
+					building={ 
+						type="building_manor_house"
+						country="c:VAI"
+						levels=3
+						region="STATE_MONTEGO"
+				   }
+				}
+				reserves=1
+				activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_logging_camp"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:VAI"
+                        levels=5
+                        region="STATE_MONTEGO"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_saw_mills" "pm_stoneskin_potion" "pm_no_equipment" "pm_road_carts" "pm_no_hardwood" }
+			}
+			create_building={
+				building="building_iron_mine"
+				add_ownership={ 
+					building={ 
+						type="building_financial_district"
+						country="c:VAI"
+						levels=6
+						region="STATE_MONTEGO"
+				   }
+				}
+				reserves=1
+				activate_production_methods={ "pm_atmospheric_engine_pump_building_iron_mine" "pm_no_explosives" "pm_iron_mines_potions_of_fortitude" "pm_no_steam_automation" "pm_road_carts" }
+			}
+			create_building={
+				building="building_coal_mine"
+				add_ownership={ 
+					building={ 
+						type="building_financial_district"
+						country="c:VAI"
+						levels=2
+						region="STATE_MONTEGO"
+				   }
+				}
+				reserves=1
+				activate_production_methods={ "pm_atmospheric_engine_pump_building_iron_mine" "pm_no_explosives" "pm_iron_mines_potions_of_fortitude" "pm_no_steam_automation" "pm_road_carts" }
+			}
+			create_building={
+				building="building_tooling_workshops"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:VAI"
+                        levels=3
+                        region="STATE_MONTEGO"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_steel" "pm_automation_disabled" }
+			}
+			create_building={
+				building="building_rye_farm"
+				add_ownership={ 
+					building={ 
+						type="building_manor_house"
+						country="c:VAI"
+						levels=8
+						region="STATE_MONTEGO"
+				   }
+				}
+				reserves=1
+				activate_production_methods={ "pm_simple_farming" "pm_potatoes" "pm_tools_disabled"  }
+			}
+			create_building={
+				building="building_motor_industry"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:VAI"
+							levels=1
+							region="STATE_MONTEGO"
+					   }
+					}
+				reserves=1
+				activate_production_methods={ "pm_steam_engines" "pm_automation_disabled" }
+			}
+		}
 	}
 		
 	s:STATE_PLUVPINTO = {
@@ -6644,7 +6813,7 @@
 					building={ 
 						type="building_manor_house"
 						country="c:VAI"
-						levels=10
+						levels=11
 						region="STATE_VESPERVIDO"
 				   }
 				}
@@ -6815,7 +6984,7 @@
 					building={ 
 						type="building_manor_house"
 						country="c:VAI"
-						levels=9
+						levels=12
 						region="STATE_SONGBIENO"
 				   }
 				}
@@ -6994,62 +7163,11 @@
 	s:STATE_FELICGRUNDO = {
 		region_state:WHX={
 			create_building={
-				building="building_government_administration"
-				level=3
-				reserves=1
-				activate_production_methods={ "pm_horizontal_drawer_cabinets" }
-			}
-			create_building={
-				building="building_construction_sector"
-				level=2
-				reserves=1
-				activate_production_methods={ "pm_iron_frame_buildings" }
-			}
-			create_building={
 				building="building_port"
-				level=3
+				level=1
 				reserves=1
 				activate_production_methods={ "pm_basic_port" }
-			}
-			create_building={
-				building="building_steel_mills"
-					add_ownership={ 
-						building={ 
-							type="building_financial_district"
-							country="c:WHX"
-							levels=1
-							region="STATE_FELICGRUNDO"
-					   }
-					}
-				reserves=1
-				activate_production_methods={ "pm_blister_steel_process" "pm_automation_disabled" }
-			}
-			create_building={
-				building="building_shipyards"
-                add_ownership={ 
-                    building={ 
-                        type="building_financial_district"
-                        country="c:WHX"
-                        levels=1
-                        region="STATE_FELICGRUNDO"
-                   }
-                }
-				reserves=1
-				activate_production_methods={ "pm_complex_shipbuilding" }
-			}			
-			create_building={
-				building="building_furniture_manufacturies"
-                add_ownership={ 
-                    building={ 
-                        type="building_financial_district"
-                        country="c:VAI"
-                        levels=3
-                        region="STATE_FELICGRUNDO"
-                   }
-                }
-				reserves=1
-				activate_production_methods={ "pm_lathe"  "pm_automation_disabled" "pm_precision_tools" }
-			}
+			}		
             create_building={
 				building="building_logging_camp"
                 add_ownership={ 
@@ -7069,7 +7187,7 @@
                     building={ 
                         type="building_adventuring_guild"
                         country="c:WHX"
-                        levels=13
+                        levels=3
                         region="STATE_FELICGRUNDO"
                    }
                 }
@@ -7082,7 +7200,7 @@
 					building={ 
 						type="building_manor_house"
 						country="c:WHX"
-						levels=3
+						levels=1
 						region="STATE_FELICGRUNDO"
 				   }
 				}
