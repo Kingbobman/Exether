@@ -380,3 +380,57 @@ rvc_blood_tithes = {
 		}
 	}	
 }
+
+integration_effect = {
+	effect = {
+		if = {
+			limit = {
+				modifier:state_integration_mult > 0
+			}
+	
+			save_scope_as = origin_state
+	
+			save_scope_value_as = {
+				name = conversion_amount
+				value = modifier:state_integration_mult
+			}
+	
+			owner = {
+				ordered_primary_culture = {
+					position = 0
+					save_scope_as = primary_culture
+				}
+			}
+	
+			every_scope_pop = {
+				limit = {
+					pop_is_discriminated = yes
+				}
+				if = {
+					limit = {
+						OR = {
+							scope:origin_state = {
+								is_incorporated = no
+							}
+							pop_radical_fraction >= 0.25
+						}
+					}
+					change_pop_culture = {
+						target = scope:primary_culture
+						value = {
+							value = scope:conversion_amount
+							divide = 4
+						}
+					}
+				}
+				else = {
+					change_pop_culture = {
+						target = scope:primary_culture
+						value = scope:conversion_amount
+					}
+				}
+				
+			}
+		}
+	}
+}
