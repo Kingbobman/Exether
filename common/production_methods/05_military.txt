@@ -1,9 +1,6 @@
 ﻿pm_no_organization = {
 	texture = "gfx/interface/icons/production_method_icons/no_specialists.dds"
 	is_default = yes
-	disallowing_laws = {
-		law_war_slaves
-	}
 	building_modifiers = {
 
 		level_scaled = {
@@ -14,31 +11,9 @@
 	}
 }
 
-pm_slave_armies = {
-	texture = "gfx/interface/icons/production_method_icons/slaves.dds"
-	is_default = yes
-
-	unlocking_laws = {
-		law_war_slaves
-	}
-	
-	building_modifiers = {
-
-		level_scaled = {
-			building_employment_war_slaves_add = 950
-			building_employment_officers_add = 50
-			building_training_rate_add = 20
-		}
-	}
-}
-
 pm_general_training = {
 	texture = "gfx/interface/icons/production_method_icons/cavalry.dds"
 	is_default = yes
-
-	disallowing_laws = {
-		law_war_slaves
-	}
 	unlocking_technologies = {
 		general_staff
 	}
@@ -54,10 +29,6 @@ pm_general_training = {
 
 pm_advanced_tactics_training = {
 	texture = "gfx/interface/icons/production_method_icons/squad_infantry.dds"
-
-	disallowing_laws = {
-		law_war_slaves
-	}
 	unlocking_technologies = {
 		military_statistics
 	}
@@ -73,9 +44,6 @@ pm_advanced_tactics_training = {
 
 pm_training_streamlining = {
 	texture = "gfx/interface/icons/production_method_icons/skirmish_infantry.dds"
-	disallowing_laws = {
-		law_war_slaves
-	}
 	unlocking_technologies = {
 		wargaming
 	}
@@ -91,9 +59,6 @@ pm_training_streamlining = {
 
 pm_nco_incorporation = {
 	texture = "gfx/interface/icons/production_method_icons/nco_incorporation.dds"
-	disallowing_laws = {
-		law_war_slaves
-	}
 	unlocking_technologies = {
 		nco_training
 	}
@@ -111,9 +76,6 @@ pm_nco_incorporation = {
 
 pm_mobile_warfare_tactics = {
 	texture = "gfx/interface/icons/production_method_icons/motorised_logistics.dds"
-	disallowing_laws = {
-		law_war_slaves
-	}
 	unlocking_technologies = {
 		mobile_armor
 	}
@@ -131,9 +93,6 @@ pm_mobile_warfare_tactics = {
 
 pm_no_organization_conscription = {
 	texture = "gfx/interface/icons/production_method_icons/no_specialists.dds"
-	disallowing_laws = {
-		law_war_slaves
-	}
 	is_default = yes
 	building_modifiers = {
 		level_scaled = {
@@ -146,12 +105,13 @@ pm_no_organization_conscription = {
 
 pm_general_training_conscription = {
 	texture = "gfx/interface/icons/production_method_icons/cavalry.dds"
-	disallowing_laws = {
-		law_war_slaves
-	}
 	is_default = yes
 	unlocking_technologies = {
 		general_staff
+	}
+	unlocking_production_methods = {
+		pm_no_slave_armies
+		pm_no_slave_armies_special
 	}
 	building_modifiers = {
 		level_scaled = {
@@ -164,15 +124,16 @@ pm_general_training_conscription = {
 
 pm_advanced_tactics_training_conscription = {
 	texture = "gfx/interface/icons/production_method_icons/squad_infantry.dds"
-	disallowing_laws = {
-		law_war_slaves
-	}
 	unlocking_technologies = {
 		military_statistics
 	}
 	disallowing_laws = {
 		law_peasant_levies
 	}	
+	unlocking_production_methods = {
+		pm_no_slave_armies
+		pm_no_slave_armies_special
+	}
 	building_modifiers = {
 		level_scaled = {
 			building_employment_soldiers_add = 900
@@ -189,8 +150,11 @@ pm_training_streamlining_conscription = {
 	}
 	disallowing_laws = {
 		law_peasant_levies
-		law_war_slaves
 	}	
+	unlocking_production_methods = {
+		pm_no_slave_armies
+		pm_no_slave_armies_special
+	}
 	building_modifiers = {
 		level_scaled = {
 			building_employment_soldiers_add = 850
@@ -207,7 +171,10 @@ pm_nco_incorporation_conscription = {
 	}
 	disallowing_laws = {
 		law_peasant_levies
-		law_war_slaves
+	}
+	unlocking_production_methods = {
+		pm_no_slave_armies
+		pm_no_slave_armies_special
 	}
 	building_modifiers = {
 		level_scaled = {
@@ -223,12 +190,14 @@ pm_mobile_warfare_tactics_conscription = {
 	unlocking_technologies = {
 		mobile_armor
 	}
-	disallowing_laws = {
-		law_war_slaves
+	unlocking_production_methods = {
+		pm_no_slave_armies
+		pm_no_slave_armies_special
 	}
 	building_modifiers = {
 		workforce_scaled = {
 		}
+
 		level_scaled = {
 			building_employment_soldiers_add = 750
 			building_employment_officers_add = 250
@@ -320,6 +289,46 @@ pm_battlefleet_tactics = {
 		unscaled = {
 			unit_morale_loss_mult = -0.2
 			unit_morale_damage_mult = 0.4
+		}
+	}
+}
+
+
+
+pm_no_slave_armies = {
+	texture = "gfx/interface/icons/production_method_icons/no_specialists.dds"
+	is_default = yes
+	replacement_if_valid = pm_no_slave_armies_special
+	disallowing_religions = { creed_of_hasal }
+}
+
+pm_no_slave_armies_special = {
+	texture = "gfx/interface/icons/production_method_icons/no_specialists.dds"
+	is_default = yes
+	is_hidden_when_unavailable = yes
+	unlocking_religions = { creed_of_hasal }
+	disallowing_laws = {
+		law_legacy_slavery
+		law_debt_slavery
+		law_slave_trade
+	}
+}
+
+pm_slave_armies = {
+	texture = "gfx/interface/icons/production_method_icons/slaves.dds"
+	is_default = yes
+
+	unlocking_religions = { creed_of_hasal }
+
+	disallowing_laws = {
+		law_slavery_banned
+	}
+
+	building_modifiers = {
+
+		level_scaled = {
+			building_employment_war_slaves_add = 970
+			building_employment_soldiers_add = -970
 		}
 	}
 }

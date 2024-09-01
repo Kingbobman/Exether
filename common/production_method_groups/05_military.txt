@@ -18,12 +18,22 @@ pmg_training_conscription = {
 
 	production_methods = {
 		pm_no_organization_conscription
-		pm_slave_armies
 		pm_general_training_conscription
 		pm_advanced_tactics_training_conscription
 		pm_training_streamlining_conscription
 		pm_nco_incorporation_conscription
 		pm_mobile_warfare_tactics_conscription
+	}
+}
+
+pmg_training_conscription_slaves = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_no_slave_armies
+		pm_no_slave_armies_special
+		pm_slave_armies
 	}
 }
 
