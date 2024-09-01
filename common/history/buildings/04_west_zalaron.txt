@@ -2051,7 +2051,7 @@
 				   }
 				}
 			reserves=1
-			activate_production_methods={ "pm_simple_farming_building_rice_farm" "pm_no_secondary" "pm_tools_disabled"  }
+			activate_production_methods={ "pm_leeches" "pm_no_secondary" "pm_no_arms"  }
 		}
 		create_building={
 			building="building_shipyards"
@@ -2540,7 +2540,7 @@
 				   }
 				}
 			reserves=1
-			activate_production_methods={ "pm_simple_farming_building_rice_farm" "pm_no_secondary" "pm_tools"  }
+			activate_production_methods={ "pm_leeches" "pm_no_secondary" "pm_no_arms"  }
 		}
             create_building={
 			building="building_fishing_wharf"
@@ -2665,7 +2665,7 @@
 				   }
 				}
 			reserves=1
-			activate_production_methods={ "pm_simple_farming_building_rice_farm" "pm_no_secondary" "pm_tools"  }
+			activate_production_methods={ "pm_leeches" "pm_no_secondary" "pm_no_arms"  }
 		}
 			create_building={
 			building="building_livestock_ranch"
@@ -2691,7 +2691,7 @@
 				   }
 				}
 			reserves=1
-			activate_production_methods={ "pm_butchering_tools" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated"  }
+			activate_production_methods={ "default_building_tobacco_plantation"  "pm_road_carts"}
 		}
 			create_building={
 			building="building_tobacco_plantation"
@@ -3435,13 +3435,13 @@
                 add_ownership={ 
                     building={
                         type="building_financial_district"
-                        country="c:ZIN"
+                        country="c:LPS"
                         levels=1
                         region="STATE_JUACHAI"
                     }
                     building={
                         type="building_financial_district"
-                        country="c:ZIN"
+                        country="c:SNB"
                         levels=1
                         region="STATE_KILIMAMAI"
                     }
@@ -3544,7 +3544,7 @@
 							type="building_manor_house"
 							country="c:SNB"
 							levels=3
-							region="STATE_MAJIWAZIRI"
+							region="STATE_MAJISAMAKI"
 					   }
 					}
 				reserves=1
@@ -3554,8 +3554,8 @@
                 building="building_fishing_wharf"
                 add_ownership={
                     building={
-                        type="building_adventuring_guild"
-                        country="c:VLT"
+                        type="building_financial_district"
+                        country="c:SNB"
                         levels=2
                         region="STATE_KILIMAMAI"
                    }
@@ -3936,21 +3936,21 @@
 				reserves=1
 				activate_production_methods={ "pm_basic_port" }
 			}			
+			create_building={
+				building="building_fishing_wharf"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:SNB"
+						levels=2
+						region="STATE_SWAHATHAI"
+				}
+				}
+				reserves=1
+				activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
+			}
 		}
-        create_building={
-            building="building_fishing_wharf"
-            add_ownership={
-                building={
-                    type="building_adventuring_guild"
-                    country="c:FMJ"
-                    levels=2
-                    region="STATE_CHEJATAN_DO"
-               }
-            }
-            reserves=1
-            activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
-        }
-  }
+  	}
   s:STATE_MDLEMNO_KETHIN = {
 		region_state:FMJ={
 			create_building={
@@ -4311,7 +4311,7 @@
                 add_ownership={
                     building={
                         type="building_adventuring_guild"
-                        country="c:SNB"
+                        country="c:LPS"
                         levels=5
                         region="STATE_MAJIWAZIRI"
                    }
@@ -4818,7 +4818,7 @@
 						type="building_financial_district"
 						country="c:SNB"
 						levels=2
-						region="STATE_YAZHIDZI"
+						region="STATE_YAZHINAVA"
 				   }
 				}
 				reserves=1
@@ -4831,7 +4831,7 @@
                         type="building_financial_district"
                         country="c:SNB"
                         levels=4
-                        region="STATE_YAZHIDZI"
+                        region="STATE_YAZHINAVA"
                    }
                 }
 				reserves=1
@@ -6154,7 +6154,7 @@
 				}
 			}
 			reserves=1
-			activate_production_methods={ "pm_wishtone_potion_process_production" "pm_water-based_potions" "pm_base_cosmetic_potion_production" }
+			activate_production_methods={ "pm_wishtone_potion_process_production" "pm_water-based_potions" "pm_no_mixins" "pm_basic_filters" "pm_automation_disabled"}
 		}
 		create_building={
 			building="building_gizmo_workshop"
@@ -7359,7 +7359,7 @@
 					   }
 					}
 			reserves=1
-			activate_production_methods={ "pm_picks_and_shovels_building_wishstone_mine"    }
+			activate_production_methods={ "pm_detect_wishstone" "pm_no_mirrors" "pm_road_carts" }
 		  }
             create_building={
 			building="building_fishing_wharf"
@@ -7427,7 +7427,7 @@
 					   }
 					}
 			reserves=1
-			activate_production_methods={ "pm_dedicated_diggers" "pm_rockrollers_building_wishstone_mine"    }
+			activate_production_methods={ "pm_dedicated_diggers" "pm_no_mirrors"  "pm_road_carts"  }
 		  }
             create_building={
 			building="building_glassworks"
@@ -9116,7 +9116,7 @@
 				}
 			}
 			reserves=1
-			activate_production_methods={ "pm_early_potion_vat_production" "pm_alcohol-based_potions" "pm_base_cosmetic_potion_production" }
+			activate_production_methods={ "pm_early_potion_vat_production" "pm_alcohol-based_potions" "pm_no_mixins" "pm_basic_filters"}
 		}
 		create_building = {
 			building = "building_distillery"
@@ -9388,7 +9388,7 @@
 					   }
 					}
 			reserves=1
-			activate_production_methods={ "pm_picks_and_shovels_building_wishstone_mine"    }
+			activate_production_methods={ "pm_detect_wishstone" "pm_no_mirrors" "pm_road_carts"}
 		  }
 	}
   }
