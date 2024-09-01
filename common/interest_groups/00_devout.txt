@@ -54,8 +54,6 @@
 			}
 			ig:ig_devout = {
 				set_interest_group_name = ig_cultists
-				remove_ideology = ideology_pious
-				add_ideology = ideology_pious_dark
 			}
 		}
 
@@ -66,7 +64,7 @@
 				owner = {
 					religion = {
 						AND = {
-							has_discrimination_trait = earth_domain
+							has_discrimination_trait = fey_domain
 							NOT = {
 								has_discrimination_trait = chivalrous_heritage
 							}
@@ -92,17 +90,16 @@
 				owner = {
 					OR = {
 						religion = {
-							has_discrimination_trait = death_domain
-						}
-						religion = {
-							has_discrimination_trait = evil_heritage
+							OR = {
+								has_discrimination_trait = angel_domain
+								has_discrimination_trait = fiend_domain
+								has_discrimination_trait = evil_heritage
+							}
 						}
 					}
 				}
 			}
 			ig:ig_devout = {
-				remove_ideology = ideology_pious
-				add_ideology = ideology_pious_dark
 			}
 		}
 		if = {
@@ -110,7 +107,7 @@
 				OR = {
 					owner = {
 						religion = {
-							has_discrimination_trait = magoclast
+							has_discrimination_trait = dragon_domain
 						}
 					}
 				}
@@ -160,13 +157,6 @@
 			}
 			ig:ig_devout ?= {
 				if = {
-					limit = {
-						has_ideology = ideology:ideology_pious_dark
-					}			
-						remove_ideology = ideology_pious_dark
-						add_ideology = ideology_corporatist_dark
-				}
-				else_if = {
 					limit = {
 						has_ideology = ideology:ideology_pious_magoclast
 					}			

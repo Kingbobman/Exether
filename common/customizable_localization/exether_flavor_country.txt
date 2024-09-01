@@ -35,7 +35,9 @@ salt_waste_cure_flavor = {
 	text = {
 		trigger = {
 			has_variable = harness_the_salt_waste_curse
-			has_law = law_type:law_dark_arts
+			#has_law = law_type:law_dark_arts
+			always = no
+			#Update to use signs
 		}
 		localization_key = salt_waste_cure_flavor_dark_arts
 	}
@@ -51,7 +53,8 @@ salt_waste_cure_flavor = {
 			NOT = { has_law = law_type:law_mage_hunters }
 			NAND = {
 				has_variable = harness_the_salt_waste_curse
-				has_law = law_type:law_dark_arts
+				always = no
+				#Update to use signs
 			}
 		}
 		localization_key = salt_waste_cure_flavor_default
@@ -69,7 +72,8 @@ salt_waste_cure_desciption = {
 	text = {
 		trigger = {
 			has_variable = harness_the_salt_waste_curse
-			has_law = law_type:law_dark_arts
+			always = no
+			#Update to use signs
 		}
 		localization_key = salt_waste_cure_desciption_dark_arts
 	}
@@ -85,7 +89,9 @@ salt_waste_cure_desciption = {
 			NOT = { has_law = law_type:law_mage_hunters }
 			NAND = {
 				has_variable = harness_the_salt_waste_curse
-				has_law = law_type:law_dark_arts
+				#has_law = law_type:law_dark_arts
+				always = no
+				#Update to use signs
 			}
 		}
 		localization_key = salt_waste_cure_desciption_default

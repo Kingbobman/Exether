@@ -1,161 +1,7 @@
-﻿has_magic_gryphon_traits = {
-    custom_tooltip = {
-        text = magic_gryphon_traits_tt
-        religion = {
-			OR = {
-                has_discrimination_trait = wind_domain
-                has_discrimination_trait = freedom_domain
-            }
-		}
+﻿cast_arcana_id_gryphon_is_valid = {
+    religion = {
+        has_discrimination_trait = gryphon_domain
     }
-}
-
-has_magic_justice_traits = {
-    custom_tooltip = {
-        text = magic_justice_traits_tt
-        religion = {
-			OR = {
-                has_discrimination_trait = order_domain
-                has_discrimination_trait = unity_domain
-            }
-		}
-    }
-}
-
-has_magic_sphinx_traits = {
-    custom_tooltip = {
-        text = magic_sphinx_traits_tt
-        religion = {
-			OR = {
-				has_discrimination_trait = logic_domain
-				has_discrimination_trait = knowledge_domain
-			}
-		}
-    }
-}
-
-has_magic_unicorn_traits = {
-    custom_tooltip = {
-        text = magic_unicorn_traits_tt
-        religion = {
-            OR = {
-                has_discrimination_trait = light_domain
-                has_discrimination_trait = peace_domain
-            }
-        }
-    }
-}
-
-has_magic_fey_traits = {
-    custom_tooltip = {
-        text = magic_fey_traits_tt
-        religion = {
-            OR = {
-                has_discrimination_trait = nature_domain
-                has_discrimination_trait = life_domain
-            }
-        }
-    }
-}
-
-has_magic_golem_traits = {
-    custom_tooltip = {
-        text = magic_golem_traits_tt
-        religion = {
-			OR = {
-				has_discrimination_trait = earth_domain
-				has_discrimination_trait = fortitude_domain
-			}
-		}
-    }
-}
-
-has_magic_phoenix_traits = {
-    custom_tooltip = {
-        text = magic_phoenix_traits_tt
-        religion = {
-			OR = {
-				has_discrimination_trait = fire_domain
-				has_discrimination_trait = forge_domain
-			}
-		}
-    }
-}
-
-has_magic_djinn_traits = {
-    custom_tooltip = {
-        text = magic_djinn_traits_tt
-        religion = {
-            OR = {
-                has_discrimination_trait = chaos_domain
-                has_discrimination_trait = metamorphosis_domain
-            }
-        }
-    }
-}
-
-has_magic_siren_traits = {
-    custom_tooltip = {
-        text = magic_siren_traits_tt
-        religion = {
-			OR = {
-				has_discrimination_trait = emotion_domain
-				has_discrimination_trait = heart_domain
-			}
-		}
-    }
-}
-
-has_magic_kraken_traits = {
-    custom_tooltip = {
-        text = magic_kraken_traits_tt
-        religion = {
-            OR = {
-                has_discrimination_trait = water_domain
-                has_discrimination_trait = twilight_domain
-            }
-        }
-    }
-}
-
-has_magic_fiend_traits = {
-    custom_tooltip = {
-        text = magic_fiend_traits_tt
-        religion = {
-			OR = {
-				has_discrimination_trait = war_domain
-				has_discrimination_trait = darkness_domain
-			}
-		}
-    }
-}
-
-has_magic_angel_traits = {
-    custom_tooltip = {
-        text = magic_angel_traits_tt
-        religion = {
-            OR = {
-                has_discrimination_trait = death_domain
-                has_discrimination_trait = grave_domain
-            }
-        }
-    }
-}
-
-has_magic_dragon_traits = {
-    custom_tooltip = {
-        text = magic_dragon_traits_tt
-        religion = {
-            OR = {
-                has_discrimination_trait = sol_domain
-                has_discrimination_trait = material_domain
-            }
-        }
-    }
-}
-
-cast_arcana_id_gryphon_is_valid = {
-    has_magic_gryphon_traits = yes
     NOT = { 
         has_modifier = country_arcana_card_cooldown
     }
@@ -168,7 +14,9 @@ cast_arcana_id_gryphon_is_valid = {
 }
 
 cast_arcana_id_justice_is_valid = {
-    has_magic_justice_traits = yes
+    religion = {
+        has_discrimination_trait = justice_domain
+    }
     NOT = { 
         has_modifier = country_arcana_card_cooldown
     }
@@ -181,7 +29,9 @@ cast_arcana_id_justice_is_valid = {
 }
 
 cast_arcana_id_sphinx_is_valid = {
-    has_magic_sphinx_traits = yes
+    religion = {
+        has_discrimination_trait = sphinx_domain
+    }
     NOT = { 
         has_modifier = country_arcana_card_cooldown
     }
@@ -194,7 +44,9 @@ cast_arcana_id_sphinx_is_valid = {
 }
 
 cast_arcana_id_golem_is_valid = {
-    has_magic_golem_traits = yes
+    religion = {
+        has_discrimination_trait = golem_domain
+    }
     NOT = { 
         has_modifier = country_arcana_card_cooldown
     }
@@ -207,7 +59,9 @@ cast_arcana_id_golem_is_valid = {
 }
 
 cast_arcana_id_unicorn_is_valid = {
-    has_magic_unicorn_traits = yes
+    religion = {
+        has_discrimination_trait = unicorn_domain
+    }
     NOT = { 
         has_modifier = country_arcana_card_cooldown
     }
@@ -220,7 +74,9 @@ cast_arcana_id_unicorn_is_valid = {
 }
 
 cast_arcana_id_fey_is_valid = {
-    has_magic_fey_traits = yes
+    religion = {
+        has_discrimination_trait = fey_domain
+    }
     NOT = { 
         has_modifier = country_arcana_card_cooldown
     }
@@ -233,7 +89,9 @@ cast_arcana_id_fey_is_valid = {
 }
 
 cast_arcana_id_phoenix_is_valid = {
-    has_magic_phoenix_traits = yes
+    religion = {
+        has_discrimination_trait = phoenix_domain
+    }
     NOT = { 
         has_modifier = country_arcana_card_cooldown
     }
@@ -246,7 +104,9 @@ cast_arcana_id_phoenix_is_valid = {
 }
 
 cast_arcana_id_djinn_is_valid = {
-    has_magic_djinn_traits = yes
+    religion = {
+        has_discrimination_trait = djinn_domain
+    }
     NOT = { 
         has_modifier = country_arcana_card_cooldown
     }
@@ -259,7 +119,9 @@ cast_arcana_id_djinn_is_valid = {
 }
 
 cast_arcana_id_siren_is_valid = {
-    has_magic_siren_traits = yes
+    religion = {
+        has_discrimination_trait = siren_domain
+    }
     NOT = { 
         has_modifier = country_arcana_card_cooldown
     }
@@ -272,7 +134,9 @@ cast_arcana_id_siren_is_valid = {
 }
 
 cast_arcana_id_kraken_is_valid = {
-    has_magic_kraken_traits = yes
+    religion = {
+        has_discrimination_trait = kraken_domain
+    }
     NOT = { 
         has_modifier = country_arcana_card_cooldown
     }
@@ -285,7 +149,9 @@ cast_arcana_id_kraken_is_valid = {
 }
 
 cast_arcana_id_fiend_is_valid = {
-    has_magic_fiend_traits = yes
+    religion = {
+        has_discrimination_trait = fiend_domain
+    }
     NOT = { 
         has_modifier = country_arcana_card_cooldown
     }
@@ -298,7 +164,9 @@ cast_arcana_id_fiend_is_valid = {
 }
 
 cast_arcana_id_angel_is_valid = {
-    has_magic_angel_traits = yes
+    religion = {
+        has_discrimination_trait = angel_domain
+    }
     NOT = { 
         has_modifier = country_arcana_card_cooldown
     }
@@ -311,7 +179,9 @@ cast_arcana_id_angel_is_valid = {
 }
 
 cast_arcana_id_dragon_is_valid = {
-    has_magic_dragon_traits = yes
+    religion = {
+        has_discrimination_trait = dragon_domain
+    }
     NOT = { 
         has_modifier = country_arcana_card_cooldown
     }
