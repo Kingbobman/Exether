@@ -7,16 +7,21 @@
 # ai_weight											Scripted value which determines the chance of getting the Decree by AI
 
 decree_road_maintenance = {
-	texture = "gfx/interface/icons/decree/decree_road_maintenance.dds"
+	texture = "gfx/interface/icons/decree/efficient_admin.dds"
 	modifier = {
+		state_tax_capacity_mult = 0.25
+		building_government_administration_throughput_add = 0.2 
+		state_tax_waste_add = -0.1
+		state_radicals_from_sol_change_mult = 0.1
+		state_bureaucracy_population_base_cost_factor_mult = -0.15
 		state_infrastructure_from_population_add = 1
 		state_infrastructure_from_population_max_add = 20
-		state_construction_mult = 0.10
 	}
+
 	unlocking_technologies = { 
 		centralization
 	}
-	cost = 100
+	cost = 75
 
 	ai_weight = {
 		value = 25		
@@ -26,7 +31,7 @@ decree_road_maintenance = {
 				OR = {
 					relative_infrastructure < 1 
 					AND = {
-						has_decree = decree_road_maintenance
+						has_decree = promote_efficient_administration
 						relative_infrastructure < 1.25
 					}
 				}
@@ -78,7 +83,78 @@ decree_road_maintenance = {
 		}			
 	}
 }
+decree_encourage_construction = {
+	texture = "gfx/interface/icons/decree/enc_con.dds"
+	modifier = {
+		building_construction_sector_throughput_add = 0.2
+		state_construction_mult = 0.1
+	}
 
+	unlocking_technologies = { 
+		urbanization
+	}
+	cost = 75
+
+	ai_weight = {
+		value = 25		
+		
+		if = {
+			limit = {
+				OR = {
+					relative_infrastructure < 1 
+					AND = {
+						has_decree = decree_road_maintenance
+						relative_infrastructure < 1.25
+					}
+				}
+			
+			}
+			add = 100
+		}
+
+		if = {
+			limit = {
+				OR = {
+					relative_infrastructure < 0.5
+					AND = {
+						has_decree = decree_road_maintenance
+						relative_infrastructure < 0.75
+					}
+				}
+			
+			}
+			add = 100
+		}
+
+		if = {
+			limit = {
+				OR = {
+					relative_infrastructure < 0.25 
+					AND = {
+						has_decree = decree_road_maintenance
+						relative_infrastructure < 0.5
+					}
+				}
+			
+			}
+			add = 100
+		}		
+		
+		if = {
+			limit = { 
+				OR = {
+					relative_infrastructure >= 1.25
+					AND = {
+						has_decree = decree_road_maintenance
+						relative_infrastructure >= 1.5
+					}
+				}
+			
+			}
+			multiply = 0
+		}			
+	}
+}
 decree_violent_suppression = {
 	texture = "gfx/interface/icons/decree/decree_violent_suppression.dds"		
 	
@@ -89,12 +165,17 @@ decree_violent_suppression = {
 	valid = {
 		owner = { NOT = { has_law = law_type:law_guaranteed_liberties } }
 		turmoil >= 0.25	
+		NOT = { 
+			has_decree = decree_emergency_relief
+		}
 	}
 	modifier = {
-		state_turmoil_effects_mult = -0.5
+		state_turmoil_effects_mult = -0.6
 		state_mortality_turmoil_mult = 0.02
+		political_movement_radicalism_mult = -0.2 #does there need to be a movement to show?
+		state_political_strength_from_discrimination_mult = -0.2
 	}
-	cost = 100
+	cost = 75
 	
 	ai_weight = {
 		value = 100
@@ -127,16 +208,28 @@ decree_violent_suppression = {
 	}
 }
 
-
 decree_emergency_relief = {
 	texture = "gfx/interface/icons/decree/decree_emergency_relief.dds"
 	unlocking_technologies = {
-		centralization
+		egalitarianism
 	}
+	valid = {
+		NOR = { 
+			has_decree = decree_genocide
+			has_decree = decree/decree_violent_suppression
+		}
+	}
+
 	modifier = {
-		state_welfare_payments_add = 0.5
+		state_welfare_payments_add = 0.6
+		state_migration_pull_mult = 0.1
+		state_mortality_mult = -0.01
+
+		state_poor_standard_of_living_add = 1.5
+		state_peasants_education_access_add = 0.2
 	}
-	cost = 100
+
+	cost = 75
 	
 	ai_weight = {
 		value = 0
@@ -160,14 +253,19 @@ decree_emergency_relief = {
 		}	
 	}
 }
-
+# for love of god, Austria,please enact this
 decree_promote_social_mobility = {
-	texture = "gfx/interface/icons/decree/decree_promote_social_mobility.dds"
+	texture = "gfx/interface/icons/decree/learning.dds"
+	unlocking_technologies = {
+		academia
+	}		
 	modifier = {
 		state_education_access_add = 0.25
 		state_pop_qualifications_mult = 0.25
-	}
-	cost = 100
+		building_arts_academy_throughput_add = 0.2
+		building_university_throughput_add = 0.2
+	} 
+	cost = 75
 	
 	ai_weight = {
 		value = 0
@@ -196,6 +294,7 @@ decree_promote_social_mobility = {
 					OR = {
 						has_strategy = ai_strategy_reactionary_agenda
 						has_strategy = ai_strategy_conservative_agenda
+						has_strategy = ai_strategy_maintain_mandate_of_heaven
 					}
 				}
 			}
@@ -214,6 +313,35 @@ decree_promote_social_mobility = {
 		}			
 	}
 }
+decree_worker_exploitation = {  
+	texture = "gfx/interface/icons/decree/exploiter.dds"		
+	
+	unlocking_technologies = {
+		colonization
+	}
+	
+	valid = {
+		owner = { NOT = { has_law = law_type:law_guaranteed_liberties } }
+		owner = {
+			is_player = yes
+		}
+	}
+	modifier = {
+		state_migration_pull_mult = -0.5
+		building_throughput_add = 0.2
+		state_unincorporated_starting_wages_mult = -0.2
+		building_subsistence_output_mult = -0.33
+		state_laborers_mortality_mult = 0.1
+		state_machinists_mortality_mult = 0.1
+		state_farmers_mortality_mult = 0.1
+		state_slaves_mortality_mult = 0.15
+		state_pop_qualifications_mult = -0.2
+		state_radicals_from_sol_change_mult = 0.2
+		building_minimum_wage_mult = -0.25
+		building_working_conditions_mult = 0.15
+	}
+	cost = 75
+}
 
 decree_promote_national_values = {
 	texture = "gfx/interface/icons/decree/decree_promote_national_values.dds"
@@ -227,10 +355,11 @@ decree_promote_national_values = {
 		}	
 	}
 	modifier = {
-		state_assimilation_mult = 1
-		state_conversion_mult = 1
+		state_assimilation_mult = 1.25
+		state_conversion_mult = 1.25
+		state_loyalists_from_sol_change_mult = 0.15
 	}
-	cost = 100
+	cost = 75
 	
 	ai_weight = {
 		value = 0
@@ -239,6 +368,7 @@ decree_promote_national_values = {
 				scope:country = {
 					OR = {
 						has_strategy = ai_strategy_reactionary_agenda
+						has_strategy = ai_strategy_maintain_mandate_of_heaven
 					}
 				}
 			}
@@ -270,6 +400,7 @@ decree_promote_national_values = {
 					OR = {
 						has_strategy = ai_strategy_reactionary_agenda
 						has_strategy = ai_strategy_conservative_agenda
+						has_strategy = ai_strategy_maintain_mandate_of_heaven
 					}
 				}
 			}
@@ -289,22 +420,79 @@ decree_promote_national_values = {
 	}
 }
 
+decree_encourage_urban_services = {
+	texture = "gfx/interface/icons/decree/urban_services_decree.dds"
+	unlocking_technologies = {
+		urban_planning
+	}	
+		
+	modifier = {
+		building_trade_center_throughput_add = 0.2  #does this actually apply?
+		building_group_bg_service_throughput_add = 0.2
+		building_port_throughput_add = 0.2
+		building_railway_throughput_add = 0.2
+		building_group_bg_monuments_throughput_add = 0.2 
+		building_group_bg_canals_throughput_add = 0.2 
+		building_power_plant_throughput_add = 0.2 
+		state_infrastructure_mult = 0.2
+	}
+	cost = 75
+	
+	ai_weight = {
+		value = 0
+		if = {
+			limit = {
+				any_scope_building = {
+					is_building_group = bg_urban_facilities
+				}
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				any_scope_building = {
+					is_building_group = bg_urban_facilities
+					count >= 3
+				}				
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				any_scope_building = {
+					is_building_group = bg_urban_facilities
+					count >= 5
+				}			
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				scope:country = {
+					has_strategy = ai_strategy_placate_population
+				}
+			}
+			multiply = 1.5
+		}		
+	}
+}
 decree_encourage_manufacturing_industry = {
 	texture = "gfx/interface/icons/decree/decree_encourage_manufacturing_industry.dds"
 	unlocking_technologies = {
 		manufacturies
 	}	
-	valid = {
-		NOR = { 
-			has_decree = decree_encourage_agricultural_industry
-			has_decree = decree_encourage_resource_industry
-		}
-	}	
+#	valid = {
+#		NOR = { 
+#			has_decree = decree_encourage_agricultural_industry
+#			has_decree = decree_encourage_resource_industry
+#			has_decree = decree_encourage_urban_services
+#		}
+#	}	
 	modifier = {
-		building_group_bg_manufacturing_throughput_add = 0.2
-		building_group_bg_service_throughput_add = 0.2
+		building_group_bg_manufacturing_throughput_add = 0.25
+		state_construction_mult = 0.05
 	}
-	cost = 100
+	cost = 75
 	
 	ai_weight = {
 		value = 0
@@ -350,18 +538,19 @@ decree_encourage_agricultural_industry = {
 	unlocking_technologies = {
 		enclosure
 	}	
-	valid = {
-		NOR = { 
-			has_decree = decree_encourage_manufacturing_industry 
-			has_decree = decree_encourage_resource_industry
-		}
-	}		
+#	valid = {
+#		NOR = { 
+#			has_decree = decree_encourage_manufacturing_industry 
+#			has_decree = decree_encourage_resource_industry
+#			has_decree = decree_encourage_urban_services
+#		}
+#	}		
 	modifier = {
 		building_group_bg_agriculture_throughput_add = 0.2
-		building_group_bg_plantations_throughput_add = 0.2
 		building_group_bg_ranching_throughput_add = 0.2
+		building_group_bg_plantations_throughput_add = 0.2
 	}
-	cost = 100
+	cost = 75
 	
 	ai_weight = {
 		value = 0
@@ -422,21 +611,21 @@ decree_encourage_resource_industry = {
 	unlocking_technologies = {
 		shaft_mining
 	}	
-	valid = {
-		NOR = { 
-			has_decree = decree_encourage_manufacturing_industry 
-			has_decree = decree_encourage_agricultural_industry
-		}
-	}		
+#	valid = {
+#		NOR = { 
+#			has_decree = decree_encourage_manufacturing_industry 
+#			has_decree = decree_encourage_agricultural_industry
+#			has_decree = decree_encourage_urban_services
+#		}
+#	}		
 	modifier = {
 		building_group_bg_mining_throughput_add = 0.2
 		building_group_bg_logging_throughput_add = 0.2
 		building_group_bg_fishing_throughput_add = 0.2
 		building_group_bg_whaling_throughput_add = 0.2
 		building_group_bg_oil_extraction_throughput_add = 0.2
-		building_group_bg_rubber_throughput_add = 0.2
 	}
-	cost = 100
+	cost = 75
 	
 	ai_weight = {
 		value = 0
@@ -494,20 +683,20 @@ decree_encourage_resource_industry = {
 		}		
 	}
 }
-
 decree_greener_grass_campaign = {
 	texture = "gfx/interface/icons/decree/decree_greener_grass_campaign.dds"
 	valid = {
 		is_isolated_from_market = no
 	}
 	modifier = {
+		state_migration_pull_mult = 0.50
 		state_migration_pull_add = 20
-		state_migration_pull_mult = 0.25
+		state_standard_of_living_add = 1
 	}
 	unlocking_technologies = { 
 		romanticism
 	}
-	cost = 100
+	cost = 75
 
 	ai_weight = {
 		value = 0
@@ -553,12 +742,38 @@ decree_greener_grass_campaign = {
 		}
 	}
 }
+decree_penal_colony = {
+	texture = "gfx/interface/icons/decree/penal.dds"
+	valid = {
+		owner = { 
+			is_player = yes
+			NOT = { 
+				has_law = law_type:law_no_colonial_affairs
+			}
+		}
+		is_isolated_from_market = no
+	}
+	
+	modifier = {
+		state_colony_growth_creation_mult = 0.3
+		state_migration_push_mult = 0.75
+		state_migration_pull_mult = -0.75
+		building_throughput_add = -0.1
+		state_loyalists_from_sol_change_mult = 0.15
+		state_turmoil_effects_mult = -0.1
 
-decree_enlistment_efforts = {
+	}
+	unlocking_technologies = { 
+		colonization
+	}
+	cost = 75
+}
+
+decree_military_training = { 
 	texture = "gfx/interface/icons/decree/decree_enlistment_efforts.dds"			
 	modifier = {
 		state_conscription_rate_add = 0.05
-		building_training_rate_mult = 0.25
+		building_training_rate_mult = 0.50
 	}
 	unlocking_technologies = {
 		mandatory_service
@@ -605,4 +820,183 @@ decree_enlistment_efforts = {
 		}		
 	}
 }
+decree_promote_health = {
+	texture = "gfx/interface/icons/decree/health.dds"
+	unlocking_technologies = {
+		pharmaceuticals
+}		
+	modifier = { # 0.15 increases the pop growth by about 3x based off early techs; basically maxed out health institution. arguably should be 12.5?
+		state_mortality_mult = -0.1 #
+		state_birth_rate_mult = 0.1 
+		state_pollution_reduction_health_mult = -0.2
+		building_working_conditions_mult = -0.15
+	}
+	cost = 75
+	
+	ai_weight = {
+		value = 20
 
+		if = {
+			limit = {
+				state_population < 300000
+			}
+			multiply = 0.5
+		}		
+		if = {
+			limit = {
+				scope:country = {
+					OR = {
+						has_strategy = ai_strategy_reactionary_agenda
+						has_strategy = ai_strategy_conservative_agenda
+						has_strategy = ai_strategy_maintain_mandate_of_heaven
+					}
+				}
+			}
+			multiply = 0.5
+		}
+		if = {
+			limit = {
+				scope:country = {
+					OR = {
+						has_strategy = ai_strategy_progressive_agenda
+						has_strategy = ai_strategy_egalitarian_agenda
+					}
+				}
+			}
+			multiply = 1.5
+		}			
+	}
+}
+
+#do events about intelligentsia strenght to compensate for inability to modify here
+#make inverse decree? would be a little weird limited to flat pollution +gov cant will polluting practices in to existence
+decree_conservation = {
+	texture = "gfx/interface/icons/decree/conservation_decree.dds"
+	unlocking_technologies = {
+		philosophical_pragmatism
+	}		
+
+
+	valid = {
+		state_region = {
+			pollution_amount > 75
+		}
+	}
+
+	modifier = {
+		state_pollution_generation_add = -350  #mult doesnt work
+		#state_rich_expected_sol = 1   #maybe. represents case where more likely to be angry if expected SOL is not met (having to not poison planet for easier money). could also lower sol
+	}
+
+	cost = 75
+	
+	ai_chance = 0
+}
+
+decree_disenfranchise = {
+	texture = "gfx/interface/icons/decree/civic_suppression_decree.dds"
+	unlocking_technologies = {
+	}		
+
+	valid = {
+		owner = { 
+			NOT = {
+				has_law = law_type:law_protected_speech 
+			} 
+		}
+	}
+
+	modifier = {
+		state_pop_pol_str_mult = -0.1 #reduced from 0.3 because ppl complained about too strong
+		state_dependent_political_participation_add = -0.2
+		state_radicals_from_discrimination_mult = 0.05
+		state_radicals_from_sol_change_mult = 0.05 
+	}
+	cost = 100
+	
+	ai_chance = 0
+}
+
+#decree_red_tape = {  
+#	texture = "gfx/interface/icons/decree/efficient_admin.dds"
+#	modifier = {
+#		country_company_throughput_bonus_add = 0.1
+#		country_company_construction_efficiency_bonus_add = 0.1
+#	}
+#
+#	unlocking_technologies = { 
+#		corporate_charters
+#	}
+#
+#	valid = {
+#	}
+#
+#	cost = 75
+#
+#	ai_weight = {
+#		value = 0					
+#	}
+#}
+
+#decree_culture_convert = {
+#	texture = "gfx/interface/icons/decree/culture_convert_decree.dds"
+#	unlocking_technologies = {
+#		nationalism
+#	}
+#
+#	valid = {
+#		owner = { 
+#			is_player = yes
+#			OR = {
+#				has_law = law_type:law_national_supremacy
+#				has_law = law_type:law_ethnostate
+#			 }
+#		}
+#		NOT = { 
+#			has_decree = decree_emergency_relief
+#		}
+#		custom_tooltip = {
+#			text = homeland_decree.tt
+#			OR = {
+#				any_scope_culture = { 
+#					has_homeland = root
+#					NOT = { is_primary_culture_of = root.owner }					
+#				}
+#				AND = {
+#					NOT = {
+#						any_scope_culture = { 
+#							has_homeland = root
+#							NOT = { is_primary_culture_of = root.owner }					
+#						}
+#					}
+#					any_scope_culture = { 
+#						NOT = { has_homeland = root }
+#						is_primary_culture_of = root.owner					
+#					}
+#				}
+#			}
+#		}
+#		custom_tooltip = {
+#			text = homeland_decree.tt2
+#			any_scope_culture = { 
+#				is_primary_culture_of = root.owner				
+#			}
+#		}
+#		is_split_state = no
+#	}
+#
+#	modifier = {
+#		#state_non_homeland_mortality_mult = 999 
+#		#this is a direct and clean non-homeland kill. not very "convert" though.
+#
+#		state_assimilation_mult = 0.15
+#		state_conversion_mult = 0.15
+#		state_migration_pull_mult = -0.25
+#	    state_accepted_birth_rate_mult = 6.5
+#	    state_birth_rate_mult = -1
+#        state_mortality_mult = 8
+#		state_standard_of_living_add = -2
+#		state_turmoil_effects_mult = 1
+#	}
+#	cost = 100
+#}
