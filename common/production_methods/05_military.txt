@@ -17,6 +17,10 @@ pm_general_training = {
 	unlocking_technologies = {
 		general_staff
 	}
+	unlocking_production_methods = {
+		pm_no_slave_armies
+		pm_no_slave_armies_special
+	}
 	building_modifiers = {
 
 		level_scaled = {
@@ -31,6 +35,10 @@ pm_advanced_tactics_training = {
 	texture = "gfx/interface/icons/production_method_icons/squad_infantry.dds"
 	unlocking_technologies = {
 		military_statistics
+	}
+	unlocking_production_methods = {
+		pm_no_slave_armies
+		pm_no_slave_armies_special
 	}
 	building_modifiers = {
 
@@ -47,6 +55,10 @@ pm_training_streamlining = {
 	unlocking_technologies = {
 		wargaming
 	}
+	unlocking_production_methods = {
+		pm_no_slave_armies
+		pm_no_slave_armies_special
+	}
 	building_modifiers = {
 
 		level_scaled = {
@@ -61,6 +73,10 @@ pm_nco_incorporation = {
 	texture = "gfx/interface/icons/production_method_icons/nco_incorporation.dds"
 	unlocking_technologies = {
 		nco_training
+	}
+	unlocking_production_methods = {
+		pm_no_slave_armies
+		pm_no_slave_armies_special
 	}
 	building_modifiers = {
 		workforce_scaled = {
@@ -78,6 +94,10 @@ pm_mobile_warfare_tactics = {
 	texture = "gfx/interface/icons/production_method_icons/motorised_logistics.dds"
 	unlocking_technologies = {
 		mobile_armor
+	}
+	unlocking_production_methods = {
+		pm_no_slave_armies
+		pm_no_slave_armies_special
 	}
 	building_modifiers = {
 		workforce_scaled = {
@@ -329,6 +349,7 @@ pm_slave_armies = {
 		level_scaled = {
 			building_employment_war_slaves_add = 970
 			building_employment_soldiers_add = -970
+			building_training_rate_add = 11
 		}
 	}
 }
