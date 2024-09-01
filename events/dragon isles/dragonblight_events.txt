@@ -1124,7 +1124,7 @@ immediate = {
 				duration = 3
 			
 				event_image = {
-					video = "europenorthamerica_opium_smoker"
+					video = "middleeast_middleclass_cafe"
 				}
 			
 				on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -1440,6 +1440,14 @@ immediate = {
 						}
 				}	
 
+				immediate = {
+					random_scope_state = {
+						limit = {
+								has_modifier = modifier_active_dragonblight_outbreak
+							}
+							save_scope_as = sickhouse_state
+						}
+				}
 				option = {
 					name = dragonblight_pulse.15.a
 					default_option = yes
@@ -1450,16 +1458,14 @@ immediate = {
 							months = short_modifier_time
 						}
 					}
-					random_scope_state = {
-						limit = {
-								has_modifier = modifier_active_dragonblight_outbreak
-							}
-							add_modifier = {
-								name = dragon_sickhouses
-								months = 48	
-							}
-							save_scope_as = dragon_sickhouse 	
+					scope:sickhouse_state = {
+						add_modifier = {
+							name = dragon_sickhouses
+							months = 48	
 						}
+					}
+					custom_tooltip = dragonblight_pulse.15.tt
+
 					}
 
 				option = {
@@ -1472,15 +1478,13 @@ immediate = {
 							months = short_modifier_time
 						}
 					}
-					random_scope_state = {
-						limit = {
-								has_modifier = modifier_active_dragonblight_outbreak
-							}
+					scope:sickhouse_state = {
 						add_modifier = {
 							name = dragon_sickhouses
 							months = 48	
 						}
-					}	
+					}
+					custom_tooltip = dragonblight_pulse.15.tt	
 				}
 				option = {
 					name = dragonblight_pulse.15.c
@@ -1492,7 +1496,7 @@ immediate = {
 							months = short_modifier_time
 						}
 					}
-					random_scope_state = {
+					scope:sickhouse_state = {
 						add_modifier = {
 							name = dragon_sickhouses
 							months = 48	
@@ -1509,7 +1513,8 @@ immediate = {
 							name = dragon_sickhouses
 							months = 48	
 						}
-					}					
+					}
+					custom_tooltip = dragonblight_pulse.15.tt					
 				}
 			}
 
@@ -1526,7 +1531,7 @@ immediate = {
 				duration = 3
 			
 				event_image = {
-					video = "europenorthamerica_opium_smoker"
+					video = "unspecific_whaling"
 				}
 			
 				on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -1752,44 +1757,26 @@ dragonblight_pulse.19 = { #kobold conversion cult appears
 
 		option = {
 			name = dragonblight_pulse.19.a
-			custom_tooltip = cult_1_tt
-			show_as_tooltip = {
-				random_scope_state = {
-					limit = {
-						owner = root #is this necessary or is it already implicit?
-					}
-					add_modifier = {
-					name = tolerated_conversion_cult_state
-					months = 36	
-					is_decaying = yes
-					}
-				}
-			}
-
 			scope:dragon_cultist_state = {
-			add_modifier = {
-				name = active_conversion_cult
-				months = 36	
-				}
 				custom_tooltip = conversion_cult_tt
-
 			add_loyalists_in_state = {
-				value = 0.1
+				value = 0.15
 				culture = cu:kotskarvi
 			}	
-			}
-			hidden_effect = {
-				every_scope_state = {
-					limit = {
-						owner = root #is this necessary or is it already implicit?
-					}
-					add_modifier = {
-					name = tolerated_conversion_cult_state
-					months = 36	
-					is_decaying = yes
-					}
+			add_modifier = {
+				name = active_conversion_cult
+				months = 40	
 				}
 			}
+			
+
+					add_modifier = {
+					name = tolerated_conversion_cult_state
+					months = 40	
+					is_decaying = yes
+					}
+				
+			
 			set_variable = conversion_cult_active
 			
 		}
@@ -1804,7 +1791,7 @@ dragonblight_pulse.19 = { #kobold conversion cult appears
 					}
 					add_modifier = {
 						name = crushed_conversion_cult
-						months = 36
+						months = 40
 						is_decaying = yes	
 					}
 				}
@@ -1813,7 +1800,7 @@ dragonblight_pulse.19 = { #kobold conversion cult appears
 				every_scope_state = {
 					add_modifier = {
 						name = crushed_conversion_cult
-						months = 36
+						months = 40
 						is_decaying = yes	
 					}
 				}
