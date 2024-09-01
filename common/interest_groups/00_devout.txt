@@ -54,8 +54,6 @@
 			}
 			ig:ig_devout = {
 				set_interest_group_name = ig_cultists
-				remove_ideology = ideology_pious
-				add_ideology = ideology_pious_dark
 			}
 		}
 
@@ -102,8 +100,6 @@
 				}
 			}
 			ig:ig_devout = {
-				remove_ideology = ideology_pious
-				add_ideology = ideology_pious_dark
 			}
 		}
 		if = {
@@ -161,13 +157,6 @@
 			}
 			ig:ig_devout ?= {
 				if = {
-					limit = {
-						has_ideology = ideology:ideology_pious_dark
-					}			
-						remove_ideology = ideology_pious_dark
-						add_ideology = ideology_corporatist_dark
-				}
-				else_if = {
 					limit = {
 						has_ideology = ideology:ideology_pious_magoclast
 					}			
