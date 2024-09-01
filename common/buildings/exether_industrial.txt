@@ -147,7 +147,19 @@ building_soulwrought_assembly_plant = {
 	unlocking_technologies = {
 		thaumacore_factories
 	}
+	
+	possible = {
+		custom_tooltip = {
+			text = soulwrought_assembly_plant_tt
+			market ?= { #kinda worried this might make the AI not build these as well
+            mg:thaumacores ?= {
+                market_goods_sell_orders > 0
+            }
+        }
+		}
+		
 
+	}
 	production_method_groups = {
 		pmg_soulforging_soulwrought_assembly_plant
 		pmg_automation_building_thaumacore_foundry #we should change this eventually
