@@ -15,15 +15,13 @@
 }
 
 pm_slave_armies = {
-	texture = "gfx/interface/icons/production_method_icons/no_specialists.dds"
+	texture = "gfx/interface/icons/production_method_icons/slaves.dds"
 	is_default = yes
 
-	disallowing_laws = {
-		law_slavery_banned
-		law_debt_slavery
-		law_slave_trade
-		law_legacy_slavery
+	unlocking_laws = {
+		law_war_slaves
 	}
+	
 	building_modifiers = {
 
 		level_scaled = {
