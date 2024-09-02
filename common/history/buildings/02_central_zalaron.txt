@@ -7167,7 +7167,46 @@ BUILDINGS = {
 				level=1
 				reserves=1
 				activate_production_methods={ "pm_basic_port" }
-			}		
+			}
+			create_building={
+				building="building_steel_mills"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:WHX"
+							levels=1
+							region="STATE_FELICGRUNDO"
+					   }
+					}
+				reserves=1
+				activate_production_methods={ "pm_blister_steel_process" "pm_automation_disabled" }
+			}
+			create_building={
+				building="building_shipyards"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:WHX"
+                        levels=1
+                        region="STATE_FELICGRUNDO"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_complex_shipbuilding" }
+			}			
+			create_building={
+				building="building_furniture_manufacturies"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:VAI"
+                        levels=3
+                        region="STATE_FELICGRUNDO"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_lathe"  "pm_automation_disabled" "pm_precision_tools" }
+			}
             create_building={
 				building="building_logging_camp"
                 add_ownership={ 
