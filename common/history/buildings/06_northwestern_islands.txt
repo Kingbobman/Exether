@@ -850,6 +850,45 @@
 				reserves=1
 				activate_production_methods={ "pm_basic_port" }
 			}
+			create_building={
+				building="building_tobacco_plantation"
+				add_ownership={ 
+					building={ 
+						type="building_manor_house"
+						country="c:DIS"
+						levels=4
+						region="STATE_SIGARA"
+				   }
+				}
+				reserves=1
+				activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_wheat_farm"
+					add_ownership={ 
+						building={ 
+							type="building_manor_house"
+							country="c:DIS"
+							levels=9
+							region="STATE_SIGARA"
+					   }
+					}
+				reserves=1
+				activate_production_methods={ "pm_simple_farming" "pm_tools" "pm_farms_basic_earth_shaping"}
+			}
+			create_building={
+				building="building_food_industry"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:DIS"
+                        levels=5
+                        region="STATE_SIGARA"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_disabled_canning" "pm_bakery" "pm_live_dough" "pm_manual_dough_processing"}
+			}
 		}
 	}
 	s:STATE_LILYBAEUM = {
@@ -867,55 +906,6 @@
 				reserves=1
 				activate_production_methods={ "pm_fishing_trawlers" "pm_unrefrigerated" }
 			  }
-			create_building={
-				building="building_port"
-				level=1
-				reserves=1
-				activate_production_methods={ "pm_basic_port" }
-			}
-		}
-	}
-	s:STATE_CLYPYA = {
-		region_state:DIS={
-			create_building={
-				building="building_tobacco_plantation"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:DIS"
-						levels=4
-						region="STATE_CLYPYA"
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }
-			}
-			create_building={
-				building="building_wheat_farm"
-					add_ownership={ 
-						building={ 
-							type="building_manor_house"
-							country="c:DIS"
-							levels=9
-							region="STATE_CLYPYA"
-					   }
-					}
-				reserves=1
-				activate_production_methods={ "pm_simple_farming" "pm_tools" "pm_farms_basic_earth_shaping"}
-			}
-			create_building={
-				building="building_food_industry"
-                add_ownership={ 
-                    building={ 
-                        type="building_financial_district"
-                        country="c:DIS"
-                        levels=5
-                        region="STATE_CLYPYA"
-                   }
-                }
-				reserves=1
-				activate_production_methods={ "pm_disabled_canning" "pm_bakery" "pm_live_dough" "pm_manual_dough_processing"}
-			}
 			create_building={
 				building="building_port"
 				level=1
