@@ -227,15 +227,6 @@
 			transfer_to_formation = scope:thirdcorparr
 		}
 
-		create_character = {
-			is_general = yes
-			commander_rank = commander_rank_1
-			save_scope_as = commanderarr3_gen			
-		}
-
-		scope:commanderarr3_gen = {
-			transfer_to_formation = scope:fourthcorparr
-		}
 		create_military_formation = {
 			type = fleet
 			hq_region = sr:region_arrador
@@ -276,7 +267,6 @@
 				state_region = s:STATE_TWO_BARREL_COAST
 				count = 8
 			}
-
 			save_scope_as = arr_navy
 
 			create_character = {
@@ -727,10 +717,8 @@
 				state_region = s:STATE_FAR_SHORE_2
 				count = 3
 			}
-
 			save_scope_as = leoarmy
 		}
-	}
 
 		create_character = {
 			is_general = yes
@@ -741,7 +729,7 @@
 		scope:leogen = {
 			transfer_to_formation = scope:leoarmy
 		}
-
+	}
 	c:CER ?= {
 		create_military_formation = {
 			type = army
@@ -909,7 +897,7 @@
 		}
 		
 		scope:wilhem_gen = {
-			transfer_to_formation = scope:second_fist
+			transfer_to_formation = scope:first_fist
 		}
 
 		create_military_formation = {
