@@ -1035,56 +1035,56 @@ coffee_with_milk.10 = {
 		}
 	}
 	
-	option = {
-		name = coffee_with_milk.10.a 
-		default_option = yes
-		scope:bandits_state = {
-			add_radicals_in_state = {
-				value = medium_radicals
-				interest_group = owner.ig:ig_rural_folk
-			}
-		}
-		scope:bandit_scope = {
-			if = {
-				limit = {
-					has_template = BRZ_virgulino_ferreira
-				}
-				add_modifier = {
-					name = modifier_lamp_character_modifier
-				}
-			}
-			else = {
-				add_modifier = {
-					name = modifier_social_bandit_character_modifier
-				}
-			}
-		}
-	}
-
-	option = {
-		name = coffee_with_milk.10.b
-		scope:bandits_state = {
-			add_radicals_in_state = {
-				value = medium_radicals
-				interest_group = owner.ig:ig_rural_folk
-			}
-		}
-		scope:bandit_scope = {
-			if = {
-				limit = {
-					has_template = BRZ_virgulino_ferreira
-				}
-				add_modifier = {
-					name = modifier_lamp_hunted_character_modifier
-				}
-			}
-			else = {
-				add_modifier = {
-					name = modifier_social_bandit_hunted_character_modifier
-				}
-			}
-		}
-	}
+	#option = {
+	#	name = coffee_with_milk.10.a 
+	#	default_option = yes
+	#	scope:bandits_state = {
+	#		add_radicals_in_state = {
+	#			value = medium_radicals
+	#			interest_group = owner.ig:ig_rural_folk
+	#		}
+	#	}
+	#	scope:bandit_scope = {
+	#		if = {
+	#			limit = {
+	#				has_template = BRZ_virgulino_ferreira
+	#			}
+	#			add_modifier = {
+	#				name = modifier_lamp_character_modifier
+	#			}
+	#		}
+	#		else = {
+	#			add_modifier = {
+	#				name = modifier_social_bandit_character_modifier
+	#			}
+	#		}
+	#	}
+	#}
+	
+	#option = {
+	#	name = coffee_with_milk.10.b
+	#	scope:bandits_state = {
+	#		add_radicals_in_state = {
+	#			value = medium_radicals
+	#			interest_group = owner.ig:ig_rural_folk
+	#		}
+	#	}
+	#	scope:bandit_scope = {
+	#		if = {
+	#			limit = {
+	#				has_template = BRZ_virgulino_ferreira
+	#			}
+	#			add_modifier = {
+	#				name = modifier_lamp_hunted_character_modifier
+	#			}
+	#		}
+	#		else = {
+	#			add_modifier = {
+	#				name = modifier_social_bandit_hunted_character_modifier
+	#			}
+	#		}
+	#	}
+	#}
 	
 	option = {
 		name = coffee_with_milk.10.c
@@ -1102,33 +1102,33 @@ coffee_with_milk.10 = {
 			}
 		}
 		random_list = {
-			25 = {
+			50 = {
 				scope:bandit_scope = {
 					exile_character = yes
 				}
 			}
-			25 = {
+			50 = {
 				scope:bandit_scope = {
 					kill_character = yes
 				}
 			}
-			50 = {
-				scope:bandit_scope = {
-					if = {
-						limit = {
-							has_template = BRZ_virgulino_ferreira
-						}
+			#50 = {
+				#scope:bandit_scope = {
+				#	if = {
+				#		limit = {
+				#			has_template = BRZ_virgulino_ferreira
+				#		}
 						add_modifier = {
-							name = modifier_lamp_hunted_character_modifier
-						}
-					}
-					else = {
-						add_modifier = {
-							name = modifier_social_bandit_hunted_character_modifier
-						}
-					}
-				}
-			}
+				#			name = modifier_lamp_hunted_character_modifier
+				#		}
+				#	}
+				#	else = {
+				#		add_modifier = {
+				#			name = modifier_social_bandit_hunted_character_modifier
+				#		}
+				#	}
+				#}
+			#}
 		}
 	}
 }
