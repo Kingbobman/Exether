@@ -353,3 +353,23 @@ pm_slave_armies = {
 		}
 	}
 }
+
+pm_slave_armies_barracks = {
+	texture = "gfx/interface/icons/production_method_icons/slaves.dds"
+	is_default = yes
+
+	unlocking_religions = { creed_of_hasal }
+
+	disallowing_laws = {
+		law_slavery_banned
+	}
+
+	building_modifiers = {
+
+		level_scaled = {
+			building_employment_war_slaves_add = 500
+			building_employment_soldiers_add = -500
+			building_training_rate_add = 11
+		}
+	}
+}
