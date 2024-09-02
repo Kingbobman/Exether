@@ -307,9 +307,13 @@ immediate = {
 				region = sr:region_west_dragon_isles
 				region = sr:region_amethyst_archipelago
 			}
+			NOT = { mainland_dragon_isles_state = yes }
 		}
-		remove_homeland = cu:illvasaari
-		add_homeland = cu:kotskarvi
+		dragonblight_killswitch_engage = yes  #might swap this for a weaker version of this effect, tbd
+		state_region = {
+			remove_homeland = cu:illvasaari
+			add_homeland = cu:kotskarvi
+		}
 	}
 	every_scope_state = {
 		limit = {
@@ -1082,7 +1086,7 @@ immediate = {
 			else_if={
 				limit = {
 				#Relevant kobold tag
-				exists = c:TKR
+				exists = c:MVI
 				}
 				scope:outbreak_state = {
 					dragonblight_killswitch_engage = yes
