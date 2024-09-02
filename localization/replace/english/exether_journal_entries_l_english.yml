@@ -133,7 +133,9 @@ je_dragonblight_completion_tt: "[THIS.GetCountry.GetName] has found a cure for t
 dragon_port_lockdown_button: "Lockdown the Ports"
 dragon_port_lockdown_button_desc: "By taking a number of precautions in our ports, we may be able to slow the spread of the Dragonblight."
 negotiate_kobold_settlements_button: "Negotiate Kobold Border Settlements"
-negotiate_kobold_settlements_button_desc: "Many of our states have already suffered dearly to the Dragonblight.  By ceding key border territories to the kobolds nearby, we may hope to regain some semblance of control over our territories.\n#red This will cede land to the kobolds.#!"
+negotiate_kobold_settlements_button_desc: "Many of our states have already suffered dearly to the Dragonblight.  By ceding key border territories to the kobolds nearby, we may hope to regain some semblance of control over our territories.\n#red This will cede land to the kobolds. Can only be done once per state.#!"
+negotiate_kobold_tt: "At least one mainland state must have a population of greater than 35% [GetCulture('kotskarvi').GetName], and border a country with a kobold [Concept('concept_primary_cultures','$concept_primary_culture$')]."
+negotiate_kobold_2_tt: "#red A new split state will be created out of at least one of your states.#! Many [GetCulture('kotskarvi').GetName] and [GetCulture('illvasaari').GetName] pops will resettle into their country's proper borders."
 dragonblight_failure_tt: "All mainland states will defect to an adjacent country with a kobold [Concept('concept_primary_cultures','$concept_primary_culture$')]\n\nAny states bordering kobolds will defect #bold as they drop below 50% [GetCulture('illvasaari').GetName]#."
 dragonblight_vaccine_progress_bar: "Cure for Kobolds"
 
