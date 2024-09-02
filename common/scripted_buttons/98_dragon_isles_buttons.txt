@@ -342,6 +342,44 @@ negotiate_kobold_settlements_button = {
 					 	trigger_event = dragonblight.4
 					 }
 					}
+					if = {
+						limit = {
+							state_region = s:STATE_MOTHYA
+							is_split_state = no
+						}
+						random_neighbouring_state = {
+							limit = {
+								owner = {
+									OR = {
+										country_has_primary_culture = cu:kotskarvi
+											country_has_primary_culture = cu:lomarash
+											country_has_primary_culture = cu:drogori
+									}
+								}
+							}
+							owner = {
+								save_scope_as = mothya_settler_scope
+							}
+						}
+						s:STATE_MOTHYA = {
+							set_owner_of_provinces = {
+								country = scope:mothya_settler_scope
+								provinces = { xCFAB8B xF5FC7A }
+							}	
+						}
+						every_scope_pop = {
+						limit = {
+							culture = cu:kotskarvi
+						}
+						change_pop_culture = {
+							target = cu:illvasaari
+							value = 0.4
+						}
+					}
+						 scope:zamaris_settler_scope = {
+							 trigger_event = dragonblight.4
+						 }
+						}
 						if = {
 							limit = {
 								state_region = s:STATE_LEPIDRA
