@@ -99,7 +99,7 @@ STATE_LEPTHAR = {
 STATE_THASPYR = {
     id = 3696
     subsistence_building = "building_subsistence_farms"
-    provinces = { x4DD294 x6AF1B9 x75F3BD x98F082 xA6D0A1 xA7AFC7 xBA97D6 "xD64577" "xE7739D" "xFDE6C6" }
+    provinces = { x4DD294 x6AF1B9 x75F3BD x98F082 xA6D0A1 xA7AFC7 xBA97D6 xD64577 xE7739D xFDE6C6 }
     city = xA7AFC7
     farm = xA6D0A1
     mine = x98F082
@@ -113,7 +113,7 @@ STATE_THASPYR = {
         bg_logging = 15
         bg_fishing = 9
     }
-
+    naval_exit_id = 3052
 }
 STATE_LEPTISCA = {
     id = 3698
@@ -333,13 +333,13 @@ STATE_EBYSS = {
 STATE_SIGARA = {
     id = 3709
     subsistence_building = "building_subsistence_fishing_villages"
-    provinces = { x2BE7E9 x64F3D1 x69CAD1 x73BAF4 x949AF1 xABF06B xB2DBEA xC1A4D3 xC6A4A2 xDFEC71 xEACCF3 xEBB0DA xEC97C9 }
+    provinces = { x2BE7E9 x64F3D1 x65FBBD x69CAD1 x73BAF4 x949AF1 xABF06B xB2DBEA xBF89D3 xC1A4D3 xC6A4A2 xDFEC71 xEACCF3 xEBB0DA xEC97C9 }
     port = x2BE7E9
     city = xEC97C9
     farm = xEBB0DA
     mine = xEACCF3
     wood = xDFEC71
-    arable_land = 45
+    arable_land = 55
     arable_resources = { "bg_wheat_farms" "bg_cotton_plantations" "bg_silk_plantations" "bg_tea_plantations" "bg_banana_plantations" "bg_tobacco_plantations" }
     capped_resources = {
         bg_logging = 10
@@ -351,17 +351,18 @@ STATE_SIGARA = {
 STATE_MOTHYA = {
     id = 3710
     subsistence_building = "building_subsistence_fishing_villages"
-    provinces = { x65FBBD xBF89D3 xDBB1FE xE19BB9 xE9BFD5 xEED85D xEFBC61 }
+    provinces = { xA6B8F8 xC365DE xCD89B9 xCFAB8B xD0FA73 xDBB1FE xDF72F9 xE19BB9 xE9BFD5 xEED85D xEFBC61 xF1F5F7 xF5FC7A }
     port = xBF89D3
     city = xEFBC61
     farm = xEED85D
-    mine = xE9BFD5
+    mine = xD0FA73
     wood = xE19BB9
-    arable_land = 20
-    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
+    arable_land = 40
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" }
     capped_resources = {
-        bg_logging = 4
+        bg_logging = 18
         bg_fishing = 13
+        bg_sulfur_mining = 20
     }
     naval_exit_id = 3052
 }
@@ -381,22 +382,6 @@ STATE_LILYBAEUM = {
         bg_fishing = 5
     }
     naval_exit_id = 3071
-}
-STATE_CLYPYA = {
-    id = 3712
-    subsistence_building = "building_subsistence_fishing_villages"
-    provinces = { xA6B8F8 xC365DE xCD89B9 xCFAB8B xD0FA73 xDF72F9 xF1F5F7 xF5FC7A }
-    city = xF1F5F7
-    farm = xDF72F9
-    mine = xD0FA73
-    wood = xCFAB8B
-    arable_land = 31
-    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" }
-    capped_resources = {
-        bg_sulfur_mining = 20
-        bg_logging = 16
-    }
-
 }
 STATE_RUSARYA = {
     id = 3713
