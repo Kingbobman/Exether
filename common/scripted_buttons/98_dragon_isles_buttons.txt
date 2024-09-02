@@ -1,4 +1,4 @@
-dragon_port_lockdown_button = {
+﻿dragon_port_lockdown_button = {
 	name = "dragon_port_lockdown_button"
 	desc = "dragon_port_lockdown_button_desc"
 
@@ -197,19 +197,6 @@ negotiate_kobold_settlements_button = {
 					}
 				}
 				AND = {
-					state_region = s:STATE_CARTHI
-					culture_percent_state = { target = cu:kotskarvi value >= 0.35   }
-					any_neighbouring_state = {
-						owner = {
-							OR = {
-								country_has_primary_culture = cu:kotskarvi
-									country_has_primary_culture = cu:lomarash
-										country_has_primary_culture = cu:drogori
-							}
-						}
-					}
-				}
-				AND = {
 					state_region = s:STATE_LEPTHAR
 					culture_percent_state = { target = cu:kotskarvi value >= 0.35   }
 					any_neighbouring_state = {
@@ -237,19 +224,6 @@ negotiate_kobold_settlements_button = {
 				}
 				AND = {
 					state_region = s:STATE_THASPYR
-					culture_percent_state = { target = cu:kotskarvi value >= 0.35   }
-					any_neighbouring_state = {
-						owner = {
-							OR = {
-								country_has_primary_culture = cu:kotskarvi
-									country_has_primary_culture = cu:lomarash
-										country_has_primary_culture = cu:drogori
-							}
-						}
-					}
-				}
-				AND = {
-					state_region = s:STATE_SABRYA
 					culture_percent_state = { target = cu:kotskarvi value >= 0.35   }
 					any_neighbouring_state = {
 						owner = {
@@ -748,44 +722,6 @@ negotiate_kobold_settlements_button = {
 																 	trigger_event = dragonblight.4
 																 }
 																}
-																if = {
-																	limit = {
-																		state_region = s:STATE_CLYPYA #todo; else_if to release the other side depending on where neighboring kobold state is
-																		is_split_state = no
-																	}
-																	random_neighbouring_state = {
-																		limit = {
-																			owner = {
-																				OR = {
-																					country_has_primary_culture = cu:kotskarvi
-																						country_has_primary_culture = cu:lomarash
-										country_has_primary_culture = cu:drogori
-																				}
-																			}
-																		}
-																		owner = {
-																			save_scope_as = clypya_settler_scope
-																		}
-																	}
-																	s:STATE_CLYPYA = {
-																		set_owner_of_provinces = {
-																			country = scope:clypya_settler_scope
-																			provinces = { xcebb93 xb2e1ec }
-																		}	
-																	}
-																	every_scope_pop = {
-																	limit = {
-																		culture = cu:kotskarvi
-																	}
-																	change_pop_culture = {
-																		target = cu:illvasaari
-																		value = 0.4
-																	}
-																}
-																	 scope:clypya_settler_scope = {
-																	 	trigger_event = dragonblight.4
-																	 }
-																	}
 				}
 
 			}

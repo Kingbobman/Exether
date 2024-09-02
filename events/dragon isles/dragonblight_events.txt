@@ -1,4 +1,4 @@
-namespace = dragonblight
+﻿namespace = dragonblight
 namespace = dragonblight_pulse
 
 dragonblight.1 = {
@@ -749,7 +749,7 @@ immediate = {
 		}
 		if = {
 			limit = {
-				state_region = s:STATE_CLYPYA
+				state_region = s:STATE_MOTHYA
 			}
 			save_scope_as = outbreak_state
 			state_region = {
@@ -783,12 +783,12 @@ immediate = {
 						}
 					}
 					owner = {
-						save_scope_as = clypya_secession_scope
+						save_scope_as = mothya_secession_scope
 					}
 				}
 				scope:outbreak_state = {
 					dragonblight_killswitch_engage = yes
-					set_state_owner = scope:clypya_secession_scope
+					set_state_owner = scope:mothya_secession_scope
 				}
 			}
 			else_if={
@@ -2892,11 +2892,8 @@ dragonblight_pulse.22 = { #secession events
 				state_region = s:STATE_ZARTHOS
 				state_region = s:STATE_CALTHA
 				state_region = s:STATE_SIGARA
-				state_region = s:STATE_CLYPYA
 				state_region = s:STATE_LILYBAEUM
-				state_region = s:STATE_SABRYA
 				state_region = s:STATE_ZYRAS
-				state_region = s:STATE_CARTHI
 				state_region = s:STATE_THASPYR
 				state_region = s:STATE_LEPTHAR
 				state_region = s:STATE_LEPTISCA
@@ -2918,8 +2915,8 @@ dragonblight_pulse.22 = { #secession events
 				state_region = {
 					remove_homeland = cu:illvasaari
 					add_homeland = cu:kotskarvi
-					add_homeland = cu:garagoz
 				}
+				save_scope_as = outbreak_state
 				if={
 					limit = {
 						any_neighbouring_state = {	
@@ -2991,6 +2988,7 @@ dragonblight_pulse.22 = { #secession events
 					remove_homeland = cu:illvasaari
 					add_homeland = cu:kotskarvi
 				}
+				save_scope_as = outbreak_state
 				if={
 					limit = {
 						any_neighbouring_state = {	
@@ -3065,6 +3063,7 @@ dragonblight_pulse.22 = { #secession events
 					remove_homeland = cu:illvasaari
 					add_homeland = cu:kotskarvi
 				}
+				save_scope_as = outbreak_state
 				if={
 					limit = {
 						any_neighbouring_state = {	
@@ -3139,6 +3138,7 @@ dragonblight_pulse.22 = { #secession events
 					remove_homeland = cu:illvasaari
 					add_homeland = cu:kotskarvi
 				}
+				save_scope_as = outbreak_state
 				if={
 					limit = {
 						any_neighbouring_state = {	
@@ -3213,6 +3213,7 @@ dragonblight_pulse.22 = { #secession events
 					remove_homeland = cu:illvasaari
 					add_homeland = cu:kotskarvi
 				}
+				save_scope_as = outbreak_state
 				if={
 					limit = {
 						any_neighbouring_state = {	
@@ -3287,6 +3288,7 @@ dragonblight_pulse.22 = { #secession events
 					remove_homeland = cu:illvasaari
 					add_homeland = cu:kotskarvi
 				}
+				save_scope_as = outbreak_state
 				if={
 					limit = {
 						any_neighbouring_state = {	
@@ -3362,6 +3364,7 @@ dragonblight_pulse.22 = { #secession events
 			remove_homeland = cu:illvasaari
 			add_homeland = cu:kotskarvi
 		}
+		save_scope_as = outbreak_state
 		if={
 			limit = {
 				any_neighbouring_state = {	
@@ -3428,81 +3431,6 @@ dragonblight_pulse.22 = { #secession events
 			}
 		}
 	}
-	
-	else_if = {
-		limit = {
-			state_region = s:STATE_CLYPYA
-		}
-		state_region = {
-			remove_homeland = cu:illvasaari
-			add_homeland = cu:kotskarvi
-		}
-		if={
-			limit = {
-				any_neighbouring_state = {	
-						owner = {
-							OR = {
-								country_has_primary_culture = cu:kotskarvi
-									country_has_primary_culture = cu:lomarash
-										country_has_primary_culture = cu:drogori
-										country_has_primary_culture = cu:garagoz								
-										country_has_primary_culture = cu:mgzavri
-							}
-						}
-				}	
-			}
-			random_neighbouring_state = {
-				limit = {
-					owner = {
-						OR = {
-							country_has_primary_culture = cu:kotskarvi
-								country_has_primary_culture = cu:lomarash
-										country_has_primary_culture = cu:drogori
-										country_has_primary_culture = cu:garagoz								
-										country_has_primary_culture = cu:mgzavri
-						}
-					}
-				}
-				owner = {
-					save_scope_as = clypya_secession_scope
-				}
-			}
-			scope:outbreak_state = {
-				dragonblight_killswitch_engage = yes
-				set_state_owner = scope:clypya_secession_scope
-			}
-		}	
-	else_if={
-		limit = {
-		#Relevant kobold tag
-		exists = c:SVN
-		}
-		scope:outbreak_state = {
-			dragonblight_killswitch_engage = yes
-			set_state_owner = c:SVN
-		}
-	}
-	else_if={
-		limit = {
-		#Relevant kobold tag
-			exists = c:IAL
-		}
-		scope:outbreak_state = {
-			dragonblight_killswitch_engage = yes
-			set_state_owner = c:IAL
-		}
-	}	
-	else = {
-		scope:outbreak_state = {
-			dragonblight_killswitch_engage = yes
-		}
-		create_country = {
-			tag = SVN
-			origin = this
-			state = scope:outbreak_state.region_state:DIS
-		}
-	}
-	}
 
 		else_if = {
 				limit = {
@@ -3512,6 +3440,7 @@ dragonblight_pulse.22 = { #secession events
 					remove_homeland = cu:illvasaari
 					add_homeland = cu:kotskarvi
 				}
+				save_scope_as = outbreak_state
 				if={
 					limit = {
 						any_neighbouring_state = {	
@@ -3585,6 +3514,7 @@ dragonblight_pulse.22 = { #secession events
 					remove_homeland = cu:illvasaari
 					add_homeland = cu:kotskarvi
 				}
+				save_scope_as = outbreak_state
 				if={
 					limit = {
 						any_neighbouring_state = {	
@@ -3612,84 +3542,12 @@ dragonblight_pulse.22 = { #secession events
 							}
 						}
 						owner = {
-							save_scope_as = lilybaeum_secession_scope
+							save_scope_as = zyras_secession_scope
 						}
 					}
 					scope:outbreak_state = {
 						dragonblight_killswitch_engage = yes
-						set_state_owner = scope:lilybaeum_secession_scope
-					}
-				}
-				else_if={
-					limit = {
-					#Relevant kobold tag
-					exists = c:TKR
-					}
-					scope:outbreak_state = {
-						set_state_owner = c:TKR
-					}
-				}
-				else_if={
-					limit = {
-					#Relevant kobold tag
-						exists = c:MVI
-					}
-					scope:outbreak_state = {
-						set_state_owner = c:MVI
-					}
-				}	
-				else = {
-					scope:outbreak_state = {
-						dragonblight_killswitch_engage = yes
-					}
-					create_country = {
-						tag = TKR
-						origin = this
-						state = scope:outbreak_state.region_state:DIS
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					state_region = s:STATE_CARTHI
-				}
-				state_region = {
-					remove_homeland = cu:illvasaari
-					add_homeland = cu:kotskarvi
-				}
-				if={
-					limit = {
-						any_neighbouring_state = {	
-								owner = {
-									OR = {
-										country_has_primary_culture = cu:kotskarvi
-											country_has_primary_culture = cu:lomarash
-										country_has_primary_culture = cu:drogori
-										country_has_primary_culture = cu:garagoz							
-										country_has_primary_culture = cu:mgzavri
-									}
-								}
-						}	
-					}
-					random_neighbouring_state = {
-						limit = {
-							owner = {
-								OR = {
-									country_has_primary_culture = cu:kotskarvi
-										country_has_primary_culture = cu:lomarash
-										country_has_primary_culture = cu:drogori
-										country_has_primary_culture = cu:garagoz								country_has_primary_culture = cu:mgzavri
-										country_has_primary_culture = cu:mgzavri
-								}
-							}
-						}
-						owner = {
-							save_scope_as = lilybaeum_secession_scope
-						}
-					}
-					scope:outbreak_state = {
-						dragonblight_killswitch_engage = yes
-						set_state_owner = scope:lilybaeum_secession_scope
+						set_state_owner = scope:zyras_secession_scope
 					}
 				}
 				else_if={
@@ -3729,6 +3587,7 @@ dragonblight_pulse.22 = { #secession events
 					remove_homeland = cu:illvasaari
 					add_homeland = cu:kotskarvi
 				}
+				save_scope_as = outbreak_state
 				if={
 					limit = {
 						any_neighbouring_state = {	
@@ -3756,12 +3615,12 @@ dragonblight_pulse.22 = { #secession events
 							}
 						}
 						owner = {
-							save_scope_as = lilybaeum_secession_scope
+							save_scope_as = lepthar_secession_scope
 						}
 					}
 					scope:outbreak_state = {
 						dragonblight_killswitch_engage = yes
-						set_state_owner = scope:lilybaeum_secession_scope
+						set_state_owner = scope:lepthar_secession_scope
 					}
 				}
 				else_if={
@@ -3796,12 +3655,13 @@ dragonblight_pulse.22 = { #secession events
 		
 			else_if = {
 				limit = {
-					state_region = s:STATE_OSYRA
+					state_region = s:STATE_OYRSA
 				}
 				state_region = {
 					remove_homeland = cu:illvasaari
 					add_homeland = cu:kotskarvi
 				}
+				save_scope_as = outbreak_state
 				if={
 					limit = {
 						any_neighbouring_state = {	
@@ -3875,6 +3735,7 @@ dragonblight_pulse.22 = { #secession events
 					remove_homeland = cu:illvasaari
 					add_homeland = cu:kotskarvi
 				}
+				save_scope_as = outbreak_state
 				if={
 					limit = {
 						any_neighbouring_state = {	
@@ -3943,86 +3804,13 @@ dragonblight_pulse.22 = { #secession events
 			}
 			else_if = {
 				limit = {
-					state_region = s:STATE_SABRYA
-				}
-				state_region = {
-					remove_homeland = cu:illvasaari
-					add_homeland = cu:kotskarvi
-				}
-				if={
-					limit = {
-						any_neighbouring_state = {	
-								owner = {
-									OR = {
-										country_has_primary_culture = cu:kotskarvi
-											country_has_primary_culture = cu:lomarash
-										country_has_primary_culture = cu:drogori
-										country_has_primary_culture = cu:garagoz							
-										country_has_primary_culture = cu:mgzavri
-									}
-								}
-						}	
-					}
-					random_neighbouring_state = {
-						limit = {
-							owner = {
-								OR = {
-									country_has_primary_culture = cu:kotskarvi
-										country_has_primary_culture = cu:lomarash
-										country_has_primary_culture = cu:drogori
-										country_has_primary_culture = cu:garagoz								
-										country_has_primary_culture = cu:mgzavri
-								}
-							}
-						}
-						owner = {
-							save_scope_as = lilybaeum_secession_scope
-						}
-					}
-					scope:outbreak_state = {
-						dragonblight_killswitch_engage = yes
-						set_state_owner = scope:lilybaeum_secession_scope
-					}
-				}
-				else_if={
-					limit = {
-					#Relevant kobold tag
-					exists = c:MVI
-					}
-					scope:outbreak_state = {
-						dragonblight_killswitch_engage = yes
-						set_state_owner = c:MVI
-					}
-				}
-				else_if={
-					limit = {
-					#Relevant kobold tag
-						exists = c:TKR
-					}
-					scope:outbreak_state = {
-						dragonblight_killswitch_engage = yes
-						set_state_owner = c:TKR
-					}
-				}	
-				else = {
-					scope:outbreak_state = {
-						dragonblight_killswitch_engage = yes
-					}
-					create_country = {
-						tag = MVI
-						origin = this
-						state = scope:outbreak_state.region_state:DIS
-					}
-				}
-			}
-			else_if = {
-				limit = {
 					state_region = s:STATE_LEPTISCA
 				}
 				state_region = {
 						remove_homeland = cu:illvasaari
 						add_homeland = cu:kotskarvi
 				}
+				save_scope_as = outbreak_state
 				if={
 					limit = {
 						any_neighbouring_state = {	
