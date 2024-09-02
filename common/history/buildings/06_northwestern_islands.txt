@@ -175,10 +175,19 @@
 				reserves=1
 				activate_production_methods={ "pm_saw_mills" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
 			}
-		}
-	}
-	s:STATE_SABRYA = {
-		region_state:DIS={
+			create_building={
+				building="building_tooling_workshops"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:DIS"
+                        levels=2
+                        region="STATE_THASPYR"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_pig_iron" "pm_automation_disabled" }
+			}
 			create_building={
 				building="building_fishing_wharf"
                 add_ownership={ 
@@ -186,28 +195,13 @@
                         type="building_adventuring_guild"
                         country="c:DIS"
                         levels=1
-                        region="STATE_SABRYA"
+                        region="STATE_THASPYR"
                    }
                 }
 				reserves=1
 				activate_production_methods={ "pm_fishing_trawlers" "pm_unrefrigerated" }
-			}
-            create_building={
-				building="building_tooling_workshops"
-                add_ownership={ 
-                    building={ 
-                        type="building_financial_district"
-                        country="c:DIS"
-                        levels=2
-                        region="STATE_SABRYA"
-                   }
-                }
-				reserves=1
-				activate_production_methods={ "pm_pig_iron" "pm_automation_disabled" }
 			}	
-
 		}
-		
 	}
 	s:STATE_LEPTISCA = {
 		region_state:DIS={
