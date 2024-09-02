@@ -1,60 +1,4 @@
 ﻿BUILDINGS = {
-	s:STATE_CARTHI = {
-		region_state:DIS={
-			create_building={
-				building="building_squid_squad"
-				add_ownership={ 
-				  building={ 
-					  type="building_financial_district"
-					  country="c:DIS"
-					  levels=4
-					  region="STATE_CARTHI"
-				 }
-			  }
-				reserves=1
-				activate_production_methods= { "pm_simple_squidding" "pm_unrefrigerated" }
-			  }
-			  create_building={
-				building="building_leviathan_outpost"
-				add_ownership={ 
-					building={ 
-						type="building_financial_district"
-						country="c:DIS"
-						levels=3
-						region="STATE_CARTHI"
-				   }
-				}
-				  reserves=1
-				  activate_production_methods={ "pm_shore_leviathan_hunting" "pm_manual_harvesting" }
-			}
-			create_building={
-				building="building_potion_distillery"
-					add_ownership={
-						building={
-							type="building_wizard_tower"
-							country="c:DIS"
-							levels=2
-							region="STATE_CARTHI"
-					}
-				}
-				reserves=1
-				activate_production_methods={ "pm_simple_potion_production" "pm_oil-based_potions" }
-			}
-			create_building={
-				building="building_military_shipyards"
-                add_ownership={ 
-                    building={ 
-                        type="building_financial_district"
-                        country="c:DIS"
-                        levels=1
-                        region="STATE_CARTHI"
-                   }
-                }
-				reserves=1
-				activate_production_methods={ "pm_military_shipbuilding_wooden" }
-			}
-		}
-	}
 	s:STATE_ZYRAS = {
 		region_state:DIS={
 		create_building={
@@ -71,17 +15,56 @@
 			activate_production_methods={ "pm_saw_mills" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
 		}
 		create_building={
+			building="building_squid_squad"
+			add_ownership={ 
+			  building={ 
+				  type="building_financial_district"
+				  country="c:DIS"
+				  levels=4
+				  region="STATE_ZYRAS"
+			 }
+		  }
+			reserves=1
+			activate_production_methods= { "pm_simple_squidding" "pm_unrefrigerated" }
+		  }
+		create_building={
 			building="building_leviathan_outpost"
 			add_ownership={ 
 				building={ 
 					type="building_adventuring_guild"
 					country="c:DIS"
-					levels=2
+					levels=5
 					region="STATE_ZYRAS"
 			   }
 			}
 			reserves=1
 			activate_production_methods={ "pm_shore_leviathan_hunting" "pm_manual_harvesting" }
+		}
+		create_building={
+			building="building_potion_distillery"
+				add_ownership={
+					building={
+						type="building_wizard_tower"
+						country="c:DIS"
+						levels=2
+						region="STATE_ZYRAS"
+				}
+			}
+			reserves=1
+			activate_production_methods={ "pm_simple_potion_production" "pm_oil-based_potions" }
+		}
+		create_building={
+			building="building_military_shipyards"
+			add_ownership={ 
+				building={ 
+					type="building_financial_district"
+					country="c:DIS"
+					levels=1
+					region="STATE_ZYRAS"
+			   }
+			}
+			reserves=1
+			activate_production_methods={ "pm_military_shipbuilding_wooden" }
 		}
 		
 	}
