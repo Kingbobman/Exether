@@ -39,12 +39,18 @@ OH_DEER: "#italic 'Sup Doc, we have#! #bold [ErrorDeer.NumberOrErrors|v]#! #ital
 
  artificers_trade_unions_ig_shift_effect_tt: "The [GetInterestGroupVariant('ig_trade_unions',GetPlayer).GetNameWithCountryVariant] will be more likely to attract $artificers$"
  artificers_trade_unions_ig_shift_effect_negative_tt: "The [GetInterestGroupVariant('ig_trade_unions',GetPlayer).GetNameWithCountryVariant] will attract fewer $artificers$"
- archmages_devout_ig_shift_effect_tt: "The [GetInterestGroupVariant('ig_devout',GetPlayer).GetNameWithCountryVariant] will attract $wizards$"
- archmages_devout_ig_shift_effect_negative_tt: "The [GetInterestGroupVariant('ig_devout',GetPlayer).GetNameWithCountryVariant] will no longer attract $wizards$"
- archmages_rural_ig_shift_effect_tt: "The [GetInterestGroupVariant('ig_rural_folk',GetPlayer).GetNameWithCountryVariant] will attract $wizards$"
- archmages_rural_ig_shift_effect_negative_tt: "The [GetInterestGroupVariant('ig_rural_folk',GetPlayer).GetNameWithCountryVariant] will no longer attract $wizards$"
+ archmages_trade_unions_ig_shift_effect_tt: "$archmages$ will invest in mundane industry"
+ archmages_trade_unions_ig_shift_effect_negative_tt: "$archmages$ will no longer invest in mundane industry"
+ wizards_devout_ig_shift_effect_tt: "The [GetInterestGroupVariant('ig_devout',GetPlayer).GetNameWithCountryVariant] will attract $wizards$"
+ wizards_devout_ig_shift_effect_negative_tt: "The [GetInterestGroupVariant('ig_devout',GetPlayer).GetNameWithCountryVariant] will no longer attract $wizards$"
+ wizards_rural_ig_shift_effect_tt: "The [GetInterestGroupVariant('ig_rural_folk',GetPlayer).GetNameWithCountryVariant] will attract $wizards$"
+ wizards_rural_ig_shift_effect_negative_tt: "The [GetInterestGroupVariant('ig_rural_folk',GetPlayer).GetNameWithCountryVariant] will no longer attract $wizards$"
+ archmages_rural_ig_shift_effect_negative_tt: "$archmages$ will no longer invest in agriculture"
+ archmages_rural_ig_shift_effect_tt: "$archmages$ will invest in agriculture"
  academics_mages_ig_shift_effect_tt: "The [GetInterestGroupVariant('ig_mages',GetPlayer).GetNameWithCountryVariant] will attract $academics$"
  academics_mages_ig_shift_effect_negative_tt: "The [GetInterestGroupVariant('ig_mages',GetPlayer).GetNameWithCountryVariant] will no longer attract $academics$"
+
+
 
  STATE_ADVENTURER_COVERAGE_CONDENSED: "[AddLocalizationIf(GreaterThan_CFixedPoint(State.MakeScope.ScriptValue('state_adventurer_coverage_demand'),State.MakeScope.ScriptValue('state_adventurer_coverage_value')), 'WARNING')]Using #tooltippable #tooltip:[State.GetTooltipTag],STATE_ADVENTURER_COVERAGE_DEMAND_TOOLTIP [State.MakeScope.ScriptValue('state_adventurer_coverage_demand')|0v]#!#! of #tooltippable #tooltip:[State.GetTooltipTag],STATE_ADVENTURER_COVERAGE_TOOLTIP [State.MakeScope.ScriptValue('state_adventurer_coverage_value')|0v]#!#! [AddLocalizationIf(GreaterThan_CFixedPoint(State.MakeScope.ScriptValue('state_adventurer_coverage_demand'),State.MakeScope.ScriptValue('state_adventurer_coverage_value')), 'STATE_ADVENTURER_COVERAGE_INSUFFICIENT')]"
  ADVENTURER_COVERAGE_USAGE: "#header [concept_tax_capacity] Usage#!\n[State.GetName] uses $USAGE|1v$ [concept_tax_capacity]\n$TOOLTIP_DELIMITER$\nOne point of [concept_tax_capacity] is required per $POPS_PER_CAPACITY|vK$ [Concept('concept_pop', '$concept_pops$')] and [State.GetName] has a total population of $TOTAL_POPS|vK$"

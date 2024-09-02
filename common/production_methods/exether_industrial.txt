@@ -627,7 +627,7 @@ pm_metal_airships = {
 			goods_input_hardwood_add = 10			#x40 = 400
 			goods_input_fabric_add = 10				#x20 = 200
 			goods_input_cloudsilver_add = 25		#x45 = 1175		
-			goods_input_thaumacores_add = 15		#x60 = 1500
+			goods_input_thaumacores_add = 15		#x150 = 2250
 			
 			# output goods
 			goods_output_airships_add = 100			#x70 = 7000
@@ -659,11 +659,10 @@ pm_arc_welding_airshipbuilding = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_steel_add = 40				#x50 = 2000
-			goods_input_electricity_add = 30		#x30 = 900
-			goods_input_thaumacores_add = 15		#x60 = 1500
-			goods_input_hardwood_add = 10			#x40 = 400
-			goods_input_fabric_add = 10				#x20 = 200
+			goods_input_steel_add = 30  			#x50 = 1500
+			goods_input_electricity_add = 20		#x30 = 600
+			goods_input_thaumacores_add = 20    	#x150 = 3000
+			goods_input_hardwood_add = 5    		#x40 = 200
 			goods_input_cloudsilver_add = 20		#x45 = 900	
 
 			# output goods
@@ -827,9 +826,9 @@ pm_early_soulwrought = { #balance me
 	}
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_hardwood_add = 5 #40 x 5 = 200 #these numbers are completely made up I have no idea what 
-			goods_input_thaumacores_add = 3
-			goods_output_soulwrought_intangible_add = 6.5 #soulwrought_intangible are locked to +0% price fluctuation so be careful
+			goods_input_hardwood_add = 10 #40 400 #these numbers are completely made up I have no idea what 
+			goods_input_thaumacores_add = 15  #150  2250
+			goods_output_soulwrought_intangible_add = 30 #100 3000        #soulwrought_intangible are locked to +0% price fluctuation so be careful
 		}
 		level_scaled = {
 			building_employment_shopkeepers_add = 500
@@ -854,10 +853,10 @@ pm_clockwork_soulwrought = {
 	}
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_hardwood_add = 10 #400
-			goods_input_porcelain_add = 5 #350
-			goods_input_thaumacores_add = 6 #600
-			goods_output_soulwrought_intangible_add = 17 #1700
+			goods_input_hardwood_add = 10 #40 400
+			goods_input_porcelain_add = 10 #70 700
+			goods_input_thaumacores_add = 25 #150 3750
+			goods_output_soulwrought_intangible_add = 55 #100 5500
 		}
 		level_scaled = {
 			building_employment_shopkeepers_add = 500
@@ -883,10 +882,10 @@ pm_streamlined_soulwrought = {
 	}
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_hardwood_add = 10 #400
-			goods_input_porcelain_add = 10 #700
-			goods_input_thaumacores_add = 10 #1000 
-			goods_output_soulwrought_intangible_add = 27 #2700 
+			goods_input_gizmos_add = 15 #60 900
+			goods_input_porcelain_add = 15 #70 1050
+			goods_input_thaumacores_add = 40 #150 6000
+			goods_output_soulwrought_intangible_add = 85 #100 8000
 		
 		}
 		level_scaled = {
@@ -903,17 +902,18 @@ pm_basic_thaumacores = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_ectoplasm_add = 20 #50 x 20 = 1000
-			goods_input_gizmos_add = 10 #60 x 10 = 600
+			goods_input_ectoplasm_add = 50 #50 x 20 = 1500
+			goods_input_gizmos_add = 15 #60 x 25 = 1200
+			#Input Cost = 2700
 
-			goods_output_thaumacores_add = 25 #25 x 100 = 2500 (Base Profit = 900, not accounting for wages, just goods. Matches engines base PM!)
+			goods_output_thaumacores_add = 25 #25 x 150 = 3750 (Base Profit = 750)
 		}
 		
 		level_scaled = {
 			building_employment_shopkeepers_add = 500
-			building_employment_laborers_add = 2500
+			building_employment_laborers_add = 2750
 			building_employment_artificers_add = 1500
-			building_employment_wizards_add = 500
+			building_employment_wizards_add = 250
 		}
 	}
 	
@@ -926,18 +926,19 @@ pm_frankenstien_thaumacores = {
 	}
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_ectoplasm_add = 30 #50 x 30 = 1500
-			goods_input_gizmos_add = 15 #60 x 15 = 900
-			goods_input_electricity_add = 30 #30 x 30 = 900
-			
-			goods_output_thaumacores_add = 50 #50 x 100 = 5,000 (1700 Base Profit)
+			goods_input_ectoplasm_add = 100 #50 x 30 = 3000
+			goods_input_gizmos_add = 40 #60 x 50 = 3000
+			goods_input_electricity_add = 20 #30 x 30 = 600
+			#Input Cost = 6600
+
+			goods_output_thaumacores_add = 50 #50 x 150 = 7,500 ( 900 Base Profit)
 		}
 
 		level_scaled = {
 			building_employment_shopkeepers_add = 500
-			building_employment_laborers_add = 2000
+			building_employment_laborers_add = 2500
 			building_employment_artificers_add = 1500
-			building_employment_wizards_add = 1000
+			building_employment_wizards_add = 500
 		}
 	}
 		required_input_goods = electricity
@@ -951,18 +952,19 @@ pm_godsblood_thaumacores = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_ectoplasm_add = 40 #50 x 40 = 2000
-			goods_input_gizmos_add = 20 #60 x 20 = 1200
+			goods_input_ectoplasm_add = 140 #50 x 40 = 4200
+			goods_input_gizmos_add = 65 #60 x 15 = 3750
 			goods_input_oil_add = 50 #40 x 50 = 2000
+			#Input Cost = 9950
 
-			goods_output_thaumacores_add = 75 #75 x 100 = 7,500 (2.3k Base Profit)
+			goods_output_thaumacores_add = 75 #75 x 150 = 11,250 (1300 Base Profit)
 		}
 
 		level_scaled = {
 			building_employment_shopkeepers_add = 500
-			building_employment_laborers_add = 1500
+			building_employment_laborers_add = 1750
 			building_employment_artificers_add = 1500
-			building_employment_wizards_add = 1500
+			building_employment_wizards_add = 750
 		}
 	}
 		required_input_goods = oil

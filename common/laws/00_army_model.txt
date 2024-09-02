@@ -14,6 +14,19 @@
 		state_building_conscription_center_max_level_add = 25
 	}
 	
+	can_impose = {
+		OR = {
+			AND = {
+				is_in_same_power_bloc = scope:target_country
+				AND = {
+					modifier:country_can_impose_same_lawgroup_army_model_in_power_bloc_bool = yes
+					has_law = scope:law
+				}
+			}
+			can_impose_law_default = yes
+		}
+	}
+	
 	on_enact = {
 		custom_tooltip = QUALIFICATIONS_OFFICERS_PEASANT_LEVIES_DESC
 		if = {
@@ -88,6 +101,19 @@ law_professional_army = {
 	possible_political_movements = {
 		law_mass_conscription
 	}
+
+	can_impose = {
+		OR = {
+			AND = {
+				is_in_same_power_bloc = scope:target_country
+				AND = {
+					modifier:country_can_impose_same_lawgroup_army_model_in_power_bloc_bool = yes
+					has_law = scope:law
+				}
+			}
+			can_impose_law_default = yes
+		}
+	}
 	
 	on_enact = {
 		if = {
@@ -137,8 +163,7 @@ law_professional_army = {
 		if = {
 			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
 			add = 750
-		}
-				
+		}		
 		
 		# AI should really try to get out of Peasant Levies under the right circumstances
 		if = {
@@ -249,6 +274,19 @@ law_mass_conscription = {
 		state_building_barracks_max_level_add = 100
 		state_building_conscription_center_max_level_add = 100
 	}
+
+	can_impose = {
+		OR = {
+			AND = {
+				is_in_same_power_bloc = scope:target_country
+				AND = {
+					modifier:country_can_impose_same_lawgroup_army_model_in_power_bloc_bool = yes
+					has_law = scope:law
+				}
+			}
+			can_impose_law_default = yes
+		}
+	}
 	
 	on_enact = {
 		if = {
@@ -280,8 +318,7 @@ law_mass_conscription = {
 		if = {
 			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
 			add = 750
-		}
-				
+		}		
 		
 		# AI should really try to get out of Peasant Levies under the right circumstances
 		if = {
