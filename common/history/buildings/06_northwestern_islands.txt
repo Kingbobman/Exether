@@ -38,7 +38,7 @@
 			   }
 			}
 			reserves=1
-			activate_production_methods={ "pm_shore_leviathan_hunting" "pm_manual_harvesting" }
+			activate_production_methods={ "pm_manowar_leviathan_ships" "pm_manual_harvesting" }
 		}
 		create_building={
 			building="building_potion_distillery"
@@ -716,7 +716,7 @@
 			}
 			create_building={
 				building="building_port"
-				level=2
+				level=4
 				reserves=1
 				activate_production_methods={ "pm_basic_port" }
 			}
@@ -1010,6 +1010,19 @@
 				reserves=1
 				activate_production_methods={ "pm_horizontal_drawer_cabinets" }
 			}
+			create_building={
+				building="building_artifactory"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:DIS"
+							levels=6
+							region="STATE_CARTHAROS"
+					   }
+					}
+				reserves=1
+				activate_production_methods={ "pm_artifactory_hand_sorting" "pm_artifactory_conveyor_belts" }
+			}
 			create_building = {
 				building = "building_distillery"
 				add_ownership = {
@@ -1161,21 +1174,9 @@
 			}
 			create_building={
 				building="building_port"
-				level=4
+				level=5
 				reserves=1
 				activate_production_methods={ "pm_basic_port" }
-			}
-			create_building = {
-			    building = "building_artifactory"
-			    add_ownership={
-                    building={
-                        type="building_adventuring_guild"
-                        country="c:DIS"
-                        levels=4
-                        region="STATE_CARTHAROS"
-                   }
-                }
-			    reserves = 1
 			}
             create_building = {
                 building = "building_sunken_ruin_expedition"
@@ -1578,6 +1579,19 @@
 				activate_production_methods={ "pm_saw_mills" "pm_hardwood" "pm_no_equipment" "pm_road_carts" }
 			}
 			create_building={
+				building="building_dragon_ruins"
+				add_ownership={ 
+					building={ 
+                        type="building_adventuring_guild"
+						country="c:DIS"
+						levels=1
+						region="STATE_CARTHAROS"
+				   }
+				}
+				reserves=1
+				activate_production_methods={ "pm_simple_accumulation_dragon_ruins"  }
+			}
+			create_building={
 				building="building_military_shipyards"
                 add_ownership={ 
                     building={ 
@@ -1620,6 +1634,19 @@
                 }
 				reserves=1
 				activate_production_methods={ "pm_military_shipbuilding_wooden" }
+			}
+			create_building={
+				building="building_dragon_ruins"
+				add_ownership={ 
+					building={ 
+                        type="building_adventuring_guild"
+						country="c:DIS"
+						levels=1
+						region="STATE_CARTHAROS"
+				   }
+				}
+				reserves=1
+				activate_production_methods={ "pm_simple_accumulation_dragon_ruins"  }
 			}
             create_building={
 				building="building_fishing_wharf"
@@ -2109,7 +2136,7 @@
 				   }
 				}
 				  reserves=1
-				  activate_production_methods={ "pm_shore_leviathan_hunting" "pm_manual_harvesting" }
+				  activate_production_methods={ "pm_manowar_leviathan_ships" "pm_manual_harvesting" }
 			}
             create_building={
 				building="building_textile_mills"
@@ -2478,7 +2505,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_shore_leviathan_hunting" "pm_manual_harvesting" }
+				activate_production_methods={ "pm_manowar_leviathan_ships" "pm_manual_harvesting" }
       		}
 		}
 	}

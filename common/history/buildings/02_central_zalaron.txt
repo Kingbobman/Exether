@@ -7130,32 +7130,6 @@
 		
 	s:STATE_NOVAJEGO = {
 		region_state:HOU={
-            create_building={
-				building="building_logging_camp"
-                add_ownership={ 
-                    building={ 
-                        type="building_financial_district"
-                        country="c:HOU"
-                        levels=2
-                        region="STATE_NOVAJEGO"
-                   }
-                }
-				reserves=1
-				activate_production_methods={ "pm_simple_forestry" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
-			}
-            create_building={
-				building="building_paper_mills"
-                add_ownership={ 
-                    building={ 
-                        type="building_financial_district"
-                        country="c:HOU"
-                        levels=1
-                        region="STATE_NOVAJEGO"
-                   }
-                }
-				reserves=1
-				activate_production_methods={ "pm_pulp_pressing" "pm_automation_disabled"  }
-			}
 		}
 	}
 		
@@ -7515,45 +7489,6 @@
 		
 	s:STATE_XODAN = {
 		region_state:HOU={
-			create_building={
-				building="building_government_administration"
-				level=2
-				reserves=1
-				activate_production_methods={ "pm_horizontal_drawer_cabinets" }
-			}
-			create_building={
-				building="building_tea_plantation"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:HOU"
-						levels=2
-						region="STATE_XODAN"
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "default_building_tea_plantation" "pm_road_carts"  }
-			}
-			create_building={
-				building="building_millet_farm"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:HOU"
-						levels=2
-						region="STATE_XODAN"
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "pm_simple_farming"  "pm_tools_disabled" "pm_fig_orchards" }
-			}
-			create_building={
-				building="building_university"
-				level=1
-				reserves=1
-				activate_production_methods={ "pm_scholastic_education" }
-			}
-		}
 	}
 		
 	s:STATE_ZALULIK = {
