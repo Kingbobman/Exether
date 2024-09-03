@@ -32,7 +32,7 @@ BUILDINGS = {
                    }
                 }
 				reserves=1
-				activate_production_methods={ "pm_atmospheric_engine_pump_building_wishstone_mine" }
+				activate_production_methods={ "pm_dedicated_diggers" "pm_no_mirrors" "pm_road_carts" }
 			}
 			create_building={
 				building="building_millet_farm"
@@ -89,7 +89,7 @@ BUILDINGS = {
                    }
                 }
 				reserves=1
-				activate_production_methods={ "pm_atmospheric_engine_pump_building_wishstone_mine" }
+				activate_production_methods={ "pm_dedicated_diggers" "pm_no_mirrors" "pm_road_carts" }
 			}
 			create_building={
 				building="building_iron_mine"
@@ -191,7 +191,7 @@ BUILDINGS = {
                    }
                 }
 				reserves=1
-				activate_production_methods={ "pm_atmospheric_engine_pump_building_wishstone_mine" }
+				activate_production_methods={ "pm_dedicated_diggers" "pm_no_mirrors" "pm_road_carts" }
 			}
 			create_building={
 				building="building_logging_camp"
@@ -675,7 +675,7 @@ BUILDINGS = {
 	}
 	# Vitemsk Below
 	s:STATE_SC12 = {
-		region_state:SAZ={
+		region_state:MNN={
 			create_building={
 				building="building_construction_sector"
 				level=1
@@ -699,7 +699,7 @@ BUILDINGS = {
                 add_ownership={ 
                     building={ 
                         type="building_financial_district"
-                        country="c:SAZ"
+                        country="c:MNN"
                         levels=1
                         region="STATE_SC12"
                    }
@@ -725,7 +725,7 @@ BUILDINGS = {
                 add_ownership={ 
                     building={ 
                         type="building_manor_house"
-                        country="c:SAZ"
+                        country="c:MNN"
                         levels=1
                         region="STATE_SC12"
                    }
@@ -764,7 +764,7 @@ BUILDINGS = {
 				add_ownership={ 
 					building={ 
 						type="building_wizard_tower"
-						country="c:SAZ"
+						country="c:MNN"
 						levels=10
 						region="STATE_SC12"
 				   }
@@ -2450,7 +2450,7 @@ BUILDINGS = {
 				   }
 				}
 				reserves=1
-				activate_production_methods={ "pm_simple_farming_building_rice_farm" "pm_tools_building_rice_farm"  }
+				activate_production_methods={ "pm_leeches" "pm_no_secondary" "pm_no_arms" }
 			}
 			create_building={
 				building="building_seasnake_wharf"
@@ -2587,7 +2587,7 @@ BUILDINGS = {
                    }
                 }
 				reserves=1
-				activate_production_methods={ "pm_handcrafted_furniture" "pm_no_magic_clothes" "pm_no_luxuries" "pm_automation_disabled" }
+				activate_production_methods={ "pm_handcrafted_furniture" "pm_no_luxuries" "pm_automation_disabled" }
 			}
 			create_building={
 				building="building_tooling_workshops"
@@ -2678,7 +2678,7 @@ BUILDINGS = {
 				   }
 				}
 				reserves=1
-				activate_production_methods={ "pm_simple_farming_building_rice_farm" "pm_tools_building_rice_farm" "pm_tools_disabled"  }
+				activate_production_methods={ "pm_leeches" "pm_no_secondary" "pm_no_arms"  }
 			}
 		}
 	}
@@ -2849,7 +2849,7 @@ BUILDINGS = {
                    }
                 }
 				reserves=1
-				activate_production_methods={ "pm_santa_clause_style" "pm_no_magic_clothes" "pm_no_luxuries" "pm_automation_disabled" }
+				activate_production_methods={ "pm_santa_clause_style" "pm_no_luxuries" "pm_automation_disabled" }
 			}
 			create_building={
 				building="building_shipyards"
@@ -3171,7 +3171,7 @@ BUILDINGS = {
                    }
                 }
 				reserves=1
-				activate_production_methods={ "pm_santa_clause_style" "pm_no_magic_clothes" "pm_no_luxuries" "pm_automation_disabled" }
+				activate_production_methods={ "pm_santa_clause_style" "pm_no_luxuries" "pm_automation_disabled" }
 			}
 			create_building={
 				building="building_wishstone_mine"
@@ -3323,7 +3323,7 @@ BUILDINGS = {
 	}
 		#This stuff seems to be nationalised intentionally so I am not touching it
 	s:STATE_LILLESO = {
-		region_state:MNN={
+		region_state:SAZ={
 		create_building = {
 				building="building_government_administration"
 				level=4
@@ -3347,7 +3347,7 @@ BUILDINGS = {
                 add_ownership={ 
                     building={ 
                         type="building_wizard_tower"
-                        country="c:MNN"
+                        country="c:SAZ"
                         levels=1
                         region="STATE_LILLESO"
                    }
@@ -3360,7 +3360,7 @@ BUILDINGS = {
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:MNN"
+						country="c:SAZ"
 						levels=5
 						region="STATE_LILLESO"
 				   }
@@ -3373,7 +3373,7 @@ BUILDINGS = {
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:MNN"
+						country="c:SAZ"
 						levels=7
 						region="STATE_LILLESO"
 				   }
@@ -3386,7 +3386,7 @@ BUILDINGS = {
                 add_ownership={ 
                     building={ 
                         type="building_financial_district"
-                        country="c:MNN"
+                        country="c:SAZ"
                         levels=4
                         region="STATE_LILLESO"
                    }
@@ -3399,7 +3399,7 @@ BUILDINGS = {
                 add_ownership={ 
                     building={ 
                         type="building_financial_district"
-                        country="c:MNN"
+                        country="c:SAZ"
                         levels=6
                         region="STATE_LILLESO"
                    }
@@ -3412,7 +3412,7 @@ BUILDINGS = {
 				add_ownership = {
 						building = {
 							type="building_financial_district"
-						country="c:MNN"
+						country="c:SAZ"
 						levels=4
 						region="STATE_LILLESO"
 						}
@@ -3425,7 +3425,7 @@ BUILDINGS = {
                 add_ownership={ 
                     building={ 
                         type="building_wizard_tower"
-                        country="c:MNN"
+                        country="c:SAZ"
                         levels=2
                         region="STATE_LILLESO"
                    }
@@ -3437,13 +3437,13 @@ BUILDINGS = {
 	}
 		
 	s:STATE_KLIPPEBJERG = {
-		region_state:MNN = {
+		region_state:SAZ = {
 			create_building={
 				building="building_arms_industry"
                 add_ownership={ 
                     building={ 
                         type="building_wizard_tower"
-                        country="c:MNN"
+                        country="c:SAZ"
                         levels=2
                         region="STATE_KLIPPEBJERG"
                    }
@@ -3456,7 +3456,7 @@ BUILDINGS = {
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:MNN"
+						country="c:SAZ"
 						levels=5
 						region="STATE_KLIPPEBJERG"
 				   }
@@ -3469,7 +3469,7 @@ BUILDINGS = {
 				add_ownership={ 
 					building={ 
 						type="building_wizard_tower"
-						country="c:MNN"
+						country="c:SAZ"
 						levels=1
 						region="STATE_KLIPPEBJERG"
 				   }
@@ -3482,7 +3482,7 @@ BUILDINGS = {
 				add_ownership={ 
 					building={ 
 						type="building_wizard_tower"
-						country="c:MNN"
+						country="c:SAZ"
 						levels=2
 						region="STATE_KLIPPEBJERG"
 					}
@@ -3494,13 +3494,13 @@ BUILDINGS = {
 	}
 
 	s:STATE_HOJLAND = {
-		region_state:MNN = {
+		region_state:SAZ = {
 			create_building={
 				building="building_sulfur_mine"
                 add_ownership={ 
                     building={ 
                         type="building_wizard_tower"
-                        country="c:MNN"
+                        country="c:SAZ"
                         levels=2
                         region="STATE_HOJLAND"
                    }
@@ -3513,7 +3513,7 @@ BUILDINGS = {
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:MNN"
+						country="c:SAZ"
 						levels=5
 						region="STATE_HOJLAND"
 				   }
@@ -3526,7 +3526,7 @@ BUILDINGS = {
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:MNN"
+						country="c:SAZ"
 						levels=8
 						region="STATE_HOJLAND"
 				   }
@@ -3539,7 +3539,7 @@ BUILDINGS = {
 					add_ownership={ 
 						building={ 
 							type="building_wizard_tower"
-							country="c:MNN"
+							country="c:SAZ"
 							levels=1
 							region="STATE_HOJLAND"
 					   }
@@ -3552,7 +3552,7 @@ BUILDINGS = {
                 add_ownership={ 
                     building={ 
                         type="building_wizard_tower"
-                        country="c:MNN"
+                        country="c:SAZ"
                         levels=2
                         region="STATE_HOJLAND"
                    }
@@ -3563,13 +3563,13 @@ BUILDINGS = {
 		}
 	}
 	s:STATE_BJERGHOLM = {
-		region_state:MNN = {
+		region_state:SAZ = {
 			create_building={
 				building="building_furniture_manufacturies"
                 add_ownership={ 
                     building={ 
                         type="building_wizard_tower"
-                        country="c:MNN"
+                        country="c:SAZ"
                         levels=2
                         region="STATE_BJERGHOLM"
                    }
@@ -3582,7 +3582,7 @@ BUILDINGS = {
                 add_ownership={ 
                     building={ 
                         type="building_wizard_tower"
-                        country="c:MNN"
+                        country="c:SAZ"
                         levels=2
                         region="STATE_BJERGHOLM"
                    }
@@ -4650,7 +4650,7 @@ BUILDINGS = {
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_early_potion_vat_production" "pm_alcohol-based_potions" "pm_base_cosmetic_potion_production" }
+				activate_production_methods={ "pm_early_potion_vat_production" "pm_alcohol-based_potions" "pm_no_mixins" "pm_basic_filters" }
 			}
 			create_building={
 				building="building_food_industry"
@@ -4741,7 +4741,7 @@ BUILDINGS = {
                    }
                 }
 				reserves=1
-				activate_production_methods={ "pm_atmospheric_engine_pump_building_wishstone_mine" }
+				activate_production_methods={ "pm_dedicated_diggers" "pm_no_mirrors" "pm_road_carts" }
 			}				
             create_building={
 				building="building_furniture_manufacturies"
@@ -4898,7 +4898,7 @@ BUILDINGS = {
                    }
                 }
 				reserves=1
-				activate_production_methods={ "pm_atmospheric_engine_pump_building_wishstone_mine" }
+				activate_production_methods={ "pm_dedicated_diggers" "pm_no_mirrors" "pm_road_carts" }
 			}		
             create_building={
 				building="building_tooling_workshops"
@@ -5275,7 +5275,7 @@ BUILDINGS = {
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_early_potion_vat_production" "pm_alcohol-based_potions" "pm_base_cosmetic_potion_production" }
+				activate_production_methods={ "pm_early_potion_vat_production" "pm_alcohol-based_potions" "pm_no_mixins" "pm_basic_filters" }
 			}
 			create_building={
 				building="building_food_industry"
@@ -5429,7 +5429,7 @@ BUILDINGS = {
                    }
                 }
 				reserves=1
-				activate_production_methods={ "pm_atmospheric_engine_pump_building_wishstone_mine" }
+				activate_production_methods={ "pm_dedicated_diggers" "pm_no_mirrors" "pm_road_carts"}
 			}
 			create_building={
 				building="building_textile_mills"
@@ -5468,7 +5468,7 @@ BUILDINGS = {
                    }
                 }
 				reserves=1
-				activate_production_methods={ "pm_atmospheric_engine_pump_building_wishstone_mine" }
+				activate_production_methods={ "pm_dedicated_diggers" "pm_no_mirrors" "pm_road_carts"}
 			}	
 			create_building={
 				building="building_glassworks"
@@ -5683,7 +5683,7 @@ BUILDINGS = {
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_simple_potion_production" "pm_water-based_potions" "pm_base_cosmetic_potion_production" }
+				activate_production_methods={ "pm_simple_potion_production" "pm_water-based_potions" "pm_no_mixins" "pm_basic_filters" }
 			}
 			create_building={
 				building="building_lead_mine"
@@ -6485,7 +6485,7 @@ BUILDINGS = {
 				   }
 				}
 				reserves=1
-				activate_production_methods={ "pm_simple_farming"  "pm_tools" "pm_fig_orchards_building_rice_farm" }
+				activate_production_methods={ "pm_simple_farming"  "pm_tools"  }
 			}
 			create_building={
 				building="building_tobacco_plantation"
@@ -6950,7 +6950,7 @@ BUILDINGS = {
                    }
                 }
 				reserves=1
-				activate_production_methods={ "pm_atmospheric_engine_pump_building_wishstone_mine" }
+				activate_production_methods={ "pm_dedicated_diggers" "pm_no_mirrors" "pm_road_carts"}
 			}			
             create_building={
 				building="building_textile_mills"
@@ -7167,46 +7167,7 @@ BUILDINGS = {
 				level=1
 				reserves=1
 				activate_production_methods={ "pm_basic_port" }
-			}
-			create_building={
-				building="building_steel_mills"
-					add_ownership={ 
-						building={ 
-							type="building_financial_district"
-							country="c:WHX"
-							levels=1
-							region="STATE_FELICGRUNDO"
-					   }
-					}
-				reserves=1
-				activate_production_methods={ "pm_blister_steel_process" "pm_automation_disabled" }
-			}
-			create_building={
-				building="building_shipyards"
-                add_ownership={ 
-                    building={ 
-                        type="building_financial_district"
-                        country="c:WHX"
-                        levels=1
-                        region="STATE_FELICGRUNDO"
-                   }
-                }
-				reserves=1
-				activate_production_methods={ "pm_complex_shipbuilding" }
-			}			
-			create_building={
-				building="building_furniture_manufacturies"
-                add_ownership={ 
-                    building={ 
-                        type="building_financial_district"
-                        country="c:VAI"
-                        levels=3
-                        region="STATE_FELICGRUNDO"
-                   }
-                }
-				reserves=1
-				activate_production_methods={ "pm_lathe"  "pm_automation_disabled" "pm_precision_tools" }
-			}
+			}		
             create_building={
 				building="building_logging_camp"
                 add_ownership={ 
@@ -7287,32 +7248,6 @@ BUILDINGS = {
 		
 	s:STATE_NOVAJEGO = {
 		region_state:HOU={
-            create_building={
-				building="building_logging_camp"
-                add_ownership={ 
-                    building={ 
-                        type="building_financial_district"
-                        country="c:HOU"
-                        levels=2
-                        region="STATE_NOVAJEGO"
-                   }
-                }
-				reserves=1
-				activate_production_methods={ "pm_simple_forestry" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
-			}
-            create_building={
-				building="building_paper_mills"
-                add_ownership={ 
-                    building={ 
-                        type="building_financial_district"
-                        country="c:HOU"
-                        levels=1
-                        region="STATE_NOVAJEGO"
-                   }
-                }
-				reserves=1
-				activate_production_methods={ "pm_pulp_pressing" "pm_automation_disabled"  }
-			}
 		}
 	}
 		
@@ -7427,7 +7362,7 @@ BUILDINGS = {
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_simple_potion_production" "pm_alcohol-based_potions" "pm_base_cosmetic_potion_production" }
+				activate_production_methods={ "pm_simple_potion_production" "pm_alcohol-based_potions" "pm_no_mixins" "pm_basic_filters"}
 			}
 			create_building = {
 				building = "building_distillery"
@@ -7672,45 +7607,7 @@ BUILDINGS = {
 		
 	s:STATE_XODAN = {
 		region_state:HOU={
-			create_building={
-				building="building_government_administration"
-				level=2
-				reserves=1
-				activate_production_methods={ "pm_horizontal_drawer_cabinets" }
-			}
-			create_building={
-				building="building_tea_plantation"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:HOU"
-						levels=2
-						region="STATE_XODAN"
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "default_building_tea_plantation" "pm_road_carts"  }
-			}
-			create_building={
-				building="building_millet_farm"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:HOU"
-						levels=2
-						region="STATE_XODAN"
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "pm_simple_farming"  "pm_tools_disabled" "pm_fig_orchards" }
-			}
-			create_building={
-				building="building_university"
-				level=1
-				reserves=1
-				activate_production_methods={ "pm_scholastic_education" }
-			}
-		}
+	}
 	}
 		
 	s:STATE_ZALULIK = {
@@ -8978,7 +8875,7 @@ BUILDINGS = {
                    }
                 }
 				reserves=1
-				activate_production_methods={ "pm_atmospheric_engine_pump_building_wishstone_mine" }
+				activate_production_methods={ "pm_dedicated_diggers" "pm_no_mirrors" "pm_road_carts" }
 			}
 			create_building={
 				building="building_glassworks"
@@ -9228,7 +9125,7 @@ BUILDINGS = {
 			   }
 			}
 			reserves=1
-			activate_production_methods={ "pm_picks_and_shovels_building_wishstone_mine" }
+			activate_production_methods={ "pm_detect_wishstone" "pm_no_mirrors" "pm_road_carts" }
 		}	
 		create_building={
 			building="building_tooling_workshops"
@@ -9481,7 +9378,7 @@ BUILDINGS = {
 		}
 	}	
 	s:STATE_KUMASKA = {
-		region_state:SAZ={
+		region_state:MNN={
 			create_building={
 				building="building_food_industry"
                 add_ownership={ 
@@ -9500,7 +9397,7 @@ BUILDINGS = {
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:SAZ"
+						country="c:MNN"
 						levels=7
 						region="STATE_KUMASKA"
 				   }
@@ -9513,7 +9410,7 @@ BUILDINGS = {
                 add_ownership={ 
                     building={ 
                         type="building_financial_district"
-                        country="c:SAZ"
+                        country="c:MNN"
                         levels=1
                         region="STATE_KUMASKA"
                    }
@@ -9526,7 +9423,7 @@ BUILDINGS = {
 					  add_ownership={ 
 						  building={ 
 							  type="building_adventuring_guild"
-							  country="c:SAZ"
+							  country="c:MNN"
 							  levels=2
 							  region="STATE_KUMASKA"
 						 }
@@ -9539,7 +9436,7 @@ BUILDINGS = {
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:SAZ"
+						country="c:MNN"
 						levels=1
 						region="STATE_KUMASKA"
 				   }
@@ -9631,7 +9528,7 @@ BUILDINGS = {
 	}
 		
 	s:STATE_SLETTEJUNGEL = {
-		region_state:MNN={
+		region_state:SAZ={
 			create_building={
 				building="building_government_administration"
 				level=7
@@ -9649,7 +9546,7 @@ BUILDINGS = {
                 add_ownership={ 
                     building={ 
                         type="building_wizard_tower"
-                        country="c:MNN"
+                        country="c:SAZ"
                         levels=2
                         region="STATE_SLETTEJUNGEL"
                    }
@@ -9662,7 +9559,7 @@ BUILDINGS = {
 				add_ownership={ 
 					building={ 
 						type="building_wizard_tower"
-						country="c:MNN"
+						country="c:SAZ"
 						levels=1
 						region="STATE_SLETTEJUNGEL"
 				   }
@@ -9675,7 +9572,7 @@ BUILDINGS = {
                 add_ownership={ 
                     building={ 
                         type="building_wizard_tower"
-                        country="c:MNN"
+                        country="c:SAZ"
                         levels=1
                         region="STATE_SLETTEJUNGEL"
                    }
@@ -9688,7 +9585,7 @@ BUILDINGS = {
                 add_ownership={ 
                     building={ 
                         type="building_financial_district"
-                        country="c:MNN"
+                        country="c:SAZ"
                         levels=3
                         region="STATE_SLETTEJUNGEL"
                    }
@@ -9701,7 +9598,7 @@ BUILDINGS = {
 					add_ownership={ 
 						building={ 
 							type="building_manor_house"
-							country="c:MNN"
+							country="c:SAZ"
 							levels=10
 							region="STATE_SLETTEJUNGEL"
 					   }
@@ -9714,7 +9611,7 @@ BUILDINGS = {
 					add_ownership={ 
 						building={ 
 							type="building_financial_district"
-							country="c:MNN"
+							country="c:SAZ"
 							levels=1
 							region="STATE_SLETTEJUNGEL"
 					   }
@@ -9727,7 +9624,7 @@ BUILDINGS = {
 					add_ownership={ 
 						building={ 
 							type="building_financial_district"
-							country="c:MNN"
+							country="c:SAZ"
 							levels=1
 							region="STATE_SLETTEJUNGEL"
 					   }
@@ -9740,7 +9637,7 @@ BUILDINGS = {
 					add_ownership={ 
 						building={ 
 							type="building_financial_district"
-							country="c:MNN"
+							country="c:SAZ"
 							levels=1
 							region="STATE_SLETTEJUNGEL"
 					   }
@@ -9784,7 +9681,7 @@ BUILDINGS = {
 					 }
 				  }
 			reserves=1
-			activate_production_methods={ "" }
+			activate_production_methods={ "pm_simple_hunting" "pm_no_hunting_meat" "pm_no_equipment_hunting_lodges"}
 		  }
 			create_building={
 				building="building_government_administration"
@@ -9845,7 +9742,7 @@ BUILDINGS = {
 					building={
 						type="building_financial_district"
 						country="c:CHR"
-						level=1
+						levels=1
 						region="STATE_INAMGI_3"
 					}
 				}
@@ -9862,7 +9759,7 @@ BUILDINGS = {
 						 }
 					  }
 				reserves=1
-				activate_production_methods={ "pm_meat_production" }
+				activate_production_methods={ "pm_simple_hunting" "pm_hunting_meat" "pm_no_equipment_hunting_lodges" }
 			  }
 			  create_building={
 				building="building_livestock_ranch"
@@ -9957,3 +9854,4 @@ BUILDINGS = {
 	}
 }
 }
+
