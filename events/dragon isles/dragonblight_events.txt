@@ -2047,11 +2047,9 @@ immediate = {
 			
 				trigger = {
 					any_scope_state = {
-						limit = {
 							NOT = {
 							has_modifier = modifier_active_dragonblight_outbreak
 							}
-						}
 					}
 					OR = {
 					ig:ig_industrialists =	{
@@ -2079,32 +2077,36 @@ immediate = {
 						random_scope_character = {
 							limit = {
 								is_interest_group_type = ig_industrialists
+								is_ruler = no
 							}
 							save_scope_as = party_time_guy
-							ig:ig_industrialists = { save_scope_as = party_rockers }
-						}	
+							
+						}
+						ig:ig_industrialists = { save_scope_as = party_rockers }	
 					}
 					else = {
 						random_scope_character = {
 							limit = {
 								is_interest_group_type = ig_landowners
+								is_ruler = no
 							}
 							save_scope_as = party_time_guy
-							ig:ig_landowners = { save_scope_as = party_rockers }
+							
 						}
+						ig:ig_landowners = { save_scope_as = party_rockers }
 					}
 				}
 				option = {
 					name = dragonblight_pulse.12.a #What would we arrest them for?  Having fun?
 					
-					
-					scope:party_rockers = {
-						add_modifier = {
-							name = defended_birthday_party
-							months = 48
-							is_decaying = yes
+						scope:party_rockers = {
+							add_modifier = {
+								name = defended_birthday_party
+								years = 4
+								is_decaying = yes
+							}
 						}
-					}
+					
 					scope:party_time_state = {
 						add_modifier = modifier_active_dragonblight_outbreak
 					}	
@@ -2113,23 +2115,25 @@ immediate = {
 				option = {
 					name = dragonblight_pulse.12.b #a mild reprimand will be enough
 					default_option = yes
-					
 					scope:party_rockers = {
 						add_modifier = {
 							name = reprimanded_for_birthday_party
-							months = 48
+							years = 4
 							is_decaying = yes
 						}
 					}
 					scope:party_time_state = {
-						add_modifier = wealthy_abusing_disease_restrictions
-						months = 48
+						add_modifier = {
+							name = wealthy_abusing_disease_restrictions
+							years = 3
+						} 
+						custom_tooltip = conversion_cult_tt
 					}	
 				}	
 				
 				option = {
 					name = dragonblight_pulse.12.c #believe it or not, jail
-				
+					custom_tooltip = kill_party_guy_tt
 					hidden_effect = {
 						scope:party_time_guy = {
 							kill_character = yes
