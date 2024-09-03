@@ -77,208 +77,255 @@ negotiate_kobold_settlements_button = {
 	# }
 
 	possible = {
-		any_scope_state = {
-			OR = {
-				AND = {
-					state_region = s:STATE_KLYPYRA
-					culture_percent_state = { target = cu:kotskarvi value >= 0.35   }
-					any_neighbouring_state = {
-						owner = {
-							OR = {
-								country_has_primary_culture = cu:kotskarvi
+
+		custom_tooltip = {
+			text = negotiate_kobold_tt
+			any_scope_state = {
+				OR = {
+					AND = {
+						state_region = s:STATE_KLYPYRA
+						is_split_state = no
+						culture_percent_state = { target = cu:kotskarvi value >= 0.35   }
+						any_neighbouring_state = {
+							owner = {
+								OR = {
+									country_has_primary_culture = cu:kotskarvi
 									country_has_primary_culture = cu:lomarash
-										country_has_primary_culture = cu:drogori
+									country_has_primary_culture = cu:drogori
+									country_has_primary_culture = cu:aisjie
+									country_has_primary_culture = cu:larltri
+																		country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani
+								}
 							}
 						}
 					}
-				}
-				AND = {
-					state_region = s:STATE_ZAMARIS
-					culture_percent_state = { target = cu:kotskarvi value >= 0.35   }
-					any_neighbouring_state = {
-						owner = {
-							OR = {
-								country_has_primary_culture = cu:kotskarvi
+					AND = {
+						state_region = s:STATE_ZAMARIS
+						culture_percent_state = { target = cu:kotskarvi value >= 0.35   }
+						any_neighbouring_state = {
+							owner = {
+								OR = {
+									country_has_primary_culture = cu:kotskarvi
 									country_has_primary_culture = cu:lomarash
-										country_has_primary_culture = cu:drogori
+									country_has_primary_culture = cu:drogori
+									country_has_primary_culture = cu:aisjie
+									country_has_primary_culture = cu:larltri
+																		country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani
+								}
 							}
 						}
 					}
-				}
-				AND = {
-					state_region = s:STATE_LEPIDRA
-					culture_percent_state = { target = cu:kotskarvi value >= 0.35   }
-					any_neighbouring_state = {
-						owner = {
-							OR = {
-								country_has_primary_culture = cu:kotskarvi
+					AND = {
+						state_region = s:STATE_LEPIDRA
+						is_split_state = no
+						culture_percent_state = { target = cu:kotskarvi value >= 0.35   }
+						any_neighbouring_state = {
+							owner = {
+								OR = {
+									country_has_primary_culture = cu:kotskarvi
 									country_has_primary_culture = cu:lomarash
-										country_has_primary_culture = cu:drogori
+									country_has_primary_culture = cu:drogori
+									country_has_primary_culture = cu:aisjie
+									country_has_primary_culture = cu:larltri
+																		country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani
+								}
 							}
 						}
 					}
-				}
-				AND = {
-					state_region = s:STATE_ZARTHOS
-					culture_percent_state = { target = cu:kotskarvi value >= 0.35   }
-					any_neighbouring_state = {
-						owner = {
-							OR = {
-								country_has_primary_culture = cu:kotskarvi
+					AND = {
+						state_region = s:STATE_ZARTHOS
+						is_split_state = no
+						culture_percent_state = { target = cu:kotskarvi value >= 0.35   }
+						any_neighbouring_state = {
+							owner = {
+								OR = {
+									country_has_primary_culture = cu:kotskarvi
 									country_has_primary_culture = cu:lomarash
-										country_has_primary_culture = cu:drogori
+									country_has_primary_culture = cu:drogori
+									country_has_primary_culture = cu:aisjie
+									country_has_primary_culture = cu:larltri
+																		country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani
+								}
 							}
 						}
 					}
-				}
-				AND = {
-					state_region = s:STATE_CALTHA
-					culture_percent_state = { target = cu:kotskarvi value >= 0.35   }
-					any_neighbouring_state = {
-						owner = {
-							OR = {
-								country_has_primary_culture = cu:kotskarvi
+					AND = {
+						state_region = s:STATE_CALTHA
+						is_split_state = no
+						culture_percent_state = { target = cu:kotskarvi value >= 0.35   }
+						any_neighbouring_state = {
+							owner = {
+								OR = {
+									country_has_primary_culture = cu:kotskarvi
 									country_has_primary_culture = cu:lomarash
-										country_has_primary_culture = cu:drogori
+									country_has_primary_culture = cu:drogori
+									country_has_primary_culture = cu:aisjie
+									country_has_primary_culture = cu:larltri
+																		country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani
+								}
 							}
 						}
 					}
-				}
-				AND = {
-					state_region = s:STATE_SIGARA
-					culture_percent_state = { target = cu:kotskarvi value >= 0.35   }
-					any_neighbouring_state = {
-						owner = {
-							OR = {
-								country_has_primary_culture = cu:kotskarvi
+					AND = {
+						state_region = s:STATE_SIGARA
+						is_split_state = no
+						culture_percent_state = { target = cu:kotskarvi value >= 0.35   }
+						any_neighbouring_state = {
+							owner = {
+								OR = {
+									country_has_primary_culture = cu:kotskarvi
 									country_has_primary_culture = cu:lomarash
-										country_has_primary_culture = cu:drogori
+									country_has_primary_culture = cu:drogori
+									country_has_primary_culture = cu:aisjie
+									country_has_primary_culture = cu:larltri
+																		country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani
+								}
 							}
 						}
 					}
-				}
-				AND = {
-					state_region = s:STATE_MOTHYA
-					culture_percent_state = { target = cu:kotskarvi value >= 0.35   }
-					any_neighbouring_state = {
-						owner = {
-							OR = {
-								country_has_primary_culture = cu:kotskarvi
+					AND = {
+						state_region = s:STATE_MOTHYA
+						is_split_state = no
+						culture_percent_state = { target = cu:kotskarvi value >= 0.35   }
+						any_neighbouring_state = {
+							owner = {
+								OR = {
+									country_has_primary_culture = cu:kotskarvi
 									country_has_primary_culture = cu:lomarash
-										country_has_primary_culture = cu:drogori
+									country_has_primary_culture = cu:drogori
+									country_has_primary_culture = cu:aisjie
+									country_has_primary_culture = cu:larltri
+																		country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani
+								}
 							}
 						}
 					}
-				}
-				AND = {
-					state_region = s:STATE_LILYBAEUM
-					culture_percent_state = { target = cu:kotskarvi value >= 0.35   }
-					any_neighbouring_state = {
-						owner = {
-							OR = {
-								country_has_primary_culture = cu:kotskarvi
+					AND = {
+						state_region = s:STATE_LILYBAEUM
+						is_split_state = no
+						culture_percent_state = { target = cu:kotskarvi value >= 0.35   }
+						any_neighbouring_state = {
+							owner = {
+								OR = {
+									country_has_primary_culture = cu:kotskarvi
 									country_has_primary_culture = cu:lomarash
-										country_has_primary_culture = cu:drogori
+									country_has_primary_culture = cu:drogori
+									country_has_primary_culture = cu:aisjie
+									country_has_primary_culture = cu:larltri
+																		country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani
+								}
 							}
 						}
 					}
-				}
-				AND = {
-					state_region = s:STATE_ZYRAS
-					culture_percent_state = { target = cu:kotskarvi value >= 0.35   }
-					any_neighbouring_state = {
-						owner = {
-							OR = {
-								country_has_primary_culture = cu:kotskarvi
+					AND = {
+						state_region = s:STATE_ZYRAS
+						is_split_state = no
+						culture_percent_state = { target = cu:kotskarvi value >= 0.35   }
+						any_neighbouring_state = {
+							owner = {
+								OR = {
+									country_has_primary_culture = cu:kotskarvi
 									country_has_primary_culture = cu:lomarash
-										country_has_primary_culture = cu:drogori
+									country_has_primary_culture = cu:drogori
+									country_has_primary_culture = cu:aisjie
+									country_has_primary_culture = cu:larltri
+																		country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani
+								}
 							}
 						}
 					}
-				}
-				AND = {
-					state_region = s:STATE_ZYRAS
-					culture_percent_state = { target = cu:kotskarvi value >= 0.35   }
-					any_neighbouring_state = {
-						owner = {
-							OR = {
-								country_has_primary_culture = cu:kotskarvi
+					AND = {
+						state_region = s:STATE_LEPTHAR
+						is_split_state = no
+						culture_percent_state = { target = cu:kotskarvi value >= 0.35   }
+						any_neighbouring_state = {
+							owner = {
+								OR = {
+									country_has_primary_culture = cu:kotskarvi
 									country_has_primary_culture = cu:lomarash
-										country_has_primary_culture = cu:drogori
+									country_has_primary_culture = cu:drogori
+									country_has_primary_culture = cu:aisjie
+									country_has_primary_culture = cu:larltri
+																		country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani
+								}
 							}
 						}
 					}
-				}
-				AND = {
-					state_region = s:STATE_LEPTHAR
-					culture_percent_state = { target = cu:kotskarvi value >= 0.35   }
-					any_neighbouring_state = {
-						owner = {
-							OR = {
-								country_has_primary_culture = cu:kotskarvi
+					AND = {
+						state_region = s:STATE_OYRSA
+						is_split_state = no
+						culture_percent_state = { target = cu:kotskarvi value >= 0.35   }
+						any_neighbouring_state = {
+							owner = {
+								OR = {
+									country_has_primary_culture = cu:kotskarvi
 									country_has_primary_culture = cu:lomarash
-										country_has_primary_culture = cu:drogori
+									country_has_primary_culture = cu:drogori
+									country_has_primary_culture = cu:aisjie
+									country_has_primary_culture = cu:larltri
+																		country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani
+								}
 							}
 						}
 					}
-				}
-				AND = {
-					state_region = s:STATE_OYRSA
-					culture_percent_state = { target = cu:kotskarvi value >= 0.35   }
-					any_neighbouring_state = {
-						owner = {
-							OR = {
-								country_has_primary_culture = cu:kotskarvi
+					AND = {
+						state_region = s:STATE_THASPYR
+						is_split_state = no
+						culture_percent_state = { target = cu:kotskarvi value >= 0.35   }
+						any_neighbouring_state = {
+							owner = {
+								OR = {
+									country_has_primary_culture = cu:kotskarvi
 									country_has_primary_culture = cu:lomarash
-										country_has_primary_culture = cu:drogori
+									country_has_primary_culture = cu:drogori
+									country_has_primary_culture = cu:aisjie
+									country_has_primary_culture = cu:larltri
+																		country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani
+									
+								}
 							}
 						}
 					}
-				}
-				AND = {
-					state_region = s:STATE_THASPYR
-					culture_percent_state = { target = cu:kotskarvi value >= 0.35   }
-					any_neighbouring_state = {
-						owner = {
-							OR = {
-								country_has_primary_culture = cu:kotskarvi
+					AND = {
+						state_region = s:STATE_LEPTISCA
+						is_split_state = no
+						culture_percent_state = { target = cu:kotskarvi value >= 0.35   }
+						any_neighbouring_state = {
+							owner = {
+								OR = {
+									country_has_primary_culture = cu:kotskarvi
 									country_has_primary_culture = cu:lomarash
-										country_has_primary_culture = cu:drogori
-							}
-						}
-					}
-				}
-				AND = {
-					state_region = s:STATE_THASPYR
-					culture_percent_state = { target = cu:kotskarvi value >= 0.35   }
-					any_neighbouring_state = {
-						owner = {
-							OR = {
-								country_has_primary_culture = cu:kotskarvi
-									country_has_primary_culture = cu:lomarash
-										country_has_primary_culture = cu:drogori
-							}
-						}
-					}
-				}
-				AND = {
-					state_region = s:STATE_LEPTISCA
-					culture_percent_state = { target = cu:kotskarvi value >= 0.35   }
-					any_neighbouring_state = {
-						owner = {
-							OR = {
-								country_has_primary_culture = cu:kotskarvi
-									country_has_primary_culture = cu:lomarash
-										country_has_primary_culture = cu:drogori
+									country_has_primary_culture = cu:drogori
+									country_has_primary_culture = cu:aisjie
+									country_has_primary_culture = cu:larltri
+																		country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani
+								}
 							}
 						}
 					}
 				}
 			}
 		}
+
 	}
 
 	effect = {
+		custom_tooltip= {
+			text = negotiate_kobold_2_tt
+		}
 		every_scope_state = {
 			limit = {
 				culture_percent_state = { target = cu:kotskarvi value >= 0.35   }
@@ -286,8 +333,12 @@ negotiate_kobold_settlements_button = {
 					owner = {
 						OR = {
 							country_has_primary_culture = cu:kotskarvi
-								country_has_primary_culture = cu:lomarash
-										country_has_primary_culture = cu:drogori
+							country_has_primary_culture = cu:lomarash
+							country_has_primary_culture = cu:drogori
+							country_has_primary_culture = cu:aisjie
+							country_has_primary_culture = cu:larltri
+																country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani
 						}
 					}
 				}
@@ -302,8 +353,12 @@ negotiate_kobold_settlements_button = {
 						owner = {
 							OR = {
 								country_has_primary_culture = cu:kotskarvi
-									country_has_primary_culture = cu:lomarash
-										country_has_primary_culture = cu:drogori
+								country_has_primary_culture = cu:lomarash
+								country_has_primary_culture = cu:drogori
+								country_has_primary_culture = cu:aisjie
+								country_has_primary_culture = cu:larltri
+																	country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani
 							}
 						}
 					}
@@ -340,8 +395,12 @@ negotiate_kobold_settlements_button = {
 							owner = {
 								OR = {
 									country_has_primary_culture = cu:kotskarvi
-										country_has_primary_culture = cu:lomarash
-										country_has_primary_culture = cu:drogori
+									country_has_primary_culture = cu:lomarash
+									country_has_primary_culture = cu:drogori
+									country_has_primary_culture = cu:aisjie
+									country_has_primary_culture = cu:larltri
+																		country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani
 								}
 							}
 						}
@@ -368,6 +427,48 @@ negotiate_kobold_settlements_button = {
 					 	trigger_event = dragonblight.4
 					 }
 					}
+					if = {
+						limit = {
+							state_region = s:STATE_MOTHYA
+							is_split_state = no
+						}
+						random_neighbouring_state = {
+							limit = {
+								owner = {
+									OR = {
+										country_has_primary_culture = cu:kotskarvi
+										country_has_primary_culture = cu:lomarash
+										country_has_primary_culture = cu:drogori
+										country_has_primary_culture = cu:aisjie
+										country_has_primary_culture = cu:larltri
+																			country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani
+									}
+								}
+							}
+							owner = {
+								save_scope_as = mothya_settler_scope
+							}
+						}
+						s:STATE_MOTHYA = {
+							set_owner_of_provinces = {
+								country = scope:mothya_settler_scope
+								provinces = { xCFAB8B xF5FC7A }
+							}	
+						}
+						every_scope_pop = {
+						limit = {
+							culture = cu:kotskarvi
+						}
+						change_pop_culture = {
+							target = cu:illvasaari
+							value = 0.4
+						}
+					}
+						 scope:zamaris_settler_scope = {
+							 trigger_event = dragonblight.4
+						 }
+						}
 						if = {
 							limit = {
 								state_region = s:STATE_LEPIDRA
@@ -378,8 +479,12 @@ negotiate_kobold_settlements_button = {
 									owner = {
 										OR = {
 											country_has_primary_culture = cu:kotskarvi
-												country_has_primary_culture = cu:lomarash
-										country_has_primary_culture = cu:drogori
+											country_has_primary_culture = cu:lomarash
+											country_has_primary_culture = cu:drogori
+											country_has_primary_culture = cu:aisjie
+											country_has_primary_culture = cu:larltri
+																				country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani
 										}
 									}
 								}
@@ -415,9 +520,13 @@ negotiate_kobold_settlements_button = {
 									limit = {
 										owner = {
 											OR = {
-												country_has_primary_culture = cu:kotskarvi
-													country_has_primary_culture = cu:lomarash
-										country_has_primary_culture = cu:drogori
+								country_has_primary_culture = cu:kotskarvi
+								country_has_primary_culture = cu:lomarash
+								country_has_primary_culture = cu:drogori
+								country_has_primary_culture = cu:aisjie
+								country_has_primary_culture = cu:larltri
+																	country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani
 											}
 										}
 									}
@@ -454,8 +563,12 @@ negotiate_kobold_settlements_button = {
 											owner = {
 												OR = {
 													country_has_primary_culture = cu:kotskarvi
-														country_has_primary_culture = cu:lomarash
-										country_has_primary_culture = cu:drogori
+													country_has_primary_culture = cu:lomarash
+													country_has_primary_culture = cu:drogori
+													country_has_primary_culture = cu:aisjie
+													country_has_primary_culture = cu:larltri
+																						country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani
 												}
 											}
 										}
@@ -492,8 +605,12 @@ negotiate_kobold_settlements_button = {
 												owner = {
 													OR = {
 														country_has_primary_culture = cu:kotskarvi
-															country_has_primary_culture = cu:lomarash
-										country_has_primary_culture = cu:drogori
+														country_has_primary_culture = cu:lomarash
+														country_has_primary_culture = cu:drogori
+														country_has_primary_culture = cu:aisjie
+														country_has_primary_culture = cu:larltri
+																							country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani
 													}
 												}
 											}
@@ -530,8 +647,12 @@ negotiate_kobold_settlements_button = {
 													owner = {
 														OR = {
 															country_has_primary_culture = cu:kotskarvi
-																country_has_primary_culture = cu:lomarash
-										country_has_primary_culture = cu:drogori
+															country_has_primary_culture = cu:lomarash
+															country_has_primary_culture = cu:drogori
+															country_has_primary_culture = cu:aisjie
+															country_has_primary_culture = cu:larltri
+																								country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani
 														}
 													}
 												}
@@ -568,8 +689,12 @@ negotiate_kobold_settlements_button = {
 														owner = {
 															OR = {
 																country_has_primary_culture = cu:kotskarvi
-																	country_has_primary_culture = cu:lomarash
-										country_has_primary_culture = cu:drogori
+																country_has_primary_culture = cu:lomarash
+																country_has_primary_culture = cu:drogori
+																country_has_primary_culture = cu:aisjie
+																country_has_primary_culture = cu:larltri
+																									country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani
 															}
 														}
 													}
@@ -592,9 +717,9 @@ negotiate_kobold_settlements_button = {
 													value = 0.4
 												}
 											}
-												#  scope:oyrsa_settler_scope = {
-												#  	trigger_event = todo_event
-												#  }
+											scope:oyrsa_settler_scope = {
+												trigger_event = dragonblight.4
+											}
 												}
 												if = {
 													limit = {
@@ -606,8 +731,12 @@ negotiate_kobold_settlements_button = {
 															owner = {
 																OR = {
 																	country_has_primary_culture = cu:kotskarvi
-																		country_has_primary_culture = cu:lomarash
-										country_has_primary_culture = cu:drogori
+																	country_has_primary_culture = cu:lomarash
+																	country_has_primary_culture = cu:drogori
+																	country_has_primary_culture = cu:aisjie
+																	country_has_primary_culture = cu:larltri
+																										country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani
 																}
 															}
 														}
@@ -644,8 +773,12 @@ negotiate_kobold_settlements_button = {
 																owner = {
 																	OR = {
 																		country_has_primary_culture = cu:kotskarvi
-																			country_has_primary_culture = cu:lomarash
-										country_has_primary_culture = cu:drogori
+																		country_has_primary_culture = cu:lomarash
+																		country_has_primary_culture = cu:drogori
+																		country_has_primary_culture = cu:aisjie
+																		country_has_primary_culture = cu:larltri
+																											country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani
 																	}
 																}
 															}
@@ -682,8 +815,12 @@ negotiate_kobold_settlements_button = {
 																	owner = {
 																		OR = {
 																			country_has_primary_culture = cu:kotskarvi
-																				country_has_primary_culture = cu:lomarash
-										country_has_primary_culture = cu:drogori
+																			country_has_primary_culture = cu:lomarash
+																			country_has_primary_culture = cu:drogori
+																			country_has_primary_culture = cu:aisjie
+																			country_has_primary_culture = cu:larltri
+																												country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani
 																		}
 																	}
 																}
@@ -720,8 +857,12 @@ negotiate_kobold_settlements_button = {
 																		owner = {
 																			OR = {
 																				country_has_primary_culture = cu:kotskarvi
-																					country_has_primary_culture = cu:lomarash
-										country_has_primary_culture = cu:drogori
+																				country_has_primary_culture = cu:lomarash
+																				country_has_primary_culture = cu:drogori
+																				country_has_primary_culture = cu:aisjie
+																				country_has_primary_culture = cu:larltri
+																													country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani
 																			}
 																		}
 																	}
@@ -748,44 +889,6 @@ negotiate_kobold_settlements_button = {
 																 	trigger_event = dragonblight.4
 																 }
 																}
-																if = {
-																	limit = {
-																		state_region = s:STATE_CLYPYA #todo; else_if to release the other side depending on where neighboring kobold state is
-																		is_split_state = no
-																	}
-																	random_neighbouring_state = {
-																		limit = {
-																			owner = {
-																				OR = {
-																					country_has_primary_culture = cu:kotskarvi
-																						country_has_primary_culture = cu:lomarash
-										country_has_primary_culture = cu:drogori
-																				}
-																			}
-																		}
-																		owner = {
-																			save_scope_as = clypya_settler_scope
-																		}
-																	}
-																	s:STATE_CLYPYA = {
-																		set_owner_of_provinces = {
-																			country = scope:clypya_settler_scope
-																			provinces = { xcebb93 xb2e1ec }
-																		}	
-																	}
-																	every_scope_pop = {
-																	limit = {
-																		culture = cu:kotskarvi
-																	}
-																	change_pop_culture = {
-																		target = cu:illvasaari
-																		value = 0.4
-																	}
-																}
-																	 scope:clypya_settler_scope = {
-																	 	trigger_event = dragonblight.4
-																	 }
-																	}
 				}
 
 			}
