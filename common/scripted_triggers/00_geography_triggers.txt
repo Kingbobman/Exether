@@ -68,6 +68,12 @@ state_is_in_teferet = {
 	}
 }
 
+state_is_in_dragon_isles = {
+	OR = {
+		region = sr:region_west_dragon_isles
+		region = sr:region_amethyst_archipelago
+	}
+}
 state_is_in_west_locari = {
 	OR = {
 		region = sr:region_new_dumonia
@@ -1194,4 +1200,23 @@ check_is_coastal = {
 		}
 		is_coastal = yes
 	}
+}
+
+mainland_dragon_isles_state = {
+	OR = {
+		state_region = s:STATE_KLYPYRA
+		state_region = s:STATE_ZAMARIS
+		state_region = s:STATE_ZARTHOS
+		state_region = s:STATE_CALTHA
+		state_region = s:STATE_SIGARA
+		state_region = s:STATE_LEPTISCA
+		state_region = s:STATE_OYRSA
+		state_region = s:STATE_LEPIDRA
+		state_region = s:STATE_THASPYR
+		state_region = s:STATE_LILYBAEUM
+		state_region = s:STATE_ZYRAS
+		state_region = s:STATE_MOTHYA
+		state_region = s:STATE_LEPTHAR
+	}
+
 }

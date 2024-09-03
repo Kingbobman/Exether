@@ -1,0 +1,26 @@
+﻿#	Example:
+# 
+#	example_effect = {
+#		x = 100
+#		y = 50
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+dragonblight_killswitch_engage = {
+	every_scope_pop = {
+		limit = {
+			culture = cu:illvasaari
+		}
+		change_pop_culture = {
+			target = cu:kotskarvi
+			value = 0.4
+		}
+	}
+}
