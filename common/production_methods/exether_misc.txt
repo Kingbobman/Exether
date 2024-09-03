@@ -347,14 +347,14 @@ pm_ghost_hunters = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_ectoplasm_add = 20
+			goods_output_ectoplasm_add = 10
 		}
 
 		level_scaled = {
 			# employment
-			building_employment_laborers_add = 3500
-			building_employment_clergymen_add = 500
-			building_employment_adventurers_add = 1000
+			building_employment_shopkeepers_add = 500
+			building_employment_clergymen_add = 250
+			building_employment_adventurers_add = 1250
 		}
 		
 	}
@@ -375,17 +375,17 @@ pm_exorcists = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_gizmos_add = 5
+			goods_input_gizmos_add = 5  #60 300
 			
 			# output goods
-			goods_output_ectoplasm_add = 30
+			goods_output_ectoplasm_add = 20  #50 750
 		}
 
 		level_scaled = {
 			# employment
-			building_employment_laborers_add = 2500
-			building_employment_clergymen_add = 1000
-			building_employment_adventurers_add = 1500
+			building_employment_shopkeepers_add = 500
+			building_employment_clergymen_add = 500
+			building_employment_adventurers_add = 1000
 		}
 	}
 
@@ -405,19 +405,18 @@ pm_paranormal_containment_fields = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_gizmos_add = 10
-			goods_input_electricity_add = 5
+			goods_input_gizmos_add = 10 #60 600
+			goods_input_electricity_add = 10 #30 150
 			
 			# output goods
-			goods_output_ectoplasm_add = 50 
+			goods_output_ectoplasm_add = 30 #50 1250
 		}
 
 		level_scaled = {
 			# employment
-			building_employment_laborers_add = 2000
-			building_employment_adventurers_add = 1500
-			building_employment_clergymen_add = 1000
-			building_employment_artificers_add = 500
+			building_employment_shopkeepers_add = 500
+			building_employment_adventurers_add = 1000
+			building_employment_artificers_add = 1000
 		}
 	}
 
@@ -441,6 +440,10 @@ pm_revealing_field_generators = {
 		steam_donkey
 	}
 
+	unlocking_production_methods = {
+		pm_exorcists
+	}
+
 	disallowing_laws = {
 		law_industry_banned
 	}
@@ -449,13 +452,12 @@ pm_revealing_field_generators = {
 		workforce_scaled = {
 			# input goods
 			goods_input_thaumacores_add = 1
-			goods_input_wishstone_add = 4
 		}
 
 		level_scaled = {
 			# employment
-			building_employment_laborers_add = -1000
-			building_employment_artificers_add = 500
+			building_employment_clergymen_add = -250
+			building_employment_adventurers_add = -250
 		}
 	}
 }
@@ -465,20 +467,21 @@ pm_portable_ethereal_vacuums = {
 	unlocking_technologies = {
 		combustion_engine
 	}
+	unlocking_production_methods = {
+		pm_paranormal_containment_fields
+	}
 	disallowing_laws = {
 		law_industry_banned
 	}
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_gizmos_add = 10
-			goods_input_oil_add = 5
+			goods_input_gizmos_add = 5
 		}
 
 		level_scaled = {
 			# employment
-			building_employment_laborers_add = -2000
-			building_employment_artificers_add = 500
+			building_employment_artificers_add = -500
 		}
 	}
 }
