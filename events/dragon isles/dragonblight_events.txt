@@ -1368,79 +1368,6 @@ immediate = {
 			# +education access per SOL
 			#-bureaucracy
 
-#dragonblight 4 event about a local industrialist constructing a sickhouse for the poor ##dragonblight_pulse.15
-	#only in outbreak states
-
-	#option 1
-		#this is to be commended
-			# +industrialist ig attraction
-			# +industrialist ig clout
-			# -1.5% conversion in state for 4 years
-	#option 2	
-		#bah, humbug
-			#-industrialist ig approval
-			#-1% conversion in state for 4 years
-	#option 3
-		#they ought to ALL do this!
-			# ---industrialist ig approval
-			# +++upper class radicals
-			# -industrialist ig clout
-			# -0.75% conversion in ALL outbreak states for 4 years
-			
-	#dragonblight 5 locals are refusing to come work, citing fear of the dragonblight
-
-		#option 1
-			#then we must force them to work!
-				#-authority gain for 2 years
-				#+10% factory and port throughput for 2 years
-				#+lower class radicals
-		#option 2	
-				#this is probably for the best...
-					#-12.5% factory/port throughput for 2 years
-					#-0.75% conversion in state for 2 years
-
-	#dragonblight 6 our sailors are intentionally prolonging their journeys to minimize their risk of exposure #dragonblight_pulse.16
-
-		#option 1
-			#they are cowards.  Our magistrates will sort out the logistics themselves.
-				# -bureaucracy
-				# +lower class radicals
-		
-		#option 2
-			#there is nothing we can do...
-				#-10% port throughput
-
-	#dragonblight 7 dragon NIMBYs complaining about a sickhouse near their neighborhood
-
-		#option 1
-			#we will rebuild the sickhouse elsewhere
-				#-bureaucracy
-				#-construction throughput in state
-			
-		#option 2
-			#it is a sickhouse. stop complaining
-				# +upper class radicals
-				# ++middle class radicals
-		
-		#option 3
-			#it will be torn down
-				# +0.5% conversion in state
-				# +lower class radicals
-
-	#dragonblight 8 conversion cult intentionally seeking to be infected
-
-			#option 1
-				#we are certainly not going to try and stop them
-					# +loyalists
-					# +0.25% conversion rate in state
-					#leads to other events
-
-			#option 2
-				#we must crack down on this cult
-					# +radicals from discrimination
-					# +clergy approval
-					# ++mortality from turmoil
-
 	#dragonblight 9 the hunt for kobold robin hood #####CASTRO???????
 		#COULD MAYBE BE AN EXPEDITION??? idk
 		
@@ -1993,7 +1920,7 @@ immediate = {
 				duration = 3
 			
 				event_image = {
-					video = "europenorthamerica_opium_smoker"
+					texture = "gfx/event_images/sad_kobold.dds"
 				}
 			
 				on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -2008,7 +1935,7 @@ immediate = {
 										country_has_primary_culture = cu:kotskarvi
 										country_has_primary_culture = cu:lomarash
 										country_has_primary_culture = cu:drogori
-																			country_has_primary_culture = cu:garagoz
+										country_has_primary_culture = cu:garagoz
 									country_has_primary_culture = cu:tskharvani
 										country_has_primary_culture = cu:aisjie
 									country_has_primary_culture = cu:larltri
@@ -2021,7 +1948,7 @@ immediate = {
 								has_decree = decree_special_measures
 							}
 						}
-						save_scope_as = infected_neighbour_state
+						
 				}		
 				immediate = {
 					random_scope_state = {
@@ -2052,12 +1979,6 @@ immediate = {
 				}
 				option = {
 					name = dragonblight_pulse.10.a #there is nothing we can do
-					}
-				option = {
-					name = dragonblight_pulse.10.b #perhaps we should take special measures
-					possible = {
-						authority >= 100
-					}
 					}
 			}
 			dragonblight_pulse.11 = { #cure
@@ -2224,75 +2145,75 @@ immediate = {
 			}
 			
 			
-			dragonblight_pulse.13 = { #punishment for taking kobold homelands  ##bureaucrats accidentally bring dragonblight back with them
-				type = country_event
-				placement = ROOT
+			# dragonblight_pulse.13 = { #punishment for taking kobold homelands  ##bureaucrats accidentally bring dragonblight back with them
+			# 	type = country_event
+			# 	placement = ROOT
 
-				cooldown = { months = 18 }
+			# 	cooldown = { months = 18 }
 
-				title = dragonblight_pulse.11.t
-				desc = dragonblight_pulse.11.d
-				flavor = dragonblight_pulse.11.f
+			# 	title = dragonblight_pulse.11.t
+			# 	desc = dragonblight_pulse.11.d
+			# 	flavor = dragonblight_pulse.11.f
 			
-				duration = 3
+			# 	duration = 3
 			
-				event_image = {
-					video = "europenorthamerica_opium_smoker"
-				}
+			# 	event_image = {
+			# 		video = "europenorthamerica_opium_smoker"
+			# 	}
 			
-				on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+			# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 			
-				icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+			# 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 			
-				trigger = {
+			# 	trigger = {
 
 					
-					any_state = {
-							owner = c:DIS
-							state_region = {
-								OR = {
-									is_homeland = cu:kotskarvi
-									is_homeland = cu:drogori
-									is_homeland = cu:lomarash
-								}
-							}
-						}
+			# 		any_state = {
+			# 				owner = c:DIS
+			# 				state_region = {
+			# 					OR = {
+			# 						is_homeland = cu:kotskarvi
+			# 						is_homeland = cu:drogori
+			# 						is_homeland = cu:lomarash
+			# 					}
+			# 				}
+			# 			}
 					
-					}
+			# 		}
 	
 					
 
-				immediate = {
-					random_state = {
-						limit = {
-							owner = c:DIS
-							state_region = {
-								OR = {
-									is_homeland = cu:kotskarvi
-									is_homeland = cu:drogori
-									is_homeland = cu:lomarash
-								}
-							}
-						}
-						save_scope_as = unruly_kobold_state
-					}
-					random_scope_state = {
-						limit = {
-							owner = root
-							NOT = { has_modifier = modifier_active_dragonblight_outbreak }
-						}
-						add_modifier = modifier_active_dragonblight_outbreak
-						save_scope_as = new_outbreak_state
-					}
-				}
-				option = {
-					name = dragonblight_pulse.13.a  #this is fine
-					}
-				option = {
-					name = dragonblight_pulse.13.b  #perhaps we should reconsider how we administer this territory#release as a vassal
-					}	
+			# 	immediate = {
+			# 		random_state = {
+			# 			limit = {
+			# 				owner = c:DIS
+			# 				state_region = {
+			# 					OR = {
+			# 						is_homeland = cu:kotskarvi
+			# 						is_homeland = cu:drogori
+			# 						is_homeland = cu:lomarash
+			# 					}
+			# 				}
+			# 			}
+			# 			save_scope_as = unruly_kobold_state
+			# 		}
+			# 		random_scope_state = {
+			# 			limit = {
+			# 				owner = root
+			# 				NOT = { has_modifier = modifier_active_dragonblight_outbreak }
+			# 			}
+			# 			add_modifier = modifier_active_dragonblight_outbreak
+			# 			save_scope_as = new_outbreak_state
+			# 		}
+			# 	}
+			# 	option = {
+			# 		name = dragonblight_pulse.13.a  #this is fine
+			# 		}
+			# 	option = {
+			# 		name = dragonblight_pulse.13.b  #perhaps we should reconsider how we administer this territory#release as a vassal
+			# 		}	
 
-			}
+			# }
 			dragonblight_pulse.14 = { #punishment for taking kobold homelands  ##dragonblight is spreading from kobold homelands
 			type = country_event
 			placement = ROOT
@@ -2306,7 +2227,7 @@ immediate = {
 			duration = 3
 		
 			event_image = {
-				video = "europenorthamerica_opium_smoker"
+				video = "unspecific_vandalized_storefront"
 			}
 		
 			on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -2321,12 +2242,11 @@ immediate = {
 								is_homeland = cu:kotskarvi
 								is_homeland = cu:drogori
 								is_homeland = cu:lomarash
+								is_homeland = cu:tskharvani
+								is_homeland = cu:aisjie
+								is_homeland = cu:larltri
 							}
 						}
-						any_neighbouring_state = {
-							owner = ROOT
-							NOT = { has_modifier = modifier_active_dragonblight_outbreak }
-							}
 						}
 					}
 			immediate = {
@@ -2338,29 +2258,25 @@ immediate = {
 								is_homeland = cu:kotskarvi
 								is_homeland = cu:drogori
 								is_homeland = cu:lomarash
+								is_homeland = cu:tskharvani
+								is_homeland = cu:aisjie
+								is_homeland = cu:larltri
 							}
 						}
 					}
 					save_scope_as = unruly_kobold_state
 				}
-				scope:conquered_kobold_state = {
-					random_neighbouring_state = {
-						limit = {
-							owner = root
-							NOT = { has_modifier = modifier_active_dragonblight_outbreak }
-						}
+				scope:unruly_kobold_state = {
+					
 						add_modifier = modifier_active_dragonblight_outbreak
 						save_scope_as = new_outbreak_state
 					}
 				}
 
-			}
+			
 			option = {
 				name = dragonblight_pulse.14.a  #this is fine
 				}
-			option = {
-				name = dragonblight_pulse.14.b  #perhaps we should reconsider how we administer this territory #release as a vassal
-				}	
 
 		}		
 			dragonblight_pulse.15 = { #industrialist builds sickhouses
@@ -2608,7 +2524,7 @@ immediate = {
 		duration = 3
 	
 		event_image = {
-			video = "europenorthamerica_opium_smoker"
+			video = "africa_public_protest"
 		}
 	
 		on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"

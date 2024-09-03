@@ -9,22 +9,10 @@
 	scripted_button = negotiate_kobold_settlements_button
 	
 
-
-	# on_weekly_pulse = {
-	# 	effect = {
-	# 		# clamp_variable = {
-	# 		# 	name = positivism_progress_var
-	# 		# 	max = 100
-	# 		# 	min = 0
-	# 		# }
-	# 	}
-	# }
-
 	on_monthly_pulse = {
 		effect = {
 			every_scope_state = {
 				limit = {
-					owner = root #this is probably implicit isn't it
 					NOT = { 
 						OR = {
 						has_modifier = dragon_sickhouses
@@ -80,10 +68,10 @@
 			}	
 		}
 		random_events = { #this originally all added up to 200 but I'm pretty sure that events whose triggers aren't met aren't included in the calculation and that fucked stuff up
-			120 = 0
+			125 = 0
 			84 = dragonblight_pulse.22 #the collapse event lmao
-			45 = dragonblight_pulse.14 #punishment for kobold annexation, adjacent
-			20 = dragonblight_pulse.13 #punishment for owning kobold homelands, random
+			55 = dragonblight_pulse.14 #punishment for kobold annexation, adjacent
+			#20 = dragonblight_pulse.13 #punishment for owning kobold homelands, random
 			3 = dragonblight_pulse.1 #trade route spread
 			4 = dragonblight_pulse.2 #adjacent spread
 			2 = dragonblight_pulse.3 #woe be upon ye
@@ -178,7 +166,7 @@
 	# 	add = 100
 	# }
 
-	weight = 1000
+	weight = 10000
 
 	should_be_pinned_by_default = yes
 }
@@ -227,7 +215,7 @@ je_dragonblight_vaccine = {
 		}
 	}
 
-	weight = 100
+	weight = 5000
 
 	should_be_pinned_by_default = yes
 }
