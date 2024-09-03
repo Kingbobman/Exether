@@ -154,11 +154,14 @@ building_soulwrought_assembly_plant = {
 			market ?= { #kinda worried this might make the AI not build these as well
             mg:thaumacores ?= {
                 market_goods_sell_orders > 0
-            }
-        }
+            	}
+        	}
 		}
-		
-
+		owner = {
+			religion = {
+				has_discrimination_trait = angel_domain
+			}
+		}
 	}
 	production_method_groups = {
 		pmg_soulforging_soulwrought_assembly_plant
