@@ -1,4 +1,4 @@
-﻿# texture = filename								The icon that will show up in the Lens and on the map when this Focus is deployed
+# texture = filename								The icon that will show up in the Lens and on the map when this Focus is deployed
 # modifier											The effects this Decree has on its state
 # cost												The cost in AUT to set this Decree on a state (scales with Power Rank)
 # unlocking_technologies							A list of technologies, at least one of which must be known to the country to use this Focus
@@ -7,7 +7,7 @@
 # ai_weight											Scripted value which determines the chance of getting the Decree by AI
 
 decree_special_measures = {
-	texture = "gfx/interface/icons/decree/decree_road_maintenance.dds"
+	texture = "gfx/interface/icons/decree/decree_special_measures.dds"
 	
 	# modifier = {
 
@@ -15,6 +15,10 @@ decree_special_measures = {
 	# unlocking_technologies = { 
 
 	# }
+
+	valid = {
+		owner = { has_journal_entry = je_dragonblight }
+	}
 	cost = 100
 	
 	ai_weight = {
