@@ -288,7 +288,6 @@
 				state_region = s:STATE_VERDFALDO
 				count = 10
 			}
-
 			combat_unit = {
 				type = unit_type:combat_unit_type_lancers
 				state_region = s:STATE_VERDFALDO
@@ -327,7 +326,40 @@
 			transfer_to_formation = scope:vai_army_1
 		}
 		
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_varinath
 
+			name = "Army of Montego"
+			
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_MONTEGO
+				count = 15
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_MONTEGO
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_MONTEGO
+				count = 5
+			}
+
+			save_scope_as = vai_army_2
+		}
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			hq = region_varinath
+			save_scope_as = vai_general_2
+		}
+		scope:vai_general_2 = {
+			commander_rank = commander_rank_2
+			transfer_to_formation = scope:vai_army_2
+		}
 
 		create_military_formation = {
 			type = army
@@ -345,7 +377,6 @@
 				state_region = s:STATE_VESPERVIDO
 				count = 10
 			}
-
 			combat_unit = {
 				type = unit_type:combat_unit_type_mobile_artillery
 				state_region = s:STATE_VESPERVIDO
@@ -369,7 +400,7 @@
 			type = army
 			hq_region = sr:region_whisperpine
 
-			name = "Evefrost Garrison"
+			name = "Everfrost Garrison"
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
