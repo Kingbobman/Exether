@@ -22,6 +22,12 @@
 	foreign_investment_ai_factor = 1.0
 }
 
+bg_ruins_discoverable = {
+	parent_group = bg_ruins
+
+	discoverable_resource = yes
+}
+
 bg_collapsed_godsbane_vault = {
 	parent_group = bg_ruins
 
@@ -36,6 +42,12 @@ bg_collapsed_godsbane_vault = {
 	default_building = building_collapsed_godsbane_vault
 	
 	fired_pops_become_radical = no
+}
+
+bg_ship_graveyard = { 
+	parent_group = bg_ruins_discoverable
+
+	default_building = building_ship_graveyard
 }
 
 bg_renovated_godsbane_vault = {

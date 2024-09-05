@@ -117,12 +117,6 @@ bg_special_depletables = {  #use with resource_depletion and resource_discovery 
 	fired_pops_become_radical = no  #could change this to yes, but we might want to lower depletion amount if we do that so that 25000 people don't get fired all at once
 }
 
-bg_ship_graveyard = {  #deplete into building_fishing_wharf or building_whaling_station
-	parent_group = bg_special_depletables
-
-	default_building = building_ship_graveyard
-}
-
 bg_mountain_maize_farms = {
 	parent_group = bg_agriculture
 	
@@ -168,13 +162,7 @@ bg_wishstone_mining_depletable = {
 	economy_of_scale_ai_factor = 2.0
 }
 
-bg_nonmagical_comet = {  
-	parent_group = bg_special_depletables
 
-	default_building = building_nonmagical_comet
-
-	lens = mine
-}
 
 bg_wishstone_comet = {  
 	parent_group = bg_special_depletables
