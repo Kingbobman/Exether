@@ -1783,8 +1783,13 @@ immediate = {
 								has_modifier = modifier_active_dragonblight_outbreak
 						}
 					NOT = {
-						has_institution = institution_health_system
-						}	
+						OR = {
+							{
+								has_institution = institution_health_system
+								has_variable = dragonblight_vaccine 
+								}	
+						}
+					} 
 				}	
 
 				immediate = {
@@ -2042,6 +2047,9 @@ immediate = {
 								has_modifier = modifier_active_dragonblight_outbreak 
 								has_decree = decree_special_measures
 							}
+						}
+						NOT = {
+							has_variable = dragonblight_vaccine
 						}
 						
 				}		
