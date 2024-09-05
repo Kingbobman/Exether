@@ -265,6 +265,9 @@ on_five_year_pulse_country = {
 	events = {
 		generals.1
 	}
+	on_actions = {
+		dragonblight_removinator
+	}
 }
 
 
@@ -2220,6 +2223,23 @@ on_power_bloc_struggle_started = {
 				is_player = yes
 			}
 			set_variable = achievement_im_the_captain_now_challanger_var
+		}
+	}
+}
+
+dragonblight_removinator = {
+	effect = {
+		if = {
+			limit = {
+				NOT = { c:DIS = this }
+				any_scope_state = {
+					has_modifier = modifier_active_dragonblight_outbreak
+				}
+			}
+			every_scope_state = {
+				remove_modifier = modifier_active_dragonblight_outbreak
+			}
+			
 		}
 	}
 }
