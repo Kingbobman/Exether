@@ -2201,7 +2201,13 @@ immediate = {
 								is_decaying = yes
 							}
 						}
-					
+						ig:ig_intelligentsia = {
+							add_modifier = {
+								name = loose_quarantine_enforcement
+								years = 4
+								is_decaying = yes
+							}
+						}
 					scope:party_time_state = {
 						add_modifier = modifier_active_dragonblight_outbreak
 					}	
@@ -2687,6 +2693,13 @@ immediate = {
 					value = 0.1
 					strata = lower
 					culture = cu:illvasaari
+				}
+				ig:ig_intelligentsia = {
+					add_modifier = {
+						name = tore_down_sickhouses
+						years = 4
+						is_decaying = yes
+					}
 				}
 			}
 		}
@@ -4152,6 +4165,17 @@ immediate = {
 }
 option = { #perhaps we should listen
 	name = dragonblight_pulse.23.a
+	random_scope_character = {
+		limit = {
+			is_ruler = yes
+		}
+		set_ideology = ideology:ideology_epidemiologist
+	}
+
+	}	
+	
+option = { #we will put someone more qualified on this
+	name = dragonblight_pulse.23.b
 	default_option = yes
 	ig:ig_intelligentsia = {
 		leader = {
@@ -4160,7 +4184,13 @@ option = { #perhaps we should listen
 	}	
 	}
 option = { #lol no
-	name = dragonblight_pulse.23.b
+	name = dragonblight_pulse.23.c
+	ig:ig_intelligentsia = {
+		add_modifier = {
+			name = ignored_expert_advice
+			years = 3
+		}
+	}
 	}
 }
 
