@@ -51,7 +51,7 @@ dragonblight_vaccine_progress_bar = {
 				desc = "dragon_vaccine_progress_from_literacy_tt"
 				owner = {
 					add = this.literacy_rate
-					multiply = 10
+					multiply = 50
 				}
 						
 			}
@@ -64,7 +64,7 @@ dragonblight_vaccine_progress_bar = {
 				add = {
 					desc = "dragon_vaccine_ai_cheats_tt"
 					owner = {
-						add = 4
+						add = 20
 					}
 							
 				}
@@ -83,7 +83,7 @@ dragonblight_vaccine_progress_bar = {
 				owner = {
 					ig:ig_intelligentsia = {
 						add = this.ig_clout
-						multiply = 10
+						multiply = 50
 					}
 				}
 			}
@@ -107,7 +107,8 @@ dragonblight_vaccine_progress_bar = {
 							}
 						}
 						add = this.b:building_university.level
-						divide = 3 #this math don't math, this is what you divide by to get 0.2 per university
+						
+					 #this math don't math, this is what you divide by to get 0.2 per university
 					}
 				}
 			}
@@ -126,7 +127,7 @@ dragonblight_vaccine_progress_bar = {
 			}
 			add = {
 				desc = "dragon_vaccine_progress_from_bureaucrats_tt"
-				add = 1.5
+				add = 7.5
 
 			}
 		}
@@ -138,6 +139,6 @@ dragonblight_vaccine_progress_bar = {
 	}
 	start_value = 0
 	min_value = 0
-	max_value = 1000
+	max_value = 5000
 
  }
