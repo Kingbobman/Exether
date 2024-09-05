@@ -165,7 +165,7 @@ types building_panels
 							}
 				
 							parentanchor = hcenter
-							using = cash_reserves_tooltip_with_graph
+							tooltip = "BUILDING_POP_CONSTRUCTION_TOOLTIP"
 							onmousehierarchyenter = "[PdxGuiWidget.FindChild('soulwrought_assemble_max').InterruptThenTriggerAnimation('hide_soulwrought_assemble_max','show_soulwrought_assemble_max')]"
 							onmousehierarchyleave = "[PdxGuiWidget.FindChild('soulwrought_assemble_max').InterruptThenTriggerAnimation('show_soulwrought_assemble_max','hide_soulwrought_assemble_max')]"
 							alwaystransparent = no
@@ -220,6 +220,79 @@ types building_panels
 				
 									raw_text = " / #maximum 10000#!"
 									visible = "[LessThan_CFixedPoint(Building.GetState.MakeScope.ScriptValue('state_soulwrought_progress'), '(CFixedPoint)10000')]"
+									align = hcenter|nobaseline
+									autoresize = yes
+									parentanchor = vcenter
+								}
+							}
+						}
+					}
+
+					hbox = {
+						visible = "[Or(Building.IsBuildingType('building_collapsed_godsbane_vault'),Building.IsBuildingType('building_renovated_godsbane_vault'))]"
+						widget = {
+							alpha = "[TransparentIfFalse(Building.IsActive)]"
+				
+							block "progressbar_size" {
+								size = { 186 26 }
+							}
+				
+							parentanchor = hcenter
+							tooltip = "BUILDING_POP_CONSTRUCTION_TOOLTIP"
+							onmousehierarchyenter = "[PdxGuiWidget.FindChild('stonedwarf_assemble_max').InterruptThenTriggerAnimation('hide_stonedwarf_assemble_max','show_stonedwarf_assemble_max')]"
+							onmousehierarchyleave = "[PdxGuiWidget.FindChild('stonedwarf_assemble_max').InterruptThenTriggerAnimation('show_stonedwarf_assemble_max','hide_stonedwarf_assemble_max')]"
+							alwaystransparent = no
+				
+							white_progressbar_horizontal = {
+								size = { 100% 100% }
+								alpha = "[TransparentIfFalse(Building.IsActive)]"
+				
+								blockoverride "glow_size" {
+									size = { 40 100% }
+								}
+				
+								parentanchor = vcenter
+								blockoverride "values" {
+									min = 0
+									max = 5000
+									value = "[Building.GetState.MakeScope.ScriptValue('state_stonedwarf_progress')]"
+								}
+				
+								progressbar_highlight = {
+									visible = no
+								}
+							}
+				
+							flowcontainer = {
+								parentanchor = vcenter
+								textbox = {
+									raw_text = "@population![Building.GetState.MakeScope.ScriptValue('state_stonedwarf_progress')|Dv]"
+									margin_left = 4
+									align = hcenter|nobaseline
+									autoresize = yes
+									parentanchor = vcenter
+								}
+				
+								textbox = {
+									alpha = 0
+									name = stonedwarf_assemble_max
+				
+									state = {
+										name = show_stonedwarf_assemble_max
+										delay = 0.15
+										alpha = 1
+										duration = 0.15
+										using = Animation_Curve_Default
+									}
+									state = {
+										name = hide_stonedwarf_assemble_max
+										alpha = 0
+										duration = 0
+										using = Animation_Curve_Default
+									}
+				
+									raw_text = " / #maximum 5000#!"
+									visible = "[LessThan_CFixedPoint(Building.GetState.MakeScope.ScriptValue('state_stonedwarf_progress'), '(CFixedPoint)5000')]"
 									align = hcenter|nobaseline
 									autoresize = yes
 									parentanchor = vcenter
