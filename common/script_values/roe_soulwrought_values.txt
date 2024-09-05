@@ -1,5 +1,11 @@
 ﻿
 state_soulwrought_progress = {
 	value = 0
-	add = var:soulwrought_assemble_count
+	if = {
+		limit = {
+			has_variable = soulwrought_assemble_count
+		}
+		add = var:soulwrought_assemble_count
+	}
+
 }
