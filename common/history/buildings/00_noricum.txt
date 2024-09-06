@@ -102,7 +102,7 @@
                    }
                 }
         reserves=1
-        activate_production_methods={ "pm_picks_and_shovels_building_wishstone_mine"   }
+        activate_production_methods={ "pm_detect_wishstone" "pm_no_mirrors" "pm_road_carts" }
       }
       create_building={
         building="building_iron_mine"
@@ -301,7 +301,7 @@
                      }
                   }
           reserves=1
-          activate_production_methods={ "pm_picks_and_shovels_building_wishstone_mine"   }
+          activate_production_methods={ "pm_detect_wishstone" "pm_no_mirrors" "pm_road_carts" }
         }
       }
     }
@@ -564,7 +564,7 @@
              }
           }
           reserves=1
-          activate_production_methods={ "pm_soil_enriching_farming_building_rice_farm" "pm_no_secondary" "pm_tools_building_rice_farm"  }
+          activate_production_methods={ "pm_bigger_leeches" "pm_no_secondary" "pm_no_arms"  }
         }
       create_building={
 				building="building_port"
@@ -795,7 +795,7 @@
 				   }
 				}
 				reserves=1
-				activate_production_methods={ "pm_soil_enriching_farming_building_rice_farm" "pm_no_secondary" "pm_tools_building_rice_farm"  }
+				activate_production_methods={ "pm_bigger_leeches" "pm_no_secondary" "pm_no_arms"  }
 			}	
       create_building={
         building="building_sulfur_mine"
@@ -1377,7 +1377,7 @@ reserves=1
             }
           }
           reserves=1
-          activate_production_methods={ "pm_simple_potion_production" "pm_alcohol-based_potions" "pm_base_cosmetic_potion_production" }
+          activate_production_methods={ "pm_simple_potion_production" "pm_alcohol-based_potions" "pm_no_mixins" "pm_basic_filters" }
         }	
         create_building={
           building="building_arts_academy"
@@ -2125,7 +2125,7 @@ reserves=1
                      }
                   }
           reserves=1
-          activate_production_methods={ "pm_picks_and_shovels_building_wishstone_mine"   }
+          activate_production_methods={ "pm_detect_wishstone" "pm_no_mirrors" "pm_road_carts" }
         }
         create_building={
           building="building_port"
@@ -3107,7 +3107,7 @@ reserves=1
                      }
                   }
           reserves=1
-          activate_production_methods={ "pm_picks_and_shovels_building_wishstone_mine" "pm_rockrollers_building_wishstone_mine"   }
+          activate_production_methods={ "pm_detect_wishstone" "pm_no_mirrors" "pm_road_carts" }
         }
         create_building={
           building="building_logging_camp"
@@ -3499,21 +3499,8 @@ reserves=1
             }
           }
           reserves=1
-          activate_production_methods={ "pm_early_potion_vat_production" "pm_alcohol-based_potions" "pm_base_cosmetic_potion_production" }
+          activate_production_methods={ "pm_early_potion_vat_production" "pm_alcohol-based_potions" "pm_no_mixins" "pm_basic_filters" }
         }	
-        create_building={
-          building="building_fur_hunting_lodge"
-          add_ownership = {
-            building = {
-              type="building_adventuring_guild"
-              country="c:BIE"
-              levels=4
-              region="STATE_KENLYNE"
-            }
-          }
-          reserves=1
-          activate_production_methods={ "pm_hunting_parties" "pm_essence_extraction" }
-        }
         create_building={
           building="building_textile_mills"
                     add_ownership={ 
@@ -4081,7 +4068,7 @@ reserves=1
                    }
                 }
 				reserves=1
-				activate_production_methods={ "pm_picks_and_shovels_building_wishstone_mine"   }
+				activate_production_methods={ "pm_detect_wishstone" "pm_no_mirrors" "pm_road_carts" }
 			}
       create_building={
 				building="building_livestock_ranch"
@@ -4255,7 +4242,7 @@ reserves=1
              }
           }
           reserves=1
-          activate_production_methods={ "pm_picks_and_shovels_building_wishstone_mine"   }
+          activate_production_methods={ "pm_detect_wishstone" "pm_no_mirrors" "pm_road_carts" }
       }
       create_building={
         building="building_paper_mills"
@@ -4372,7 +4359,7 @@ reserves=1
                      }
                   }
           reserves=1
-          activate_production_methods={ "pm_picks_and_shovels_building_wishstone_mine"   }
+          activate_production_methods={ "pm_detect_wishstone" "pm_no_mirrors" "pm_road_carts" }
         }			
       }
   }
@@ -4695,7 +4682,7 @@ reserves=1
                    }
                 }
         reserves=1
-        activate_production_methods={ "pm_picks_and_shovels_building_wishstone_mine"   }
+        activate_production_methods={ "pm_detect_wishstone" "pm_no_mirrors" "pm_road_carts" }
         }
       }
     }
@@ -4775,7 +4762,7 @@ reserves=1
                    }
                 }
         reserves=1
-        activate_production_methods={ "pm_picks_and_shovels_building_wishstone_mine"   }
+        activate_production_methods={ "pm_detect_wishstone"  "pm_no_mirrors" "pm_road_carts" }
       }
       create_building={
         building="building_government_administration"
@@ -4878,7 +4865,7 @@ reserves=1
                    }
                 }
         reserves=1
-        activate_production_methods={ "pm_picks_and_shovels_building_wishstone_mine"   }
+        activate_production_methods={ "pm_detect_wishstone"  "pm_no_mirrors" "pm_road_carts" }
       }
     }
   }
@@ -5167,7 +5154,7 @@ reserves=1
           building="building_rye_farm"
           level=3
           reserves=1
-          activate_production_methods={ "pm_simple_farming"  "pm_tools_disabled" "pm_citrus_orchards" }
+          activate_production_methods={ "pm_simple_farming"  "pm_tools_disabled" }
         }
             create_building={
           building="building_logging_camp"
@@ -5297,7 +5284,7 @@ reserves=1
             }
           }
           reserves=1
-          activate_production_methods={ "pm_simple_potion_production" "pm_water-based_potions" "pm_base_cosmetic_potion_production" }
+          activate_production_methods={ "pm_simple_potion_production" "pm_water-based_potions" "pm_no_mixins" "pm_basic_filters" }
         }	
       }
     }

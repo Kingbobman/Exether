@@ -1,4 +1,4 @@
-MILITARY_FORMATIONS = {
+﻿MILITARY_FORMATIONS = {
 
 	c:OPA ?= {
 		create_military_formation = {
@@ -233,7 +233,7 @@ MILITARY_FORMATIONS = {
 		}
 	}
 	
-	c:SAZ ?={
+	c:MNN ?={
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_shaking_fields
@@ -266,78 +266,6 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:saz_army
 		}
 	}
-	c:FIS ?= {
-		create_military_formation = {
-			type = army
-			hq_region = sr:region_gnomehome
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_WETTERWIIDTE
-				count = 8
-			}
-
-			save_scope_as = fis_army
-		}
-
-		create_character = {
-			is_general = yes
-			hq = region_gnomehome
-			save_scope_as = fis_general
-		}
-		
-		scope:fis_general = {
-			transfer_to_formation = scope:fis_army
-		}
-	}
-	c:SEE ?= {
-		create_military_formation = {
-			type = army
-			hq_region = sr:region_varinath
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_SKIMERWALD
-				count = 10
-			}
-
-			save_scope_as = see_army
-		}
-
-		create_character = {
-			is_general = yes
-			hq = region_varinath
-			save_scope_as = see_general
-		}
-		
-		scope:see_general = {
-			transfer_to_formation = scope:see_army
-		}
-	}
-	c:HOU ?= {
-		create_military_formation = {
-			type = army
-			hq_region = sr:region_varinath
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_STJERROPTOCHT
-				count = 12
-			}
-
-			save_scope_as = hou_army
-		}
-
-		create_character = {
-			is_general = yes
-			hq = region_varinath
-			save_scope_as = hou_general
-		}
-		
-		scope:hou_general = {
-			transfer_to_formation = scope:hou_army
-		}
-	}
 	c:VAI ?= {
 		create_military_formation = {
 			type = army
@@ -360,7 +288,6 @@ MILITARY_FORMATIONS = {
 				state_region = s:STATE_VERDFALDO
 				count = 10
 			}
-
 			combat_unit = {
 				type = unit_type:combat_unit_type_lancers
 				state_region = s:STATE_VERDFALDO
@@ -403,16 +330,21 @@ MILITARY_FORMATIONS = {
 			type = army
 			hq_region = sr:region_varinath
 
-			name = "Felicgrundan Army"
-
+			name = "Army of Montego"
+			
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_FELICGRUNDO
+				state_region = s:STATE_MONTEGO
 				count = 15
 			}
 			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_MONTEGO
+				count = 10
+			}
+			combat_unit = {
 				type = unit_type:combat_unit_type_mobile_artillery
-				state_region = s:STATE_FELICGRUNDO
+				state_region = s:STATE_MONTEGO
 				count = 5
 			}
 
@@ -420,10 +352,12 @@ MILITARY_FORMATIONS = {
 		}
 		create_character = {
 			is_general = yes
+			commander_rank = commander_rank_2
 			hq = region_varinath
 			save_scope_as = vai_general_2
 		}
 		scope:vai_general_2 = {
+			commander_rank = commander_rank_2
 			transfer_to_formation = scope:vai_army_2
 		}
 
@@ -443,7 +377,6 @@ MILITARY_FORMATIONS = {
 				state_region = s:STATE_VESPERVIDO
 				count = 10
 			}
-
 			combat_unit = {
 				type = unit_type:combat_unit_type_mobile_artillery
 				state_region = s:STATE_VESPERVIDO
@@ -467,7 +400,7 @@ MILITARY_FORMATIONS = {
 			type = army
 			hq_region = sr:region_whisperpine
 
-			name = "Evefrost Garrison"
+			name = "Everfrost Garrison"
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
@@ -575,11 +508,6 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_INSULECO
-				count = 1
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_TRANKVILEJO
 				count = 1
 			}
 			combat_unit = {
@@ -1336,19 +1264,19 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_FAOLNA_PASS
-				count = 15
+				count = 10
 			}
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_NORTHERN_FEYSTALK
-				count = 15
+				count = 10
 			}
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_mobile_artillery
 				state_region = s:STATE_CAM_NUALA
-				count = 11
+				count = 10
 			}
 
 			save_scope_as = cllarmy
@@ -1374,19 +1302,19 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_CAM_RINNARA
-				count = 15
+				count = 10
 			}
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_CAM_LIADRINE
-				count = 15
+				count = 10
 			}
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_mobile_artillery
 				state_region = s:STATE_CAM_NUALA
-				count = 11
+				count = 10
 			}
 
 			save_scope_as = cllarmy2
@@ -1423,7 +1351,7 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mobile_artillery
 				state_region = s:STATE_SOUTHERN_FEYSTALK
-				count = 20
+				count = 10
 			}
 
 			save_scope_as = cllarmy3
@@ -1440,7 +1368,7 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:cllarmy3
 		}
 	}
-	c:MNN ?= {
+	c:SAZ ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_misthill_range
@@ -1602,7 +1530,7 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_RIVER_SOLILOQUE_2
-				count = 25
+				count = 15
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
@@ -1612,17 +1540,17 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_INTOKI
-				count = 10
+				count = 5
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_KUNCHI
-				count = 10
+				count = 5
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mobile_artillery
 				state_region = s:STATE_EISENMORA
-				count = 15
+				count = 10
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
@@ -1713,7 +1641,7 @@ MILITARY_FORMATIONS = {
 			hq = region_shaking_fields
 			save_scope_as = fluadmiral1
 		}
-		scope:sheadmiral1 = {
+		scope:fluadmiral1 = {
 			transfer_to_formation = scope:flufleet1
 		}
 
@@ -1743,13 +1671,12 @@ MILITARY_FORMATIONS = {
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_UPPER_SUKONCO
+				state_region = s:STATE_SUKONCO_2
 				service_type = conscript
 				count = 10
 			}
-		}
 			save_scope_as = kamarmy1
-	
+		}
 		create_character = {
 		is_general = yes
 		commander_rank = commander_rank_1
@@ -1971,7 +1898,7 @@ MILITARY_FORMATIONS = {
 		create_character = {
 			is_admiral = yes
 			commander_rank = commander_rank_2
-			hq = region_varinath
+			hq = region_dark_morass
 			save_scope_as = vai_admiral_1
 		}
 		scope:vai_admiral_1 = {

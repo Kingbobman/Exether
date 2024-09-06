@@ -147,7 +147,9 @@ blood_tribunal.4 = {
         capital = {
             every_scope_pop = {
                 limit = {
-                    has_pop_religion = rel:dummy_religion
+                    this = { 
+					    religion = rel:dummy_religion 
+				    }
                 }
                 change_pop_religion = {
                     target = root.state_religion
@@ -160,7 +162,6 @@ blood_tribunal.4 = {
 	option = {
 		name = blood_tribunal.4.a
 	}
-
 }
 
 blood_tribunal.5 = {
@@ -187,7 +188,7 @@ blood_tribunal.5 = {
                 reverse = yes
                 save_scope_as = most_populated_state
             }
-
+        
             scope:most_populated_state = {
                 convert_population = {
                     target = rel:dummy_religion 
@@ -206,11 +207,13 @@ blood_tribunal.5 = {
         capital = {
             every_scope_pop = {
                 limit = {
-                    has_pop_religion = rel:dummy_religion
-                }
-                change_pop_religion = {
-                    target = root.state_religion
-                    value = 1.0
+                    this = { 
+					    religion = rel:dummy_religion 
+				    }
+                    change_pop_religion = {
+                        target = root.state_religion
+                        value = 1.0
+                    }
                 }
             }
         }
@@ -267,11 +270,13 @@ blood_tribunal.6 = {
         scope:tithe_recipient = {
             every_scope_pop = {
                 limit = {
-                    has_pop_religion = rel:dummy_religion
-                }
-                change_pop_religion = {
-                    target = root.state_religion
-                    value = 1.0
+                    this = { 
+					    religion = rel:dummy_religion 
+				    }
+                    change_pop_religion = {
+                        target = root.state_religion
+                        value = 1.0
+                    }
                 }
             }
         }
@@ -327,11 +332,13 @@ blood_tribunal.7 = {
         capital = {
             every_scope_pop = {
                 limit = {
-                    has_pop_religion = rel:dummy_religion
-                }
-                change_pop_religion = {
-                    target = root.state_religion
-                    value = 1.0
+                    this = { 
+					    religion = rel:dummy_religion 
+				    }
+                    change_pop_religion = {
+                        target = root.state_religion
+                        value = 1.0
+                    }
                 }
             }
         }

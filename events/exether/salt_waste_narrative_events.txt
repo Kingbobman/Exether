@@ -1,7 +1,5 @@
 ﻿namespace = salt_waste_narrative_events
 
-# Commented sections in events 13 - 15 and event 17 are to be reworked after the new magic system lands
-
 salt_waste_narrative_events.1 = {
 	dlc = dlc_roe
 	type = country_event
@@ -1004,7 +1002,7 @@ salt_waste_narrative_events.13 = {
 		default_option = yes
 		trigger = {
 			fully_owns_the_salt_wastes = yes
-			magic_reserves_total >= 400
+			arcana >= 400
 		}
 		add_modifier = {
 			name = salt_waste_cure_ritual_2
@@ -1020,93 +1018,87 @@ salt_waste_narrative_events.13 = {
 		}
 	}
 	
-	# option = {
-	# 	name = salt_waste_narrative_events.12.continued.ab
-	# 	default_option = yes
-	# 	trigger = {
-	# 		fully_owns_the_salt_wastes = yes
-	# 		has_law = law_type:law_divine_miracles
-	# 		magic_reserves_total >= 200
-	# 	}
-	# 	add_modifier = {
-	# 		name = salt_waste_cure_ritual_2_clerics
-	# 	}
-	# 	trigger_event = {
-	# 		id = salt_waste_narrative_events.14
-	# 		years = 1
-	# 		popup = yes
-	# 	}
-	# }
+	option = {
+		name = salt_waste_narrative_events.12.continued.ab
+		default_option = yes
+		trigger = {
+			fully_owns_the_salt_wastes = yes
+			religion = {
+				has_discrimination_trait = fey_domain
+			}
+			arcana >= 200
+		}
+		add_modifier = {
+			name = salt_waste_cure_ritual_2_druids
+		}
+		trigger_event = {
+			id = salt_waste_narrative_events.14
+			years = 1
+			popup = yes
+		}
+		custom_tooltip = {
+			text = salt_waste_need_mana_for_14_reduced
+			# Purposeful NoOp
+		}
+	}
 	
-	# option = {
-	# 	name = salt_waste_narrative_events.12.continued.ac
-	# 	default_option = yes
-	# 	trigger = {
-	# 		fully_owns_the_salt_wastes = yes
-	# 		has_law = law_type:law_druidic_circles
-	# 		magic_reserves_total >= 200
-	# 	}
-	# 	add_modifier = {
-	# 		name = salt_waste_cure_ritual_2_druids
-	# 	}
-	# 	trigger_event = {
-	# 		id = salt_waste_narrative_events.14
-	# 		years = 1
-	# 		popup = yes
-	# 	}
-	# }
-	
-	# option = {
-	# 	name = salt_waste_narrative_events.12.continued.ad
-	# 	default_option = yes
-	# 	trigger = {
-	# 		fully_owns_the_salt_wastes = yes
-	# 		has_law = law_type:law_mage_hunters
-	# 		magic_reserves_total >= 200
-	# 	}
-	# 	add_modifier = {
-	# 		name = salt_waste_cure_ritual_2_mage_hunters
-	# 	}
-	# 	trigger_event = {
-	# 		id = salt_waste_narrative_events.14
-	# 		years = 1
-	# 		popup = yes
-	# 	}
-	# }
+	option = {
+		name = salt_waste_narrative_events.12.continued.ac
+		default_option = yes
+		trigger = {
+			fully_owns_the_salt_wastes = yes
+			religion = {
+				has_discrimination_trait = dragon_domain
+			}
+			arcana >= 200
+		}
+		add_modifier = {
+			name = salt_waste_cure_ritual_2_mage_hunters
+		}
+		trigger_event = {
+			id = salt_waste_narrative_events.14
+			years = 1
+			popup = yes
+		}
+		custom_tooltip = {
+			text = salt_waste_need_mana_for_14_reduced
+			# Purposeful NoOp
+		}
+	}
 	
 	option = {
 		name = salt_waste_narrative_events.12.continued.b
 		trigger = {
-			magic_reserves_total >= 400
-			# OR = {
-			# 	magic_reserves_total >= 400
-			# 	AND = {
-			# 		magic_reserves_total >= 200
-			# 		OR = {
-			# 			has_law = law_type:law_divine_miracles
-			# 			has_law = law_type:law_druidic_circles
-			# 			has_law = law_type:law_mage_hunters
-			# 		}
-			# 	}
-			# }
+			OR = {
+				arcana >= 400
+				AND = {
+					arcana >= 200
+					religion = {
+						OR = {
+							has_discrimination_trait = fey_domain
+							has_discrimination_trait = dragon_domain
+						}
+					}
+				}
+			}
 		}
 	}
 	
 	option = {
 		name = salt_waste_narrative_events.12.continued.c
 		trigger = {
-			magic_reserves_total < 400
-			# OR = {
-			# 	magic_reserves_total < 200
-			# 	AND = {
-			# 		magic_reserves_total < 400
-			# 		AND = {
-			# 			NOT = { has_law = law_type:law_divine_miracles }
-			# 			NOT = { has_law = law_type:law_druidic_circles }
-			# 			NOT = { has_law = law_type:law_mage_hunters }
-			# 		}
-			# 	}
-			# }
+			OR = {
+				arcana < 200
+				AND = {
+					arcana< 400
+					religion = {
+						AND = {
+							NOT = { has_discrimination_trait = fey_domain }
+							NOT = { has_discrimination_trait = dragon_domain }
+						}
+					}
+				}
+			}
 		}
 		trigger_event = {
 			id = salt_waste_narrative_events.16
@@ -1137,7 +1129,6 @@ salt_waste_narrative_events.14 = {
 	trigger = {
 		OR = {
 			has_modifier = salt_waste_cure_ritual_2
-			has_modifier = salt_waste_cure_ritual_2_clerics
 			has_modifier = salt_waste_cure_ritual_2_druids
 			has_modifier = salt_waste_cure_ritual_2_mage_hunters
 		}
@@ -1145,7 +1136,6 @@ salt_waste_narrative_events.14 = {
 
 	immediate = {
 		remove_modifier = salt_waste_cure_ritual_2
-		remove_modifier = salt_waste_cure_ritual_2_clerics
 		remove_modifier = salt_waste_cure_ritual_2_druids
 		remove_modifier = salt_waste_cure_ritual_2_mage_hunters
 	}
@@ -1155,7 +1145,7 @@ salt_waste_narrative_events.14 = {
 		default_option = yes
 		trigger = {
 			fully_owns_the_salt_wastes = yes
-			magic_reserves_total >= 500
+			arcana >= 500
 		}
 		add_modifier = {
 			name = salt_waste_cure_ritual_3
@@ -1165,105 +1155,93 @@ salt_waste_narrative_events.14 = {
 			years = 1
 			popup = yes
 		}
-		# if = {
-		# 	limit = {
-		# 		has_law = law_type:law_dark_arts
-		# 	}
-		# 	trigger_event = {
-		# 		id = salt_waste_narrative_events.17
-		# 		months = 6
-		# 		popup = yes
-		# 	}
-		# }
+		if = {
+			limit = {
+				religion = {
+					has_discrimination_trait = fiend_domain
+				}
+			}
+			trigger_event = {
+				id = salt_waste_narrative_events.17
+				months = 6
+				popup = yes
+			}
+		}
 	}
 	
-	# option = {
-	# 	name = salt_waste_narrative_events.12.continued.ab
-	# 	default_option = yes
-	# 	trigger = {
-	# 		fully_owns_the_salt_wastes = yes
-	# 		has_law = law_type:law_divine_miracles
-	# 		magic_reserves_total >= 300
-	# 	}
-	# 	add_modifier = {
-	# 		name = salt_waste_cure_ritual_3_clerics
-	# 	}
-	# 	trigger_event = {
-	# 		id = salt_waste_narrative_events.15
-	# 		years = 1
-	# 		popup = yes
-	# 	}
-	# }
+	option = {
+		name = salt_waste_narrative_events.12.continued.ab
+		default_option = yes
+		trigger = {
+			fully_owns_the_salt_wastes = yes
+			religion = {
+				has_discrimination_trait = fey_domain
+			}
+			arcana >= 300
+		}
+		add_modifier = {
+			name = salt_waste_cure_ritual_3_druids
+		}
+		trigger_event = {
+			id = salt_waste_narrative_events.15
+			years = 1
+			popup = yes
+		}
+	}
 	
-	# option = {
-	# 	name = salt_waste_narrative_events.12.continued.ac
-	# 	default_option = yes
-	# 	trigger = {
-	# 		fully_owns_the_salt_wastes = yes
-	# 		has_law = law_type:law_druidic_circles
-	# 		magic_reserves_total >= 300
-	# 	}
-	# 	add_modifier = {
-	# 		name = salt_waste_cure_ritual_3_druids
-	# 	}
-	# 	trigger_event = {
-	# 		id = salt_waste_narrative_events.15
-	# 		years = 1
-	# 		popup = yes
-	# 	}
-	# }
-	
-	# option = {
-	# 	name = salt_waste_narrative_events.12.continued.ad
-	# 	default_option = yes
-	# 	trigger = {
-	# 		fully_owns_the_salt_wastes = yes
-	# 		has_law = law_type:law_mage_hunters
-	# 		magic_reserves_total >= 300
-	# 	}
-	# 	add_modifier = {
-	# 		name = salt_waste_cure_ritual_3_mage_hunters
-	# 	}
-	# 	trigger_event = {
-	# 		id = salt_waste_narrative_events.15
-	# 		years = 1
-	# 		popup = yes
-	# 	}
-	# }
+	option = {
+		name = salt_waste_narrative_events.12.continued.ac
+		default_option = yes
+		trigger = {
+			fully_owns_the_salt_wastes = yes
+			religion = {
+				has_discrimination_trait = dragon_domain
+			}
+			arcana >= 300
+		}
+		add_modifier = {
+			name = salt_waste_cure_ritual_3_mage_hunters
+		}
+		trigger_event = {
+			id = salt_waste_narrative_events.15
+			years = 1
+			popup = yes
+		}
+	}
 	
 	option = {
 		name = salt_waste_narrative_events.12.continued.b
 		trigger = {
-			magic_reserves_total >= 500
-			# OR = {
-			# 	magic_reserves_total >= 500
-			# 	AND = {
-			# 		magic_reserves_total >= 300
-			# 		OR = {
-			# 			has_law = law_type:law_divine_miracles
-			# 			has_law = law_type:law_druidic_circles
-			# 			has_law = law_type:law_mage_hunters
-			# 		}
-			# 	}
-			# }
+			OR = {
+				arcana >= 500
+				AND = {
+					arcana >= 300
+					religion = {
+						OR = {
+							has_discrimination_trait = fey_domain
+							has_discrimination_trait = dragon_domain
+						}
+					}
+				}
+			}
 		}
 	}
 	
 	option = {
 		name = salt_waste_narrative_events.12.continued.c
 		trigger = {
-			magic_reserves_total < 500
-			# OR = {
-			# 	magic_reserves_total < 300
-			# 	AND = {
-			# 		magic_reserves_total < 500
-			# 		AND = {
-			# 			NOT = { has_law = law_type:law_divine_miracles }
-			# 			NOT = { has_law = law_type:law_druidic_circles }
-			# 			NOT = { has_law = law_type:law_mage_hunters }
-			# 		}
-			# 	}
-			# }
+			OR = {
+				arcana < 300
+				AND = {
+					arcana < 500
+					religion = {
+						AND = {
+							NOT = { has_discrimination_trait = fey_domain }
+							NOT = { has_discrimination_trait = dragon_domain }
+						}
+					}
+				}
+			}
 		}
 		trigger_event = {
 			id = salt_waste_narrative_events.16
@@ -1294,7 +1272,6 @@ salt_waste_narrative_events.15 = {
 	trigger = {
 		OR = {
 			has_modifier = salt_waste_cure_ritual_3
-			has_modifier = salt_waste_cure_ritual_3_clerics
 			has_modifier = salt_waste_cure_ritual_3_druids
 			has_modifier = salt_waste_cure_ritual_3_mage_hunters
 		}
@@ -1302,7 +1279,6 @@ salt_waste_narrative_events.15 = {
 
 	immediate = {
 		remove_modifier = salt_waste_cure_ritual_3
-		remove_modifier = salt_waste_cure_ritual_3_clerics
 		remove_modifier = salt_waste_cure_ritual_3_druids
 		remove_modifier = salt_waste_cure_ritual_3_mage_hunters
 		set_variable = block_clicking_any_salt_waste_buttons
@@ -1314,52 +1290,46 @@ salt_waste_narrative_events.15 = {
 		trigger = {
 			fully_owns_the_salt_wastes = yes
 		}
-		# if = {
-		# 	limit = {
-		# 		has_law = law_type:law_mage_hunters
-		# 	}
-		# 	add_technology_researched = salt_waste_curse_suppressed
-		# }
-		# else_if = {
-		# 	limit = {
-		# 		has_variable = harness_the_salt_waste_curse
-		# 		has_law = law_type:law_dark_arts
-		# 	}
-		# 	add_modifier = {
-		# 		name = salt_waste_extra_evil
-		# 	}
-		# 	every_scope_state = {
-		# 		limit = {
-		# 			has_state_trait = state_trait_salt_wastes
-		# 			is_split_state = no
-		# 			owner = root
-		# 		}
-		# 		state_region = {
-		# 			remove_state_trait = state_trait_salt_wastes
-		# 			add_state_trait = state_trait_salt_wastes_extra_evil
-		# 		}
-		# 	}
-		# }
-		# else = {
-		# 	every_scope_state = {
-		# 		limit = {
-		# 			has_state_trait = state_trait_salt_wastes
-		# 			is_split_state = no
-		# 			owner = root
-		# 		}
-		# 		state_region = {
-		# 			remove_state_trait = state_trait_salt_wastes
-		# 		}
-		# 	}
-		# }
-		every_scope_state = {
+		if = {
 			limit = {
-				has_state_trait = state_trait_salt_wastes
-				is_split_state = no
-				owner = root
+				religion = {
+					has_discrimination_trait = dragon_domain
+				}
 			}
-			state_region = {
-				remove_state_trait = state_trait_salt_wastes
+			add_technology_researched = salt_waste_curse_suppressed
+		}
+		else_if = {
+			limit = {
+				has_variable = harness_the_salt_waste_curse
+			}
+			add_modifier = {
+				name = salt_waste_extra_evil
+			}
+			custom_tooltip = {
+				text = make_salt_waste_curse_worse
+				every_scope_state = {
+					limit = {
+						has_state_trait = state_trait_salt_wastes
+						is_split_state = no
+						owner = root
+					}
+					state_region = {
+						remove_state_trait = state_trait_salt_wastes
+						add_state_trait = state_trait_salt_wastes_extra_evil
+					}
+				}
+			}
+		}
+		else = {
+			every_scope_state = {
+				limit = {
+					has_state_trait = state_trait_salt_wastes
+					is_split_state = no
+					owner = root
+				}
+				state_region = {
+					remove_state_trait = state_trait_salt_wastes
+				}
 			}
 		}
 		if = {
@@ -1415,11 +1385,9 @@ salt_waste_narrative_events.16 = {
 	immediate = {
 		remove_modifier = salt_waste_cure_ritual_1
 		remove_modifier = salt_waste_cure_ritual_2
-		remove_modifier = salt_waste_cure_ritual_2_clerics
 		remove_modifier = salt_waste_cure_ritual_2_druids
 		remove_modifier = salt_waste_cure_ritual_2_mage_hunters
 		remove_modifier = salt_waste_cure_ritual_3
-		remove_modifier = salt_waste_cure_ritual_3_clerics
 		remove_modifier = salt_waste_cure_ritual_3_druids
 		remove_modifier = salt_waste_cure_ritual_3_mage_hunters
 
@@ -1479,35 +1447,37 @@ salt_waste_narrative_events.16 = {
 	}
 }
 
-# salt_waste_narrative_events.17 = {
-# 	dlc = dlc_roe
-# 	type = country_event
-# 
-# 	title = salt_waste_narrative_events.17.t
-# 	desc = salt_waste_narrative_events.17.d
-# 	flavor = salt_waste_narrative_events.17.f
-# 
-# 	event_image = {
-# 		texture = "gfx/event_images/fiends_landscape.dds"
-# 	}
-# 	
-# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-# 
-# 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
-# 
-# 	duration = 3
-# 
-# 	trigger = {
-# 		has_law = law_type:law_dark_arts
-# 	}
-# 
-# 	option = {
-# 		name = salt_waste_narrative_events.17.a
-# 		default_option = yes
-# 		set_variable = harness_the_salt_waste_curse
-# 	}
-# 
-# 	option = {
-# 		name = salt_waste_narrative_events.17.b
-# 	}
-# }
+salt_waste_narrative_events.17 = {
+	dlc = dlc_roe
+	type = country_event
+
+	title = salt_waste_narrative_events.17.t
+	desc = salt_waste_narrative_events.17.d
+	flavor = salt_waste_narrative_events.17.f
+
+	event_image = {
+		texture = "gfx/event_images/fiends_landscape.dds"
+	}
+	
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	trigger = {
+		religion = {
+			has_discrimination_trait = fiend_domain
+		}
+	}
+
+	option = {
+		name = salt_waste_narrative_events.17.a
+		default_option = yes
+		set_variable = harness_the_salt_waste_curse
+	}
+
+	option = {
+		name = salt_waste_narrative_events.17.b
+	}
+}

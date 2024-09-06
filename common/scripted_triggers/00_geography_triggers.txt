@@ -1,4 +1,4 @@
-### State geography triggers
+﻿### State geography triggers
 
 state_is_in_settler_coast = {
 	OR = {
@@ -68,6 +68,12 @@ state_is_in_teferet = {
 	}
 }
 
+state_is_in_dragon_isles = {
+	OR = {
+		region = sr:region_west_dragon_isles
+		region = sr:region_amethyst_archipelago
+	}
+}
 state_is_in_west_locari = {
 	OR = {
 		region = sr:region_new_dumonia
@@ -606,7 +612,6 @@ exether_is_inland = {
 		state_region = s:STATE_EAST_PLAGUEWINDS
 		state_region = s:STATE_EAST_STARSHIMMER_SKIES
 		state_region = s:STATE_EAST_YANGERSKIES
-		state_region = s:STATE_EBRUS
 		state_region = s:STATE_EIREKS_LANDING
 		state_region = s:STATE_EISENMORA
 		state_region = s:STATE_ELBASHTIA
@@ -786,12 +791,11 @@ exether_is_inland = {
 		state_region = s:STATE_KYRZUR_SKIES
 		state_region = s:STATE_KÁLMBIQÚIS
 		state_region = s:STATE_LAERANELS_DESOLATION
-		state_region = s:STATE_LAKESKIES_1
-		state_region = s:STATE_LAKESKIES_2
+		state_region = s:STATE_NORTH_BOSSARDI_SKIES
+		state_region = s:STATE_SOUTH_BOSSARDI_SKIES
 		state_region = s:STATE_LANDING_AT_SEA_2
 		state_region = s:STATE_LEMBONA
 		state_region = s:STATE_LEPIDRA
-		state_region = s:STATE_LEPTISCA
 		state_region = s:STATE_LEVIATHAN_DEEP
 		state_region = s:STATE_LHASHI
 		state_region = s:STATE_LIGHTSCOURGE
@@ -1048,7 +1052,7 @@ exether_is_inland = {
 		state_region = s:STATE_SUKHIBHAVA
 		state_region = s:STATE_SUKONCO_2
 		state_region = s:STATE_SUKONCO_3
-		state_region = s:STATE_SUKONSKIES
+		state_region = s:STATE_JUNGELHEIGHTS
 		state_region = s:STATE_SULLENSKIES
 		state_region = s:STATE_SULVERSTREAM
 		state_region = s:STATE_SUNDALE
@@ -1066,7 +1070,6 @@ exether_is_inland = {
 		state_region = s:STATE_TAYTAQOCHA_SKIES
 		state_region = s:STATE_THAGHIZHI
 		state_region = s:STATE_THAGHIZHI_HEIGHTS
-		state_region = s:STATE_THASPYR
 		state_region = s:STATE_THASSARCIAN_SHORES
 		state_region = s:STATE_THE_AMBER_RUN
 		state_region = s:STATE_THE_AMBER_RUN_2
@@ -1104,7 +1107,7 @@ exether_is_inland = {
 		state_region = s:STATE_UNNAMED_SEA_3
 		state_region = s:STATE_UNNAMED_SEA_4
 		state_region = s:STATE_UNNAMED_SEA_5
-		state_region = s:STATE_UNNAMED_SEA_6
+		state_region = s:STATE_EAST_CITRUS_CURRENTS
 		state_region = s:STATE_UNNAMED_SEA_7
 		state_region = s:STATE_UNNAMED_SEA_8
 		state_region = s:STATE_UNNAMED_SHEIFU_SEA_1
@@ -1195,4 +1198,23 @@ check_is_coastal = {
 		}
 		is_coastal = yes
 	}
+}
+
+mainland_dragon_isles_state = {
+	OR = {
+		state_region = s:STATE_KLYPYRA
+		state_region = s:STATE_ZAMARIS
+		state_region = s:STATE_ZARTHOS
+		state_region = s:STATE_CALTHA
+		state_region = s:STATE_SIGARA
+		state_region = s:STATE_LEPTISCA
+		state_region = s:STATE_OYRSA
+		state_region = s:STATE_LEPIDRA
+		state_region = s:STATE_THASPYR
+		state_region = s:STATE_LILYBAEUM
+		state_region = s:STATE_ZYRAS
+		state_region = s:STATE_MOTHYA
+		state_region = s:STATE_LEPTHAR
+	}
+
 }

@@ -58,15 +58,6 @@
 			is_pop_type = capitalists
 			is_pop_type = engineers
 			is_pop_type = shopkeepers
-			AND = {
-				OR = {
-					is_pop_type = wizards
-					is_pop_type = artificers
-				}
-				owner = {
-					has_law = law_type:law_artificer_guilds
-				}
-			}
 		}
 	}
 
@@ -103,22 +94,6 @@
 				}
 				value = 50
 				add = this.standard_of_living
-			}
-		}
-
-		add = {
-			desc = "PHOENIX_LAW"
-			if = {
-				limit = {
-					OR = {
-					is_pop_type = wizards
-					is_pop_type = artificers
-					}
-					owner = {
-						has_law = law_type:law_artificer_guilds
-					}
-				}
-				value = 25
 			}
 		}
 

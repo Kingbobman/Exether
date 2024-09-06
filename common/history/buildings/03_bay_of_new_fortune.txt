@@ -126,7 +126,7 @@
 					add_ownership={ 
 						building={ 
 							type="building_manor_house"
-							country="c:PRO"
+							country="c:SKR"
 							levels=4
 							region="STATE_SAWAMAJI"
 					   }
@@ -322,72 +322,7 @@
 			}
 		}
 	}
-	s:STATE_BYS_CEIRDH = {
-		region_state:XOC={
-			create_building={
-				building="building_tobacco_plantation"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:XOC"
-						levels=2
-						region="STATE_BYS_CEIRDH"
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }
-			}
-            create_building={
-				building="building_fishing_wharf"
-                add_ownership={ 
-                    building={ 
-                        type="building_adventuring_guild"
-                        country="c:XOC"
-                        levels=1
-                        region="STATE_BYS_CEIRDH"
-                   }
-                }
-				reserves=1
-				activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
-			}
-		}
-	}
-	s:STATE_BYS_LOWAE = {
-		region_state:XOC={
-			create_building={
-				building="building_coffee_plantation"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:XOC"
-						levels=3
-						region="STATE_BYS_CEIRDH"
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "default_building_coffee_plantation" "pm_road_carts"  }
-			}
-            create_building={
-				building="building_logging_camp"
-                add_ownership={ 
-                    building={ 
-                        type="building_financial_district"
-                        country="c:XOC"
-                        levels=1
-                        region="STATE_BYS_CEIRDH"
-                   }
-                }
-				reserves=1
-				activate_production_methods={ "pm_simple_forestry" "pm_no_equipment" "pm_road_carts" "pm_hardwood" }
-			}
-			create_building={
-				building="building_port"
-				level=1
-				reserves=1
-				activate_production_methods={ "pm_anchorage" }
-			}
-		}
-	}
+	
 	s:STATE_JITOMREMBO = {
 
 	}
@@ -533,19 +468,6 @@
 				activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled"  }
 			}
 			create_building={
-				building="building_vineyard_plantation"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:TIT"
-						levels=1
-						region="STATE_WAYLLAPAMPA"
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "default_building_vineyard_plantation" "pm_road_carts"  }
-			}
-			create_building={
 				building="building_livestock_ranch"
 				add_ownership={ 
 					building={ 
@@ -618,7 +540,7 @@
 				building="building_airship_dock"
 				level=2
 				reserves=1
-				activate_production_methods={ "pm_anchorage" }
+				activate_production_methods={ "pm_anchorage_airship" }
 			  }
 			create_building={
 				building="building_government_administration"
@@ -688,7 +610,7 @@
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_simple_potion_production" "pm_alcohol-based_potions" "pm_base_cosmetic_potion_production" }
+				activate_production_methods={ "pm_simple_potion_production" "pm_alcohol-based_potions" "pm_no_mixins" "pm_basic_filters"}
 			}
 			create_building={
 				building="building_lead_mine"
@@ -777,7 +699,7 @@
 				building="building_airship_dock"
 				level=2
 				reserves=1
-				activate_production_methods={ "pm_anchorage" }
+				activate_production_methods={ "pm_anchorage_airship" }
 			  }
 			create_building={
 				building="building_arms_industry"
@@ -837,7 +759,7 @@
 						building={
 							type="building_wizard_tower"
 							country="c:GPK"
-							levels=1
+							levels=3
 							region="STATE_WAMANPATA"
 					}
 				}
@@ -1011,7 +933,7 @@
 				building="building_wishstone_mine"
 				level=1
 				reserves=1
-				activate_production_methods={ "pm_picks_and_shovels_building_wishstone_mine" }
+				activate_production_methods={ "pm_detect_wishstone" "pm_no_mirrors" "pm_road_carts"}
 			}
 			create_building={
 				building="building_cotton_plantation"
@@ -1578,7 +1500,7 @@
 						building={ 
 							type="building_manor_house"
 							country="c:BLD"
-							levels=2
+							levels=1
 							region="STATE_FIERCEHOLD"
 					}
 					}

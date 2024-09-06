@@ -7,7 +7,7 @@
     farm = xF5819F
     mine = xF3B9DC
     wood = xF0C865
-    arable_land = 33
+    arable_land = 104
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" }
     capped_resources = {
         bg_fishing = 6
@@ -24,7 +24,7 @@ STATE_URRATEGI = {
     farm = xE1DFC6
     mine = xE1C8B3
     wood = xE0D9C8
-    arable_land = 10
+    arable_land = 56
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_logging = 5
@@ -48,6 +48,7 @@ STATE_HIRUMENDI = {
         bg_coal_mining = 32
         bg_fishing = 7
         bg_leviathan_outpost = 2
+        bg_opium_plantations = 25
     }
     resource = {
         type = "bg_wishstone_reefs"
@@ -77,6 +78,10 @@ STATE_KHANZULO = {
         type = "bg_wishstone_reefs"
         undiscovered_amount = 6
     }
+    resource = {
+        type = "bg_ship_graveyard"
+        undiscovered_amount = 5
+    }
     naval_exit_id = 3027
 }
 STATE_OLARRA = {
@@ -93,6 +98,7 @@ STATE_OLARRA = {
     capped_resources = {
         bg_fishing = 2
         bg_squidding = 3
+        bg_opium_plantations = 15
     }
     naval_exit_id = 3027
 }
@@ -111,6 +117,7 @@ STATE_IHARKHAN = {
         bg_fishing = 3
         bg_iron_mining = 24
         bg_lead_mining = 24
+        bg_opium_plantations = 18
     }
     naval_exit_id = 3059
 }
@@ -127,6 +134,7 @@ STATE_ARATZIRI = {
     arable_resources = { "bg_livestock_ranches" "bg_vineyard_plantations" }
     capped_resources = {
         bg_fishing = 3
+        bg_opium_plantations = 16
     }
     naval_exit_id = 3059
 }
@@ -162,6 +170,7 @@ STATE_BATOHAIN = {
     arable_resources = { "bg_livestock_ranches" }
     capped_resources = {
         bg_fishing = 4
+        bg_opium_plantations = 20
     }
     resource = {
         type = "bg_oil_extraction"
@@ -182,6 +191,7 @@ STATE_KHANBA = {
     arable_resources = { "bg_livestock_ranches" "bg_tobacco_plantations" }
     capped_resources = {
         bg_seasnake_wharf = 6
+        bg_opium_plantations = 18
     }
     resource = {
         type = "bg_oil_extraction"
@@ -204,6 +214,7 @@ STATE_MENDARI = {
         bg_sulfur_mining = 28
         bg_fishing = 5
         bg_squidding = 5
+        bg_opium_plantations = 17
     }
     naval_exit_id = 3093
 }
@@ -507,6 +518,10 @@ STATE_MUGARA = {
         type = "bg_wishstone_reefs"
         undiscovered_amount = 6
     }
+    resource = {
+        type = "bg_ship_graveyard"
+        undiscovered_amount = 4
+    }
     naval_exit_id = 3059
 }
 STATE_ARAKALDE = {
@@ -557,7 +572,7 @@ STATE_OLABEGI = {
     mine = xE2C3D7
     wood = xDEDD4C
     arable_land = 32
-    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" "bg_dye_plantations" "bg_vineyard_plantations" "bg_sugar_plantations" "bg_silk_plantations" "bg_vineyard_plantations" }
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" "bg_dye_plantations" "bg_vineyard_plantations" "bg_sugar_plantations" "bg_silk_plantations" }
     capped_resources = {
         bg_sulfur_mining = 22
         bg_fishing_glowfish = 4
@@ -1063,7 +1078,7 @@ STATE_ARITZA = {
     arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" "bg_vineyard_plantations" }
     capped_resources = {
         bg_logging = 40
-        bg_sulfur_mining = 4
+        bg_sulfur_mining = 24
     }
     resource = {
         type = "bg_rubber"
@@ -1283,6 +1298,11 @@ STATE_TXORI = {
         bg_logging = 6
         bg_fishing = 8
     }
+    resource = {
+        type = "bg_collapsed_godsbane_vault"
+        depleted_type = "bg_renovated_godsbane_vault"
+        undiscovered_amount = 4
+    }
     naval_exit_id = 3096
 }
 STATE_ERDI = {
@@ -1302,6 +1322,11 @@ STATE_ERDI = {
         bg_logging = 2
         bg_fishing = 12
         bg_leviathan_outpost = 4
+    }
+    resource = {
+        type = "bg_collapsed_godsbane_vault"
+        depleted_type = "bg_renovated_godsbane_vault"
+        undiscovered_amount = 6
     }
     naval_exit_id = 3093
 }
@@ -1362,6 +1387,11 @@ STATE_BAZKA = {
         bg_cloudsilver_mining = 37
         bg_hunting = 12
         bg_monuments = 1
+    }
+    resource = {
+        type = "bg_collapsed_godsbane_vault"
+        depleted_type = "bg_renovated_godsbane_vault"
+        discovered_amount = 6
     }
     naval_exit_id = 3064
 }

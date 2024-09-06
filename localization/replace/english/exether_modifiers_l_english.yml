@@ -1,10 +1,25 @@
-﻿l_english:
+l_english:
   ig_variant_mages: "[GetInterestGroupVariant('ig_mages',GetPlayer).GetNameWithCountryVariant]"
   interest_group_ig_mages_pol_str_mult: "$ig_variant_mages$ [concept_political_strength]"
   interest_group_ig_mages_pol_str_mult_desc: "A bonus or penalty to the total [concept_political_strength] of the $ig_variant_mages$ [concept_interest_group]"
 
   country_adventurers_pol_str_mult: "[concept_political_strength] of $adventurers$"
   country_adventurers_pol_str_mult_desc: "An increase or descrease in the [concept_political_strength] of $adventurers$"
+
+  country_renown_pos_add: "@renown! [concept_renown]"
+  country_renown_pos_add_desc:  "An increase or decrease in @renown! [concept_renown]"
+
+  country_renown_neg_add: "@renown! [concept_renown]"
+  country_renown_neg_add_desc:  "An increase or decrease in @renown! [concept_renown]"
+
+  country_renown_upkeep: "@renown! [concept_renown]"
+  country_renown_subtract_desc:  "An increase or decrease in @renown! [concept_renown]"
+
+  country_renown_gen_mult: "@renown! [concept_renown]"
+  country_renown_gen_mult_desc:  "An increase or decrease in @renown! [concept_renown]"
+
+  country_renown_cost_mult: "@renown! [concept_renown]"
+  country_renown_cost_mult_desc:  "An increase or decrease in @renown! [concept_renown]"
 
   country_arcana_pos_add: "@magic! [concept_magic_reserves]"
   country_arcana_pos_add_desc:  "An increase or decrease in @magic! [concept_magic_reserves]"
@@ -20,6 +35,7 @@
 
   country_arcana_cost_mult: "@magic! [concept_magic_reserves]"
   country_arcana_cost_mult_desc:  "An increase or decrease in @magic! [concept_magic_reserves]"
+
 
   state_veil_integrity_contribution: "@veilneg! [Concept('concept_veil_integrity', 'Veil')] Disruption"
   state_veil_integrity_contribution_desc: "A decrease in @veilneg! [concept_veil_integrity]"
@@ -42,6 +58,11 @@
   state_archmages_standard_of_living_add: "[concept_sol] for $archmages$."
   state_archmages_standard_of_living_add_desc: "Extra [concept_sol] added on top of wealth"
 
+  state_artificers_standard_of_living_add: "[concept_sol] for $artificers$."
+  state_artificers_standard_of_living_add_desc: "Extra [concept_sol] added on top of wealth"
+ country_artificers_pol_str_mult: "[concept_political_strength] of $artificers$"
+ country_artificers_pol_str_mult_desc: "An increase or decrease in the [concept_political_strength] of $artificers$"
+
   goods_output_trinkets_mult: "Building @trinkets! Trinkets output"
   goods_output_trinkets_mult_desc: "A bonus or penalty to the amount of @trinkets! Trinkets produced by buildings"
 
@@ -50,6 +71,9 @@
 #Building Goods Modifiers
 
 #Hi, Grappes here! If there's some modifiers that you believe are out of place here, I just threw the missing goods mults here while I was here. After all, they're next to the input/output block I reorganized for legibility. Feel free to relocate them!
+
+  building_group_bg_magic_manufacturing_throughput_add: "Magic Industries [concept_throughput]"
+  building_group_bg_magic_manufacturing_throughput_add_desc: "A bonus or penalty to both input and output of Magic Industries"
 
   building_gizmo_workshop_throughput_add: "Gizmo Workshop building [concept_throughput]"
   building_gizmo_workshop_throughput_add_desc: "A bonus or penalty to the [concept_throughput] of Gizmo Workshops"
@@ -81,7 +105,7 @@
   goods_output_blubber_mult_desc: "A bonus of penalty to the amount of @blubber! Blubber is produced by buildings"
 
 	goods_output_monster_essence_mult: "Building @monster_essence! Monster_Essence Output"
-  goods_output_monster_essence_mult_desc: "A bonus of pentalty to the amount of @monster essence! Monster Essence is produced by buildings"
+  goods_output_monster_essence_mult_desc: "A bonus or penalty to the amount of @monster_essence! Monster Essence is produced by buildings"
   
   goods_input_furniture_add: "@furniture! Furniture input"
   goods_input_furniture_add_desc: "The amount of @furniture! Furniture consumed by buildings"
@@ -96,8 +120,14 @@
   goods_output_blubber_add: "@blubber! Blubber output"
   goods_output_blubber_add_desc: "The amount of @blubber! Blubber produced by buildings"
 
-  goods_input_entertainment_add: "@entertainment! Entertainment input"
-  goods_input_entertainment_add_desc: "The amount of @entertainment! Entertainment consumed by buildings"
+  state_soulwrought_assembled_add: "[GetCulture('soulwrought').GetName] produced per month"
+  state_soulwrought_assembled_add_desc: "The amount of [GetCulture('soulwrought').GetName] produced by buildings, released in batches of 10K"
+  state_soulwrought_assembled_mult: "Building [GetCulture('soulwrought').GetName] Output"
+  state_soulwrought_assembled_mult_desc: "A bonus or penalty to the amount of [GetCulture('soulwrought').GetName] produced by buildings"
+  state_diggy_diggy_dwarf_add: "[GetCulture('arcthar').GetName] unpetrified per month"
+  state_diggy_diggy_dwarf_add_desc: "The amount of [GetCulture('arcthar').GetName] unpetrified by buildings, released in batches of 5K"
+  state_diggy_diggy_dwarf_mult: "Building [GetCulture('arcthar').GetName] output"
+  state_diggy_diggy_dwarf_mult_desc: "A bonus or penalty to the amount of [GetCulture('arcthar').GetName] unpetrified by buildings"
 
   goods_input_thaumacores_add: "@thaumacores! Thaumacores input"
   goods_input_thaumacores_add_desc: "The amount of @thaumacores! Thaumacores consumed by buildings"
@@ -133,19 +163,22 @@
   goods_output_wishstone_mult: "Building @wishstone! Wishstone output"
   goods_output_wishstone_mult_desc: "A bonus or penalty to the amount of @wishstone! output produced by buildings"
 
-  goods_output_entertainment_add: "@entertainment! Entertainment output"
-  goods_output_entertainment_add_desc: "The amount of @entertainment! Entertainment produced by buildings"
-
   goods_output_potions_add: "@potions! Potions output"
   goods_output_potions_add_desc: "The amount of @potions! Potions produced by buildings"
   goods_input_potions_add: "@potions! Potions input"
   goods_input_potions_add_desc: "The amount of @potions! Potions consumed by buildings"
+
+  goods_output_soulwrought_intangible_add: "@soulwrought_intangible! Dorman Soulwrought output"
+  goods_output_soulwrought_intangible_add_desc: "The amount of @soulwrought_intangible! Dormant Soulwrought produced by buildings"
 
   goods_output_luxury_potions_add: "@luxury_potions! Luxury Potions output"
   goods_output_luxury_potions_add_desc: "The amount of @luxury_potions! Luxury Potions produced by buildings"
 
   goods_output_airships_add: "@clippers! Airships output" #change this to airships when new art
   goods_output_airships_add_desc: "The amount of @clippers! Airships produced by buildings"
+
+  goods_output_nimbium_add: "@nimbium! Nimbium output"
+  goods_output_nimbium_add_desc: "The amount of @nimbium! Nimbium produced by buildings"
 
   goods_output_coal_mult: "Building @coal! Coal output"
   goods_output_coal_mult_desc: "A bonus or penalty to the amount of @coal! output produced by buildings"
@@ -210,6 +243,12 @@
   building_group_bg_wishstone_mining_throughput_add: "$building_wishstone_mine$ [concept_throughput]"
   building_group_bg_wishstone_mining_throughput_add_desc: "A bonus or penalty to the input and output of $building_wishstone_mine$"
 
+  building_group_bg_hunting_throughput_add: "$building_hunting_lodge$ [concept_throughput]"
+  building_group_bg_hunting_throughput_add_desc: "A bonus or penalty to the input and output of $building_hunting_lodge$"
+
+ building_haunted_grounds_throughput_add: "$building_haunted_grounds$ [concept_throughput]"
+ building_haunted_grounds_throughput_add_desc: "A bonus or penalty to the input and output of $building_haunted_grounds$"
+
   building_group_bg_public_infrastructure_throughput_add: "$bg_public_infrastructure$ [concept_throughput]"
   building_group_bg_public_infrastructure_throughput_add_desc: "A bonus or penalty to both input and output of $bg_public_infrastructure$"
 
@@ -246,6 +285,33 @@
   brackenshire_investors_guild: "Brackenshire Investor's Guild"
   bad_investments: "Bad Investments"
   good_roi: "Good Returns"
+  modifier_active_dragonblight_outbreak: "Active Dragonblight Outbreak"
+  dragonblight_port_controls: "Dragonblight Port Controls"
+  dragonblight_forced_charity: "Forced Charity"
+  defended_birthday_party: "Defended Birthday Party"
+  reprimanded_birthday_party: "Reprimanded Birthday Party"
+  arrested_for_birthday_party: "Arrested for Birthday Party"
+  wealthy_abusing_disease_restrictions: "Wealthy Abusing Disease Restrictions"
+  sailing_in_fear: "Sailing in Fear"
+  blighted_yet_triumphant: "Blighted, yet Triumphant"
+  handling_naval_logistics: "Handling Naval Logistics"
+  forced_back_to_work: "Forced Back to Work"
+  dragonborn_staying_home: "Dragonborn Staying Home"
+  rebuilding_hospital_network: "Rebuilding Hospital Network"
+  managing_hospital_reconstruction: "Managing Hospital Reconstruction"
+  yes_in_your_backyard: "Yes, in Your Backyard"
+  gave_into_sickhouse_protests: "Gave Into Sickhouse Protests"
+  tolerated_conversion_cult_state: "Tolerated Conversion Cults"
+  crushed_conversion_cult: "Crushed Conversion Cult"
+  active_conversion_cult: "Active Conversion Cult"
+  scorned_sick_friend: "Scorned Sick Friend"
+  sent_warm_regards: "Sent Warm Regards"
+  victims_of_dragonblight: "Victims of Dragonblight"
+  tolerated_kobold_pogroms: "Tolerated Kobold Pogroms"
+  stopped_kobold_pogroms: "Stopped Kobold Pogroms"  
+  dragon_sickhouses: "Dragon Sickhouses"
+  industrialists_sickhouses_ignored: "Industrialist Charity Ignored"
+  charity_for_the_sick: "Charity for the Sick"
 
  #building throughput modifiers
   building_wishstone_mine_throughput_add: "$building_wishstone_mine$ [concept_throughput]"
@@ -270,3 +336,17 @@
   unit_combat_unit_type_lancers_defense_mult_desc: "$combat_unit_type_lancers$ $unit_defense_mult$"
 
   raid_cooldown: "Recent Raiding"
+
+  lighthouse_survey: "Surveying Lonely Islands"
+  lighthouse_built: "Lighting the Way"
+  modifier_lighthouse_site: "Possible Lighthouse Site"
+  zulth_modifier: "Upstart Warlord"
+  union_of_the_sands_junior_partner: "Ruled by Consort"
+  toldek_paseb: "The Toldek Paseb"
+  abolished_toldek_paseb: "Abolished Toldek Paseb"
+  upshana_restored: "Upshana Dhaalum Restored"
+  upashna_dhaalum: "The Upashna Dhaalum"
+  jihduk_paseb: "The Jihduk Paseb"
+  abolished_jihduk_paseb: "Abolished Jihduk Paseb"
+  accepting_soulwrought_homelands: "Accepting Soulwrought Homelands"
+  rejecting_soulwrought_homelands: "Rejecting Soulwrought Homelands"
