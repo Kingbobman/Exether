@@ -86,9 +86,8 @@ dragonblight.2 = { #opening event about closing the borders to people leaving to
 	option = { #they must be stopped
 		name = dragonblight.2.a 
 		ai_chance = {
-			base = 80
+			base = 50
 		}
-        default_option = yes
 		activate_law = law_type:law_closed_borders
 		c:SNB ?= {
 			
@@ -105,8 +104,9 @@ dragonblight.2 = { #opening event about closing the borders to people leaving to
 	}
 	option = { #perhaps it is for the best...
 		name = dragonblight.2.b
+		default_option = yes
 		ai_chance = {
-			base = 20
+			base = 50
 		}
 		c:SNB ?= {
 			trigger_event = { id = dragonblight.3 popup = yes }
@@ -145,6 +145,9 @@ dragonblight.3 = { #event for Thassarcia receiving dragonblight migrants
 	}
 
 	immediate = {
+		c:LPS ?= {
+			save_scope_as = lizard_scope
+		}
 		random_scope_state = {
 			limit = {
 				exether_is_coastal = yes
@@ -216,16 +219,20 @@ dragonblight.5 = { #kobold states receive this event the first time the Dragon I
 
 	immediate = {
 		set_variable = kobold_land_secession_lobby
+		c:DIS?= {
+			save_scope_as = dragon_scope
+		}
 	}
 
 	option = { #gee thanks guys
 		name = dragonblight.5.a
+		default_option = yes
 		ai_chance = {
-			base = 75
+			base = 85
 		}
 		create_diplomatic_catalyst = {  
 			type = catalyst_event_positive
-			target = DIS
+			target = c:DIS
 		}
 		change_relations = {
 			country = c:DIS
@@ -236,11 +243,11 @@ dragonblight.5 = { #kobold states receive this event the first time the Dragon I
 	option = { #inshallah we shall take it all
 		name = dragonblight.5.b
 		ai_chance = {
-			base = 25
+			base = 15
 		}
 		create_diplomatic_catalyst = {  
 			type = catalyst_event_negative
-			target = DIS
+			target = c:DIS
 		}
 		change_relations = {
 			country = c:DIS
@@ -363,6 +370,13 @@ immediate = {
 					}
 					owner = {
 						save_scope_as = klypyra_secession_scope
+						if = {
+							limit = {
+								has_modifier = modifier_active_dragonblight_outbreak
+							}
+							remove_modifier = modifier_active_dragonblight_outbreak
+							
+						}
 					}
 				}
 				scope:outbreak_state = {
@@ -439,6 +453,13 @@ immediate = {
 					}
 					owner = {
 						save_scope_as = zamaris_secession_scope
+						if = {
+							limit = {
+								has_modifier = modifier_active_dragonblight_outbreak
+							}
+							remove_modifier = modifier_active_dragonblight_outbreak
+							
+						}
 					}
 				}
 				scope:outbreak_state = {
@@ -515,6 +536,13 @@ immediate = {
 					}
 					owner = {
 						save_scope_as = lepidra_secession_scope
+						if = {
+							limit = {
+								has_modifier = modifier_active_dragonblight_outbreak
+							}
+							remove_modifier = modifier_active_dragonblight_outbreak
+							
+						}
 					}
 				}
 				scope:outbreak_state = {
@@ -591,6 +619,13 @@ immediate = {
 					}
 					owner = {
 						save_scope_as = zarthos_secession_scope
+						if = {
+							limit = {
+								has_modifier = modifier_active_dragonblight_outbreak
+							}
+							remove_modifier = modifier_active_dragonblight_outbreak
+							
+						}
 					}
 				}
 				scope:outbreak_state = {
@@ -667,6 +702,13 @@ immediate = {
 					}
 					owner = {
 						save_scope_as = caltha_secession_scope
+						if = {
+							limit = {
+								has_modifier = modifier_active_dragonblight_outbreak
+							}
+							remove_modifier = modifier_active_dragonblight_outbreak
+							
+						}
 					}
 				}
 				scope:outbreak_state = {
@@ -743,6 +785,13 @@ immediate = {
 					}
 					owner = {
 						save_scope_as = sigara_secession_scope
+						if = {
+							limit = {
+								has_modifier = modifier_active_dragonblight_outbreak
+							}
+							remove_modifier = modifier_active_dragonblight_outbreak
+							
+						}
 					}
 				}
 				scope:outbreak_state = {
@@ -819,6 +868,13 @@ immediate = {
 					}
 					owner = {
 						save_scope_as = mothya_secession_scope
+						if = {
+							limit = {
+								has_modifier = modifier_active_dragonblight_outbreak
+							}
+							remove_modifier = modifier_active_dragonblight_outbreak
+							
+						}
 					}
 				}
 				scope:outbreak_state = {
@@ -895,6 +951,13 @@ immediate = {
 					}
 					owner = {
 						save_scope_as = lilybaeum_secession_scope
+						if = {
+							limit = {
+								has_modifier = modifier_active_dragonblight_outbreak
+							}
+							remove_modifier = modifier_active_dragonblight_outbreak
+							
+						}
 					}
 				}
 				scope:outbreak_state = {
@@ -971,6 +1034,13 @@ immediate = {
 					}
 					owner = {
 						save_scope_as = orysa_secession_scope
+						if = {
+							limit = {
+								has_modifier = modifier_active_dragonblight_outbreak
+							}
+							remove_modifier = modifier_active_dragonblight_outbreak
+							
+						}
 					}
 				}
 				scope:outbreak_state = {
@@ -1047,6 +1117,13 @@ immediate = {
 					}
 					owner = {
 						save_scope_as = lepthar_secession_scope
+						if = {
+							limit = {
+								has_modifier = modifier_active_dragonblight_outbreak
+							}
+							remove_modifier = modifier_active_dragonblight_outbreak
+							
+						}
 					}
 				}
 				scope:outbreak_state = {
@@ -1123,6 +1200,13 @@ immediate = {
 					}
 					owner = {
 						save_scope_as = leptisca_secession_scope
+						if = {
+							limit = {
+								has_modifier = modifier_active_dragonblight_outbreak
+							}
+							remove_modifier = modifier_active_dragonblight_outbreak
+							
+						}
 					}
 				}
 				scope:outbreak_state = {
@@ -1199,6 +1283,13 @@ immediate = {
 					}
 					owner = {
 						save_scope_as = thaspyr_secession_scope
+						if = {
+							limit = {
+								has_modifier = modifier_active_dragonblight_outbreak
+							}
+							remove_modifier = modifier_active_dragonblight_outbreak
+							
+						}
 					}
 				}
 				scope:outbreak_state = {
@@ -1275,6 +1366,13 @@ immediate = {
 					}
 					owner = {
 						save_scope_as = zyras_secession_scope
+						if = {
+							limit = {
+								has_modifier = modifier_active_dragonblight_outbreak
+							}
+							remove_modifier = modifier_active_dragonblight_outbreak
+							
+						}
 					}
 				}
 				scope:outbreak_state = {
@@ -1322,36 +1420,6 @@ immediate = {
 
 
 
-
-
-# dragonblight.pulse.x = { #outbreaks states receive this event + the other one for 5% total
-# 	type = country_event
-# 	placement = ROOT
-
-# 	hidden = yes
-# 	trigger = {
-# 		any_scope_state = {
-# 			has_modifier = modifier_active_dragonblight_outbreak
-# 		}
-# 	}
-
-# 	immediate = {
-# 		every_scope_state = {
-# 			limit = {
-# 				has_modifier = modifier_active_dragonblight_outbreak
-# 			}
-# 			every_scope_pop = {
-# 				limit = {
-# 					culture = cu:illvasaari
-# 				}
-# 				change_pop_culture = {
-# 					target = cu:kotskarvi
-# 					value = 0.035
-# 				}
-# 			}
-# 		}	
-# 	}
-# }
 
 #dragonblight 3  event about a local writer declaring that the dragonblight is representative of a moral failing, and that no "true dragonborn" could fall victim to it
 
@@ -1480,6 +1548,33 @@ immediate = {
 				}	
 
 				immediate = {
+					random_trade_route = {
+						limit = {
+							OR = {
+								AND = {	
+									importer.owner = root
+									exporter.owner = {
+										country_has_primary_culture = cu:kotskarvi
+									}
+									NOT = {actor_market.owner = root}
+									actor_market.owner = {
+										save_scope_as = disease_exporter
+									}
+								}
+								AND = {	
+									importer.owner = {
+										country_has_primary_culture = cu:kotskarvi
+									}
+									NOT = {actor_market.owner = root}
+									exporter.owner = root
+									actor_market.owner = {
+										save_scope_as = disease_exporter
+									}
+								}
+							}
+						}
+
+					}	
 					random_scope_state = {
 						limit = {
 							NOT = {
@@ -1688,8 +1783,13 @@ immediate = {
 								has_modifier = modifier_active_dragonblight_outbreak
 						}
 					NOT = {
-						has_institution = institution_health_system
-						}	
+						OR = {
+							{
+								has_institution = institution_health_system
+								has_variable = dragonblight_vaccine 
+								}	
+						}
+					} 
 				}	
 
 				immediate = {
@@ -1948,6 +2048,9 @@ immediate = {
 								has_decree = decree_special_measures
 							}
 						}
+						NOT = {
+							has_variable = dragonblight_vaccine
+						}
 						
 				}		
 				immediate = {
@@ -1959,9 +2062,8 @@ immediate = {
 										country_has_primary_culture = cu:kotskarvi
 										country_has_primary_culture = cu:lomarash
 										country_has_primary_culture = cu:drogori
-																			country_has_primary_culture = cu:garagoz
-									country_has_primary_culture = cu:tskharvani								country_has_primary_culture = cu:aisjie
-									country_has_primary_culture = cu:larltri
+									country_has_primary_culture = cu:garagoz
+									country_has_primary_culture = cu:tskharvani								
 										country_has_primary_culture = cu:aisjie
 									country_has_primary_culture = cu:larltri
 									}
@@ -2106,7 +2208,13 @@ immediate = {
 								is_decaying = yes
 							}
 						}
-					
+						ig:ig_intelligentsia = {
+							add_modifier = {
+								name = loose_quarantine_enforcement
+								years = 4
+								is_decaying = yes
+							}
+						}
 					scope:party_time_state = {
 						add_modifier = modifier_active_dragonblight_outbreak
 					}	
@@ -2593,6 +2701,13 @@ immediate = {
 					strata = lower
 					culture = cu:illvasaari
 				}
+				ig:ig_intelligentsia = {
+					add_modifier = {
+						name = tore_down_sickhouses
+						years = 4
+						is_decaying = yes
+					}
+				}
 			}
 		}
 }
@@ -2941,6 +3056,13 @@ dragonblight_pulse.22 = { #secession events
 					scope:outbreak_state = {
 						dragonblight_killswitch_engage = yes
 						set_state_owner = scope:klypyra_secession_scope
+						if = {
+							limit = {
+								has_modifier = modifier_active_dragonblight_outbreak
+							}
+							remove_modifier = modifier_active_dragonblight_outbreak
+							
+						}
 					}
 				}
 				else_if={
@@ -3017,6 +3139,13 @@ dragonblight_pulse.22 = { #secession events
 					scope:outbreak_state = {
 						dragonblight_killswitch_engage = yes
 						set_state_owner = scope:zamaris_secession_scope
+						if = {
+							limit = {
+								has_modifier = modifier_active_dragonblight_outbreak
+							}
+							remove_modifier = modifier_active_dragonblight_outbreak
+							
+						}
 					}
 				}
 				else_if={
@@ -3097,6 +3226,13 @@ dragonblight_pulse.22 = { #secession events
 					scope:outbreak_state = {
 						dragonblight_killswitch_engage = yes
 						set_state_owner = scope:lepidra_secession_scope
+						if = {
+							limit = {
+								has_modifier = modifier_active_dragonblight_outbreak
+							}
+							remove_modifier = modifier_active_dragonblight_outbreak
+							
+						}
 					}
 				}
 				else_if={
@@ -3176,6 +3312,13 @@ dragonblight_pulse.22 = { #secession events
 					scope:outbreak_state = {
 						dragonblight_killswitch_engage = yes
 						set_state_owner = scope:zarthos_secession_scope
+						if = {
+							limit = {
+								has_modifier = modifier_active_dragonblight_outbreak
+							}
+							remove_modifier = modifier_active_dragonblight_outbreak
+							
+						}
 					}
 				}
 				else_if={
@@ -3255,6 +3398,13 @@ dragonblight_pulse.22 = { #secession events
 					scope:outbreak_state = {
 						dragonblight_killswitch_engage = yes
 						set_state_owner = scope:caltha_secession_scope
+						if = {
+							limit = {
+								has_modifier = modifier_active_dragonblight_outbreak
+							}
+							remove_modifier = modifier_active_dragonblight_outbreak
+							
+						}
 					}
 				}
 				else_if={
@@ -3335,6 +3485,13 @@ dragonblight_pulse.22 = { #secession events
 					scope:outbreak_state = {
 						dragonblight_killswitch_engage = yes
 						set_state_owner = scope:sigara_secession_scope
+						if = {
+							limit = {
+								has_modifier = modifier_active_dragonblight_outbreak
+							}
+							remove_modifier = modifier_active_dragonblight_outbreak
+							
+						}
 					}
 				}						
 		else_if={
@@ -3496,6 +3653,13 @@ dragonblight_pulse.22 = { #secession events
 					scope:outbreak_state = {
 						dragonblight_killswitch_engage = yes
 						set_state_owner = scope:lilybaeum_secession_scope
+						if = {
+							limit = {
+								has_modifier = modifier_active_dragonblight_outbreak
+							}
+							remove_modifier = modifier_active_dragonblight_outbreak
+							
+						}
 					}
 				}
 				else_if={
@@ -3574,6 +3738,13 @@ dragonblight_pulse.22 = { #secession events
 					scope:outbreak_state = {
 						dragonblight_killswitch_engage = yes
 						set_state_owner = scope:zyras_secession_scope
+						if = {
+							limit = {
+								has_modifier = modifier_active_dragonblight_outbreak
+							}
+							remove_modifier = modifier_active_dragonblight_outbreak
+							
+						}
 					}
 				}
 				else_if={
@@ -3652,6 +3823,13 @@ dragonblight_pulse.22 = { #secession events
 					scope:outbreak_state = {
 						dragonblight_killswitch_engage = yes
 						set_state_owner = scope:lepthar_secession_scope
+						if = {
+							limit = {
+								has_modifier = modifier_active_dragonblight_outbreak
+							}
+							remove_modifier = modifier_active_dragonblight_outbreak
+							
+						}
 					}
 				}
 				else_if={
@@ -3730,6 +3908,13 @@ dragonblight_pulse.22 = { #secession events
 					scope:outbreak_state = {
 						dragonblight_killswitch_engage = yes
 						set_state_owner = scope:lilybaeum_secession_scope
+						if = {
+							limit = {
+								has_modifier = modifier_active_dragonblight_outbreak
+							}
+							remove_modifier = modifier_active_dragonblight_outbreak
+							
+						}
 					}
 				}
 				else_if={
@@ -3808,6 +3993,13 @@ dragonblight_pulse.22 = { #secession events
 					scope:outbreak_state = {
 						dragonblight_killswitch_engage = yes
 						set_state_owner = scope:lilybaeum_secession_scope
+						if = {
+							limit = {
+								has_modifier = modifier_active_dragonblight_outbreak
+							}
+							remove_modifier = modifier_active_dragonblight_outbreak
+							
+						}
 					}
 				}
 				else_if={
@@ -3887,6 +4079,13 @@ dragonblight_pulse.22 = { #secession events
 					scope:outbreak_state = {
 						dragonblight_killswitch_engage = yes
 						set_state_owner = scope:lilybaeum_secession_scope
+						if = {
+							limit = {
+								has_modifier = modifier_active_dragonblight_outbreak
+							}
+							remove_modifier = modifier_active_dragonblight_outbreak
+							
+						}
 					}
 				}
 				else_if={
@@ -3962,6 +4161,7 @@ trigger = {
 	NOT = {
 		has_variable = doctors_present_demands
 	}
+
 }	
 
 immediate = {
@@ -3972,6 +4172,18 @@ immediate = {
 }
 option = { #perhaps we should listen
 	name = dragonblight_pulse.23.a
+	random_scope_character = {
+		limit = {
+			is_ruler = yes
+		}
+		set_ideology = ideology:ideology_epidemiologist
+	}
+
+	}	
+	
+option = { #we will put someone more qualified on this
+	name = dragonblight_pulse.23.b
+	default_option = yes
 	ig:ig_intelligentsia = {
 		leader = {
 			set_ideology = ideology:ideology_epidemiologist
@@ -3979,6 +4191,13 @@ option = { #perhaps we should listen
 	}	
 	}
 option = { #lol no
-	name = dragonblight_pulse.23.b
+	name = dragonblight_pulse.23.c
+	ig:ig_intelligentsia = {
+		add_modifier = {
+			name = ignored_expert_advice
+			years = 3
+		}
+	}
 	}
 }
+
