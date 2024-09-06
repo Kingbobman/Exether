@@ -1149,7 +1149,7 @@ STATE_SAMARKH = {
 STATE_DUSHANBARYA = {
     id = 4920
     subsistence_building = "building_subsistence_rice_paddies"
-    provinces = { x5ECFF8 x67C7E1 x67D2C9 x8BFE8A xC8C0D5 xFBC4D9 }
+    provinces = { x5ECFF8 x67C7E1 x67D2C9 x8BFE8A xC8C0D5 xE4D5C8 "xFBC4D9" }
     port = x5ECFF8
     city = xFBC4D9
     farm = xC8C0D5
@@ -1185,7 +1185,7 @@ STATE_MAZAROV = {
 STATE_KHOSTOV = {
     id = 4922
     subsistence_building = "building_subsistence_rice_paddies"
-    provinces = { x77B9E3 x82E3FA xB3F779 xB5BDA7 xBE7DF3 xBEDF86 xD874FC xE6B09E xE8959C xEAABCB xF440EC }
+    provinces = { x77B9E3 x82E3FA xB3F779 xB5BDA7 xBE7DF3 xBEDF86 xE6B09E xEAABCB xF440EC }
     city = xEAABCB
     farm = xE8959C
     mine = xE6B09E
@@ -1201,7 +1201,7 @@ STATE_KHOSTOV = {
 STATE_KUNDUZOV = {
     id = 4924
     subsistence_building = "building_subsistence_rice_paddies"
-    provinces = { x051300 x2B89C7 x31620F x43FDD3 x4DD7E6 x52F0FE x57D7F2 x5EF5DB "x79FF4F" "x7D10B0" "x869BE3" "x93B5C8" "x9BE08C" "x9FDB8B" "x9FF7FE" "xAB1676" "xAFDCB4" "xBCD343" "xCBBC27" "xD09BCA" "xE061D3" "xE1FEB1" "xE997ED" "xEF42ED" "xEFADA1" "xF29BAD" "xF7B02B" "xF7C6A3" "xF845DF" "xFACEFA" }
+    provinces = { x4DD7E6 x57D7F2 x93B5C8 xAFDCB4 xE061D3 xEF42ED xF29BAD xF845DF }
     city = xF29BAD
     farm = xEF42ED
     mine = xE061D3
@@ -1267,13 +1267,12 @@ STATE_JALALABAKOV = {
     wood = xE3B0D1
     impassable = { x52F0FE x5ef5db x9FDB8B xD09BCA xDA5FC5 xE1FEB1 }
     traits = { "state_trait_dovbush_river" "state_trait_dove_mountains" }
-    arable_land = 45
+    arable_land = 40
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_tea_plantations" "bg_sugar_plantations" }
     capped_resources = {
         bg_logging = 11
         bg_coal_mining = 30
         bg_iron_mining = 48
-        bg_cloudsilver_mining = 44
     }
     resource = {
         type = "bg_collapsed_godsbane_vault"
@@ -1287,21 +1286,81 @@ STATE_JALALABAKOV = {
     }
 
 }
-STATE_FARGHANOV = {
+STATE_DER_IBBENN = {
+    #THE FORTRESS OF THE MIND
+    id = 4925
+    subsistence_building = "building_subsistence_lichen_farms"
+    provinces = { x051300 x52F0FE x5EF5DB x79FF4F x7D10B0 x869BE3 x9FDB8B xD09BCA xE1FEB1 xEFADA1 xF7B02B xF7C6A3 }
+    # city = 
+    # farm = 
+    # mine = 
+    # wood = 
+    impassable = { "x52F0FE" "x5EF5DB" "x869BE3" "x9FDB8B" "xD09BCA" "xE1FEB1" "xF7C6A3" }
+    traits = { "state_trait_dove_mountains" }
+    arable_land = 50
+    arable_resources = { "bg_underfarms" "bg_spider_ranch" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_mushroom_logging = 14
+        bg_lead_mining = 8
+        bg_coal_mining = 13
+        bg_iron_mining = 22
+        bg_cloudsilver_mining = 44
+    }
+    resource = {
+        type = "bg_collapsed_godsbane_vault"
+        depleted_type = "bg_renovated_godsbane_vault"
+
+        undiscovered_amount = 9
+    }
+
+}
+
+STATE_KHARGISHABBO = {
+    #store homeland ##it's a fucking shopping center
+    id = 4923
+    subsistence_building = "building_subsistence_lichen_farms"
+    provinces = { x15EFFE x2B89C7 x31620F x43FDD3 x9BE08C x9FF7FE "xAB1676" "xBCD343" "xCBBC27" "xE997ED" "xFACEFA" }
+    # city = 
+    # farm = 
+    # mine = 
+    # wood = 
+    impassable = { x15EFFE x43FDD3 x9BE08C x9FF7FE xE997ED xFACEFA }
+    traits = { "state_trait_dove_mountains" }
+    arable_land = 50
+    arable_resources = { "bg_underfarms" "bg_spider_ranch" "bg_livestock_ranches" }
+    capped_resources = {
+        bg_mushroom_logging = 14
+        bg_coal_mining = 36
+        bg_lead_mining = 9
+        bg_iron_mining = 38
+        bg_cloudsilver_mining = 44
+    }
+    resource = {
+        type = "bg_collapsed_godsbane_vault"
+        depleted_type = "bg_renovated_godsbane_vault"
+        discovered_amount = 3
+        undiscovered_amount = 5
+    }
+
+}
+STATE_GLIDGRED_RIZRA = {
     id = 4929
     traits = { "state_trait_psionic_storms" }
     subsistence_building = "building_subsistence_pastures"
-    provinces = { x3EF8FE x93E1FB xC963D3 xE2EF62 xE4D5C8 xEC35E6 xF4C0C2 xF6A6C7 }
+    provinces = { x007863 x3EF8FE x6DF203 x6FCD6B x84D8D2 x8790B6 x93E1FB xC963D3 xD874FC xDFE9DF xE2EF62 "xE8959C" "xEC35E6" "xEC6DA6" "xF4C0C2" "xF6A6C7" }
+    impassable = { x84D8D2 xD874FC xE2EF62 xE4D5C8 xE8959C xEC35E6 xEC6DA6 xF4C0C2 xF6A6C7 }
     city = xF4C0C2
     farm = xEC35E6
     mine = xE4D5C8
     wood = xE2EF62
     traits = { "state_trait_dove_mountains" }
     arable_land = 15
-    arable_resources = { "bg_livestock_ranches" }
+    arable_resources = { "bg_livestock_ranches" "bg_underfarms" "bg_spider_ranch" }
     capped_resources = {
         bg_cloudsilver_mining = 30
         bg_opium_plantations = 15
+        bg_lead_mining = 24
+        bg_iron_mining = 22
     }
 
 }
@@ -1356,7 +1415,7 @@ STATE_RUKHAM = {
     id = 4933
     traits = { "state_trait_psionic_storms" }
     subsistence_building = "building_subsistence_pastures"
-    provinces = { x15EFFE x29E7EC x84D8D2 x84D8E8 x87E699 x89CCF7 x8BC5EB x8EDCEA x9EF8DF xA1BEDA xA2C2B7 xA5D6EF xA6EFA0 xA7E26E xABA5D8 xBAFB50 xBD84DB xBFAEFB xBFE1B5 xC1BBC1 xC27DBE xC4AE93 xD584A2 xD8C798 xD8E8B3 xDBB7AE xDBC7DF xDCF14C xDD9FDF xDE5DC5 xE5D4C3 xE5E8F0 xE79FB9 xE7EE34 xEC6DA6 xECF583 xF0DCF7 xF3DBE8 xF67C9F xF980E8 xFE44BE }
+    provinces = { x29E7EC x84D8E8 x87E699 x89CCF7 x8BC5EB x8EDCEA x9EF8DF xA1BEDA xA2C2B7 xA5D6EF xA6EFA0 xA7E26E xABA5D8 xBAFB50 xBD84DB xBFAEFB xBFE1B5 xC1BBC1 xC27DBE xC4AE93 xD584A2 xD8C798 xD8E8B3 xDBB7AE xDBC7DF xDCF14C xDD9FDF xDE5DC5 xE5D4C3 xE5E8F0 xE79FB9 xE7EE34 xECF583 xF0DCF7 xF3DBE8 xF67C9F xF980E8 xFE44BE }
     city = xFACEFA
     farm = xF980E8
     mine = xF67C9F
