@@ -4627,7 +4627,7 @@ BUILDINGS = {
 				activate_production_methods={ "pm_scholastic_education" }
 			}
 			create_building={
-				building="building_cotton_plantation"
+				building="building_sunweave_plantation"
 				add_ownership={ 
 					building={ 
 						type="building_wizard_tower"
@@ -5647,6 +5647,32 @@ BUILDINGS = {
 				activate_production_methods={ "pm_cannons" "pm_automation_disabled" }
 			}
 			create_building={
+				building="building_logging_camp"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:VAI"
+                        levels=2
+                        region="STATE_SUNFLORO"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_saw_mills" "pm_stoneskin_potion" "pm_no_equipment" "pm_road_carts" "pm_no_hardwood" }
+			}
+			create_building={
+				building="building_iron_mine"
+				add_ownership={ 
+					building={ 
+						type="building_financial_district"
+						country="c:VAI"
+						levels=1
+						region="STATE_SUNFLORO"
+				   }
+				}
+				reserves=1
+				activate_production_methods={ "pm_atmospheric_engine_pump_building_iron_mine" "pm_no_explosives" "pm_iron_mines_potions_of_fortitude" "pm_no_steam_automation" "pm_road_carts" }
+			}
+			create_building={
 				building="building_military_shipyards"
                 add_ownership={ 
                     building={ 
@@ -6096,7 +6122,7 @@ BUILDINGS = {
                     building={ 
                         type="building_financial_district"
                         country="c:VAI"
-                        levels=5
+                        levels=1
                         region="STATE_MONTEGO"
                    }
                 }
@@ -6109,7 +6135,7 @@ BUILDINGS = {
 					building={ 
 						type="building_financial_district"
 						country="c:VAI"
-						levels=6
+						levels=5
 						region="STATE_MONTEGO"
 				   }
 				}
@@ -6800,7 +6826,7 @@ BUILDINGS = {
                     building={ 
                         type="building_financial_district"
                         country="c:VAI"
-                        levels=2
+                        levels=4
                         region="STATE_VESPERVIDO"
                    }
                 }

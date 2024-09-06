@@ -16,7 +16,12 @@ types building_panels
 		parentanchor = hcenter
 		datacontext = "[Building.AccessState]"
 
-		block "animated_building_controls_trigger" {}
+		block "animated_building_controls_trigger" {
+			onmousehierarchyenter = "[PdxGuiWidget.FindChild('building_goto').InterruptThenTriggerAnimation('hide_building_goto','show_building_goto')]"
+			onmousehierarchyleave = "[PdxGuiWidget.FindChild('building_goto').InterruptThenTriggerAnimation('show_building_goto','hide_building_goto')]"
+			onmousehierarchyenter = "[PdxGuiWidget.FindChild('building_controls').InterruptThenTriggerAnimation('hide_building_controls','show_building_controls')]"
+			onmousehierarchyleave = "[PdxGuiWidget.FindChild('building_controls').InterruptThenTriggerAnimation('show_building_controls','hide_building_controls')]"
+		}
 
 		alwaystransparent = no
 
@@ -160,7 +165,7 @@ types building_panels
 							}
 				
 							parentanchor = hcenter
-							using = cash_reserves_tooltip_with_graph
+							tooltip = "BUILDING_POP_CONSTRUCTION_TOOLTIP"
 							onmousehierarchyenter = "[PdxGuiWidget.FindChild('soulwrought_assemble_max').InterruptThenTriggerAnimation('hide_soulwrought_assemble_max','show_soulwrought_assemble_max')]"
 							onmousehierarchyleave = "[PdxGuiWidget.FindChild('soulwrought_assemble_max').InterruptThenTriggerAnimation('show_soulwrought_assemble_max','hide_soulwrought_assemble_max')]"
 							alwaystransparent = no
@@ -223,6 +228,79 @@ types building_panels
 						}
 					}
 
+					hbox = {
+						visible = "[Or(Building.IsBuildingType('building_collapsed_godsbane_vault'),Building.IsBuildingType('building_renovated_godsbane_vault'))]"
+						widget = {
+							alpha = "[TransparentIfFalse(Building.IsActive)]"
+				
+							block "progressbar_size" {
+								size = { 186 26 }
+							}
+				
+							parentanchor = hcenter
+							tooltip = "BUILDING_POP_CONSTRUCTION_TOOLTIP"
+							onmousehierarchyenter = "[PdxGuiWidget.FindChild('stonedwarf_assemble_max').InterruptThenTriggerAnimation('hide_stonedwarf_assemble_max','show_stonedwarf_assemble_max')]"
+							onmousehierarchyleave = "[PdxGuiWidget.FindChild('stonedwarf_assemble_max').InterruptThenTriggerAnimation('show_stonedwarf_assemble_max','hide_stonedwarf_assemble_max')]"
+							alwaystransparent = no
+				
+							white_progressbar_horizontal = {
+								size = { 100% 100% }
+								alpha = "[TransparentIfFalse(Building.IsActive)]"
+				
+								blockoverride "glow_size" {
+									size = { 40 100% }
+								}
+				
+								parentanchor = vcenter
+								blockoverride "values" {
+									min = 0
+									max = 5000
+									value = "[Building.GetState.MakeScope.ScriptValue('state_stonedwarf_progress')]"
+								}
+				
+								progressbar_highlight = {
+									visible = no
+								}
+							}
+				
+							flowcontainer = {
+								parentanchor = vcenter
+								textbox = {
+									raw_text = "@population![Building.GetState.MakeScope.ScriptValue('state_stonedwarf_progress')|Dv]"
+									margin_left = 4
+									align = hcenter|nobaseline
+									autoresize = yes
+									parentanchor = vcenter
+								}
+				
+								textbox = {
+									alpha = 0
+									name = stonedwarf_assemble_max
+				
+									state = {
+										name = show_stonedwarf_assemble_max
+										delay = 0.15
+										alpha = 1
+										duration = 0.15
+										using = Animation_Curve_Default
+									}
+									state = {
+										name = hide_stonedwarf_assemble_max
+										alpha = 0
+										duration = 0
+										using = Animation_Curve_Default
+									}
+				
+									raw_text = " / #maximum 5000#!"
+									visible = "[LessThan_CFixedPoint(Building.GetState.MakeScope.ScriptValue('state_stonedwarf_progress'), '(CFixedPoint)5000')]"
+									align = hcenter|nobaseline
+									autoresize = yes
+									parentanchor = vcenter
+								}
+							}
+						}
+					}
+
 					button_icon_round = {
 						size = { 36 36 }
 						onclick = "[RightClickMenuManager.ToggleBuildingActions(Building.AccessSelf, PdxGuiWidget.AccessSelf)]"
@@ -246,10 +324,12 @@ types building_panels
 		block "divider" {}
 
 		### PMS / EMPLOYMENT / CASH RESERVES
-		container = {
+		flowcontainer = {
 			minimumsize = { @panel_width 80 }
+            direction = vertical
 			container = {
-				parentanchor = vcenter
+				# parentanchor = vcenter # MPM
+                minimumsize = { @panel_width 80 } # MPM
 
 				flowcontainer = {
 					parentanchor = vcenter
@@ -270,16 +350,42 @@ types building_panels
 				}
 
 				block "extra_items_in_production_methods_list" {}
-			}
+                
+                building_progressbars = { # MPM - Moved inside of the container
+                    position = { -5 0 }
+                    parentanchor = right|vcenter
 
-			building_progressbars = {
-				position = { -5 0 }
-				parentanchor = right|vcenter
-
-				blockoverride "progressbar_size" {
-					size = { 230 26 }
-				}
+                    blockoverride "progressbar_size" {
+                        size = { 230 26 }
+                    }
+                }
 			}
+            
+            container = { # MPM
+                visible = "[GreaterThan_int32(GetDataModelSize(Building.AccessProductionMethodGroups), '(int32)4')]"
+                
+                flowcontainer = {
+                    parentanchor = vcenter
+                    margin_left = 2
+                    
+                    MPM_condensed_building_information_pms_row_2 = {
+                        blockoverride "pms_slot_sizes" {
+							addcolumn = 72
+							addrow = 75 # MPM - Up from 70
+						}
+						blockoverride "pms_minimumsize" {
+							minimumsize = { 208 -1 }
+						}
+						blockoverride "pms_item_size" {
+							size = { 70 70 }
+						}
+                    }
+                }
+            }
+            
+            widget = { # MPM - Spacer
+                minimumsize = { 100% 5 }
+            }
 		}
 	}
     

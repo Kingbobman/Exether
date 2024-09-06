@@ -112,7 +112,32 @@ building_wishstone_reefs = {
 	}
 
 	possible = {
-		#is_sea_adjacent = yes #removed to give more possiblitys to devs, Copying building_fishing_wharf
+		is_sea_adjacent = yes #removed to give more possiblitys to devs, Copying building_fishing_wharf ##leaving this one on for split state purposes, we can just use regular wishstone mines on land
+	}
+	ownership_type = self
+}
+
+building_ship_graveyard = {
+	building_group = bg_ship_graveyard
+	texture = "gfx/interface/icons/building_icons/wishstone_reefs.dds"
+	city_type = port
+	levels_per_mesh = 5
+	required_construction = construction_cost_medium
+
+	unlocking_technologies = {
+		hydraulic_cranes
+	}
+	
+	production_method_groups = {
+		pmg_base_building_ship_graveyard
+		pmg_potions_ship_graveyard
+		pmg_transportation_building_ship_graveyard
+		
+		
+	}
+
+	possible = {
+		is_sea_adjacent = yes
 	}
 	ownership_type = self
 }
