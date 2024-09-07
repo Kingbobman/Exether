@@ -681,19 +681,6 @@
           activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
         }
 			create_building={
-          building="building_silk_plantation"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:DUM"
-						levels=2
-						region="STATE_LAST_HEARTH"
-				   }
-				}
-          reserves=1
-          activate_production_methods={ "default_building_silk_plantation" "pm_road_carts"  }
-        }
-			create_building={
           building="building_rye_farm"
 				add_ownership={ 
 					building={ 
@@ -1170,32 +1157,6 @@ reserves=1
           activate_production_methods={ "pm_anchorage" }
         }
         create_building={
-          building="building_cotton_plantation"
-            add_ownership={ 
-              building={ 
-                type="building_manor_house"
-                country="c:AUM"
-                levels=7
-                region="STATE_TEMPLE_HILL"
-               }
-            }
-          reserves=1
-          activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts"  }
-        }
-        create_building={
-          building="building_silk_plantation"
-          add_ownership={ 
-            building={ 
-              type="building_manor_house"
-              country="c:AUM"
-              levels=2
-              region="STATE_TEMPLE_HILL"
-             }
-          }
-          reserves=1
-          activate_production_methods={ "default_building_silk_plantation" "pm_road_carts"  }
-        }
-        create_building={
           building="building_construction_sector"
           level=3
           reserves=1
@@ -1275,7 +1236,7 @@ reserves=1
                    }
                 }
           reserves=1
-          activate_production_methods={ "pm_handsewn_clothes" "pm_traditional_looms" "pm_craftsman_sewing" }
+          activate_production_methods={ "pm_handsewn_clothes" "pm_traditional_looms" "pm_no_luxury_clothes" }
         }
 			create_building={
           building="building_iron_mine"
@@ -2060,7 +2021,7 @@ reserves=1
                    }
                 }
           reserves=1
-          activate_production_methods={ "pm_dye_workshops" "pm_craftsman_sewing" "pm_permanent_prestidigitation" "pm_that_scary_ass_shit_from_sleeping_beauty" }
+          activate_production_methods={ "pm_dye_workshops" "pm_no_luxury_clothes" "pm_no_magic_clothes" "pm_that_scary_ass_shit_from_sleeping_beauty" }
         }
             create_building={
           building="building_logging_camp"
@@ -2294,9 +2255,9 @@ reserves=1
         }
         create_building={
           building="building_government_administration"
-          level=4
+          level=3
           reserves=1
-          activate_production_methods={ "pm_vertical_filing_cabinets" }
+          activate_production_methods={ "pm_horizontal_drawer_cabinets" }
         }
         create_building={
           building="building_construction_sector"
@@ -2811,9 +2772,9 @@ reserves=1
       region_state:DUM={
         create_building={
           building="building_government_administration"
-          level=7
+          level=10
           reserves=1
-          activate_production_methods={ "pm_vertical_filing_cabinets" }
+          activate_production_methods={ "pm_horizontal_drawer_cabinets" }
         }
             create_building={
           building="building_shipyards"
@@ -2950,19 +2911,6 @@ reserves=1
           reserves=1
           activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
         }
-        create_building={
-          building="building_cotton_plantation"
-            add_ownership={ 
-              building={ 
-                type="building_manor_house"
-                country="c:AUM"
-                levels=5
-                region="STATE_FALNALECK"
-               }
-            }
-          reserves=1
-          activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts"  }
-        }
       }
   }
 
@@ -3046,6 +2994,19 @@ reserves=1
 
     s:STATE_SHROUDGUARD = {
       region_state:RVC={
+        create_building={
+          building="building_fur_hunting_lodge"
+          add_ownership = {
+            building = {
+              type="building_wizard_tower"
+              country="c:RVC"
+              levels=1
+              region="STATE_RAVENCLIFF"
+            }
+          }
+          reserves=1
+          activate_production_methods={ "pm_hunting_parties" "pm_no_exotic" }
+        }
             create_building={
           building="building_paper_mills"
                 add_ownership={ 
@@ -3185,19 +3146,6 @@ reserves=1
             }
           reserves=1
           activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled"  }
-        }
-        create_building={
-          building="building_cotton_plantation"
-            add_ownership={ 
-              building={ 
-                type="building_manor_house"
-                country="c:DOV"
-                levels=6
-                region="STATE_THORNWALL"
-               }
-            }
-          reserves=1
-          activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts"  }
         }
       }
   }
@@ -3641,19 +3589,6 @@ reserves=1
           reserves=1
           activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools"  }
         }
-        create_building={
-          building="building_cotton_plantation"
-            add_ownership={ 
-              building={ 
-                type="building_manor_house"
-                country="c:RVE"
-                levels=1
-                region="STATE_BANCFAN"
-               }
-            }
-          reserves=1
-          activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts"  }
-        }
       }
       region_state:ROF={
 			create_building={
@@ -3681,19 +3616,6 @@ reserves=1
                 }
           reserves=1
           activate_production_methods={ "pm_fishing_trawlers" "pm_unrefrigerated" }
-        }
-        create_building={
-          building="building_cotton_plantation"
-            add_ownership={ 
-              building={ 
-                type="building_manor_house"
-                country="c:ROF"
-                levels=3
-                region="STATE_BANCFAN"
-               }
-            }
-          reserves=1
-          activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts"  }
         }
         create_building={
           building="building_government_administration"
@@ -4147,6 +4069,19 @@ reserves=1
           reserves=1
           activate_production_methods={ "pm_scholastic_education" }
         }
+        create_building={
+          building="building_fur_hunting_lodge"
+          add_ownership = {
+            building = {
+              type="building_wizard_tower"
+              country="c:RVC"
+              levels=2
+              region="STATE_RAVENCLIFF"
+            }
+          }
+          reserves=1
+          activate_production_methods={ "pm_hunting_parties" "pm_no_exotic" }
+        }
 			     create_building={
           building="building_rye_farm"
 				add_ownership={ 
@@ -4185,19 +4120,6 @@ reserves=1
           }
           reserves = 1
           activate_production_methods={ "pm_basic_distillery" "pm_no_fruit" "pm_bottomless_bottles" "pm_monster_grapes" }
-        }
-        create_building={
-          building="building_cotton_plantation"
-            add_ownership={ 
-              building={ 
-                type="building_wizard_tower"
-                country="c:RVC"
-                levels=7
-                region="STATE_RAVENCLIFF"
-               }
-            }
-          reserves=1
-          activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts"  }
         }
             create_building={
           building="building_tooling_workshops"
@@ -4690,19 +4612,6 @@ reserves=1
     s:STATE_TALNANT = {
       region_state:EVR = {
 			create_building={
-          building="building_cotton_plantation"
-          add_ownership={ 
-            building={ 
-                type="building_manor_house"
-                country="c:EVR"
-                levels=2
-                region="STATE_TALNANT"
-           }
-        }
-        reserves=1
-          activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts"  }
-        }
-			create_building={
         building="building_rye_farm"
         add_ownership={ 
           building={ 
@@ -4995,19 +4904,6 @@ reserves=1
 				reserves=1
 				activate_production_methods={ "pm_simple_organization" }
 			}
-      create_building={
-        building="building_cotton_plantation"
-          add_ownership={ 
-            building={ 
-              type="building_manor_house"
-              country="c:FOX"
-              levels=6
-              region="STATE_INCHMARA"
-             }
-          }
-        reserves=1
-        activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts"  }
-      }
   }
   }
 
@@ -5197,18 +5093,18 @@ reserves=1
 
     s:STATE_ZAWADKA = {
       region_state:VAI={
-			create_building={
-          building="building_rye_farm"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:VAI"
-						levels=4
-						region="STATE_ZAWADKA"
-				   }
-				}
+        create_building={
+          building="building_fur_hunting_lodge"
+          add_ownership = {
+            building = {
+              type="building_adventuring_guild"
+              country="c:VAI"
+              levels=7
+              region="STATE_ZAWADKA"
+            }
+          }
           reserves=1
-          activate_production_methods={ "pm_simple_farming"  "pm_tools_disabled" "pm_potatoes" }
+          activate_production_methods={ "pm_hunting_parties" "pm_no_exotic" }
         }
         create_building={
           building="building_port"
