@@ -1236,18 +1236,18 @@
 				activate_production_methods={ "pm_anchorage" }
 			}
 			create_building={
-				building="building_wheat_farm"
-				add_ownership={ 
+				building="building_cotton_plantation"
+				  add_ownership={ 
 					building={ 
-						type="building_manor_house"
-						country="c:SSC"
-						levels=2
-						region="STATE_KHANGYO"
-				   }
-				}
+					  type="building_manor_house"
+					  country="c:DUM"
+					  levels=10
+					  region="STATE_CROWNPEAK"
+					 }
+				  }
 				reserves=1
-				activate_production_methods={  "pm_tools_disabled" "pm_simple_farming" }
-			}
+				activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts"  }
+			  }
             create_building={
 				building="building_fishing_wharf_rusttails"
                 add_ownership={ 
@@ -1730,18 +1730,18 @@
 	s:STATE_ZANPIQ = {
 		region_state:SSC={
 			create_building={
-				building="building_livestock_ranch"
-				add_ownership={ 
+				building="building_cotton_plantation"
+				  add_ownership={ 
 					building={ 
-						type="building_manor_house"
-						country="c:DUM"
-						levels=1
-						region="STATE_CROWNPEAK"
-				   }
-				}
+					  type="building_manor_house"
+					  country="c:DUM"
+					  levels=10
+					  region="STATE_CROWNPEAK"
+					 }
+				  }
 				reserves=1
-				activate_production_methods={  "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated" "pm_open_air_stockyards" }
-			}
+				activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts"  }
+			  }	
 		}
 	}
 
@@ -2030,7 +2030,7 @@
 		}
 	}
 
-	s:STATE_FARGHANOV = {
+	s:STATE_GLIDGRED_RIZRA = {
 	}
 
 	s:STATE_GHAZNINSKIY = {

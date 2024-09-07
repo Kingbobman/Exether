@@ -417,38 +417,38 @@ pick_dispel_arcana_angel = {
 	calculate_arcanas = yes
 }
 
-# DRAGON
+# DRAGON disabled due to Error: Unknown effect dispel_arcana_dragon_X at  file: common/scripted_effects/roe_magic_names_dispel_and_costs.txt (Replace X with 1/2/3/4/5)
 pick_dispel_arcana_dragon = {
-    if = { 
-        limit = {
-             scope:arcana_id_dragon = 1
-        } 
-        dispel_arcana_dragon_1 = yes
-    }
-    else_if = {
-        limit = {
-            scope:arcana_id_dragon = 2
-       } 
-       dispel_arcana_dragon_2 = yes
-    }
-    else_if = {
-        limit = {
-            scope:arcana_id_dragon = 3
-       } 
-       dispel_arcana_dragon_3 = yes
-    }
-    else_if = {
-        limit = {
-            scope:arcana_id_dragon = 4
-       } 
-       dispel_arcana_dragon_4 = yes
-    }
-    else_if = {
-        limit = {
-            scope:arcana_id_dragon = 5
-       } 
-       dispel_arcana_dragon_5 = yes
-    }
+    #if = { 
+    #    limit = {
+    #         scope:arcana_id_dragon = 1
+    #    } 
+    #    dispel_arcana_dragon_1 = yes
+    #}
+    #else_if = {
+    #    limit = {
+    #       scope:arcana_id_dragon = 2
+    #   } 
+    #   dispel_arcana_dragon_2 = yes
+    #}
+    #else_if = {
+    #    limit = {
+    #        scope:arcana_id_dragon = 3
+    #   } 
+    #   dispel_arcana_dragon_3 = yes
+    #}
+    #else_if = {
+    #    limit = {
+    #        scope:arcana_id_dragon = 4
+    #   } 
+    #   dispel_arcana_dragon_4 = yes
+    #}
+    #else_if = {
+    #    limit = {
+    #        scope:arcana_id_dragon = 5
+    #   } 
+    #   dispel_arcana_dragon_5 = yes
+    #}
 	calculate_arcanas = yes
 }
 

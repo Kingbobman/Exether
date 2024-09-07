@@ -4,12 +4,12 @@
 	group = je_group_historical_content
 	
 	is_shown_when_inactive = {
-		c:BRZ ?= this
+		always = no #Enable after we reflavor these
+
 		has_dlc_feature = rp1_content
 	}
 
 	possible = {
-		has_technology_researched = intensive_agriculture
 		any_scope_state = {
 			count >= 2
 			is_capital = no
@@ -17,6 +17,7 @@
 			has_building = building_livestock_ranch
 			is_incorporated = yes
 		}
+		has_technology_researched = intensive_agriculture
 		country_has_building_group_levels = {
 			type = bg_plantations
 			value  >= 50

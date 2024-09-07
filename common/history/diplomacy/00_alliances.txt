@@ -36,6 +36,12 @@
 			type = alliance
 		}	
 	}
+	c:FLU ?= {
+		create_diplomatic_pact = {
+			country = c:CLL
+			type = alliance
+		}	
+	}
 }
 
 DIPLOMACY = {
@@ -44,5 +50,17 @@ DIPLOMACY = {
 			country = c:VAI
 			type = alliance
 		}	
+	}
+	c:BLL ?= {
+		create_diplomatic_pact = {
+			country = c:PVA
+			type = alliance
+		}
+	}
+	c:PVA ?= {
+		create_diplomatic_pact = {
+			country = c:BLL
+			type = alliance
+		}
 	}
 }

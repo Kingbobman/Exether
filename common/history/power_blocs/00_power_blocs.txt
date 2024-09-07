@@ -45,6 +45,28 @@
 		}
 	}
 
+	c:FLU = {
+		create_power_bloc = {
+			name = FLU_BLOC
+
+			map_color = { 37 39 117 }
+
+			founding_date = 1015.6.9 
+			identity = identity_trade_league
+			principle = principle_external_trade_1
+
+			member = c:CLL
+			member = c:KAM
+			member = c:SAZ
+			member = c:SHE
+		}
+		if = {
+			limit = {
+				has_dlc_feature = power_bloc_features
+			}
+		}
+	}
+
 	c:VAI = {
 		create_power_bloc = {
 			name = ICEBREAKER_FLEETS
