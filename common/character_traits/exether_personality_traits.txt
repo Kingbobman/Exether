@@ -1,5 +1,80 @@
 ﻿### Personality
 
+starbrand_beholder = {
+	type = personality
+	texture = "gfx/interface/icons/character_trait_icons/erudite.dds"
+
+	character_modifier = {
+		character_health_add = 0.3
+	}
+
+	command_modifier = {
+		character_battle_condition_surprise_maneuver_mult = 0.5  	# Enigmatic Mind
+		unit_supply_consumption_mult = 0.1							# Bad with Math
+	}
+
+	country_modifier = {
+		country_influence_mult = -0.1		# Other people are just weird...
+		country_authority_mult = 0.1		# So who cares what they think is right?
+	}
+
+	possible = {
+		always = yes
+	}
+
+	value = 3
+}
+
+starbrand_golem = {
+	type = personality
+	texture = "gfx/interface/icons/character_trait_icons/imposing.dds"
+
+	character_modifier = {
+		character_health_add = 0.3
+	}
+
+	command_modifier = {
+		character_battle_condition_careful_maneuver_mult = 0.25			
+		character_battle_condition_rough_waters_mult = 0.25		# You get sea sick quickly
+	}
+
+	country_modifier = {
+		country_construction_goods_cost_mult = -0.05			# It [the earth you walk on] gives way when you need it to and warns you of dangers.
+		country_engineers_pol_str_mult = 0.05
+	}
+
+	possible = {
+		always = yes
+	}
+
+	value = 3
+}
+
+starbrand_sphinx = {
+	type = personality
+	texture = "gfx/interface/icons/character_trait_icons/erudite.dds"
+
+	character_modifier = {
+		character_health_add = 0.3
+	}
+
+	command_modifier = {
+		unit_morale_loss_mult = -0.1  		# Your stoicism inspires people who look up to you
+	}
+
+	country_modifier = {
+		state_turmoil_mult = -0.1								# Perfectly balanced 
+		country_academics_pol_str_mult = 0.1					# Only knowledge can provide full understanding of the true order of the world
+		state_radicals_from_discrimination_mult = -0.05			# You favor the underdog
+	}
+
+	possible = {
+		always = yes
+	}
+
+	value = 3
+}
+
 starbrand_fey = {
 	type = personality
 	texture = "gfx/interface/icons/character_trait_icons/cautious.dds"
@@ -8,17 +83,16 @@ starbrand_fey = {
 		character_health_add = 0.5
 		character_popularity_add = 10
 	}
+
 	command_modifier = {
 		unit_morale_loss_mult = -0.15
+		unit_defense_forested_mult = 0.1
 	}
 
 	country_modifier = {
 		country_farmers_pol_str_mult = 0.15
 		country_mages_pol_str_mult = 0.1
 		state_birth_rate_mult = 0.02
-	}
-
-	agitator_modifier = {
 	}
 
 	interest_group_modifier = {
@@ -29,10 +103,228 @@ starbrand_fey = {
 		always = yes
 	}
 
-	weight = 0.1 #we should write a system that applies it based on birth year/month
+	value = 3
+}
 
-	replace = {
-		trait_child #we should also apply it at birth instead
+starbrand_phoenix = {
+	type = personality
+	texture = "gfx/interface/icons/character_trait_icons/wrathful.dds"
+
+	character_modifier = {
+		character_health_add = 0.3
+	}
+
+	command_modifier = {
+		unit_offense_mult = 0.05
+		character_battle_condition_aggressive_maneuver_mult = 0.25  # Short temper
+	}
+
+	country_modifier = {
+		country_diplomatic_play_maneuvers_add = 10
+		political_movement_radicalism_mult = 0.05 		# Your short temper makes it hard to not provoke your opposition
+	}
+
+	agitator_modifier = {
+		interest_group_pol_str_mult = 0.05				# But it also inspires like-minded people
+	}
+
+	possible = {
+		always = yes
+	}
+
+	value = 3
+}
+
+starbrand_fiend = {
+	type = personality
+	texture = "gfx/interface/icons/character_trait_icons/cruel.dds"
+
+	character_modifier = {
+		character_health_add = 0.3
+		character_popularity_add = -10					# People might have prejudices towards you
+	}
+
+	command_modifier = {
+		unit_kill_rate_add = 0.05
+		unit_morale_damage_mult = 0.05
+		character_command_limit_mult = 0.2 				# You like ordering people around.
+		unit_morale_loss_mult = -0.05
+	}
+
+	country_modifier = {
+		state_turmoil_effects_mult = 0.05				# The prejudices people might have let them perceive the bad things worse			
+		country_liberty_desire_of_subjects_add = -0.05 	# Better to be feared than to be loved
+		country_infamy_generation_mult = 0.05
+		country_authority_mult = 0.05
+	}
+
+	possible = {
+		always = yes
+	}
+
+	value = 3
+}
+
+starbrand_modron = {
+	type = personality
+	texture = "gfx/interface/icons/character_trait_icons/meticulous.dds"
+
+	character_modifier = {
+		character_health_add = 0.3
+	}
+
+	command_modifier = {
+		unit_advancement_speed_mult = 0.1		# Tik tak, tik tak, get a move on!
+		unit_supply_consumption_mult = -0.1 	# A well maintained dietary schedule reduces waste 
+		unit_morale_recovery_mult = -0.1		# But how much will your soldiers relate?
+	}
+
+	country_modifier = {
+		country_engineers_pol_str_mult = 0.1
+		country_bureaucrats_pol_str_mult = 0.1
+		country_bureaucracy_mult = 0.05
+	}
+
+	possible = {
+		always = yes
+	}
+
+	value = 3
+}
+
+starbrand_kraken = {
+	type = personality
+	texture = "gfx/interface/icons/character_trait_icons/surveyor.dds"
+
+	character_modifier = {
+		character_health_add = 0.3
+		character_popularity_add = -5 	# Sweaty
+	}
+
+	command_modifier = {
+		character_convoy_raiding_mult = 0.1
+		character_battle_condition_rough_waters_mult = -0.5
+	}
+
+	country_modifier = {
+		country_trade_route_competitiveness_mult = 0.1 		# Your trade ships just ship better and faster!
+		country_institution_size_change_speed_mult = 0.1	# Like the sea, in a healthy nation everything's always in motion!
+	}
+
+	possible = {
+		always = yes
+	}
+
+	value = 3
+}
+
+starbrand_djinn = {
+	type = personality
+	texture = "gfx/interface/icons/character_trait_icons/reckless.dds"
+
+	character_modifier = {
+		character_health_add = 0.2  			# "Going with the flow" can be a double-edged sword
+		character_popularity_add = 20  			# Your nonchalantness inspires others
+	}
+
+	command_modifier = {
+		character_battle_condition_surprise_maneuver_mult = 0.25
+	}
+
+	country_modifier = {
+		country_authority_mult = -0.1		# You distrust authority
+		country_influence_mult = 0.1	
+	}
+
+	possible = {
+		always = yes
+	}
+
+	value = 3
+}
+
+starbrand_unicorn = {
+	type = personality
+	texture = "gfx/interface/icons/character_trait_icons/charismatic.dds"
+
+	character_modifier = {
+		character_health_add = 0.3
+		character_popularity_add = 15 			# "You find it easy to brighten someones day [...]"
+	}
+
+	command_modifier = {
+		unit_morale_recovery_mult = 0.5
+		unit_devastation_mult = -0.25
+		character_command_limit_mult = 0.2
+	}
+
+	country_modifier = {
+		country_influence_mult = 0.05
+		country_infamy_decay_mult = 0.05
+		interest_group_in_opposition_approval_add = 1
+		interest_group_in_government_approval_add = 1
+	}
+
+	interest_group_modifier = {
+		interest_group_pop_attraction_mult = 0.05
+	}
+
+	agitator_modifier = {
+		interest_group_pop_attraction_mult = 0.05
+	}
+
+	possible = {
+		always = yes
+	}
+
+	value = 3
+}
+
+starbrand_storm_giant = {
+	type = personality
+	texture = "gfx/interface/icons/character_trait_icons/explorer.dds"
+
+	character_modifier = {
+		character_health_add = 0.3
+	}
+
+	command_modifier = {
+		character_battle_condition_good_visibility_mult = 0.1	# I'm good at predicting the weather.
+		character_battle_condition_rough_waters_mult = -0.1		# ^
+	}
+
+	country_modifier = {
+		country_liberty_desire_increase_mult = 0.05
+	}
+
+	possible = {
+		always = yes
+	}
+
+	value = 3
+}
+
+starbrand_valkyrie = {
+	type = personality
+	texture = "gfx/interface/icons/character_trait_icons/pious.dds"
+
+	character_modifier = {
+		character_health_add = 0.4  	# The connection and acceptance valkyries feel towards death helps leading to a less stressful life
+	}
+
+	commander_modifier = {
+		# Death is part of life: Onwards into the breach!
+		unit_offense_add = 5			
+		unit_kill_rate_add = 0.1
+		character_battle_condition_aggressive_maneuver_mult = 0.1
+	}
+
+	country_modifier = {
+		country_war_exhaustion_casualties_mult = -0.1
+	}
+
+	possible = {
+		always = yes
 	}
 
 	value = 3
