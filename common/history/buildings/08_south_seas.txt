@@ -720,6 +720,19 @@
 				activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }
 			}
 			create_building={
+				building="building_cotton_plantation"
+				  add_ownership={ 
+					building={ 
+					  type="building_manor_house"
+					  country="c:COV"
+					  levels=10
+					  region="STATE_LISAZISA"
+					 }
+				  }
+				reserves=1
+				activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts"  }
+			  }
+			create_building={
 				building="building_banana_plantation"
 				add_ownership={ 
 					building={ 
@@ -936,7 +949,7 @@
 					building={ 
 					  type="building_manor_house"
 					  country="c:COV"
-					  levels=6
+					  levels=10
 					  region="STATE_BELENDLE"
 					 }
 				  }
