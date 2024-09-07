@@ -14,8 +14,7 @@
 		}
 		unscaled = {
 			building_shopkeepers_shares_add = 3
-			building_laborers_shares_add = 1
-			building_shares_adventurers_add = 1
+			building_adventurers_shares_add = 1
 			building_adventurers_mortality_mult = 0.3
 			building_laborers_mortality_mult = 0.5
 		}
@@ -24,6 +23,29 @@
 	country_modifiers = {
 		workforce_scaled = {
 			country_minting_add = 400  #represents the government taxing the haul
+		}
+	}
+}
+base_building_nonmagical_comet = {
+	#texture = "gfx/interface/icons/production_method_icons/gold_mining.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_iron_add = 20
+			goods_output_gold_add = 6
+		}
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 4500
+		}
+		unscaled = {
+			building_shopkeepers_shares_add = 3
+		}
+	}
+	
+	country_modifiers = {
+		workforce_scaled = {
+			country_minting_add = 500  #represents the government taxing the haul
 		}
 	}
 }
@@ -52,8 +74,6 @@ base_building_wishstone_comet = {
 		unscaled = {
 			building_shopkeepers_shares_add = 2
 			building_archmages_shares_add = 3
-			building_laborers_shares_add = 1
-			building_machinists_shares_add = 1
 			building_archmages_mortality_mult = 0.1
 			building_laborers_mortality_mult = 0.2
 		}
