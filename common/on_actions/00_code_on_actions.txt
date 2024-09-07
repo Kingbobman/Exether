@@ -2381,6 +2381,7 @@ diggy_diggy_dwarf = { #digs arcthar out of the ground
 			
 			if = {
                 limit = {
+					country_has_primary_culture = cu:arcthar
                     var:dwarf_digging_count > 5000
                 }
                 create_pop = {
@@ -2393,7 +2394,21 @@ diggy_diggy_dwarf = { #digs arcthar out of the ground
 					subtract = 5000
 				}
             }
-
+			else_if = {
+                limit = {
+					
+                    var:dwarf_digging_count > 5000
+                }
+                create_pop = {
+                    pop_type = laborers
+                    culture  = starwoken
+                    size     = 20000
+                }
+                change_variable = {
+					name = dwarf_digging_count
+					subtract = 5000
+				}
+            }
 			remove_variable = diggy_stone
 
         }
