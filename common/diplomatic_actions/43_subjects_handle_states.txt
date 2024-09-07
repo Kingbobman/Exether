@@ -102,9 +102,9 @@
 				limit = {
 					any_subject_or_below = {
 						OR = {
-							c:BIC ?= this
-							c:DEI ?= this
-							is_african_subject = yes
+							c:SSC ?= this
+							c:CCO ?= this
+							is_locari_subject = yes
 						}
 					}					
 				}
@@ -117,28 +117,14 @@
 			NOT = { is_homeland_of_country_cultures = owner }
 			trigger_if = {
 				limit = {
-					c:GBR ?= owner
+					c:DUM ?= owner
 					owner = { # Whilst the crown colony system remains in place, the AI won't be inclined to change this
 						has_law = law_type:law_monarchy
 					}
 				}
 				NOR = {
-					state_region = s:STATE_CEYLON
-					state_region = s:STATE_NEWFOUNDLAND
-				}
-			}
-			trigger_if = {
-				limit = {
-					c:CHI ?= owner
-					owner = { # China won't decentralise for as long as the game-start state of affairs remains in place
-						has_law = law_type:law_monarchy
-					}
-				}
-				NOR = {
-					state_region = s:STATE_TIANSHAN
-					state_region = s:STATE_DZUNGARIA
-					region = sr:region_north_china
-					region = sr:region_south_china
+					state_region = s:CIDADOURO
+					state_region = s:STATE_LUMO
 				}
 			}
 		}

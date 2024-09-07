@@ -3535,19 +3535,6 @@
 				activate_production_methods={ "pm_soil_enriching_farming" "pm_no_secondary" "pm_tools"  }
 			}
 			create_building={
-				building="building_chemical_plants"
-					add_ownership={ 
-						building={ 
-							type="building_wizard_tower"
-							country="c:SAZ"
-							levels=1
-							region="STATE_HOJLAND"
-					   }
-					}
-				reserves=1
-				activate_production_methods={ "pm_artificial_fertilizers" }
-			}
-			create_building={
 				building="building_logging_camp"
                 add_ownership={ 
                     building={ 
@@ -6153,7 +6140,7 @@
 				   }
 				}
 				reserves=1
-				activate_production_methods={ "pm_atmospheric_engine_pump_building_iron_mine" "pm_no_explosives" "pm_iron_mines_potions_of_fortitude" "pm_no_steam_automation" "pm_road_carts" }
+				activate_production_methods={ "pm_atmospheric_engine_pump_building_coal_mine" "pm_no_explosives" "pm_coal_mines_potions_of_fortitude" "pm_no_steam_automation" "pm_road_carts" }
 			}
 			create_building={
 				building="building_tooling_workshops"
@@ -8030,6 +8017,18 @@
 				reserves=1
 				activate_production_methods={ "pm_simple_farming" "pm_citrus_orchards" "pm_tools_disabled"  }
 			}
+			create_building={
+				building="building_logging_camp"
+				level=3
+				reserves=1
+				activate_production_methods={ "pm_saw_mills" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
+			}
+			create_building={
+				building="building_government_administration"
+				level=1
+				reserves=1
+				activate_production_methods={"pm_horizontal_drawer_cabinets"}
+			}
 		}
 	}
 		
@@ -8037,14 +8036,14 @@
 		region_state:LIS = {
 			create_building={
 				building="building_construction_sector"
-				level=3
+				level=2
 				reserves=1
 				activate_production_methods={ "pm_wooden_buildings" }
 			}
 			create_building={
 				building="building_government_administration"
 				reserves=1
-				level = 1
+				level = 4
 				activate_production_methods={ "pm_horizontal_drawer_cabinets" }
 			}
 			create_building={
@@ -8068,9 +8067,22 @@
 			}
 			create_building={
 				building="building_logging_camp"
-				level=2
+				level=5
 				reserves=1
-				activate_production_methods={ "pm_simple_forestry" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
+				activate_production_methods={ "pm_saw_mills" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
+			}
+			create_building={
+				building="building_tooling_workshops"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:LIS"
+                        levels=2
+                        region="STATE_ALMARAQI"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_crude_tools" "pm_automation_disabled" }
 			}
 			create_building={
 				building="building_rye_farm"
