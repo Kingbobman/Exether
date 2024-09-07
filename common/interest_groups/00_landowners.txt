@@ -116,6 +116,23 @@
 				add_ideology = ideology_republican_paternalistic
 			}
 		}
+
+		# Theocratic
+		else_if = {
+			limit = {
+				OR = {
+					c:AUM ?= this
+					c:DSB ?= this
+					c:RDM ?= this
+					c:THI ?= this
+				}
+				
+			}
+			ig:ig_landowners = {
+				remove_ideology = ideology_paternalistic
+				add_ideology = ideology_papal_paternalistic
+			}
+		}
 	}
 
 	on_disable = {}
