@@ -15,6 +15,23 @@
   MAGIC_SURPLUS_EFFECTS: "[Multiply_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('normalized_arcana'),'(CFixedPoint)10')|=+D%0] #yellow $country_tech_research_speed_mult$ #!"
   MAGIC_DEFICIT_EFFECTS: "[Multiply_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('normalized_arcana'),'(CFixedPoint)10')|=+D%0] #yellow $country_tech_research_speed_mult$ #!"
 
+  RENOWN_TOOLTIP: "$RENOWN_BALANCE$[SelectLocalization(GetMetaPlayer.GetPlayedOrObservedCountry.IsValid, 'RENOWN_TOOLTIP_DELAYED', 'OBSERVER_NO_COUNTRY_SELECTED') ]"
+  RENOWN_TOOLTIP_DELAYED: "\n$TOOLTIP_DELIMITER$\n[SelectLocalization( GreaterThan_CFixedPoint( AccessPlayer.MakeScope.ScriptValue('renown'), '(CFixedPoint)0' ), 'RENOWN_EXCESS_EFFECT_HEADER', 'RENOWN_DEFICIT_EFFECT_HEADER')]Your total generation of [AccessPlayer.MakeScope.ScriptValue('renown_generation')|=+D]@renown![Nbsp][concept_renown] is due to:\n [AccessPlayer.GetModifier.GetDescFor('country_renown_pos_add')] [ConcatIfNeitherEmpty( '\n', AccessPlayer.GetModifier.GetDescFor('country_renown_gen_mult') )]\nYour total usage of [AccessPlayer.MakeScope.ScriptValue('total_renown_usage')|=+D]@renown![Nbsp][concept_renown] is due to: $RENOWN_COST_VALUE$"
+  RENOWN_BALANCE: "@renown! #bold [concept_renown]#!\nBalance: [AccessPlayer.MakeScope.ScriptValue('renown')|=+D]"
+  RENOWN_TOOLTIP_DELAYED: "\n$TOOLTIP_DELIMITER$\n[SelectLocalization( GreaterThan_CFixedPoint( AccessPlayer.MakeScope.ScriptValue('renown'), '(CFixedPoint)0' ), 'RENOWN_EXCESS_EFFECT_HEADER', 'RENOWN_DEFICIT_EFFECT_HEADER')]Your total generation of [AccessPlayer.MakeScope.ScriptValue('renown_generation')|=+D]@renown![Nbsp][concept_renown] is due to:\n [AccessPlayer.GetModifier.GetDescFor('country_renown_pos_add')] [ConcatIfNeitherEmpty( '\n', AccessPlayer.GetModifier.GetDescFor('country_renown_gen_mult') )]\nYour total usage of [AccessPlayer.MakeScope.ScriptValue('total_renown_usage')|=+D]@renown![Nbsp][concept_renown] is due to: $RENOWN_COST_VALUE$"
+  RENOWN_BALANCE: "@renown! #bold [concept_renown]#!\nBalance: [AccessPlayer.MakeScope.ScriptValue('renown')|=+D]"
+  RENOWN_EXCESS_EFFECT_HEADER: "Effects from #v [AccessPlayer.MakeScope.ScriptValue('normalized_renown')|%0]#! @renown! [concept_renown] #g excess#! (generation is higher than usage):\n$RENOWN_SURPLUS_EFFECTS$\n\n"
+  RENOWN_DEFICIT_EFFECT_HEADER: "Effects from #v [Multiply_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('normalized_renown'),'(CFixedPoint)-1')|%0]#! @renown! [concept_renown] #n deficit#! (usage is higher than generation):\n$RENOWN_DEFICIT_EFFECTS$\n\n"
+  RENOWN_BASE_VALUE_BONUS: "\n#g +100#! from Base Value"
+  RENOWN_COST_VALUE: "\n [AccessPlayer.MakeScope.ScriptValue('renown_upkeep')|=+D] from [concept_retainers][ConcatIfNeitherEmpty( '\n', AccessPlayer.GetModifier.GetDescFor('country_renown_neg_add') )][ConcatIfNeitherEmpty( '\n', AccessPlayer.GetModifier.GetDescFor('country_renown_cost_mult') )]"
+  RENOWN_COST_VALUE: "\n [AccessPlayer.MakeScope.ScriptValue('renown_upkeep')|=+D] from [concept_retainers][ConcatIfNeitherEmpty( '\n', AccessPlayer.GetModifier.GetDescFor('country_renown_neg_add') )][ConcatIfNeitherEmpty( '\n', AccessPlayer.GetModifier.GetDescFor('country_renown_cost_mult') )]"
+  RENOWN_INSTITUTION_RESERVE_BONUS: "\n[AccessPlayer.MakeScope.ScriptValue('renown_institution_bonus')|=+D] from [GetInstitutionType('institution_renownal_focus').GetName]"
+  renownal_focus_institution_tooltip: "test"
+  RENOWN_SURPLUS_EFFECTS: "[Multiply_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('normalized_renown'),'(CFixedPoint)10')|=+D%0] #yellow $country_tech_research_speed_mult$ #!"
+  RENOWN_DEFICIT_EFFECTS: "[Multiply_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('normalized_renown'),'(CFixedPoint)10')|=+D%0] #yellow $country_tech_research_speed_mult$ #!"
+
+  BUILDING_POP_CONSTRUCTION_TOOLTIP: "#bold #white Pop Production#!#!\nBuildings in this state are producing [Concept('concept_pop', '$concept_pops$')] in batches.\nOnce the progress bar is filled by outputs from local [Concept('concept_building', '$concept_buildings$')], a new batch will be released and the progress will be reset."
+
   HAS_NARRATIVE: "#bold Story Content#!\n[Country.GetCustom('has_journals_loc')]"
   HAS_FLAVORED_INTEREST_GROUPS: "#bold Interest Groups#!\n[Country.GetCustom('has_flavored_interest_groups_loc')]"
   HAS_MAJOR_FORMABLE: "#bold Major Formable#!\n[Country.GetCustom('has_major_formable_loc')]"
@@ -23,6 +40,8 @@
   ICON_CROSS: "@red_cross!"
 
   surplus_arcana: "Balance"
+
+  je_agricultural_development_goal_dummy: "Increase the amount of [concept_buy_orders] for $coffee$ within our market by 150%"
 
 dlc_roe: "Realms of Exether"
 dlc_roe_desc: "Total Overhaul mod set in the magical world of Exether"
@@ -37,14 +56,21 @@ dlc_roe_desc: "Total Overhaul mod set in the magical world of Exether"
 
 OH_DEER: "#italic 'Sup Doc, we have#! #bold [ErrorDeer.NumberOrErrors|v]#! #italic error(s)!#!"
 
- archmages_industrialist_ig_shift_effect_tt: "The [GetInterestGroupVariant('ig_industrialists',GetPlayer).GetNameWithCountryVariant] will attract $wizards$"
- archmages_industrialist_ig_shift_effect_negative_tt: "The [GetInterestGroupVariant('ig_industrialists',GetPlayer).GetNameWithCountryVariant] will no longer attract $wizards$"
- archmages_devout_ig_shift_effect_tt: "The [GetInterestGroupVariant('ig_devout',GetPlayer).GetNameWithCountryVariant] will attract $wizards$"
- archmages_devout_ig_shift_effect_negative_tt: "The [GetInterestGroupVariant('ig_devout',GetPlayer).GetNameWithCountryVariant] will no longer attract $wizards$"
- archmages_rural_ig_shift_effect_tt: "The [GetInterestGroupVariant('ig_rural_folk',GetPlayer).GetNameWithCountryVariant] will attract $wizards$"
- archmages_rural_ig_shift_effect_negative_tt: "The [GetInterestGroupVariant('ig_rural_folk',GetPlayer).GetNameWithCountryVariant] will no longer attract $wizards$"
+ artificers_trade_unions_ig_shift_effect_tt: "The [GetInterestGroupVariant('ig_trade_unions',GetPlayer).GetNameWithCountryVariant] will be more likely to attract $artificers$"
+ artificers_trade_unions_ig_shift_effect_negative_tt: "The [GetInterestGroupVariant('ig_trade_unions',GetPlayer).GetNameWithCountryVariant] will attract fewer $artificers$"
+ archmages_trade_unions_ig_shift_effect_tt: "$archmages$ will invest in mundane industry"
+ archmages_trade_unions_ig_shift_effect_negative_tt: "$archmages$ will no longer invest in mundane industry"
+ wizards_devout_ig_shift_effect_tt: "The [GetInterestGroupVariant('ig_devout',GetPlayer).GetNameWithCountryVariant] will attract $wizards$"
+ wizards_devout_ig_shift_effect_negative_tt: "The [GetInterestGroupVariant('ig_devout',GetPlayer).GetNameWithCountryVariant] will no longer attract $wizards$"
+ wizards_rural_ig_shift_effect_tt: "The [GetInterestGroupVariant('ig_rural_folk',GetPlayer).GetNameWithCountryVariant] will attract $wizards$"
+ wizards_rural_ig_shift_effect_negative_tt: "The [GetInterestGroupVariant('ig_rural_folk',GetPlayer).GetNameWithCountryVariant] will no longer attract $wizards$"
+ archmages_rural_ig_shift_effect_negative_tt: "$archmages$ will no longer invest in agriculture"
+ archmages_rural_ig_shift_effect_tt: "$archmages$ will invest in agriculture"
  academics_mages_ig_shift_effect_tt: "The [GetInterestGroupVariant('ig_mages',GetPlayer).GetNameWithCountryVariant] will attract $academics$"
  academics_mages_ig_shift_effect_negative_tt: "The [GetInterestGroupVariant('ig_mages',GetPlayer).GetNameWithCountryVariant] will no longer attract $academics$"
+
+ decree_special_measures: "Special Measures"
+ decree_special_measures_desc: "Some irregular situations require special measures to resolve"
 
  STATE_ADVENTURER_COVERAGE_CONDENSED: "[AddLocalizationIf(GreaterThan_CFixedPoint(State.MakeScope.ScriptValue('state_adventurer_coverage_demand'),State.MakeScope.ScriptValue('state_adventurer_coverage_value')), 'WARNING')]Using #tooltippable #tooltip:[State.GetTooltipTag],STATE_ADVENTURER_COVERAGE_DEMAND_TOOLTIP [State.MakeScope.ScriptValue('state_adventurer_coverage_demand')|0v]#!#! of #tooltippable #tooltip:[State.GetTooltipTag],STATE_ADVENTURER_COVERAGE_TOOLTIP [State.MakeScope.ScriptValue('state_adventurer_coverage_value')|0v]#!#! [AddLocalizationIf(GreaterThan_CFixedPoint(State.MakeScope.ScriptValue('state_adventurer_coverage_demand'),State.MakeScope.ScriptValue('state_adventurer_coverage_value')), 'STATE_ADVENTURER_COVERAGE_INSUFFICIENT')]"
  ADVENTURER_COVERAGE_USAGE: "#header [concept_tax_capacity] Usage#!\n[State.GetName] uses $USAGE|1v$ [concept_tax_capacity]\n$TOOLTIP_DELIMITER$\nOne point of [concept_tax_capacity] is required per $POPS_PER_CAPACITY|vK$ [Concept('concept_pop', '$concept_pops$')] and [State.GetName] has a total population of $TOTAL_POPS|vK$"
@@ -372,6 +398,7 @@ DISPEL_RITUAL: "Discard"
 ARCANAS: "Arcana"
 
 has_reserves_tt: "[SCOPE.GetRootScope.GetCountry.GetName] does not have [Scope.ScriptValue('arcana_cost')|0v] @magic! #bold [concept_magic_reserves]"
+has_low_veil_damage_tt: "[SCOPE.GetRootScope.GetCountry.GetName] does not have more than [Scope.ScriptValue('dragon_threshold')|0v] @veilneg! [concept_veil_impact]\n"
 
 VEIL_INTEGRITY_TITLE: "#bold #o Veil Integrity#!"
 VEIL_INTEGRITY_STATUS: "[AddLocalizationIf(GreaterThan_int32(FixedPointToInt(AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')), '(int32)50'), 'VEIL_INTEGRITY_STATUS_STRENGTHENED')][AddLocalizationIf(EqualTo_int32(FixedPointToInt(AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')), '(int32)50'), 'VEIL_INTEGRITY_STATUS_BALANCED')][AddLocalizationIf(LessThan_int32(FixedPointToInt(AccessPlayer.MakeScope.ScriptValue('veil_integrity_total')), '(int32)50'), 'VEIL_INTEGRITY_STATUS_WEAKENED')]"

@@ -1,17 +1,21 @@
-has_arcana_gryphon = {
+﻿has_arcana_gryphon = {
 	type = country
 	random_valid = no
 
 	text = {
 		trigger = {
-			has_magic_gryphon_traits = yes
+			religion = {
+				has_discrimination_trait = gryphon_domain
+			}
 		}
 		localization_key = custom_loc_gryphon_heading
 	}
 
 	text = {
 		trigger = {
-			NOT = { has_magic_gryphon_traits = yes }
+			religion = {
+				NOT = { has_discrimination_trait = gryphon_domain }
+			}
 		}
 		localization_key = custom_loc_gryphon_heading_not
 	}
@@ -23,14 +27,18 @@ has_arcana_justice = {
 
 	text = {
 		trigger = {
-			has_magic_justice_traits = yes
+			religion = {
+				has_discrimination_trait = justice_domain
+			}
 		}
 		localization_key = custom_loc_justice_heading
 	}
 
 	text = {
 		trigger = {
-			NOT = { has_magic_justice_traits = yes }
+			religion = {
+				NOT = { has_discrimination_trait = justice_domain }
+			}
 		}
 		localization_key = custom_loc_justice_heading_not
 	}
@@ -42,14 +50,18 @@ has_arcana_sphinx = {
 
 	text = {
 		trigger = {
-			has_magic_sphinx_traits = yes
+			religion = {
+				has_discrimination_trait = sphinx_domain
+			}
 		}
 		localization_key = custom_loc_sphinx_heading
 	}
 
 	text = {
 		trigger = {
-			NOT = { has_magic_sphinx_traits = yes }
+			religion = {
+				NOT = { has_discrimination_trait = sphinx_domain }
+			}
 		}
 		localization_key = custom_loc_sphinx_heading_not
 	}
@@ -61,14 +73,18 @@ has_arcana_golem = {
 
 	text = {
 		trigger = {
-			has_magic_golem_traits = yes
+			religion = {
+				has_discrimination_trait = golem_domain
+			}
 		}
 		localization_key = custom_loc_golem_heading
 	}
 
 	text = {
 		trigger = {
-			NOT = { has_magic_golem_traits = yes }
+			religion = {
+				NOT = { has_discrimination_trait = golem_domain }
+			}
 		}
 		localization_key = custom_loc_golem_heading_not
 	}
@@ -80,14 +96,18 @@ has_arcana_unicorn = {
 
 	text = {
 		trigger = {
-			has_magic_unicorn_traits = yes
+			religion = {
+				has_discrimination_trait = unicorn_domain
+			}
 		}
 		localization_key = custom_loc_unicorn_heading
 	}
 
 	text = {
 		trigger = {
-			NOT = { has_magic_unicorn_traits = yes }
+			religion = {
+				NOT = { has_discrimination_trait = unicorn_domain }
+			}
 		}
 		localization_key = custom_loc_unicorn_heading_not
 	}
@@ -99,14 +119,18 @@ has_arcana_fey = {
 
 	text = {
 		trigger = {
-			has_magic_fey_traits = yes
+			religion = {
+				has_discrimination_trait = fey_domain
+			}
 		}
 		localization_key = custom_loc_fey_heading
 	}
 
 	text = {
 		trigger = {
-			NOT = { has_magic_fey_traits = yes }
+			religion = {
+				NOT = { has_discrimination_trait = fey_domain }
+			}
 		}
 		localization_key = custom_loc_fey_heading_not
 	}
@@ -118,14 +142,18 @@ has_arcana_phoenix = {
 
 	text = {
 		trigger = {
-			has_magic_phoenix_traits = yes
+			religion = {
+				has_discrimination_trait = phoenix_domain
+			}
 		}
 		localization_key = custom_loc_phoenix_heading
 	}
 
 	text = {
 		trigger = {
-			NOT = { has_magic_phoenix_traits = yes }
+			religion = {
+				NOT = { has_discrimination_trait = phoenix_domain }
+			}
 		}
 		localization_key = custom_loc_phoenix_heading_not
 	}
@@ -137,14 +165,18 @@ has_arcana_djinn = {
 
 	text = {
 		trigger = {
-			has_magic_djinn_traits = yes
+			religion = {
+				has_discrimination_trait = djinn_domain
+			}
 		}
 		localization_key = custom_loc_djinn_heading
 	}
 
 	text = {
 		trigger = {
-			NOT = { has_magic_djinn_traits = yes }
+			religion = {
+				NOT = { has_discrimination_trait = djinn_domain }
+			}
 		}
 		localization_key = custom_loc_djinn_heading_not
 	}
@@ -156,14 +188,18 @@ has_arcana_siren = {
 
 	text = {
 		trigger = {
-			has_magic_siren_traits = yes
+			religion = {
+				has_discrimination_trait = siren_domain
+			}
 		}
 		localization_key = custom_loc_siren_heading
 	}
 
 	text = {
 		trigger = {
-			NOT = { has_magic_siren_traits = yes }
+			religion = {
+				NOT = { has_discrimination_trait = siren_domain }
+			}
 		}
 		localization_key = custom_loc_siren_heading_not
 	}
@@ -175,14 +211,18 @@ has_arcana_kraken = {
 
 	text = {
 		trigger = {
-			has_magic_kraken_traits = yes
+			religion = {
+				has_discrimination_trait = kraken_domain
+			}
 		}
 		localization_key = custom_loc_kraken_heading
 	}
 
 	text = {
 		trigger = {
-			NOT = { has_magic_kraken_traits = yes }
+			religion = {
+				NOT = { has_discrimination_trait = kraken_domain }
+			}
 		}
 		localization_key = custom_loc_kraken_heading_not
 	}
@@ -194,14 +234,18 @@ has_arcana_fiend = {
 
 	text = {
 		trigger = {
-			has_magic_fiend_traits = yes
+			religion = {
+				has_discrimination_trait = fiend_domain
+			}
 		}
 		localization_key = custom_loc_fiend_heading
 	}
 
 	text = {
 		trigger = {
-			NOT = { has_magic_fiend_traits = yes }
+			religion = {
+				NOT = { has_discrimination_trait = fiend_domain }
+			}
 		}
 		localization_key = custom_loc_fiend_heading_not
 	}
@@ -213,14 +257,18 @@ has_arcana_angel = {
 
 	text = {
 		trigger = {
-			has_magic_angel_traits = yes
+			religion = {
+				has_discrimination_trait = angel_domain
+			}
 		}
 		localization_key = custom_loc_angel_heading
 	}
 
 	text = {
 		trigger = {
-			NOT = { has_magic_angel_traits = yes }
+			religion = {
+				NOT = { has_discrimination_trait = angel_domain }
+			}
 		}
 		localization_key = custom_loc_angel_heading_not
 	}
@@ -232,14 +280,18 @@ has_arcana_dragon = {
 
 	text = {
 		trigger = {
-			has_magic_dragon_traits = yes
+			religion = {
+				has_discrimination_trait = dragon_domain
+			}
 		}
 		localization_key = custom_loc_dragon_heading
 	}
 
 	text = {
 		trigger = {
-			NOT = { has_magic_dragon_traits = yes }
+			religion = {
+				NOT = { has_discrimination_trait = dragon_domain }
+			}
 		}
 		localization_key = custom_loc_dragon_heading_not
 	}

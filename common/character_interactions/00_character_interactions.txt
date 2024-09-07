@@ -530,6 +530,43 @@ exile_character = {
 				}
 			}
 		}
+		if = {
+			limit = {
+				owner = { has_journal_entry = je_beauty_in_bloom }
+				interest_group = {
+					is_interest_group_type = ig_devout
+				}
+			}
+			if = {
+				limit = {
+					interest_group = {
+						leader = {
+							this = ROOT
+						}
+					}
+				}
+				owner = {
+					custom_tooltip = {
+						text = lose_large_beauty_in_bloom_points
+						change_variable = {
+							name = beauty_in_bloom_var
+							add = -200
+						}
+					}
+				}
+			}
+			else = {
+				owner = {
+					custom_tooltip = {
+						text = lose_beauty_in_bloom_points
+						change_variable = {
+							name = beauty_in_bloom_var
+							add = -100
+						}
+					}
+				}
+			}
+		}
 		hidden_effect = {
 			if = {
 				limit = {

@@ -1,25 +1,4 @@
-﻿building_ship_graveyard = {   #when using this building, set it to deplete into either a building_fishing_wharf or a building_whaling_station
-	building_group = bg_ship_graveyard
-	#texture = 
-	city_type = port
-	levels_per_mesh = 5
-	buildable = no
-	expandable = no
-		possible = {
-		error_check = {
-			severity = fail
-			is_sea_adjacent = yes
-		}
-	}
-	production_method_groups = {
-		pmg_base_building_ship_graveyard
-	}
-
-	ownership_type = self
-
-	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_fishing.dds"
-}
-building_nonmagical_comet = {   
+﻿building_nonmagical_comet = {   
 	building_group = bg_nonmagical_comet
 	#texture = 
 	#city_type = port
@@ -76,12 +55,9 @@ building_jellyfish_wharf = {
 	levels_per_mesh = 5
 	buildable = yes #this might be wonky
 	expandable = yes #ibid
-		possible = {
-		error_check = {
-			severity = fail
-			is_sea_adjacent = yes
-		}
-	}
+	possible = {
+		is_sea_adjacent = yes
+	}	
 	production_method_groups = {
 		pmg_base_building_jellyfish_wharf
 	}

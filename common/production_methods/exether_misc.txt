@@ -101,7 +101,7 @@ pm_early_squidlets_harvesting = {
 			# output goods										
 			goods_output_fish_add = -10				#x20 = 200
 
-			goods_output_dyes_add = 5				#x40 = 200
+			goods_output_dye_add = 5				#x40 = 200
 		}
 	}
 }
@@ -118,7 +118,7 @@ pm_organized_squidlets_harvesting = {
 			# output goods										
 			goods_output_fish_add = -15				#x20 = 300
 
-			goods_output_dyes_add = 7				#x40 = 280
+			goods_output_dye_add = 7				#x40 = 280
 		}
 	}
 }
@@ -135,7 +135,7 @@ pm_dedicated_squidlets_harvesting = {
 			# output goods										
 			goods_output_fish_add = -20				#x20 = 400
 
-			goods_output_dyes_add = 10				#x40 = 400
+			goods_output_dye_add = 10				#x40 = 400
 		}
 	}
 }
@@ -151,7 +151,9 @@ pm_early_goldfish_harvesting = {
 		}
 	}
 	country_modifiers = {
-		country_minting_add = 100
+		workforce_scaled = {
+			country_minting_add = 100
+		}
 	}
 }
 
@@ -171,7 +173,9 @@ pm_organized_goldfish_harvesting = {
 		}
 	}
 	country_modifiers = {
-		country_minting_add = 200
+		workforce_scaled = {
+			country_minting_add = 200
+		}
 	}
 }
 
@@ -196,7 +200,9 @@ pm_dedicated_goldfish_harvesting = {
 		}
 	}
 	country_modifiers = {
-		country_minting_add = 300
+		workforce_scaled = {
+			country_minting_add = 300
+		}
 	}
 }
 
@@ -276,12 +282,13 @@ pm_simple_forestry_stonewood = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_hardwood_add = 20
+			goods_output_wood_add = 25
+			goods_output_hardwood_add = 15
 		}
 
 		level_scaled = {
 			# employment
-			building_employment_laborers_add = 4500
+			building_employment_laborers_add = 5000
 		}
 	}
 }
@@ -298,12 +305,13 @@ pm_saw_mills_stonewood = {
 			goods_input_tools_add = 5
 			
 			# output goods
-			goods_output_wood_add = 30
+			goods_output_wood_add = 50
+			goods_output_hardwood_add = 25
 		}
 
 		level_scaled = {
 			# employment
-			building_employment_laborers_add = 4000
+			building_employment_laborers_add = 4500
 			building_employment_machinists_add = 500
 		}
 	}
@@ -322,12 +330,13 @@ pm_electric_saw_mills_stonewood = {
 			goods_input_electricity_add = 5
 			
 			# output goods
-			goods_output_wood_add = 50 
+			goods_output_wood_add = 90
+			goods_output_hardwood_add = 35
 		}
 
 		level_scaled = {
 			# employment
-			building_employment_laborers_add = 3000
+			building_employment_laborers_add = 3500
 			building_employment_machinists_add = 1000
 			building_employment_engineers_add = 500
 		}
@@ -341,14 +350,14 @@ pm_ghost_hunters = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_ectoplasm_add = 20
+			goods_output_ectoplasm_add = 10
 		}
 
 		level_scaled = {
 			# employment
-			building_employment_laborers_add = 3500
-			building_employment_clergymen_add = 500
-			building_employment_adventurers_add = 1000
+			building_employment_shopkeepers_add = 500
+			building_employment_clergymen_add = 250
+			building_employment_adventurers_add = 1250
 		}
 		
 	}
@@ -369,17 +378,17 @@ pm_exorcists = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_gizmos_add = 5
+			goods_input_gizmos_add = 5  #60 300
 			
 			# output goods
-			goods_output_ectoplasm_add = 30
+			goods_output_ectoplasm_add = 20  #50 750
 		}
 
 		level_scaled = {
 			# employment
-			building_employment_laborers_add = 2500
-			building_employment_clergymen_add = 1000
-			building_employment_adventurers_add = 1500
+			building_employment_shopkeepers_add = 500
+			building_employment_clergymen_add = 500
+			building_employment_adventurers_add = 1000
 		}
 	}
 
@@ -399,19 +408,18 @@ pm_paranormal_containment_fields = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_gizmos_add = 10
-			goods_input_electricity_add = 5
+			goods_input_gizmos_add = 10 #60 600
+			goods_input_electricity_add = 10 #30 150
 			
 			# output goods
-			goods_output_ectoplasm_add = 50 
+			goods_output_ectoplasm_add = 30 #50 1250
 		}
 
 		level_scaled = {
 			# employment
-			building_employment_laborers_add = 2000
-			building_employment_adventurers_add = 1500
-			building_employment_clergymen_add = 1000
-			building_employment_artificers_add = 500
+			building_employment_shopkeepers_add = 500
+			building_employment_adventurers_add = 1000
+			building_employment_artificers_add = 1000
 		}
 	}
 
@@ -435,6 +443,10 @@ pm_revealing_field_generators = {
 		steam_donkey
 	}
 
+	unlocking_production_methods = {
+		pm_exorcists
+	}
+
 	disallowing_laws = {
 		law_industry_banned
 	}
@@ -443,21 +455,67 @@ pm_revealing_field_generators = {
 		workforce_scaled = {
 			# input goods
 			goods_input_thaumacores_add = 1
-			goods_input_wishstone_add = 4
 		}
 
 		level_scaled = {
 			# employment
-			building_employment_laborers_add = -1000
-			building_employment_artificers_add = 500
+			building_employment_clergymen_add = -250
+			building_employment_adventurers_add = -250
 		}
 	}
 }
 
 pm_portable_ethereal_vacuums = {
+	                                                                                          
+                #                   .-=+***++=:.                                            
+                #                 .==::-+*****##*=.                                         
+                #                -+-*    *#########*:                                       
+                #               :#-:#::- +###########=                                      
+                #               +#+-***++#############*                                     
+                #               -####%%##########%%%%###*.                                  
+                #              =%%%%%#***#%%%%####%%%%%%%%                                  
+                #              *%%%%@%#***+-=====++*@@@%%%.                                 
+                #               -*%%#+==-- -+=-==++*@@%+++.     ...                         
+                #                  .*-**--.*#%===+*%@@*+##+:   ==:::.                       
+                #                   -=--===+*++#@+*@@%**#+=:  :*+-..::.                     
+                #                  -=----==+*%@@@#=+*+==---   ####+:...:.                   
+                #                 .*+====++*%@@@@#+=-:..-   ..++%@@%:::..:.                 
+                #                  *#****#%@@@@%#*++==-..:=-=++*#@@@++===-=.                
+                #              ...  -*#%@%######*++:... ..:--:. .=%%%#****-                 
+                #          ........  .:=###*+++**+:... ....::      -#%%##=                  
+                #       .. .:..===++++#%%#*##***##++*+=::::::        -**=                   
+                #      :  . :+==*++*+=-:-=*%%######%%#*+=--:::                              
+                #      =-:-++=*+*=-  .=##*#%##########*==---=.                              
+                #    .::=*****####=:+%%%*#%##%#############%%#                              
+                #   .:-==.--*###*##%%%%%%%%##%%##%%%######%%@@=                             
+                #   --==     :+####%%%%%%%###%#%%%%%%#%#%%%@@@%                             
+                #   =-=-        :=%%%%%%%%%##%%%%%%%*#%@@@@@@@%                             
+                #   --=+.        :%%%%%%%%%%##%%%%%%#%%##**#%@%                             
+                #    -+=+-.      :%%%%%%%%%%%##%%%%@@%*=---=+*@#                            
+                #     .=+++++===+*%%%%%%%%%%%%%%#%%%@*=-:-==+*%%                            
+                #        :-=++++=:.%@%%%%%###%%%%%%@@#+-=++++*%#                            
+                #                  +@@@%%%####%%%%%%@@#******%#.                            
+                #                  *%%@@%%#####%%%%=+#@@%%%@#:                              
+                #                  %#%%%%%####%%%%%:   :--:.                                
+                #                  %##%%%%#####%%%%%.                                       
+                #                  %%%%%%%%#####%%%%%:                                      
+                #                  *%%%%%%%%####%%%%%%+                                     
+                #                  :%%%%%%%%%####%%%%%%#:                                   
+                #                   *%%%%%%%%%%####%%%%%%=.                                 
+                #                 ..=%%%%%%%%%%%%%%%%%%%%%#                                 
+                #               *%%%%%%%%%%%%%%%%%%%#####%%:                                
+                #              =%%%%%%%%@@@@@%@%%%%#%%%%%%@@-                               
+                #              -@%%%@@@@@@@@@@@@@@@@@@@@@@@@%                               
+                #               :%@@@@@@@@%#@@%%%%%%%%%%@@@@#                               
+                #                 .......    +%%%%%%%%%@@@@*.                               
+                #                             #@@@@@@@@@@@+                                 
+                #                             .+*#%@@@%#+.  
 	texture = "gfx/interface/icons/production_method_icons/chainsaws.dds"
 	unlocking_technologies = {
 		combustion_engine
+	}
+	unlocking_production_methods = {
+		pm_paranormal_containment_fields
 	}
 	disallowing_laws = {
 		law_industry_banned
@@ -465,14 +523,12 @@ pm_portable_ethereal_vacuums = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_gizmos_add = 10
-			goods_input_oil_add = 5
+			goods_input_gizmos_add = 5
 		}
 
 		level_scaled = {
 			# employment
-			building_employment_laborers_add = -2000
-			building_employment_artificers_add = 500
+			building_employment_artificers_add = -500
 		}
 	}
 }
@@ -788,7 +844,7 @@ pm_simple_desert_hunting = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_monster_essence_add = 15  #40 = 600
+			goods_output_monster_essence_add = 20  #40 = 600
 		}                                          #Profit = 600
 
 		level_scaled = {
@@ -821,11 +877,11 @@ pm_firearms_desert_hunting= {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_small_arms_add = 5        #60 = 300
-			goods_input_groceries_add = 5         #30 = 150
+			goods_input_small_arms_add = 5        
+			goods_input_groceries_add = 5         
 			# output goods
-			goods_output_monster_essence_add = 30 #40 = 1200
-			                                      #Profit = 750
+			goods_output_monster_essence_add = 40
+			    
 		}
 
 		level_scaled = {
@@ -864,8 +920,8 @@ pm_heavy_weapons_desert_hunting = {
 			goods_input_groceries_add = 5         	#30 = 150
 			
 			# output goods
-			goods_output_monster_essence_add = 50 	#40 = 2000
-		}                                         	#Profit = 1000
+			goods_output_monster_essence_add = 60 	
+		}                                         	
 
 		level_scaled = {
 			# employment
@@ -1142,9 +1198,6 @@ pm_self_regulation = {
 	
 	disallowing_laws = {
 		law_divine_miracles
-		law_druidic_circles
-		law_dark_arts
-		law_mage_hunters
 	}
 	
 	building_modifiers = {
@@ -1156,14 +1209,6 @@ pm_self_regulation = {
 
 pm_clerical_oversight = {
 	texture = "gfx/interface/icons/production_method_icons/ownership_clergy.dds"
-	
-	disallowing_laws = {
-		law_dark_arts
-		law_mage_hunters
-		law_no_magic
-		law_artificer_guilds
-		law_astrological_studies
-	}
 	
 	building_modifiers = {
 		level_scaled = {
