@@ -390,4 +390,39 @@ c:RVE = {
 	c:FMJ = {
 		set_relations = { country = c:SNB value = 15 }
 	}
+
+	c:BLL = {
+		set_relations = { country = c:LTA value = 30 }
+		set_relations = { country = c:PVA value = 50 }
+		set_relations = { country = c:IRA value = 10 }
+		set_relations = { country = c:RLP value = 10 }
+	}
+
+	c:LTA = {
+		set_relations = { country = c:BLL value = 30 }
+		set_relations = { country = c:PVA value = 30 }
+		set_relations = { country = c:IRA value = 30 }
+		set_relations = { country = c:RLP value = 30 }
+	}
+
+	c:PVA = {
+		set_relations = { country = c:BLL value = 50 }
+		set_relations = { country = c:LTA value = 30 }
+		set_relations = { country = c:IRA value = 10 }
+		set_relations = { country = c:RLP value = -30 }
+	}
+
+	c:IRA = {
+		set_relations = { country = c:BLL value = 10 }
+		set_relations = { country = c:LTA value = 30 }
+		set_relations = { country = c:PVA value = 10 }
+		set_relations = { country = c:RLP value = 30 }
+	}
+
+	c:RLP = {
+		set_relations = { country = c:BLL value = 10 }
+		set_relations = { country = c:LTA value = 30 }
+		set_relations = { country = c:PVA value = -30 }
+		set_relations = { country = c:IRA value = 30 }
+	}
 }

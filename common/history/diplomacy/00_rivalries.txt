@@ -36,7 +36,19 @@
 			country = c:XXP
 			type = rivalry
 		}
-	}	
+	}
+	c:PVA ?= {
+		create_diplomatic_pact = {
+			country = c:RLP
+			type = rivalry
+		}
+	}
+	c:RLP ?= {
+		create_diplomatic_pact = {
+			country = c:PVA
+			type = rivalry
+		}
+	}		
 }	
 
 

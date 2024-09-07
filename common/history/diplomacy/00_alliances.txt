@@ -36,13 +36,22 @@
 			type = alliance
 		}	
 	}
-}
-
-DIPLOMACY = {
 	c:XXP ?= {
 		create_diplomatic_pact = {
 			country = c:VAI
 			type = alliance
 		}	
+	}
+	c:BLL ?= {
+		create_diplomatic_pact = {
+			country = c:PVA
+			type = alliance
+		}
+	}
+	c:PVA ?= {
+		create_diplomatic_pact = {
+			country = c:BLL
+			type = alliance
+		}
 	}
 }
