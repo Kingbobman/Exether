@@ -389,13 +389,6 @@ ai_strategy_progressive_agenda = {
 		
 		if = {
 			limit = {
-				has_journal_entry = je_sick_man_main
-			}
-			add = 100
-		}
-		
-		if = {
-			limit = {
 				has_modifier = forced_regime_change
 				OR = {
 					ig:ig_industrialists ?= { is_in_government = yes }
@@ -941,7 +934,9 @@ ai_strategy_necromantic_agenda = {
 		
 		if = {
 			limit = {
-				has_law = law_type:law_dark_arts
+				#Update to use signs
+				#has_law = law_type:law_dark_arts
+				always = no
 			}
 			add = 1000
 		}		

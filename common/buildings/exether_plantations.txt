@@ -77,9 +77,9 @@ building_snowrubber_plantation = {
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_plantations.dds"
 }
 
-building_undercoffee = {
-	building_group = bg_undercoffee
-	texture = "gfx/interface/icons/building_icons/coffee_plantation.dds"
+building_sunweave_plantation = {
+	building_group = bg_sunweave_plantations
+	texture = "gfx/interface/icons/building_icons/cotton_plantation.dds"
 	required_construction = construction_cost_low
 
 	unlocking_technologies = {
@@ -88,10 +88,10 @@ building_undercoffee = {
 
 	city_type = farm
 	levels_per_mesh = 5
-	
+
 	production_method_groups = {
-		pmg_base_building_undercoffee_plantation
-		pmg_train_automation_building_coffee_plantation
+		pmg_base_building_sunweave_plantation
+		pmg_train_automation_building_cotton_plantation
 	}
 	ownership_type = self
 
@@ -113,27 +113,6 @@ building_undertea = {
 	production_method_groups = {
 		pmg_base_building_undertea_plantation
 		pmg_train_automation_building_tea_plantation
-	}
-	ownership_type = self
-
-	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_plantations.dds"
-}
-
-building_undertobacco = {
-	building_group = bg_undertobacco
-	texture = "gfx/interface/icons/building_icons/tobacco_plantation.dds"
-	required_construction = construction_cost_low
-
-	unlocking_technologies = {
-		enclosure
-	}
-
-	city_type = farm
-	levels_per_mesh = 5
-	
-	production_method_groups = {
-		pmg_base_building_undertobacco_plantation
-		pmg_train_automation_building_tobacco_plantation
 	}
 	ownership_type = self
 

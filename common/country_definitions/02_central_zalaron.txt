@@ -5,22 +5,22 @@ CLL = {
 
 	country_type = recognized 
 
-	tier = kingdom
+	tier = empire
 
 	cultures = { rannorian } 
-	capital = STATE_CAM_CALLAIRD
+	capital = STATE_CAM_CALLAIRD 
 }
 
 #Mondhain
-MNN = {
+SAZ = {
 	color = rgb{ 40  120  150 } 
 
 	country_type = recognized 
 
 	tier = grand_principality
 
-	cultures = { grunhain } 
-	capital = STATE_CAM_CALLAIRD
+	cultures = { beithaven } 
+	capital = STATE_LILLESO
 }
 
 
@@ -454,8 +454,32 @@ XAL = {
 
 	tier = principality
 
-	cultures = { glabrekthorn } 
+	cultures = { lumvareth glabrekthorn } 
 	capital = STATE_ZEDALAN
+}
+
+#Thornwall
+TRW = {
+	color = rgb{ 120  200  60 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { lumvareth glabrekthorn } 
+	capital = STATE_NOLIPIK
+}
+
+#Vinewall
+VWL = {
+	color = rgb{ 120  240  20 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { lumvareth glabrekthorn } 
+	capital = STATE_ZALULIK
 }
 
 #Lumanta
@@ -644,14 +668,14 @@ FLU = {
 
 
 #Salzadernland
-SAZ = {
+MNN = {
 	color = hsv360 { 35 32 74 }
 
 	country_type = recognized
 
 	tier = principality
 
-	cultures = { beithaven } 
+	cultures = { grunhain } 
 	capital = STATE_SC12
 }
 
@@ -659,7 +683,7 @@ SAZ = {
 HOU = {
 	color = hsv360 { 165 72 74 }
 
-	country_type = unrecognized
+	country_type = decentralized
 
 	tier = principality
 
@@ -671,7 +695,7 @@ HOU = {
 SEE = {
 	color = hsv360 { 200 12 74 }
 
-	country_type = unrecognized
+	country_type = decentralized
 
 	tier = principality
 
@@ -683,12 +707,12 @@ SEE = {
 FIS = {
 	color = hsv360 { 250 60 74 }
 
-	country_type = unrecognized
+	country_type = decentralized
 
 	tier = principality
 
 	cultures = { stranfolk } 
-	capital = STATE_WETTERWIIDTE
+	capital = STATE_BLOEIJENDREAM
 }
 
 #Bûtenbosk
@@ -699,15 +723,15 @@ BUT = {
 
 	tier = principality
 
-	cultures = { waldgnomklaai } 
-	capital = STATE_FLINTERWIIDTE
+	cultures = { waldgnomklaai stranfolk } 
+	capital = STATE_SULVERSTREAM
 }
 
 #Groenleed
 GRO = {
-	color = hsv360 { 65 62 74 }
+	color = rgb{ 65 62 74 }
 
-	country_type = decentralized
+	country_type = recognized
 
 	tier = principality
 
@@ -717,14 +741,14 @@ GRO = {
 
 #Tûntûnarij
 TTN = {
-	color = hsv360 { 155 62 74 }
+	color = rgb{ 52 97 37 }
 
-	country_type = decentralized
+	country_type = recognized
 
 	tier = principality
 
-	cultures = { waldgnomklaai } 
-	capital = STATE_STJERRENFAL
+	cultures = { waldgnomklaai stranfolk } 
+	capital = STATE_NATUURBRUZJE
 }
 
 #New Khus
@@ -761,4 +785,28 @@ WHX = {
 	
 	cultures = { whiali }
 	capital = STATE_RADIANTAJO
+}
+
+#Greater Flussholm
+GFL = {
+	color = rgb{ 20 20 70 } 
+
+	country_type = recognized
+
+	tier = empire
+
+	cultures = { beithaven rannorian } 
+	capital = STATE_JOURNEYEND
+}
+
+#Starshimmer Federation
+SFD = {
+	color = hsv360{ 245 215 110 }
+
+	country_type = recognized
+
+	tier = empire
+
+	cultures = { tefereti seleni anwarthi eutrateri } 
+	capital = STATE_MARZEHZARIN
 }

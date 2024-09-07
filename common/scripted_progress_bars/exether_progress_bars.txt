@@ -4,19 +4,140 @@
 	second_desc = "union_of_the_sands_progress_bar_vozmead_desc"
 
 	double_sided_gold = yes
-
-	weekly_progress = {
-		add = {
-		   desc = "union_of_the_sands_progress_bar_yavira_gdp"
-		   value = global_var:yavira_gdp
-	   	}
+    
+    weekly_progress = {
+		if = {
+		limit = {
+			NOT = {
+				scope:journal_entry = { 
+					union_of_the_sands_balance = "scripted_bar_progress(union_of_the_sands_progress_bar)" 
+				}
+			}
+		}
+		scope:journal_entry = { 
 		subtract = {
-		   desc = "union_of_the_sands_progress_bar_vozmead_gdp"
-		   value = global_var:vozmead_gdp
-	   }
+			desc = "union_of_the_sands_progress_bar_reset"
+				value = "scripted_bar_progress(union_of_the_sands_progress_bar)"
+			} 
+		}
+		add = {
+			desc = "replaces_progress_bar_with_your_var"
+				value = union_of_the_sands_balance
+			}
+		}
+	}
+            
+	start_value = 50
+	min_value = 0
+	max_value = 100
+
+}
+
+dragonblight_vaccine_progress_bar = {
+	name = "dragonblight_vaccine_progress_bar"
+	desc = "dragonblight_vaccine_progress_bar"
+
+	default_bad = yes
+
+	monthly_progress = {
+		if = {
+			limit = {
+				owner = {
+		
+				literacy_rate >= 0.175
+				}
+			}	
+			add = {
+				desc = "dragon_vaccine_progress_from_literacy_tt"
+				owner = {
+					add = this.literacy_rate
+					multiply = 50
+				}
+						
+			}
+			
+		}
+		if = {
+			limit = {
+				is_ai = yes 
+				}
+				add = {
+					desc = "dragon_vaccine_ai_cheats_tt"
+					owner = {
+						add = 20
+					}
+							
+				}
+			}	
+
+		if = {
+			limit = {
+				owner = {
+					ig:ig_intelligentsia = {
+						ig_clout > 0.15
+					}
+				}
+			}
+			add = {
+				desc = "dragon_vaccine_progress_from_intelligentsia_tt"
+				owner = {
+					ig:ig_intelligentsia = {
+						add = this.ig_clout
+						multiply = 50
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+					country_has_building_type_levels = {
+						target = bt:building_university value >=1
+					}
+				}
+			}
+			add = {
+				desc = "dragon_vaccine_progress_from_universities_tt"
+				owner = {
+					every_scope_state = {
+						limit = {
+							any_scope_building = {
+								is_building_type = building_university
+								occupancy > 0.65
+							}
+						}
+						add = this.b:building_university.level
+						
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+					ig:ig_intelligentsia = {
+						is_in_government = yes
+					}
+					OR = {
+						has_law = law_type:law_technocracy
+						has_law = law_type:law_appointed_bureaucrats
+					}
+				}
+			}
+			add = {
+				desc = "dragon_vaccine_progress_from_bureaucrats_tt"
+				add = 7.5
+
+			}
+		}
+
 	}
 
-	start_value = 500000
+	on_complete = {
+		
+	}
+	start_value = 0
 	min_value = 0
-	max_value = 1000000
-}
+	max_value = 5000
+
+ }

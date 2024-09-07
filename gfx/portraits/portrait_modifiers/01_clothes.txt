@@ -1675,6 +1675,49 @@
             }
         }
     }
+    
+    historical_karl_marx_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = waistcoats
+                template = historical_waistcoats_madero
+                range = { 0 1 }
+            }
+ 
+            accessory = {
+                mode = add
+                gene = civilian_coats
+                template = european_civilian_coat_black
+                range = { 0 1 } # For the randomness to work correctly
+            }
+ 
+            accessory = {
+                 mode = add
+                 gene = legwear
+                 template = european_legwear
+                 range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+
+        weight = {
+            base = 0
+            modifier = {
+                add = 90000
+                scope:character ?= {
+                    OR = {
+                        always = no
+                        #has_template = agitator_karl_marx
+                        #has_template = agitator_charlie_marx
+                    }
+                    NOR = {
+                        has_role = general
+                        has_role = admiral
+                    }
+                }
+            }
+        }
+    }
 
 ### BACK TO YOUR REGULAR SCHEDULED PROGRAMMING ###
 
@@ -3128,7 +3171,7 @@
                 scope:character ?= {
                     age >= define:NCharacters|ADULT_AGE
                     OR = {
-                        religion = rel:horse_worship
+                        religion = rel:skystride
                         culture = cu:yanger
                         culture = cu:nivaskyan
                     }
@@ -3156,7 +3199,7 @@
                     OR = {
                         AND = {
                             OR = {
-                                religion = rel:horse_worship
+                                religion = rel:skystride
                                 culture = cu:yanger
                                 culture = cu:nivaskyan
                             }
@@ -3177,7 +3220,7 @@
                 scope:character ?= {
                     age >= define:NCharacters|ADULT_AGE
                     OR = {
-                        religion = rel:horse_worship
+                        religion = rel:skystride
                         culture = cu:yanger
                         culture = cu:nivaskyan
                     }

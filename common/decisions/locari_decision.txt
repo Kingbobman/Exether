@@ -1,0 +1,69 @@
+﻿locari_toldek_stop = {
+    is_shown = {
+        has_modifier = toldek_paseb
+    }
+
+    possible = {
+        ig:ig_devout = {
+            is_in_government = no
+        }
+        ig:ig_landowners = {
+            is_in_government = no
+        }
+        ig:ig_mages = {
+            is_in_government = no
+        }
+        government_legitimacy >= 70
+        custom_tooltip = {
+            text = bhimsen_died
+            ruler = {
+                NOT = {
+                    has_variable = is_bhimsen
+                }
+            }
+        }
+    }
+
+    when_taken = {
+        remove_modifier = toldek_paseb
+        add_modifier = {
+            name = abolished_toldek_paseb
+            months = normal_modifier_time
+        }
+	}
+}
+
+locari_jihduk_stop = {
+    is_shown = {
+        has_modifier = jihduk_paseb
+    }
+
+    possible = {
+        ig:ig_devout = {
+            is_in_government = no
+        }
+        ig:ig_landowners = {
+            is_in_government = no
+        }
+        ig:ig_mages = {
+            is_in_government = no
+        }
+        government_legitimacy >= 70
+        custom_tooltip = {
+            text = zokmir_died
+            ruler = {
+                NOT = {
+                    has_variable = is_zokmir
+                }
+            }
+        }
+    }
+
+    when_taken = {
+        remove_modifier = jihduk_paseb
+        add_modifier = {
+            name = abolished_jihduk_paseb
+            months = normal_modifier_time
+        }
+	}	
+}
