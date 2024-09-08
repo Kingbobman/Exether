@@ -73,6 +73,7 @@ locari_examine_draconic_carvings = {
         any_primary_culture = {
             has_discrimination_trait = dragon_heritage
         }
+        NOT = { has_variable = decision_taken }
     }
 
     possible = {
@@ -83,12 +84,20 @@ locari_examine_draconic_carvings = {
                     is_building_type = building_dragon_ruins
                     level = 8
 			    }
+                is_incorporated = yes
             }
-            is_incorporated = yes
+
         }
     }
 
     when_taken = {
+        set_variable = {
+			name = decision_taken
+		} 
+        add_modifier = {
+            name = examining_dragon_carvings
+            months = 3
+        }
         trigger_event = {
             id = locari.1
             months = 3

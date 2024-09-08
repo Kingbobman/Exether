@@ -48,20 +48,57 @@ je_dragon_tombs = {
     should_be_pinned_by_default = yes
 
     complete = {
-        any_scope_state = {
-            limit = {
-                has_modifier = modifier_dragon_tomb_site
+        s:STATE_ELENIKAR = {
+            any_scope_state = {
+                limit = {
+                    has_modifier = modifier_dragon_tomb_site
+                }
+                owner = root
             }
-            is_incorporated = yes
+        }
+        s:STATE_TSURWA = {
+            any_scope_state = {
+                limit = {
+                    has_modifier = modifier_dragon_tomb_site
+                }
+                owner = root
+            }
+        }
+        s:STATE_JALALABAKOV = {
+            any_scope_state = {
+                limit = {
+                    has_modifier = modifier_dragon_tomb_site
+                }
+                owner = root
+            }
+        }
+        s:STATE_IVONDRO = {
+            any_scope_state = {
+                limit = {
+                    has_modifier = modifier_dragon_tomb_site
+                }
+                owner = root
+            }
+        }
+        s:STATE_JERMENION = {
+            any_scope_state = {
+                limit = {
+                    has_modifier = modifier_dragon_tomb_site
+                }
+                owner = root
+            }
         }
     }
 
     on_complete = {
-        any_scope_state = {
+        every_state = {
             limit = {
                 has_modifier = modifier_dragon_tomb_site
             }
-            add_state_trait = state_trait_dragon_tomb
+            state_region = {
+                remove_modifier = modifier_dragon_tomb_site
+                add_state_trait = state_trait_dragon_tomb
+            }
         }
         add_modifier = {
             name = found_dragon_tombs
