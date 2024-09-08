@@ -65,19 +65,11 @@ state_trait_hellenova_river = {
 	}	
 }
 
-state_trait_red_chimesilt = {
-	icon = "gfx/interface/icons/state_trait_icons/dry_climate.dds"
-	
-	modifier = {
-		building_opium_plantation_throughput_add = 0.15
-		building_group_bg_agriculture_throughput_add = -0.1
-	}	
-}
-
 state_trait_dragon_tomb = {
 	icon = "gfx/interface/icons/state_trait_icons/dry_climate.dds"
-	
 	modifier = {
+		state_migration_pull_mult = 0.25
+		building_gold_mine_throughput_add = 0.1
 		building_dragon_ruins_throughput_add = 0.2
 	}	
 }
