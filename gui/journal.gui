@@ -1221,6 +1221,8 @@ types journal
 					position = { 0 -20 }
 					parentanchor = hcenter|bottom
 					
+					visible = "[Not(GetPlayer.MakeScope.Var('first_retainer').IsSet)]"
+
 					blockoverride "tooltip" {
 						tooltip = "RECRUIT_CHARACTER_RETAINER"
 					}
@@ -1236,12 +1238,14 @@ types journal
 					position = { -110 -20 }
 					parentanchor = hcenter|bottom
 					
+					visible = "[Not(GetPlayer.MakeScope.Var('second_retainer').IsSet)]"
+
 					blockoverride "tooltip" {
 						tooltip = "RECRUIT_CHARACTER_RETAINER"
 					}
 
 					blockoverride "onclick" {
-						onclick = "[PopupManager.ToggleRecruitFormationGeneral( MilitaryFormation.Self )]"
+						onclick = "[GetVariableSystem.Toggle('show_recruit_retainer')]"
 					}
 				}
 
@@ -1251,12 +1255,14 @@ types journal
 					position = { 110 -20 }
 					parentanchor = hcenter|bottom
 					
+					visible = "[Not(GetPlayer.MakeScope.Var('third_retainer').IsSet)]"
+
 					blockoverride "tooltip" {
 						tooltip = "RECRUIT_CHARACTER_RETAINER"
 					}
 
 					blockoverride "onclick" {
-						onclick = "[PopupManager.ToggleRecruitFormationGeneral( MilitaryFormation.Self )]"
+						onclick = "[GetVariableSystem.Toggle('show_recruit_retainer')]"
 					}
 				}
 
@@ -1266,12 +1272,14 @@ types journal
 					position = { -210 -20 }
 					parentanchor = hcenter|bottom
 					
+					visible = "[Not(GetPlayer.MakeScope.Var('fourth_retainer').IsSet)]"
+
 					blockoverride "tooltip" {
 						tooltip = "RECRUIT_CHARACTER_RETAINER"
 					}
 
 					blockoverride "onclick" {
-						onclick = "[PopupManager.ToggleRecruitFormationGeneral( MilitaryFormation.Self )]"
+						onclick = "[GetVariableSystem.Toggle('show_recruit_retainer')]"
 					}
 				}
 
@@ -1281,12 +1289,14 @@ types journal
 					position = { 210 -20 }
 					parentanchor = hcenter|bottom
 					
+					visible = "[Not(GetPlayer.MakeScope.Var('fifth_retainer').IsSet)]"
+
 					blockoverride "tooltip" {
 						tooltip = "RECRUIT_CHARACTER_RETAINER"
 					}
 
 					blockoverride "onclick" {
-						onclick = "[PopupManager.ToggleRecruitFormationGeneral( MilitaryFormation.Self )]"
+						onclick = "[GetVariableSystem.Toggle('show_recruit_retainer')]"
 					}
 				}
 			}

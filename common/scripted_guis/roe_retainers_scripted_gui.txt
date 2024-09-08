@@ -47,6 +47,15 @@
 			}
 		}
 
+		remove_list_variable = {
+			name = available_retainers_list
+			target = scope:recruited_character
+		}
+
+		create_character = {
+			template = retainer_template
+		}
+
 	}
 	ai_is_valid = {
 		always = no
@@ -55,7 +64,7 @@
 		base = 50
 	}
 	is_valid = {
-		always = yes
+		NOT = { has_variable = fifth_retainer }
 	}
 }
 
