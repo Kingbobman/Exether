@@ -1302,19 +1302,19 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_CAM_RINNARA
-				count = 10
+				count = 3
 			}
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_CAM_LIADRINE
-				count = 10
+				count = 2
 			}
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_mobile_artillery
 				state_region = s:STATE_CAM_NUALA
-				count = 10
+				count = 5
 			}
 
 			save_scope_as = cllarmy2
@@ -1339,19 +1339,19 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_CAM_NUALA
-				count = 10
+				count = 4
 			}
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_CAM_CALLAIRD
-				count = 10
+				count = 3
 			}
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_mobile_artillery
 				state_region = s:STATE_SOUTHERN_FEYSTALK
-				count = 10
+				count = 7
 			}
 
 			save_scope_as = cllarmy3
@@ -1948,6 +1948,140 @@
 		}
 	}
 
+	c:BLL ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_vermillion_thicket
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_KOTIK
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_POFIKAN
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_NOLIPIK
+				count = 2
+			}
+			save_scope_as = bllarmy1
+		}
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			hq = sr:region_vermillion_thicket
+			save_scope_as = bllgen1
+			}
+			scope:bllgen1 = {
+			transfer_to_formation = scope:bllarmy1
+			}
+	}
+
+	c:LTA ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_vermillion_thicket
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_BIFAN
+				count = 5
+			}
+			save_scope_as = ltaarmy1
+		}
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			hq = sr:region_vermillion_thicket
+			save_scope_as = ltagen1
+			}
+			scope:ltagen1 = {
+			transfer_to_formation = scope:ltaarmy1
+			}
+	}
+
+	c:PVA ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_vermillion_thicket
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_ZIKAN
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_KANOBAN
+				count = 2
+			}
+			save_scope_as = pvaarmy1
+		}
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			hq = sr:region_vermillion_thicket
+			save_scope_as = pvagen1
+			}
+			scope:pvagen1 = {
+			transfer_to_formation = scope:pvaarmy1
+			}
+	}
+
+	c:IRA ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_vermillion_thicket
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_ZALULIK
+				count = 8
+			}
+			save_scope_as = iraarmy1
+		}
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			hq = sr:region_vermillion_thicket
+			save_scope_as = iragen1
+			}
+			scope:iragen1 = {
+			transfer_to_formation = scope:iraarmy1
+			}
+	}
+
+	c:RLP ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_vermillion_thicket
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_MIPOLIK
+				count = 4
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_FOBAN
+				count = 2
+			}
+			save_scope_as = rlparmy1
+		}
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			hq = sr:region_vermillion_thicket
+			save_scope_as = rlpgen1
+			}
+			scope:rlpgen1 = {
+			transfer_to_formation = scope:rlparmy1
+			}
+	}
 }
 
 

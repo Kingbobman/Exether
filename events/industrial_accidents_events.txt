@@ -312,7 +312,7 @@ industrial_accident_events.4 = {
 
 	trigger = {
 		any_scope_state = {
-			has_building = building_distillery
+			has_building = building_distillery 
 		}
 		NOT = {
 			has_variable = great_molasses_flood
@@ -321,8 +321,8 @@ industrial_accident_events.4 = {
 	immediate = {
 		random_scope_state = {
 			limit = {
-				has_building = building_distillery 
-			}
+				has_building = building_distillery
+				}
 			save_scope_as = molasses_flood_state
 		}
 		set_variable = {
@@ -330,7 +330,6 @@ industrial_accident_events.4 = {
 			value = yes
 		}
 	}
-
 	option = {
 		name = industrial_accident_events.4.a
 		default_option=yes
