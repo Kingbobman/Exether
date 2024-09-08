@@ -287,4 +287,35 @@
 			transfer_to_formation = scope:pay_army
 		}
 	}
+	
+	c:VIP = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_dreamweaver_jungle
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_VISHUDDHIKARA
+				count = 7
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_BUDAMURAYIRI
+				count = 7
+			}
+
+			save_scope_as = vip_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_dreamweaver_jungle
+			save_scope_as = vip_general
+		}
+		
+		scope:vip_general = {
+			transfer_to_formation = scope:vip_army
+		}
+	}
 }

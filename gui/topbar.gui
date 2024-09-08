@@ -17,6 +17,8 @@ types topbar_components
 
 		flowcontainer = {
 			visible = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
+			spacing = 6
+
 			block "animation" {
 				position = { 0 0 }
 				alpha = 0
@@ -514,7 +516,50 @@ types topbar_components
 									}
 								}
 								
-								
+								### Renown
+								button = {
+									name = "tutorial_highlight_renown"
+									using = glow_button
+									size = { 100 40 }
+									tooltip = "RENOWN_TOOLTIP"
+									using = tooltip_below
+									onclick = "[GetVariableSystem.Toggle('show_magic')]"
+									onclick = "[InformationPanelBar.ClosePanel]"
+									onclick = "[MapListPanelManager.CloseCurrentPanel]"
+									onclick = "[GetVariableSystem.Clear('international_open')]"
+									enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
+									
+									icon = {
+										size = { 32 32 }
+										position = { 0 2 }
+										name = magic_power_icon
+										texture = "gfx/interface/icons/topbar/magic_reserves_icon.dds"
+										parentanchor = vcenter
+									}
+									
+									textbox = {
+										position = { 35 -3 }
+										name = capital_value
+										raw_text = "#bold [AccessPlayer.MakeScope.ScriptValue('renown')|=+D]#!"
+										align = left|nobaseline
+										using = fontsize_large
+										autoresize = yes
+										parentanchor = vcenter
+									}
+									
+									double_direction_progressbar = {
+										size = { 60 6 }
+										position = { 40 -3 }
+										parentanchor = bottom
+										
+										blockoverride "value_left" {
+											value = "[AccessPlayer.MakeScope.ScriptValue('normalized_renown_deficit')]"
+										}
+										blockoverride "value_right" {
+											value = "[AccessPlayer.MakeScope.ScriptValue('normalized_renown_surplus')]"
+										}
+									}
+								}
 							}
 
 							block "convoys_info" {

@@ -1256,7 +1256,12 @@ dp_unify_nagabumi = {
 		NOT = { exists = c:NBI }
 		NOT = { is_country_type = decentralized }
 		NOT = { is_country_type = organization_tag }
-		has_technology_researched = nationalism
+		OR = {
+			has_technology_researched = nationalism
+			has_modifier = jihduk_paseb
+			has_modifier = toldek_paseb
+		}
+		
 	}
 	
 	on_weekly_pulse = {}

@@ -1,10 +1,25 @@
-﻿l_english:
+l_english:
   ig_variant_mages: "[GetInterestGroupVariant('ig_mages',GetPlayer).GetNameWithCountryVariant]"
   interest_group_ig_mages_pol_str_mult: "$ig_variant_mages$ [concept_political_strength]"
   interest_group_ig_mages_pol_str_mult_desc: "A bonus or penalty to the total [concept_political_strength] of the $ig_variant_mages$ [concept_interest_group]"
 
   country_adventurers_pol_str_mult: "[concept_political_strength] of $adventurers$"
   country_adventurers_pol_str_mult_desc: "An increase or descrease in the [concept_political_strength] of $adventurers$"
+
+  country_renown_pos_add: "@renown! [concept_renown]"
+  country_renown_pos_add_desc:  "An increase or decrease in @renown! [concept_renown]"
+
+  country_renown_neg_add: "@renown! [concept_renown]"
+  country_renown_neg_add_desc:  "An increase or decrease in @renown! [concept_renown]"
+
+  country_renown_upkeep: "@renown! [concept_renown]"
+  country_renown_subtract_desc:  "An increase or decrease in @renown! [concept_renown]"
+
+  country_renown_gen_mult: "@renown! [concept_renown]"
+  country_renown_gen_mult_desc:  "An increase or decrease in @renown! [concept_renown]"
+
+  country_renown_cost_mult: "@renown! [concept_renown]"
+  country_renown_cost_mult_desc:  "An increase or decrease in @renown! [concept_renown]"
 
   country_arcana_pos_add: "@magic! [concept_magic_reserves]"
   country_arcana_pos_add_desc:  "An increase or decrease in @magic! [concept_magic_reserves]"
@@ -20,6 +35,7 @@
 
   country_arcana_cost_mult: "@magic! [concept_magic_reserves]"
   country_arcana_cost_mult_desc:  "An increase or decrease in @magic! [concept_magic_reserves]"
+
 
   state_veil_integrity_contribution: "@veilneg! [Concept('concept_veil_integrity', 'Veil')] Disruption"
   state_veil_integrity_contribution_desc: "A decrease in @veilneg! [concept_veil_integrity]"
@@ -89,7 +105,7 @@
   goods_output_blubber_mult_desc: "A bonus of penalty to the amount of @blubber! Blubber is produced by buildings"
 
 	goods_output_monster_essence_mult: "Building @monster_essence! Monster_Essence Output"
-  goods_output_monster_essence_mult_desc: "A bonus of pentalty to the amount of @monster essence! Monster Essence is produced by buildings"
+  goods_output_monster_essence_mult_desc: "A bonus or penalty to the amount of @monster_essence! Monster Essence is produced by buildings"
   
   goods_input_furniture_add: "@furniture! Furniture input"
   goods_input_furniture_add_desc: "The amount of @furniture! Furniture consumed by buildings"
@@ -103,8 +119,15 @@
   goods_input_blubber_add_desc: "The amount of @blubber! Blubber consumed by buildings"
   goods_output_blubber_add: "@blubber! Blubber output"
   goods_output_blubber_add_desc: "The amount of @blubber! Blubber produced by buildings"
+
   state_soulwrought_assembled_add: "[GetCulture('soulwrought').GetName] produced per month"
   state_soulwrought_assembled_add_desc: "The amount of [GetCulture('soulwrought').GetName] produced by buildings, released in batches of 10K"
+  state_soulwrought_assembled_mult: "Building [GetCulture('soulwrought').GetName] Output"
+  state_soulwrought_assembled_mult_desc: "A bonus or penalty to the amount of [GetCulture('soulwrought').GetName] produced by buildings"
+  state_diggy_diggy_dwarf_add: "[GetCulture('arcthar').GetName] unpetrified per month"
+  state_diggy_diggy_dwarf_add_desc: "The amount of [GetCulture('arcthar').GetName] unpetrified by buildings, released in batches of 5K"
+  state_diggy_diggy_dwarf_mult: "Building [GetCulture('arcthar').GetName] output"
+  state_diggy_diggy_dwarf_mult_desc: "A bonus or penalty to the amount of [GetCulture('arcthar').GetName] unpetrified by buildings"
 
   goods_input_thaumacores_add: "@thaumacores! Thaumacores input"
   goods_input_thaumacores_add_desc: "The amount of @thaumacores! Thaumacores consumed by buildings"
@@ -153,6 +176,9 @@
 
   goods_output_airships_add: "@clippers! Airships output" #change this to airships when new art
   goods_output_airships_add_desc: "The amount of @clippers! Airships produced by buildings"
+
+  goods_output_nimbium_add: "@nimbium! Nimbium output"
+  goods_output_nimbium_add_desc: "The amount of @nimbium! Nimbium produced by buildings"
 
   goods_output_coal_mult: "Building @coal! Coal output"
   goods_output_coal_mult_desc: "A bonus or penalty to the amount of @coal! output produced by buildings"
@@ -316,3 +342,11 @@
   modifier_lighthouse_site: "Possible Lighthouse Site"
   zulth_modifier: "Upstart Warlord"
   union_of_the_sands_junior_partner: "Ruled by Consort"
+  toldek_paseb: "The Toldek Paseb"
+  abolished_toldek_paseb: "Abolished Toldek Paseb"
+  upshana_restored: "Upshana Dhaalum Restored"
+  upashna_dhaalum: "The Upashna Dhaalum"
+  jihduk_paseb: "The Jihduk Paseb"
+  abolished_jihduk_paseb: "Abolished Jihduk Paseb"
+  accepting_soulwrought_homelands: "Accepting Soulwrought Homelands"
+  rejecting_soulwrought_homelands: "Rejecting Soulwrought Homelands"

@@ -51,6 +51,7 @@ dragonblight_vaccine_progress_bar = {
 				desc = "dragon_vaccine_progress_from_literacy_tt"
 				owner = {
 					add = this.literacy_rate
+					multiply = 10
 				}
 						
 			}
@@ -60,16 +61,15 @@ dragonblight_vaccine_progress_bar = {
 			limit = {
 				is_ai = yes 
 				}
-			}	
-			add = {
-				desc = "dragon_vaccine_ai_cheats_tt"
-				owner = {
-					add = 0.4
+				add = {
+					desc = "dragon_vaccine_ai_cheats_tt"
+					owner = {
+						add = 4
+					}
+							
 				}
-						
-			}
-			
-		}
+			}	
+
 		if = {
 			limit = {
 				owner = {
@@ -83,6 +83,7 @@ dragonblight_vaccine_progress_bar = {
 				owner = {
 					ig:ig_intelligentsia = {
 						add = this.ig_clout
+						multiply = 10
 					}
 				}
 			}
@@ -99,9 +100,14 @@ dragonblight_vaccine_progress_bar = {
 				desc = "dragon_vaccine_progress_from_universities_tt"
 				owner = {
 					every_scope_state = {
-
+						limit = {
+							any_scope_building = {
+								is_building_type = building_university
+								occupancy > 0.65
+							}
+						}
 						add = this.b:building_university.level
-						divide = 50
+						divide = 3 #this math don't math, this is what you divide by to get 0.2 per university
 					}
 				}
 			}
@@ -120,7 +126,7 @@ dragonblight_vaccine_progress_bar = {
 			}
 			add = {
 				desc = "dragon_vaccine_progress_from_bureaucrats_tt"
-				add = 0.15
+				add = 1.5
 
 			}
 		}
@@ -132,6 +138,6 @@ dragonblight_vaccine_progress_bar = {
 	}
 	start_value = 0
 	min_value = 0
-	max_value = 100
+	max_value = 1000
 
  }

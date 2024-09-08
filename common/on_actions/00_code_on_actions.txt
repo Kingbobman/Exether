@@ -322,6 +322,7 @@ on_monthly_pulse_state = {
 	}
 	on_actions = {
 		build_soulwrought
+		diggy_diggy_dwarf
 	}
 }
 on_half_yearly_pulse_state = {}
@@ -332,6 +333,7 @@ on_yearly_pulse_state = {
 		10 = oil_rush.4
 	}
 	on_actions = {
+		soulwrought_homelandinator #this could be a five year
 	}
 }
 on_five_year_pulse_state = {}
@@ -377,16 +379,30 @@ on_battle_lost = {}
 
 # Root = Building
 on_building_built = {
-	effect = { 
-		    if = {
-		        limit = {
-		            is_building_type = building_soulwrought_assembly_plant
-		        }
-		        set_variable = {
-		            name = soulwrought_assemble_count
-		            value = modifier:state_soulwrought_assembled_add
-		        }
-			}		
+	this = {
+		effect = { 
+			if = {
+				limit = {
+					is_building_type = building_soulwrought_assembly_plant
+				}
+				set_variable = {
+					name = soulwrought_assemble_count
+					value = modifier:state_soulwrought_assembled_add
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						is_building_type = building_collapsed_godsbane_vault
+						is_building_type = building_renovated_godsbane_vault
+						}
+				}
+				set_variable = {
+					name = dwarf_digging_count
+					value = modifier:state_diggy_diggy_dwarf_add
+				}
+			}
+		}	
 	}
 }
 
@@ -2271,6 +2287,68 @@ build_soulwrought = {
             }
 
 			remove_variable = assembly
+
+        }
+    }
+}
+
+soulwrought_homelandinator = { #gives soulwrought homelands to any state with a soulwrought plant and >30% soulwrought population ##might replace this with an event that the player can see once we have some soulwrought event art, could also move to 5 year pulse?
+	random_events = {
+		20 = synthetic_dawn.1
+	}
+}
+
+diggy_diggy_dwarf = { #digs arcthar out of the ground
+    effect = {
+        if = {
+            limit = {
+                any_scope_building = {
+					OR = {
+						is_building_type = building_collapsed_godsbane_vault
+						is_building_type = building_renovated_godsbane_vault
+					}
+                    
+                }
+            }
+
+			if = {
+				limit = {
+					NOT = {
+						has_variable = dwarf_digging_count
+					}
+				}
+				set_variable = {
+					name = dwarf_digging_count
+					value = 0
+				}
+			}
+
+			set_variable = {
+                name = diggy_stone
+                value = modifier:state_diggy_diggy_dwarf_add
+            }
+
+			change_variable = {
+                name = dwarf_digging_count
+                add = var:diggy_stone
+            }
+			
+			if = {
+                limit = {
+                    var:dwarf_digging_count > 5000
+                }
+                create_pop = {
+                    pop_type = laborers
+                    culture  = arcthar
+                    size     = 20000
+                }
+                change_variable = {
+					name = dwarf_digging_count
+					subtract = 5000
+				}
+            }
+
+			remove_variable = diggy_stone
 
         }
     }
