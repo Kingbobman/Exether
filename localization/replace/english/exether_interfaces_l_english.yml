@@ -23,12 +23,17 @@
   RENOWN_EXCESS_EFFECT_HEADER: "Effects from #v [AccessPlayer.MakeScope.ScriptValue('normalized_renown')|%0]#! @renown! [concept_renown] #g excess#! (generation is higher than usage):\n$RENOWN_SURPLUS_EFFECTS$\n\n"
   RENOWN_DEFICIT_EFFECT_HEADER: "Effects from #v [Multiply_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('normalized_renown'),'(CFixedPoint)-1')|%0]#! @renown! [concept_renown] #n deficit#! (usage is higher than generation):\n$RENOWN_DEFICIT_EFFECTS$\n\n"
   RENOWN_BASE_VALUE_BONUS: "\n#g +100#! from Base Value"
-  RENOWN_COST_VALUE: "\n [AccessPlayer.MakeScope.ScriptValue('renown_upkeep')|=+D] from [concept_retainers][ConcatIfNeitherEmpty( '\n', AccessPlayer.GetModifier.GetDescFor('country_renown_neg_add') )][ConcatIfNeitherEmpty( '\n', AccessPlayer.GetModifier.GetDescFor('country_renown_cost_mult') )]"
-  RENOWN_COST_VALUE: "\n [AccessPlayer.MakeScope.ScriptValue('renown_upkeep')|=+D] from [concept_retainers][ConcatIfNeitherEmpty( '\n', AccessPlayer.GetModifier.GetDescFor('country_renown_neg_add') )][ConcatIfNeitherEmpty( '\n', AccessPlayer.GetModifier.GetDescFor('country_renown_cost_mult') )]"
+  RENOWN_COST_VALUE: "\n [AccessPlayer.MakeScope.ScriptValue('renown_upkeep')|=+D] from [Concept('concept_retainer', '$concept_retainers$')][ConcatIfNeitherEmpty( '\n', AccessPlayer.GetModifier.GetDescFor('country_renown_neg_add') )][ConcatIfNeitherEmpty( '\n', AccessPlayer.GetModifier.GetDescFor('country_renown_cost_mult') )]"
+  RENOWN_COST_VALUE: "\n [AccessPlayer.MakeScope.ScriptValue('renown_upkeep')|=+D] from [Concept('concept_retainer', '$concept_retainers$')][ConcatIfNeitherEmpty( '\n', AccessPlayer.GetModifier.GetDescFor('country_renown_neg_add') )][ConcatIfNeitherEmpty( '\n', AccessPlayer.GetModifier.GetDescFor('country_renown_cost_mult') )]"
   RENOWN_INSTITUTION_RESERVE_BONUS: "\n[AccessPlayer.MakeScope.ScriptValue('renown_institution_bonus')|=+D] from [GetInstitutionType('institution_renownal_focus').GetName]"
   renownal_focus_institution_tooltip: "test"
   RENOWN_SURPLUS_EFFECTS: "[Multiply_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('normalized_renown'),'(CFixedPoint)10')|=+D%0] #yellow $country_tech_research_speed_mult$ #!"
   RENOWN_DEFICIT_EFFECTS: "[Multiply_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('normalized_renown'),'(CFixedPoint)10')|=+D%0] #yellow $country_tech_research_speed_mult$ #!"
+
+  CHARACTER_RETAINER_ROLE: "#v Retainer#!"
+  CHARACTER_RETAINER_ROLE_TOOLTIP: "#header [Character.GetFullName]#! is a #v Retainer#!"
+  CHARACTER_PANEL_SUBTITLE_OTHER: "[SelectLocalization(Character.MakeScope.Var('is_retainer').IsSet, Concept('concept_retainer', '$concept_retainer$'), SelectLocalization(Character.IsRuler, Concept('concept_ruler', Character.GetPrimaryRoleTitle), Character.GetPrimaryRoleName))] [SelectLocalization(Character.IsRuler, 'of','in')] [Character.GetCountry.GetName]"
+
 
   BUILDING_POP_CONSTRUCTION_TOOLTIP: "#bold #white Pop Production#!#!\nBuildings in this state are producing [Concept('concept_pop', '$concept_pops$')] in batches.\nOnce the progress bar is filled by outputs from local [Concept('concept_building', '$concept_buildings$')], a new batch will be released and the progress will be reset."
 

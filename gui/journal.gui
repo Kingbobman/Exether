@@ -303,10 +303,10 @@ types journal
 							name = "tutorial_highlight_magic_reserves"
 							parentanchor = center
 							using = fontsize_mega
-							raw_text = "@magic![AccessPlayer.MakeScope.ScriptValue('arcana')|=+D]"
+							raw_text = "@renown![AccessPlayer.MakeScope.ScriptValue('renown')|=+D]"
 							autoresize = yes
 							align = center|nobaseline
-							tooltip = "MAGIC_TOOLTIP"
+							tooltip = "RENOWN_TOOLTIP"
 						}
 					}
 
@@ -1211,6 +1211,14 @@ types journal
 							}
 						}
 					}
+				}
+
+				vfx = {
+					position = { 0 -2 }
+
+					blockoverride "entity_instance" {
+						entity_instance = vfx_entity_ui_powerbloc_rank_03_rulers
+					}				
 				}
 
 				### PARTY MEMBER RECRUITMENT
