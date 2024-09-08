@@ -48,7 +48,7 @@ je_dragon_tombs = {
     should_be_pinned_by_default = yes
 
     complete = {
-        any_state = {
+        any_scope_state = {
             limit = {
                 has_modifier = modifier_dragon_tomb_site
             }
@@ -57,6 +57,14 @@ je_dragon_tombs = {
     }
 
     on_complete = {
-
+        any_scope_state = {
+            limit = {
+                has_modifier = modifier_dragon_tomb_site
+            }
+            add_state_trait = state_trait_dragon_tomb
+        }
+        add_modifier = {
+            name = found_dragon_tombs
+        }
     }
 }
