@@ -873,15 +873,14 @@ types journal
 				# BLOC MEMBER 4
 				# MEMBER AVAILABLE
 				container = {
-					visible = "[GreaterThan_int32( GetDataModelSize(PowerBloc.GetMembersWithUniqueHeadsOfState), '(int32)3' )]"
+					visible = "[GetPlayer.MakeScope.Var('fourth_retainer').IsSet]"
 					parentanchor = hcenter
 					position = { -210 15 }
 					maximumsize = { 100 265 } # This maximumsize is to make the button for this portrait not overlap the other character's buttons
 
 					character_portrait_base = {
 						parentanchor = hcenter
-						datacontext = "[GetPlayer]"
-						datacontext = "[GetPlayer.GetRuler]"
+						datacontext = "[GetPlayer.MakeScope.GetVariable('fourth_retainer').GetCharacter]"
 
 						size = { 250 270 }
 
@@ -892,7 +891,7 @@ types journal
 						}
 
 						blockoverride "portrait_texture" {
-							portrait_texture = "[GetPlayer.GetRuler.GetAnimatedPortrait('characters_portrait_environment', 'camera_event_right', 'idle', PdxGetWidgetScreenSize(PdxGuiWidget.Self))]"
+							portrait_texture = "[Character.GetAnimatedPortrait('characters_portrait_environment', 'camera_event_right', 'idle', PdxGetWidgetScreenSize(PdxGuiWidget.Self))]"
 						}
 
 						blockoverride "portrait_icons" {}
@@ -922,7 +921,7 @@ types journal
 
 				# NO FOURTH MEMBER AVAILABLE
 				widget = {
-					visible = "[Not( GreaterThan_int32( GetDataModelSize(PowerBloc.GetMembersWithUniqueHeadsOfState), '(int32)3' ))]"
+					visible = "[Not(GetPlayer.MakeScope.Var('fourth_retainer').IsSet)]"
 
 					parentanchor = hcenter
 					size = { 280 280 }
@@ -945,8 +944,9 @@ types journal
 					maximumsize = { 100 265 } # This maximumsize is to make the button for this portrait not overlap the other character's buttons
 
 					character_portrait_base = {
+						visible = "[GetPlayer.MakeScope.Var('second_retainer').IsSet]"
 						parentanchor = hcenter
-						datacontext = "[Country.GetRuler]"
+						datacontext = "[GetPlayer.MakeScope.GetVariable('second_retainer').GetCharacter]"
 
 						size = { 250 265 }
 
@@ -1007,7 +1007,7 @@ types journal
 
 				# NO SECOND MEMBER AVAILABLE
 				widget = {
-					visible = "[Not( GreaterThan_int32( GetDataModelSize(PowerBloc.GetMembersWithUniqueHeadsOfState), '(int32)1' ))]"
+					visible = "[Not(GetPlayer.MakeScope.Var('second_retainer').IsSet)]"
 					parentanchor = hcenter
 					size = { 280 280 }
 					position = { -110 5 }
@@ -1022,15 +1022,14 @@ types journal
 				### BLOC MEMBER 5
 				# MEMBER AVAILABLE
 				container = {
-					visible = "[GreaterThan_int32( GetDataModelSize(PowerBloc.GetMembersWithUniqueHeadsOfState), '(int32)4' )]"
+					visible = "[GetPlayer.MakeScope.Var('fifth_retainer').IsSet]"
 					parentanchor = hcenter
 					position = { 210 15 }
 					maximumsize = { 100 265 } # This maximumsize is to make the button for this portrait not overlap the other character's buttons
 
 					character_portrait_base = {
 						parentanchor = hcenter
-						datacontext = "[PowerBloc.GetMemberWithUniqueHeadOfState('(int32)4')]"
-						datacontext = "[Country.GetRuler]"
+						datacontext = "[GetPlayer.MakeScope.GetVariable('fifth_retainer').GetCharacter]"
 
 						size = { 250 270 }
 
@@ -1071,7 +1070,7 @@ types journal
 
 				# NO FIFTH MEMBER AVAILABLE
 				widget = {
-					visible = "[Not( GreaterThan_int32( GetDataModelSize(PowerBloc.GetMembersWithUniqueHeadsOfState), '(int32)4' ))]"
+					visible = "[Not(GetPlayer.MakeScope.Var('fifth_retainer').IsSet)]"
 					parentanchor = hcenter
 					size = { 280 280 }
 					position = { 210 15 }
@@ -1087,7 +1086,7 @@ types journal
 				### BLOC MEMBER 3
 				# MEMBER AVAILABLE
 				container = {
-					visible = "[GreaterThan_int32( GetDataModelSize(PowerBloc.GetMembersWithUniqueHeadsOfState), '(int32)2' )]"
+					visible = "[GetPlayer.MakeScope.Var('third_retainer').IsSet]"
 					datacontext = "[PowerBloc.GetMemberWithUniqueHeadOfState('(int32)2')]"
 					parentanchor = hcenter
 					position = { 110 15 }
@@ -1095,7 +1094,7 @@ types journal
 
 					character_portrait_base = {
 						parentanchor = hcenter
-						datacontext = "[Country.GetRuler]"
+						datacontext = "[GetPlayer.MakeScope.GetVariable('third_retainer').GetCharacter]"
 
 						size = { 250 265 }
 
@@ -1152,7 +1151,7 @@ types journal
 
 				# NO THIRD MEMBER AVAILABLE
 				widget = {
-					visible = "[Not( GreaterThan_int32( GetDataModelSize(PowerBloc.GetMembersWithUniqueHeadsOfState), '(int32)2' ))]"
+					visible = "[Not(GetPlayer.MakeScope.Var('third_retainer').IsSet)]"
 					parentanchor = hcenter
 					size = { 280 280 }
 					position = { 110 5 }
@@ -1169,7 +1168,7 @@ types journal
 				container = {
 					parentanchor = hcenter
 					maximumsize = { 100 265 } # This maximumsize is to make the button for this portrait not overlap the other character's buttons
-					datacontext = "[GetPlayer.GetRuler]"
+					datacontext = "[GetPlayer.MakeScope.GetVariable('first_retainer').GetCharacter]"
 
 					character_portrait_base = {
 						parentanchor = hcenter
@@ -1212,7 +1211,6 @@ types journal
 							}
 						}
 					}
-
 				}
 
 				### PARTY MEMBER RECRUITMENT

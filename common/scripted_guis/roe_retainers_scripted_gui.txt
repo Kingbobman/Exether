@@ -1,0 +1,75 @@
+﻿recruit_retainer = {
+	saved_scopes = { recruited_character }
+	effect = {
+		if = {
+			limit = {
+				NOT = { has_variable = first_retainer }
+			}
+			set_variable = {
+				name = first_retainer
+				value = scope:recruited_character
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = { has_variable = second_retainer }
+			}
+			set_variable = {
+				name = second_retainer
+				value = scope:recruited_character
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = { has_variable = third_retainer }
+			}
+			set_variable = {
+				name = third_retainer
+				value = scope:recruited_character
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = { has_variable = fourth_retainer }
+			}
+			set_variable = {
+				name = fourth_retainer
+				value = scope:recruited_character
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = { has_variable = fifth_retainer }
+			}
+			set_variable = {
+				name = fifth_retainer
+				value = scope:recruited_character
+			}
+		}
+
+	}
+	ai_is_valid = {
+		always = no
+	}
+	ai_chance = {
+		base = 50
+	}
+	is_valid = {
+		always = yes
+	}
+}
+
+
+show_placeholder_retainer = {
+	saved_scopes = { retainer_spot }
+
+	is_valid = {
+		if={
+			limit={
+				scope:retainer_spot = 1
+			}
+			
+		}
+	}
+}
+

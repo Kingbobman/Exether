@@ -2,9 +2,12 @@
 	is_agitator = yes
 	on_created = {
 		place_character_in_void = 10000
-		add_to_global_variable_list = {
-			name = available_retainers_list
-			target = THIS
-		}         
+		save_scope_as = retainer
+		owner = {
+			add_to_variable_list = {
+				name = available_retainers_list
+				target = scope:retainer
+			}        
+		} 
     }
 }

@@ -169,14 +169,15 @@ types generate_retainer_types
 
 								### RECRUIT BUTTON
 								button = {
-									name = "tutorial_highlight_recruit_commander_recruit_button"
+									name = "tutorial_highlight_recruit_retainer_recruit_button"
 									parentanchor = hcenter
 									using = default_button_action
 									size = { 325 45 }
 									text = "RECRUIT_CHARACTER_BUTTON"
-									enabled = "[IsValid(Character.GetRecruitCommand( PopupManager.GetRecruitFormation ))]"
-									tooltip = "COMMANDER_RECRUIT_BUTTON_TOOLTIP"
-									onclick = "[Character.RecruitCharacter( PopupManager.GetRecruitFormation )]"
+									datacontext = "[GetScriptedGui('recruit_retainer')]"
+									onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('recruited_character', Character.MakeScope).End)]"
+									enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('recruited_character', Character.MakeScope).End)]"
+									tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('recruited_character', Character.MakeScope).End)]"
 									block "sound" {
 										using = commander_recruit_button_sound
 									}
@@ -185,7 +186,7 @@ types generate_retainer_types
 						}
 					}
 				}
-			}
+				}
 		}
 	}
 }
