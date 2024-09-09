@@ -67,3 +67,65 @@ locari_jihduk_stop = {
         }
 	}	
 }
+
+locari_examine_draconic_carvings = {
+    is_shown = {
+        any_primary_culture = {
+            has_discrimination_trait = dragon_heritage
+        }
+        NOT = { has_variable = decision_taken }
+    }
+
+    possible = {
+        owns_entire_state_region = STATE_ELENIKAR
+        s:STATE_ELENIKAR = {
+            any_scope_state = {
+                any_scope_building = {
+                    is_building_type = building_dragon_ruins
+                    level = 8
+			    }
+                is_incorporated = yes
+            }
+
+        }
+    }
+
+    when_taken = {
+        set_variable = {
+			name = decision_taken
+		} 
+        add_modifier = {
+            name = examining_dragon_carvings
+            months = 3
+        }
+        trigger_event = {
+            id = locari.1
+            months = 3
+        }
+    }
+}
+
+locari_dragon_tomb_reform = {
+    is_shown = {
+        any_scope_state = {
+            has_modifier = modifier_dragon_tomb_site
+        }
+    }
+
+    possible = {
+        gold_reserves > 10000
+    }
+
+    when_taken = {
+        add_treasury = -10000
+        random_scope_state = {
+            limit = {
+                has_modifier = modifier_dragon_tomb_site
+            }
+            remove_modifier = modifier_dragon_tomb_site
+            state_region = {
+                add_state_trait = state_trait_dragon_tomb
+            }
+        }
+    }
+}
