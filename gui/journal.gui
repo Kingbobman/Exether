@@ -1239,6 +1239,19 @@ types journal
 						onclick = "[GetVariableSystem.Toggle('show_recruit_retainer')]"
 					}
 				}
+				character_popularity_retainer = {
+					blockoverride "visible" {
+						visible = "[GetPlayer.MakeScope.Var('first_retainer').IsSet]"
+					}
+					blockoverride "datacontext" {
+						datacontext = "[GetPlayer.MakeScope.GetVariable('first_retainer').GetCharacter]"
+					}
+					blockoverride "position" {
+						position = { 0 180 }
+					}
+					
+				}
+			
 
 				#PARTY MEMBER 2 BUTTON
 				add_character_button = {
@@ -1256,6 +1269,19 @@ types journal
 						onclick = "[GetVariableSystem.Toggle('show_recruit_retainer')]"
 					}
 				}
+				character_popularity_retainer = {
+					blockoverride "visible" {
+						visible = "[GetPlayer.MakeScope.Var('second_retainer').IsSet]"
+					}
+					blockoverride "datacontext" {
+						datacontext = "[GetPlayer.MakeScope.GetVariable('second_retainer').GetCharacter]"
+					}
+					blockoverride "position" {
+						position = { -110 170 }
+					}
+					
+				}
+				
 
 				#PARTY MEMBER 3 BUTTON
 				add_character_button = {
@@ -1272,6 +1298,18 @@ types journal
 					blockoverride "onclick" {
 						onclick = "[GetVariableSystem.Toggle('show_recruit_retainer')]"
 					}
+				}
+				character_popularity_retainer = {
+					blockoverride "position" {
+						position = { 110 170 }
+					}
+					blockoverride "visible" {
+						visible = "[GetPlayer.MakeScope.Var('third_retainer').IsSet]"
+					}
+					blockoverride "datacontext" {
+						datacontext = "[GetPlayer.MakeScope.GetVariable('third_retainer').GetCharacter]"
+					}
+
 				}
 
 				#PARTY MEMBER 4 BUTTON
@@ -1290,6 +1328,19 @@ types journal
 						onclick = "[GetVariableSystem.Toggle('show_recruit_retainer')]"
 					}
 				}
+				character_popularity_retainer = {
+					blockoverride "position" {
+						position = { -210 30 }
+					}
+					blockoverride "visible" {
+						visible = "[GetPlayer.MakeScope.Var('fourth_retainer').IsSet]"
+					}
+					blockoverride "datacontext" {
+						datacontext = "[GetPlayer.MakeScope.GetVariable('fourth_retainer').GetCharacter]"
+					}
+
+					
+				}
 
 				#PARTY MEMBER 5 BUTTON
 				add_character_button = {
@@ -1306,6 +1357,18 @@ types journal
 					blockoverride "onclick" {
 						onclick = "[GetVariableSystem.Toggle('show_recruit_retainer')]"
 					}
+				}
+				character_popularity_retainer = {
+					blockoverride "visible" {
+						visible = "[GetPlayer.MakeScope.Var('fifth_retainer').IsSet]"
+					}
+					blockoverride "datacontext" {
+						datacontext = "[GetPlayer.MakeScope.GetVariable('fifth_retainer').GetCharacter]"
+					}
+					blockoverride "position" {
+						position = { 210 160 }
+					}
+					
 				}
 			}
 		}

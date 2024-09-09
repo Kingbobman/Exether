@@ -189,4 +189,184 @@ types generate_retainer_types
 				}
 		}
 	}
+
+	types character_stats
+{
+	type character_stats_entry = widget {
+		size = { 220 50 }
+		block "parentanchor" {
+			parentanchor = hcenter
+		}
+		block "entire_stat_tooltip" {}
+		block "visibility" {}
+
+		block "divider" {
+			divider_clean = {
+				parentanchor = bottom|hcenter
+				position = { 0 -2 }
+			}
+		}
+		
+		block "icon" {
+			icon = {
+				block "icon_tooltip" {}
+				block "icon_size" {
+					size = { 35 35 }
+				}
+				block "icon_texture" {
+					texture = "gfx/interface/backgrounds/round_button_bg.dds"
+				}
+				parentanchor = left|vcenter
+				position = { 10 0 }
+			}
+		}
+
+		block "double_text_entry" {
+			textbox = {
+				autoresize = yes
+				position = { 55 6 }
+				elide = left
+				parentanchor = left
+				align = left|nobaseline
+				using = fontsize_small
+				block "double_entry_label" {
+					raw_text = "insert_label"
+				}
+			}
+			textbox = {
+				size = { 170 20 }
+				position = { 55 -6 }
+				elide = right
+				fontsize_min = 14
+				align = left|nobaseline
+				parentanchor = left|bottom
+				block "double_entry_value" {
+					raw_text = "insert_text"
+				}
+			}
+		}
+
+		block "single_text_entry" {
+			textbox = {
+				block "single_text_tooltip" {}
+				autoresize = yes
+				position = { 55 0 }
+				elide = left
+				align = left|nobaseline
+				parentanchor = left|vcenter
+				block "single_entry_value" {
+					raw_text = "insert_text"
+				}
+			}
+		}
+
+		block "additional_items" {}
+	}
+
+	type character_interest_group_entry = character_stats_entry {
+
+		tooltipwidget = {
+		 	FancyTooltip_IG = {}
+		}
+
+		blockoverride "icon" {
+			icon = {
+				visible = "[Not(InterestGroup.IsValid)]"
+				size = { 35 35 }
+				texture = "gfx/interface/icons/ig_icons/politically_unaligned.dds"
+				parentanchor = left|vcenter
+				position = { 10 0 }
+			}
+
+			button_icon_round = {
+				visible = "[InterestGroup.IsValid]"
+				parentanchor = left|vcenter
+				position = { 10 0 }
+
+				blockoverride "size" {
+					size = { 35 35 }
+				}
+				blockoverride "icon_size" {
+					size = { 75% 75% }
+				}
+
+				block "onclick" {
+					onclick = "[InformationPanelBar.OpenInterestGroupPanel(InterestGroup.AccessSelf)]"
+					onrightclick = "[RightClickMenuManager.ShowForIG(InterestGroup.AccessSelf)]"
+				}
+
+
+				blockoverride "icon" {
+					texture = "[InterestGroup.GetTexture]"
+				}			
+			}
+		}
+
+		blockoverride "double_entry_label" {
+			text = "INTEREST_GROUP"
+		}
+		blockoverride "double_entry_value" {
+			raw_text = "#v [InterestGroup.GetNameNoFormatting]#!"
+		}
+		blockoverride "single_text_entry" {}
+	}
+
+	type character_popularity_retainer = flowcontainer {
+			block "datacontext" {}
+			block "visible" {}
+			block "position" {}
+			tooltip = "POPULARITY_BREAKDOWN"
+			parentanchor = hcenter
+			direction = vertical
+		
+
+			flowcontainer = {
+				margin = { 17 15 }
+				align = hcenter|nobaseline
+				background =  {
+					using = entry_bg_fancy_dark
+					alpha = 1
+				}
+				direction = vertical
+				spacing = 2
+				parentanchor = hcenter
+
+
+				textbox = {
+					autoresize = yes
+					position = { 55 6 }
+					elide = left
+					parentanchor = hcenter
+					align = left|nobaseline
+					using = fontsize_small
+					text = "FIRST_NAME"
+				}
+				divider_clean = {
+					parentanchor = hcenter
+					visible = "[Character.IsAgitator]"
+					size = { 55 1 }
+					position = { 0 -2 }
+				}
+				textbox = {
+					autoresize = yes
+					position = { 55 6 }
+					elide = left
+					parentanchor = hcenter
+					align = left|nobaseline
+					using = fontsize_small
+					text = "POPULARITY"
+				}	
+				textbox = {
+					autoresize = yes
+					position = { 55 6 }
+					elide = left
+					parentanchor = hcenter
+					align = left|nobaseline
+					using = fontsize_small
+					text = "CHARACTER_POPULARITY"
+				}
+			}
+
+		}
+	}
 }
