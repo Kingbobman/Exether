@@ -4,20 +4,12 @@
 			type = army
 			hq_region = sr:region_thoughtsmith_ridge
 
+			name = "Awakened Warriors"
+
 			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
+				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_DER_IBBENN
-				count = 10
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_DER_IBBENN
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_DER_IBBENN
-				count = 5
+				count = 25
 			}
 
 			save_scope_as = dob_army
@@ -30,6 +22,100 @@
 		}
 		scope:dob_general = {
 			transfer_to_formation = scope:dob_army
+		}
+	}
+
+	c:GAN ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_thoughtsmith_ridge
+
+			name = "Outland Watch"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_JALALABAKOV
+				count = 35
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_JALALABAKOV
+				service_type = conscript
+				count = 20
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_PULIKOTSK
+				count = 35
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_JALALABAKOV
+				service_type = conscript
+				count = 20
+			}
+
+			save_scope_as = gan_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			hq = region_thoughtsmith_ridge
+			save_scope_as = gan_general
+		}
+		scope:gan_general = {
+			transfer_to_formation = scope:gan_army
+		}
+	}
+
+	c:GLI ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_thoughtsmith_ridge
+
+			name = "Royal Cavern Guard"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_KHARGISHABBO
+				count = 25
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_KHARGISHABBO	
+				service_type = conscript
+				count = 15
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_GLIDGRED_RIZRA
+				count = 25
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_GLIDGRED_RIZRA
+				service_type = conscript
+				count = 15
+			}
+
+			save_scope_as = gli_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			hq = region_thoughtsmith_ridge
+			save_scope_as = gli_general
+		}
+		scope:gli_general = {
+			transfer_to_formation = scope:gli_army
 		}
 	}
 	
