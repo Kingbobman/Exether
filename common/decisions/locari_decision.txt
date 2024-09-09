@@ -104,3 +104,29 @@ locari_examine_draconic_carvings = {
         }
     }
 }
+
+locari_dragon_tomb_reform = {
+    is_shown = {
+        any_scope_state = {
+            has_modifier = modifier_dragon_tomb_site
+        }
+    }
+
+    possible = {
+        gold_reserves > 10000
+        hidden_trigger = {always = yes}
+    }
+
+    when_taken = {
+        add_treasury = -10000
+        random_scope_state = {
+            limit = {
+                has_modifier = modifier_dragon_tomb_site
+            }
+            remove_modifier = modifier_dragon_tomb_site
+            state_region = {
+                add_state_trait = state_trait_dragon_tomb
+            }
+        }
+    }
+}

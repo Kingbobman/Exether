@@ -50,58 +50,45 @@ je_dragon_tombs = {
     complete = {
         s:STATE_ELENIKAR = {
             any_scope_state = {
-                limit = {
+                NOT = {
                     has_modifier = modifier_dragon_tomb_site
                 }
-                owner = root
             }
         }
         s:STATE_TSURWA = {
             any_scope_state = {
-                limit = {
+                NOT = {
                     has_modifier = modifier_dragon_tomb_site
                 }
-                owner = root
             }
         }
         s:STATE_JALALABAKOV = {
             any_scope_state = {
-                limit = {
+                NOT = {
                     has_modifier = modifier_dragon_tomb_site
                 }
-                owner = root
             }
         }
         s:STATE_IVONDRO = {
             any_scope_state = {
-                limit = {
+                NOT = {
                     has_modifier = modifier_dragon_tomb_site
                 }
-                owner = root
             }
         }
         s:STATE_JERMENION = {
             any_scope_state = {
-                limit = {
+                NOT = {
                     has_modifier = modifier_dragon_tomb_site
                 }
-                owner = root
             }
         }
     }
 
     on_complete = {
-        every_state = {
-            limit = {
-                has_modifier = modifier_dragon_tomb_site
-            }
-            state_region = {
-                remove_modifier = modifier_dragon_tomb_site
-                add_state_trait = state_trait_dragon_tomb
-            }
-        }
         add_modifier = {
             name = found_dragon_tombs
+            months = long_modifier_time
         }
     }
 }
