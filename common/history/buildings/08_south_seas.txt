@@ -2447,7 +2447,7 @@
 					building={ 
 						type="building_manor_house"
 						country="c:EME"
-						levels=1
+						levels=2
 						region="STATE_AZURSOL"
 				   }
 				}
@@ -2537,25 +2537,12 @@
 				activate_production_methods={ "default_building_dye_plantation" "pm_road_carts"  }
 			}
 			create_building={
-				building="building_livestock_ranch"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:OLC"
-						levels=2
-						region="STATE_JIVANTA"	
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "pm_simple_ranch" "pm_open_air_stockyards" "pm_standard_fences" "pm_unrefrigerated"  }
-			}
-			create_building={
 				building="building_fishing_wharf"
 		  add_ownership={ 
 			  building={ 
 				  type="building_adventuring_guild"
 				  country="c:EME"
-				  levels=6
+				  levels=8
 				  region="STATE_MERACIEL_AUBELAC"
 			 }
 		  }
@@ -2589,19 +2576,6 @@
 				activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }
 			}
 			create_building={
-				building="building_sugar_plantation"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:EME"
-						levels=1
-						region="STATE_MERACIEL_AUBELAC"
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "default_building_sugar_plantation" "pm_road_carts"  }
-			}
-			create_building={
 				building="building_coffee_plantation"
 				add_ownership={ 
 					building={ 
@@ -2615,12 +2589,25 @@
 				activate_production_methods={ "default_building_coffee_plantation" "pm_road_carts"  }
 			}
 			create_building={
+				building="building_banana_plantation"
+				add_ownership={ 
+					building={ 
+						type="building_manor_house"
+						country="c:EME"
+						levels=5
+						region="STATE_MERACIEL_AUBELAC"
+				   }
+				}
+				reserves=1
+				activate_production_methods={ "default_building_coffee_plantation" "pm_road_carts"  }
+			}
+			create_building={
 				building="building_wheat_farm"
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
 						country="c:EME"
-						levels=4
+						levels=6
 						region="STATE_AZURSOL"
 				   }
 				}
