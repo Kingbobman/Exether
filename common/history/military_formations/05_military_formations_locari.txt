@@ -4,20 +4,12 @@
 			type = army
 			hq_region = sr:region_thoughtsmith_ridge
 
+			name = "Awakened Warriors"
+
 			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
+				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_DER_IBBENN
-				count = 10
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_DER_IBBENN
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_DER_IBBENN
-				count = 5
+				count = 25
 			}
 
 			save_scope_as = dob_army
@@ -30,6 +22,100 @@
 		}
 		scope:dob_general = {
 			transfer_to_formation = scope:dob_army
+		}
+	}
+
+	c:GAN ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_thoughtsmith_ridge
+
+			name = "Outland Watch"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_JALALABAKOV
+				count = 35
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_JALALABAKOV
+				service_type = conscript
+				count = 20
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_PULIKOTSK
+				count = 35
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_JALALABAKOV
+				service_type = conscript
+				count = 20
+			}
+
+			save_scope_as = gan_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			hq = region_thoughtsmith_ridge
+			save_scope_as = gan_general
+		}
+		scope:gan_general = {
+			transfer_to_formation = scope:gan_army
+		}
+	}
+
+	c:GLI ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_thoughtsmith_ridge
+
+			name = "Royal Cavern Guard"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_KHARGISHABBO
+				count = 25
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_KHARGISHABBO	
+				service_type = conscript
+				count = 15
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_GLIDGRED_RIZRA
+				count = 25
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_GLIDGRED_RIZRA
+				service_type = conscript
+				count = 15
+			}
+
+			save_scope_as = gli_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			hq = region_thoughtsmith_ridge
+			save_scope_as = gli_general
+		}
+		scope:gli_general = {
+			transfer_to_formation = scope:gli_army
 		}
 	}
 	
@@ -316,6 +402,79 @@
 		
 		scope:vip_general = {
 			transfer_to_formation = scope:vip_army
+		}
+	}
+
+	c:SSC ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_new_dumonia
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_NYINGMAWASKAHIKAN
+				count = 5
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_KHANGYO
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_SHIGATSENIPIY
+				count = 6
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_ZANPIQ
+				count = 4
+			}
+			save_scope_as = ssc_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_new_dumonia
+			save_scope_as = ssc_general
+		}
+		
+		scope:ssc_general = {
+			transfer_to_formation = scope:ssc_army
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_new_dumonia
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_NYINGMAWASKAHIKAN
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_NYINGMAWASKAHIKAN
+				count = 1
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_KHANGYO
+				count = 4
+			}
+
+			save_scope_as = ssc_fleet
+
+			create_character = {
+				is_admiral = yes
+				hq = region_new_dumonia
+				save_scope_as = ssc_admiral
+			}
+
+			scope:ssc_admiral = {
+				transfer_to_formation = scope:ssc_fleet
+			}
 		}
 	}
 }
