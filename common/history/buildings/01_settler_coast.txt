@@ -141,7 +141,20 @@
 				      level=3
 				      reserves=1
 				      activate_production_methods={ "pm_basic_port" }
-			    }	
+			    }
+				create_building={
+					building="building_logging_camp"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:EME"
+							levels=2
+							region="STATE_CHANTSIRENE"
+					   }
+					}
+					reserves=1
+					activate_production_methods={ "pm_saw_mills" "pm_hardwood" "pm_no_equipment" "pm_road_carts" }
+				}	
 			}    		     						  		
   }
 
@@ -294,8 +307,21 @@
 				}
 				      reserves=1
 				      activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools"  }
-			    }    			    	    			    			    		    
-      }
+			    }
+				create_building={
+					building="building_logging_camp"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:EME"
+							levels=2
+							region="STATE_MERACIEL_AUBELAC"
+					   }
+					}
+					reserves=1
+					activate_production_methods={ "pm_saw_mills" "pm_hardwood" "pm_no_equipment" "pm_road_carts" }
+				}				    	    			    			    		    
+      	}
   }
  
   s:STATE_ABAISSE_DE_MARBRUN = {
