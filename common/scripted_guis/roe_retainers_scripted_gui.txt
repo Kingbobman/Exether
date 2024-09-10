@@ -64,6 +64,24 @@
 		base = 50
 	}
 	is_valid = {
+
+		set_variable = {
+			name = recruitment_balance
+			value = renown
+		}
+
+		change_variable = {
+			name = recruitment_balance
+			subtract = 100
+		}
+
+		change_variable = {
+			name = recruitment_balance
+			subtract = scope:recruited_character.popularity
+		}
+
+
+		recruitment_balance >= 0
 		NOT = { has_variable = fifth_retainer }
 	}
 }

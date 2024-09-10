@@ -167,6 +167,28 @@ types generate_retainer_types
 									}
 								}
 
+								character_stats_entry = {
+
+									tooltip = "POPULARITY_BREAKDOWN"
+	
+									blockoverride "animation" {
+										name = commander_panel_show
+										on_finish = "[PdxGuiTriggerAllAnimations('character_panel_stat')]"
+									}
+	
+									blockoverride "icon_texture" {
+										texture = "gfx/interface/icons/generic_icons/popularity.dds"
+									}
+	
+									blockoverride "double_entry_label" {
+										text = "POPULARITY"
+									}
+									blockoverride "double_entry_value" {
+										text = "CHARACTER_POPULARITY"
+									}
+									blockoverride "single_text_entry" {}
+								}
+
 								### RECRUIT BUTTON
 								button = {
 									name = "tutorial_highlight_recruit_retainer_recruit_button"
@@ -318,54 +340,47 @@ types generate_retainer_types
 			tooltip = "POPULARITY_BREAKDOWN"
 			parentanchor = hcenter
 			direction = vertical
-		
-
-			flowcontainer = {
-				margin = { 17 15 }
-				align = hcenter|nobaseline
-				background =  {
-					using = entry_bg_fancy_dark
-					alpha = 1
-				}
-				direction = vertical
-				spacing = 2
-				parentanchor = hcenter
-
-
-				textbox = {
-					autoresize = yes
-					position = { 55 6 }
-					elide = left
-					parentanchor = hcenter
-					align = left|nobaseline
-					using = fontsize_small
-					text = "FIRST_NAME"
-				}
-				divider_clean = {
-					parentanchor = hcenter
-					visible = "[Character.IsAgitator]"
-					size = { 55 1 }
-					position = { 0 -2 }
-				}
-				textbox = {
-					autoresize = yes
-					position = { 55 6 }
-					elide = left
-					parentanchor = hcenter
-					align = left|nobaseline
-					using = fontsize_small
-					text = "POPULARITY"
-				}	
-				textbox = {
-					autoresize = yes
-					position = { 55 6 }
-					elide = left
-					parentanchor = hcenter
-					align = left|nobaseline
-					using = fontsize_small
-					text = "CHARACTER_POPULARITY"
-				}
+			maximumsize = { 110 80 }
+			minimumsize = { 110 80 }
+			margin_top = 12
+			align = vcenter
+			background =  {
+				using = entry_bg_fancy_dark
+				alpha = 1
 			}
+			direction = vertical
+			spacing = 2
+			parentanchor = hcenter
+			textbox = {
+				autoresize = yes
+				elide = left
+				parentanchor = hcenter
+				align = hcenter|nobaseline
+				using = fontsize_small
+				text = "FIRST_NAME"
+			}
+			divider_clean = {
+				parentanchor = hcenter
+				visible = "[Character.IsAgitator]"
+				size = { 55 1 }
+			}
+			textbox = {
+				autoresize = yes
+				elide = left
+				parentanchor = hcenter
+				align = hcenter|nobaseline
+				using = fontsize_small
+				text = "POPULARITY"
+			}	
+			textbox = {
+				autoresize = yes
+				elide = left
+				parentanchor = hcenter
+				align = hcenter|nobaseline
+				using = fontsize_small
+				text = "CHARACTER_POPULARITY"
+			}
+		
 
 		}
 	}

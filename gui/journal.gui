@@ -1247,7 +1247,7 @@ types journal
 						datacontext = "[GetPlayer.MakeScope.GetVariable('first_retainer').GetCharacter]"
 					}
 					blockoverride "position" {
-						position = { 0 180 }
+						position = { 0 185 }
 					}
 					
 				}
@@ -1277,7 +1277,7 @@ types journal
 						datacontext = "[GetPlayer.MakeScope.GetVariable('second_retainer').GetCharacter]"
 					}
 					blockoverride "position" {
-						position = { -110 170 }
+						position = { -110 175 }
 					}
 					
 				}
@@ -1301,7 +1301,7 @@ types journal
 				}
 				character_popularity_retainer = {
 					blockoverride "position" {
-						position = { 110 170 }
+						position = { 110 175 }
 					}
 					blockoverride "visible" {
 						visible = "[GetPlayer.MakeScope.Var('third_retainer').IsSet]"
@@ -1330,7 +1330,7 @@ types journal
 				}
 				character_popularity_retainer = {
 					blockoverride "position" {
-						position = { -210 30 }
+						position = { -220 165 }
 					}
 					blockoverride "visible" {
 						visible = "[GetPlayer.MakeScope.Var('fourth_retainer').IsSet]"
@@ -1338,8 +1338,6 @@ types journal
 					blockoverride "datacontext" {
 						datacontext = "[GetPlayer.MakeScope.GetVariable('fourth_retainer').GetCharacter]"
 					}
-
-					
 				}
 
 				#PARTY MEMBER 5 BUTTON
@@ -1358,6 +1356,7 @@ types journal
 						onclick = "[GetVariableSystem.Toggle('show_recruit_retainer')]"
 					}
 				}
+
 				character_popularity_retainer = {
 					blockoverride "visible" {
 						visible = "[GetPlayer.MakeScope.Var('fifth_retainer').IsSet]"
@@ -1366,10 +1365,10 @@ types journal
 						datacontext = "[GetPlayer.MakeScope.GetVariable('fifth_retainer').GetCharacter]"
 					}
 					blockoverride "position" {
-						position = { 210 160 }
+						position = { 220 165 }
 					}
-					
 				}
+
 			}
 		}
 
