@@ -295,22 +295,116 @@ types journal
 					direction = vertical
 					using = default_content_fade
 
-					top_illu = {
-						blockoverride "illu" {
-							texture = "gfx/interface/illustrations/top_illus/top_illu_budget.dds"
-						}
-						textbox = {
-							name = "tutorial_highlight_magic_reserves"
-							parentanchor = center
-							using = fontsize_mega
-							raw_text = "@renown![AccessPlayer.MakeScope.ScriptValue('renown')|=+D]"
-							autoresize = yes
-							align = center|nobaseline
-							tooltip = "RENOWN_TOOLTIP"
+					
+					default_header = {
+						blockoverride "text" {
+							text = "REPUTATION"
 						}
 					}
 
+					### COHESION BAR AND EMBLEM
+					widget = {
+						size = { @panel_width_plus_14 95 }
+						parentanchor = hcenter
+
+						widget = {
+							size = { 500 76 }
+							parentanchor = vcenter|right
+
+							icon = {
+								position = { 40 0 }
+								size = { 73% 100% }
+								texture = "gfx/interface/progressbar/cohesion_bar.dds"
+							}
+						}
+
+						icon = {
+							parentanchor = vcenter|left
+							size = { 85 85 }
+							position = { 10 0 }
+							texture = "gfx/interface/icons/topbar/num_one.dds"
+
+
+						}
+
+						widget = {
+			
+							position = { 0 10 }
+							parentanchor = hcenter|vcenter
+							block "progressbar_size" {
+								size = { 347 0 }
+							}
+							tooltip = "RENOWN_TOOLTIP"
+							onmousehierarchyenter = "[PdxGuiWidget.FindChild('reputation_max').InterruptThenTriggerAnimation('hide_reputation_max','show_reputation_max')]"
+							onmousehierarchyleave = "[PdxGuiWidget.FindChild('reputation_max').InterruptThenTriggerAnimation('show_reputation_max','hide_reputation_max')]"
+							alwaystransparent = no
+				
+							green_progressbar_horizontal = {
+								size = { 100% 100% }
+								alpha = "[TransparentIfFalse(Building.IsActive)]"
+				
+								blockoverride "glow_size" {
+									size = { 347 100% }
+								}
+				
+								parentanchor = hcenter
+								
+								
+								blockoverride "values" {
+									min = 0
+									max = 1000
+									value = "[AccessPlayer.MakeScope.ScriptValue('renown')]"
+								}
+				
+								progressbar_highlight = {
+									visible = no
+								}
+							}
+				
+							flowcontainer = {
+								parentanchor = vcenter
+								textbox = {
+									raw_text = "@renown![AccessPlayer.MakeScope.ScriptValue('renown')|D]"
+									margin_left = 4
+									align = hcenter|nobaseline
+									autoresize = yes
+									parentanchor = vcenter
+								}
+				
+								textbox = {
+									alpha = 0
+									name = reputation_max
+				
+									state = {
+										name = show_reputation_max
+										delay = 0.15
+										alpha = 1
+										duration = 0.15
+										using = Animation_Curve_Default
+									}
+									state = {
+										name = hide_reputation_max
+										alpha = 0
+										duration = 0
+										using = Animation_Curve_Default
+									}
+				
+									raw_text = " / #maximum 1000#!"
+									visible = "[LessThan_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('renown'), '(CFixedPoint)1000')]"
+									align = hcenter|nobaseline
+									autoresize = yes
+									parentanchor = vcenter
+								}
+							}
+						}
+
+
+					}
+
 					default_header = {
+						
+			
+					
 						blockoverride "text" {
 							text = "ON_RETAINER"
 						}

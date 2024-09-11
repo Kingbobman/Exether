@@ -225,6 +225,30 @@ types topbar_components
 					fontsize_min = 12
 				}
 			}
+			flowcontainer = {
+				minimumsize = { 66 30 }
+				maximumsize = { 66 30 }
+				spacing = 2
+				tooltip = "RENOWN_TOOLTIP"
+				using = glow_button
+				using = tooltip_below
+				onmousehierarchyenter = "[SetTempMapModeByKey('mm_situations')]"
+				onmousehierarchyleave = "[RemoveTempMapMode]"
+				alwaystransparent = no
+				icon = {
+					size = { @secondary_icon_size @secondary_icon_size }
+					texture = "gfx/interface/icons/topbar/renown_icon.dds"
+					parentanchor = vcenter
+				}
+				textbox = {
+					parentanchor = vcenter
+					raw_text = "#variable [AccessPlayer.MakeScope.ScriptValue('renown')|D]#!"
+					autoresize = yes
+					align = left|nobaseline
+					elide = right
+					fontsize_min = 12
+				}
+			}
 		}
 	}
 
@@ -234,7 +258,7 @@ types topbar_components
 			using = hud_visibility
 			datacontext = "[AccessMetaPlayer.AccessPlayedOrObservedCountry]"
 			using = clickthrough_blocker
-			size = { 930 80 }
+			size = { 805 80 }
 			allow_outside = yes
 			resizeparent = yes
 			max_update_rate = 60
@@ -515,51 +539,7 @@ types topbar_components
 										}
 									}
 								}
-								
-								### Renown
-								button = {
-									name = "tutorial_highlight_renown"
-									using = glow_button
-									size = { 100 40 }
-									tooltip = "RENOWN_TOOLTIP"
-									using = tooltip_below
-									onclick = "[GetVariableSystem.Toggle('show_magic')]"
-									onclick = "[InformationPanelBar.ClosePanel]"
-									onclick = "[MapListPanelManager.CloseCurrentPanel]"
-									onclick = "[GetVariableSystem.Clear('international_open')]"
-									enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
-									
-									icon = {
-										size = { 32 32 }
-										position = { 0 2 }
-										name = magic_power_icon
-										texture = "gfx/interface/icons/topbar/renown_icon.dds"
-										parentanchor = vcenter
-									}
-									
-									textbox = {
-										position = { 35 -3 }
-										name = capital_value
-										raw_text = "#bold [AccessPlayer.MakeScope.ScriptValue('renown')|=+D]#!"
-										align = left|nobaseline
-										using = fontsize_large
-										autoresize = yes
-										parentanchor = vcenter
-									}
-									
-									double_direction_progressbar = {
-										size = { 60 6 }
-										position = { 40 -3 }
-										parentanchor = bottom
-										
-										blockoverride "value_left" {
-											value = "[AccessPlayer.MakeScope.ScriptValue('normalized_renown_deficit')]"
-										}
-										blockoverride "value_right" {
-											value = "[AccessPlayer.MakeScope.ScriptValue('normalized_renown_surplus')]"
-										}
-									}
-								}
+
 							}
 
 							block "convoys_info" {
