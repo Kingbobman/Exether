@@ -2318,19 +2318,71 @@ build_soulwrought = {
             }
 			
 			if = {
-                limit = {
-                    var:soulwrought_assemble_count > 10000
-                }
-                create_pop = {
-                    pop_type = laborers
-                    culture  = soulwrought
-                    size     = 40000
-                }
-                change_variable = {
-					name = soulwrought_assemble_count
-					subtract = 10000
+				limit = {
+					has_law = law_type:law_slavery_banned
 				}
-            }
+				if = {
+					limit = {
+						var:soulwrought_assemble_count > 10000
+						var:soulwrought_assemble_count < 20000
+					}
+					create_pop = {
+						pop_type = laborers
+						culture  = soulwrought
+						size     = 40000
+					}
+					change_variable = {
+						name = soulwrought_assemble_count
+						subtract = 10000
+					}
+				}
+				else_if = {
+					limit = {
+						var:soulwrought_assemble_count > 20000
+					}
+					create_pop = {
+						pop_type = laborers
+						culture  = soulwrought
+						size     = 80000
+					}
+					change_variable = {
+						name = soulwrought_assemble_count
+						subtract = 20000
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						var:soulwrought_assemble_count > 10000
+						var:soulwrought_assemble_count < 20000
+					}
+					create_pop = {
+						pop_type = slaves
+						culture  = soulwrought
+						size     = 40000
+					}
+					change_variable = {
+						name = soulwrought_assemble_count
+						subtract = 10000
+					}
+				}
+				else_if = {
+					limit = {
+						var:soulwrought_assemble_count > 20000
+					}
+					create_pop = {
+						pop_type = slaves
+						culture  = soulwrought
+						size     = 80000
+					}
+					change_variable = {
+						name = soulwrought_assemble_count
+						subtract = 20000
+					}
+				}
+			}
+		
 
 			remove_variable = assembly
 
@@ -2381,22 +2433,6 @@ diggy_diggy_dwarf = { #digs arcthar out of the ground
 			
 			if = {
                 limit = {
-					country_has_primary_culture = cu:arcthar
-                    var:dwarf_digging_count > 5000
-                }
-                create_pop = {
-                    pop_type = laborers
-                    culture  = arcthar
-                    size     = 20000
-                }
-                change_variable = {
-					name = dwarf_digging_count
-					subtract = 5000
-				}
-            }
-			else_if = {
-                limit = {
-					
                     var:dwarf_digging_count > 5000
                 }
                 create_pop = {
@@ -2408,10 +2444,10 @@ diggy_diggy_dwarf = { #digs arcthar out of the ground
 					name = dwarf_digging_count
 					subtract = 5000
 				}
-            }
-			remove_variable = diggy_stone
+			}
 
-        }
+		remove_variable = diggy_stone 
+		}
     }
 }
 
