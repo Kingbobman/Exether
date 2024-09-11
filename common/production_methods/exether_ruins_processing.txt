@@ -107,10 +107,14 @@ pm_artifactory_conveyor_belts = {
 	texture = "gfx/interface/icons/production_method_icons/assembly_lines.dds"
 
     unlocking_technologies = {
-        assembly_lines
+        conveyors
 	}
 
 	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_tools_add = 5		# x40 = 400
+		}
 	    level_scaled = {
             building_employment_laborers_add   = -1000
 	    }
