@@ -1779,14 +1779,15 @@ dragonblight_pulse.5 = { #adjacent spread, no health system
 									NOT = { has_decree = decree_special_measures }
 								}
 								has_modifier = modifier_active_dragonblight_outbreak
+								NOT = {	has_decree = decree_special_measures }
 						}
-					NOT = {
+					
 						OR = {
 								has_institution = institution_health_system
 								has_variable = dragonblight_vaccine
 						}
 					} 
-				}
+				
 
 				immediate = {
 					random_scope_state = {
@@ -1823,8 +1824,8 @@ dragonblight_pulse.5 = { #adjacent spread, no health system
 				# 		authority >= 100
 				# 	}
 				# 	}
-			}
-
+			
+}
 dragonblight_pulse.6 = { #heal-by-decree
 				type = country_event
 				placement = ROOT

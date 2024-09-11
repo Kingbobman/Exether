@@ -443,32 +443,32 @@ conservative_party = {
 				desc = "from_more_than_three_prior_members"
 			}
 		}
-		if = {
-			limit = {
-				leader = {
-					has_ideology = ideology:ideology_jacksonian_democrat
-				}
-			}
-			add = {
-				value = 1000
-				desc = "from_jacksonian_democrat"
-			}
-		}
-		if = { # Brazil
-			limit = {
-				is_interest_group_type = ig_landowners
-				owner = {
-					OR = {
-						has_journal_entry = je_coffee_with_milk
-						has_journal_entry = je_populist_unrest
-					}
-				}
-			}
-			add = {
-				value = 10
-				desc = "from_milk_coffee"
-			}
-		}
+		#if = {
+		#	limit = {
+		#		leader = {
+		#			has_ideology = ideology:ideology_jacksonian_democrat
+		#		}
+		#	}
+		#	add = {
+		#		value = 1000
+		#		desc = "from_jacksonian_democrat"
+		#	}
+		#}
+		#if = { # Brazil
+		#	limit = {
+		#		is_interest_group_type = ig_landowners
+		#		owner = {
+		#			OR = {
+		#				has_journal_entry = je_coffee_with_milk
+		#				has_journal_entry = je_populist_unrest
+		#			}
+		#		}
+		#	}
+		#	add = {
+		#		value = 10
+		#		desc = "from_milk_coffee"
+		#	}
+		#}
 		if = {
 			limit = {
 				leader = {
@@ -480,29 +480,29 @@ conservative_party = {
 				desc = "beauty_in_bloom_support"
 			}
 		}
-		if = {
-			limit = {
-				owner = {
-					OR = {
-						country_has_primary_culture = cu:yankee
-						country_has_primary_culture = cu:dixie
-					}
-					OR = {
-						NOT = {
-							has_law = law_type:law_slavery_banned
-						}
-						has_modifier = missouri_compromise
-					}
-				}
-				leader = {
-					culture = cu:yankee
-				}
-			}
-			add = {
-				value = -5
-				desc = "from_northern_interests"
-			}
-		}
+		#if = {
+		#	limit = {
+		#		owner = {
+		#			OR = {
+		#				country_has_primary_culture = cu:yankee
+		#				country_has_primary_culture = cu:dixie
+		#			}
+		#			OR = {
+		#				NOT = {
+		#					has_law = law_type:law_slavery_banned
+		#				}
+		#				has_modifier = missouri_compromise
+		#			}
+		#		}
+		#		leader = {
+		#			culture = cu:yankee
+		#		}
+		#	}
+		#	add = {
+		#		value = -5
+		#		desc = "from_northern_interests"
+		#	}
+		#}
 		if = {
 			limit = {
 				owner = {
@@ -518,17 +518,17 @@ conservative_party = {
 				value = 0
 			}
 		}
-		if = {
-			limit = {
-				leader = {
-					has_ideology = ideology:ideology_jacksonian_democrat
-				}
-			}
-			add = {
-				value = 1000
-				desc = "from_jacksonian_democrat"
-			}
-		}
+		#if = {
+		#	limit = {
+		#		leader = {
+		#			has_ideology = ideology:ideology_jacksonian_democrat
+		#		}
+		#	}
+		#	add = {
+		#		value = 1000
+		#		desc = "from_jacksonian_democrat"
+		#	}
+		#}
 		if = {
 			limit = {
 				owner = {
@@ -560,17 +560,17 @@ conservative_party = {
 				desc = "from_only_legal_party"
 			}
 		}
-		if = { # Also Brazil
-			limit = {
-				is_interest_group_type = ig_petty_bourgeoisie
-				owner = {
-					has_journal_entry = je_populist_unrest
-				}
-			}
-			add = {
-				value = -1000
-				desc = "from_populist_discontent"
-			}
-		}
+		#if = { # Also Brazil
+		#	limit = {
+		#		is_interest_group_type = ig_petty_bourgeoisie
+		#		owner = {
+		#			has_journal_entry = je_populist_unrest
+		#		}
+		#	}
+		#	add = {
+		#		value = -1000
+		#		desc = "from_populist_discontent"
+		#	}
+		#}
 	}
 }
