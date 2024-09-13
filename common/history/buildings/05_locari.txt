@@ -1829,12 +1829,12 @@
 	}
 
 	s:STATE_MOSKHAN = {
-		region_state:VOL = {
+		region_state:ORL = {
 			create_building={
 				building="building_government_administration"
-				level=2
+				level=3
 				reserves=1
-				activate_production_methods={ "pm_simple_organization" }
+				activate_production_methods={ "pm_horizontal_drawer_cabinets" }
 			}
 			create_building={
 				building="building_port"
@@ -1842,11 +1842,89 @@
 				reserves=1
 				activate_production_methods={ "pm_basic_port" }
 			}
+			create_building={
+				building="building_construction_sector"
+				reserves=1
+				level = 3
+				activate_production_methods={ "pm_wooden_buildings" }
+			}
+			create_building={
+				building="building_dye_plantation"
+				add_ownership={ 
+					building={ 
+						type="building_wizard_tower"
+						country="c:ORL"
+						levels=2
+						region="STATE_MOSKHAN"
+				   }
+				}
+				reserves=1
+				activate_production_methods={ "default_building_dye_plantation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_fishing_wharf_rusttails"
+                add_ownership={ 
+                    building={ 
+                        type="building_adventuring_guild"
+                        country="c:ORL"
+                        levels=4
+                        region="STATE_MOSKHAN"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_simple_fishing" "pm_rusttail_fishing" "pm_unrefrigerated" }
+			}
+			create_building={
+				building="building_logging_camp"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:ORL"
+							levels=2
+							region="STATE_MOSKHAN"
+					   }
+					}
+				reserves=1
+				activate_production_methods={ "pm_saw_mills" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
+			}
 		}
 	}
 
 	s:STATE_TASHKAVSK = {
-	
+		region_state:ORL = {
+			create_building={
+				building="building_government_administration"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_horizontal_drawer_cabinets" }
+			}
+			create_building={
+				building="building_logging_camp"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:ORL"
+							levels=4
+							region="STATE_TASHKAVSK"
+					   }
+					}
+				reserves=1
+				activate_production_methods={ "pm_saw_mills" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
+			}
+			create_building={
+				building="building_cotton_plantation"
+				add_ownership={ 
+					building={ 
+						type="building_wizard_tower"
+						country="c:ORL"
+						levels=2
+						region="STATE_TASHKAVSK"
+				   }
+				}
+				reserves=1
+				activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts"  }
+			}
+		}
 	}
 
 	s:STATE_NEFUDISTAN = {
