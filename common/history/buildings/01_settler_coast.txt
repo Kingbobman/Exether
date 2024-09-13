@@ -64,7 +64,7 @@
                     building={ 
                         type="building_financial_district"
                         country="c:EME"
-                        levels=1
+                        levels=2
                         region="STATE_CHANTSIRENE"
                    }
                 }
@@ -116,7 +116,7 @@
 					building={ 
 						type="building_financial_district"
 						country="c:EME"
-						levels=7
+						levels=8
 						region="STATE_CHANTSIRENE"
 				   }
 				}
@@ -141,7 +141,20 @@
 				      level=3
 				      reserves=1
 				      activate_production_methods={ "pm_basic_port" }
-			    }	
+			    }
+				create_building={
+					building="building_logging_camp"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:EME"
+							levels=2
+							region="STATE_CHANTSIRENE"
+					   }
+					}
+					reserves=1
+					activate_production_methods={ "pm_saw_mills" "pm_hardwood" "pm_no_equipment" "pm_road_carts" }
+				}	
 			}    		     						  		
   }
 
@@ -172,7 +185,7 @@
                     building={ 
                         type="building_financial_district"
                         country="c:EME"
-                        levels=2
+                        levels=3
                         region="STATE_MERACIEL_AUBELAC"
                    }
                 }
@@ -294,8 +307,21 @@
 				}
 				      reserves=1
 				      activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools"  }
-			    }    			    	    			    			    		    
-      }
+			    }
+				create_building={
+					building="building_logging_camp"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:EME"
+							levels=2
+							region="STATE_MERACIEL_AUBELAC"
+					   }
+					}
+					reserves=1
+					activate_production_methods={ "pm_saw_mills" "pm_hardwood" "pm_no_equipment" "pm_road_carts" }
+				}				    	    			    			    		    
+      	}
   }
  
   s:STATE_ABAISSE_DE_MARBRUN = {
@@ -371,6 +397,19 @@
 					reserves=1
 					activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts"  }
 				  }    
+				  create_building={
+					building="building_potion_distillery"
+						add_ownership={
+							building={
+								type="building_wizard_tower"
+								country="c:EME"
+								levels=4
+								region="STATE_ABAISSE_DE_MARBRUN"
+						}
+					}
+					reserves=1
+					activate_production_methods={ "pm_wishtone_potion_process_production" "pm_alcohol-based_potions" }
+				}
 			}			    
   }
 
@@ -408,7 +447,7 @@
 						building={ 
 							type="building_manor_house"
 							country="c:EME"
-							levels=3
+							levels=10
 							region="STATE_VALSANG"
 					   }
 					}
@@ -427,8 +466,21 @@
 				}
 				reserves=1
 				activate_production_methods={ "pm_simple_farming" "pm_tools_disabled"  }
-			}					    	
-  	}
+			}
+			create_building={
+				building="building_iron_mine"
+			add_ownership={ 
+				building={ 
+					type="building_financial_district"
+					country="c:EME"
+					levels=2
+					region="STATE_VALSANG"
+			   }
+			}
+				reserves=1
+				activate_production_methods={ "pm_atmospheric_engine_pump_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+		  }		    	
+  		}
   }
   
   s:STATE_AZURSOL = {
@@ -484,7 +536,7 @@
                     building={ 
                         type="building_financial_district"
                         country="c:EME"
-                        levels=1
+                        levels=2
                         region="STATE_AZURSOL"
                    }
                 }
@@ -496,7 +548,20 @@
 				      level=2
 				      reserves=1
 				      activate_production_methods={ "pm_basic_port" }
-			    }			    	
+			    }
+				create_building={
+					building="building_tobacco_plantation"
+						add_ownership={ 
+							building={ 
+								type="building_manor_house"
+								country="c:EME"
+								levels=4
+								region="STATE_AZURSOL"
+						   }
+						}
+					reserves=1
+					activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }
+				}	    	
 			}    
   }
 
