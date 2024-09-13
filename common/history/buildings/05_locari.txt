@@ -1748,12 +1748,19 @@
 	s:STATE_ELENIKAR = {
 		region_state:PAY={
 			create_building={
-				building="building_dragon_ruins" 
-				levels=1
+				building="building_dragon_ruins"
+				add_ownership={ 
+					building={ 
+                        type="building_adventuring_guild"
+						country="c:PAY"
+						levels=1
+						region="STATE_HERMENIA"
+				   }
+				}
 				reserves=1
+				activate_production_methods={ "pm_simple_accumulation_dragon_ruins"  }
 			}
 		}
-	
 	}
 
 	s:STATE_HELARM = {

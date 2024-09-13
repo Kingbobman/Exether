@@ -65,7 +65,7 @@ locari.1 = {
                 }
             }
         }
-        s:STATE_IVONDRO = {
+        s:STATE_VAROTSOA = {
             random_scope_state = {
                 add_modifier = {
                     name = modifier_dragon_tomb_site
@@ -120,7 +120,7 @@ locari.2 = {
                 trigger = {
                     any_scope_state = {
                         has_modifier = modifier_dragon_tomb_site
-                        THIS.state_region = s:STATE_IVONDRO
+                        THIS.state_region = s:STATE_VAROTSOA
                     }
                 }
             }
@@ -170,7 +170,7 @@ locari.2 = {
                 trigger = {
                     any_scope_state = {
                         has_modifier = modifier_dragon_tomb_site
-                        THIS.state_region = s:STATE_IVONDRO
+                        THIS.state_region = s:STATE_VAROTSOA
                     }
                 }
             }
@@ -220,7 +220,7 @@ locari.2 = {
                 trigger = {
                     any_scope_state = {
                         has_modifier = modifier_dragon_tomb_site
-                        THIS.state_region = s:STATE_IVONDRO
+                        THIS.state_region = s:STATE_VAROTSOA
                     }
                 }
             }
@@ -334,7 +334,7 @@ locari.2 = {
 
         else_if = {
             limit = {
-                scope:locari_state_scope.state_region ?= s:STATE_IVONDRO
+                scope:locari_state_scope.state_region ?= s:STATE_VAROTSOA
             }
             random_scope_character = {
                 limit = {
