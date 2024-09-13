@@ -239,7 +239,7 @@ locari.2 = {
     placement = scope:locari_state_scope
 
     event_image = {
-        video = "gfx\event_images\dragon_tomb.dds"
+        texture = "gfx/event_images/dragon_tomb.dds"
     }
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -249,7 +249,7 @@ locari.2 = {
     duration = 3
 
     immediate = {
-        any_scope_state = {
+        random_scope_state = {
             limit = {
                 has_modifier = modifier_dragon_tomb_site
             }
@@ -261,7 +261,7 @@ locari.2 = {
         name = locari.2.a
         default_option = yes
         scope:locari_state_scope = {
-            remove_modifier = modifier_dragon_tomb_sit
+            remove_modifier = modifier_dragon_tomb_site
             state_region = {
                 add_state_trait = state_trait_dragon_tomb
             }
