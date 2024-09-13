@@ -81,3 +81,296 @@ locari.1 = {
         }
     }
 }
+
+# Dragon tombs event
+locari.2 = {
+    type = country_event
+
+    title = {
+        first_valid = {
+            triggered_desc = {
+                desc = locari.2.1.t
+                trigger = {
+                    any_scope_state = {
+                        has_modifier = modifier_dragon_tomb_site
+                        THIS.state_region = s:STATE_ELENIKAR
+                    }
+                }
+            }
+            triggered_desc = {
+                desc = locari.2.2.t
+                trigger = {
+                    any_scope_state = {
+                        has_modifier = modifier_dragon_tomb_site
+                        THIS.state_region = s:STATE_TSURWA
+                    }
+                }
+            }
+            triggered_desc = {
+                desc = locari.2.3.t
+                trigger = {
+                    any_scope_state = {
+                        has_modifier = modifier_dragon_tomb_site
+                        THIS.state_region = s:STATE_JALALABAKOV
+                    }
+                }
+            }
+            triggered_desc = {
+                desc = locari.2.4.t
+                trigger = {
+                    any_scope_state = {
+                        has_modifier = modifier_dragon_tomb_site
+                        THIS.state_region = s:STATE_IVONDRO
+                    }
+                }
+            }
+            triggered_desc = {
+                desc = locari.2.5.t
+                trigger = {
+                    any_scope_state = {
+                        has_modifier = modifier_dragon_tomb_site
+                        THIS.state_region = s:STATE_JERMENION
+                    }
+                }
+            }
+        }
+    }
+
+    desc = {
+        first_valid = {
+            triggered_desc = {
+                desc = locari.2.1.d
+                trigger = {
+                    any_scope_state = {
+                        has_modifier = modifier_dragon_tomb_site
+                        THIS.state_region = s:STATE_ELENIKAR
+                    }
+                }
+            }
+            triggered_desc = {
+                desc = locari.2.2.d
+                trigger = {
+                    any_scope_state = {
+                        has_modifier = modifier_dragon_tomb_site
+                        THIS.state_region = s:STATE_TSURWA
+                    }
+                }
+            }
+            triggered_desc = {
+                desc = locari.2.3.d
+                trigger = {
+                    any_scope_state = {
+                        has_modifier = modifier_dragon_tomb_site
+                        THIS.state_region = s:STATE_JALALABAKOV
+                    }
+                }
+            }
+            triggered_desc = {
+                desc = locari.2.4.d
+                trigger = {
+                    any_scope_state = {
+                        has_modifier = modifier_dragon_tomb_site
+                        THIS.state_region = s:STATE_IVONDRO
+                    }
+                }
+            }
+            triggered_desc = {
+                desc = locari.2.5.d
+                trigger = {
+                    any_scope_state = {
+                        has_modifier = modifier_dragon_tomb_site
+                        THIS.state_region = s:STATE_JERMENION
+                    }
+                }
+            }
+        }
+    }
+
+    flavor = {
+        first_valid = {
+            triggered_desc = {
+                desc = locari.2.1.f
+                trigger = {
+                    any_scope_state = {
+                        has_modifier = modifier_dragon_tomb_site
+                        THIS.state_region = s:STATE_ELENIKAR
+                    }
+                }
+            }
+            triggered_desc = {
+                desc = locari.2.2.f
+                trigger = {
+                    any_scope_state = {
+                        has_modifier = modifier_dragon_tomb_site
+                        THIS.state_region = s:STATE_TSURWA
+                    }
+                }
+            }
+            triggered_desc = {
+                desc = locari.2.3.f
+                trigger = {
+                    any_scope_state = {
+                        has_modifier = modifier_dragon_tomb_site
+                        THIS.state_region = s:STATE_JALALABAKOV
+                    }
+                }
+            }
+            triggered_desc = {
+                desc = locari.2.4.f
+                trigger = {
+                    any_scope_state = {
+                        has_modifier = modifier_dragon_tomb_site
+                        THIS.state_region = s:STATE_IVONDRO
+                    }
+                }
+            }
+            triggered_desc = {
+                desc = locari.2.5.f
+                trigger = {
+                    any_scope_state = {
+                        has_modifier = modifier_dragon_tomb_site
+                        THIS.state_region = s:STATE_JERMENION
+                    }
+                }
+            }
+        } 
+    }
+
+    placement = scope:locari_state_scope
+
+    event_image = {
+        video = "gfx\event_images\dragon_tomb.dds"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_map.dds"
+    
+    duration = 3
+
+    immediate = {
+        any_scope_state = {
+            limit = {
+                has_modifier = modifier_dragon_tomb_site
+            }
+            save_scope_as = locari_state_scope
+        }
+    }
+
+    option = {
+        name = locari.2.a
+        default_option = yes
+        scope:locari_state_scope = {
+            remove_modifier = modifier_dragon_tomb_sit
+            state_region = {
+                add_state_trait = state_trait_dragon_tomb
+            }
+        }
+        if = {
+            limit = {
+                scope:locari_state_scope.state_region ?= s:STATE_ELENIKAR
+            }
+            random_scope_character = {
+                limit = {
+                    OR = {
+                        has_role = politician
+                        is_ruler = yes
+                    }
+                }
+                random_list = {
+                    50 = {
+                        add_trait = romantic
+                    }
+                    50 = {
+                        add_trait = pious
+                    }
+                }
+            }
+        }
+
+        else_if = {
+            limit = {
+                scope:locari_state_scope.state_region ?= s:STATE_TSURWA
+            }
+            random_scope_character = {
+                limit = {
+                    OR = {
+                        has_role = politician
+                        is_ruler = yes
+                    }
+                }
+                random_list = {
+                    50 = {
+                        add_trait = meticulous 
+                    }
+                    50 = {
+                        add_trait = innovative
+                    }
+                }
+            }
+        }
+
+        else_if = {
+            limit = {
+                scope:locari_state_scope.state_region ?= s:STATE_JALALABAKOV
+            }
+            random_scope_character = {
+                limit = {
+                    OR = {
+                        has_role = politician
+                        is_ruler = yes
+                    }
+                }
+                random_list = {
+                    50 = {
+                        add_trait = ambitious
+                    }
+                    50 = {
+                        add_trait = brave
+                    }
+                }
+            }
+        }
+
+        else_if = {
+            limit = {
+                scope:locari_state_scope.state_region ?= s:STATE_IVONDRO
+            }
+            random_scope_character = {
+                limit = {
+                    has_role = general
+                }
+                random_list = {
+                    50 = {
+                        add_trait = wrathful
+                    }
+                    50 = {
+                        add_trait = bigoted
+                    }
+                }
+            }
+        }
+
+        else_if = {
+            limit = {
+                scope:locari_state_scope.state_region ?= s:STATE_JERMENION
+            }
+            random_scope_character = {
+                limit = {
+                    OR = {
+                        has_role = politician
+                        is_ruler = yes
+                    }
+                }
+                random_list = {
+                    50 = {
+                        add_trait = honorable
+                    }
+                    50 = {
+                        add_trait = charismatic
+                    }
+                }
+            }
+        }
+    }
+}
