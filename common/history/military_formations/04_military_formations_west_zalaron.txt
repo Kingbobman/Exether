@@ -1580,13 +1580,13 @@
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_EMBERFALL
+				state_region = s:STATE_ENBERFYRN
 				count = 20
 			}
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_mobile_artillery
-				state_region = s:STATE_EMBERFALL
+				state_region = s:STATE_ENBERFYRN
 				count = 15
 			}
 
@@ -1657,17 +1657,17 @@
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_DRAGONCREST
+				state_region = s:STATE_ARHLEBRYLD
 				count = 20
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_cannon_artillery
-				state_region = s:STATE_WINDSPEAR
+				state_region = s:STATE_CHELKSPYR
 				count = 15
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_dragoons
-				state_region = s:STATE_DRAGONCREST
+				state_region = s:STATE_ARHLEBRYLD
 				count = 5
 			}
 
@@ -1714,19 +1714,16 @@
 			}
 				save_scope_as = kvgarmy2
 		}
-
-		save_scope_as = kvgarmy2
-	}
-
-	create_character = {
-		is_general = yes
-		commander_rank = commander_rank_2
-		hq = sr:region_verdant_shore
-		save_scope_as = kvggen2
-	}
-	
-	scope:kvggen2 = {
-		transfer_to_formation = scope:kvgarmy2
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			hq = sr:region_hyena_plains
+			save_scope_as = kvggen2
+		}
+		
+		scope:kvggen2 = {
+			transfer_to_formation = scope:kvgarmy2
+		}
 	}
 c:SBH ?= {
 	create_military_formation = {

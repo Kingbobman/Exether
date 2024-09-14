@@ -687,7 +687,7 @@ pm_monster_grapes = {
 		workforce_scaled = {
 			goods_input_monster_essence_add = 10	# x40 = 400
 
-			goods_output_liquor_add = 20			# x30 = 600
+			goods_output_liquor_add = 25			# x30 = 750
 		}
 		level_scaled = {
 			building_employment_artificers_add = 150
@@ -707,7 +707,7 @@ pm_added_spirits = {
 			goods_input_monster_essence_add = 15	# x40 = 600
 			goods_input_ectoplasm_add = 2			# x50 = 100
 
-			goods_output_liquor_add = 40			# x30 = 1200
+			goods_output_liquor_add = 45			# x30 = 1350
 		}
 		level_scaled = {
 			building_employment_artificers_add = 300
@@ -725,7 +725,7 @@ pm_some_fruit = {
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_fruit_add = 5	# x30 = 150
-			goods_input_grain_add =	-10	# x20 = -200
+			goods_input_grain_add =	-13	# x20 = -260
 		}
 	}
 }
@@ -741,7 +741,7 @@ pm_more_fruit = {
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_fruit_add = 10	# x30 = 300
-			goods_input_grain_add =	-10	# x20 = -200
+			goods_input_grain_add =	-13	# x20 = -200
 			goods_input_sugar_add = -5 	# x30 = -150
 		}
 	}
@@ -757,7 +757,7 @@ pm_mostly_fruit = {
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_fruit_add = 25	# x30 = 750
-			goods_input_grain_add =	-20	# x20 = -400
+			goods_input_grain_add =	-25	# x20 = -400
 			goods_input_sugar_add = -15	# x30 = -450
 		}
 	}
@@ -1239,4 +1239,129 @@ pm_nimbium_assembly_lines = {
 
 	required_input_goods = electricity
 
+}
+
+pm_clay_golems = {
+	texture = "gfx/interface/icons/production_method_icons/steamworks.dds"
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_wood_add = 30 #600
+			goods_input_meat_add = 15  #450
+			goods_input_fabric_add = 10 #200
+			goods_output_automated_servants_add = 33 #
+		}
+
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 3500
+			building_employment_machinists_add = 500
+			building_employment_engineers_add = 500
+		}
+	}
+}
+
+pm_rock_golems = {
+	texture = "gfx/interface/icons/production_method_icons/electric_engines.dds"
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 5
+		}
+	}
+	
+	unlocking_technologies = {
+		electric_railway
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_wood_add = 50 #1000
+			goods_input_meat_add = 30  #900
+			goods_input_fabric_add = 20 #400
+			goods_output_automated_servants_add = 66
+		}
+
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 3000
+			building_employment_machinists_add = 1000
+			building_employment_engineers_add = 500
+		}
+	}
+
+}
+
+pm_flesh_golems = {
+	texture = "gfx/interface/icons/production_method_icons/diesel_engines.dds"
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	
+	unlocking_technologies = {
+		compression_ignition
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_wood_add = 35 #700
+			goods_input_meat_add = 40  #1200
+			goods_input_fabric_add = 20 #400
+			goods_input_electricity_add = 30
+			# output goods
+			goods_output_automated_servants_add = 99
+		}
+
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 2000
+			building_employment_machinists_add = 1500
+			building_employment_engineers_add = 1000
+		}
+	}
+}
+
+pm_automobiles_disabled = {
+	texture = "gfx/interface/icons/production_method_icons/no_automobiles.dds"
+}
+
+pm_automobile_production = {
+	texture = "gfx/interface/icons/production_method_icons/automobiles.dds"
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	
+	unlocking_technologies = { 
+		combustion_engine
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_output_engines_add = -20
+			goods_input_rubber_add = 10
+			goods_input_oil_add = 20
+
+			# output goods
+			goods_output_automobiles_add = 25
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_machinists_add = 1000
+			building_employment_engineers_add = 500
+		}
+	}
 }

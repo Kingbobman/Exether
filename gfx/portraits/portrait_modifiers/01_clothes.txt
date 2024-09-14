@@ -2471,11 +2471,21 @@
 
                 american_clothes_pop_trigger = yes
                 OR = {
-                    AND = {
-                        c:VAI ?= {
-                            NOT = { has_technology_researched = bolt_action_rifles }
-                        }
-                        american_clothes_pop_trigger = yes
+                    officers_clothes_pop_trigger = yes
+                    soldier_clothes_pop_trigger = yes
+                }
+            }
+            modifier = {
+                add = 10000
+
+                american_clothes_trigger = yes
+                scope:character ?= {
+                    age >= define:NCharacters|ADULT_AGE
+                    is_female = no
+                }
+                OR = {
+                    monarchy_clothes_trigger = yes
+                    scope:character ?= {
                         OR = {
                             has_role = general
                             has_role = admiral
@@ -2508,7 +2518,7 @@
         weight = {
             base = 0
             modifier = {
-                add = 10000
+                add = 20000
                 c:VAI ?= {
                     has_technology_researched = bolt_action_rifles
                 }

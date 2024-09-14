@@ -268,17 +268,19 @@
 				count = 8
 			}
 			save_scope_as = arr_navy
-		}
-		create_character = {
-			is_admiral = yes
-			commander_rank = commander_rank_2
-			save_scope_as = arradmiral
-		}
+
+			create_character = {
+				is_admiral = yes
+				hq = region_arrador
+				commander_rank = commander_rank_2
+				save_scope_as = arradmiral
+			}
 			
 		scope:arradmiral = {
 			transfer_to_formation = scope:arr_navy
 		}	
 	}
+}
     c:AHO ?= {
 
 

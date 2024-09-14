@@ -4,7 +4,7 @@
 		add_technology_researched = napoleonic_warfare
 		
 		# Laws 
-		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_theocracy
 		activate_law = law_type:law_autocracy 
 		activate_law = law_type:law_serfdom
 		activate_law = law_type:law_land_based_taxation
@@ -16,6 +16,7 @@
 		activate_law = law_type:law_peasant_levies
 		activate_law = law_type:law_censorship
 		activate_law = law_type:law_no_womens_rights
+		activate_law = law_type:law_divine_miracles
 
 		set_tariffs_import_priority = g:tools
 		set_tariffs_import_priority = g:liquor
@@ -27,5 +28,12 @@
 		ig:ig_intelligentsia = { 
 			set_ig_suppression = yes
 		}
+
+		add_modifier = {
+			name = beauty_in_bloom_modifier
+		}
+
+		effect_has_custom_journals = yes
+		effect_has_flavored_interest_groups = yes
 	}
 }

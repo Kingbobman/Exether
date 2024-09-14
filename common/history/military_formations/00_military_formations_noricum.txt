@@ -140,7 +140,7 @@
 		#	is_admiral = yes
 		#	commander_rank = commander_rank_2
 		#	save_scope_as = clarke_adm
-		}
+#		}
 		#scope:clarke_adm = {
 			#transfer_to_formation = scope:dovedalian_fleet
 		#}
@@ -737,7 +737,7 @@
 				state_region = s:STATE_TYMANS_FOLLY
 				count = 1
 			}
-				save_scope_as = mbr_army
+				save_scope_as = mbr_army1
 		}
 		create_character = {
 			is_general = yes
@@ -746,7 +746,7 @@
 			save_scope_as = mbrgen1
 		}
 		scope:mbrgen1 = {
-			transfer_to_formation = scope:mbr_Army
+			transfer_to_formation = scope:mbr_army1
 		}
 
 	}
@@ -907,7 +907,7 @@
 				state_region = s:STATE_GRYTINGARIK
 				count = 2
 			}
-		save_scope_as = ice_army
+		save_scope_as = ice_army1
 		}
 		create_character = {
 			is_general = yes
@@ -916,7 +916,7 @@
 			save_scope_as = icegen1
 		}
 		scope:icegen1 = {
-			transfer_to_formation = scope:ice_Army
+			transfer_to_formation = scope:ice_army1
 		}
 
 		create_military_formation = {
@@ -947,7 +947,7 @@
 			commander_rank = commander_rank_1
 			save_scope_as = iceadmiral1
 		}
-		scope:iceadmiral = {
+		scope:iceadmiral1 = {
 			transfer_to_formation = scope:ice_fleet
 		}
 	}

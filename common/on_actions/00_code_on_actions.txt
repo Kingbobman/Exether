@@ -53,6 +53,9 @@ on_monthly_pulse_country = {
 		veil_events.2
 		veil_events.3
 
+		#Beauty in Bloom
+		beauty_in_bloom.1
+
 		# AI UN Resolution Events
 		concord_resolution_events.100
 		concord_resolution_events.101
@@ -560,31 +563,52 @@ on_character_creation = {
 on_character_death = {
 	effect = {
 		
-				### Force-generating female rulers if something goes wrong
-				if = {
-					limit = {
-						is_ruler = yes
-						owner = {
-							NOT = {
-								any_scope_character = {
-									is_heir = yes
-								}
-							}
-						}
-					}
-					if = {
-						limit = { 
-							owner = {
-								has_law = law_type:law_matriarchy
-							}
-						}
-						owner = {
-							create_character = {
-								template = female_default
-							}
+		### Force-generating female rulers if something goes wrong
+		if = {
+			limit = {
+				is_ruler = yes
+				owner = {
+					NOT = {
+						any_scope_character = {
+							is_heir = yes
 						}
 					}
 				}
+			}
+			if = {
+				limit = { 
+					owner = {
+						has_law = law_type:law_matriarchy
+					}
+				}
+				owner = {
+					create_character = {
+						template = female_default
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_variable = beauty_in_bloom_kingmaker }
+				has_role = politician
+				interest_group = {
+					is_interest_group_type = ig_devout
+					is_marginal = no
+				}
+				owner = {
+					in_election_campaign = no
+					country_has_voting_franchise = yes
+					OR = {
+						has_journal_entry = je_beauty_in_bloom
+						has_modifier = beauty_in_bloom_modifier
+					}
+				}
+			}
+			owner = {
+				trigger_event = { id = beauty_in_bloom.5 days = 1 }
+			}
+		}
 	}
 }
 
@@ -2294,19 +2318,75 @@ build_soulwrought = {
             }
 			
 			if = {
-                limit = {
-                    var:soulwrought_assemble_count > 10000
-                }
-                create_pop = {
-                    pop_type = laborers
-                    culture  = soulwrought
-                    size     = 40000
-                }
-                change_variable = {
-					name = soulwrought_assemble_count
-					subtract = 10000
+				limit = {
+					has_law = law_type:law_slavery_banned
 				}
-            }
+				if = {
+					limit = {
+						var:soulwrought_assemble_count > 10000
+						var:soulwrought_assemble_count < 20000
+					}
+					create_pop = {
+						pop_type = laborers
+						culture  = soulwrought
+						literacy_rate = 0.2
+						size     = 40000
+					}
+					change_variable = {
+						name = soulwrought_assemble_count
+						subtract = 10000
+					}
+				}
+				else_if = {
+					limit = {
+						var:soulwrought_assemble_count > 20000
+					}
+					create_pop = {
+						pop_type = laborers
+						culture  = soulwrought
+						literacy_rate = 0.2
+						size     = 80000
+					}
+					change_variable = {
+						name = soulwrought_assemble_count
+						subtract = 20000
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						var:soulwrought_assemble_count > 10000
+						var:soulwrought_assemble_count < 20000
+					}
+					create_pop = {
+						pop_type = slaves
+						culture  = soulwrought
+						literacy_rate = 0.15
+						size     = 40000
+					}
+					change_variable = {
+						name = soulwrought_assemble_count
+						subtract = 10000
+					}
+				}
+				else_if = {
+					limit = {
+						var:soulwrought_assemble_count > 20000
+					}
+					create_pop = {
+						pop_type = slaves
+						culture  = soulwrought
+						literacy_rate = 0.15
+						size     = 80000
+					}
+					change_variable = {
+						name = soulwrought_assemble_count
+						subtract = 20000
+					}
+				}
+			}
+		
 
 			remove_variable = assembly
 
@@ -2361,18 +2441,17 @@ diggy_diggy_dwarf = { #digs arcthar out of the ground
                 }
                 create_pop = {
                     pop_type = laborers
-                    culture  = arcthar
+                    culture  = starwoken
                     size     = 20000
                 }
                 change_variable = {
 					name = dwarf_digging_count
 					subtract = 5000
 				}
-            }
+			}
 
-			remove_variable = diggy_stone
-
-        }
+		remove_variable = diggy_stone 
+		}
     }
 }
 
