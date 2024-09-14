@@ -130,7 +130,48 @@ building_dwarf_ruins = {
 	required_construction = construction_cost_medium
 
 	production_method_groups = {
-		pmg_equipment_dragon_ruins
+		pmg_equipment_dwarven_ruins
+	}
+
+#   TODO: Change to match adventurer ownership methods
+ 	ownership_type = self
+
+ 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+}
+
+building_collapsed_godsbane_vault = {
+    building_group = bg_collapsed_godsbane_vault
+	texture = "gfx/interface/icons/building_icons/archeology_jungle.dds"
+
+	city_type = wood
+	levels_per_mesh = 5
+
+	required_construction = construction_cost_medium
+
+	production_method_groups = {
+		pmg_equipment_dwarven_ruins
+		pmg_diggy_diggy_dwarf_collapsed
+	}
+
+#   TODO: Change to match adventurer ownership methods
+	cannot_switch_owner = yes
+	ownership_type = self
+ 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+}
+
+building_renovated_godsbane_vault = {
+    building_group = bg_renovated_godsbane_vault
+	texture = "gfx/interface/icons/building_icons/archeology_jungle.dds"
+
+	city_type = wood
+	levels_per_mesh = 5
+
+	required_construction = construction_cost_medium
+
+	production_method_groups = {
+		pmg_equipment_dwarven_ruins
+		pmg_diggy_diggy_dwarf_renovated
+		pmg_renovated_godsbane_vault_rituals
 	}
 
 #   TODO: Change to match adventurer ownership methods

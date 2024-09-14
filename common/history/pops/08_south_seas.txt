@@ -373,7 +373,7 @@
 				size = 3387
 			}
 			create_pop = {
-				culture = ocelian
+				culture = thiralian
 				size = 10210
 			}
 		}
@@ -391,7 +391,7 @@
 				size = 12212
 			}
 			create_pop = {
-				culture = ocelian
+				culture = thiralian
 				size = 300
 			}
 			create_pop = {
@@ -473,7 +473,7 @@
 				size = 12422
 			}
 			create_pop = {
-				culture = ocelian
+				culture = thiralian
 				size = 800
 			}
 			create_pop = {
@@ -516,25 +516,17 @@
 
 	s:STATE_LISAZISA = {
 		region_state:COV = {
-			create_pop = {
-				culture = bakibi
-				size = 5007
-			}
 			create_pop = { 
 				culture = dumonian
 				size = 196626
 			}
 			create_pop = { 
-				culture = ocelian
-				size = 1013
+				culture = ralaurian
+				size = 330291
 			}
 			create_pop = {
 				culture = south_sea_ravager
 				size = 39896
-			}
-			create_pop = { 
-				culture = east_lacertian
-				size = 10834
 			}
 		}
 	}
@@ -542,16 +534,20 @@
 	s:STATE_BELENDLE = {
 		region_state:COV = {
 			create_pop = { 
-				culture = south_sea_ravager
-				size = 430824
+				culture = ralaurian
+				size = 260291
+			}
+			create_pop = { 
+				culture = gelidrumin
+				size = 370291
 			}
 			create_pop = {
 				culture = dumonian
-				size = 13060
+				size = 183060
 			}
 			create_pop = { 
 				culture = east_lacertian
-				size = 503543
+				size = 153543
 			}
 		}
 	}
@@ -627,7 +623,7 @@
 	s:STATE_ANKAZOBE = {
 		region_state:SPH = {
 			create_pop = {
-				culture = west_lacertian
+				culture = lacertian
 				size = 145400
 			}
 		}
@@ -933,53 +929,67 @@
 		region_state:COC = {
 			create_pop = {
 				culture = cithrel
-				size = 241919
+				size = 641919
 			}
 			create_pop = {
 				pop_type = slaves
 				culture = lacertian
-				size = 155891
+				size = 235891
 			}
 			create_pop = {
 				pop_type = slaves
 				culture = gnoll
 				size = 51911
 			}
+			create_pop = {
+				pop_type = slaves
+				culture = jungle_gnoll
+				size = 38402
+			}
 		}
 	}
 
 	s:STATE_SAMARTHYA = {
-		region_state:SEN = {
+		region_state:OLC = {
 			create_pop = {
-				culture = castaway_dwarf
-				size = 58000
+				culture = east_lacertian
+				size = 1086849
+			}
+			create_pop = {
+				culture = pecif
+				size = 537920
 			}
 		}
 	}
 
 	s:STATE_JIVANTA = {
-		region_state:SEN = {
+		region_state:OLC = {
 			create_pop = {
-				culture = castaway_dwarf
-				size = 31000
+				culture = east_lacertian
+				size = 1368424
+			}
+			create_pop = {
+				culture = pecif
+				size = 789834
 			}
 		}
 	}
+	
 	s:STATE_ODADRUEL = {
-	region_state:XOC = {
-		create_pop = {
-			culture = cithrel
-			size = 348119
-		}
-		create_pop = {
-				pop_type = slaves
-				culture = jungle_gnoll
-				size = 138911
+		region_state:XOC = {
+			create_pop = {
+				culture = cithrel
+				size = 348119
 			}
-	create_pop = {
+			create_pop = {
 				pop_type = slaves
 				culture = jungle_gnoll
-				size = 258327
+				size = 88911
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = gnoll
+				size = 308327
 			}		
 		}
 	}
@@ -987,17 +997,22 @@
 		region_state:XOC = {
 			create_pop = {
 				culture = cithrel
-				size = 488191
+				size = 518191
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = lacertian
+				size = 447643
 			}
 			create_pop = {
 				pop_type = slaves
 				culture = gnoll
-				size = 253152
+				size = 73152
 			}
 			create_pop = {
 				pop_type = slaves
 				culture = jungle_gnoll
-				size = 350325
+				size = 60325
 			}		
 		}
 	}
@@ -1005,35 +1020,45 @@
 		region_state:XOC = {
 			create_pop = {
 				culture = cithrel
-				size = 628219
+				size = 928219
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = lacertian
+				size = 537482
 			}
 			create_pop = {
 				pop_type = slaves
 				culture = gnoll
-				size = 596210
+				size = 196210
 			}
 			create_pop = {
 				pop_type = slaves
 				culture = jungle_gnoll
-				size = 502819
+				size = 102819
 			}		
 		}
 	}
 	s:STATE_NOLOGO_RULL = {
-	region_state:COC = {
-		create_pop = {
-			culture = cithrel
-			size = 850821
-		}
-		create_pop = {
+		region_state:COC = {
+			create_pop = {
+				culture = cithrel
+				size = 1050821
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = lacertian
+				size = 649847
+			}
+			create_pop = {
 				pop_type = slaves
 				culture = gnoll
-				size = 605621
+				size = 205621
 			}
-		create_pop = {
+			create_pop = {
 				pop_type = slaves
 				culture = jungle_gnoll
-				size = 558191
+				size = 158191
 			}		
 		}	
 	}
@@ -1044,15 +1069,20 @@
 			size = 340811
 		}
 		create_pop = {
-				pop_type = slaves
-				culture = gnoll
-				size = 79210
-			}
+			pop_type = slaves
+			culture = gnoll
+			size = 79210
+		}
 		create_pop = {
-				pop_type = slaves
-				culture = lacertian
-				size = 287500
-			}		
+			pop_type = slaves
+			culture = jungle_gnoll
+			size = 50376
+		}
+		create_pop = {
+			pop_type = slaves
+			culture = lacertian
+			size = 237500
+		}		
 		}
 	}
 	s:STATE_LHEIPH_VA = {
@@ -1064,9 +1094,14 @@
 			create_pop = {
 				pop_type = slaves
 				culture = jungle_gnoll
-				size = 456210
+				size = 256210
 			}
-		create_pop = {
+			create_pop = {
+				pop_type = slaves
+				culture = gnoll
+				size = 229346
+			}
+			create_pop = {
 				pop_type = slaves
 				culture = lacertian
 				size = 555811

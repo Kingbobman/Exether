@@ -28,18 +28,17 @@ salt_waste_cure_flavor = {
 	type = country
 	text = {
 		trigger = {
-			has_law = law_type:law_mage_hunters
+			religion = {
+				has_discrimination_trait = dragon_domain
+			}
 		}
-		localization_key = salt_waste_cure_flavor_mage_hunters
+		localization_key = salt_waste_cure_flavor_dragon_domain
 	}
 	text = {
 		trigger = {
 			has_variable = harness_the_salt_waste_curse
-			#has_law = law_type:law_dark_arts
-			always = no
-			#Update to use signs
 		}
-		localization_key = salt_waste_cure_flavor_dark_arts
+		localization_key = salt_waste_cure_flavor_harness
 	}
 	text = {
 		trigger = {
@@ -50,11 +49,9 @@ salt_waste_cure_flavor = {
 	text = {
 		trigger = {
 			fully_owns_the_salt_wastes = yes
-			NOT = { has_law = law_type:law_mage_hunters }
-			NAND = {
-				has_variable = harness_the_salt_waste_curse
-				always = no
-				#Update to use signs
+			NOT = { has_variable = harness_the_salt_waste_curse }
+			religion = {
+				NOT = { has_discrimination_trait = dragon_domain }
 			}
 		}
 		localization_key = salt_waste_cure_flavor_default
@@ -65,17 +62,17 @@ salt_waste_cure_desciption = {
 	type = country
 	text = {
 		trigger = {
-			has_law = law_type:law_mage_hunters
+			religion = {
+				has_discrimination_trait = dragon_domain
+			}
 		}
-		localization_key = salt_waste_cure_desciption_mage_hunters
+		localization_key = salt_waste_cure_desciption_dragon_domain
 	}
 	text = {
 		trigger = {
 			has_variable = harness_the_salt_waste_curse
-			always = no
-			#Update to use signs
 		}
-		localization_key = salt_waste_cure_desciption_dark_arts
+		localization_key = salt_waste_cure_desciption_harness
 	}
 	text = {
 		trigger = {
@@ -86,12 +83,9 @@ salt_waste_cure_desciption = {
 	text = {
 		trigger = {
 			fully_owns_the_salt_wastes = yes
-			NOT = { has_law = law_type:law_mage_hunters }
-			NAND = {
-				has_variable = harness_the_salt_waste_curse
-				#has_law = law_type:law_dark_arts
-				always = no
-				#Update to use signs
+			NOT = { has_variable = harness_the_salt_waste_curse }
+			religion = {
+				NOT = { has_discrimination_trait = dragon_domain }
 			}
 		}
 		localization_key = salt_waste_cure_desciption_default

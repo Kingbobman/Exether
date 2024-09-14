@@ -63,8 +63,9 @@
 			commander_rank = commander_rank_3
 			save_scope_as = snb_general
 		}
-		scope:snb_general
+		scope:snb_general = {
 			transfer_to_formation = scope:snb_army
+		}
 	}
 	c:THK ?= {
 		create_military_formation = {
@@ -223,30 +224,6 @@
 			transfer_to_formation = scope:khd_army
 		}
 	}
-	c:DRI ?= {
-		create_military_formation = {
-			type = army
-			hq_region = sr:region_gnomehome
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_FLUSTERBEEK
-				count = 6
-			}
-
-			save_scope_as = dri_army
-		}
-
-		create_character = {
-			is_general = yes
-			hq = region_gnomehome
-			save_scope_as = dri_general
-		}
-		
-		scope:dri_general = {
-			transfer_to_formation = scope:dri_army
-		}
-	}
 	c:RAV ?= {
 		create_military_formation = {
 			type = army
@@ -271,6 +248,12 @@
 			is_general = yes
 			commander_rank = commander_rank_2
 			hq = region_ravik
+			interest_group = ig_devout
+			age = 45
+			traits = {
+				cruel
+				expert_offensive_planner
+			}
 			save_scope_as = rav_general
 		}
 		
@@ -307,6 +290,12 @@
 			is_general = yes
 			commander_rank = commander_rank_2
 			hq = region_ravik
+			interest_group = ig_armed_forces
+			age = 51
+			traits = {
+				stalwart_defender
+				reserved
+			}
 			save_scope_as = rav_general
 		}
 		
@@ -317,17 +306,22 @@
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_ravik
-			name = Raviki_Border_Defense_Force
+			name = "Florishnom Volunteer Army"
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_FLUITVELD
-				count = 10
+				state_region = s:STATE_TIKKERHAVEN
+				count = 5
 			}
 			combat_unit = {
-				type = unit_type:combat_unit_type_cannon_artillery
-				state_region = s:STATE_FLUITVELD
-				count = 10
+				type = unit_type:combat_unit_type_skirmish_infantry
+				state_region = s:STATE_TIKKERHAVEN
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_TIKKERHAVEN
+				count = 7
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
@@ -336,15 +330,15 @@
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_GNURKENSTAD
+				state_region = s:STATE_GNURKENRADE
 				count = 5
 			}
 
 			combat_unit = {
                 type = unit_type:combat_unit_type_line_infantry
-                state_region = s:STATE_RATELBERG
+                state_region = s:STATE_TIKKERHAVEN
                 service_type = conscript
-                count = 10
+                count = 15
             }
 
 			save_scope_as = rav_army
@@ -354,6 +348,12 @@
 			is_general = yes
 			commander_rank = commander_rank_3
 			hq = region_ravik
+			interest_group = ig_armed_forces
+			age = 31
+			traits = {
+				surveyor
+				plains_commander
+			}
 			save_scope_as = rav_general
 		}
 		
@@ -369,28 +369,49 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_RATELBERG
-				count = 20
+				count = 10
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_RATELBERG
 				service_type = conscript
-				count = 20
+				count = 25
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_GNURKENSTAD
 				count = 20
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_RIJMVALLEI
+				count = 15
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_FLUITBOS
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_RIJMVALLEI
+				service_type = conscript
+				count = 15
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_GNURKENSTAD
 				service_type = conscript
-				count = 20
+				count = 15
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mobile_artillery
 				state_region = s:STATE_SPRANKELMEER
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_TIKKERHAVEN
 				count = 5
 			}
 
@@ -399,8 +420,15 @@
 
 		create_character = {
 			is_general = yes
-			commander_rank = commander_rank_5
+			commander_rank = commander_rank_2
 			hq = region_ravik
+			interest_group = ig_armed_forces
+			age = 40
+			traits = {
+				brave
+				imperious
+				imposing
+			}
 			save_scope_as = rav_general
 		}
 		
@@ -412,7 +440,7 @@
 		create_military_formation = {
 			type = fleet
 			hq_region = sr:region_ravik
-			name = Raviki_Coastal_Fleet
+			name = "Raviki Coastal Fleet"
 		
 			combat_unit = {
 				type = unit_type:combat_unit_type_man_o_war
@@ -469,20 +497,24 @@
 				state_region = s:STATE_VONKENDAM
 				count = 12
 			}
-			save_scope_as = tle_army8
+			save_scope_as = kingsguard_1
 		}
 			
-
-
 		create_character = {
 			is_general = yes
 			commander_rank = commander_rank_2
 			hq = region_hasals_mirror
-			save_scope_as = tle_general8
+			interest_group = ig_landowners
+			age = 57
+			traits = {
+                expert_offensive_planner
+				expert_defensive_strategist
+            }
+			save_scope_as = kingsguardg
 		}
 		
-		scope:tle_general8 = {
-			transfer_to_formation = scope:tle_army8
+		scope:kingsguardg = {
+			transfer_to_formation = scope:kingsguard_1
 		}
 		create_military_formation = {
 			type = army
@@ -523,6 +555,13 @@
 			is_general = yes
 			commander_rank = commander_rank_2
 			hq = region_hasals_mirror
+			interest_group = ig_armed_forces
+			age = 50
+			traits = {
+				ambitious
+				basic_artillery_commander
+				pillager
+			}
 			save_scope_as = tle_gener
 		}
 		
@@ -591,6 +630,12 @@
 			is_general = yes
 			commander_rank = commander_rank_1
 			hq = region_hasals_mirror
+			interest_group = ig_landowners
+			age = 45
+			traits = {
+                tactful
+				cautious
+			}
 			save_scope_as = tle_general3
 		}
 		
@@ -630,6 +675,12 @@
 			is_general = yes
 			commander_rank = commander_rank_1
 			hq = region_hasals_mirror
+			interest_group = ig_landowners
+			age = 48
+			traits = {
+				meticulous
+				plains_commander
+			}
 			save_scope_as = tlegen
 		}
 		
@@ -676,7 +727,7 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_cannon_artillery
 				state_region = s:STATE_VONKENDAM
-				count = 7
+				count = 10
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
@@ -692,6 +743,12 @@
 			is_general = yes
 			commander_rank = commander_rank_1
 			hq = region_hasals_mirror
+			interest_group = ig_landowners
+			age = 62
+			traits = {
+				innovative
+				bandit
+			}
 			save_scope_as = tle_general5
 		}
 		
@@ -707,12 +764,12 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_SUNDALE
-				count = 2
+				count = 5
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_BRIGHTWATER
-				count = 3
+				count = 5
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
@@ -723,12 +780,12 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_THORNFIELD
-				count = 3
+				count = 5
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_WHITESTONE
-				count = 2
+				count = 5
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
@@ -742,13 +799,19 @@
 				count = 7
 			}
 
-			save_scope_as = tle_army3
+			save_scope_as = tle_army6
 		}
 
 		create_character = {
 			is_general = yes
 			commander_rank = commander_rank_1
 			hq = region_hasals_mirror
+			interest_group = ig_rural_folk
+			age = 29
+			traits = {
+				surveyor
+				mountain_commander
+			}
 			save_scope_as = tle_general6
 		}
 		
@@ -908,7 +971,7 @@
 	c:VLT ?= {
 		create_military_formation = {
 			type = army
-			hq_region = sr:region_kengurudal
+			hq_region = sr:region_embervein_arroyo
 
 			name = "Viletok Horde"
 
@@ -929,7 +992,7 @@
 
 		create_character = {
 			is_general = yes
-			hq = sr:region_kengurudal
+			hq = sr:region_embervein_arroyo
 			save_scope_as = vltgen
 		}
 		
@@ -1517,13 +1580,13 @@
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_EMBERFALL
+				state_region = s:STATE_ENBERFYRN
 				count = 20
 			}
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_mobile_artillery
-				state_region = s:STATE_EMBERFALL
+				state_region = s:STATE_ENBERFYRN
 				count = 15
 			}
 
@@ -1594,17 +1657,17 @@
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_DRAGONCREST
+				state_region = s:STATE_ARHLEBRYLD
 				count = 20
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_cannon_artillery
-				state_region = s:STATE_WINDSPEAR
+				state_region = s:STATE_CHELKSPYR
 				count = 15
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_dragoons
-				state_region = s:STATE_DRAGONCREST
+				state_region = s:STATE_ARHLEBRYLD
 				count = 5
 			}
 
@@ -1620,45 +1683,6 @@
 		
 		scope:gra_general = {
 			transfer_to_formation = scope:gra_army
-		}
-	}
-	c:SBH ?= {
-		create_military_formation = {
-			type = army
-			hq_region = sr:region_old_thaloria
-
-			name = "Valoran Militia"
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_VALORN
-				service_type = conscript
-				count = 15
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_VALORN
-				count = 15
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_dragoons
-				state_region = s:STATE_VALORN
-				count = 15
-			}
-
-			save_scope_as = sbh_army
-		}
-
-		create_character = {
-			is_general = yes
-			hq = region_old_thaloria
-			save_scope_as = sbh_general
-		}
-		
-		scope:sbh_general = {
-			transfer_to_formation = scope:sbh_army
 		}
 	}
 	c:SKR ?= {
@@ -1688,214 +1712,19 @@
 				state_region = s:STATE_SAWAMAJI
 				count = 10
 			}
-				save_scope_as = skr_army1
+				save_scope_as = kvgarmy2
 		}
-
-		save_scope_as = kvgarmy2
-	}
-
-	create_character = {
-		is_general = yes
-		commander_rank = commander_rank_2
-		hq = sr:region_verdant_shore
-		save_scope_as = kvggen2
-	}
-	
-	scope:kvggen2 = {
-		transfer_to_formation = scope:kvgarmy2
-	}
-
-c:MGR ?= {
-	create_military_formation = {
-		type = army
-		hq_region = sr:region_gavkhan
-
-		name = "Swamp Sirens"
-
-		combat_unit = {
-			type = unit_type:combat_unit_type_line_infantry
-			state_region = s:STATE_NYZHNE_SENIA
-			count = 15
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			hq = sr:region_hyena_plains
+			save_scope_as = kvggen2
 		}
-
-		combat_unit = {
-			type = unit_type:combat_unit_type_line_infantry
-			state_region = s:STATE_TROPOJA
-			count = 10
+		
+		scope:kvggen2 = {
+			transfer_to_formation = scope:kvgarmy2
 		}
-
-		combat_unit = {
-			type = unit_type:combat_unit_type_dragoons
-			state_region = s:STATE_HUTSULANE
-			count = 15
-		}
-
-		save_scope_as = mgrarmy
 	}
-
-	create_character = {
-		is_general = yes
-		commander_rank = commander_rank_2
-		hq = sr:region_gavkhan
-		save_scope_as = mgrgen
-	}
-	
-	scope:mgrgen = {
-		transfer_to_formation = scope:mgrarmy
-	}
-
-	create_military_formation = {
-		type = army
-		hq_region = sr:region_gavkhan
-
-		name = "Marsh Stalkers"
-
-		combat_unit = {
-			type = unit_type:combat_unit_type_line_infantry
-			state_region = s:STATE_SHKUMBINIA
-			count = 15
-		}
-
-		combat_unit = {
-			type = unit_type:combat_unit_type_line_infantry
-			state_region = s:STATE_BREZHKE
-			count = 10
-		}
-
-		combat_unit = {
-			type = unit_type:combat_unit_type_cuirassiers
-			state_region = s:STATE_BREZHKE
-			count = 20
-		}
-
-		save_scope_as = mgrarmy2
-	}
-
-	create_character = {
-		is_general = yes
-		commander_rank = commander_rank_2
-		hq = sr:region_gavkhan
-		save_scope_as = mgrgen2
-	}
-	
-	scope:mgrgen2 = {
-		transfer_to_formation = scope:mgrarmy2
-	}
-}
-c:DKO ?= {
-	create_military_formation = {
-		type = army
-		hq_region = sr:region_old_thaloria
-
-		name = "Army of Emberfall"
-
-		combat_unit = {
-			type = unit_type:combat_unit_type_line_infantry
-			state_region = s:STATE_EMBERFALL
-			count = 20
-		}
-
-		combat_unit = {
-			type = unit_type:combat_unit_type_mobile_artillery
-			state_region = s:STATE_EMBERFALL
-			count = 15
-		}
-
-		save_scope_as = dko_army
-	}
-
-	create_character = {
-		is_general = yes
-		commander_rank = commander_rank_2
-		hq = region_old_thaloria
-		save_scope_as = dko_general
-	}
-	
-	scope:dko_general = {
-		transfer_to_formation = scope:dko_army
-	}
-
-	create_military_formation = {
-		type = army
-		hq_region = sr:region_old_thaloria
-
-		name = "SouthGuard" 
-
-		combat_unit = {
-			type = unit_type:combat_unit_type_line_infantry
-			state_region = s:STATE_CERRIKUA
-			count = 20
-		}
-
-		combat_unit = {
-			type = unit_type:combat_unit_type_lancers
-			state_region = s:STATE_SHPYNTESI
-			count = 10
-		}
-
-		combat_unit = {
-			type = unit_type:combat_unit_type_dragoons
-			state_region = s:STATE_KUKESPIA
-			count = 10
-		}
-
-		combat_unit = {
-			type = unit_type:combat_unit_type_line_infantry
-			state_region = s:STATE_KUKESPIA
-			count = 5
-		}
-
-		save_scope_as = dko_army2
-	}
-
-	create_character = {
-		is_general = yes
-		commander_rank = commander_rank_2
-		hq = region_old_thaloria
-		save_scope_as = dko_general2
-	}
-	
-	scope:dko_general2 = {
-		transfer_to_formation = scope:dko_army2
-	}
-}
-c:GRA ?= {
-	create_military_formation = {
-		type = army
-		hq_region = sr:region_old_thaloria
-
-		name = "CrestGuard"
-
-		combat_unit = {
-			type = unit_type:combat_unit_type_line_infantry
-			state_region = s:STATE_DRAGONCREST
-			count = 20
-		}
-		combat_unit = {
-			type = unit_type:combat_unit_type_cannon_artillery
-			state_region = s:STATE_WINDSPEAR
-			count = 15
-		}
-		combat_unit = {
-			type = unit_type:combat_unit_type_dragoons
-			state_region = s:STATE_DRAGONCREST
-			count = 5
-		}
-
-		save_scope_as = gra_army
-	}
-
-	create_character = {
-		is_general = yes
-		commander_rank = commander_rank_2
-		hq = region_old_thaloria
-		save_scope_as = gra_general
-	}
-	
-	scope:gra_general = {
-		transfer_to_formation = scope:gra_army
-	}
-}
 c:SBH ?= {
 	create_military_formation = {
 		type = army

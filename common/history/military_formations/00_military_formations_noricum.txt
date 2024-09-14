@@ -140,10 +140,11 @@
 		#	is_admiral = yes
 		#	commander_rank = commander_rank_2
 		#	save_scope_as = clarke_adm
-		}
+#		}
 		#scope:clarke_adm = {
 			#transfer_to_formation = scope:dovedalian_fleet
 		#}
+	}
 	c:RVC ?= {
 		create_military_formation = {
 			type = army
@@ -224,8 +225,16 @@
 				state_region = s:STATE_TEMPLE_HILL
 				count = 3
 			}
-
-
+		save_scope_as = AUM_Army
+		}
+		create_character = {
+			is_general = yes
+			hq = sr:region_central_noricum
+			commander_rank = commander_rank_3
+			save_scope_as = AUMgen1
+		}
+		scope:AUMgen1 = {
+			transfer_to_formation = scope:AUM_Army
 		}
 
 	}
@@ -283,7 +292,7 @@
 		create_character = {
 			is_general = yes
 			hq = sr:region_dumonian_heartlands
-			commander_rank = commander_rank_1
+			commander_rank = commander_rank_3
 			save_scope_as = dumgen1
 		}
 		scope:dumgen1 = {
@@ -728,6 +737,16 @@
 				state_region = s:STATE_TYMANS_FOLLY
 				count = 1
 			}
+				save_scope_as = mbr_army1
+		}
+		create_character = {
+			is_general = yes
+			hq = sr:region_yanger_steppe
+			commander_rank = commander_rank_1
+			save_scope_as = mbrgen1
+		}
+		scope:mbrgen1 = {
+			transfer_to_formation = scope:mbr_army1
 		}
 
 	}
@@ -888,6 +907,16 @@
 				state_region = s:STATE_GRYTINGARIK
 				count = 2
 			}
+		save_scope_as = ice_army1
+		}
+		create_character = {
+			is_general = yes
+			hq = sr:region_coldreach
+			commander_rank = commander_rank_1
+			save_scope_as = icegen1
+		}
+		scope:icegen1 = {
+			transfer_to_formation = scope:ice_army1
 		}
 
 		create_military_formation = {
@@ -910,6 +939,16 @@
 				state_region = s:STATE_FALMAKELD
 				count = 3
 			}
+		save_scope_as = ice_fleet
+		}
+		create_character = {
+			is_admiral = yes
+			hq = sr:region_coldreach
+			commander_rank = commander_rank_1
+			save_scope_as = iceadmiral1
+		}
+		scope:iceadmiral1 = {
+			transfer_to_formation = scope:ice_fleet
 		}
 	}
 	c:CAO ?= {

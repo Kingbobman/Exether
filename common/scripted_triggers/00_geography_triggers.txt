@@ -68,6 +68,12 @@ state_is_in_teferet = {
 	}
 }
 
+state_is_in_dragon_isles = {
+	OR = {
+		region = sr:region_west_dragon_isles
+		region = sr:region_amethyst_archipelago
+	}
+}
 state_is_in_west_locari = {
 	OR = {
 		region = sr:region_new_dumonia
@@ -578,6 +584,7 @@ exether_is_inland = {
 		state_region = s:STATE_DEAD_SEA_SKIES
 		state_region = s:STATE_DEEPWOODS
 		state_region = s:STATE_DEPHEL_PATH
+		state_region = s:STATE_DER_IBBENN
 		state_region = s:STATE_DILAFSHAN
 		state_region = s:STATE_DINASHIN
 		state_region = s:STATE_DIYINAKHAD
@@ -613,7 +620,7 @@ exether_is_inland = {
 		state_region = s:STATE_ELVENSHROUD
 		state_region = s:STATE_ELVERA
 		state_region = s:STATE_ELZEKOEPEL
-		state_region = s:STATE_EMBERFALL
+		state_region = s:STATE_ENBERFYRN
 		state_region = s:STATE_EMBERSKIES
 		state_region = s:STATE_EMPERORS_MARBLES
 		state_region = s:STATE_EQUINE_SEA
@@ -629,7 +636,7 @@ exether_is_inland = {
 		state_region = s:STATE_FAOLNA_PASS
 		state_region = s:STATE_FAOLNA_WINDS
 		state_region = s:STATE_FARASHIL
-		state_region = s:STATE_FARGHANOV
+		state_region = s:STATE_GLIDGRED_RIZRA
 		state_region = s:STATE_FARREACH
 		state_region = s:STATE_FAR_SHORE
 		state_region = s:STATE_FAR_SHORE_2
@@ -744,6 +751,7 @@ exether_is_inland = {
 		state_region = s:STATE_KHAMOSKIES
 		state_region = s:STATE_KHAMOSKIWAN
 		state_region = s:STATE_KHANZULO
+		state_region = s:STATE_KHARGISHABBO
 		state_region = s:STATE_KHAULAN
 		state_region = s:STATE_KHORTA
 		state_region = s:STATE_KHOSTOV
@@ -790,7 +798,6 @@ exether_is_inland = {
 		state_region = s:STATE_LANDING_AT_SEA_2
 		state_region = s:STATE_LEMBONA
 		state_region = s:STATE_LEPIDRA
-		state_region = s:STATE_LEPTISCA
 		state_region = s:STATE_LEVIATHAN_DEEP
 		state_region = s:STATE_LHASHI
 		state_region = s:STATE_LIGHTSCOURGE
@@ -1065,7 +1072,6 @@ exether_is_inland = {
 		state_region = s:STATE_TAYTAQOCHA_SKIES
 		state_region = s:STATE_THAGHIZHI
 		state_region = s:STATE_THAGHIZHI_HEIGHTS
-		state_region = s:STATE_THASPYR
 		state_region = s:STATE_THASSARCIAN_SHORES
 		state_region = s:STATE_THE_AMBER_RUN
 		state_region = s:STATE_THE_AMBER_RUN_2
@@ -1097,7 +1103,7 @@ exether_is_inland = {
 		state_region = s:STATE_TUKHUR
 		state_region = s:STATE_ULDOR
 		state_region = s:STATE_UNNAMED_BAY_1
-		state_region = s:STATE_UNNAMED_BAY_2
+		state_region = s:STATE_SEA_OF_LANTERNS
 		state_region = s:STATE_UNNAMED_BAY_3
 		state_region = s:STATE_UNNAMED_SEA_2
 		state_region = s:STATE_UNNAMED_SEA_3
@@ -1193,5 +1199,35 @@ check_is_coastal = {
 			has_variable = exe_is_inland
 		}
 		is_coastal = yes
+	}
+}
+
+mainland_dragon_isles_state = {
+	OR = {
+		state_region = s:STATE_KLYPYRA
+		state_region = s:STATE_ZAMARIS
+		state_region = s:STATE_ZARTHOS
+		state_region = s:STATE_CALTHA
+		state_region = s:STATE_SIGARA
+		state_region = s:STATE_LEPTISCA
+		state_region = s:STATE_OYRSA
+		state_region = s:STATE_LEPIDRA
+		state_region = s:STATE_THASPYR
+		state_region = s:STATE_LILYBAEUM
+		state_region = s:STATE_ZYRAS
+		state_region = s:STATE_MOTHYA
+		state_region = s:STATE_LEPTHAR
+	}
+
+}
+
+undermountain_state = {
+	OR = {
+		state_region = s:STATE_ALQADIM
+		state_region = s:STATE_ARCTHARAL
+		state_region = s:STATE_DER_IBBENN
+		state_region = s:STATE_GLIDGRED_RIZRA #debatable
+		state_region = s:STATE_KHARGISHABBO
+		state_region = s:STATE_LIGHTSCOURGE
 	}
 }

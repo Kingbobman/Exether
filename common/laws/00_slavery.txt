@@ -222,7 +222,6 @@ law_slave_trade = {
 	icon = "gfx/interface/icons/law_icons/slave_trade.dds"
 	
 	disallowing_laws = {
-		law_cultural_exclusion
 		law_multicultural
 	}
 	
@@ -303,93 +302,6 @@ law_slave_trade = {
 	}
 }
 
-law_war_slaves = {
-	group = lawgroup_slavery
-	
-	progressiveness = 50
-	
-	icon = "gfx/interface/icons/law_icons/war_slaves.dds"
-
-	disallowing_laws = {
-		law_multicultural
-	}
-	
-	on_activate = {
-		if = {
-			limit = { has_variable = slavery_recently_abolished }
-			custom_tooltip = {
-				text = enslave_discriminated_farm_workers_tt
-				every_scope_state = {
-					limit = { has_variable = former_slave_state }
-					enslave_discriminated_farm_workers = yes
-				}			
-			}
-			remove_variable = slavery_recently_abolished
-			every_scope_state = {
-				remove_variable = former_slave_state
-			}
-		}
-
-		ig:ig_armed_forces ?= { 
-			if = {
-				limit = {
-					NOT = { has_ideology = ideology:ideology_pro_slavery }
-				}			
-				add_ideology = ideology_pro_slavery 
-			}
-		}
-	}	
-		
-	modifier = {
-		interest_group_ig_armed_forces_pol_str_mult = 0.25
-	}	
-
-	possible_political_movements = {
-		law_slavery_banned
-	}
-
-	pop_support = {
-		value = 0
-		add = {
-			desc = "POP_ACADEMICS"
-			if = {
-				limit = {
-					is_pop_type = academics
-				}
-				value = 0.1
-			}
-		}
-		add = {
-			desc = "POP_CLERGYMEN"
-			if = {
-				limit = {
-					is_pop_type = clergymen
-				}
-				value = 0.05
-			}
-		}
-	}
-
-	revolution_state_weight = {
-		value = 1
-		if = {
-		   limit = { 
-			  is_slave_state = no 
-			  NOT = { has_variable = former_slave_state }
-		   }	
-		   multiply = 0.25
-		}
-	}
-	ai_enact_weight_modifier = {
-		value = 0
-		#Petitions
-		if = {
-			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
-			add = 750
-		}
-	}
-}
-
 law_legacy_slavery = {
 	group = lawgroup_slavery
 	
@@ -401,7 +313,6 @@ law_legacy_slavery = {
 	
 	unlocking_laws = {
 		law_slave_trade
-		law_war_slaves
 	}
 	
 	on_activate = {

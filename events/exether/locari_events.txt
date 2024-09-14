@@ -1,0 +1,83 @@
+﻿namespace = locari
+
+# Examined draconic carvings
+locari.1 = {
+    type = country_event
+
+    title = locari.1.t
+    desc = locari.1.d
+    flavor = locari.1.f
+
+    placement = scope:locari_state_scope
+
+    event_image = {
+        video = "europenorthamerica_capitalists_meeting"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_map.dds"
+    
+    duration = 3
+
+    immediate = {
+        s:STATE_ELENIKAR = {
+            random_scope_state = {
+                limit = {
+                    any_scope_building = {
+                        is_building_type = building_dragon_ruins
+                        level = 8
+                    }
+                }
+                save_scope_as = locari_state_scope
+            }
+        }
+    }
+
+    option = {
+        name = locari.1.a
+        default_option = yes
+        add_modifier = {
+            name = draconic_carvings_examined
+            months = short_modifier_time
+        }
+        add_journal_entry = {
+            type = je_dragon_tombs
+        }
+        s:STATE_ELENIKAR = {
+            random_scope_state = {
+                add_modifier = {
+                    name = modifier_dragon_tomb_site
+                }
+            }
+        }
+        s:STATE_TSURWA = {
+            random_scope_state = {
+                add_modifier = {
+                    name = modifier_dragon_tomb_site
+                }
+            }
+        }
+        s:STATE_JALALABAKOV = {
+            random_scope_state = {
+                add_modifier = {
+                    name = modifier_dragon_tomb_site
+                }
+            }
+        }
+        s:STATE_IVONDRO = {
+            random_scope_state = {
+                add_modifier = {
+                    name = modifier_dragon_tomb_site
+                }
+            }
+        }
+        s:STATE_JERMENION = {
+            random_scope_state = {
+                add_modifier = {
+                    name = modifier_dragon_tomb_site
+                }
+            }
+        }
+    }
+}

@@ -3,7 +3,6 @@
 	selection_behavior = weighted_random
 	fallback = no_hair
 
-
     no_hair = {
         dna_modifiers = {
             accessory = {
@@ -17,7 +16,6 @@
             base = 0
         }
     }
-
 
     no_portrait_hair = {
         dna_modifiers = {
@@ -65,36 +63,36 @@
        }
     }
 
-    european_hair_styles = {
-        dna_modifiers = {
-            accessory = {
-                mode = add
-                gene = hairstyles
-                template = european_hairstyles
-                range = { 0 1 } # For the randomness to work correctly
-           }
-         }
-    
-       weight = {
-           base = 0
-           modifier = {
-                add = 100
-                AND = {
-                    exists = scope:character
-                        scope:character = {
-                             european_clothes_trigger = yes
-                        }
-                }
-                
-              
-          }
-       }
-    }
+    #european_hair_styles = {
+    #    dna_modifiers = {
+    #        accessory = {
+    #            mode = add
+    #            gene = hairstyles
+    #            template = european_hairstyles
+    #            range = { 0 1 } # For the randomness to work correctly
+    #       }
+    #     }
+    #
+    #   weight = {
+    #       base = 0
+    #       modifier = {
+    #            add = 100
+    #            AND = {
+    #                exists = scope:character
+    #                    scope:character = {
+    #                         european_clothes_trigger = yes
+    #                    }
+    #            }
+    #            
+    #          
+    #      }
+    #   }
+    #}
 
     chinese_manchu_queue_hairstyle = {
         dna_modifiers = {
             accessory = {
-                mode = add
+                mode = replace
                 gene = hairstyles
                 template = chinese_hairstyles # note that chinese_hairstyles only inlcude Manchu hairstyles atm. 
                 range = { 0 1 } # For the randomness to work correctly
@@ -136,7 +134,7 @@
     japanese_hair_styles = {
         dna_modifiers = {
             accessory = {
-                mode = add
+                mode = replace
                 gene = hairstyles
                 template = japanese_hairstyles
                 range = { 0 1 } # For the randomness to work correctly
@@ -160,7 +158,7 @@
     african_diaspora_hairstyle = {
         dna_modifiers = {
             accessory = {
-                mode = add
+                mode = replace
                 gene = hairstyles
                 template = african_diaspora_hairstyles
                 range = { 0 1 } # For the randomness to work correctly
@@ -181,7 +179,7 @@
     japanese_characters_hair_styles = {
         dna_modifiers = {
             accessory = {
-                mode = add
+                mode = replace
                 gene = hairstyles
                 template = japanese_hairstyles
                 range = { 0 1 } # For the randomness to work correctly
@@ -211,7 +209,7 @@
         # when updating triggers on this, please update american_military_hairstyles in game\gfx\portraits\portrait_modifiers\01_headgear.txt as well so that triggers continue to match up
         dna_modifiers = {
             accessory = {
-                mode = add
+                mode = replace
                 gene = hairstyles
                 template = american_military_hairstyles
                 range = { 0 1 }
@@ -262,7 +260,7 @@
     european_peasant_hair = {
         dna_modifiers = {
             accessory = {
-                mode = add
+                mode = replace
                 gene = hairstyles
                 template = european_peasant_hair
                 range = { 0 1 }
@@ -281,7 +279,7 @@
     buddhist_monk_non_hair = {
         dna_modifiers = {
             accessory = {
-                mode = add
+                mode = replace
                 gene = hairstyles
                 template = no_hairstyles
                 range = { 0 1 } # For the randomness to work correctly
@@ -305,7 +303,7 @@
     indian_peasant_hairstyle = {
         dna_modifiers = {
             accessory = {
-                mode = add
+                mode = replace
                 gene = hairstyles
                 template = indian_low_hairstyles 
                 range = { 0 1 } # For the randomness to work correctly

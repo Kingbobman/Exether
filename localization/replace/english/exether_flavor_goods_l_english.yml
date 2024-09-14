@@ -3,6 +3,7 @@
  DATA_GOODS_NAME_TOOLTIP: "[ConcatIfNeitherEmpty( Goods.GetStateGoodsShortageDesc, '\n')][ConcatIfNeitherEmpty( SelectLocalization( Goods.GetState.IsValid, 'CONTEXTUAL_GOODS_GENERATION_INFO_STATE', ''), '\n\n')][ConcatIfNeitherEmpty( Goods.GetMarketGoodsShortageDesc, '\n\n')][ConcatIfNeitherEmpty( SelectLocalization( Goods.GetMarket.IsValid, 'CONTEXTUAL_GOODS_GENERATION_INFO_MARKET', ''), '\n\n')][ConcatIfNeitherEmpty( Goods.GetBuildingsProducingThisDesc, '\n\n')][ConcatIfNeitherEmpty( Goods.GetBuildingsUsingThisDesc, '\n\n')][Goods.GetNeedLevelsContainingThisDesc][AddLocalizationIf(Goods.HasMarketContext, 'GOODS_LEADERBOARD_HEADER')][SelectLocalization(Goods.IsTradeable, '', 'NON_TRADEABLE_DESC')]$DATA_GOODS_NAME_TOOLTIP_DESC$"
   DATA_GOODS_NAME_TOOLTIP_DESC: "#lore [ConcatIfNeitherEmpty('\n$TOOLTIP_DELIMITER$\n', Goods.GetCustom('goods_flavor_loc'))]#!"
   # Goods Flavor
+  trinkets_flavor: ""
   blubber_flavor: "Blubber is a valuable commodity often sought after for alchemical or industrial purposes, most often as an intermediary to fuel. When refined and churned, it can produce magical oil conducive to reactions. Blubber itself is harvested from the toughened backs of fallen sea-faring leviathans."
   godsblood_flavor: ""
   monster_essence_flavor: ""

@@ -1,0 +1,179 @@
+﻿namespace = synthetic_dawn
+
+synthetic_dawn.1 = {
+	type = state_event
+	placement = ROOT
+	title = synthetic_dawn.1.t
+	desc = synthetic_dawn.1.d
+	flavor = synthetic_dawn.1.f
+
+	duration = 3
+
+
+	event_image = {
+		video = "asia_farmers_market"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	trigger = {
+		any_scope_building = {
+			is_building_type = building_soulwrought_assembly_plant
+
+		}
+		state_region = {
+			NOT = { is_homeland = soulwrought }
+		}
+		
+		culture_percent_state = {     target = cu:soulwrought     value >= 0.3   }
+		
+	}
+
+	immediate = {
+		state_region = {
+			add_homeland = cu:soulwrought
+		}
+	}
+
+	option = {
+		name = synthetic_dawn.1.a #I, for one, welcome our new Soulwrought citizens.
+		default_option = yes
+		add_modifier = {
+			name = accepting_soulwrought_homelands
+			months = normal_modifier_time
+		}
+		show_as_tooltip = {
+			state_region = {
+				add_homeland = cu:soulwrought
+			}
+		}
+	}
+
+	option = {
+		name = synthetic_dawn.1.b #They ought to spend less time thinking about such questions
+		add_modifier = {
+			name = rejecting_soulwrought_homelands
+			months = normal_modifier_time
+		}
+		show_as_tooltip = {
+			state_region = {
+				add_homeland = cu:soulwrought
+			}
+		}
+	}
+}
+
+airship.11 = {  #this is the event that triggers new airship routes as new airship docks are made
+	type = country_event
+	placement = ROOT
+	hidden = yes
+
+	trigger = {
+		OR = {
+			year >= 1210
+			OR = {
+				any_scope_state = {
+					state_region = s:STATE_BANOKIK 
+					any_scope_building = {
+						is_building_type = building_airship_dock
+					}
+				}
+
+				any_scope_state = {
+					state_region = s:STATE_NAN 
+					any_scope_building = {
+						is_building_type = building_airship_dock
+					}
+				}
+
+				any_scope_state = {
+					state_region = s:STATE_LIPOLAN
+					any_scope_building = {
+						is_building_type = building_airship_dock
+					}
+				}
+				#more states go here
+			}	
+		}
+		NOT = {
+			has_variable = wolkara_airship 
+		}
+	}
+
+	immediate = {
+
+		set_variable = wolkara_airship 
+		random_scope_state = {
+			save_scope_as = hidden_canal_state
+		}
+		scope:hidden_canal_state = {
+			create_building = {
+				building = building_wolkara_heights_connection
+				level = 1
+
+			}	
+		}
+	}
+}
+
+airship.12 = {  #this is the event that triggers new airship routes as new airship docks are made
+	type = country_event
+	placement = ROOT
+	hidden = yes
+
+	trigger = {
+		OR = {
+			year >= 1210
+			OR = {
+				any_scope_state = {
+					state_region = s:STATE_FOBAN
+					any_scope_building = {
+						is_building_type = building_airship_dock
+					}
+				}
+
+				any_scope_state = {
+					state_region = s:STATE_POFIKAN
+					any_scope_building = {
+						is_building_type = building_airship_dock
+					}
+				}
+
+				any_scope_state = {
+					state_region = s:STATE_BIFAN
+					any_scope_building = {
+						is_building_type = building_airship_dock
+					}
+				}
+
+				any_scope_state = {
+					state_region = s:STATE_KOTIK
+					any_scope_building = {
+						is_building_type = building_airship_dock
+					}
+				}
+				#more states go here
+			}	
+		}
+		NOT = {
+			has_variable = lumanta_airship 
+		}
+	}
+
+	immediate = {
+
+		set_variable = lumanta_airship 
+		random_scope_state = {
+			save_scope_as = hidden_canal_state
+		}
+		scope:hidden_canal_state = {
+			create_building = {
+				building = building_lumantan_heights_connection
+				level = 1
+
+			}	
+		}
+	}
+}
