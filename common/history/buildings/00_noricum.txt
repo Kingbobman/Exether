@@ -939,19 +939,6 @@ reserves=1
           reserves=1
           activate_production_methods={ "pm_butchering_tools" "pm_standard_fences" "pm_unrefrigerated"  }
         }
-			create_building={
-          building="building_tea_plantation"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:YAN"
-						levels=4
-						region="STATE_RIDERS_MOOT"
-				   }
-				}
-          reserves=1
-          activate_production_methods={ "default_building_tea_plantation" "pm_road_carts"  }
-        }
         create_building={
           building="building_iron_mine"
             add_ownership={ 
@@ -3245,9 +3232,22 @@ reserves=1
     }
     create_building={
       building="building_government_administration"
-      level=2
+      level=3
       reserves=1
-      activate_production_methods={ "pm_simple_organization" }
+      activate_production_methods={ "pm_horizontal_drawer_cabinets" }
+    }
+    create_building={
+      building="building_fur_hunting_lodge"
+      add_ownership = {
+        building = {
+          type="building_financial_district"
+          country="c:BIE"
+          levels=1
+          region="STATE_COLESSIE"
+        }
+      }
+      reserves=1
+      activate_production_methods={ "pm_hunting_parties" "pm_no_exotic" }
     }
     create_building={
 			building="building_rye_farm"
@@ -3411,6 +3411,32 @@ reserves=1
           activate_production_methods={ "pm_military_shipbuilding_wooden" }
         }
         create_building={
+          building="building_leviathan_outpost"
+          add_ownership={ 
+            building={ 
+              type="building_financial_district"
+              country="c:BIE"
+              levels=1
+              region="STATE_KENLYNE"
+             }
+          }
+            reserves=1
+            activate_production_methods={ "pm_manowar_leviathan_ships" "pm_manual_harvesting" }
+        }
+        create_building={
+          building="building_fur_hunting_lodge"
+          add_ownership = {
+            building = {
+              type="building_financial_district"
+              country="c:BIE"
+              levels=2
+              region="STATE_KENLYNE"
+            }
+          }
+          reserves=1
+          activate_production_methods={ "pm_hunting_parties" "pm_no_exotic" }
+        }
+        create_building={
           building="building_shipyards"
                   add_ownership={ 
                       building={ 
@@ -3447,7 +3473,7 @@ reserves=1
             }
           }
           reserves=1
-          activate_production_methods={ "pm_early_potion_vat_production" "pm_alcohol-based_potions" "pm_no_mixins" "pm_basic_filters" }
+          activate_production_methods={ "pm_simple_potion_production" "pm_water-based_potions" "pm_no_mixins" "pm_basic_filters" }
         }	
         create_building={
           building="building_textile_mills"
@@ -5106,6 +5132,19 @@ reserves=1
           reserves=1
           activate_production_methods={ "pm_hunting_parties" "pm_no_exotic" }
         }
+        create_building={
+          building="building_leviathan_outpost"
+           add_ownership={ 
+                      building={ 
+                          type="building_adventuring_guild"
+                          country="c:VAI"
+                          levels=3
+              region="STATE_ZAWADKA"
+            }
+          }
+          reserves=1
+          activate_production_methods={ "pm_manowar_leviathan_ships" "pm_manual_harvesting" }
+            }
         create_building={
           building="building_port"
           level=2

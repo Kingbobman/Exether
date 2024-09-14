@@ -2152,19 +2152,6 @@
 				activate_production_methods={ "pm_dye_workshops" "pm_no_luxury_clothes" "pm_traditional_looms" }
 			}
 			create_building={
-				building="building_tobacco_plantation"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:COC"
-						levels=8
-						region="STATE_MYCOLGA"
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }
-			}	
-			create_building={
 				building="building_cotton_plantation"
 				add_ownership={ 
 					building={ 
@@ -2939,10 +2926,23 @@
 		region_state:COC={
 			create_building={
 				building="building_government_administration"
-				level=3
+				level=5
 				reserves=1
 				activate_production_methods={ "pm_horizontal_drawer_cabinets" }
 			}
+			create_building={
+				building="building_tobacco_plantation"
+				add_ownership={ 
+					building={ 
+						type="building_manor_house"
+						country="c:COC"
+						levels=8
+						region="STATE_NOLOGO_RULL"
+				   }
+				}
+				reserves=1
+				activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }
+			}	
 			create_building={
 				building="building_shipyards"
 				add_ownership={ 

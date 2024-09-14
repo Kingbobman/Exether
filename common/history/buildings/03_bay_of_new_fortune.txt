@@ -429,7 +429,7 @@
                    }
                 }
 				reserves=1
-				activate_production_methods={ "pm_simple_forestry" "pm_no_equipment" "pm_road_carts" "pm_no_hardwood" }
+				activate_production_methods={ "pm_saw_mills" "pm_no_equipment" "pm_road_carts" "pm_no_hardwood" }
 			}
 			create_building={
 				building="building_government_administration"
@@ -532,6 +532,19 @@
 				activate_production_methods={ "pm_simple_organization" }
 			}
 			create_building={
+				building="building_livestock_ranch"
+				add_ownership={ 
+					building={ 
+						type="building_manor_house"
+						country="c:GPK"
+						levels=2
+						region="STATE_SUYANAKU"
+				   }
+				}
+				reserves=1
+				activate_production_methods={ "pm_butchering_tools" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated"  }
+			}
+			create_building={
 				building="building_cloudsilver_mine"
 				add_ownership={ 
 				  building={ 
@@ -588,7 +601,7 @@
 						building={
 							type="building_wizard_tower"
 							country="c:GPK"
-							levels=1
+							levels=3
 							region="STATE_SUYANAKU"
 					}
 				}
@@ -627,11 +640,11 @@
 				  building={ 
 					type="building_financial_district"
 					country="c:GPK"
-					levels=9
+					levels=5
 					region="STATE_SUYANAKU"
 				   }
 				}
-				activate_production_methods={ "pm_simple_mushrooms" "pm_extra_wood" "pm_road_carts" }
+				activate_production_methods={ "pm_mushroom_mills" "pm_extra_wood" "pm_road_carts" }
 			  }
 			  create_building={
 				building="building_tooling_workshops"
@@ -684,6 +697,19 @@
 				reserves=1
 				activate_production_methods={ "pm_anchorage_airship" }
 			  }
+			  create_building={
+				building="building_livestock_ranch"
+				add_ownership={ 
+					building={ 
+						type="building_manor_house"
+						country="c:GPK"
+						levels=2
+						region="STATE_WAMANPATA"
+				   }
+				}
+				reserves=1
+				activate_production_methods={ "pm_butchering_tools" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated"  }
+			}
 			create_building={
 				building="building_arms_industry"
 					add_ownership={ 
@@ -722,19 +748,6 @@
 					}
 				reserves=1
 				activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
-			}
-			create_building={
-				building="building_tea_plantation"
-					add_ownership={ 
-						building={ 
-							type="building_manor_house"
-							country="c:GPK"
-							levels=1
-							region="STATE_WAMANPATA"
-					   }
-					}
-				reserves=1
-				activate_production_methods={ "default_building_tea_plantation" "pm_road_carts"  }
 			}
 			create_building={
 				building="building_potion_distillery"
@@ -781,12 +794,12 @@
 				building={ 
 					type="building_financial_district"
 					country="c:GPK"
-					levels=2
+					levels=3
 					region="STATE_WAMANPATA"
 			   }
 			}
 			reserves=1
-			activate_production_methods={ "pm_simple_forestry" "pm_no_equipment" "pm_road_carts" "pm_hardwood" }
+			activate_production_methods={ "pm_saw_mills" "pm_no_equipment" "pm_road_carts" "pm_hardwood" }
 		}
 			create_building={
 				building="building_underfarm"
@@ -846,11 +859,11 @@
 				  building={ 
 					type="building_financial_district"
 					country="c:GPK"
-					levels=11
+					levels=6
 					region="STATE_WAMANPATA"
 				   }
 				}
-				activate_production_methods={ "pm_simple_mushrooms" "pm_extra_wood" "pm_road_carts" }
+				activate_production_methods={ "pm_mushroom_mills" "pm_extra_wood" "pm_road_carts" }
 			  }
 			  create_building={
 				building="building_furniture_manufacturies"
@@ -1383,36 +1396,10 @@
 	}
 	s:STATE_SAVAGE_LANDS = {
 		region_state:RSE = {
-				create_building={
-				building="building_tobacco_plantation"
-					add_ownership={ 
-						building={ 
-							type="building_manor_house"
-							country="c:RSE"
-							levels=1
-							region="STATE_SAVAGE_LANDS"
-					}
-					}
-				reserves=1
-				activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }
-			}
 		}
 	}
 	s:STATE_SAVAGE_LANDS_2 = {
 		region_state:RSE = {
-				create_building={
-				building="building_tobacco_plantation"
-					add_ownership={ 
-						building={ 
-							type="building_manor_house"
-							country="c:RSE"
-							levels=1
-							region="STATE_SAVAGE_LANDS_2"
-					}
-					}
-				reserves=1
-				activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }
-			}
 		}
 	}
 	s:STATE_ROUGHSTONE_TERRITORY = {
@@ -1515,12 +1502,6 @@
 	}
 	s:STATE_BLOODTHORN_WASTES = {
 		region_state:BLD = {
-			create_building={
-				building="building_tobacco_plantation"
-				level=2
-				reserves=1
-				activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }
-			}
 				create_building={
 				building="building_wheat_farm"
 					add_ownership={ 
