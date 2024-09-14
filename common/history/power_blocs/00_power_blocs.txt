@@ -45,6 +45,50 @@
 		}
 	}
 
+	c:FLU = {
+		create_power_bloc = {
+			name = FLU_BLOC
+
+			map_color = { 37 39 117 }
+
+			founding_date = 1015.6.9 
+			identity = identity_trade_league
+			principle = principle_external_trade_1
+
+			member = c:CLL
+			member = c:KAM
+			member = c:SAZ
+			member = c:SHE
+		}
+		if = {
+			limit = {
+				has_dlc_feature = power_bloc_features
+			}
+		}
+	}
+
+	c:THI = {
+		create_power_bloc = {
+			name = THI_BLOC
+
+			map_color = { 179 46 162 }
+
+			founding_date = 1015.6.9 
+			identity = identity_religious
+			principle = principle_divine_economics_2
+
+			member = c:FEY
+			member = c:LEO
+			member = c:RDM
+			member = c:DSB
+		}
+		if = {
+			limit = {
+				has_dlc_feature = power_bloc_features
+			}
+		}
+	}
+
 	c:VAI = {
 		create_power_bloc = {
 			name = ICEBREAKER_FLEETS

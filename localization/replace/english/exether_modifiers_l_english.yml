@@ -1,4 +1,4 @@
-l_english:
+﻿l_english:
   ig_variant_mages: "[GetInterestGroupVariant('ig_mages',GetPlayer).GetNameWithCountryVariant]"
   interest_group_ig_mages_pol_str_mult: "$ig_variant_mages$ [concept_political_strength]"
   interest_group_ig_mages_pol_str_mult_desc: "A bonus or penalty to the total [concept_political_strength] of the $ig_variant_mages$ [concept_interest_group]"
@@ -40,15 +40,23 @@ l_english:
   state_veil_integrity_contribution: "@veilneg! [Concept('concept_veil_integrity', 'Veil')] Disruption"
   state_veil_integrity_contribution_desc: "A decrease in @veilneg! [concept_veil_integrity]"
 
- country_archmages_pol_str_mult: "[concept_political_strength] of $archmages$"
- country_archmages_pol_str_mult_desc: "An increase or decrease in the [concept_political_strength] of $archmages$"
- country_archmages_voting_power_add: "[concept_political_strength] from the [concept_votes] of $archmages$"
+  country_clergymen_pol_str_mult: "[concept_political_strength] of $clergymen$"
+  country_clergymen_pol_str_mult_desc: "An increase or decrease in the [concept_political_strength] of $clergymen$"
+
+  country_archmages_pol_str_mult: "[concept_political_strength] of $archmages$"
+  country_archmages_pol_str_mult_desc: "An increase or decrease in the [concept_political_strength] of $archmages$"
+  country_archmages_voting_power_add: "[concept_political_strength] from the [concept_votes] of $archmages$"
 
   country_wizards_pol_str_mult: "[concept_political_strength] of $wizards$"
   country_wizards_pol_str_mult_desc: "An increase or decrease in the [concept_political_strength] of $wizards$"
 
+  state_wizards_investment_pool_contribution_add: "$wizards$ [concept_investment_pool] contribution""
+  state_wizards_investment_pool_contribution_add_desc: "How much of their profits $wizards$ will invest"
   state_wizards_investment_pool_efficiency_mult: "$wizards$ [concept_investment_pool] contribution efficiency"
   state_wizards_investment_pool_efficiency_mult_desc: "An increase or decrease to how much the invested profits from $wizards$ will contribute to the [concept_investment_pool]"
+  
+  state_archmages_investment_pool_contribution_add: "$archmages$ [concept_investment_pool] contribution"
+  state_archmages_investment_pool_contribution_add_desc: "How much of their profits $archmages$ will invest"
   state_archmages_investment_pool_efficiency_mult: "$archmages$ [concept_investment_pool] contribution efficiency"
   state_archmages_investment_pool_efficiency_mult_desc: "An increase or decrease to how much the invested profits from $archmages$ will contribute to the [concept_investment_pool]"
   state_wizards_investment_pool_contribution_add: "$wizards$ [concept_investment_pool] contribution"
@@ -56,8 +64,22 @@ l_english:
   state_archmages_investment_pool_contribution_add: "$archmages$ [concept_investment_pool] contribution"
   state_archmages_investment_pool_contribution_add_desc: "How much of their profits $archmages$ will invest"
 
- state_wizards_standard_of_living_add: "[concept_sol] for $wizards$."
- state_wizards_standard_of_living_add_desc: "Extra [concept_sol] added on top of wealth"
+  state_adventurers_investment_pool_contribution_add: "$adventurers$ [concept_investment_pool] contribution"
+  state_adventurers_investment_pool_contribution_add_desc: "How much of their profits $adventurers$ will invest"
+  state_adventurers_investment_pool_efficiency_mult: "$adventurers$ [concept_investment_pool] contribution efficiency"
+  state_adventurers_investment_pool_efficiency_mult_desc: "An increase or decrease to how much the invested profits from $adventurers$ will contribute to the [concept_investment_pool]"
+
+  state_heroes_investment_pool_contribution_add: "$heroes$ [concept_investment_pool] contribution"
+  state_heroes_investment_pool_contribution_add_desc: "How much of their profits $heroes$ will invest"
+  state_heroes_investment_pool_efficiency_mult: "$heroes$ [concept_investment_pool] contribution efficiency"
+  state_heroes_investment_pool_efficiency_mult_desc: "An increase or decrease to how much the invested profits from $heroes$ will contribute to the [concept_investment_pool]"
+
+  state_archmages_investment_pool_contribution_add: "$farmers$ [concept_investment_pool] contribution""
+  state_archmages_investment_pool_contribution_add_desc: "How much of their profits $farmers$ will invest"
+  state_farmers_investment_pool_efficiency_mult_desc: "An increase or decrease to how much the invested profits from $farmers$ will contribute to the [concept_investment_pool]"
+
+  state_wizards_standard_of_living_add: "[concept_sol] for $wizards$."
+  state_wizards_standard_of_living_add_desc: "Extra [concept_sol] added on top of wealth"
 
   state_archmages_standard_of_living_add: "[concept_sol] for $archmages$."
   state_archmages_standard_of_living_add_desc: "Extra [concept_sol] added on top of wealth"
@@ -105,6 +127,9 @@ l_english:
   goods_output_meat_mult: "Building @meat! Meat output"
   goods_output_meat_mult_desc: "A bonus of penalty to the amount of @meat! Meat produced by buildings"
 
+  goods_output_gold_mult: "Building @gold! Gold output"
+  goods_output_gold_mult_desc: "A bonus of penalty to the amount of @gold! Gold produced by buildings"
+
   goods_output_coal_mult: "Building @coal! Coal output"
   goods_output_coal_mult_desc: "A bonus of penalty to the amount of @coal! Coal produced by buildings"
 
@@ -131,10 +156,10 @@ l_english:
   state_soulwrought_assembled_add_desc: "The amount of [GetCulture('soulwrought').GetName] produced by buildings, released in batches of 10K"
   state_soulwrought_assembled_mult: "Building [GetCulture('soulwrought').GetName] Output"
   state_soulwrought_assembled_mult_desc: "A bonus or penalty to the amount of [GetCulture('soulwrought').GetName] produced by buildings"
-  state_diggy_diggy_dwarf_add: "[GetCulture('arcthar').GetName] unpetrified per month"
-  state_diggy_diggy_dwarf_add_desc: "The amount of [GetCulture('arcthar').GetName] unpetrified by buildings, released in batches of 5K"
-  state_diggy_diggy_dwarf_mult: "Building [GetCulture('arcthar').GetName] output"
-  state_diggy_diggy_dwarf_mult_desc: "A bonus or penalty to the amount of [GetCulture('arcthar').GetName] unpetrified by buildings"
+  state_diggy_diggy_dwarf_add: "[GetCulture('starwoken').GetName] unpetrified per month"
+  state_diggy_diggy_dwarf_add_desc: "The amount of [GetCulture('starwoken').GetName] unpetrified by buildings, released in batches of 5K"
+  state_diggy_diggy_dwarf_mult: "Building [Concept('concept_pop', '$concept_pops$')] output"
+  state_diggy_diggy_dwarf_mult_desc: "A bonus or penalty to the amount of [GetCulture('starwoken').GetName] unpetrified by buildings"
 
   goods_input_thaumacores_add: "@thaumacores! Thaumacores input"
   goods_input_thaumacores_add_desc: "The amount of @thaumacores! Thaumacores consumed by buildings"
@@ -228,8 +253,8 @@ l_english:
   building_employment_artificers_add_desc: "Modifies the amount of $artificers$ a building can hire per level"
   building_employment_artificers_mult: "building_employment_artificers_mult"
   building_employment_artificers_mult_desc: "building_employment_artificers_mult_desc"
-  goods_input_opium_add:0 "@chimesilt! Chimesilt input"
-  goods_input_opium_add_desc:0 "The amount of @chimesilt! Chimesilt consumed by buildings"
+  goods_input_opium_add: "@chimesilt! Chimesilt input"
+  goods_input_opium_add_desc: "The amount of @chimesilt! Chimesilt consumed by buildings"
   state_adventurer_coverage_add: "Adventurer Coverage"
   state_adventurer_coverage_add_desc: "A bonus or penalty to the [Concept('concept_state','$concept_state_possessive$')] [concept_adventurer_coverage]"
   state_adventurer_coverage_mult: "Adventurer Coverage"
@@ -329,6 +354,7 @@ l_english:
  #building throughput modifiers
   building_wishstone_mine_throughput_add: "$building_wishstone_mine$ [concept_throughput]"
   building_wishstone_mine_throughput_add_desc: "A bonus or penalty to the input and output of $building_wishstone_mine$"
+  
 
  #Combat Units
   unit_combat_unit_type_cuirassiers_offense_mult: "$combat_unit_type_cuirassiers$ $unit_offense_mult$"
@@ -368,3 +394,8 @@ l_english:
   abolished_jihduk_paseb: "Abolished Jihduk Paseb"
   accepting_soulwrought_homelands: "Accepting Soulwrought Homelands"
   rejecting_soulwrought_homelands: "Rejecting Soulwrought Homelands"
+	beauty_in_bloom_modifier: "Beauty in Bloom"
+  examining_dragon_carvings: "Examining Draconic Carvings"
+  modifier_dragon_tomb_site: "Rumored Dragon Tomb"
+  found_dragon_tombs: "Worshipping Gem Dragons"
+  draconic_carvings_examined: "Ancient Texts Examined"
