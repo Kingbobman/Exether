@@ -5,21 +5,35 @@
 }
 
 dragon_sickhouses = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_pharma_positive.dds
 	state_mortality_mult = -0.03
 	state_poor_standard_of_living_add = 1
 }
 
+tore_down_sickhouses = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_urbanization_negative.dds
+	interest_group_approval_add = -3
+}
+
+loose_quarantine_enforcement = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_pharma_negative.dds
+	interest_group_approval_add = -3
+}
 industrialists_sickhouses_ignored = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_capitalist_negative.dds
 	interest_group_approval_add = -2
 }
 
+ignored_expert_advice = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_pharma_negative.dds
+	interest_group_approval_add = -3
+}
 modifier_active_dragonblight_outbreak = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
 	state_mortality_mult = 0.035
-	state_radicals_from_discrimination_mult = 0.3
-	state_migration_pull_mult = -0.4
+	state_radicals_from_discrimination_mult = 0.33
+	state_assimilation_mult = -0.33
+	state_migration_pull_mult = -0.5
 }
 
 dragonblight_port_controls = {
@@ -151,4 +165,19 @@ tolerated_kobold_pogroms = {
 stopped_kobold_pogroms = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_protest_negative.dds
 	state_radicals_from_discrimination_mult = -0.15
+}
+
+dragon_collapse = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_protest_negative.dds
+	country_liberty_desire_of_subjects_add = 0.66
+	power_bloc_cohesion_mult = -0.5
+	power_bloc_cohesion_add = -10
+	country_prestige_add = -20
+	country_authority_mult = -0.15
+}
+
+dragonblight_blues = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_pharma_negative.dds
+	state_assimilation_mult = -0.33
+	state_illvasaari_standard_of_living_add = -0.5
 }

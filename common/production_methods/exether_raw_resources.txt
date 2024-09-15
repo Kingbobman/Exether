@@ -194,7 +194,7 @@ pm_government_run_building_cloud_collector = {
 			building_employment_bureaucrats_add = 150
 		}
 		unscaled = {
-			building_government_shares_add = 1
+			building_bureaucrats_shares_add = 1
 		}
 	}
 }
@@ -217,7 +217,7 @@ pm_worker_cooperative_building_cloud_collector = {
 			building_employment_shopkeepers_add = 250
 		}
 		unscaled = {
-			building_workforce_shares_add = 1
+			building_shopkeepers_shares_add = 1
 		}
 	}
 }
@@ -867,7 +867,7 @@ pm_dedicated_diggers = {
 	texture = "gfx/interface/icons/production_method_icons/pumps.dds"
 
 	unlocking_technologies = {
-		prospecting
+		mechanical_tools
 	}
 	
 	state_modifiers = {
@@ -898,7 +898,7 @@ pm_wishstone_detectors = {
 	texture = "gfx/interface/icons/production_method_icons/condensing_engine_pump.dds"
 
 	unlocking_technologies = {
-		advanced_contraptions
+		watertube_boiler
 	}
 
 	state_modifiers = {
@@ -919,7 +919,7 @@ pm_wishstone_detectors = {
 
 		level_scaled = {
 			building_employment_laborers_add = 3000
-			building_employment_engineers = 250
+			building_employment_engineers_add = 250
 			building_employment_wizards_add = 500
 			building_employment_artificers_add = 750
 			building_employment_shopkeepers_add = 500
@@ -931,7 +931,7 @@ pm_large_scale_wishstone_extraction = {
 	texture = "gfx/interface/icons/production_method_icons/diesel_pump.dds"
 
 	unlocking_technologies = {
-		threshing_machines
+		threshing_machine
 	}
 
 	state_modifiers = {
@@ -953,7 +953,7 @@ pm_large_scale_wishstone_extraction = {
 
 		level_scaled = {
 			building_employment_laborers_add = 2500
-			building_employment_engineers = 750
+			building_employment_engineers_add = 750
 			building_employment_wizards_add = 250
 			building_employment_artificers_add = 1000
 			building_employment_shopkeepers_add = 500
@@ -987,7 +987,7 @@ pm_wishstone_landcrawlers = {
 
 		level_scaled = {
 			building_employment_laborers_add = 2250
-			building_employment_engineers = 750
+			building_employment_engineers_add = 750
 			building_employment_wizards_add = 250
 			building_employment_artificers_add = 1250
 			building_employment_shopkeepers_add = 500
@@ -1054,7 +1054,7 @@ pm_wishing_mirrors = {
 pm_veilripper_arrays = {
 	texture = "gfx/interface/icons/production_method_icons/vaccum_brine_electrolysis.dds"
 	unlocking_technologies = {
-		floating_buildings
+		ethereal_mastery
 	}
 	
 	state_modifiers = {
@@ -1122,7 +1122,157 @@ pm_totally_safe_trucks = {
 pm_road_carts = {
 	texture = "gfx/interface/icons/production_method_icons/no_rail_transport.dds"
 }
+pm_no_relics = {
+	texture = "gfx/interface/icons/production_method_icons/no_hardwood_selection.dds"
+}
+pm_some_relics_ship_graveyard = {
+	texture = "gfx/interface/icons/production_method_icons/hardwood_selection.dds"
+	unlocking_production_methods = {
+		pm_gantry_cranes_ship_graveyard
+		pm_on_that_oceangate_grind_ship_graveyard
+		pm_on_that_oceangate_grind_thaumacore_ship_graveyard
+	}
+	goods_output_relics_add = 4
+	goods_output_ectoplasm_add = -8
+}
+pm_several_relics_ship_graveyard = {
+texture = "gfx/interface/icons/production_method_icons/increased_hardwood.dds"
+unlocking_production_methods = {
+	pm_gantry_cranes_ship_graveyard
+	pm_on_that_oceangate_grind_ship_graveyard
+	pm_on_that_oceangate_grind_thaumacore_ship_graveyard
+}
+goods_output_relics_add = 10
+goods_output_ectoplasm_add = -20
+}
 
+pm_diving_bells_ship_graveyard = { #diving bells to recover relics
+	texture = "gfx/interface/icons/production_method_icons/picks_and_shovels.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_tools_add = 5 #40 x 5 #200
+			goods_input_clippers_add = 5 #60 x 5 #300
+			
+			# output goods
+			goods_output_ectoplasm_add = 20 #1000
+			goods_output_gold_add = 3.5 #350
+			
+			#1350 - 500 = 850
+
+		}
+
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 4250
+			building_employment_adventurers_add = 250
+		}
+
+		unscaled = {
+		building_laborers_mortality_mult = 0.2
+		}
+	}
+}
+
+pm_gantry_cranes_ship_graveyard = {
+	texture = "gfx/interface/icons/production_method_icons/simple_oil_extraction.dds"
+	
+	unlocking_technologies = {
+		gantry_cranes
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10 #nonmagic I guess?
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_engines_add = 10 # 60 x 5 #300
+			goods_input_steamers_add = 5 #70 x 5 #350
+			
+			# output goods
+			goods_output_ectoplasm_add = 40 #4000
+			goods_output_gold_add = 7 #350
+		}
+
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 3750
+			building_employment_engineers_add = 250
+			building_employment_adventurers_add = 500
+		}
+	}
+}
+
+pm_on_that_oceangate_grind_ship_graveyard = {
+	texture = "gfx/interface/icons/production_method_icons/simple_oil_extraction.dds"
+	
+	unlocking_technologies = {
+		submarine
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 15 #nonmagic I guess?
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_engines_add = 10 # 60 x 10 #600
+			goods_input_steamers_add = 5 #70 x 5 #350
+			goods_input_steel_add =  5 #50 x 5 #250
+			
+			# output goods
+			goods_output_ectoplasm_add = 60 #3000
+			goods_output_gold_add = 10.5 #1050
+		}
+
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 3750
+			building_employment_engineers_add = 500
+			building_employment_adventurers_add = 750
+		}
+	}
+}
+
+pm_on_that_oceangate_grind_thaumacore_ship_graveyard = {
+	texture = "gfx/interface/icons/production_method_icons/simple_oil_extraction.dds"
+	required_input_goods = thaumacores
+	unlocking_technologies = {
+		submarine
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 20 #magic
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_thaumacores_add = 6 # 150 x 6 #900
+			goods_input_steamers_add = 5 #70 x 5 #350
+			goods_input_steel_add = 5 #50 x 5 #250
+			goods_input_ironclads_add = 2
+			
+			# output goods
+			goods_output_ectoplasm_add = 69 #3450
+			goods_output_gold_add = 12 #1200
+		}
+
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 3250
+			building_employment_engineers_add = 500
+			building_employment_adventurers_add = 750
+		}
+	}
+}
 pm_diving_bells_wishstone_reef = { #diving bells to recover wishstone
 	texture = "gfx/interface/icons/production_method_icons/picks_and_shovels.dds"
 
@@ -1212,7 +1362,7 @@ pm_on_that_oceangate_grind_wishstone_reef = {
 
 pm_on_that_oceangate_grind_thaumacore_wishstone_reef = {
 	texture = "gfx/interface/icons/production_method_icons/simple_oil_extraction.dds"
-	
+	required_input_goods = thaumacores
 	unlocking_technologies = {
 		submarine
 	}
@@ -1257,6 +1407,30 @@ pm_potions_of_waterbreathing_wishstone_reef = { #now this is podracing
 			
 			# output goods
 			goods_output_wishstone_add = 5 #250
+		}
+
+		unscaled = {
+			building_output_potions_mult = 0.15
+			building_laborers_mortality_mult = -0.1
+		}
+	}
+}
+
+pm_potions_of_waterbreathing_ship_graveyard = { #now this is podracing
+	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
+
+	unlocking_technologies = {	
+		alchemy
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_potions_add = 5 #250
+			
+			# output goods
+			goods_output_ectoplasm_add = 3 #150
+			goods_output_gold_add = 1 #100
 		}
 
 		unscaled = {
@@ -1342,11 +1516,10 @@ pm_exotic_hides = {
 	building_modifiers = {
 		unscaled = {
 			building_adventurers_mortality_mult = 0.05
-			building_soldiers_mortality_mult = 0.05
 		}
 
 		workforce_scaled = {
-			goods_output_fabric_add = -10
+			goods_output_fabric_add = -20
 			goods_output_silk_add = 10
 		}
 	}
@@ -1359,12 +1532,11 @@ pm_essence_extraction = {
 	building_modifiers = {
 		unscaled = {
 			building_adventurers_mortality_mult = 0.15
-			building_soldiers_mortality_mult = 0.1
 		}
 
 		workforce_scaled = {
 			goods_output_meat_add = -5
-			goods_output_monster_essence_add = 10
+			goods_output_monster_essence_add = 4
 		}
 	}
 }
@@ -1671,7 +1843,6 @@ pm_spider_enlargement = {
 	
 			# mortality
 			building_laborers_mortality_mult = 0.2
-			building_farmers_mortality_mult = 0.1
 		}
 	}
 }

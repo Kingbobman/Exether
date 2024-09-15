@@ -8,7 +8,9 @@
 	#scripted_button = dragon_port_open_button
 	scripted_button = negotiate_kobold_settlements_button
 	
-
+	modifiers_while_active = {
+		dragonblight_blues
+	}
 	on_monthly_pulse = {
 		effect = {
 			every_scope_state = {
@@ -16,7 +18,7 @@
 					NOT = { 
 						OR = {
 						has_modifier = dragon_sickhouses
-						has_decree = special_measures
+						has_decree = decree_special_measures
 						}
 
 					 }
@@ -69,9 +71,9 @@
 			}	
 		}
 		random_events = { #this originally all added up to 200 but I'm pretty sure that events whose triggers aren't met aren't included in the calculation and that fucked stuff up
-			125 = 0
+			140 = 0
 			84 = dragonblight_pulse.22 #the collapse event lmao
-			55 = dragonblight_pulse.14 #punishment for kobold annexation, adjacent
+			55 = dragonblight_pulse.14 #punishment for kobold annexation
 			#20 = dragonblight_pulse.13 #punishment for owning kobold homelands, random
 			3 = dragonblight_pulse.1 #trade route spread
 			4 = dragonblight_pulse.2 #adjacent spread
@@ -80,7 +82,7 @@
 			7 = dragonblight_pulse.5 #adjacent spread, no health system
 			3 = dragonblight_pulse.10 #adjacent-to-kobolds spread
 			4 = dragonblight_pulse.6 #heal-by-decree
-			4 = dragonblight_pulse.7 #heal, institution + decree
+			7 = dragonblight_pulse.7 #heal, institution + decree
 			14 = dragonblight_pulse.8 #heal, vaccine + institution + decree
 			8 = dragonblight_pulse.9 #heal vaccine + decree
 			6 = dragonblight_pulse.11 #heal, vaccine only
@@ -185,11 +187,7 @@ je_dragonblight_vaccine = {
 	
 
 
-	on_weekly_pulse = {
-		effect = {
 
-		}
-	}
 
 	on_monthly_pulse = {
 		
@@ -204,16 +202,14 @@ je_dragonblight_vaccine = {
 		custom_tooltip = {
 			text = dragonblight_vaccine_full_tt
 			scope:journal_entry = {
-				"scripted_bar_progress(dragonblight_vaccine_progress_bar)" >= 100
+				"scripted_bar_progress(dragonblight_vaccine_progress_bar)" >= 5000
 			}
 		}
 	}	
 
 	on_complete = {
 		set_variable = dragonblight_vaccine
-		trigger_event = {
-		#	id = dragonblight.not
-		}
+
 	}
 
 	weight = 5000

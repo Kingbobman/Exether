@@ -271,16 +271,16 @@
 
 			create_character = {
 				is_admiral = yes
+				hq = region_arrador
 				commander_rank = commander_rank_2
 				save_scope_as = arradmiral
 			}
 			
-			scope:arradmiral = {
-				transfer_to_formation = scope:arr_navy
-			}
-
+		scope:arradmiral = {
+			transfer_to_formation = scope:arr_navy
 		}	
 	}
+}
     c:AHO ?= {
 
 
@@ -860,11 +860,10 @@
 				state_region = s:STATE_FERNSEA
 				count = 1
 			}
-
 			save_scope_as = plaguewood_bulwark
 		}
 
-                create_character = {
+        create_character = {
 			is_general = yes
 			first_name = Endri
 			last_name = Millersson
@@ -879,7 +878,7 @@
 		}
 		
 		scope:endri_millson_gen = {
-			transfer_to_formation = scope:first_fist
+			transfer_to_formation = scope:plaguewood_bulwark
 		}
  
 		create_character = {

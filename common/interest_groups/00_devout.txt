@@ -121,6 +121,41 @@
 
 		if = {
 			limit = {
+				country_has_state_religion = rel:rose_court
+				OR = {
+					country_has_primary_culture = cu:thiralian
+					country_has_primary_culture = cu:astreval
+				}
+			}
+			ig:ig_devout = {
+				set_interest_group_name = ig_bloomwardens
+				remove_ideology = ideology_patriarchal
+				add_ideology = ideology_chivalrous_conservative
+			}
+		}
+
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						country_has_state_religion = rel:rose_court
+						OR = {
+							country_has_primary_culture = cu:thiralian
+							country_has_primary_culture = cu:astreval
+						}
+					}
+					c:AUM ?= this
+				}
+
+			}
+			ig:ig_devout = {
+				remove_ideology = ideology_moralist
+				add_ideology = ideology_theocratic_moralist
+			}
+		}
+
+		if = {
+			limit = {
 				owner = {
 					OR = {
 						religion = rel:mothers_embrace
