@@ -79,24 +79,24 @@ types journal
 					text = "INACTIVE_JOURNAL_ENTRIES"
 				}
 
-				blockoverride "third_button" {
-					text = "SITUATIONS"
-				}
-				blockoverride "third_button_tooltip" {
-					tooltip = "SITUATIONS"
-				}
-				blockoverride "third_button_click" {
-					onclick = "[InformationPanel.SelectTab('situations')]"
-				}
-				blockoverride "third_button_visibility" {
-					visible = "[InformationPanel.IsTabSelected('situations')]"
-				}
-				blockoverride "third_button_visibility_checked" {
-					visible = "[Not( InformationPanel.IsTabSelected('situations') )]"
-				}
-				blockoverride "third_button_selected" {
-					text = "SITUATIONS"
-				}
+				#blockoverride "third_button" {
+				#	text = "SITUATIONS"
+				#}
+				#blockoverride "third_button_tooltip" {
+				#	tooltip = "SITUATIONS"
+				#}
+				#blockoverride "third_button_click" {
+				#	onclick = "[InformationPanel.SelectTab('situations')]"
+				#}
+				#blockoverride "third_button_visibility" {
+				#	visible = "[InformationPanel.IsTabSelected('situations')]"
+				#}
+				#blockoverride "third_button_visibility_checked" {
+				#	visible = "[Not( InformationPanel.IsTabSelected('situations') )]"
+				#}
+				#blockoverride "third_button_selected" {
+				#	text = "SITUATIONS"
+				#}
 			}
 		}
 		
