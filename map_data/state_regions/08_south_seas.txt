@@ -15,6 +15,10 @@
         bg_logging = 11
         bg_fishing = 4
     }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 10
+    }
     naval_exit_id = 3018
 }
 STATE_GONJOLA = {
@@ -36,6 +40,10 @@ STATE_GONJOLA = {
         bg_logging = 11
         bg_cloudsilver_mining = 25
         bg_fishing = 7
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 10
     }
     naval_exit_id = 3018
 }
@@ -60,6 +68,10 @@ STATE_BEXAMBA = {
         depleted_type = "bg_gold_mining"
         undiscovered_amount = 4
     }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 10
+    }
     naval_exit_id = 3018
 }
 STATE_LEMBONA = {
@@ -77,11 +89,11 @@ STATE_LEMBONA = {
         bg_coal_mining = 72
         bg_iron_mining = 48
         bg_logging = 23
-        bg_hunting = 12
+        bg_hunting = 20
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 28
+        undiscovered_amount = 40
     }
 
 }
@@ -102,6 +114,10 @@ STATE_XABELO = {
         bg_logging = 4
         bg_fishing = 5
     }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 5
+    }
     naval_exit_id = 3020
 }
 STATE_MAZALINO = {
@@ -118,6 +134,11 @@ STATE_MAZALINO = {
     capped_resources = {
         bg_coal_mining = 48
         bg_logging = 5
+        bg_hunting = 10
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 10
     }
 
 }
@@ -159,11 +180,12 @@ STATE_MAXANGA = {
         bg_sulfur_mining = 32
         bg_haunted_grounds = 6
         bg_logging = 16
+        bg_hunting = 10
         bg_fishing = 10
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 17
+        undiscovered_amount = 15
     }
     naval_exit_id = 3012
 }
@@ -181,11 +203,12 @@ STATE_BEMVULA = {
     capped_resources = {
         bg_iron_mining = 27
         bg_logging = 18
+        bg_hunting = 20
         bg_haunted_grounds = 7
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 20
+        undiscovered_amount = 35
     }
 
 }
@@ -210,7 +233,7 @@ STATE_BELOZA = {
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 14
+        undiscovered_amount = 20
     }
     naval_exit_id = 3012
 }
@@ -228,6 +251,7 @@ STATE_JOVEXA = {
         bg_coal_mining = 48
         bg_logging = 7
         bg_haunted_grounds = 8
+        bg_hunting = 10
     }
     resource = {
         type = "bg_rubber"
@@ -273,7 +297,7 @@ STATE_MABRAGA = {
     }
     resource = {
         type = "bg_rubber"
-        discovered_amount = 21
+        discovered_amount = 5
     }
 
 }
@@ -362,23 +386,24 @@ STATE_MOZAGAL = {
         bg_coal_mining = 44
         bg_iron_mining = 33
         bg_logging = 5
+        bg_hunting = 20
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 16
+        undiscovered_amount = 20
     }
 
 }
 STATE_ALENMAR = {
     id = 3957
-    subsistence_building = "building_subsistence_farms"
+    subsistence_building = "building_subsistence_rice_paddies"
     provinces = { x6FF2E7 x75B2F2 x7FFCC0 x82F88A x94F0E4 x95CF92 x96E7EF x9AC6A4 xA5C2B8 xACBFB2 xB2DCB4 xBD57F6 xCBB8AA xCBEFC4 xDC8FBF xDE99D6 xE53FE2 xF4DA32 xFD5EF5 }
     port = x75B2F2
     city = xFD5EF5
     farm = xF4DA32
     mine = xE53FE2
     wood = xDE99D6
-    arable_land = 40
+    arable_land = 80
     arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_silk_plantations" "bg_dye_plantations" "bg_coffee_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
     capped_resources = {
         bg_iron_mining = 15
@@ -388,20 +413,20 @@ STATE_ALENMAR = {
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 18
+        undiscovered_amount = 5
     }
     naval_exit_id = 3020
 }
 STATE_TERRABELA = {
     id = 3958
-    subsistence_building = "building_subsistence_farms"
+    subsistence_building = "building_subsistence_rice_paddies"
     provinces = { x8DEFD4 xBDCF6F xBFF55A xD0D3F4 xD69ECC xDB69EA xDCE8F3 xE1F9B3 xE87EE2 xFCF6A0 }
     port = x8DEFD4
     city = xFCF6A0
     farm = xE87EE2
     mine = xE1F9B3
     wood = xDCE8F3
-    arable_land = 40
+    arable_land = 80
     arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_silk_plantations" "bg_dye_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
     capped_resources = {
         bg_coal_mining = 40
@@ -412,7 +437,7 @@ STATE_TERRABELA = {
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 28
+        undiscovered_amount = 15
     }
     naval_exit_id = 3020
 }
@@ -431,6 +456,7 @@ STATE_MALANJAPORT = {
         bg_lead_mining = 30
         bg_logging = 17
         bg_fishing = 7
+        bg_hunting = 10
     }
     resource = {
         type = "bg_gold_fields"
@@ -440,7 +466,7 @@ STATE_MALANJAPORT = {
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 20
+        undiscovered_amount = 10
     }
     naval_exit_id = 3012
 }
@@ -469,14 +495,14 @@ STATE_MAPACHECO = {
 }
 STATE_APAFONTE = {
     id = 3963
-    subsistence_building = "building_subsistence_farms"
+    subsistence_building = "building_subsistence_rice_paddies"
     provinces = { x3BF9E4 x49F4D4 x76B0DE x7BB5D0 x83A3F5 x8E95E8 x9AB3B1 xA0BFAA xB1EC62 xCAD3CA xCF66E7 xE9B192 }
     port = x7BB5D0
     city = xE9B192
     farm = xCF66E7
     mine = xCAD3CA
     wood = xB1EC62
-    arable_land = 60
+    arable_land = 80
     arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_silk_plantations" "bg_dye_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
     capped_resources = {
         bg_coal_mining = 40
@@ -487,7 +513,7 @@ STATE_APAFONTE = {
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 28
+        undiscovered_amount = 20
     }
     naval_exit_id = 3020
 }
@@ -505,11 +531,12 @@ STATE_PORTANGA = {
     capped_resources = {
         bg_coal_mining = 48
         bg_logging = 14
+        bg_hunting = 20
         bg_haunted_grounds = 10
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 22
+        undiscovered_amount = 35
     }
 
 }
@@ -530,7 +557,7 @@ STATE_LISAZISA = {
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 17
+        undiscovered_amount = 10
     }
     naval_exit_id = 3012
 }
@@ -548,10 +575,11 @@ STATE_BELENDLE = {
     capped_resources = {
         bg_logging = 7
         bg_fishing = 6
+        bg_hunting = 10
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 8
+        undiscovered_amount = 10
     }
     naval_exit_id = 3012
 }
@@ -585,6 +613,14 @@ STATE_IVONDRO = {
     }
     resource = {
         type = "bg_rubber"
+        undiscovered_amount = 30
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 25
+    }
+    resource = {
+        type = "bg_rubber"
         undiscovered_amount = 26
     }
     naval_exit_id = 3021
@@ -608,6 +644,10 @@ STATE_MAHALATSAKA = {
         bg_hunting = 22
         bg_fishing = 15
         bg_leviathan_outpost = 12
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 5
     }
     resource = {
         type = "bg_oil_extraction"
@@ -647,7 +687,7 @@ STATE_FIANARIVO = {
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 10
+        undiscovered_amount = 25
     }
     naval_exit_id = 3021
 }
@@ -676,7 +716,7 @@ STATE_VAROTSOA = {
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 17
+        undiscovered_amount = 20
     }
     resource = {
         type = "bg_ship_graveyard"
@@ -706,6 +746,10 @@ STATE_TSIMIHAVANA = {
         bg_leviathan_outpost = 10
     }
     resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 5
+    }
+    resource = {
         type = "bg_oil_extraction"
         undiscovered_amount = 45
     }
@@ -732,6 +776,10 @@ STATE_SUISGOIL = {
         bg_iron_mining = 29
         bg_sulfur_mining = 52
         bg_haunted_grounds = 25
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 5
     }
     resource = {
         type = "bg_oil_extraction"
@@ -769,7 +817,7 @@ STATE_MAROMITA = {
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 13
+        undiscovered_amount = 45
     }
 
     naval_exit_id = 3021
@@ -797,6 +845,10 @@ STATE_YNTHOLG = {
         bg_haunted_grounds = 25
     }
     resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 5
+    }
+    resource = {
         type = "bg_oil_extraction"
         undiscovered_amount = 10
     }
@@ -818,6 +870,10 @@ STATE_ANKAZOBE = {
         bg_leviathan_outpost = 7
         bg_fishing = 15
         bg_haunted_grounds = 5
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 10
     }
     resource = {
         type = "bg_ship_graveyard"
@@ -853,7 +909,7 @@ STATE_MASC_PEIW = {
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 22
+        undiscovered_amount = 25
     }
     naval_exit_id = 3021
 }
@@ -871,11 +927,12 @@ STATE_MARITIMLIS = {
     arable_resources = { "bg_maize_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_silk_plantations" "bg_dye_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
     capped_resources = {
         bg_logging = 16
-        bg_fishing = 6
+        bg_fishing = 8
+        bg_hunting = 15
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 19
+        undiscovered_amount = 25
     }
     naval_exit_id = 3055
 }
@@ -894,6 +951,7 @@ STATE_APLUKACAL = {
     capped_resources = {
         bg_logging = 8
         bg_fishing = 4
+        bg_hunting = 10
     }
     resource = {
         type = "bg_rubber"
@@ -921,7 +979,7 @@ STATE_BALTIJOSCAT = {
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 13
+        undiscovered_amount = 30
     }
     naval_exit_id = 3055
 }
@@ -940,10 +998,11 @@ STATE_JURUTILVA = {
         bg_coal_mining = 21
         bg_cloudsilver_mining = 19
         bg_logging = 5
+        bg_hunting = 15
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 11
+        undiscovered_amount = 20
     }
 
 }
@@ -960,11 +1019,12 @@ STATE_LAIVINMAR = {
     arable_resources = { "bg_maize_farms" "bg_livestock_ranches" "bg_silk_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_cotton_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
     capped_resources = {
         bg_logging = 7
+        bg_hunting = 10
         bg_fishing = 5
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 8
+        undiscovered_amount = 10
     }
     naval_exit_id = 3033
 }
@@ -980,14 +1040,15 @@ STATE_VANDECATAL = {
     arable_land = 41
     arable_resources = { "bg_maize_farms" "bg_livestock_ranches" "bg_silk_plantations" "bg_coffee_plantations" "bg_sugar_plantations" "bg_dye_plantations" "bg_cotton_plantations" "bg_banana_plantations" }
     capped_resources = {
-        bg_iron_mining = 4
+        bg_iron_mining = 20
         bg_cloudsilver_mining = 23
+        bg_hunting = 15
         bg_sulfur_mining = 12
-        bg_logging = 7
+        bg_logging = 10
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 10
+        undiscovered_amount = 20
     }
 
 }
@@ -1006,10 +1067,11 @@ STATE_ZVEJYCATIA = {
     capped_resources = {
         bg_logging = 14
         bg_fishing = 9
+        bg_hunting = 15
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 14
+        undiscovered_amount = 20
     }
     naval_exit_id = 3033
 }
@@ -1026,13 +1088,13 @@ STATE_PLACIUKATAL = {
     arable_resources = { "bg_maize_farms" "bg_livestock_ranches" "bg_silk_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_cotton_plantations" "bg_banana_plantations" }
     capped_resources = {
         bg_sulfur_mining = 21
-        bg_iron_mining = 2
+        bg_hunting = 10
         bg_logging = 8
         bg_fishing = 3
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 12
+        undiscovered_amount = 15
     }
     naval_exit_id = 3084
 }
@@ -1055,7 +1117,7 @@ STATE_UPESTARR = {
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 16
+        undiscovered_amount = 20
     }
     naval_exit_id = 3033
 }
@@ -1072,11 +1134,12 @@ STATE_SALASLITVA = {
     arable_resources = { "bg_maize_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_sugar_plantations" "bg_silk_plantations" "bg_dye_plantations" "bg_tobacco_plantations" "bg_banana_plantations" }
     capped_resources = {
         bg_logging = 8
+        bg_hunting = 10
         bg_fishing = 10
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 10
+        undiscovered_amount = 20
     }
     naval_exit_id = 3084
 }
@@ -1100,7 +1163,7 @@ STATE_PAPLUDIMIS = {
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 24
+        undiscovered_amount = 30
     }
     naval_exit_id = 3055
 }
@@ -1119,11 +1182,12 @@ STATE_KRIOKLYKATAL = {
     capped_resources = {
         bg_sulfur_mining = 4
         bg_logging = 11
-        bg_fishing = 4
+        bg_hunting = 15
+        bg_fishing = 8
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 10
+        undiscovered_amount = 25
     }
     naval_exit_id = 3055
 }
@@ -1147,7 +1211,7 @@ STATE_BANGALITVA = {
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 11
+        undiscovered_amount = 20
     }
     naval_exit_id = 3055
 }
@@ -1185,10 +1249,11 @@ STATE_UOSTOCATAL = {
     capped_resources = {
         bg_logging = 12
         bg_fishing = 4
+        bg_hunting = 10
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 15
+        undiscovered_amount = 20
     }
     naval_exit_id = 3083
 }
@@ -1207,6 +1272,7 @@ STATE_AKVALITVA = {
         bg_coal_mining = 28
         bg_iron_mining = 30
         bg_logging = 14
+        bg_hunting = 10
         bg_fishing = 6
     }
     resource = {
@@ -1235,7 +1301,7 @@ STATE_RAMUMARI = {
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 27
+        undiscovered_amount = 20
     }
     naval_exit_id = 3033
 }
@@ -1259,7 +1325,7 @@ STATE_RANJITA = {
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 14
+        undiscovered_amount = 30
     }
     naval_exit_id = 3055
 }
@@ -1285,7 +1351,7 @@ STATE_LHEIPH_VA = {
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 11
+        undiscovered_amount = 20
     }
     naval_exit_id = 3085
 }
@@ -1303,6 +1369,10 @@ STATE_MADHURIYA = {
     capped_resources = {
         bg_logging = 10
         bg_hunting = 15
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 25
     }
 
 }
@@ -1326,7 +1396,7 @@ STATE_SUSHOBHANA = {
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 18
+        undiscovered_amount = 25
     }
     naval_exit_id = 3085
 }
@@ -1350,7 +1420,7 @@ STATE_DHARMILA = {
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 17
+        undiscovered_amount = 25
     }
     naval_exit_id = 3085
 }
@@ -1373,7 +1443,7 @@ STATE_MILINDRA = {
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 19
+        undiscovered_amount = 25
     }
     naval_exit_id = 3055
 }
@@ -1396,7 +1466,7 @@ STATE_MYCOLGA = {
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 14
+        undiscovered_amount = 20
     }
     resource = {
         type = "bg_ship_graveyard"
@@ -1425,7 +1495,7 @@ STATE_SAMARTHYA = {
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 27
+        undiscovered_amount = 30
     }
     resource = {
         type = "bg_wishstone_reefs"
@@ -1458,7 +1528,7 @@ STATE_JIVANTA = {
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 20
+        undiscovered_amount = 30
     }
     resource = {
         type = "bg_wishstone_reefs"
@@ -1488,7 +1558,7 @@ STATE_ARGYSTSIK = {
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 13
+        undiscovered_amount = 15
     }
     resource = {
         type = "bg_ship_graveyard"
@@ -1520,7 +1590,7 @@ STATE_GRAEA = {
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 40
+        undiscovered_amount = 15
     }
     resource = {
         type = "bg_ship_graveyard"
@@ -1554,7 +1624,7 @@ STATE_JERMENION = {
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 16
+        undiscovered_amount = 15
     }
     naval_exit_id = 3012
 }
@@ -1577,7 +1647,7 @@ STATE_ARTHERA = {
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 10
+        undiscovered_amount = 20
     }
     resource = {
         type = "bg_ship_graveyard"
@@ -1603,7 +1673,7 @@ STATE_COCOHAYAT = {
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 16
+        undiscovered_amount = 20
     }
     naval_exit_id = 3012
 }

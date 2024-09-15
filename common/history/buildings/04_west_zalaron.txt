@@ -5366,6 +5366,19 @@
 			activate_production_methods={ "pm_simple_organization" }
 		}
 		create_building={
+			building="building_railway"
+				add_ownership={ 
+					building={ 
+						type="building_financial_district"
+						country="c:RAV"
+						levels=1
+						region="STATE_PIEPERDORP"
+					}
+				}
+			reserves=1
+			activate_production_methods={ "pm_steam_trains" "pm_wooden_passenger_carriages" }
+		}
+		create_building={
             building="building_fishing_wharf"
                 add_ownership={ 
                     building={ 
@@ -5487,6 +5500,19 @@
 			reserves=1
 			activate_production_methods={ "pm_horizontal_drawer_cabinets" }
 		}			
+		create_building={
+			building="building_logging_camp"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:RAV"
+                        levels=4
+                        region="STATE_TIKKERHAVEN"
+                   }
+                }
+			reserves=1
+			activate_production_methods={ "pm_saw_mills" "pm_no_equipment" "pm_road_carts" "pm_no_hardwood" }
+		}
 			create_building={
 			building="building_maize_farm"
 				add_ownership={ 
@@ -5528,6 +5554,19 @@
 			reserves=1
 			activate_production_methods={ "pm_vertical_filing_cabinets" }
 		}
+		create_building={
+			building="building_motor_industry"
+			add_ownership={ 
+			  building={ 
+				type="building_financial_district"
+				country="c:RAV"
+				levels=2
+				region="STATE_TIKKERHAVEN"
+			  }
+			}
+		  reserves=1
+			activate_production_methods={ "pm_steam_engines" }
+		  }
 		create_building={
 			building="building_textile_mills"
                 add_ownership={ 
@@ -5695,12 +5734,25 @@
             activate_production_methods={ "pm_horizontal_drawer_cabinets" }
         }
 		create_building={
+			building="building_railway"
+				add_ownership={ 
+					building={ 
+						type="building_financial_district"
+						country="c:RAV"
+						levels=1
+						region="STATE_MOLENWOUD"
+					}
+				}
+			reserves=1
+			activate_production_methods={ "pm_steam_trains" "pm_wooden_passenger_carriages" }
+		}
+		create_building={
 			building="building_maize_farm"
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
 						country="c:RAV"
-						levels=5
+						levels=8
 						region="STATE_MOLENWOUD"
 				   }
 				}
@@ -5849,7 +5901,7 @@
 			   }
 			}
 		reserves=1
-			activate_production_methods={ "pm_atmospheric_engine_pump_building_sulfur_mine" "pm_no_explosives" "pm_sulfur_mines_potions_of_strength" "pm_no_steam_automation" "pm_road_carts" }
+			activate_production_methods={ "pm_atmospheric_engine_pump_building_sulfur_mine" "pm_no_explosives" "pm_mines_no_potions" "pm_no_steam_automation" "pm_road_carts" }
 		}
 	}
   }
@@ -6028,12 +6080,12 @@
 					building={
 						type="building_wizard_tower"
 						country="c:RAV"
-						levels=6
+						levels=4
 						region="STATE_TROMMELKUST"
 				}
 			}
 			reserves=1
-			activate_production_methods={ "pm_wishtone_potion_process_production" "pm_alcohol-based_potions" }
+			activate_production_methods={ "pm_wishtone_potion_process_production" "pm_water-based_potions" }
 		}
 		create_building={
 			building="building_gizmo_workshop"
@@ -6150,6 +6202,19 @@
 			reserves=1
 			activate_production_methods={ "pm_horizontal_drawer_cabinets" }
 		}
+		create_building={
+			building="building_railway"
+				add_ownership={ 
+					building={ 
+						type="building_financial_district"
+						country="c:RAV"
+						levels=1
+						region="STATE_FLUITERHEIDE"
+					}
+				}
+			reserves=1
+			activate_production_methods={ "pm_steam_trains" "pm_wooden_passenger_carriages" }
+		}
             create_building={
 			building="building_fishing_wharf"
                 add_ownership={ 
@@ -6227,7 +6292,20 @@
 			level=1
 			reserves=1
 			activate_production_methods={ "pm_horizontal_drawer_cabinets" }
-		}		
+		}	
+		create_building={
+			building="building_railway"
+				add_ownership={ 
+					building={ 
+						type="building_financial_district"
+						country="c:RAV"
+						levels=1
+						region="STATE_VUURHOEK"
+					}
+				}
+			reserves=1
+			activate_production_methods={ "pm_steam_trains" "pm_wooden_passenger_carriages" }
+		}	
 		create_building={
 			building="building_port"
 			level=1
@@ -6697,6 +6775,19 @@
 			activate_production_methods={ "pm_scholastic_education" "pm_religious_academia" }
 		}
 		create_building={
+			building="building_vineyard_plantation"
+				add_ownership={ 
+					building={ 
+						type="building_manor_house"
+						country="c:RAV"
+						levels=15
+						region="STATE_TIKKERHAVEN"
+				   }
+				}
+			reserves=1
+			activate_production_methods={ "default_building_vineyard_plantation" "pm_road_carts"  }
+		}
+		create_building={
 			building="building_railway"
 				add_ownership={ 
 					building={ 
@@ -6715,25 +6806,12 @@
                     building={ 
                         type="building_financial_district"
                         country="c:RAV"
-                        levels=6
+                        levels=4
                         region="STATE_TIKKERHAVEN"
                    }
                 }
 			reserves=1
 			activate_production_methods={ "pm_saw_mills" "pm_no_equipment" "pm_road_carts" "pm_increased_hardwood" }
-		}
-		create_building={
-			building="building_maize_farm"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:RAV"
-						levels=3
-						region="STATE_TIKKERHAVEN"
-				   }
-				}
-			reserves=1
-			activate_production_methods={ "pm_soil_enriching_farming" "pm_no_secondary" "pm_tools_disabled"  }
 		}
 		create_building={
 			building="building_arms_industry"
@@ -7000,7 +7078,7 @@
 			  building={ 
 				type="building_financial_district"
 				country="c:RAV"
-				levels=1
+				levels=2
 				region="STATE_SPRANKELMEER"
 			  }
 			}

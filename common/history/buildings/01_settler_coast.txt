@@ -3119,7 +3119,7 @@
                     building={ 
                         type="building_financial_district"
                         country="c:ARR"
-                        levels=3
+                        levels=4
                         region="STATE_VICEROYS_PEARL"
                    }
                 }
@@ -3146,7 +3146,7 @@
                     building={ 
                         type="building_financial_district"
                         country="c:ARR"
-                        levels=1
+                        levels=3
                         region="STATE_VICEROYS_PEARL"
                    }
                 }
@@ -3243,19 +3243,6 @@
                 }
           reserves=1
           activate_production_methods={ "pm_unrefrigerated" "pm_fishing_trawlers" }
-        }
-        create_building={
-          building="building_railway"
-		  add_ownership={ 
-			building={ 
-				type="building_financial_district"
-				country="c:ARR"
-				levels=3
-				region="STATE_VICEROYS_PEARL"
-		   }
-		}
-  reserves=1
-          activate_production_methods={ "pm_steam_trains" "pm_wooden_passenger_carriages" }
         }
         create_building={
           building="building_port"
@@ -3822,6 +3809,19 @@
 			reserves=1
 			activate_production_methods={ "pm_iron_frame_buildings" }
 		  }	
+		  create_building={
+			building="building_railway"
+			add_ownership={ 
+			  building={ 
+				  type="building_financial_district"
+				  country="c:ARR"
+				  levels=1
+				  region="STATE_GREENCOURT"
+			 }
+		  }
+	reserves=1
+			activate_production_methods={ "pm_steam_trains" "pm_wooden_passenger_carriages" }
+		  }
             create_building={
 			building="building_steel_mills"
                 add_ownership={ 
@@ -4144,6 +4144,19 @@
 
   s:STATE_TWO_BARREL_COAST = {
 	region_state:ARR={
+		create_building={
+			building="building_railway"
+				add_ownership={ 
+					building={ 
+						type="building_financial_district"
+						country="c:ARR"
+						levels=1
+						region="STATE_TWO_BARREL_COAST"
+					}
+				}
+			reserves=1
+			activate_production_methods={ "pm_steam_trains" "pm_wooden_passenger_carriages" }
+		}
             create_building={
 			building="building_arms_industry"
                 add_ownership={ 
@@ -4233,6 +4246,19 @@
 
   s:STATE_LOWER_GOLDENLEAF = {
 	region_state:ARR={
+		create_building={
+			building="building_railway"
+				add_ownership={ 
+					building={ 
+						type="building_financial_district"
+						country="c:ARR"
+						levels=1
+						region="STATE_LOWER_GOLDENLEAF"
+					}
+				}
+			reserves=1
+			activate_production_methods={ "pm_steam_trains" "pm_wooden_passenger_carriages" }
+		}
             create_building={
 			building="building_tooling_workshops"
                 add_ownership={ 
@@ -5806,13 +5832,26 @@
 			reserves=1
 			activate_production_methods={ "pm_horizontal_drawer_cabinets" "pm_hereditary_bureaucrats" "pm_religious_bureaucrats" }
 		}
+		create_building={
+			building="building_railway"
+			add_ownership={ 
+			  building={ 
+				  type="building_financial_district"
+				  country="c:ARR"
+				  levels=2
+				  region="STATE_VICEROYS_PEARL"
+			 }
+		  }
+	reserves=1
+			activate_production_methods={ "pm_steam_trains" "pm_wooden_passenger_carriages" }
+		  }
 			create_building={
 			building="building_tobacco_plantation"
 				add_ownership={ 
 					building={ 
 						type="building_financial_district"
 						country="c:CLR"
-						levels=10
+						levels=15
 						region="STATE_CLEARBOUGH_ESTATES"
 				   }
 				}

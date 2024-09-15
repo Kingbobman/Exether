@@ -46,9 +46,7 @@ dragonblight.1 = {
 		}
 		every_scope_state = {
 			limit = {
-				state_region = s:STATE_KLYPYRA.region_state:DIS
-
-				
+				state_region = s:STATE_KLYPYRA
 			}
 			add_modifier = modifier_active_dragonblight_outbreak
 		}
@@ -311,6 +309,10 @@ dragonblight.100 = {
 	}
 
 	immediate = {
+		add_modifier = {
+			name = dragon_collapse
+			years = 6
+		}
 		every_scope_state = {
 			limit = {
 				OR = {
@@ -1415,6 +1417,12 @@ dragonblight.100 = {
 		default_option = yes
 		add_primary_culture = cu:kotskarvi
 		remove_primary_culture = cu:illvasaari
+		show_as_tooltip = {
+			add_modifier = {
+				name = dragon_collapse
+				years = 6
+			}
+		}
 	}
 }
 
