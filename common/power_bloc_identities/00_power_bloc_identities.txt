@@ -820,13 +820,12 @@ identity_religious = {
 
 identity_cultural = {
 	power_bloc_modifier = {
-		#power_bloc_leader_can_force_state_religion_bool = yes
 		power_bloc_mandate_progress_per_great_power_member_add = 10
 		power_bloc_mandate_progress_per_major_power_member_add = 5
 		power_bloc_mandate_progress_per_minor_power_member_add = 2
 		power_bloc_mandate_progress_per_unrecognized_major_power_member_add = 2
 		power_bloc_mandate_progress_per_unrecognized_regional_power_member_add = 1
-		power_bloc_cohesion_per_member_add = -2
+		power_bloc_cohesion_per_member_add = -1
 	}
 
 	leader_modifier = {
@@ -860,7 +859,7 @@ identity_cultural = {
 		}
 	}
 
-	icon = "gfx/interface/icons/central_identity_pillars_icons/religious.dds"
+	icon = "gfx/interface/icons/central_identity_pillars_icons/cultural.dds"
 	background = "gfx/interface/power_blocs/backgrounds/pb_background_generic.dds"
 
 	visible = {
@@ -897,7 +896,7 @@ identity_cultural = {
 				desc = POWER_BLOC_COHESION_PETITE_BOURGEOISIE_IG_NOT_IN_GOVERNMENT
 			}	
 		}
-		
+
 		add = {
 			if = {
 				limit = { exists = scope:with_country }
@@ -918,21 +917,163 @@ identity_cultural = {
 		}
 		
 		add = {
+			scope:power_bloc.power_bloc_leader = {
+				add = this.total_population
+				divide = {
+					scope:power_bloc = {
+						every_power_bloc_member = {
+							add = this.total_population
+						}
+					}
+					min = 1
+				}
+			}
+			multiply = define:NPowerBlocs|COHESION_TARGET_MAX
+			max = 25
+			desc = POWER_BLOC_COHESION_LEADER_POPULATION_FRACTION
+		}
+
+		add = {
+			scope:power_bloc = {
+				every_power_bloc_member = {
+					if = {
+						limit = { 
+							NOT = {
+								any_primary_culture = {
+									shares_heritage_trait_with_any_primary_culture = scope:power_bloc.power_bloc_leader
+								}
+							}
+						}
+						add = -1
+						multiply = this.total_population
+						divide = {
+							scope:power_bloc = {
+								every_power_bloc_member = {
+									add = this.total_population
+								}
+							}
+							min = 1
+						}
+					}
+				}
+			}
 			if = {
-				limit = { exists = scope:with_country }
-				add = "scope:power_bloc.power_bloc_worst_leader_religion_population_fraction_with(scope:with_country)"
+				limit = { 
+					exists = scope:with_country 
+					scope:with_country ?= {
+						NOT = {
+							any_primary_culture = {
+								shares_heritage_trait_with_any_primary_culture = scope:power_bloc.power_bloc_leader
+							}
+						}
+					}
+				}
+				add = -1
+				multiply = scope:with_country.total_population
+				divide = {
+					scope:power_bloc = {
+						every_power_bloc_member = {
+							add = this.total_population
+						}
+					}
+					min = 1
+				}
 			}
 			else_if = {
-				limit = { exists = scope:without_country }
-				add = "scope:power_bloc.power_bloc_worst_leader_religion_population_fraction_without(scope:without_country)"
+				limit = { 
+					exists = scope:without_country 
+					scope:without_country ?= {
+						NOT = {
+							any_primary_culture = {
+								shares_heritage_trait_with_any_primary_culture = scope:power_bloc.power_bloc_leader
+							}
+						}
+					}
+				}
+				add = 1
+				multiply = scope:without_country.total_population
+				divide = {
+					scope:power_bloc = {
+						every_power_bloc_member = {
+							add = this.total_population
+						}
+					}
+					min = 1
+				}
 			}
-			else = {
-				add = scope:power_bloc.power_bloc_worst_leader_religion_population_fraction
-			}
-			add = -0.5
-			multiply = 0.5
 			multiply = define:NPowerBlocs|COHESION_TARGET_MAX
-			desc = POWER_BLOC_COHESION_LEADER_RELIGION_WORST_POPULATION_SHARE
+			desc = POWER_BLOC_COHESION_HERITAGE_INCOMPATIBILITY
+		}
+
+		add = {
+			scope:power_bloc = {
+				every_power_bloc_member = {
+					if = {
+						limit = { 
+							NOT = { 
+								this = scope:power_bloc.power_bloc_leader
+							}
+							any_primary_culture = {
+								shares_heritage_trait_with_any_primary_culture = scope:power_bloc.power_bloc_leader
+							}
+						}
+						add = 1
+						multiply = this.total_population
+						divide = {
+							scope:power_bloc = {
+								every_power_bloc_member = {
+									add = this.total_population
+								}
+							}
+							min = 1
+						}
+					}
+
+				}
+			}
+			if = {
+				limit = { 
+					exists = scope:with_country 
+					scope:with_country ?= {
+							any_primary_culture = {
+								shares_heritage_trait_with_any_primary_culture = scope:power_bloc.power_bloc_leader
+							}
+					}
+				}
+				add = 1
+				multiply = scope:with_country.total_population
+				divide = {
+					scope:power_bloc = {
+						every_power_bloc_member = {
+							add = this.total_population
+						}
+					}
+					min = 1
+				}
+			}
+			else_if = {
+				limit = { 
+					exists = scope:without_country 
+					scope:without_country ?= {
+							any_primary_culture = {
+								shares_heritage_trait_with_any_primary_culture = scope:power_bloc.power_bloc_leader
+							}
+					}
+				}
+				add = -1
+				multiply = scope:without_country.total_population
+				divide = {
+					scope:power_bloc = {
+						every_power_bloc_member = {
+							add = this.total_population
+						}
+					}
+					min = 1
+				}
+			}
+			multiply = define:NPowerBlocs|COHESION_TARGET_MAX
+			max = 25
+			desc = POWER_BLOC_COHESION_HERITAGE_COMPATIBILITY
 		}
 		
 		add = {
@@ -995,16 +1136,5 @@ identity_cultural = {
 			}
 			multiply = 1.5
 		}
-		
-		if = {
-			limit = {
-				religion = {
-					NOR = { # Non-abrahamic religions probably wouldn't go for this type of bloc
-						has_discrimination_trait = uriks_pantheon
-					}					
-				}			
-			}
-			multiply = 0.1		
-		}		
 	}
 }

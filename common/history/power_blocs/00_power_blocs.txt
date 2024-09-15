@@ -127,8 +127,8 @@
 			map_color = hsv{ 0.99  0.7  0.9 }
 
 			founding_date = 784.5.12
-			identity = identity_sovereign_empire
-			principle = principle_vassalization_1
+			identity = identity_cultural
+			principle = principle_police_coordination_1
 
 			# subjects are automatically part of the bloc
 		}
@@ -138,6 +138,14 @@
 			}
 			power_bloc = {
 				add_principle = principle_sacred_civics_2
+			}
+		}
+		if = {
+			limit = {
+				has_dlc_feature = power_bloc_features
+			}
+			power_bloc = {
+				add_principle = principle_vassalization_1
 			}
 		}
 	}
@@ -270,8 +278,8 @@
 			map_color = { 147 130 110 }
 
 			founding_date = 978.03.04
-			identity = identity_ideological_union
-			principle = principle_ideological_truth_1
+			identity = identity_cultural
+			principle = principle_freedom_of_movement_1
 			
 			member = c:VHO
 			member = c:JUX
