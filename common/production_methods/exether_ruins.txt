@@ -153,8 +153,8 @@ pm_uses_gizmo_accumulation_dwarven_ruins = {
 
 pm_diggy_dwarf_collapsed = {
 	texture = "gfx/interface/icons/production_method_icons/picks_and_shovels.dds"
-	unlocking_religions = {
-		buried_gods
+	unlocking_technologies = {
+		dwarf_tech
 	}
 
 	is_hidden_when_unavailable = yes
@@ -176,8 +176,8 @@ pm_diggy_dwarf_collapsed = {
 
 pm_diggy_diggy_dwarf_renovated = {
 	texture = "gfx/interface/icons/production_method_icons/picks_and_shovels.dds"
-	unlocking_religions = {
-		buried_gods
+	unlocking_technologies = {
+		dwarf_tech
 	}
 
 	is_hidden_when_unavailable = yes
@@ -202,8 +202,9 @@ pm_no_diggy_dwarf = {
 	texture = "gfx/interface/icons/production_method_icons/no_automation.dds"
 	is_hidden_when_unavailable = yes
 	
-	disallowing_religions = {
+	disallowing_religions = { #START DIGGING
 		buried_gods
+		kragmorn
 	}
 }
 pm_no_ritual_vault = {
@@ -234,7 +235,7 @@ pm_buried_rituals = {
 	}
 }
 
-pm_terrace_dwarf_rituals = {
+pm_terrace_dwarf_rituals = { #I forgor what Kragmorn was called
 	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
 	unlocking_religions = {
 		kragmorn

@@ -87,19 +87,6 @@
 				activate_production_methods={ "default_building_sugar_plantation" "pm_road_carts"  }
 			}
 			create_building={
-				building="building_tobacco_plantation"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:GDY"
-						levels=1
-						region="STATE_PANNYA"
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }
-			}
-			create_building={
 				building="building_barracks"
 				reserves=1
 				level = 1
@@ -135,19 +122,6 @@
                 }
 				reserves=1
 				
-			}
-			create_building={
-				building="building_tobacco_plantation"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:AKB"
-						levels=2
-						region="STATE_SHANTINAGAR"
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }
 			}
 			create_building={
 				building="building_tea_plantation"
@@ -269,19 +243,6 @@
 				reserves=1
 				activate_production_methods={ "pm_horizontal_drawer_cabinets" }
 			}			
-			create_building={
-				building="building_coffee_plantation"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:TEN"
-						levels=1
-						region="STATE_BODHISATTVA"
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "default_building_coffee_plantation" "pm_road_carts"  }
-			}
             create_building={
 				building="building_textile_mills"
                 add_ownership={ 
@@ -294,19 +255,6 @@
                 }
 				reserves=1
 				activate_production_methods={ "pm_handsewn_clothes" "pm_craftsman_sewing" "pm_traditional_looms" }
-			}
-			create_building={
-				building="building_silk_plantation"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:TEN"
-						levels=1
-						region="STATE_BODHISATTVA"
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "default_building_silk_plantation" "pm_road_carts"  }
 			}
 		}
 	}
@@ -416,19 +364,6 @@
 				
 			}
 			create_building={
-				building="building_coffee_plantation"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:VIP"
-						levels=2
-						region="STATE_VISHUDDHIKARA"
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "default_building_coffee_plantation" "pm_road_carts"  }
-			}
-			create_building={
 				building="building_dye_plantation"
 				add_ownership={ 
 					building={ 
@@ -440,19 +375,6 @@
 				}
 				reserves=1
 				activate_production_methods={ "default_building_dye_plantation" "pm_road_carts"  }
-			}
-			create_building={
-				building="building_tobacco_plantation"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:VIP"
-						levels=3
-						region="STATE_VISHUDDHIKARA"
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }
 			}
 			create_building={
 				building="building_port"
@@ -661,12 +583,6 @@
 				
 			}
 			create_building={
-				building="building_silk_plantation"
-				level=2
-				reserves=1
-				activate_production_methods={ "default_building_silk_plantation" "pm_road_carts"  }
-			}
-			create_building={
 				building="building_livestock_ranch"
 				add_ownership={ 
 					building={ 
@@ -729,19 +645,6 @@
 				activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }
 			}
 			create_building={
-				building="building_coffee_plantation"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:MAI"
-						levels=3
-						region="STATE_KURUBBA"
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "default_building_coffee_plantation" "pm_road_carts"  }
-			}
-			create_building={
 				building="building_port"
 				reserves=1
 				level = 1
@@ -776,19 +679,6 @@
 				reserves=1
 				level = 1
 				activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts"  }
-			}
-			create_building={
-				building="building_tobacco_plantation"
-				add_ownership={ 
-                    building={ 
-                        type="building_manor_house"
-                        country="c:JIV"
-                        levels=1
-                        region="STATE_BOODJARRA"
-                   }
-                }
-				reserves=1
-				activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }
 			}
 			create_building={
 				building="building_dye_plantation"
@@ -1013,19 +903,6 @@
                 }
 				reserves=1
 				activate_production_methods={ "pm_basic_shipbuilding" }
-			}
-			create_building={
-				building="building_silk_plantation"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:VIP"
-						levels=2
-						region="STATE_BUDAMURAYIRI"
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "default_building_silk_plantation" "pm_road_carts"  }
 			}
 			create_building={
 				building="building_dye_plantation"
@@ -1822,12 +1699,12 @@
 	}
 
 	s:STATE_MOSKHAN = {
-		region_state:VOL = {
+		region_state:ORL = {
 			create_building={
 				building="building_government_administration"
-				level=2
+				level=3
 				reserves=1
-				activate_production_methods={ "pm_simple_organization" }
+				activate_production_methods={ "pm_horizontal_drawer_cabinets" }
 			}
 			create_building={
 				building="building_port"
@@ -1835,11 +1712,89 @@
 				reserves=1
 				activate_production_methods={ "pm_basic_port" }
 			}
+			create_building={
+				building="building_construction_sector"
+				reserves=1
+				level = 3
+				activate_production_methods={ "pm_wooden_buildings" }
+			}
+			create_building={
+				building="building_dye_plantation"
+				add_ownership={ 
+					building={ 
+						type="building_wizard_tower"
+						country="c:ORL"
+						levels=2
+						region="STATE_MOSKHAN"
+				   }
+				}
+				reserves=1
+				activate_production_methods={ "default_building_dye_plantation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_fishing_wharf_rusttails"
+                add_ownership={ 
+                    building={ 
+                        type="building_adventuring_guild"
+                        country="c:ORL"
+                        levels=4
+                        region="STATE_MOSKHAN"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_simple_fishing" "pm_rusttail_fishing" "pm_unrefrigerated" }
+			}
+			create_building={
+				building="building_logging_camp"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:ORL"
+							levels=2
+							region="STATE_MOSKHAN"
+					   }
+					}
+				reserves=1
+				activate_production_methods={ "pm_saw_mills" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
+			}
 		}
 	}
 
 	s:STATE_TASHKAVSK = {
-	
+		region_state:ORL = {
+			create_building={
+				building="building_government_administration"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_horizontal_drawer_cabinets" }
+			}
+			create_building={
+				building="building_logging_camp"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:ORL"
+							levels=4
+							region="STATE_TASHKAVSK"
+					   }
+					}
+				reserves=1
+				activate_production_methods={ "pm_saw_mills" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
+			}
+			create_building={
+				building="building_cotton_plantation"
+				add_ownership={ 
+					building={ 
+						type="building_wizard_tower"
+						country="c:ORL"
+						levels=2
+						region="STATE_TASHKAVSK"
+				   }
+				}
+				reserves=1
+				activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts"  }
+			}
+		}
 	}
 
 	s:STATE_NEFUDISTAN = {

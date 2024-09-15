@@ -102,7 +102,13 @@
 			level = 2
 			target = c:RAV.market
 			direction = import
-		}	
+		}
+		create_trade_route = {
+			goods = monster_essence
+			level = 4
+			target = c:CER.market
+			direction = export
+		}
 	}
 	c:CVE ?= {		
 	}
@@ -144,12 +150,6 @@
 	c:DRK ?= {							
 	}	
 	c:BIE ?= {
-		create_trade_route = {
-			goods = tea
-			level = 3
-			target = c:YAN.market
-			direction = import
-		}
 		create_trade_route = {
 			goods = luxury_furniture
 			level = 1
@@ -611,12 +611,6 @@
 			target = c:DUM.market
 		}
                 create_trade_route = {
-			goods = silk
-			level = 2
-			direction = import
-			target = c:DUM.market
-		}
-                create_trade_route = {
 			goods = small_arms
 			level = 3
 			direction = import
@@ -854,12 +848,6 @@
 		}
 	}
 	c:FOX ?= {
-		create_trade_route = {
-			goods = tea
-			level = 4
-			target = c:YAN.market
-			direction = import
-		}	
 		create_trade_route = {
 			goods = luxury_clothes
 			level = 2
@@ -1155,12 +1143,6 @@ c:THI ?= {
 	}
 }
 c:DIS ?= {
-	create_trade_route = {
-		goods = tea
-		level = 7
-		target = c:RAV.market
-		direction = export
-	}
 	create_trade_route = {
 		goods = wishstone
 		level = 7
