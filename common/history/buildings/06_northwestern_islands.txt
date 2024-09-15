@@ -499,38 +499,21 @@
 			}
 		}
 	}
-	s:STATE_MALYBA = {
+	s:STATE_ZAMARA = {
 		region_state:IMR={
-            create_building={
+			create_building={
 				building="building_fishing_wharf"
                 add_ownership={ 
                     building={ 
                         type="building_adventuring_guild"
                         country="c:IMR"
                         levels=1
-                        region="STATE_MALYBA"
+                        region="STATE_ZAMARA"
                    }
                 }
 				reserves=1
 				activate_production_methods={ "pm_fishing_trawlers" "pm_unrefrigerated" }
 			}
-            create_building={
-				building="building_logging_camp"
-                add_ownership={ 
-                    building={ 
-                        type="building_financial_district"
-                        country="c:IMR"
-                        levels=2
-                        region="STATE_MALYBA"
-                   }
-                }
-				reserves=1
-				activate_production_methods={ "pm_simple_forestry" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
-			}
-		}
-	}
-	s:STATE_ZAMARA = {
-		region_state:IMR={
 			create_building={
 				building="building_government_administration"
 				level=2
@@ -569,7 +552,7 @@
                     building={ 
                         type="building_financial_district"
                         country="c:IMR"
-                        levels=3
+                        levels=5
                         region="STATE_ZAMARA"
                    }
                 }
@@ -608,9 +591,9 @@
                 add_ownership={ 
                     building={ 
                         type="building_adventuring_guild"
-                        country="c:IMR"
+                        country="c:SVN"
                         levels=2
-                        region="STATE_ZAMARA"
+                        region="STATE_GADYRUS"
                    }
                 }
 				reserves=1
