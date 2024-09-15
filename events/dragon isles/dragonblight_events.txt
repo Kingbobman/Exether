@@ -309,6 +309,19 @@ dragonblight.100 = {
 	}
 
 	immediate = {
+		if = {
+			limit = {
+				is_power_bloc_leader = yes
+			}
+			random_power_bloc = {
+				limit = {
+					power_bloc_leader = c:DIS
+				}
+				add_modifier = {
+					name = dragonbloc_collapse
+				}
+			}
+		}
 		add_modifier = {
 			name = dragon_collapse
 			years = 6
