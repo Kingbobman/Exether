@@ -1473,6 +1473,25 @@
 					reserves=1
 					activate_production_methods={ "pm_basic_port" }
 				}
+				create_building={
+					building="building_government_administration"
+					level=4
+					reserves=1
+					activate_production_methods={ "pm_horizontal_drawer_cabinets" }
+				}
+				create_building={
+					building="building_paper_mills"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:THI"
+							levels=1
+							region="STATE_OLD_AUBERN"
+					   }
+					}
+					reserves=1
+					activate_production_methods={ "pm_pulp_pressing" "pm_automation_disabled" }
+				}
 			create_building={
 				building="building_artillery_foundries"
                 add_ownership={ 
@@ -1570,6 +1589,12 @@
 	s:STATE_WOODS_OF_THE_VOW = {
 		region_state:THI={
 			create_building={
+				building="building_construction_sector"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_wooden_buildings" }
+			}
+			create_building={
 				building="building_wheat_farm"
 				add_ownership={ 
 					building={ 
@@ -1613,6 +1638,12 @@
 		
 	s:STATE_RAQUARTES_SHIELD = {
 		region_state:THI={
+			create_building={
+				building="building_construction_sector"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_wooden_buildings" }
+			}
 			create_building={
 				building="building_iron_mine"
 				add_ownership={ 
@@ -1756,6 +1787,12 @@
 		
 	s:STATE_DRUIDS_CHANT = {
 		region_state:THI={
+			create_building={
+				building="building_construction_sector"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_wooden_buildings" }
+			}
 			create_building={
 				building="building_cotton_plantation"
 				add_ownership={ 
@@ -2074,6 +2111,19 @@
 				level=4
 				reserves=1
 				activate_production_methods={ "pm_picks_and_shovels_building_gold_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+			create_building={
+				building="building_railway"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:TEF"
+							levels=1
+							region="STATE_COBALT_KEEP"
+						}
+					}
+				reserves=1
+				activate_production_methods={ "pm_steam_trains" "pm_wooden_passenger_carriages" }
 			}
 			create_building={
 				building="building_sunweave_plantation"
@@ -4241,7 +4291,7 @@
 						building={ 
 							type="building_financial_district"
 							country="c:TEF"
-							levels=1
+							levels=2
 							region="STATE_MARBLEGATE"
 					   }
 					}
@@ -4370,7 +4420,7 @@
 							type="building_financial_district"
 							country="c:TEF"
 							levels=1
-							region="STATE_MARBLEGATE"
+							region="STATE_MARZEHZARIN"
 						}
 					}
 				reserves=1
@@ -4537,6 +4587,19 @@
 	s:STATE_HIGH_HARAVA = {
 		region_state:TEF={
 			create_building={
+				building="building_railway"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:TEF"
+							levels=1
+							region="STATE_HIGH_HARAVA"
+						}
+					}
+				reserves=1
+				activate_production_methods={ "pm_steam_trains" "pm_wooden_passenger_carriages" }
+			}
+			create_building={
 				building="building_wheat_farm"
 				add_ownership={ 
 					building={ 
@@ -4605,6 +4668,19 @@
 		
 	s:STATE_PORCELAINGATE = {
 		region_state:TEF={
+			create_building={
+				building="building_railway"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:TEF"
+							levels=1
+							region="STATE_PORCELAINGATE"
+						}
+					}
+				reserves=1
+				activate_production_methods={ "pm_steam_trains" "pm_wooden_passenger_carriages" }
+			}
 			create_building={
 				building="building_government_administration"
 				level=1
@@ -5140,6 +5216,19 @@
                 }
 				reserves=1
 				activate_production_methods={ "pm_dedicated_diggers" "pm_no_mirrors" "pm_road_carts"}
+			}
+			create_building={
+				building="building_railway"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:TEF"
+							levels=1
+							region="STATE_ASARSHIR"
+						}
+					}
+				reserves=1
+				activate_production_methods={ "pm_steam_trains" "pm_wooden_passenger_carriages" }
 			}
 			create_building={
 				building="building_textile_mills"

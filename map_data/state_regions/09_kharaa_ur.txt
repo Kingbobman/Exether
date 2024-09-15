@@ -31,7 +31,7 @@ STATE_ULDOR = {
     impassable = { x82DED1 }
     traits = { "state_trait_gwitiz_mountains" }
     arable_land = 588
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" }
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" "bg_sugar_plantations" }
     capped_resources = {
         bg_coal_mining = 60
         bg_cloudsilver_mining = 35
@@ -49,7 +49,7 @@ STATE_CHADBA = {
     mine = xF424F9
     wood = xF3BB6C
     arable_land = 364
-    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" }
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_sugar_plantations" }
     capped_resources = {
         bg_fishing_glowfish = 8
         bg_coal_mining = 36
@@ -73,7 +73,7 @@ STATE_TUKHUR = {
     wood = xCAD2E0
     traits = { "state_trait_gwitiz_mountains" }
     arable_land = 642
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" }
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" "bg_sugar_plantations" }
     capped_resources = {
         bg_coal_mining = 72
         bg_iron_mining = 27
@@ -94,7 +94,7 @@ STATE_KHURIN = {
     mine = xD7C6D0
     wood = xD5FBAD
     arable_land = 524
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" }
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" "bg_sugar_plantations" }
     capped_resources = {
         bg_logging = 10
     }
@@ -111,10 +111,14 @@ STATE_BOLDOO = {
     wood = x8BBAC7
     traits = { "state_trait_kharaa_ur_jungle" }
     arable_land = 226
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" }
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" "bg_sugar_plantations" }
     capped_resources = {
         bg_seasnake_wharf = 10
         bg_logging = 18
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 15
     }
     naval_exit_id = 3082
 }
@@ -129,7 +133,7 @@ STATE_KHORTA = {
     mine = xDF9AF9
     wood = xD760C7
     arable_land = 775
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" }
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" "bg_sugar_plantations" }
     capped_resources = {
         bg_logging = 9
         bg_coal_mining = 116
@@ -149,11 +153,15 @@ STATE_GARBOL = {
     mine = xD2BEED
     wood = x98D8C3
     arable_land = 638
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_banana_plantations" "bg_dye_plantations" }
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_banana_plantations" "bg_dye_plantations" "bg_sugar_plantations" }
     capped_resources = {
         bg_seasnake_wharf = 11
         bg_logging = 20
         bg_hunting = 12
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 15
     }
     resource = {
         type = "bg_wishstone_reefs"
@@ -172,7 +180,7 @@ STATE_ORONK = {
     mine = xE9D6EA
     wood = xE89F94
     arable_land = 375
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" }
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" "bg_sugar_plantations" }
     capped_resources = {
         bg_logging = 11
     }
@@ -188,7 +196,7 @@ STATE_KHAIRI = {
     mine = xB6CB83
     wood = xB2D4DA
     arable_land = 212
-    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" }
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" "bg_sugar_plantations" }
     capped_resources = {
         bg_seasnake_wharf = 8
         bg_coal_mining = 32
@@ -214,7 +222,7 @@ STATE_CHANMA = {
     impassable = { xBEC7A3 }
     traits = { "state_trait_gwitiz_mountains" }
     arable_land = 626
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" }
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" "bg_sugar_plantations" }
     capped_resources = {
         bg_coal_mining = 48
         bg_lead_mining = 24
@@ -233,7 +241,7 @@ STATE_DALKH = {
     mine = xCCEA6C
     wood = xC8B281
     arable_land = 258
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_banana_plantations" "bg_dye_plantations" }
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_banana_plantations" "bg_dye_plantations" "bg_sugar_plantations" }
     capped_resources = {
         bg_coal_mining = 32
         bg_iron_mining = 45
@@ -254,10 +262,15 @@ STATE_SUKHIA = {
     mine = xBDF099
     wood = xBCB4D9
     arable_land = 374
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" }
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" "bg_sugar_plantations" }
     capped_resources = {
         bg_sulfur_mining = 60
         bg_logging = 8
+        bg_hunting = 10
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 15
     }
     naval_exit_id = 3112
 }
@@ -272,7 +285,7 @@ STATE_ALTANU = {
     mine = xC4D98F
     wood = xC2E3F2
     arable_land = 346
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" }
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" "bg_sugar_plantations" }
     capped_resources = {
         bg_sulfur_mining = 40
         bg_logging = 5
@@ -290,7 +303,7 @@ STATE_SAINO = {
     mine = xEF8AD3
     wood = xE664EF
     arable_land = 398
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_banana_plantations" "bg_dye_plantations" }
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_banana_plantations" "bg_dye_plantations" "bg_sugar_plantations" }
     capped_resources = {
         bg_coal_mining = 72
         bg_iron_mining = 36
@@ -311,10 +324,14 @@ STATE_ERKHE = {
     wood = xCEB191
     traits = { "state_trait_kharaa_ur_jungle" }
     arable_land = 222
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" }
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" "bg_sugar_plantations" }
     capped_resources = {
         bg_logging = 21
         bg_hunting = 12
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 15
     }
     naval_exit_id = 3112
 }
@@ -329,11 +346,15 @@ STATE_DALAI = {
     wood = xC2EAE7
     traits = { "state_trait_kharaa_ur_jungle" }
     arable_land = 252
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" }
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" "bg_sugar_plantations" }
     capped_resources = {
         bg_seasnake_wharf = 9
         bg_fishing_glowfish = 5
         bg_logging = 19
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 15
     }
     naval_exit_id = 3082
 }
@@ -348,11 +369,15 @@ STATE_OROGOO = {
     wood = xE7E979
     traits = { "state_trait_kharaa_ur_jungle" }
     arable_land = 208
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" }
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" "bg_sugar_plantations" }
     capped_resources = {
         bg_logging = 22
         bg_seasnake_wharf = 9
         bg_hunting = 12
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 15
     }
     naval_exit_id = 3082
 }
@@ -367,12 +392,16 @@ STATE_GURVA = {
     wood = xB7F6D3
     traits = { "state_trait_kharaa_ur_jungle" }
     arable_land = 207
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" }
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" "bg_sugar_plantations" }
     capped_resources = {
         bg_fishing = 7
         bg_logging = 23
         bg_hunting = 12
         bg_haunted_grounds = 7
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 20
     }
     naval_exit_id = 3082
 }
@@ -387,11 +416,16 @@ STATE_KHONGO = {
     wood = xD0C2FA
     traits = { "state_trait_kharaa_ur_jungle" }
     arable_land = 166
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" }
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" "bg_sugar_plantations" }
     capped_resources = {
         bg_fishing = 13
+        bg_hunting = 10
         bg_logging = 13
         bg_haunted_grounds = 7
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 15
     }
     naval_exit_id = 3082
 }
@@ -406,11 +440,16 @@ STATE_SERGER = {
     wood = xDE9F9C
     traits = { "state_trait_kharaa_ur_jungle" }
     arable_land = 82
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" }
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" "bg_sugar_plantations" }
     capped_resources = {
         bg_fishing = 15
         bg_logging = 9
+        bg_hunting = 10
         bg_haunted_grounds = 7
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 15
     }
     naval_exit_id = 3003
 }
@@ -425,10 +464,15 @@ STATE_BUYANT = {
     wood = xCDD766
     traits = { "state_trait_kharaa_ur_jungle" }
     arable_land = 104
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" }
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" "bg_sugar_plantations" }
     capped_resources = {
         bg_fishing = 9
+        bg_hunting = 10
         bg_logging = 13
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 15
     }
     resource = {
         type = "bg_oil_extraction"
@@ -448,12 +492,17 @@ STATE_GALSHA = {
     wood = xD06CDA
     traits = { "state_trait_kharaa_ur_jungle" }
     arable_land = 274
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" }
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" "bg_sugar_plantations" }
     capped_resources = {
         bg_coal_mining = 60
         bg_sulfur_mining = 44
         bg_logging = 18
+        bg_hunting = 10
         bg_haunted_grounds = 9
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 25
     }
     naval_exit_id = 3110
 }
@@ -468,7 +517,7 @@ STATE_BAIDAL = {
     wood = xE487FC
     traits = { "state_trait_kharaa_ur_jungle" }
     arable_land = 86
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_rice_farms_leechgardens" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" }
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_rice_farms_leechgardens" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" "bg_sugar_plantations" }
     capped_resources = {
         bg_fishing = 12
         bg_squidding = 5
@@ -478,7 +527,7 @@ STATE_BAIDAL = {
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 16
+        undiscovered_amount = 15
     }
     naval_exit_id = 3003
 }
@@ -494,14 +543,15 @@ STATE_ONON = {
     wood = x9BD8F0
     traits = { "state_trait_kharaa_ur_jungle" }
     arable_land = 136
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" }
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" "bg_sugar_plantations" }
     capped_resources = {
         bg_logging = 17
         bg_haunted_grounds = 5
+        bg_hunting = 10
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 6
+        undiscovered_amount = 20
     }
     naval_exit_id = 3110
 }
@@ -517,10 +567,15 @@ STATE_DORNO = {
     wood = xC2BACE
     traits = { "state_trait_kharaa_ur_jungle" }
     arable_land = 154
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" }
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" "bg_sugar_plantations" }
     capped_resources = {
         bg_logging = 15
+        bg_hunting = 10
         bg_haunted_grounds = 7
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 20
     }
     naval_exit_id = 3110
 }
@@ -535,11 +590,16 @@ STATE_TOSON = {
     wood = xC6B092
     traits = { "state_trait_kharaa_ur_jungle" }
     arable_land = 324
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" }
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" "bg_sugar_plantations" }
     capped_resources = {
         bg_logging = 13
         bg_fishing = 12
         bg_haunted_grounds = 5
+        bg_hunting = 10
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 15
     }
     naval_exit_id = 3003
 }
@@ -555,14 +615,19 @@ STATE_TSENK = {
     wood = xBC8DB9
     traits = { "state_trait_kharaa_ur_jungle" }
     arable_land = 257
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" }
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" "bg_sugar_plantations" }
     capped_resources = {
         bg_coal_mining = 10
         bg_iron_mining = 36
+        bg_hunting = 10
         bg_cloudsilver_mining = 17
         bg_sulfur_mining = 48
         bg_logging = 7
         bg_haunted_grounds = 10
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 20
     }
     naval_exit_id = 3110
 }
@@ -577,16 +642,17 @@ STATE_BATSI = {
     wood = xCCF370
     traits = { "state_trait_kharaa_ur_jungle" }
     arable_land = 204
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" }
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" "bg_sugar_plantations" }
     capped_resources = {
         bg_fishing = 10
         bg_squidding = 6
         bg_logging = 11
+        bg_hunting = 10
         bg_haunted_grounds = 7
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 8
+        undiscovered_amount = 15
     }
     naval_exit_id = 3003
 }
@@ -603,6 +669,7 @@ STATE_ALBAIN = {
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_tobacco_plantations" "bg_dye_plantations" }
     capped_resources = {
         bg_logging = 8
+        bg_hunting = 5
         bg_fishing = 10
     }
 
@@ -674,11 +741,15 @@ STATE_KYRTHAL = {
     mine = xDAE9DB
     wood = xD4D655
     arable_land = 224
-    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" "bg_banana_plantations" "bg_coffee_plantations" "bg_dye_plantations" }
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" "bg_banana_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_sugar_plantations" }
     capped_resources = {
         bg_logging = 8
         bg_fishing = 18
         bg_haunted_grounds = 8
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 20
     }
     naval_exit_id = 3033
 }
@@ -693,11 +764,16 @@ STATE_GROMKYL = {
     wood = xE8C9F9
     traits = { "state_trait_kharaa_ur_jungle" }
     arable_land = 178
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_banana_plantations" "bg_dye_plantations" "bg_banana_plantations" }
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_banana_plantations" "bg_dye_plantations" "bg_banana_plantations" "bg_sugar_plantations" }
     capped_resources = {
         bg_fishing = 10
         bg_logging = 7
         bg_haunted_grounds = 6
+        bg_hunting = 10
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 15
     }
     naval_exit_id = 3033
 }
@@ -713,8 +789,9 @@ STATE_DROKYN = {
     arable_land = 61
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_tobacco_plantations" "bg_dye_plantations" }
     capped_resources = {
-        bg_fishing = 6
-        bg_logging = 3
+        bg_fishing = 9
+        bg_logging = 9
+        bg_desert_hunting = 10
     }
     naval_exit_id = 3059
 }
@@ -750,11 +827,15 @@ STATE_ZURKYL = {
     wood = xCD81F8
     traits = { "state_trait_kharaa_ur_jungle" }
     arable_land = 64
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" }
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" "bg_sugar_plantations" }
     capped_resources = {
         bg_fishing = 11
         bg_logging = 20
         bg_hunting = 12
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 15
     }
     naval_exit_id = 3033
 }
@@ -770,7 +851,8 @@ STATE_KYRGRIM = {
     arable_land = 9
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_tobacco_plantations" "bg_dye_plantations" }
     capped_resources = {
-        bg_fishing = 3
+        bg_fishing = 8
+        bg_desert_hunting = 10
         bg_coal_mining = 32
         bg_iron_mining = 24
         bg_lead_mining = 15
@@ -791,6 +873,7 @@ STATE_DALSHTOK = {
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" "bg_coffee_plantations" "bg_dye_plantations" }
     capped_resources = {
         bg_fishing = 16
+        bg_desert_hunting = 10
         bg_logging = 7
         bg_haunted_grounds = 7
     }
@@ -809,7 +892,8 @@ STATE_BURZOK = {
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" "bg_coffee_plantations" "bg_dye_plantations" }
     capped_resources = {
         bg_fishing = 12
-        bg_logging = 5
+        bg_desert_hunting = 10
+        bg_logging = 9
         bg_haunted_grounds = 6
     }
     naval_exit_id = 3014
@@ -825,11 +909,15 @@ STATE_ERKBALB = {
     wood = xD7C284
     traits = { "state_trait_kharaa_ur_jungle" }
     arable_land = 104
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" }
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" "bg_sugar_plantations" }
     capped_resources = {
         bg_fishing_glowfish = 9
         bg_sulfur_mining = 80
         bg_logging = 16
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 15
     }
     naval_exit_id = 3036
 }
@@ -844,10 +932,15 @@ STATE_GOLMOK = {
     wood = xDF929F
     traits = { "state_trait_kharaa_ur_jungle" }
     arable_land = 33
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" }
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" "bg_sugar_plantations" }
     capped_resources = {
         bg_fishing = 5
         bg_logging = 17
+        bg_hunting = 10
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 20
     }
     naval_exit_id = 3082
 }
@@ -862,10 +955,15 @@ STATE_KRAGKYL = {
     wood = xF1D0A8
     traits = { "state_trait_kharaa_ur_jungle" }
     arable_land = 132
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" }
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" "bg_sugar_plantations" }
     capped_resources = {
         bg_fishing = 6
+        bg_hunting = 10
         bg_logging = 15
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 15
     }
     naval_exit_id = 3082
 }
@@ -881,12 +979,17 @@ STATE_DRUKYN = {
     wood = xEED878
     traits = { "state_trait_kharaa_ur_jungle" }
     arable_land = 116
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" }
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" "bg_sugar_plantations" }
     capped_resources = {
         bg_coal_mining = 40
         bg_iron_mining = 60
         bg_cloudsilver_mining = 29
         bg_logging = 16
+        bg_hunting = 10
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 15
     }
     naval_exit_id = 3109
 }
@@ -906,6 +1009,7 @@ STATE_KAZTHOK = {
         bg_coal_mining = 40
         bg_iron_mining = 33
         bg_logging = 8
+        bg_desert_hunting = 10
         bg_haunted_grounds = 7
     }
     naval_exit_id = 3014
@@ -924,6 +1028,7 @@ STATE_BAZKYL = {
     capped_resources = {
         bg_logging = 11
         bg_haunted_grounds = 9
+        bg_desert_hunting = 10
     }
     naval_exit_id = 3121
 
@@ -939,10 +1044,14 @@ STATE_KYRTHOR = {
     wood = xE9EC84
     traits = { "state_trait_kharaa_ur_jungle" }
     arable_land = 140
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" }
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" "bg_sugar_plantations" }
     capped_resources = {
         bg_seasnake_wharf = 8
         bg_logging = 13
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 15
     }
     naval_exit_id = 3082
 }
@@ -959,6 +1068,7 @@ STATE_GNAKYR = {
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_coffee_plantations" "bg_tobacco_plantations" "bg_dye_plantations" }
     capped_resources = {
         bg_fishing = 9
+        bg_desert_hunting = 10
         bg_logging = 8
         bg_haunted_grounds = 7
     }
@@ -979,6 +1089,7 @@ STATE_RAZOK = {
         bg_fishing = 10
         bg_coal_mining = 60
         bg_logging = 8
+        bg_desert_hunting = 10
         bg_haunted_grounds = 6
     }
     naval_exit_id = 3014
@@ -1041,6 +1152,7 @@ STATE_BALDBAN = {
         bg_logging = 8
         bg_fishing = 2
         bg_iron_mining = 60
+        bg_desert_hunting = 10
         bg_lead_mining = 39
         bg_haunted_grounds = 6
     }
@@ -1065,6 +1177,7 @@ STATE_KRAKYR = {
     capped_resources = {
         bg_fishing = 8
         bg_logging = 7
+        bg_desert_hunting = 10
         bg_haunted_grounds = 6
     }
     naval_exit_id = 3014
@@ -1081,7 +1194,7 @@ STATE_KYRZUR = {
     wood = xAC92F2
     traits = { "state_trait_kharaa_ur_jungle" }
     arable_land = 78
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" "bg_dye_plantations" "bg_coffee_plantations" "bg_banana_plantations" "bg_dye_plantations" }
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" "bg_dye_plantations" "bg_coffee_plantations" "bg_banana_plantations" "bg_dye_plantations" "bg_sugar_plantations" }
     capped_resources = {
         bg_logging = 25
         bg_hunting = 12
@@ -1169,7 +1282,7 @@ STATE_KAZKYL = {
     wood = xE7F86D
     traits = { "state_trait_gwitiz_mountains" }
     arable_land = 225
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" "bg_coffee_plantations" "bg_dye_plantations" }
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_sugar_plantations" }
     capped_resources = {
         bg_coal_mining = 52
         bg_lead_mining = 45
@@ -1215,7 +1328,7 @@ STATE_KHANGAWA = {
     mine = xF30FF5
     wood = xF2B0FA
     arable_land = 223
-    arable_resources = { "bg_livestock_ranches" "bg_cotton_plantations" "bg_wheat_farms" "bg_coffee_plantations" "bg_dye_plantations" }
+    arable_resources = { "bg_livestock_ranches" "bg_cotton_plantations" "bg_wheat_farms" "bg_coffee_plantations" "bg_dye_plantations" "bg_sugar_plantations"}
     capped_resources = {
         bg_logging = 8
         bg_fishing_glowfish = 8
@@ -1259,8 +1372,8 @@ STATE_KHULANJO = {
     arable_land = 404
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" "bg_dye_plantations" }
     capped_resources = {
-        bg_logging = 2
         bg_opium_plantations = 15
+        bg_desert_hunting = 15
     }
     resource = {
         type = "bg_oil_extraction"
@@ -1281,6 +1394,7 @@ STATE_HOKUDAIHAN = {
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" "bg_dye_plantations" }
     capped_resources = {
         bg_fishing = 10
+        bg_desert_hunting = 10
         bg_logging = 4
         bg_opium_plantations = 10
     }
@@ -1300,6 +1414,10 @@ STATE_TAKAYAMAAN = {
     capped_resources = {
         bg_logging = 8
         bg_fishing = 18
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 10
     }
     resource = {
         type = "bg_ship_graveyard"
@@ -1322,7 +1440,7 @@ STATE_JARGALTSAI = {
     mine = xDFB1D7
     wood = xDF99A4
     arable_land = 51
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" "bg_dye_plantations" "bg_coffee_plantations" }
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" "bg_dye_plantations" "bg_coffee_plantations" "bg_sugar_plantations" }
     capped_resources = {
         bg_logging = 14
     }
@@ -1343,10 +1461,15 @@ STATE_YAMAKHANJU = {
     wood = xE0B4CC
     traits = { "state_trait_kharaa_ur_jungle" }
     arable_land = 135
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" }
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" "bg_coffee_plantations" "bg_dye_plantations" "bg_banana_plantations" "bg_sugar_plantations" }
     capped_resources = {
         bg_fishing = 8
         bg_logging = 9
+        bg_hunting = 10
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 10
     }
     resource = {
         type = "bg_oil_extraction"
@@ -1389,6 +1512,7 @@ STATE_KIYOMORIN = {
     arable_resources = { "bg_mountain_maize_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" "bg_dye_plantations" }
     capped_resources = {
         bg_coal_mining = 36
+        bg_desert_hunting = 10
         bg_iron_mining = 33
         bg_logging = 9
         bg_cloudsilver_mining = 29
@@ -1410,6 +1534,7 @@ STATE_BATOKYOAN = {
     arable_resources = { "bg_mountain_maize_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" }
     capped_resources = {
         bg_coal_mining = 32
+        bg_desert_hunting = 10
         bg_lead_mining = 36
         bg_logging = 6
     }
@@ -1431,6 +1556,7 @@ STATE_KHULEKKA = {
     capped_resources = {
         bg_coal_mining = 20
         bg_iron_mining = 39
+        bg_desert_hunting = 10
         bg_cloudsilver_mining = 32
         bg_logging = 9
     }
@@ -1454,7 +1580,7 @@ STATE_HOKUKHAN = {
     capped_resources = {
         bg_coal_mining = 48
         bg_iron_mining = 45
-        bg_logging = 3
+        bg_desert_hunting = 10
         bg_opium_plantations = 20
     }
     resource = {
@@ -1477,6 +1603,7 @@ STATE_TSURUKHAN = {
     arable_resources = { "bg_livestock_ranches" }
     capped_resources = {
         bg_fishing = 3
+        bg_desert_hunting = 15
         bg_opium_plantations = 25
     }
     naval_exit_id = 3027
@@ -1495,6 +1622,7 @@ STATE_ARASHIHARA = {
     arable_resources = { "bg_livestock_ranches" }
     capped_resources = {
         bg_opium_plantations = 32
+        bg_desert_hunting = 20
     }
     resource = {
         type = "bg_oil_extraction"
@@ -1516,6 +1644,7 @@ STATE_KITAYAMAO = {
     arable_resources = { "bg_livestock_ranches" "bg_tobacco_plantations" }
     capped_resources = {
         bg_logging = 8
+        bg_desert_hunting = 10
         bg_opium_plantations = 14
     }
     resource = {
@@ -1624,8 +1753,9 @@ STATE_KHASUNEN = {
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" "bg_coffee_plantations" "bg_dye_plantations" }
     capped_resources = {
         bg_logging = 8
-        bg_fishing = 6
-        bg_squidding = 2
+        bg_fishing = 8
+        bg_desert_hunting = 10
+        bg_squidding = 8
         bg_opium_plantations = 12
     }
     naval_exit_id = 3003
@@ -1643,6 +1773,7 @@ STATE_KHULEKI = {
     arable_resources = { "bg_livestock_ranches" "bg_tobacco_plantations" }
     capped_resources = {
         bg_fishing = 9
+        bg_desert_hunting = 15
         bg_opium_plantations = 15
     }
     naval_exit_id = 3027
@@ -1661,6 +1792,7 @@ STATE_KAMITAI = {
     capped_resources = {
         bg_fishing = 12
         bg_coal_mining = 24
+        bg_desert_hunting = 10
         bg_lead_mining = 27
         bg_opium_plantations = 24
     }
@@ -1679,8 +1811,9 @@ STATE_HARUGAWASAI = {
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" "bg_dye_plantations" }
     capped_resources = {
         bg_fishing = 10
-        bg_squidding = 3
+        bg_squidding = 8
         bg_coal_mining = 40
+        bg_desert_hunting = 10
         bg_logging = 12
         bg_opium_plantations = 26
     }
@@ -1698,9 +1831,10 @@ STATE_TSUKHANJUKU = {
     arable_land = 84
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" "bg_coffee_plantations" "bg_dye_plantations" }
     capped_resources = {
-        bg_logging = 8
-        bg_fishing = 5
-        bg_squidding = 5
+        bg_logging = 10
+        bg_fishing = 8
+        bg_squidding = 10
+        bg_desert_hunting = 15
         bg_lead_mining = 36
         bg_opium_plantations = 15
     }
@@ -1739,6 +1873,7 @@ STATE_JARGALYO = {
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" "bg_coffee_plantations" "bg_dye_plantations" }
     capped_resources = {
         bg_logging = 8
+        bg_desert_hunting = 15
         bg_fishing = 7
         bg_opium_plantations = 14
     }
@@ -1762,6 +1897,7 @@ STATE_SHINKANBATA = {
     arable_resources = { "bg_livestock_ranches" }
     capped_resources = {
         bg_opium_plantations = 34
+        bg_desert_hunting = 10
     }
     resource = {
         type = "bg_oil_extraction"
@@ -1785,6 +1921,7 @@ STATE_HIRAKHANJO = {
         bg_coal_mining = 36
         bg_iron_mining = 36
         bg_sulfur_mining = 40
+        bg_desert_hunting = 15
         bg_opium_plantations = 38
     }
     naval_exit_id = 3113
@@ -1804,6 +1941,7 @@ STATE_MONGOGAWA = {
     capped_resources = {
         bg_fishing = 8
         bg_opium_plantations = 21
+        bg_desert_hunting = 10
     }
     naval_exit_id = 3027
 }
@@ -1822,6 +1960,7 @@ STATE_HAYAKHAMURA = {
         bg_fishing = 7
         bg_coal_mining = 36
         bg_iron_mining = 33
+        bg_desert_hunting = 15
         bg_sulfur_mining = 32
         bg_opium_plantations = 17
     }
