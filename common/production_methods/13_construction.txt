@@ -1,4 +1,4 @@
-﻿pm_wooden_buildings = {
+pm_wooden_buildings = {
 	texture = "gfx/interface/icons/production_method_icons/wooden_buildings.dds"
 	
 	is_default = yes
@@ -166,7 +166,7 @@ pm_cloudsilver_lifted_buildings = {
 	texture = "gfx/interface/icons/production_method_icons/iron_frame_buildings.dds"
 	
 	unlocking_technologies = {
-		floating_empire
+		cloudsilver_harvesting
 	}
 
 	country_modifiers = {
@@ -177,7 +177,10 @@ pm_cloudsilver_lifted_buildings = {
 	}
 	unlocking_production_methods = {
 			pm_iron_frame_buildings
+			pm_nimbium_lifted_buildings
+			pm_sky_lifted_buildings
 	}
+	
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_iron_add = -20
@@ -205,7 +208,7 @@ pm_nimbium_lifted_buildings = {
 	texture = "gfx/interface/icons/production_method_icons/iron_frame_buildings.dds"
 	
 	unlocking_technologies = {
-		floating_empire
+		floating_buildings
 	}
 
 	country_modifiers = {
