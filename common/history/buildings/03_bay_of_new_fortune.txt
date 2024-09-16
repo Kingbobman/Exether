@@ -179,6 +179,38 @@
 	s:STATE_PWANIQILIMA = {
 		region_state:PRO = {
 			create_building={
+				building="building_government_administration"
+				level=3
+				reserves=1
+				activate_production_methods={ "pm_simple_organization" }
+			}
+			create_building={
+				building="building_logging_camp"
+				add_ownership={ 
+					building={ 
+						type="building_financial_district"
+						country="c:PRO"
+						levels=6
+						region="STATE_PWANIQILIMA"
+				   }
+				}
+	             reserves=1
+				activate_production_methods={ "pm_simple_forestry" "pm_no_equipment" "pm_road_carts" "pm_no_hardwood" }
+			}
+			create_building={
+				building="building_millet_farm"
+					add_ownership={ 
+						building={ 
+							type="building_manor_house"
+							country="c:PRO"
+							levels=10
+							region="STATE_PWANIQILIMA"
+					   }
+					}
+				reserves=1
+				activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools"  }
+			}
+			create_building={
 				building="building_logging_camp"
 				add_ownership={ 
 					building={ 
@@ -244,19 +276,6 @@
 				activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }
 			}
 			create_building={
-				building="building_millet_farm"
-					add_ownership={ 
-						building={ 
-							type="building_manor_house"
-							country="c:PRO"
-							levels=5
-							region="STATE_PWANIQILIMA"
-					   }
-					}
-				reserves=1
-				activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools"  }
-			}
-			create_building={
 				building="building_iron_mine"
 					add_ownership={ 
 						building={ 
@@ -285,42 +304,6 @@
 	}
 	s:STATE_KILIMADADA = {
 
-	}
-	s:STATE_MAWIMBIMAJI = {
-		region_state:PRO = {
-			create_building={
-				building="building_government_administration"
-				level=3
-				reserves=1
-				activate_production_methods={ "pm_simple_organization" }
-			}
-			create_building={
-				building="building_logging_camp"
-				add_ownership={ 
-					building={ 
-						type="building_financial_district"
-						country="c:PRO"
-						levels=6
-						region="STATE_MAWIMBIMAJI"
-				   }
-				}
-	             reserves=1
-				activate_production_methods={ "pm_simple_forestry" "pm_no_equipment" "pm_road_carts" "pm_no_hardwood" }
-			}
-			create_building={
-				building="building_millet_farm"
-					add_ownership={ 
-						building={ 
-							type="building_manor_house"
-							country="c:PRO"
-							levels=5
-							region="STATE_MAWIMBIMAJI"
-					   }
-					}
-				reserves=1
-				activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools"  }
-			}
-		}
 	}
 	
 	s:STATE_JITOMREMBO = {
