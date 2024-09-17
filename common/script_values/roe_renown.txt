@@ -12,11 +12,6 @@ renown_multiplier = {
 	add = modifier:country_renown_cost_mult
 }
 
-magic_renown_costs = {
-	value = var:num_renown
-	multiply = -200
-  }
-
 renown_generation = {
 	value = modifier:country_renown_pos_add
 	multiply = {
@@ -31,6 +26,11 @@ renown_usage = {
 		value = 1
 		add = modifier:country_renown_cost_mult
 	}
+	subtract = retainer_1_cost
+	subtract = retainer_2_cost
+	subtract = retainer_3_cost
+	subtract = retainer_4_cost
+	subtract = retainer_5_cost
 }
 
 renown_upkeep = {

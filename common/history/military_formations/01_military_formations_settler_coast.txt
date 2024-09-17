@@ -1663,23 +1663,23 @@
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_moorweald
-			name = Green_Guard
+			name = "Royal Republican Army"
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_OUTER_MOORWEALD
-				count = 5
+				count = 15
 			}
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_mobile_artillery
-				state_region = s:STATE_MOORESHIRE
-				count = 3
+				state_region = s:STATE_OUTER_MOORWEALD
+				count = 10
 			}
 			combat_unit = {
-				type = unit_type:combat_unit_type_mobile_artillery
-				state_region = s:STATE_MOORESHIRE
-				count = 2
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_SMALLWOOD
+				count = 5
 			}
 			save_scope_as = smaarmy
 		}
@@ -1693,6 +1693,36 @@
 		scope:smagen = {
 			transfer_to_formation = scope:smaarmy
 		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_moorweald
+
+			name = "Meadowshire Dockyard"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_OUTER_MOORWEALD
+				count = 10
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_OUTER_MOORWEALD
+				count = 3
+			}
+
+			save_scope_as = sma_navy
+		}
+			create_character = {
+				is_admiral = yes
+				commander_rank = commander_rank_2
+				save_scope_as = sma_admiral
+			}
+			
+			scope:sma_admiral = {
+				transfer_to_formation = scope:sma_navy
+			}
 	}
 
 	c:GCS ?= {
