@@ -1573,16 +1573,60 @@ undermountain = {  #Exether
 	label = label_elevated
 	label = label_hazardous
 	label = label_travel_harsh_environment
-	weight = 0
+	weight = {
+		value = 0
+		if = {
+			limit = {
+				scope:region = {
+					undermountain_state = yes
+				}
+			}
+			add = 3
+		}
+	}
 	textures = {
 		{
 			weight = {
-				value = 1
+				value = 0
+				if = {
+					limit = {
+						scope:region = {
+							OR = {
+								region = sr:region_west_everfrost
+								region = sr:region_coldreach
+								region = sr:region_razorwind
+							}
+						
+						}
+					}
+					add = 3
+				}
 			}
 			path = "gfx/state_pictures/arctic_mountain.dds"
 			effect = "vfx_entity_ui_state_arctic"
 		}
+		{
+			weight = {
+				value = 0
+				if = {
+					limit = {
+						scope:region = {
+							NOR = {
+								region = sr:region_west_everfrost
+								region = sr:region_coldreach
+								region = sr:region_razorwind
+							}
+						
+						}
+					}
+					add = 1
+				}
+			}
+			path = "gfx/state_pictures/mountains_northamerica.dds"
+			effect = "vfx_entity_ui_state_mountains_northamerica"
+		}
 	}
+	
 	combat_width = 0.3
 	risk = 0.5
 	materials = { 
@@ -1597,7 +1641,25 @@ undermountain = {  #Exether
 undermountain_urban = {  #Exether
 	label = label_elevated
 	label = label_hazardous
-	weight = 0
+	weight = {
+		value = 0
+		if = {
+			limit = {
+				AND = {
+					scope:region = {
+						undermountain_state = yes
+					}
+					exists = state.b:building_urban_center
+				}
+				
+			}
+			add = state.b:building_urban_center.level
+			subtract = 5
+			min = 0.1
+			multiply = state.num_provinces
+			divide = 4
+		}
+	}
 	textures = {
 		{
 			weight = {
@@ -1607,7 +1669,7 @@ undermountain_urban = {  #Exether
 			effect = "vfx_entity_ui_state_arctic"
 		}
 	}
-	combat_width = 0.3
+	combat_width = 0.5
 	risk = 0.5
 	materials = { 
 		#Woodlands_03 = 1
