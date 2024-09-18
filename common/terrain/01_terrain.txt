@@ -1581,7 +1581,18 @@ undermountain = {  #Exether
 					undermountain_state = yes
 				}
 			}
-			add = 3
+			add = 50
+		}
+		if = {
+			limit = {
+				NOT = {
+					scope:region = {
+						undermountain_state = yes
+					}
+				}
+
+			}
+			subtract = 50
 		}
 	}
 	textures = {
@@ -1630,7 +1641,19 @@ undermountain = {  #Exether
 	combat_width = 0.3
 	risk = 0.5
 	materials = { 
-		#Woodlands_03 = 1
+		Cliff_Sandstone_blank = 6000 #I'm not sure I'm using this feature correctly
+		Mountains_NonDirectional_01 = 5
+		Cliff_Granite_02 = 2.5
+		Cliff_Granite_03 = 2.5
+		Cliff_Granite_05 = 2.5
+		Cliff_Granite_06 = 2.5
+		Cliff_Granite_07 = 2.5
+		Cliff_Limestone_02 = 2.5
+		Cliff_Sandstone_01 = 2.5
+		Cliff_Sandstone_03 = 2.5
+		Cliff_Sandstone_04 = 2.5
+		Cliff_Sandstone_05 = 2.5
+
 	}
 	debug_color = hsv { 0.55 0.75 1 }
 	
@@ -1672,7 +1695,18 @@ undermountain_urban = {  #Exether
 	combat_width = 0.5
 	risk = 0.5
 	materials = { 
-		#Woodlands_03 = 1
+		Cliff_Sandstone_blank = 6000
+		Mountains_NonDirectional_01 = 5
+		Cliff_Granite_02 = 2.5
+		Cliff_Granite_03 = 2.5
+		Cliff_Granite_05 = 2.5
+		Cliff_Granite_06 = 2.5
+		Cliff_Granite_07 = 2.5
+		Cliff_Limestone_02 = 2.5
+		Cliff_Sandstone_01 = 2.5
+		Cliff_Sandstone_03 = 2.5
+		Cliff_Sandstone_04 = 2.5
+		Cliff_Sandstone_05 = 2.5
 	}
 	debug_color = hsv { 0.55 0.75 1 }
 	
