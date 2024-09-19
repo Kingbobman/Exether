@@ -165,6 +165,12 @@ building_manor_house = {
 				value = 0.25
 			}
 		}
+		bg_hippos_score = {
+			group = "bg_hippos"
+			score = {
+				value = 0.25
+			}
+		}
 		bg_fishing_score = {
 			group = "bg_fishing"
 			score = {
@@ -383,6 +389,19 @@ building_financial_district = {
 		}
 		bg_whaling_score = {
 			group = "bg_whaling"
+			score = {
+				value = 1
+				
+				if = {
+					limit = {
+						has_law = law_type:law_traditionalism
+					}
+					multiply = 0.5
+				}					
+			}
+		}
+		bg_hippos_score = {
+			group = "bg_hippos"
 			score = {
 				value = 1
 				
@@ -658,32 +677,6 @@ building_adventuring_guild = {
 	}
 	
 	investment_scores = {
-		bg_whaling_score = {
-			group = "bg_whaling"
-			score = {
-				value = 1
-				
-				if = {
-					limit = {
-						has_law = law_type:law_traditionalism
-					}
-					multiply = 0.5
-				}					
-			}
-		}
-		bg_fishing_score = {
-			group = "bg_fishing"
-			score = {
-				value = 1
-				
-				if = {
-					limit = {
-						has_law = law_type:law_traditionalism
-					}
-					multiply = 0.5
-				}				
-			}
-		}
 		bg_infrastructure_score = {
 			group = "bg_infrastructure"
 			score = {
