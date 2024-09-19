@@ -1570,23 +1570,71 @@ docks = {
 }
 
 undermountain = {  #Exether
+
 	label = label_elevated
 	label = label_hazardous
 	label = label_travel_harsh_environment
-	weight = 0
+	weight = 3
 	textures = {
 		{
 			weight = {
-				value = 1
+				value = 0
+				if = {
+					limit = {
+						scope:region = {
+							OR = {
+								region = sr:region_west_everfrost
+								region = sr:region_coldreach
+								region = sr:region_razorwind
+							}
+						
+						}
+					}
+					add = 3
+				}
 			}
-			path = "gfx/state_pictures/arctic_mountain.dds"
+			path = "gfx/state_pictures/undermountain_arctic.dds"
+			effect = "vfx_entity_ui_state_arctic"
+		}
+		{
+			weight = {
+				value = 0
+				if = {
+					limit = {
+						scope:region = {
+							NOR = {
+								region = sr:region_west_everfrost
+								region = sr:region_coldreach
+								region = sr:region_razorwind
+							}
+						
+						}
+					}
+					add = 3
+				}
+			}
+			path = "gfx/state_pictures/undermountain_1.dds"
 			effect = "vfx_entity_ui_state_arctic"
 		}
 	}
+	
 	combat_width = 0.3
 	risk = 0.5
 	materials = { 
-		#Woodlands_03 = 1
+		Cliff_Sandstone_blank = 6000 #I'm not sure I'm using this feature correctly
+		Cliff_Granite_blank = 6000
+		Mountains_NonDirectional_01 = 5
+		Cliff_Granite_02 = 2.5
+		Cliff_Granite_03 = 2.5
+		Cliff_Granite_05 = 2.5
+		Cliff_Granite_06 = 2.5
+		Cliff_Granite_07 = 2.5
+		Cliff_Limestone_02 = 2.5
+		Cliff_Sandstone_01 = 2.5
+		Cliff_Sandstone_03 = 2.5
+		Cliff_Sandstone_04 = 2.5
+		Cliff_Sandstone_05 = 2.5
+
 	}
 	debug_color = hsv { 0.55 0.75 1 }
 	
@@ -1597,7 +1645,25 @@ undermountain = {  #Exether
 undermountain_urban = {  #Exether
 	label = label_elevated
 	label = label_hazardous
-	weight = 0
+	weight = {
+		value = 0
+		if = {
+			limit = {
+				AND = {
+					scope:region = {
+						undermountain_state = yes
+					}
+					exists = state.b:building_urban_center
+				}
+				
+			}
+			add = state.b:building_urban_center.level
+			subtract = 5
+			min = 0.1
+			multiply = state.num_provinces
+			divide = 4
+		}
+	}
 	textures = {
 		{
 			weight = {
@@ -1607,13 +1673,81 @@ undermountain_urban = {  #Exether
 			effect = "vfx_entity_ui_state_arctic"
 		}
 	}
-	combat_width = 0.3
+	combat_width = 0.5
 	risk = 0.5
 	materials = { 
-		#Woodlands_03 = 1
+		Cliff_Sandstone_blank = 6000
+		Mountains_NonDirectional_01 = 5
+		Cliff_Granite_02 = 2.5
+		Cliff_Granite_03 = 2.5
+		Cliff_Granite_05 = 2.5
+		Cliff_Granite_06 = 2.5
+		Cliff_Granite_07 = 2.5
+		Cliff_Limestone_02 = 2.5
+		Cliff_Sandstone_01 = 2.5
+		Cliff_Sandstone_03 = 2.5
+		Cliff_Sandstone_04 = 2.5
+		Cliff_Sandstone_05 = 2.5
 	}
 	debug_color = hsv { 0.55 0.75 1 }
 	
 	pollution_mask_strength = 1.0
 	devastation_mask_strength = 1.0
 }
+
+dreamweaver_jungle = {
+	label = label_forested
+	label = label_hazardous
+	label = label_psionic
+	label = label_travel_harsh_environment
+	weight = 2
+	
+	textures = {
+		{
+			weight = {
+				value = 0
+				if = {
+					limit = {
+						scope:region = {
+							OR = {
+								region = sr:region_anantadesh
+								region = sr:region_dreamweaver_jungle
+							}
+						
+						}
+					}
+					add = 3
+				}
+			}
+			path = "gfx/state_pictures/dreamweaver_jungle.dds"
+			effect = "vfx_entity_ui_state_jungle"
+		}
+		{
+			weight = {
+				value = 0
+				if = {
+					limit = {
+						scope:region = {
+							OR = {
+								region = sr:region_sarpakshetra
+							}
+						
+						}
+					}
+					add = 3
+				}
+			}
+			path = "gfx/state_pictures/dreamweaver_jungle_2.dds"
+			effect = "vfx_entity_ui_state_jungle"
+		}
+	}
+	combat_width = 0.5
+	risk = 0.6
+	materials = { 
+		Dreamweaver = 2500
+	}
+	debug_color = hsv { 0.45 1 1 }
+	
+	pollution_mask_strength = 1.0
+	devastation_mask_strength = 1.0
+}	
