@@ -1574,17 +1574,7 @@ undermountain = {  #Exether
 	label = label_elevated
 	label = label_hazardous
 	label = label_travel_harsh_environment
-	weight = {
-		value = 0
-		if = {
-			limit = {
-				scope:region = {
-					undermountain_state = yes
-				}
-			}
-			add = 3
-		}
-	}
+	weight = 3
 	textures = {
 		{
 			weight = {
@@ -1603,7 +1593,7 @@ undermountain = {  #Exether
 					add = 3
 				}
 			}
-			path = "gfx/state_pictures/arctic_mountain.dds"
+			path = "gfx/state_pictures/undermountain_arctic.dds"
 			effect = "vfx_entity_ui_state_arctic"
 		}
 		{
@@ -1620,11 +1610,11 @@ undermountain = {  #Exether
 						
 						}
 					}
-					add = 1
+					add = 3
 				}
 			}
-			path = "gfx/state_pictures/mountains_northamerica.dds"
-			effect = "vfx_entity_ui_state_mountains_northamerica"
+			path = "gfx/state_pictures/undermountain_1.dds"
+			effect = "vfx_entity_ui_state_arctic"
 		}
 	}
 	
