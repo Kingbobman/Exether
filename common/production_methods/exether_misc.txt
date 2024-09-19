@@ -1236,3 +1236,77 @@ pm_government_oversight = {
 		}
 	}			
 }
+
+pm_simple_hippo_ranching = {
+	texture = "gfx/interface/icons/production_method_icons/open_air_stockyards.dds"		
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input 
+			
+			# output
+			goods_output_meat_add = 5
+			goods_output_blubber_add = 10
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 4500
+		}
+	}
+}
+
+pm_butchering_tools_hippos = {
+	texture = "gfx/interface/icons/production_method_icons/butchering_tools.dds"	
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input
+			goods_input_tools_add = 7
+			
+			# output
+			goods_output_meat_add = 10
+			goods_output_blubber_add = 20
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 4000
+			building_employment_machinists_add = 500
+		}
+	}
+}
+
+pm_slaughterhouses_hippos = {
+	texture = "gfx/interface/icons/production_method_icons/slaughterhouses.dds"	
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	
+	unlocking_technologies = {
+		gantry_cranes
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input
+			goods_input_small_arms_add = 5
+			goods_input_tools_add = 15
+			
+			goods_output_meat_add = 20
+			goods_output_blubber_add = 40
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 3000
+			building_employment_machinists_add = 1000
+			building_employment_engineers_add = 500
+		}
+	}
+}
