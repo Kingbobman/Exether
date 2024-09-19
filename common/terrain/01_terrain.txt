@@ -1715,9 +1715,39 @@ dreamweaver_jungle = {
 	textures = {
 		{
 			weight = {
-				value = 3
+				value = 0
+				if = {
+					limit = {
+						scope:region = {
+							OR = {
+								region = sr:region_anantadesh
+								region = sr:region_dreamweaver_jungle
+							}
+						
+						}
+					}
+					add = 3
+				}
 			}
-			path = "gfx/state_pictures/jungle.dds"
+			path = "gfx/state_pictures/dreamweaver_jungle.dds"
+			effect = "vfx_entity_ui_state_jungle"
+		}
+		{
+			weight = {
+				value = 0
+				if = {
+					limit = {
+						scope:region = {
+							OR = {
+								region = sr:region_sarpakshetra
+							}
+						
+						}
+					}
+					add = 3
+				}
+			}
+			path = "gfx/state_pictures/dreamweaver_jungle_2.dds"
 			effect = "vfx_entity_ui_state_jungle"
 		}
 	}
