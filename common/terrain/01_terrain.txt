@@ -1570,6 +1570,7 @@ docks = {
 }
 
 undermountain = {  #Exether
+
 	label = label_elevated
 	label = label_hazardous
 	label = label_travel_harsh_environment
@@ -1581,18 +1582,7 @@ undermountain = {  #Exether
 					undermountain_state = yes
 				}
 			}
-			add = 50
-		}
-		if = {
-			limit = {
-				NOT = {
-					scope:region = {
-						undermountain_state = yes
-					}
-				}
-
-			}
-			subtract = 50
+			add = 3
 		}
 	}
 	textures = {
@@ -1642,6 +1632,7 @@ undermountain = {  #Exether
 	risk = 0.5
 	materials = { 
 		Cliff_Sandstone_blank = 6000 #I'm not sure I'm using this feature correctly
+		Cliff_Granite_blank = 6000
 		Mountains_NonDirectional_01 = 5
 		Cliff_Granite_02 = 2.5
 		Cliff_Granite_03 = 2.5
@@ -1713,3 +1704,30 @@ undermountain_urban = {  #Exether
 	pollution_mask_strength = 1.0
 	devastation_mask_strength = 1.0
 }
+
+dreamweaver_jungle = {
+	label = label_forested
+	label = label_hazardous
+	label = label_psionic
+	label = label_travel_harsh_environment
+	weight = 2
+	
+	textures = {
+		{
+			weight = {
+				value = 3
+			}
+			path = "gfx/state_pictures/jungle.dds"
+			effect = "vfx_entity_ui_state_jungle"
+		}
+	}
+	combat_width = 0.5
+	risk = 0.6
+	materials = { 
+		Dreamweaver = 2500
+	}
+	debug_color = hsv { 0.45 1 1 }
+	
+	pollution_mask_strength = 1.0
+	devastation_mask_strength = 1.0
+}	
