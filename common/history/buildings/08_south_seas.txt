@@ -2322,12 +2322,6 @@
 	s:STATE_ARGYSTSIK = {
 		region_state:CCO={
 			create_building={
-				building="building_tea_plantation"
-				level = 1
-				reserves=1
-				activate_production_methods={ "default_building_tea_plantation" "pm_road_carts"  }
-			}
-			create_building={
 				building="building_tobacco_plantation"
 				level = 1
 				reserves=1
@@ -3160,19 +3154,6 @@
 			reserves=1
 			activate_production_methods={ "pm_saw_mills" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
 		}			
-			create_building={
-				building="building_tea_plantation"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:COC"
-						levels=2
-						region="STATE_NOLOGO_VELPH"
-				   }
-				}
-			reserves=1
-			activate_production_methods={ "default_building_tea_plantation" "pm_road_carts"  }
-		}
 			create_building={
 				building="building_port"
 				level=1
