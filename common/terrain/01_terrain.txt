@@ -1684,7 +1684,7 @@ undermountain = {  #Exether
 	}
 	
 	combat_width = 0.3
-	risk = 0.5
+	risk = 0.6
 	materials = { 
 		Cliff_Sandstone_blank = 6000 #I'm not sure I'm using this feature correctly
 		Cliff_Granite_blank = 6000
@@ -1759,6 +1759,60 @@ undermountain_urban = {  #Exether
 	pollution_mask_strength = 1.0
 	devastation_mask_strength = 1.0
 }
+
+diseased_forest = {
+	label = label_forested
+	label = label_hazardous
+	label = label_travel_harsh_environment
+	weight = 2
+	
+	textures = {
+		{
+			weight = {
+				value = 0
+				if = {
+					limit = {
+						scope:region = {
+							region = sr:region_plaguewood
+						}
+					}
+					add = 3
+				}
+			}
+			path = "gfx/state_pictures/plaguewood.dds"
+			effect = "vfx_entity_ui_state_desert_northamerica"
+		}
+		{
+			weight = {
+				value = 0
+				if = {
+					limit = {
+						scope:state = {
+							OR = {
+								state_region = s:STATE_WICKENWOOD
+								state_region = s:STATE_SANDWOOD
+								state_region = s:STATE_PLAGUEBRUSH
+							}
+							
+						}
+					}
+					add = 5
+				}
+			}
+			path = "gfx/state_pictures/plaguewood2.dds"
+			effect = "vfx_entity_ui_state_desert_northamerica"
+		}
+	}
+	combat_width = 0.45
+	risk = 0.7
+	materials = { 
+		disease_colored = 2600
+	}
+	debug_color = hsv { 0.45 1 1 }
+	
+	pollution_mask_strength = 1.0
+	devastation_mask_strength = 1.0
+}	
 
 dreamweaver_jungle = {
 	label = label_forested
