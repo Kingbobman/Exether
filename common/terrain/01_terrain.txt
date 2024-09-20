@@ -522,6 +522,41 @@ jungle = {
 			path = "gfx/state_pictures/jungle.dds"
 			effect = "vfx_entity_ui_state_jungle"
 		}
+		{
+			weight = {
+				value = 0
+				if = {
+					limit = {
+						scope:region = {
+							region = sr:region_plaguewood
+						}
+					}
+					add = 3
+				}
+			}
+			path = "gfx/state_pictures/plaguewood.dds"
+			effect = "vfx_entity_ui_state_desert_northamerica"
+		}
+		{
+			weight = {
+				value = 0
+				if = {
+					limit = {
+						scope:state = {
+							OR = {
+								state_region = s:STATE_WICKENWOOD
+								state_region = s:STATE_SANDWOOD
+								state_region = s:STATE_PLAGUEBRUSH
+							}
+							
+						}
+					}
+					add = 5
+				}
+			}
+			path = "gfx/state_pictures/plaguewood2.dds"
+			effect = "vfx_entity_ui_state_desert_northamerica"
+		}
 	}
 	combat_width = 0.5
 	risk = 0.6
@@ -1242,6 +1277,18 @@ mining = {
 		}
 		if = {
 			limit = {
+				exists = state.b:building_wishstone_mine
+			}
+			add = state.b:building_wishstone_mine.level
+		}
+		if = {
+			limit = {
+				exists = state.b:building_cloudsilver_mine
+			}
+			add = state.b:building_cloudsilver_mine.level
+		}
+		if = {
+			limit = {
 				exists = state.b:building_iron_mine
 			}
 			add = state.b:building_iron_mine.level
@@ -1276,6 +1323,24 @@ mining = {
 			}
 			path = "gfx/state_pictures/mining.dds"
 			effect = "vfx_entity_ui_state_mining"
+		}
+		{
+			weight = {
+				value = 0
+				if = {
+					limit = {
+						scope:state = {
+							OR = {
+								state_region = s:STATE_VYNDERVOHT
+							}
+							
+						}
+					}
+					add = 3
+				}
+			}
+			path = "gfx/state_pictures/secretkeepers.dds"
+			effect = "vfx_entity_ui_state_arctic"
 		}
 	}
 	
