@@ -1057,15 +1057,30 @@
 			transfer_to_formation = scope:oaz_fleet
 		}
 	}
+
 	c:OCR ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_equine_plains
 
+			name = "Warriors of Zrulbal"
+
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_PLAGUEWOOD_HINTERLANDS
+				count = 25
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_dragoons
 				state_region = s:STATE_PLAGUES_END
-				count = 20
+				count = 10
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_lancers
+				state_region = s:STATE_KESHARQAN
+				count = 5
 			}
 
 			save_scope_as = ocr_army
@@ -1073,6 +1088,7 @@
 
 		create_character = {
 			is_general = yes
+			commander_rank = commander_rank_2
 			hq = sr:region_equine_plains
 			save_scope_as = ocr_general
 		}
@@ -1081,6 +1097,112 @@
 			transfer_to_formation = scope:ocr_army
 		}
 	}
+
+	c:RCR ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_equine_plains
+
+			name = "Orcish Steppe Warriors"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_DILAFSHAN
+				count = 15
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_dragoons
+				state_region = s:STATE_BARIKHARGUL
+				count = 15
+			}
+
+			save_scope_as = rcr_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = sr:region_equine_plains
+			save_scope_as = rcr_general
+		}
+		
+		scope:rcr_general = {
+			transfer_to_formation = scope:rcr_army
+		}
+	}
+
+	c:DSB ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_equine_plains
+
+			name = "Crusaders of Dushambay"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_lancers
+				state_region = s:STATE_DUSHAMBAY
+				count = 15
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_WESTERN_EQUINE_PLAIN
+				count = 7
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_CENTRAL_EQUINE_PLAIN
+				count = 8
+			}
+
+			save_scope_as = dsb_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = sr:region_equine_plains
+			save_scope_as = dsb_general
+		}
+		
+		scope:dsb_general = {
+			transfer_to_formation = scope:dsb_army
+		}
+	}
+
+	c:RDM ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_equine_plains
+
+			name = "Riders of Redmane"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_lancers
+				state_region = s:STATE_EASTERN_EQUINE_PLAIN
+				count = 7
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_EASTERN_EQUINE_PLAIN
+				count = 7
+			}
+
+			save_scope_as = rdm_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = sr:region_equine_plains
+			save_scope_as = rdm_general
+		}
+		
+		scope:rdm_general = {
+			transfer_to_formation = scope:rdm_army
+		}
+	}
+
 
 
 	c:TEF ?= {
