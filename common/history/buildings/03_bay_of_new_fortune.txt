@@ -1,12 +1,42 @@
 ﻿BUILDINGS = {
 	s:STATE_KILIMASAWA = {
-
+		region_state:GHR = {
+			create_building={
+				building="building_government_administration"
+				level=4
+				reserves=1
+				activate_production_methods={ "pm_horizontal_drawer_cabinets" }
+			}
+			create_building={
+				building="building_logging_camp"
+				add_ownership={ 
+					building={ 
+						type="building_financial_district"
+						country="c:SKR"
+						levels=4
+						region="STATE_MAWINGUCHANYA"
+				   }
+				}
+	             reserves=1
+				activate_production_methods={ "pm_simple_forestry" "pm_no_equipment" "pm_road_carts" "pm_no_hardwood" }
+			}
+			create_building={
+				building="building_millet_farm"
+					add_ownership={ 
+						building={ 
+							type="building_manor_house"
+							country="c:SKR"
+							levels=7
+							region="STATE_MAWINGUCHANYA"
+					   }
+					}
+				reserves=1
+				activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools"  }
+			}
+		}
 	}
 	s:STATE_MAJIMBA = {
-
-	}
-	s:STATE_PWANIQWA = {
-		region_state:SKR = {
+		region_state:GHR = {
 			create_building={
 				building="building_government_administration"
 				level=4
@@ -119,65 +149,24 @@
 			}
 		}
 	}
+	s:STATE_PWANIQWA = {
+
+	}
 	s:STATE_SAWAMAJI = {
-		region_state:SKR = {
-			create_building={
-				building="building_millet_farm"
-					add_ownership={ 
-						building={ 
-							type="building_manor_house"
-							country="c:SKR"
-							levels=4
-							region="STATE_SAWAMAJI"
-					   }
-					}
-				reserves=1
-				activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled"  }
-			}
-		}
+
 	}
 	s:STATE_JITOKANYA = {
 
 	}
 	s:STATE_MAWINGUCHANYA = {
-		region_state:SKR = {
-			create_building={
-				building="building_government_administration"
-				level=4
-				reserves=1
-				activate_production_methods={ "pm_horizontal_drawer_cabinets" }
-			}
-			create_building={
-				building="building_logging_camp"
-				add_ownership={ 
-					building={ 
-						type="building_financial_district"
-						country="c:SKR"
-						levels=4
-						region="STATE_MAWINGUCHANYA"
-				   }
-				}
-	             reserves=1
-				activate_production_methods={ "pm_simple_forestry" "pm_no_equipment" "pm_road_carts" "pm_no_hardwood" }
-			}
-			create_building={
-				building="building_millet_farm"
-					add_ownership={ 
-						building={ 
-							type="building_manor_house"
-							country="c:SKR"
-							levels=7
-							region="STATE_MAWINGUCHANYA"
-					   }
-					}
-				reserves=1
-				activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools"  }
-			}
-		}
+
 
 	}
 	s:STATE_PWANIQILIMA = {
-		region_state:PRO = {
+
+	}
+	s:STATE_UZURIPWA = {
+		region_state:THT = {
 			create_building={
 				building="building_government_administration"
 				level=3
@@ -290,9 +279,6 @@
 			}
 		}
 	}
-	s:STATE_UZURIPWA = {
-
-	}
 	s:STATE_SAWAMREMBO = {
 
 	}
@@ -303,7 +289,21 @@
 
 	}
 	s:STATE_KILIMADADA = {
-
+		region_state:GHR = {
+			create_building={
+				building="building_millet_farm"
+					add_ownership={ 
+						building={ 
+							type="building_manor_house"
+							country="c:SKR"
+							levels=4
+							region="STATE_SAWAMAJI"
+					   }
+					}
+				reserves=1
+				activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled"  }
+			}
+		}
 	}
 	
 	s:STATE_JITOMREMBO = {
