@@ -872,6 +872,12 @@ on_country_formed = {
 				c:GAV ?= ROOT
 			}
 		}
+		if = {
+			limit = {
+				c:TQL ?= ROOT
+			}
+			trigger_event = { id = salt_waste_narrative_events.18 popup = yes }
+		}
 		else = {
 			trigger_event = { id = formation.17 popup = yes }
 		}
