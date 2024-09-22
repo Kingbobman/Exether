@@ -200,12 +200,42 @@ pm_rockrollers_building_coal_mine = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods					
-				goods_input_gizmos_add = 2.5
+				goods_input_gizmos_add = 1
 				
 			}
 
 		level_scaled = {
 			building_employment_laborers_add = -500
+		}
+	}
+}
+
+pm_rockrollers_building_coal_mine_2 = {
+	texture = "gfx/interface/icons/production_method_icons/steam_donkey.dds"
+		
+	unlocking_technologies = {
+		steam_donkey
+	}
+
+	disallowing_laws = {
+		law_industry_banned
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 5
+		}
+	}
+		
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods					
+				goods_input_gizmos_add = 3
+				
+			}
+
+		level_scaled = {
+			building_employment_laborers_add = -1000
 		}
 	}
 }
@@ -230,8 +260,8 @@ pm_steam_donkey_building_coal_mine = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods					
-				goods_input_engines_add = 1
-				goods_output_coal_add = -3
+				goods_input_engines_add = 1 #60
+				goods_output_coal_add = -3 #30 ==150
 			}
 
 		level_scaled = {
@@ -437,11 +467,39 @@ pm_rockrollers_mine = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods					
-			goods_input_gizmos_add = 2.5
+			goods_input_gizmos_add = 1
 		}
 
 		level_scaled = {
 			building_employment_laborers_add = -500
+		}
+	}
+}
+
+pm_rockrollers_mine_2 = {
+	texture = "gfx/interface/icons/production_method_icons/steam_donkey.dds"
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 5 #magic
+		}
+	}
+		
+	unlocking_technologies = {
+		steam_donkey
+	}
+
+	disallowing_laws = {
+		law_industry_banned
+	}
+		
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods					
+			goods_input_gizmos_add = 3
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = -1000
 		}
 	}
 }

@@ -1310,3 +1310,92 @@ pm_slaughterhouses_hippos = {
 		}
 	}
 }
+
+pm_no_magic_automation = {
+	texture = "gfx/interface/icons/production_method_icons/no_automation.dds"
+	building_modifiers = {
+	}
+}
+
+pm_basic_magic_automation = {
+	texture = "gfx/interface/icons/production_method_icons/steam_donkey.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 5 #magic
+		}
+	}
+
+	unlocking_technologies = {
+		atmospheric_engine
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input
+			goods_input_gizmos_add = 5  #60 = + +300
+			goods_input_tools_add = -10   #40 = -400
+
+		}
+
+		level_scaled = {
+			# employment
+		}
+	}
+}
+
+pm_advanced_magic_automation = {
+	texture = "gfx/interface/icons/production_method_icons/steam_donkey.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 5 #magic
+		}
+	}
+
+	unlocking_technologies = {
+		watertube_boiler
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input
+			goods_input_gizmos_add = 8  #60 = + +480
+			goods_input_tools_add = -15   #40 = -600
+
+		}
+
+		level_scaled = {
+			# employment
+		}
+	}
+}
+
+pm_state_of_the_art_automation = {
+	texture = "gfx/interface/icons/production_method_icons/steam_donkey.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 5 #magic
+		}
+	}
+
+	unlocking_technologies = {
+		compression_ignition
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input
+			goods_input_gizmos_add = 8  #60 = + +480
+			goods_input_tools_add = -15   #40 = -600
+			goods_input_blubber_add = -4   #40 = -160
+			goods_input_thaumacores_add = 1 #150
+
+		}
+
+		level_scaled = {
+			# employment
+		}
+	}
+}
