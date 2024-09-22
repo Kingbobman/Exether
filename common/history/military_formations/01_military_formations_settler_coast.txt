@@ -1388,7 +1388,7 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_skirmish_infantry
 				state_region = s:STATE_MOUNT_YELFIS
-				count = 25
+				count = 10
 			}
 
 			combat_unit = {
@@ -1399,7 +1399,13 @@
 		}
 		create_character = {
 			is_general = yes
-			commander_rank = commander_rank_2
+			commander_rank = commander_rank_1
+			interest_group = ig_armed_forces
+			age = 33
+			traits = {
+				mountain_commander
+				stalwart_defender
+			}
 			save_scope_as = darvak_defender
 		}
 		scope:darvak_defender = {
