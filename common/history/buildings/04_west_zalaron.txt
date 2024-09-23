@@ -4858,35 +4858,74 @@
 	region_state:KHD={
 		create_building={
 			building="building_port"
-			level=1
+			level=2
 			reserves=1
 			activate_production_methods={ "pm_basic_port" }
 		}
-			create_building={
-			building="building_wheat_farm"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:KHD"
-						levels=3
-						region="STATE_SHIMAKAI"
-				   }
-				}
+		create_building={
+			building="building_haunted_grounds"
+                add_ownership={ 
+                    building={ 
+                        type="building_adventuring_guild"
+                        country="c:KHD"
+                        levels=1
+                        region="STATE_SHIMAKAI"
+                   }
+                }
 			reserves=1
-			activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled"  }
+			activate_production_methods={ "pm_exorcists" "pm_no_equipment_haunted_grounds" }
 		}
-            create_building={
+		create_building={
+			building="building_potion_distillery"
+				add_ownership={
+					building={
+						type="building_wizard_tower"
+						country="c:KHD"
+						levels=1
+						region="STATE_SHIMAKAI"
+				}
+			}
+			reserves=1
+			activate_production_methods={ "pm_wishtone_potion_process_production" "pm_alcohol-based_potions" "pm_functional_mixins" }
+		}
+		create_building = {
+			building = "building_distillery"
+			add_ownership = {
+					building = {
+						type="building_financial_district"
+					country="c:KHD"
+					levels=1
+					region="STATE_SHIMAKAI"
+					}
+			}
+			reserves = 1
+			activate_production_methods={ "pm_basic_distillery" "pm_no_fruit" "pm_monster_grapes" }
+		}
+		create_building={
+			building="building_desert_hunting_lodge"
+				  add_ownership={ 
+					  building={ 
+						  type="building_adventuring_guild"
+						  country="c:KHD"
+						  levels=1
+						  region="STATE_SHIMAKAI"
+					 }
+				  }
+			reserves=1
+			activate_production_methods={ "pm_firearms_desert_hunting" "pm_no_equipment_hunting_lodges"  }
+		  }	
+		create_building={
 			building="building_logging_camp"
                 add_ownership={ 
                     building={ 
                         type="building_financial_district"
                         country="c:TSH"
                         levels=2
-                        region="STATE_KAINAVA"
+                        region="STATE_SHIMAKAI"
                    }
                 }
 			reserves=1
-			activate_production_methods={ "pm_simple_forestry" "pm_no_equipment" "pm_road_carts" "pm_no_hardwood" }
+			activate_production_methods={ "pm_saw_mills" "pm_no_equipment" "pm_road_carts" "pm_hardwood" }
 		}
         create_building={
 			building="building_furniture_manufacturies"
@@ -4894,13 +4933,52 @@
                     building={ 
                         type="building_financial_district"
                         country="c:KHD"
-                        levels=1
+                        levels=2
                         region="STATE_SHIMAKAI"
                    }
                 }
 			reserves=1
-			activate_production_methods={ "pm_handcrafted_furniture" "pm_automation_disabled" "pm_no_luxuries" }
+			activate_production_methods={ "pm_lathe" "pm_automation_disabled" "pm_permanent_prestidigitation_furniture" "pm_luxury_furniture" }
 		}
+		create_building={
+			building="building_wishstone_reefs"
+					  add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:KHD"
+							levels=2
+							region="STATE_SHIMAKAI"
+					   }
+					}
+					reserves=1
+					activate_production_methods={ "pm_diving_bells_wishstone_reef" "pm_potions_of_waterbreathing_wishstone_reef" "pm_unrefrigerated" }
+				}
+		create_building={
+            building="building_fishing_wharf"
+                add_ownership={ 
+                    building={ 
+                        type="building_adventuring_guild"
+                        country="c:KHD"
+                        levels=2
+                        region="STATE_SHIMAKAI"
+                   }
+                }
+            reserves=1
+            activate_production_methods={ "pm_fishing_trawlers" "pm_unrefrigerated" }
+        }
+		create_building={
+			building="building_shipyards"
+					  add_ownership={ 
+						  building={ 
+							  type="building_financial_district"
+							  country="c:KHD"
+							  levels=1
+							  region="STATE_SHIMAKAI"
+						 }
+					  }
+			reserves=1
+			activate_production_methods={ "pm_basic_shipbuilding" }
+		  }
 	}
   }
   s:STATE_YAZHIDZI = {
@@ -4995,39 +5073,13 @@
 			activate_production_methods={ "pm_wooden_buildings" }
 		}
             create_building={
-			building="building_artillery_foundries"
-                add_ownership={ 
-                    building={ 
-                        type="building_financial_district"
-                        country="c:MGR"
-                        levels=1
-                        region="STATE_SHKUMBINIA"
-                   }
-                }
-			reserves=1
-			activate_production_methods={ "pm_cannons" "pm_automation_disabled" }
-		}
-            create_building={
-			building="building_logging_camp"
-                add_ownership={ 
-                    building={ 
-                        type="building_financial_district"
-                        country="c:HOZ"
-                        levels=3
-                        region="STATE_YAZHIDZI"
-                   }
-                }
-			reserves=1
-			activate_production_methods={ "pm_simple_forestry" "pm_no_equipment" "pm_road_carts" "pm_hardwood" }
-		}
-            create_building={
 			building="building_textile_mills"
                 add_ownership={ 
                     building={ 
                         type="building_financial_district"
                         country="c:KHD"
                         levels=1
-                        region="STATE_KEENAVOK"
+                        region="STATE_DINASHIN"
                    }
                 }
 			reserves=1
@@ -5039,8 +5091,8 @@
 					building={ 
 						type="building_manor_house"
 						country="c:KHD"
-						levels=2
-						region="STATE_KEENAVOK"
+						levels=1
+						region="STATE_DINASHIN"
 				   }
 				}
 			reserves=1
@@ -5074,7 +5126,7 @@
                    }
                 }
 			reserves=1
-			activate_production_methods={ "pm_handsewn_clothes" "pm_craftsman_sewing" "pm_traditional_looms" }
+			activate_production_methods={ "pm_handsewn_clothes" "pm_no_luxuries" "pm_traditional_looms" }
 		}
 	}
   }
