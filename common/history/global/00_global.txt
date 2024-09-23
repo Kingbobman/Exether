@@ -18,6 +18,15 @@ GLOBAL = {
 		trigger_event = {
             id = civic_setup.1
         }
+		if = {
+			limit = {
+				NOT = { has_variable = num_arcana }
+			}
+			set_variable = {
+				name = num_arcana
+				value = 0
+			}
+		}
 	}
 
 	#Retainers 
@@ -225,7 +234,6 @@ GLOBAL = {
 			}
 			add_technology_researched = namkhazen_tech
 		}
-}
 }
 	# International List
 
