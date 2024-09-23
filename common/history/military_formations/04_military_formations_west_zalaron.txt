@@ -128,20 +128,22 @@
 			type = army
 			hq_region = sr:region_rust_gorge
 
+			name = "Duneshar Land Command"
+
 			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_DINASHIN
+				type = unit_type:combat_unit_type_skirmish_infantry
+				state_region = s:STATE_KEENAVOK
 				count = 10
 			}
 			combat_unit = {
-				type = unit_type:combat_unit_type_hussars
-				state_region = s:STATE_DINASHIN
-				count = 2
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_KEENAVOK
+				count = 15
 			}
 			combat_unit = {
-				type = unit_type:combat_unit_type_cannon_artillery
-				state_region = s:STATE_DINASHIN
-				count = 4
+				type = unit_type:combat_unit_type_skirmish_infantry
+				state_region = s:STATE_KEENAVAZH
+				count = 10
 			}
 
 			save_scope_as = khd_army
@@ -149,13 +151,54 @@
 
 		create_character = {
 			is_general = yes
+			commander_rank = commander_rank_2
 			hq = region_rust_gorge
-			save_scope_as = khd_general
-		}
+			interest_group = ig_armed_forces
+			age = 47
+			traits = {
+				surveyor
+				mountain_commander
+			}
 		scope:khd_general = {
 			transfer_to_formation = scope:khd_army
 		}
 	}
+
+	create_military_formation = {
+		type = army
+		hq_region = sr:region_rust_gorge
+
+		name = "Khaduras Marine Corps"
+
+		combat_unit = {
+			type = unit_type:combat_unit_type_skirmish_infantry
+			state_region = s:STATE_DINASHIN
+			count = 15
+		}
+		combat_unit = {
+			type = unit_type:combat_unit_type_mobile_artillery
+			state_region = s:STATE_DINASHIN
+			count = 15
+		}
+
+		save_scope_as = khd_army
+	}
+
+	create_character = {
+		is_general = yes
+		commander_rank = commander_rank_1
+		hq = region_rust_gorge
+		interest_group = ig_armed_forces
+		age = 33
+		traits = {
+			meticulous
+			brave
+		}
+	scope:khd_general = {
+		transfer_to_formation = scope:khd_army
+	}
+}
+}
 	c:RAV ?= {
 		create_military_formation = {
 			type = army
