@@ -198,6 +198,36 @@
 		transfer_to_formation = scope:khd_army
 	}
 }
+
+create_military_formation = {
+	type = fleet
+	hq_region = sr:region_rust_gorge
+	name = "Shimakai Dockyard"
+
+	combat_unit = {
+		type = unit_type:combat_unit_type_man_o_war
+		state_region = s:STATE_SHIMAKAI
+		count = 1
+	}
+
+	combat_unit = {
+		type = unit_type:combat_unit_type_frigate
+		state_region = s:STATE_SHIMAKAI
+		count = 9
+	}
+	save_scope_as = khd_fleet
+}
+
+create_character = {
+	is_admiral = yes
+	hq = region_rust_gorge
+	save_scope_as = khd_admiral
+}
+
+scope:khd_admiral = {
+	transfer_to_formation = scope:khd_fleet
+}
+
 }
 	c:RAV ?= {
 		create_military_formation = {

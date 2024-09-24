@@ -4949,7 +4949,7 @@
                     building={ 
                         type="building_financial_district"
                         country="c:KHD"
-                        levels=2
+                        levels=5
                         region="STATE_KEENAVOK"
                    }
                 }
@@ -5014,7 +5014,7 @@
                     building={ 
                         type="building_financial_district"
                         country="c:KHD"
-                        levels=1
+                        levels=3
                         region="STATE_KEENAVOK"
                    }
                 }
@@ -5109,6 +5109,19 @@
 			reserves=1
 			activate_production_methods={ "pm_basic_port" }
 		}
+		create_building={
+			building="building_military_shipyards"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:KHD"
+                        levels=1
+                        region="STATE_SHIMAKAI"
+                   }
+                }
+			reserves=1
+			activate_production_methods={ "pm_military_shipbuilding_wooden" }
+		}	
 		create_building={
 			building="building_gizmo_workshop"
 			add_ownership={ 
@@ -5249,7 +5262,7 @@
 						  building={ 
 							  type="building_financial_district"
 							  country="c:KHD"
-							  levels=1
+							  levels=2
 							  region="STATE_YAZHIDZI"
 						 }
 					  }
@@ -5262,7 +5275,7 @@
                     building={ 
                         type="building_adventuring_guild"
                         country="c:KHD"
-                        levels=3
+                        levels=7
                         region="STATE_YAZHIDZI"
                    }
                 }
@@ -5354,7 +5367,7 @@
 					building={ 
 						type="building_financial_district"
 						country="c:KHD"
-						levels=2
+						levels=3
 						region="STATE_NAKOKAIN"
 				   }
 				}
@@ -5367,7 +5380,7 @@
 					building={ 
 						type="building_manor_house"
 						country="c:KHD"
-						levels=8
+						levels=12
 						region="STATE_NAKOKAIN"
 				   }
 				}
@@ -5384,6 +5397,19 @@
 			reserves=1
 			activate_production_methods={ "pm_vertical_filing_cabinets" }
 		}
+		create_building={
+			building="building_arms_industry"
+					  add_ownership={ 
+						  building={ 
+							  type="building_financial_district"
+							  country="c:KHD"
+							  levels=1
+							  region="STATE_DINASHIN"
+						 }
+					  }
+			reserves=1
+			activate_production_methods={ "pm_muskets" "pm_automation_disabled" }
+		  }
 		create_building={
 			building="building_artillery_foundries"
                 add_ownership={ 
@@ -5483,7 +5509,7 @@
 				   }
 				}
 			reserves=1
-			activate_production_methods={ "pm_atmospheric_engine_pump_building_lead_mine" "pm_no_explosives" "pm_rockrollers_mine" "pm_road_carts" }
+			activate_production_methods={ "pm_atmospheric_engine_pump_building_lead_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
 		}
 		create_building={
 			building="building_textile_mills"
