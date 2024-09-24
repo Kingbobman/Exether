@@ -566,6 +566,19 @@
 
   s:STATE_SAINT_MER = {
 	region_state:CER={
+		create_building={
+			building="building_arms_industry"
+				add_ownership={ 
+					building={ 
+						type="building_financial_district"
+						country="c:CER"
+						levels=1
+						region="STATE_SAINT_MER"
+				   }
+				}
+			reserves=1
+			activate_production_methods={ "pm_muskets" "pm_automation_disabled" }
+		}
             create_building={
 			building="building_textile_mills"
                 add_ownership={ 
@@ -616,6 +629,19 @@
    
   s:STATE_SAINT_MER_2 = {
 	region_state:CER={
+		create_building={
+			building="building_arms_industry"
+				add_ownership={ 
+					building={ 
+						type="building_financial_district"
+						country="c:CER"
+						levels=1
+						region="STATE_SAINT_MER_2"
+				   }
+				}
+			reserves=1
+			activate_production_methods={ "pm_muskets" "pm_automation_disabled" }
+		}
             create_building={
 			building="building_logging_camp"
                 add_ownership={ 
@@ -647,18 +673,31 @@
     
   s:STATE_LANDING_AT_SEA_2 = {
 	region_state:CER={
-            create_building={
+		create_building={
 			building="building_arms_industry"
                 add_ownership={ 
                     building={ 
                         type="building_financial_district"
                         country="c:CER"
-                        levels=2
-                        region="STATE_LANDING_AT_SEA"
+                        levels=1
+                        region="STATE_LANDING_AT_SEA_2"
                    }
                 }
 			reserves=1
 			activate_production_methods={ "pm_muskets" "pm_automation_disabled" }
+		}
+		create_building={
+			building="building_military_shipyards"
+			add_ownership={ 
+				building={ 
+					type="building_financial_district"
+					country="c:CER"
+					levels=1
+					region="STATE_LANDING_AT_SEA"
+			   }
+			}
+			reserves=1
+			activate_production_methods={ "pm_military_shipbuilding_wooden" }
 		}
                         create_building={
 			building="building_government_administration"
@@ -728,6 +767,19 @@
 		
   s:STATE_CAEL_VALEN = {
 	region_state:CER={
+		create_building={
+			building="building_artillery_foundries"
+					  add_ownership={ 
+						  building={ 
+							  type="building_financial_district"
+							  country="c:CER"
+							  levels=1
+							  region="STATE_CAEL_VALEN"
+						 }
+					  }
+			reserves=1
+			activate_production_methods={ "pm_cannons" "pm_automation_disabled" }
+		  }
             create_building={
 			building="building_fishing_wharf"
                 add_ownership={ 
@@ -830,9 +882,48 @@
 		region_state:CER={
 			create_building={
 				building="building_government_administration"
-				level=8
+				level=11
 				reserves=1
 				activate_production_methods={ "pm_vertical_filing_cabinets" }
+			}
+			create_building={
+				building="building_railway"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:CER"
+							levels=1
+							region="STATE_LANDING_AT_SEA"
+						}
+					}
+				reserves=1
+				activate_production_methods={ "pm_steam_trains" "pm_wooden_passenger_carriages" }
+			}
+			create_building={
+				building="building_artillery_foundries"
+						  add_ownership={ 
+							  building={ 
+								  type="building_financial_district"
+								  country="c:CER"
+								  levels=1
+								  region="STATE_LANDING_AT_SEA"
+							 }
+						  }
+				reserves=1
+				activate_production_methods={ "pm_cannons" "pm_automation_disabled" }
+			  }
+			create_building={
+				building="building_arms_industry"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:CER"
+							levels=1
+							region="STATE_LANDING_AT_SEA"
+					   }
+					}
+				reserves=1
+				activate_production_methods={ "pm_muskets" "pm_automation_disabled" }
 			}
             create_building={
 				building="building_shipyards"
@@ -888,25 +979,12 @@
 			activate_production_methods={ "pm_scholastic_education" "pm_religious_academia" }
 		}
             create_building={
-				building="building_military_shipyards"
-                add_ownership={ 
-                    building={ 
-                        type="building_financial_district"
-                        country="c:CER"
-                        levels=1
-                        region="STATE_LANDING_AT_SEA"
-                   }
-                }
-				reserves=1
-				activate_production_methods={ "pm_military_shipbuilding_wooden" }
-			}
-            create_building={
 			        building="building_paper_mills"
                 add_ownership={ 
                     building={ 
                         type="building_financial_district"
                         country="c:CER"
-                        levels=3
+                        levels=7
                         region="STATE_LANDING_AT_SEA"
                    }
                 }
@@ -967,6 +1045,12 @@
 
   s:STATE_THE_CHASM = {
 	region_state:CER={
+		create_building={
+			building="building_construction_sector"
+			level=3
+			reserves=1
+			activate_production_methods={ "pm_iron_frame_buildings" }
+		}
         create_building={
 			building="building_chemical_plants"
                 add_ownership={ 
@@ -1113,7 +1197,7 @@
 					building={ 
 						type="building_financial_district"
 						country="c:CER"
-						levels=3
+						levels=4
 						region="STATE_THE_CHASM"
 				   }
 				}
@@ -7880,6 +7964,71 @@
   s:STATE_FERNSEA = {
 	region_state:CER={
 		create_building={
+			building="building_logging_camp"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:CER"
+                        levels=2
+                        region="STATE_FERNSEA"
+                   }
+                }
+			reserves=1
+			activate_production_methods={ "pm_saw_mills" "pm_hardwood" "pm_stoneskin_potion" "pm_no_equipment" "pm_road_carts" }
+		}
+		create_building={
+			building="building_textile_mills"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:CER"
+                        levels=2
+                        region="STATE_FERNSEA"
+                   }
+                }
+			reserves=1
+			activate_production_methods={ "pm_handsewn_clothes" "pm_no_luxury_clothes" "pm_no_magic_clothes" "pm_traditional_looms" }
+		}
+		create_building={
+			building="building_explosives_factory"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:CER"
+                        levels=1
+                        region="STATE_FERNSEA"
+                   }
+                }
+			reserves=1
+			activate_production_methods={ "pm_leblanc_process" }
+		}
+		  create_building={
+			building="building_munition_plants"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:CER"
+                        levels=1
+                        region="STATE_FERNSEA"
+                   }
+                }
+			reserves=1
+			activate_production_methods={ "pm_percussion_caps" }
+		}
+		create_building={
+			building="building_arms_industry"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:CER"
+                        levels=1
+                        region="STATE_FERNSEA"
+                   }
+                }
+			reserves=1
+			activate_production_methods={ "pm_muskets" "pm_automation_disabled" }
+		}
+		create_building={
 			building="building_railway"
 				add_ownership={ 
 					building={ 
@@ -7893,48 +8042,10 @@
 			activate_production_methods={ "pm_steam_trains" "pm_wooden_passenger_carriages" }
 		}
 		create_building={
-			building="building_government_administration"
-			level=3
-			reserves=1
-			activate_production_methods={ "pm_vertical_filing_cabinets" "pm_professional_bureaucrats" "pm_religious_bureaucrats" }
-		}
-		create_building={
-			building="building_construction_sector"
-			level=3
-			reserves=1
-			activate_production_methods={ "pm_iron_frame_buildings" }
-		}
-			create_building={
-			building="building_coal_mine"
-				add_ownership={ 
-					building={ 
-						type="building_financial_district"
-						country="c:DUM"
-						levels=1
-						region="STATE_CROWNPEAK"
-				   }
-				}
-			reserves=1
-			activate_production_methods={ "pm_picks_and_shovels_building_coal_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
-		}
-		create_building={
 			building="building_university"
 			level=2
 			reserves=1
 			activate_production_methods={ "pm_scholastic_education" "pm_religious_academia" }
-		}
-            create_building={
-			building="building_arms_industry"
-                add_ownership={ 
-                    building={ 
-                        type="building_financial_district"
-                        country="c:CER"
-                        levels=1
-                        region="STATE_FERNSEA"
-                   }
-                }
-			reserves=1
-			activate_production_methods={ "pm_muskets" "pm_automation_disabled" }
 		}
             create_building={
 			building="building_furniture_manufacturies"
@@ -7942,7 +8053,7 @@
                     building={ 
                         type="building_financial_district"
                         country="c:CER"
-                        levels=5
+                        levels=3
                         region="STATE_FERNSEA"
                    }
                 }
@@ -7961,19 +8072,6 @@
                 }
 			reserves=1
 			activate_production_methods={ "pm_forest_glass" "pm_manual_glassblowing" "pm_disabled_ceramics" }
-		}
-            create_building={
-			building="building_paper_mills"
-                add_ownership={ 
-                    building={ 
-                        type="building_financial_district"
-                        country="c:CER"
-                        levels=4
-                        region="STATE_FERNSEA"
-                   }
-                }
-			reserves=1
-			activate_production_methods={ "pm_sulfite_pulping" "pm_automation_disabled" }
 		}
 	}
   }

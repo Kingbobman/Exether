@@ -701,21 +701,15 @@
 			}
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_hussars
-				state_region = s:STATE_FAR_SHORE
-				count = 2
-			}
-
-			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_FAR_SHORE_2
-				count = 7
+				count = 5
 			}
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_cannon_artillery
 				state_region = s:STATE_FAR_SHORE_2
-				count = 3
+				count = 5
 			}
 			save_scope_as = leoarmy
 		}
@@ -736,43 +730,16 @@
 			hq_region = sr:region_ceraun
 			name = first_fist
 
-			
 			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_CAEL_VALEN
-				count = 6
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
-				state_region = s:STATE_CAEL_VALEN
-				count = 2
+				type = unit_type:combat_unit_type_skirmish_infantry
+				state_region = s:STATE_FERNSEA
+				count = 20
 			}
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_mobile_artillery
 				state_region = s:STATE_CAEL_VALEN
-				count = 2
-			}
-
-			
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_FERNSEA
-				count = 12
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
-				state_region = s:STATE_FERNSEA
-				count = 6
-			}
-
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_mobile_artillery
-				state_region = s:STATE_FERNSEA
-				count = 2
+				count = 10
 			}
 
 			save_scope_as = first_fist
@@ -788,78 +755,34 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_ORCBANE_PASS
-				count = 10
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
-				state_region = s:STATE_ORCBANE_PASS
-				count = 4
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_mobile_artillery
-				state_region = s:STATE_ORCBANE_PASS
-				count = 2
-			}
-			
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_PENDYM_GWYN
-				count = 10
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
-				state_region = s:STATE_PENDYM_GWYN
-				count = 1
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_mobile_artillery
-				state_region = s:STATE_PENDYM_GWYN
-				count = 1
-			}
-
-			
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_PEARFIELDS
-				count = 5
-			}
-
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
-				state_region = s:STATE_ORCBANE_PASS_2
-				count = 2
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_mobile_artillery
-				state_region = s:STATE_ORCBANE_PASS_2
-				count = 1
-			}
-
-			
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_FERNSEA
 				count = 7
 			}
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
-				state_region = s:STATE_FERNSEA
-				count = 4
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_CAEL_VALEN
+				count = 5
+			}
+			
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_PENDYM_GWYN
+				count = 7
 			}
 
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_mobile_artillery
-				state_region = s:STATE_FERNSEA
-				count = 1
+				state_region = s:STATE_LANDING_AT_SEA
+				count = 5
 			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_ORCBANE_PASS_2
+				count = 6
+			}
+
 			save_scope_as = plaguewood_bulwark
 		}
 
@@ -890,6 +813,7 @@
 			commander_rank = commander_rank_3
 			age = 62
 			traits = {
+				expert_offensive_planner
 				reserved
 			}
 			save_scope_as = wilhem_gen
@@ -908,20 +832,15 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_SAINT_MER
-				count = 5
+				count = 10
 			}
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
-				state_region = s:STATE_SAINT_MER
-				count = 3
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_SAINT_MER_2
+				count = 10
 			}
 
-			combat_unit = {
-				type = unit_type:combat_unit_type_mobile_artillery
-				state_region = s:STATE_SAINT_MER
-				count = 2
-			}
 			save_scope_as = main_Armee
 		}
 
@@ -933,7 +852,6 @@
 			hq = region_ceraun
 			age = 36
 			traits = {
-				expert_offensive_planner
 				resupply_commander
 				reserved
 			}
@@ -951,21 +869,21 @@
 
 			
 			combat_unit = {
-				type = unit_type:combat_unit_type_skirmish_infantry
-				state_region = s:STATE_SAINT_MER
-				count = 13
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_LANDING_AT_SEA
+				count = 15
 			}
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
-				state_region = s:STATE_SAINT_MER
-				count = 1
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_LANDING_AT_SEA_2
+				count = 10
 			}
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_mobile_artillery
-				state_region = s:STATE_SAINT_MER
-				count = 5
+				state_region = s:STATE_LANDING_AT_SEA
+				count = 10
 			}
 			save_scope_as = second_fist
 		}
@@ -996,27 +914,16 @@
 
 			combat_unit = { 
 				type = unit_type:combat_unit_type_frigate
-				state_region = s:STATE_CAEL_VALEN
-				count = 6
-			}
-
-                        combat_unit = { 
-				type = unit_type:combat_unit_type_frigate
-				state_region = s:STATE_LANDING_AT_SEA
-				count = 9
+				state_region = s:STATE_LANDING_AT_SEA_2
+				count = 10
 			}
 
                         combat_unit = { 
 				type = unit_type:combat_unit_type_man_o_war
 				state_region = s:STATE_LANDING_AT_SEA_2
-				count = 3
-			}
-
-                        combat_unit = { 
-				type = unit_type:combat_unit_type_frigate
-				state_region = s:STATE_PENDYM_GWYN
 				count = 5
 			}
+
 			save_scope_as = cernavy
 		}
 		    
