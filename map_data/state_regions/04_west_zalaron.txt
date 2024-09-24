@@ -1089,7 +1089,11 @@ STATE_KILIMAMAI = {
         bg_coal_mining = 37
         bg_fishing = 9
         bg_hunting = 10
-        bg_dragon_ruins = 1
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 5
     }
     naval_exit_id = 3094
 }
@@ -1303,7 +1307,11 @@ STATE_SWAHATHAI = {
         bg_coal_mining = 37
         bg_hunting = 12
         bg_fishing = 5
-        bg_dragon_ruins = 1
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 4
     }
     naval_exit_id = 3094
 }
@@ -1349,15 +1357,16 @@ STATE_MAJIWAZIRI = {
         bg_hunting = 10
         bg_logging = 14
         bg_fishing = 18
-        bg_dragon_ruins = 1
     }
     resource = {
-        type = "bg_ship_graveyard"
-        discovered_amount = 2
+        type = "bg_dragon_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 3
     }
     resource = {
         type = "bg_ship_graveyard"
         undiscovered_amount = 2
+        discovered_amount = 2
     }
     naval_exit_id = 3094
 }
@@ -1396,15 +1405,16 @@ STATE_SWAHAKLONG = {
         bg_logging = 14
         bg_fishing = 14
         bg_hunting = 10
-        bg_dragon_ruins = 2
     }
     resource = {
-        type = "bg_ship_graveyard"
-        discovered_amount = 2
+        type = "bg_dragon_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 4
     }
     resource = {
         type = "bg_ship_graveyard"
         undiscovered_amount = 4
+        discovered_amount = 2
     }
     naval_exit_id = 3094
 }
@@ -1423,7 +1433,12 @@ STATE_KILIMAKAZI = {
         bg_logging = 16
         bg_fishing = 8
         bg_hunting = 10
-        bg_dragon_ruins = 5
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 5
+        discovered_amount = 1
     }
     naval_exit_id = 3028
 }
@@ -1442,7 +1457,11 @@ STATE_THASAMAKI = {
         bg_logging = 14
         bg_fishing = 10
         bg_hunting = 10
-        bg_dragon_ruins = 2
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 4
     }
     naval_exit_id = 3015
 }
@@ -1589,7 +1608,12 @@ STATE_KEEDZAI = {
         bg_logging = 15
         bg_hunting = 10
         bg_fishing = 13
-        bg_dragon_ruins = 2
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 4
+        discovered_amount = 1
     }
     naval_exit_id = 3094
 }
@@ -1725,12 +1749,8 @@ STATE_KEENAVOK = {
     resource = {
         type = "bg_collapsed_godsbane_vault"
         depleted_type = "bg_renovated_godsbane_vault"
+        undiscovered_amount = 8
         discovered_amount = 1
-    }
-    resource = {
-        type = "bg_collapsed_godsbane_vault"
-        depleted_type = "bg_renovated_godsbane_vault"
-        undiscovered_amount = 7
     }
     naval_exit_id = 3073
 }
@@ -2043,11 +2063,12 @@ STATE_FLUITBOS = {
     capped_resources = {
         bg_coal_mining = 40
         bg_haunted_grounds = 20
-        bg_gnomish_ruins = 1
     }
     resource = {
         type = "bg_gnomish_ruins"
-        undiscovered_amount = 3
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 6
+        discovered_amount = 1
     }
     naval_exit_id = 3069
 }
@@ -2083,11 +2104,11 @@ STATE_TIKKERHAVEN = {
         bg_coal_mining = 80
         bg_iron_mining = 24
         bg_logging = 17
-        bg_gnomish_ruins = 1
     }
     resource = {
         type = "bg_gnomish_ruins"
-        undiscovered_amount = 7
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 8
     }
     naval_exit_id = 3069
 }
@@ -2171,11 +2192,11 @@ STATE_VONKPLEIN = {
     capped_resources = {
         bg_coal_mining = 40
         bg_haunted_grounds = 17
-        bg_gnomish_ruins = 1
     }
     resource = {
         type = "bg_gnomish_ruins"
-        undiscovered_amount = 5
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 4
     }
     naval_exit_id = 3069
 }
@@ -2309,11 +2330,11 @@ STATE_TIMMERSTEEN = {
         bg_lead_mining = 36
         bg_logging = 16
         bg_haunted_grounds = 4
-        bg_gnomish_ruins = 1
     }
     resource = {
         type = "bg_gnomish_ruins"
-        undiscovered_amount = 3
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 4
     }
     naval_exit_id = 3103
 }
@@ -2529,11 +2550,11 @@ STATE_PIEPERHAVEN = {
         bg_iron_mining = 18
         bg_logging = 6
         bg_haunted_grounds = 8
-        bg_gnomish_ruins = 1
     }
     resource = {
         type = "bg_gnomish_ruins"
-        undiscovered_amount = 3
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 5
     }
     naval_exit_id = 3103
 }
@@ -2554,11 +2575,11 @@ STATE_SPRANKELMEER = {
         bg_logging = 23
         bg_fishing = 7
         bg_hunting = 12
-        bg_gnomish_ruins = 1
     }
     resource = {
         type = "bg_gnomish_ruins"
-        undiscovered_amount = 3
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 4
     }
     naval_exit_id = 3013
 }
@@ -2645,11 +2666,12 @@ STATE_KRULHOVEN = {
         bg_fishing = 10
         bg_wishstone_mining = 23
         bg_haunted_grounds = 6
-        bg_gnomish_ruins = 3
     }
     resource = {
         type = "bg_gnomish_ruins"
+        depleted_type =  "bg_archeology"
         undiscovered_amount = 5
+        discovered_amount = 3
     }
     naval_exit_id = 3013
 }
@@ -2668,11 +2690,11 @@ STATE_KLOMPPLEIN = {
         bg_logging = 9
         bg_hunting = 10
         bg_fishing = 2
-        bg_gnomish_ruins = 1
     }
     resource = {
         type = "bg_gnomish_ruins"
-        undiscovered_amount = 3
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 4
     }
     naval_exit_id = 3013
 }
@@ -2752,11 +2774,12 @@ STATE_GLIMMERWOUD = {
         bg_hunting = 15
         bg_logging = 11
         bg_wishstone_mining = 17
-        bg_gnomish_ruins = 1
     }
     resource = {
         type = "bg_gnomish_ruins"
-        undiscovered_amount = 5
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 6
+        discovered_amount = 1
     }
     naval_exit_id = 3105
 }
@@ -3339,11 +3362,11 @@ STATE_GRINWALD = {
     capped_resources = {
         bg_logging = 12
         bg_hunting = 17
-        bg_gnomish_ruins = 2
     }
     resource = {
         type = "bg_gnomish_ruins"
-        undiscovered_amount = 5
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 7
     }
 }
 STATE_MAANSTIEN = {
@@ -3379,11 +3402,12 @@ STATE_NATUURBRUZJE = {
     capped_resources = {
         bg_logging = 20
         bg_hunting = 10
-        bg_gnomish_ruins = 1
     }
     resource = {
         type = "bg_gnomish_ruins"
-        undiscovered_amount = 5
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 6
+        discovered_amount = 2
     }
 }
 STATE_SINNEBEAM = {
@@ -3401,11 +3425,12 @@ STATE_SINNEBEAM = {
         bg_logging = 5
         bg_hunting = 8
         bg_fishing = 10
-        bg_gnomish_ruins = 1
     }
     resource = {
         type = "bg_gnomish_ruins"
+        depleted_type =  "bg_archeology"
         undiscovered_amount = 5
+        discovered_amount = 1
     }
     naval_exit_id = 3013
 }
@@ -3423,11 +3448,12 @@ STATE_STJERRENFAL = {
     capped_resources = {
         bg_logging = 10
         bg_hunting = 20
-        bg_gnomish_ruins = 1
     }
     resource = {
         type = "bg_gnomish_ruins"
+        depleted_type =  "bg_archeology"
         undiscovered_amount = 5
+        discovered_amount = 1
     }
 
 }
@@ -3462,13 +3488,13 @@ STATE_EKENKUST = {
         bg_fishing = 10
         bg_hunting = 10
         bg_squidding = 7
-        bg_gnomish_ruins = 2
     }
     resource = {
         type = "bg_gnomish_ruins"
-        undiscovered_amount = 5
-    }
-    naval_exit_id = 3013
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 6
+        discovered_amount = 1
+    }l_exit_id = 3013
 }
 STATE_WETTERWIIDTE = {
     id = 2805
@@ -3485,11 +3511,11 @@ STATE_WETTERWIIDTE = {
         bg_logging = 15
         bg_fishing = 10
         bg_hunting = 8
-        bg_gnomish_ruins = 1
     }
     resource = {
         type = "bg_gnomish_ruins"
-        undiscovered_amount = 5
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 7
     }
     naval_exit_id = 3013
 }
@@ -3527,7 +3553,6 @@ STATE_FLUSTERBEEK = {
         bg_logging = 6
         bg_fishing = 16
         bg_squidding = 10
-        bg_gnomish_ruins = 1
     }
     resource = {
         type = "bg_wishstone_reefs"
@@ -3539,7 +3564,9 @@ STATE_FLUSTERBEEK = {
     }
     resource = {
         type = "bg_gnomish_ruins"
+        depleted_type =  "bg_archeology"
         undiscovered_amount = 5
+        discovered_amount = 2
     }
     naval_exit_id = 3013
 }
@@ -3621,11 +3648,11 @@ STATE_KLAVERBOSK = {
         bg_hunting = 14
         bg_fishing = 10
         bg_hunting = 8
-        bg_gnomish_ruins = 1
     }
     resource = {
         type = "bg_gnomish_ruins"
-        undiscovered_amount = 5
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 7
     }
     naval_exit_id = 3013
 }
@@ -3718,11 +3745,12 @@ STATE_WALDLJOCHT = {
         bg_logging = 12
         bg_fishing = 11
         bg_hunting = 6
-        bg_gnomish_ruins = 1
     }
     resource = {
         type = "bg_gnomish_ruins"
-        undiscovered_amount = 5
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 6
+        discovered_amount = 1
     }
     naval_exit_id = 3013
 }

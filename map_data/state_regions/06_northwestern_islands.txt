@@ -200,7 +200,6 @@ STATE_BLUMETO = {
         bg_fishing = 6
         bg_squidding = 6
         bg_game_hunting = 3
-        bg_gnomish_ruins = 1
     }
     resource = {
         type = "bg_wishstone_reefs"
@@ -208,7 +207,8 @@ STATE_BLUMETO = {
     }
     resource = {
         type = "bg_gnomish_ruins"
-        undiscovered_amount = 3
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 4
     }
     naval_exit_id = 3089
 }
@@ -335,8 +335,13 @@ STATE_SIGARA = {
     capped_resources = {
         bg_logging = 10
         bg_fishing = 13
-        bg_dragon_ruins = 5
         bg_haunted_grounds = 6
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 3
+        discovered_amount = 2
     }
     naval_exit_id = 3052
 }
@@ -428,7 +433,12 @@ STATE_CARTHAROS = {
     capped_resources = {
         bg_logging = 4
         bg_fishing = 20
-        bg_dragon_ruins = 1
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 3
+        discovered_amount = 3
     }
     naval_exit_id = 3052
 }
@@ -609,15 +619,17 @@ STATE_KURTHARA = {
         bg_leviathan_outpost = 3
         bg_logging = 7
         bg_game_hunting = 8
-        bg_dragon_ruins = 1
     }
     resource = {
-        type = "bg_ship_graveyard"
+        type = "bg_dragon_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 2
         discovered_amount = 2
     }
     resource = {
         type = "bg_ship_graveyard"
         undiscovered_amount = 3
+        discovered_amount = 2
     }
     naval_exit_id = 3040
 }
@@ -637,7 +649,12 @@ STATE_EBYSUS = {
         bg_logging = 2
         bg_leviathan_outpost = 2
         bg_game_hunting = 10
-        bg_dragon_ruins = 2
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 3
+        discovered_amount = 1
     }
     naval_exit_id = 3052
 }
@@ -657,15 +674,17 @@ STATE_KLYPYRA = {
         bg_leviathan_outpost = 4
         bg_game_hunting = 4
         bg_logging = 2
-        bg_dragon_ruins = 1
-    }
-    resource = {
-        type = "bg_ship_graveyard"
-        discovered_amount = 1
     }
     resource = {
         type = "bg_ship_graveyard"
         undiscovered_amount = 3
+        discovered_amount = 1
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 2
+        discovered_amount = 1
     }
     naval_exit_id = 3040
 }
@@ -684,7 +703,12 @@ STATE_ZAMARIS = {
         bg_coal_mining = 15
         bg_logging = 5
         bg_fishing = 14
-        bg_dragon_ruins = 2
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 3
+        discovered_amount = 2
     }
     naval_exit_id = 3040
 }
@@ -703,7 +727,6 @@ STATE_LEPIDRA = {
         bg_coal_mining = 25
         bg_logging = 11
         bg_fishing = 8
-        bg_dragon_ruins = 1
     }
     naval_exit_id = 3052
 }
@@ -722,7 +745,11 @@ STATE_ZARTHOS = {
         bg_logging = 9
         bg_hunting = 13
         bg_fishing = 6
-        bg_dragon_ruins = 1
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 2
     }
     naval_exit_id = 3052
 }
@@ -741,7 +768,12 @@ STATE_MYSARA = {
         bg_lead_mining = 18
         bg_logging = 8
         bg_cloudsilver_mining = 26
-        bg_dragon_ruins = 3
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 6
+        discovered_amount = 1
     }
 
 }
@@ -808,7 +840,11 @@ STATE_CALTHA = {
     capped_resources = {
         bg_logging = 11
         bg_fishing = 11
-        bg_dragon_ruins = 1
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 3
     }
     naval_exit_id = 3052
 }
@@ -826,7 +862,11 @@ STATE_THYRIS = {
     capped_resources = {
         bg_logging = 8
         bg_fishing = 7
-        bg_dragon_ruins = 1
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 5
     }
     naval_exit_id = 3040
 }
@@ -844,7 +884,11 @@ STATE_ZABARA = {
     capped_resources = {
         bg_logging = 11
         bg_fishing = 7
-        bg_dragon_ruins = 1
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 4
     }
     naval_exit_id = 3040
 }
@@ -867,7 +911,6 @@ STATE_AIRU = {
         bg_squidding = 9
         bg_game_hunting = 5
         bg_haunted_grounds = 5
-        bg_dragon_ruins = 1
     }
     resource = {
         type = "bg_oil_extraction"
@@ -875,7 +918,8 @@ STATE_AIRU = {
     }
     resource = {
         type = "bg_dragon_ruins"
-        undiscovered_amount = 2
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 3
     }
     naval_exit_id = 3047
 }
@@ -894,7 +938,6 @@ STATE_ELVERA = {
         bg_logging = 11
         bg_game_hunting = 7
         bg_haunted_grounds = 4
-        bg_dragon_ruins = 1
     }
     resource = {
         type = "bg_oil_extraction"
@@ -902,7 +945,8 @@ STATE_ELVERA = {
     }
     resource = {
         type = "bg_dragon_ruins"
-        undiscovered_amount = 4
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 3
     }
 
 }
@@ -925,11 +969,12 @@ STATE_RAVGA = {
         bg_squidding = 7
         bg_leviathan_outpost = 6
         bg_haunted_grounds = 14
-        bg_giant_ruins = 1
     }
     resource = {
         type = "bg_giant_ruins"
-        undiscovered_amount = 2
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 4
+        discovered_amount = 1
     }
     naval_exit_id = 3029
 }
@@ -973,7 +1018,6 @@ STATE_AJA = {
         bg_logging = 2
         bg_game_hunting = 5
         bg_haunted_grounds = 11
-        bg_dragon_ruins = 2
     }
     resource = {
         type = "bg_oil_extraction"
@@ -981,7 +1025,9 @@ STATE_AJA = {
     }
     resource = {
         type = "bg_dragon_ruins"
+        depleted_type =  "bg_archeology"
         undiscovered_amount = 4
+        discovered_amount = 2
     }
 
 }
@@ -1022,11 +1068,12 @@ STATE_NUORAID = {
         bg_logging = 7
         bg_haunted_grounds = 14
         bg_game_hunting = 4
-        bg_giant_ruins = 1
     }
     resource = {
         type = "bg_giant_ruins"
+        depleted_type =  "bg_archeology"
         undiscovered_amount = 4
+        discovered_amount = 1
     }
 
 }
@@ -1046,7 +1093,6 @@ STATE_FROSTWYN = {
     capped_resources = {
         bg_wishstone_mining = 22
         bg_haunted_grounds = 14
-        bg_giant_ruins = 1
     }
     resource = {
         type = "bg_gold_fields"
@@ -1055,7 +1101,8 @@ STATE_FROSTWYN = {
     }
     resource = {
         type = "bg_giant_ruins"
-        undiscovered_amount = 7
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 8
     }
     
 
@@ -1074,11 +1121,11 @@ STATE_DUODJI = {
     capped_resources = {
         bg_wishstone_mining = 17
         bg_haunted_grounds = 13
-        bg_giant_ruins = 1
     }
     resource = {
         type = "bg_giant_ruins"
-        undiscovered_amount = 8
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 9
     }
 
 }
@@ -1192,11 +1239,11 @@ STATE_GIELAS = {
         bg_leviathan_outpost = 5
         bg_wishstone_mining = 18
         bg_haunted_grounds = 19
-        bg_giant_ruins = 1
     }
     resource = {
         type = "bg_giant_ruins"
-        undiscovered_amount = 5
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 6
     }
     naval_exit_id = 3004
 }
@@ -1217,7 +1264,6 @@ STATE_AKNU = {
         bg_game_hunting = 7
         bg_cloudsilver_mining = 20
         bg_haunted_grounds = 4
-        bg_dragon_ruins = 1
     }
     resource = {
         type = "bg_oil_extraction"
@@ -1225,7 +1271,8 @@ STATE_AKNU = {
     }
     resource = {
         type = "bg_dragon_ruins"
-        undiscovered_amount = 2
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 3
     }
 
 }
@@ -1288,7 +1335,6 @@ STATE_MARKAN = {
         bg_game_hunting = 6
         bg_cloudsilver_mining = 33
         bg_haunted_grounds = 10
-        bg_giant_ruins = 1
     }
     resource = {
         type = "bg_oil_extraction"
@@ -1296,7 +1342,9 @@ STATE_MARKAN = {
     }
     resource = {
         type = "bg_giant_ruins"
-        undiscovered_amount = 6
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 5
+        discovered_amount = 1
     }
 
 }
@@ -1340,11 +1388,11 @@ STATE_GAISI = {
         bg_logging = 3
         bg_wishstone_mining = 17
         bg_haunted_grounds = 15
-        bg_giant_ruins = 1
     }
     resource = {
         type = "bg_giant_ruins"
-        undiscovered_amount = 4
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 5
     }
 
 }
@@ -1367,7 +1415,6 @@ STATE_LUMINEVRA = {
         bg_squidding = 8
         bg_haunted_grounds = 4
         bg_leviathan_outpost = 6
-        bg_dragon_ruins = 1
     }
     resource = {
         type = "bg_oil_extraction"
@@ -1375,7 +1422,8 @@ STATE_LUMINEVRA = {
     }
     resource = {
         type = "bg_dragon_ruins"
-        undiscovered_amount = 3
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 4
     }
     naval_exit_id = 3029
 }
@@ -1489,11 +1537,11 @@ STATE_SILVERSONG = {
         bg_leviathan_outpost = 10
         bg_wishstone_mining = 24
         bg_haunted_grounds = 15
-        bg_giant_ruins = 1
     }
     resource = {
         type = "bg_giant_ruins"
-        undiscovered_amount = 3
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 4
     }
     naval_exit_id = 3004
 }
@@ -1516,11 +1564,16 @@ STATE_SILENTWISP = {
         bg_fishing = 20
         bg_haunted_grounds = 5
         bg_leviathan_outpost = 6
-        bg_dragon_ruins = 3
     }
     resource = {
         type = "bg_wishstone_reefs"
         undiscovered_amount = 37
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 3
+        discovered_amount = 2
     }
     naval_exit_id = 3047
 }
@@ -1543,11 +1596,15 @@ STATE_RAHKIS = {
         bg_haunted_grounds = 4
         bg_squidding = 8
         bg_game_hunting = 7
-        bg_dragon_ruins = 5
     }
     resource = {
         type = "bg_oil_extraction"
         undiscovered_amount = 10
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 5
     }
     naval_exit_id = 3047
 }
@@ -1591,7 +1648,6 @@ STATE_RUMATARI = {
         bg_leviathan_outpost = 8
         bg_game_hunting = 8
         bg_haunted_grounds = 5
-        bg_dragon_ruins = 1
     }
     resource = {
         type = "bg_cold_rubber"
@@ -1599,6 +1655,7 @@ STATE_RUMATARI = {
     }
     resource = {
         type = "bg_dragon_ruins"
+        depleted_type =  "bg_archeology"
         undiscovered_amount = 5
     }
     naval_exit_id = 3031
@@ -1647,7 +1704,6 @@ STATE_POUNAMOA = {
         bg_logging = 8
         bg_wishstone_mining = 13
         bg_haunted_grounds = 7
-        bg_dragon_ruins = 1
     }
     resource = {
         type = "bg_cold_rubber"
@@ -1655,7 +1711,8 @@ STATE_POUNAMOA = {
     }
     resource = {
         type = "bg_dragon_ruins"
-        undiscovered_amount = 3
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 4
     }
 }
 STATE_RONGOMARA = {
@@ -1707,7 +1764,6 @@ STATE_GARPATIA = {
         bg_cloudsilver_mining = 38
         bg_game_hunting = 11
         bg_wishstone_mining = 15
-        bg_gnomish_ruins = 2
     }
     resource = {
         type = "bg_cold_rubber"
@@ -1715,7 +1771,9 @@ STATE_GARPATIA = {
     }
     resource = {
         type = "bg_gnomish_ruins"
+        depleted_type =  "bg_archeology"
         undiscovered_amount = 10
+        discovered_amount = 2
     }
     naval_exit_id = 3197
 }
@@ -1760,11 +1818,12 @@ STATE_MARAMAROA = {
         bg_squidding = 3
         bg_iron_mining = 20
         bg_game_hunting = 5
-        bg_gnomish_ruins = 1
     }
     resource = {
         type = "bg_gnomish_ruins"
+        depleted_type =  "bg_archeology"
         undiscovered_amount = 5
+        discovered_amount = 1
     }
     naval_exit_id = 3089
 }
@@ -1788,7 +1847,6 @@ STATE_PUCOVATU = {
         bg_wishstone_mining = 16
         bg_haunted_grounds = 7
         bg_leviathan_outpost = 8
-        bg_dragon_ruins = 1
     }
     resource = {
         type = "bg_cold_rubber"
@@ -1796,7 +1854,9 @@ STATE_PUCOVATU = {
     }
     resource = {
         type = "bg_dragon_ruins"
-        undiscovered_amount = 5
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 4
+        discovered_amount = 2
     }
     
     naval_exit_id = 3089
@@ -1893,7 +1953,6 @@ STATE_TAUMAROI = {
         bg_game_hunting = 5
         bg_wishstone_mining = 11
         bg_haunted_grounds = 5
-        bg_dragon_ruins = 1
     }
     resource = {
         type = "bg_cold_rubber"
@@ -1901,6 +1960,7 @@ STATE_TAUMAROI = {
     }
     resource = {
         type = "bg_dragon_ruins"
+        depleted_type =  "bg_archeology"
         undiscovered_amount = 10
     }
 }
@@ -1948,7 +2008,6 @@ STATE_WHANAKOA = {
         bg_wishstone_mining = 16
         bg_haunted_grounds = 6
         bg_leviathan_outpost = 5
-        bg_dragon_ruins = 1
     }
     resource = {
         type = "bg_cold_rubber"
@@ -1956,6 +2015,7 @@ STATE_WHANAKOA = {
     }
     resource = {
         type = "bg_dragon_ruins"
+        depleted_type =  "bg_archeology"
         undiscovered_amount = 5
     }
     naval_exit_id = 3089
