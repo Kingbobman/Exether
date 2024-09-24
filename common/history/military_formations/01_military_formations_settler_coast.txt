@@ -230,7 +230,7 @@
 		create_military_formation = {
 			type = fleet
 			hq_region = sr:region_arrador
-			name = "High Sea Fleet"
+			name = "High Seas Fleet"
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_man_o_war
@@ -268,19 +268,18 @@
 				count = 8
 			}
 			save_scope_as = arr_navy
+		}
 
 			create_character = {
 				is_admiral = yes
-				hq = region_arrador
 				commander_rank = commander_rank_2
-				save_scope_as = arradmiral
+				save_scope_as = arr_admiral
 			}
-			
+		
 		scope:arradmiral = {
 			transfer_to_formation = scope:arr_navy
 		}	
 	}
-}
     c:AHO ?= {
 
 

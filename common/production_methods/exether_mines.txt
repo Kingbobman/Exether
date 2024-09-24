@@ -449,34 +449,6 @@ pm_wishstone_mines_potions_of_strength = {
 	}
 }
 
-pm_rockrollers_mine = {
-	texture = "gfx/interface/icons/production_method_icons/steam_donkey.dds"
-	state_modifiers = {
-		workforce_scaled = {
-			state_veil_integrity_contribution = 5 #magic
-		}
-	}
-		
-	unlocking_technologies = {
-		atmospheric_engine
-	}
-
-	disallowing_laws = {
-		law_industry_banned
-	}
-		
-	building_modifiers = {
-		workforce_scaled = {
-			# input goods					
-			goods_input_gizmos_add = 3
-		}
-
-		level_scaled = {
-			building_employment_laborers_add = -500
-		}
-	}
-}
-
 pm_gold_fields_potions = {
 	texture = "gfx/interface/icons/production_method_icons/potion_sap.dds"
 
