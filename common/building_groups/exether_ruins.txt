@@ -1,4 +1,22 @@
 ﻿bg_ruins = {
+	parent_group = bg_archeology
+
+	auto_place_buildings = yes
+
+	discoverable_resource = yes
+	
+	depletable_resource = yes
+	
+	always_self_owning = yes
+	
+	pays_taxes = no
+
+	infrastructure_usage_per_level = 0
+	
+	fired_pops_become_radical = no
+}
+
+bg_archeology = {
 	category = rural
 
 	capped_by_resources = yes
@@ -7,7 +25,7 @@
 
 	can_use_slaves = yes
 
-	lens = forestry
+	lens = mine
 
 	cash_reserves_max = 25000
 
@@ -20,7 +38,10 @@
 
 	economy_of_scale_ai_factor = 1.5
 	foreign_investment_ai_factor = 1.0
+
+	default_building = building_archeology
 }
+
 
 bg_ruins_discoverable = {
 	parent_group = bg_ruins
@@ -61,6 +82,18 @@ bg_dragon_ruins = {
     parent_group = bg_ruins
 
 	default_building = building_dragon_ruins
+}
+
+bg_shipwreck_ruins = {
+    parent_group = bg_ruins
+
+	default_building = building_shipwreck_ruins
+}
+
+bg_orc_ruins = {
+    parent_group = bg_ruins
+
+	default_building = building_orc_ruins
 }
 
 bg_lizard_ruins = {
