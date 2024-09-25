@@ -4262,6 +4262,19 @@
 				activate_production_methods={ "pm_steam_trains" "pm_wooden_passenger_carriages" }
 			}
 			create_building={
+				building="building_archeology"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:ARR"
+							levels=3
+							region="STATE_DURANS_LAND"
+					   }
+					}
+				reserves=1
+				activate_production_methods={ "pm_base_archaeology_excavation" "pm_rockrollers_mine" "pm_rail_transport_mine" }
+			}
+			create_building={
 				building="building_furniture_manufacturies"
 					  add_ownership={ 
 						  building={ 
@@ -4279,9 +4292,9 @@
                 add_ownership={ 
                     building={ 
                         type="building_financial_district"
-                        country="c:CLR"
+                        country="c:ARR"
                         levels=2
-                        region="STATE_CLEARBOUGH_ESTATES"
+                        region="STATE_DURANS_LAND"
                    }
                 }
 				reserves=1
@@ -4318,9 +4331,9 @@
                 add_ownership={ 
                     building={ 
                         type="building_financial_district"
-                        country="c:CLR"
-                        levels=14
-                        region="STATE_CLEARBOUGH_ESTATES"
+                        country="c:ARR"
+                        levels=9
+                        region="STATE_DURANS_LAND"
                    }
                 }
 				reserves=1
@@ -4331,9 +4344,9 @@
 						  add_ownership={ 
 							building={ 
 								type="building_financial_district"
-								country="c:CLR"
+								country="c:ARR"
 								levels=15
-								region="STATE_CLEARBOUGH_ESTATES"
+								region="STATE_DURANS_LAND"
 						   }
 						}
 				reserves=1
@@ -4357,6 +4370,32 @@
                 }
 			reserves=1
 			activate_production_methods={ "pm_handsewn_clothes" "pm_no_luxury_clothes" "pm_traditional_looms" }
+		}
+		create_building={
+			building="building_gizmo_workshop"
+			add_ownership={ 
+				building={ 
+					type="building_financial_district"
+					country="c:ARR"
+					levels=5
+					region="STATE_DURANS_LAND_2"
+			   }
+			}
+			reserves=1
+			activate_production_methods={ "pm_functional_gizmos" }
+		}
+		create_building={
+			building="building_archeology"
+				add_ownership={ 
+					building={ 
+						type="building_financial_district"
+						country="c:ARR"
+						levels=3
+						region="STATE_DURANS_LAND_2"
+				   }
+				}
+			reserves=1
+			activate_production_methods={ "pm_base_archaeology_excavation" "pm_rockrollers_mine" "pm_road_carts" }
 		}
 			create_building={
 			building="building_wheat_farm"
@@ -4555,20 +4594,7 @@
 				  }
 			reserves=1
 			activate_production_methods={ "pm_santa_clause_style" "pm_automation_disabled" "pm_no_luxuries" }
-		  }
-		create_building={
-			building="building_sunken_ruin_expedition"
-                add_ownership={ 
-                    building={ 
-                        type="building_adventuring_guild"
-                        country="c:ARR"
-                        levels=5
-                        region="STATE_BYRIVER"
-                   }
-                }
-			reserves=1
-			activate_production_methods={ "pm_sunk_ruins_expedition_crews" "pm_sunken_ruins_no_potions" }
-		}		
+		  }	
             create_building={
 			building="building_shipyards"
                 add_ownership={ 

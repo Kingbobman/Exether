@@ -90,24 +90,27 @@
 	}
 	c:DUM = {
 		set_relations = { country = c:LAR value = 30 }
-                set_relations = { country = c:CER value = 50 }
-                set_relations = { country = c:ARR value = -30 }
+            set_relations = { country = c:CER value = 50 }
+            set_relations = { country = c:ARR value = -30 }
 	}
 	c:AHO = {
 		set_relations = { country = c:PFL value = -50 }
-                set_relations = { country = c:VHT value = 50 }
-                set_relations = { country = c:EBR value = 30 }
+            set_relations = { country = c:VHT value = 50 }
+            set_relations = { country = c:EBR value = 30 }
 	}
 	c:PFL = {
 		set_relations = { country = c:AHO value = -50 }
-                set_relations = { country = c:VHT value = -50 }
-                set_relations = { country = c:EBR value = -50 }
+            set_relations = { country = c:VHT value = -50 }
+             set_relations = { country = c:EBR value = -50 }
 	}
 	c:VHT = {
 		set_relations = { country = c:AHO value = 50 }
-                set_relations = { country = c:PFL value = -50 }
+            set_relations = { country = c:PFL value = -50 }
 	}
-
+	c:DOB = {
+		set_relations = { country = c:GLI value = -50 }
+            set_relations = { country = c:GAN value = -10 }
+	}
 	c:RAV = {
 		set_relations = { country = c:VAI value = -50 }
 		set_relations = { country = c:DUM value = -50 }
