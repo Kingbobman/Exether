@@ -56,31 +56,6 @@
 				state_region = s:STATE_NAKOTHAI
 				count = 10
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_KAINAVA
-				count = 10
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_NASHAYAZH
-				count = 10
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_SHINOGOZH
-				count = 10
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_SHIBADUAI
-				count = 10
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_hussars
-				state_region = s:STATE_DIYINAKHAD
-				count = 6
-			}
 
 			save_scope_as = tsh_army
 		}
@@ -971,39 +946,6 @@ scope:khd_admiral = {
 		
 		scope:vor_general = {
 			transfer_to_formation = scope:vor_army
-		}
-	}
-	c:VLT ?= {
-		create_military_formation = {
-			type = army
-			hq_region = sr:region_embervein_arroyo
-
-			name = "Viletok Horde"
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_VITHKUQJA
-				count = 15
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
-				state_region = s:STATE_VITHKUQJA
-				count = 15
-			}
-
-			save_scope_as = vltarmy
-		}
-
-		create_character = {
-			is_general = yes
-			hq = sr:region_embervein_arroyo
-			save_scope_as = vltgen
-		}
-		
-		scope:vltgen = {
-			set_commander_rank = 3
-			transfer_to_formation = scope:vltarmy
 		}
 	}
 
