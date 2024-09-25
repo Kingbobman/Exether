@@ -1051,6 +1051,32 @@
 			reserves=1
 			activate_production_methods={ "pm_iron_frame_buildings" }
 		}
+		create_building={
+			building="building_gizmo_workshop"
+			add_ownership={ 
+				building={ 
+					type="building_financial_district"
+					country="c:CER"
+					levels=2
+					region="STATE_THE_CHASM"
+			   }
+			}
+			reserves=1
+			activate_production_methods={ "pm_functional_gizmos" }
+		}
+		create_building={
+			building="building_archeology"
+				add_ownership={ 
+					building={ 
+						type="building_financial_district"
+						country="c:CER"
+						levels=1
+						region="STATE_THE_CHASM"
+				   }
+				}
+			reserves=1
+			activate_production_methods={ "pm_base_archaeology_excavation" "pm_rockrollers_mine" "pm_rail_transport_mine" }
+		}
         create_building={
 			building="building_chemical_plants"
                 add_ownership={ 
@@ -1534,38 +1560,12 @@
 			activate_production_methods={ "pm_handsewn_clothes" "pm_no_luxury_clothes" "pm_traditional_looms" }
 		}
 		create_building={
-			building="building_gizmo_workshop"
-			add_ownership={ 
-				building={ 
-					type="building_financial_district"
-					country="c:CER"
-					levels=2
-					region="STATE_PEARFIELDS"
-			   }
-			}
-			reserves=1
-			activate_production_methods={ "pm_functional_gizmos" }
-		}
-		create_building={
-			building="building_sunken_ruin_expedition"
-                add_ownership={ 
-                    building={ 
-                        type="building_adventuring_guild"
-                        country="c:CER"
-                        levels=1
-                        region="STATE_PEARFIELDS"
-                   }
-                }
-			reserves=1
-			activate_production_methods={ "pm_sunk_ruins_expedition_crews" "pm_sunken_ruins_safety_potions" }
-		}
-		create_building={
 			building="building_wishstone_mine"
 					  add_ownership={ 
 						building={ 
 							type="building_financial_district"
 							country="c:CER"
-							levels=3
+							levels=2
 							region="STATE_PEARFIELDS"
 					   }
 					}
@@ -3537,6 +3537,19 @@
 				level=6
 				reserves=1
 				activate_production_methods={ "pm_vertical_filing_cabinets" }
+			}
+			create_building={
+				building="building_artifactory"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:EMP"
+							levels=2
+							region="STATE_THE_AMBER_RUN"
+					   }
+					}
+				reserves=1
+				activate_production_methods={ "pm_artifactory_hand_sorting" "pm_artifactory_conveyor_belts" }
 			}
 			create_building={
 				building="building_motor_industry"
@@ -6957,7 +6970,7 @@
                     building={ 
                         type="building_financial_district"
                         country="c:DAR"
-                        levels=2
+                        levels=1
                         region="STATE_MOUNT_YELFIS"
                    }
                 }
@@ -6994,7 +7007,7 @@
 				   }
 				}
 			reserves=1
-			activate_production_methods={ "pm_atmospheric_engine_pump_building_sulfur_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_rail_transport_mine" }
+			activate_production_methods={ "pm_atmospheric_engine_pump_building_sulfur_mine" "pm_no_explosives" "pm_basic_magic_automation" "pm_no_steam_automation" "pm_rail_transport_mine" }
 		}			
 		create_building={
 			building="building_steel_mills"
@@ -7020,7 +7033,7 @@
 				   }
 				}
 			reserves=1
-			activate_production_methods={ "pm_atmospheric_engine_pump_building_coal_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_rail_transport_mine" }
+			activate_production_methods={ "pm_atmospheric_engine_pump_building_coal_mine" "pm_no_explosives" "pm_basic_magic_automation" "pm_no_steam_automation" "pm_rail_transport_mine" }
 		}
             create_building={
 			building="building_arms_industry"
@@ -7098,7 +7111,7 @@
 			   }
 			}
 			reserves=1
-			activate_production_methods={ "pm_atmospheric_engine_pump_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_rail_transport_mine" }
+			activate_production_methods={ "pm_atmospheric_engine_pump_building_iron_mine" "pm_no_explosives" "pm_basic_magic_automation" "pm_no_steam_automation" "pm_rail_transport_mine" }
 		}
 		create_building={
 			building="building_airship_dock"
