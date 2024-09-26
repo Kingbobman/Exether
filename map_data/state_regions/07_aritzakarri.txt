@@ -161,6 +161,11 @@ STATE_KASKOHARI = {
         bg_fishing = 7
         bg_haunted_grounds = 10
     }
+    resource = {
+        type = "bg_arritz_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 5
+    }
     naval_exit_id = 3059
 }
 STATE_BATOHAIN = {
@@ -179,6 +184,11 @@ STATE_BATOHAIN = {
         bg_opium_plantations = 20
         bg_haunted_grounds = 15
         bg_desert_hunting = 10
+    }
+    resource = {
+        type = "bg_arritz_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 5
     }
     naval_exit_id = 3027
 }
@@ -276,6 +286,11 @@ STATE_URRAZPI = {
         bg_logging = 4
         bg_fishing = 5
     }
+    resource = {
+        type = "bg_arritz_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 5
+    }
     naval_exit_id = 3096
 }
 STATE_NISHIGARRA = {
@@ -301,7 +316,7 @@ STATE_NISHIGARRA = {
 }
 STATE_GORRIMENDIA = {
     id = 4639
-    subsistence_building = "building_subsistence_farms"
+    subsistence_building = "building_subsistence_terrace_farms"
     provinces = { x3E0683 x51E0E5 x56B146 x67F3BB x74C6ED x82482C xA0DB8D xA68AC7 xA9CDED xC3B5A9 xC765D8 xC7A19C xCAA374 xCB70D6 xD085F4 xD972C2 xE776D7 xEAA2EB xEF67B6 xF079A9 xF0B37B xF8FAB5 }
     port = x51E0E5
     city = xF8FAB5
@@ -311,7 +326,7 @@ STATE_GORRIMENDIA = {
     impassable = { x67f3bb x74c6ed xa9cded }
     traits = { "state_trait_gorriamundi_mountain" }
     arable_land = 50
-    arable_resources = { "bg_maize_farms" "bg_livestock_ranches" "bg_vineyard_plantations" "bg_cotton_plantations" "bg_tobacco_plantations" }
+    arable_resources = { "bg_mountain_maize_farms" "bg_livestock_ranches" "bg_vineyard_plantations" "bg_cotton_plantations" "bg_tobacco_plantations" }
     capped_resources = {
         bg_logging = 14
         bg_hunting = 10
@@ -359,6 +374,11 @@ STATE_ARTEAGA = {
         bg_fishing = 6
         bg_logging = 4
     }
+    resource = {
+        type = "bg_arritz_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 5
+    }
     naval_exit_id = 3096
 }
 STATE_MENDIALDE = {
@@ -398,6 +418,11 @@ STATE_KHANOR = {
         bg_logging = 6
         bg_fishing = 5
     }
+    resource = {
+        type = "bg_arritz_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 5
+    }
     arable_land = 20
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_vineyard_plantations" }
     naval_exit_id = 3096
@@ -417,6 +442,11 @@ STATE_KASKOGARA = {
         bg_sulfur_mining = 36
         bg_logging = 6
         bg_fishing = 8
+    }
+    resource = {
+        type = "bg_arritz_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 5
     }
     naval_exit_id = 3096
 }
@@ -525,7 +555,7 @@ STATE_MUGARA = {
 STATE_ARAKALDE = {
     #airship xAF76FD
     id = 4650
-    subsistence_building = "building_subsistence_farms"
+    subsistence_building = "building_subsistence_terrace_farms"
     provinces = { x13C70A x190492 x49E4E9 x566499 x69E4BE x6DBEE9 x71C50C x85E7F6 x9D2AF8 xA4F2B3 xACD3BB xAF76FD xB736A6 xC6F5E3 xCF91EC xDDF97B xE4D4F7 xE5FA27 xE7CAA6 xEE5DD7 xF38F9C xFE7B9B }
     port = x71C50C
     city = x71C50C
@@ -535,11 +565,16 @@ STATE_ARAKALDE = {
     impassable = { x49E4E9 x69E4BE xE7CAA6 x6DBEE9 x85E7F6 xACD3BB xAF76FD xC6F5E3 xCF91EC xE4D4F7 xEE5DD7 xFE7B9B xF38F9C }
     traits = { "state_trait_wingpalooza_mountains" }
     arable_land = 60
-    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_vineyard_plantations" "bg_tobacco_plantations" "bg_cotton_plantations" }
+    arable_resources = { "bg_livestock_ranches" "bg_mountain_maize_farms" "bg_vineyard_plantations" "bg_tobacco_plantations" "bg_cotton_plantations" }
     capped_resources = {
         bg_coal_mining = 48
         bg_logging = 9
         bg_cloudsilver_mining = 43
+    }
+    resource = {
+        type = "bg_arritz_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 5
     }
     resource = {
         type = "bg_spurge_rubber"
@@ -563,6 +598,11 @@ STATE_MIZPIRIKA = {
         bg_hunting = 10
         bg_fishing = 8
     }
+    resource = {
+        type = "bg_arritz_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 5
+    }
     naval_exit_id = 3096
 }
 STATE_OLABEGI = {
@@ -580,6 +620,11 @@ STATE_OLABEGI = {
         bg_sulfur_mining = 22
         bg_fishing_glowfish = 4
         bg_logging = 4
+    }
+    resource = {
+        type = "bg_arritz_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 5
     }
     resource = {
         type = "bg_oil_extraction"
@@ -610,7 +655,7 @@ STATE_OLABEGI_2 = {
 }
 STATE_UDABERRI = {
     id = 4653
-    subsistence_building = "building_subsistence_farms"
+    subsistence_building = "building_subsistence_terrace_farms"
     provinces = { x206F88 x4AF5E8 x5BE3EE x69F79D x85BED4 x8DC8E5 x8DD890 x98A5BC xA16CFB xD2D4DF xEBCC43 xF2C5DC xF589AD xFAC5D1 }
     port = x5BE3EE
     city = xFAC5D1
@@ -620,7 +665,7 @@ STATE_UDABERRI = {
     impassable = { x69F79D x85BED4 x8DD890 }
     traits = { "state_trait_wingpalooza_mountains" }
     arable_land = 40
-    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_vineyard_plantations" }
+    arable_resources = { "bg_livestock_ranches" "bg_mountain_maize_farms" "bg_cotton_plantations" "bg_vineyard_plantations" }
     capped_resources = {
         bg_iron_mining = 15
         bg_hunting = 10
@@ -648,10 +693,15 @@ STATE_IZOZKI = {
         bg_hunting = 10
         bg_logging = 12
     }
+    resource = {
+        type = "bg_arritz_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 5
+    }
 }
 STATE_GARRITXO = {
     id = 4655
-    subsistence_building = "building_subsistence_farms"
+    subsistence_building = "building_subsistence_terrace_farms"
     provinces = { x0BB0E2 x31AD8D x6BEBD5 x76F4E5 xA5E967 xAFFC8C xB6C794 xD1D66F xE39AA1 xED63E6 xF06BCB }
     port = x6BEBD5
     city = xF06BCB
@@ -661,7 +711,7 @@ STATE_GARRITXO = {
     impassable = { xa5e967 xED63E6 }
     traits = { "state_trait_wingpalooza_mountains" }
     arable_land = 40
-    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_vineyard_plantations" }
+    arable_resources = { "bg_livestock_ranches" "bg_mountain_maize_farms" "bg_cotton_plantations" "bg_vineyard_plantations" }
     capped_resources = {
         bg_coal_mining = 20
         bg_hunting = 10
@@ -689,6 +739,11 @@ STATE_ASTINDU = {
         bg_logging = 7
         bg_fishing = 4
     }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 5
+    }
     naval_exit_id = 3059
 }
 STATE_ITXAROPEN = {
@@ -707,6 +762,11 @@ STATE_ITXAROPEN = {
         bg_logging = 17
         bg_fishing = 5
         bg_hunting = 10
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 5
     }
     resource = {
         type = "bg_oil_extraction"
@@ -752,6 +812,11 @@ STATE_MENDIBURU = {
         bg_fishing = 7
     }
     resource = {
+        type = "bg_dragon_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 5
+    }
+    resource = {
         type = "bg_wishstone_reefs"
         undiscovered_amount = 18
     }
@@ -760,7 +825,7 @@ STATE_MENDIBURU = {
 STATE_URRIKO = {
     #airship 3ff0de
     id = 4660
-    subsistence_building = "building_subsistence_farms"
+    subsistence_building = "building_subsistence_terrace_farms"
     provinces = { x02DC48 x0E21CA x3308F0 x3FF0DE x4027DA x5CF55B x76EC91 x8A87E8 x8D98E6 x8DA0DA xA1D3BB xAAEA65 xB4BBBE xB5DB76 xB6F4C5 xB7B9F7 xB8C5EF xBEE094 xD772B0 xDA036E xDC5AD3 xE3F4ED xEACBCD xEB74C0 xEB8FD7 xF0C34E xF4B07B xF5DC35 xF7D095 }
     port = x76EC91
     city = x02DC48
@@ -770,13 +835,17 @@ STATE_URRIKO = {
     impassable = { x3FF0DE xEB8FD7 xF4B07B xF5DC35 x8A87E8 x8D98E6 x8DA0DA xAAEA65 xB4BBBE xB5DB76 xB6F4C5 xB7B9F7 xB8C5EF xBEE094 xD772B0 xDC5AD3 xE3F4ED xEACBCD xF7D095 xF0C34E }
     traits = { "state_trait_featherpeak_mountains" }
     arable_land = 100
-    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    arable_resources = { "bg_mountain_maize_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_logging = 8
         bg_coal_mining = 28
         bg_iron_mining = 27
         bg_cloudsilver_mining = 40
-        bg_arritz_ruins = 6
+    }
+    resource = {
+        type = "bg_arritz_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 6
     }
     resource = {
         type = "bg_spurge_rubber"
@@ -822,7 +891,11 @@ STATE_ZUBEROA = {
         bg_logging = 11
         bg_fishing = 10
         bg_hunting = 10
-        bg_arritz_ruins = 2
+    }
+    resource = {
+        type = "bg_arritz_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 5
     }
     resource = {
         type = "bg_gold_fields"
@@ -846,7 +919,11 @@ STATE_IRAURBE = {
         bg_logging = 7
         bg_fishing = 10
         bg_hunting = 15
-        bg_arritz_ruins = 2
+    }
+    resource = {
+        type = "bg_arritz_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 5
     }
     resource = {
         type = "bg_gold_fields"
@@ -895,7 +972,7 @@ STATE_KABI = {
 STATE_LURRA = {
     #airship xF35EBD
     id = 4665
-    subsistence_building = "building_subsistence_farms"
+    subsistence_building = "building_subsistence_terrace_farms"
     provinces = { x22B1BE x2BF9D9 x3FAF83 x44D0F4 x6F69C5 x747B82 x777D20 x80E8D3 x82D8F3 x8CD2BD x98BB7C x98DEAE xAAFEB0 xB9E789 xBDB3D6 xBFEDE5 xCD87ED xD3CC9B xDEAB87 xDF79EC xE2D14C xECCB9E xF35EBD xF39674 xF6A3E4 xF6D283 xF9E95B xFCD642 }
     port = xFCD642
     city = xF9E95B
@@ -905,12 +982,17 @@ STATE_LURRA = {
     impassable = { x2bf9d9 x44d0f4 x80e8d3 x8cd2bd x98deae xaafeb0 xb9e789 xbfede5 xcd87ed xd3cc9b xdf79ec }
     traits = { "state_trait_featherpeak_mountains" }
     arable_land = 60
-    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    arable_resources = { "bg_mountain_maize_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_logging = 8
         bg_coal_mining = 24
         bg_iron_mining = 22
         bg_cloudsilver_mining = 35
+    }
+    resource = {
+        type = "bg_arritz_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 5
     }
     resource = {
         type = "bg_spurge_rubber"
@@ -1050,6 +1132,11 @@ STATE_SUTAN = {
         bg_logging = 10
     }
     resource = {
+        type = "bg_dragon_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 5
+    }
+    resource = {
         type = "bg_oil_extraction"
         undiscovered_amount = 20
     }
@@ -1116,6 +1203,11 @@ STATE_NABARR = {
         bg_fishing = 10
         bg_hunting = 10
         bg_coal_mining = 5
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 5
     }
     resource = {
         type = "bg_oil_extraction"
@@ -1189,6 +1281,11 @@ STATE_TXINPART = {
         bg_coal_mining = 12
         bg_fishing = 8
     }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 5
+    }
     naval_exit_id = 3040
 }
 STATE_GIPUZK = {
@@ -1207,6 +1304,11 @@ STATE_GIPUZK = {
         bg_hunting = 10
         bg_logging = 14
         bg_fishing = 8
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 5
     }
     resource = {
         type = "bg_oil_extraction"
@@ -1232,6 +1334,11 @@ STATE_TIHAR = {
         bg_hunting = 12
         bg_fishing = 6
     }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 5
+    }
     naval_exit_id = 3059
 }
 STATE_ARROLA = {
@@ -1250,11 +1357,15 @@ STATE_ARROLA = {
         bg_logging = 20
         bg_hunting = 12
         bg_fishing = 12
-        bg_dragon_ruins = 6
     }
     resource = {
         type = "bg_oil_extraction"
         undiscovered_amount = 20
+    }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 6
     }
     naval_exit_id = 3059
 }
@@ -1276,11 +1387,16 @@ STATE_OSTATU = {
         bg_lead_mining = 18
         bg_fishing = 6
     }
+    resource = {
+        type = "bg_dragon_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 5
+    }
     naval_exit_id = 3059
 }
 STATE_TXORI = {
     id = 4684
-    subsistence_building = "building_subsistence_farms"
+    subsistence_building = "building_subsistence_terrace_farms"
     provinces = { x40D3F9 x76A4E4 x80B0CF x82DFB1 xA692DC xA7FBBE xAC6FDA xB9CD73 xC069FB xC0C4FC xD1ABD1 xDDD25F xE2B6C9 xF3F054 xF48891 }
     port = x40D3F9
     city = xF48891
@@ -1290,11 +1406,16 @@ STATE_TXORI = {
     impassable = { x76a4e4 xb9cd73 }
     traits = { "state_trait_lore_mountains" }
     arable_land = 38
-    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    arable_resources = { "bg_mountain_maize_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_logging = 11
         bg_fishing = 8
         bg_hunting = 10
+    }
+    resource = {
+        type = "bg_dwarf_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 5
     }
     resource = {
         type = "bg_spurge_rubber"
@@ -1304,7 +1425,7 @@ STATE_TXORI = {
 }
 STATE_ERDI = {
     id = 4685
-    subsistence_building = "building_subsistence_farms"
+    subsistence_building = "building_subsistence_terrace_farms"
     provinces = { x07FCF2 x2FCCFD x4CE8D0 x6DD2C7 x78EAAE x7AB7CC x7EC6DF x839AF1 x948EE6 x9BE2D8 xA5F06C xAB64F9 xB3D97D xD5C76D xD6F05E xEC7CD7 }
     port = x07FCF2
     city = xEC7CD7
@@ -1314,12 +1435,17 @@ STATE_ERDI = {
     impassable = { xA5F06C }
     traits = { "state_trait_lore_mountains" }
     arable_land = 25
-    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    arable_resources = { "bg_mountain_maize_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_logging = 15
         bg_hunting = 10
         bg_fishing = 12
         bg_leviathan_outpost = 9
+    }
+    resource = {
+        type = "bg_dwarf_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 5
     }
     resource = {
         type = "bg_spurge_rubber"
@@ -1345,6 +1471,11 @@ STATE_AROA = {
         bg_fishing = 10
         bg_leviathan_outpost = 8
     }
+    resource = {
+        type = "bg_dwarf_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 5
+    }
     naval_exit_id = 3093
 }
 STATE_ZIENTZI = {
@@ -1365,11 +1496,16 @@ STATE_ZIENTZI = {
         bg_squidding = 7
         bg_haunted_grounds = 8
     }
+    resource = {
+        type = "bg_dwarf_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 5
+    }
     naval_exit_id = 3029
 }
 STATE_BAZKA = {
     id = 4688
-    subsistence_building = "building_subsistence_farms"
+    subsistence_building = "building_subsistence_terrace_farms"
     provinces = { x82AEE3 xA9F3CD xB4FCDD xBCEA88 xCBDCFB xCD68E8 xE177E7 xE4D862 xE7C4E6 }
     port = xE7C4E6
     city = xE4D862
@@ -1379,7 +1515,7 @@ STATE_BAZKA = {
     impassable = { xa9f3cd }
     traits = { "state_trait_lore_mountains" }
     arable_land = 60
-    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
+    arable_resources = { "bg_mountain_maize_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_coal_mining = 80
         bg_iron_mining = 36
@@ -1393,7 +1529,8 @@ STATE_BAZKA = {
     resource = {
         type = "bg_collapsed_godsbane_vault"
         depleted_type = "bg_renovated_godsbane_vault"
-        discovered_amount = 6
+        undiscovered_amount = 7
+        discovered_amount = 1
     }
     resource = {
         type = "bg_spurge_rubber"
@@ -1437,6 +1574,11 @@ STATE_IBAIA = {
         bg_hunting = 10
         bg_fishing = 9
         bg_squidding = 8
+    }
+    resource = {
+        type = "bg_arritz_ruins"
+        depleted_type =  "bg_archeology"
+        undiscovered_amount = 5
     }
     resource = {
         type = "bg_gold_fields"

@@ -662,20 +662,30 @@ gfx_military_mobilization_culture_is_african = {
 
 gfx_military_mobilization_culture_is_arabic = {
 
-	any_primary_culture = { has_culture_graphics = arabic }
+		any_primary_culture = { 		
+		OR = {
+			has_culture_graphics = arabic
+			has_culture_graphics = orc
+		} 
+	}
 
 }
 
 gfx_military_mobilization_culture_is_east_asian = {
 
-	any_primary_culture = { has_culture_graphics = east_asian }
-
+	any_primary_culture = { 
+		 has_culture_graphics = east_asian 
+	}
 }
 
 gfx_military_mobilization_culture_is_south_asian = {
 
-	any_primary_culture = { has_culture_graphics = south_asian }
-
+	any_primary_culture = { 		
+		OR = {
+			has_culture_graphics = south_asian
+			has_culture_graphics = bear
+		} 
+	}
 }
 
 #################################################################
@@ -763,10 +773,14 @@ gfx_military_deploy_culture_is_arabic = {
 
 	scope:military_formation = {
 		any_combat_unit = {
-			culture = { has_culture_graphics = arabic }
+			culture = { 
+					OR = {
+						has_culture_graphics = arabic 
+						has_culture_graphics = orc
+					}
+			}
 		}
 	}
-
 }
 
 gfx_military_deploy_culture_is_east_asian = {
@@ -783,7 +797,12 @@ gfx_military_deploy_culture_is_south_asian = {
 
 	scope:military_formation = {
 		any_combat_unit = {
-			culture = { has_culture_graphics = south_asian }
+			culture = { 
+				OR = {
+					has_culture_graphics = south_asian
+					has_culture_graphics = bear
+				}
+				 }
 		}
 	}
 

@@ -52,10 +52,7 @@ salt_waste_narrative_events.2 = {
 	duration = 3
 
 	trigger = {
-		any_scope_pop = {
-			culture = { has_discrimination_trait = saltwaste_survivor_culture_group }
-			pop_is_discriminated = yes
-		}
+		discriminate_against_salt_waste_natives = yes
 	}
 
 	immediate = {
@@ -1479,5 +1476,151 @@ salt_waste_narrative_events.17 = {
 
 	option = {
 		name = salt_waste_narrative_events.17.b
+	}
+}
+
+salt_waste_narrative_events.18 = {
+	dlc = dlc_roe
+	type = country_event
+
+	title = salt_waste_narrative_events.18.t
+	desc = salt_waste_narrative_events.18.d
+	flavor = salt_waste_narrative_events.18.f
+
+	event_image = {
+		texture = "gfx/event_images/salt_wastes_tea.dds"
+	}
+	
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	trigger = {
+		c:TQL ?= THIS
+		NOT = { has_global_variable = has_formed_tql }
+	}
+	
+	immediate = {
+		set_global_variable = has_formed_tql
+		save_scope_as = formation_country
+		cu:rahoru = {
+			save_scope_as = unification_culture
+		}
+		cu:tqalt = {
+			save_scope_as = unification_culture_2
+		}
+		cu:waste_walker = {
+			save_scope_as = unification_culture_3
+		}
+		every_country = {
+			limit = {
+				has_diplomatic_relevance = ROOT
+			}
+			post_notification = unification_notification_three_culture
+		}
+	}
+
+	option = {
+		name = salt_waste_narrative_events.18.a
+		default_option = yes
+		
+		add_modifier = {
+			name = unification_prestige
+			months = very_long_modifier_time
+		}
+		unification_claims_effect = yes
+		
+		trigger_event = {
+			id = salt_waste_narrative_events.19
+			days = 3
+			popup = yes
+		}
+	}
+}
+
+salt_waste_narrative_events.19 = {
+	dlc = dlc_roe
+	type = country_event
+
+	title = salt_waste_narrative_events.19.t
+	desc = salt_waste_narrative_events.19.d
+	flavor = salt_waste_narrative_events.19.f
+
+	event_image = {
+		texture = "gfx/event_images/salt_wastes_tea.dds"
+	}
+	
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	trigger = {
+		c:TQL ?= THIS
+	}
+	
+	immediate = {
+		cu:rahoru = {
+			save_scope_as = rahoru_culture
+		}
+		cu:tqalt = {
+			save_scope_as = tqalt_culture
+		}
+		cu:waste_walker = {
+			save_scope_as = waste_walker_culture
+		}
+		s:STATE_TAYTAQOCHA = {
+			random_scope_state = {
+				save_scope_as = taytaqocha_state
+			}
+		}
+		s:STATE_BLOODTHORN_WASTES = {
+			random_scope_state = {
+				save_scope_as = bloodthorn_state
+			}
+		}
+		s:STATE_SNAILBANE = {
+			random_scope_state = {
+				save_scope_as = snailbane_state
+			}
+		}
+	}
+
+	option = {
+		name = salt_waste_narrative_events.19.n
+		default_option = yes
+	}
+
+	option = {
+		name = salt_waste_narrative_events.19.a
+		trigger = {
+			owns_entire_state_region = STATE_TAYTAQOCHA
+			NOT = { capital = { state_region = s:STATE_TAYTAQOCHA } }
+		}
+
+		set_capital = STATE_TAYTAQOCHA
+	}
+	
+	option = {
+		name = salt_waste_narrative_events.19.b
+		trigger = {
+			owns_entire_state_region = STATE_BLOODTHORN_WASTES
+			NOT = { capital = { state_region = s:STATE_BLOODTHORN_WASTES } }
+		}
+
+		set_capital = STATE_BLOODTHORN_WASTES
+	}
+	
+	option = {
+		name = salt_waste_narrative_events.19.c
+		trigger = {
+			owns_entire_state_region = STATE_SNAILBANE
+			NOT = { capital = { state_region = s:STATE_SNAILBANE } }
+		}
+
+		set_capital = STATE_SNAILBANE
 	}
 }

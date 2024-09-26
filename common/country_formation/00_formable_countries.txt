@@ -127,7 +127,11 @@ TQL = {
 	ai_will_do = { always = yes }
 
 	possible = {
-		has_technology_researched = nationalism
+		has_technology_researched = pan-nationalism
+		custom_tooltip = {
+			text = no_salt_waste_pop_discriminated
+			discriminate_against_salt_waste_natives = no
+		}
 	}
 
 }
@@ -231,22 +235,6 @@ MAN = {
 	possible = {
 		has_technology_researched = pan-nationalism
 	}
-
-}
-
-PLG = {
-	states = { 
-		STATE_FORESTS_HEART_3_2
-		STATE_EASTERN_PLAGUEWOOD
-		STATE_NORTHERN_EXPANSE
-		STATE_BURAMONG
-		STATE_FORESTS_HEART
-		STATE_PLAGUEBRUSH
-	}
-
-	required_states_fraction = 0.8
-	
-	ai_will_do = { always = yes }
 
 }
 

@@ -232,3 +232,24 @@ pm_steam_jellyfishing_ships = {
 		}
 	}
 }
+
+default_building_ruins = {
+	texture = "gfx/interface/icons/production_method_icons/gold_mining.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_gold_add = 2
+			goods_output_relics_add = 16
+		}
+		level_scaled = {
+			building_employment_adventurers_add = 500
+			building_employment_laborers_add = 4500
+		}
+	}
+	
+	country_modifiers = {
+		workforce_scaled = {
+			country_minting_add = 100
+		}
+	}
+}
