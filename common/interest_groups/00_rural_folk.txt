@@ -341,13 +341,31 @@
 
 			}
 			add = {
-				value = 0.025
+				value = 0.05
 			}
 		}
+		if = {
+			limit = {
+				owner = {
+					exists = c:WHI
+					OR = {
+						c:WHI = this
+						civil_war_origin_country = c:WHI
+					}
+						
+				}
+
+			}
+			add = {
+				value = 0.35
+			}
+
+		}
 	}
+	
 
 	female_agitator_chance = {
-		value = 0.025
+		value = 0.15
 		
 		if = {
 			limit = {
@@ -369,7 +387,7 @@
 
 			}
 			add = {
-				value = 0.025
+				value = 0.05
 			}
 		}
 
@@ -381,7 +399,7 @@
 
 			}
 			add = {
-				value = 0.025
+				value = 0.075
 			}
 		}		
 
@@ -393,7 +411,7 @@
 
 			}
 			add = {
-				value = 0.95
+				value = 0.8
 			}
 		}
 	}
