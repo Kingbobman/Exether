@@ -488,39 +488,6 @@ pm_rotary_valve_engine_building_potion_distillery = {
 	}
 }
 
-pm_assembly_line_bottling_godsblood_building_potion_distillery = {
-	texture = "gfx/interface/icons/production_method_icons/assembly_lines.dds"
-	state_modifiers = {
-		workforce_scaled = {
-			state_pollution_generation_add = 15  #change to magic pollution
-		}
-	}
-	unlocking_production_methods = {
-		pm_early_potion_vat_production
-		pm_wishtone_potion_process_production
-		pm_cool_name_potion_process_production
-	}
-	unlocking_technologies = {
-		conveyors
-	}
-	
-	building_modifiers = {
-		workforce_scaled = {
-			# input goods
-			goods_input_tools_add = 5
-			goods_input_blubber_add = 5
-			goods_input_electricity_add = 5
-		}
-
-		level_scaled = {
-			building_employment_laborers_add = -1250
-			building_employment_artificers_add = -750
-		}
-	}
-
-	required_input_goods = electricity
-}
-
 pm_assembly_line_bottling_blubber_building_potion_distillery = {
 	texture = "gfx/interface/icons/production_method_icons/assembly_lines.dds"
 	state_modifiers = {

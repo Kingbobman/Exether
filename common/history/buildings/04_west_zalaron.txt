@@ -3299,7 +3299,7 @@
 		}
   }
   s:STATE_BONGSAF = {
-		region_state:SNB={
+		region_state:THK={
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={ 
@@ -4766,31 +4766,18 @@
 	}
   }
   s:STATE_DIYINAKHAD = {
-	region_state:TSH = {
+	region_state:KHD = {
 	}
   }
   s:STATE_NASHAYAZH = {
-	region_state:KHD = {
-			create_building={
-			building="building_cotton_plantation"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:KHD"
-						levels=4
-						region="STATE_NASHAYAZH"
-				   }
-				}
-			reserves=1
-			activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts"  }
-		}			
+	region_state:KHD = {		
 		create_building={
 			building="building_logging_camp"
                 add_ownership={ 
                     building={ 
                         type="building_financial_district"
                         country="c:KHD"
-                        levels=7
+                        levels=3
                         region="STATE_NASHAYAZH"
                    }
                 }
@@ -5262,7 +5249,7 @@
                     building={ 
                         type="building_adventuring_guild"
                         country="c:KHD"
-                        levels=3
+                        levels=8
                         region="STATE_SHIMAKAI"
                    }
                 }
@@ -5275,7 +5262,7 @@
 						  building={ 
 							  type="building_financial_district"
 							  country="c:KHD"
-							  levels=1
+							  levels=2
 							  region="STATE_SHIMAKAI"
 						 }
 					  }
@@ -5287,25 +5274,12 @@
   s:STATE_YAZHIDZI = {
 	region_state:KHD={
 		create_building={
-			building="building_shipyards"
-					  add_ownership={ 
-						  building={ 
-							  type="building_financial_district"
-							  country="c:KHD"
-							  levels=2
-							  region="STATE_YAZHIDZI"
-						 }
-					  }
-			reserves=1
-			activate_production_methods={ "pm_basic_shipbuilding" }
-		  }
-		create_building={
             building="building_fishing_wharf"
                 add_ownership={ 
                     building={ 
                         type="building_adventuring_guild"
                         country="c:KHD"
-                        levels=7
+                        levels=2
                         region="STATE_YAZHIDZI"
                    }
                 }
@@ -5338,6 +5312,34 @@
 			reserves=1
 			activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }
 		}
+		region_state:HOZ = {
+			create_building={
+			building="building_cotton_plantation"
+				add_ownership={ 
+					building={ 
+						type="building_manor_house"
+						country="c:HOZ"
+						levels=2
+						region="STATE_YAZHIDZI"
+				   }
+				}
+			reserves=1
+			activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts"  }
+		}			
+		create_building={
+			building="building_logging_camp"
+				add_ownership={ 
+					building={ 
+						type="building_financial_district"
+						country="c:HOZ"
+						levels=1
+						region="STATE_YAZHIDZI"
+				   }
+				}
+			reserves=1
+			activate_production_methods={ "pm_saw_mills" "pm_no_equipment" "pm_road_carts" "pm_no_hardwood" }
+		}
+	}
 	}
   }
   s:STATE_SHINOGOZH = {
