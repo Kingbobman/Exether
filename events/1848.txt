@@ -1,5 +1,61 @@
 ﻿namespace = 1848
+namespace = test
 
+namespace = test
+test.54 = {
+	type = country_event
+	title = "Force Resource Depletion effect test"
+	duration = 10
+
+	immediate = {
+		random_scope_state = {
+			save_scope_as = random_state
+		}
+	}
+
+	option = {
+		name = "Deplete resources in Gold Mines of random state"
+		scope:random_state = {
+			force_resource_depletion = bg_collapsed_godsbane_vault
+		}
+	}
+
+	option = {
+		name = "CANCEL"
+		default_option = yes
+	}
+}
+
+test.53 = {
+	type = country_event
+	title = "Force Resource Discovery effect test"
+	duration = 10
+
+	immediate = {
+		random_scope_state = {
+			save_scope_as = random_state
+		}
+	}
+
+	option = {
+		name = "Discover resources in Gold Mines of random state"
+		scope:random_state = {
+			force_resource_discovery = bg_collapsed_godsbane_vault
+		}
+	}
+
+	option = {
+		name = "Discover resources in Oil Extractors of random state"
+		scope:random_state = {
+			force_resource_discovery = bg_oil_extraction
+		}
+	}
+
+	option = {
+		name = "CANCEL"
+		default_option = yes
+	}
+}
 # Regicide
 # Triggered from enactment pulse
 1848.1 = {

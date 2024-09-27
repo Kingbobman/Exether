@@ -911,9 +911,25 @@ on_resource_discovered = {
 # Root = State
 on_resource_depleted = {
 	effect = {
-		state_region = {
-			post_notification = resource_depleted
+		if = {
+			limit = {
+					state_region = {
+						any_scope_state = {
+							has_potential_resource = bg_renovated_godsbane_vault
+						}
+						
+					}
+				}
+				state_region = {
+					post_notification = godsbane_vault_renovated
+				}
 		}
+		else = {
+			state_region = {
+				post_notification = godsbane_vault_renovated
+			}
+		}
+
 	}
 	events = {
 		goldrush.2

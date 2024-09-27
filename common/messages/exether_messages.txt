@@ -1,0 +1,33 @@
+﻿#notification_example = {													#notification key
+#	type = country 															#include notification type
+#   group = "some_group"                                                    # group for "Current Situation". Also adds this notification to the Message Settings list.
+#	texture = "gfx/interface/icons/notification_icons/technology.dds" 		#texture icon. Mandatory if notification has a group. Otherwise, you will get a pink face placeholder in feed notifications.
+#
+#	notification_type = feed/toast/popup									#how the notification will be presented
+#	popup_name = acquired_technology_popup 									#gui specification for popups, must be in gui/popups.gui
+# 	colore = bad/neutral/good army											#colors the notification 
+#
+#	on_created_soundeffect = "event:/SFX/UI/Notifications/notification" 	#notification on creationg sound
+#}
+
+
+#       ######  ####### ######  #     # ######  
+#       #     # #     # #     # #     # #     # 
+#       #     # #     # #     # #     # #     # 
+#       ######  #     # ######  #     # ######  
+#       #       #     # #       #     # #       
+#       #       #     # #       #     # #       
+#       #       ####### #        #####  # 
+
+
+
+godsbane_vault_renovated = {
+	type = state_region
+	group = "resource_discovery_notification_group"
+	notification_type = toast
+	color = good
+
+	texture = "gfx/interface/icons/notification_icons/resource.dds"
+}
+
+#Test force_resource_depletion effect
