@@ -4,28 +4,30 @@
 			type = army
 			hq_region = sr:region_embervein_arroyo
 
+			name = "Masters of the Mountain"
+
 			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
+				type = unit_type:combat_unit_type_skirmish_infantry
 				state_region = s:STATE_SHANAKONG
-				count = 20
+				count = 25
 			}
 			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
+				type = unit_type:combat_unit_type_skirmish_infantry
 				state_region = s:STATE_SHANAKONG
 				service_type = conscript
 				count = 10
 			}
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
+				type = unit_type:combat_unit_type_mobile_artillery
 				state_region = s:STATE_MLIMASHWARI
-				count = 20
+				count = 10
 			}
 			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
+				type = unit_type:combat_unit_type_skirmish_infantry
 				state_region = s:STATE_MLIMASHWARI
 				service_type = conscript
-				count = 10
+				count = 15
 			}
 
 			save_scope_as = thk_army
@@ -1725,19 +1727,14 @@ c:SNB ?= {
 
 		combat_unit = {
 			type = unit_type:combat_unit_type_line_infantry
-			state_region = s:STATE_THASAMAKI
-			service_type = conscript
+			state_region = s:STATE_SWAHATHAI
 			count = 5
 		}
 		combat_unit = {
 			type = unit_type:combat_unit_type_line_infantry
-			state_region = s:STATE_THASAMAKI
-			count = 2
-		}
-		combat_unit = {
-			type = unit_type:combat_unit_type_line_infantry
-			state_region = s:STATE_BONGSAF
-			count = 3
+			state_region = s:STATE_SWAHATHAI
+			service_type = conscript
+			count = 10
 		}
 		combat_unit = {
 			type = unit_type:combat_unit_type_line_infantry
@@ -1745,9 +1742,21 @@ c:SNB ?= {
 			count = 5
 		}
 		combat_unit = {
+			type = unit_type:combat_unit_type_line_infantry
+			state_region = s:STATE_KEEDZAI
+			service_type = conscript
+			count = 10
+		}
+		combat_unit = {
 			type = unit_type:combat_unit_type_mobile_artillery
-			state_region = s:STATE_SWAHATHAI
+			state_region = s:STATE_KISIKLONG
 			count = 5
+		}
+		combat_unit = {
+			type = unit_type:combat_unit_type_mobile_artillery
+			state_region = s:STATE_KISIKLONG
+			service_type = conscript
+			count = 10
 		}
 		save_scope_as = snb_army
 	}
@@ -1772,19 +1781,14 @@ c:SNB ?= {
 
 		combat_unit = {
 			type = unit_type:combat_unit_type_line_infantry
-			state_region = s:STATE_SWAHATHAI
-			service_type = conscript
+			state_region = s:STATE_KILIMAMAI
 			count = 5
 		}
 		combat_unit = {
 			type = unit_type:combat_unit_type_line_infantry
 			state_region = s:STATE_KILIMAMAI
-			count = 2
-		}
-		combat_unit = {
-			type = unit_type:combat_unit_type_line_infantry
-			state_region = s:STATE_JUACHAI
-			count = 3
+			service_type = conscript
+			count = 5
 		}
 		combat_unit = {
 			type = unit_type:combat_unit_type_line_infantry
@@ -1792,9 +1796,21 @@ c:SNB ?= {
 			count = 5
 		}
 		combat_unit = {
+			type = unit_type:combat_unit_type_line_infantry
+			state_region = s:STATE_MAJISAMAKI
+			service_type = conscript
+			count = 10
+		}
+		combat_unit = {
 			type = unit_type:combat_unit_type_mobile_artillery
-			state_region = s:STATE_SWAHATHAI
+			state_region = s:STATE_KLONGBARIDI
 			count = 5
+		}
+		combat_unit = {
+			type = unit_type:combat_unit_type_mobile_artillery
+			state_region = s:STATE_KLONGBARIDI
+			service_type = conscript
+			count = 10
 		}
 		save_scope_as = snb_army2
 	}
@@ -1819,18 +1835,25 @@ c:SNB ?= {
 
 		combat_unit = {
 			type = unit_type:combat_unit_type_line_infantry
-			state_region = s:STATE_KILIMAMAI
-			count = 2
+			state_region = s:STATE_JUACHAI
+			count = 5
 		}
 		combat_unit = {
 			type = unit_type:combat_unit_type_line_infantry
-			state_region = s:STATE_SWAHATHAI
-			count = 3
+			state_region = s:STATE_JUACHAI
+			service_type = conscript
+			count = 10
 		}
 		combat_unit = {
 			type = unit_type:combat_unit_type_mobile_artillery
-			state_region = s:STATE_SWAHATHAI
+			state_region = s:STATE_SAWATHONG
 			count = 5
+		}
+		combat_unit = {
+			type = unit_type:combat_unit_type_mobile_artillery
+			state_region = s:STATE_SAWATHONG
+			service_type = conscript
+			count = 10
 		}
 		save_scope_as = snb_army3
 	}
@@ -1988,6 +2011,47 @@ c:FMJ ?= {
 		combat_unit = {
 			type = unit_type:combat_unit_type_mobile_artillery
 			state_region = s:STATE_CHEJATAN_DO
+			count = 5
+		}
+
+		save_scope_as = fmj_army
+	}
+
+	create_character = {
+		is_general = yes
+		hq = sr:region_sanbang
+		commander_rank = commander_rank_2
+		interest_group = ig_armed_forces
+		save_scope_as = fmj_general
+	}
+	
+	scope:fmj_general = {
+		transfer_to_formation = scope:fmj_army
+	}
+}
+
+c:VLT ?= {
+	create_military_formation = {
+		type = army
+		hq_region = sr:region_sanbang
+
+		name = "Bavolian Volunteer Army"
+
+		combat_unit = {
+			type = unit_type:combat_unit_type_line_infantry
+			state_region = s:STATE_THASAMAKI
+			count = 5
+		}
+
+		combat_unit = {
+			type = unit_type:combat_unit_type_line_infantry
+			state_region = s:STATE_VITHKUQJA
+			count = 10
+		}
+
+		combat_unit = {
+			type = unit_type:combat_unit_type_mobile_artillery
+			state_region = s:STATE_VITHKUQJA
 			count = 5
 		}
 

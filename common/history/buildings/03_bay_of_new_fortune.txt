@@ -35,6 +35,21 @@
 
 	}
 	s:STATE_KIJITOQWA = {
+		region_state:SNB = {	
+			create_building={
+				building="building_iron_mine"
+				add_ownership={ 
+					building={ 
+						type="building_financial_district"
+						country="c:SNB"
+						levels=1
+						region="STATE_KIJITOQWA"
+				   }
+				}
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
 
 	}
 	s:STATE_KILIMADADA = {
@@ -407,8 +422,6 @@
 				reserves=1
 				activate_production_methods={ "pm_lathe" "pm_automation_disabled" "pm_no_luxuries" }
 			}
-
-
 		}
 	
 	}
@@ -2345,6 +2358,91 @@
 		}
 	}
 	s:STATE_MLIMASHWARI = {
-
+		region_state:THK = {
+			create_building={
+				building="building_government_administration"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_horizontal_drawer_cabinets"  }
+			}	
+			create_building={
+				building="building_dye_plantation"
+					add_ownership={ 
+						building={ 
+							type="building_manor_house"
+							country="c:THK"
+							levels=1
+							region="STATE_MLIMASHWARI"
+					   }
+					}
+				reserves=1
+				activate_production_methods={ "default_building_dye_plantation" "pm_road_carts"  }
+			}
+			create_building={
+				building="building_textile_mills"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:THK"
+							levels=2
+							region="STATE_MLIMASHWARI"
+					   }
+					}
+				reserves=1
+				activate_production_methods={ "pm_dye_workshops" "pm_no_luxury_clothes" "pm_traditional_looms" }
+			}
+			create_building={
+				building="building_furniture_manufacturies"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:THK"
+							levels=1
+							region="STATE_MLIMASHWARI"
+					   }
+					}
+				reserves=1
+				activate_production_methods={ "pm_lathe" "pm_automation_disabled" "pm_luxury_furniture" }
+			}
+			create_building={
+				building="building_artillery_foundries"
+						  add_ownership={ 
+							  building={ 
+								  type="building_financial_district"
+								  country="c:THK"
+								  levels=1
+								  region="STATE_MLIMASHWARI"
+							 }
+						  }
+				reserves=1
+				activate_production_methods={ "pm_cannons" "pm_automation_disabled" }
+			  }
+			  create_building={
+				building="building_logging_camp"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:THK"
+                        levels=1
+                        region="STATE_MLIMASHWARI"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_saw_mills" "pm_no_equipment" "pm_road_carts" "pm_hardwood" }
+			}
+			create_building={
+				building="building_iron_mine"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:THK"
+							levels=2
+							region="STATE_MLIMASHWARI"
+					   }
+					}
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
 	}
 }
