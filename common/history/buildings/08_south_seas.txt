@@ -1598,7 +1598,7 @@
                     building={ 
                         type="building_financial_district"
                         country="c:VHA"
-                        levels=2
+                        levels=3
                         region="STATE_APLUKACAL"
                    }
                 }
@@ -1611,7 +1611,7 @@
 						building={ 
 							type="building_financial_district"
 							country="c:VHA"
-							levels=1
+							levels=2
 							region="STATE_APLUKACAL"
 					   }
 					}
@@ -1682,6 +1682,19 @@
 			activate_production_methods={ "pm_horizontal_drawer_cabinets" }
 		}	
 		create_building={
+			building="building_shipyards"
+			add_ownership={ 
+				building={ 
+					type="building_financial_district"
+					country="c:SAE"
+					levels=1
+					region="STATE_LAIVINMAR"
+				}
+			}
+			reserves=1
+			activate_production_methods={ "pm_basic_shipbuilding" }
+		}
+		create_building={
 			building="building_paper_mills"
 			add_ownership={ 
 				building={ 
@@ -1700,7 +1713,7 @@
 					building={ 
 						type="building_manor_house"
 						country="c:SAE"
-						levels=5
+						levels=7
 						region="STATE_LAIVINMAR"
 				   }
 				}
@@ -1713,7 +1726,7 @@
                     building={ 
                         type="building_financial_district"
                         country="c:SAE"
-                        levels=1
+                        levels=3
                         region="STATE_LAIVINMAR"
                    }
                 }
@@ -1796,6 +1809,25 @@
 				activate_production_methods={ "pm_horizontal_drawer_cabinets" }
 			}	
 			create_building={
+				building="building_construction_sector"
+				level=3
+				reserves=1
+				activate_production_methods={ "pm_wooden_buildings" }
+			}
+			create_building={
+				building="building_cotton_plantation"
+			  	add_ownership={ 
+					building={ 
+				  		type="building_financial_district"
+				 		country="c:VHA"
+				  		levels=5
+				  		region="STATE_ZVEJYCATIA"
+					}
+			 	}
+				reserves=1
+				activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts" }
+		  	}
+			create_building={
 				building="building_paper_mills"
                 add_ownership={ 
                     building={ 
@@ -1814,7 +1846,7 @@
                     building={ 
                         type="building_financial_district"
                         country="c:VHA"
-                        levels=1
+                        levels=5
                         region="STATE_ZVEJYCATIA"
                    }
                 }
@@ -1889,6 +1921,19 @@
 
 	s:STATE_UPESTARR = {
 		region_state:VHA = {
+			create_building={
+				building="building_cotton_plantation"
+			  	add_ownership={ 
+					building={ 
+				  		type="building_financial_district"
+				 		country="c:VHA"
+				  		levels=4
+				  		region="STATE_UPESTARR"
+					}
+			 	}
+				reserves=1
+				activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts" }
+		  	}
 			create_building={
 				building="building_logging_camp"
 				add_ownership={ 
@@ -2042,6 +2087,21 @@
 	}
 
 	s:STATE_SMILTYNECAT = {
+		region_state:VHO = {
+			create_building={
+				building="building_tobacco_plantation"
+				add_ownership={ 
+					building={ 
+						type="building_manor_house"
+						country="c:VHO"
+						levels=4
+						region="STATE_SMILTYNECAT"
+				   }
+				}
+				reserves=1
+				activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }
+			}
+		}
 
 	}
 
@@ -2084,6 +2144,19 @@
 				reserves=1
 				activate_production_methods={ "pm_horizontal_drawer_cabinets" }
 			}	
+			create_building={
+				building="building_arts_academy"
+				add_ownership={
+				  building={
+					  type="building_wizard_tower"
+					  country="c:VHO"
+					  levels=1
+					  region="STATE_AKVALITVA"
+				  }
+			  }
+				reserves=1
+				activate_production_methods={ "pm_traditional_art" }
+			  }	
 			create_building={
 				building="building_shipyards"
 				add_ownership={ 

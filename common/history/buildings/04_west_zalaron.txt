@@ -2980,6 +2980,32 @@
 				activate_production_methods={ "pm_basic_port" }
 			}
 			create_building={
+				building="building_logging_camp"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:SNB"
+                        levels=1
+                        region="STATE_KILIMAMAI"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_saw_mills" "pm_hardwood" "pm_no_equipment" "pm_road_carts" }
+			}
+			create_building={
+				building="building_artillery_foundries"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:SNB"
+							levels=1
+							region="STATE_KILIMAMAI"
+					   }
+					}
+				reserves=1
+				activate_production_methods={ "pm_cannons" "pm_automation_disabled" }
+			}
+			create_building={
 				building="building_tooling_workshops"
                 add_ownership={ 
                     building={ 
@@ -3089,6 +3115,19 @@
 }
   s:STATE_JUACHAI = {
 		region_state:SNB={
+			create_building={
+				building="building_fishing_wharf"
+                add_ownership={ 
+                    building={ 
+                        type="building_adventuring_guild"
+                        country="c:SNB"
+                        levels=5
+                        region="STATE_JUACHAI"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_fishing_trawlers" "pm_unrefrigerated" }
+			}
 			create_building={
 				building="building_furniture_manufacturies"
                 add_ownership={ 
@@ -3200,10 +3239,55 @@
 				activate_production_methods={ "pm_horizontal_drawer_cabinets"  }
 			}
 			create_building={
+				building="building_construction_sector"
+				level=3
+				reserves=1
+				activate_production_methods={ "pm_wooden_buildings" }
+			}
+			create_building={
 				building="building_university"
 				level=3
 				reserves=1
 				activate_production_methods={ "pm_secular_academia" }
+			}
+			create_building={
+				building="building_military_shipyards"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:SNB"
+							levels=1
+							region="STATE_SAWATHONG"
+					   }
+					}
+				reserves=1
+				activate_production_methods={ "pm_military_shipbuilding_wooden" }
+			}	
+			create_building={
+				building="building_logging_camp"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:SNB"
+                        levels=4
+                        region="STATE_SAWATHONG"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_saw_mills" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
+			}
+			create_building={
+				building="building_furniture_manufacturies"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:SNB"
+                        levels=2
+                        region="STATE_SAWATHONG"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_lathe" "pm_no_luxuries" "pm_automation_disabled" }
 			}
 			create_building={
 				building="building_arts_academy"
@@ -3211,7 +3295,7 @@
 				  building={
 					  type="building_wizard_tower"
 					  country="c:SNB"
-					  levels=4
+					  levels=2
 					  region="STATE_SAWATHONG"
 				  }
 			  }
@@ -3277,7 +3361,7 @@
                         type="building_financial_district"
                         country="c:SNB"
                         levels=5
-                        region="STATE_KILIMAMAI"
+                        region="STATE_SAWATHONG"
                    }
                 }
                 reserves=1
@@ -3325,12 +3409,25 @@
   s:STATE_KLONGBARIDI = {
 		region_state:SNB={
 			create_building={
+				building="building_cotton_plantation"
+				add_ownership={ 
+					building={ 
+						type="building_manor_house"
+						country="c:SNB"
+						levels=2
+						region="STATE_KLONGBARIDI"
+				   }
+				}
+				reserves=1
+				activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts"  }
+			}
+			create_building={
 				building="building_sulfur_mine"
 				add_ownership={ 
 					building={ 
 						type="building_financial_district"
 						country="c:SNB"
-						levels=1
+						levels=2
 						region="STATE_KLONGBARIDI"
 				   }
 				}
@@ -3360,7 +3457,7 @@
 							building={ 
 								type="building_manor_house"
 								country="c:SNB"
-								levels=5
+								levels=9
 								region="STATE_SWAHAILUK"
 						   }
 						}
@@ -3491,19 +3588,6 @@
 				reserves=1
 				activate_production_methods={ "pm_basic_shipbuilding" }
 			}
-            create_building={
-				building="building_military_shipyards"
-                add_ownership={ 
-                    building={ 
-                        type="building_financial_district"
-                        country="c:SNB"
-                        levels=1
-                        region="STATE_KISIKLONG"
-                   }
-                }
-				reserves=1
-				activate_production_methods={ "pm_military_shipbuilding_wooden" }
-			}
 			create_building={
 				building="building_maize_farm"
 				add_ownership={ 
@@ -3524,7 +3608,7 @@
                         type="building_adventuring_guild"
                         country="c:SNB"
                         levels=2
-                        region="STATE_KILIMAMAI"
+                        region="STATE_KISIKLONG"
                    }
                 }
 				reserves=1
@@ -4588,6 +4672,19 @@
 				level=1
 				reserves=1
 				activate_production_methods={ "pm_basic_port" }
+			}
+			create_building={
+				building="building_artifactory"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:SNB"
+							levels=4
+							region="STATE_KEEDZAI"
+					   }
+					}
+				reserves=1
+				activate_production_methods={ "pm_artifactory_hand_sorting" "pm_artifactory_conveyor_belts" }
 			}		
 			create_building={
 				building="building_livestock_ranch"
@@ -4595,7 +4692,7 @@
 					building={ 
 						type="building_manor_house"
 						country="c:SNB"
-						levels=7
+						levels=2
 						region="STATE_KEEDZAI"
 				   }
 				}
@@ -4608,7 +4705,7 @@
 						building={ 
 							type="building_manor_house"
 							country="c:SNB"
-							levels=1
+							levels=2
 							region="STATE_KEEDZAI"
 					}
 					}
