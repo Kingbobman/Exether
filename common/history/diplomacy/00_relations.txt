@@ -14,6 +14,36 @@
 		set_relations = { country = c:SAE value = 50 }
 		set_relations = { country = c:VHA value = 50 }
 	}
+	C:LPS = {
+		set_relations = { country = c:VHO value = 50 }
+		set_relations = { country = c:JUX value = 50 }
+		set_relations = { country = c:SAE value = 50 }
+		set_relations = { country = c:VHA value = 50 }
+	}
+	C:VHO = {
+		set_relations = { country = c:LPS value = 50 }
+		set_relations = { country = c:JUX value = 50 }
+		set_relations = { country = c:SAE value = 50 }
+		set_relations = { country = c:VHA value = 50 }
+	}
+	C:JUX = {
+		set_relations = { country = c:LPS value = 50 }
+		set_relations = { country = c:VHO value = 50 }
+		set_relations = { country = c:SAE value = 50 }
+		set_relations = { country = c:VHA value = 50 }
+	}
+	C:SAE = {
+		set_relations = { country = c:LPS value = 50 }
+		set_relations = { country = c:JUX value = 50 }
+		set_relations = { country = c:VHO value = 50 }
+		set_relations = { country = c:VHA value = 50 }
+	}
+	C:VHA = {
+		set_relations = { country = c:LPS value = 50 }
+		set_relations = { country = c:JUX value = 50 }
+		set_relations = { country = c:SAE value = 50 }
+		set_relations = { country = c:VHO value = 50 }
+	}
 	C:XOC = {
 		set_relations = { country = c:COC value = 50 }
 		set_relations = { country = c:LIR value = 50 }
@@ -102,12 +132,6 @@
 		set_relations = { country = c:OPA value = -40 }
 		set_relations = { country = c:SET value = -10 }
 		set_relations = { country = c:TEF value = -10 }
-	}
-	c:DUM = {
-		set_relations = { country = c:LAR value = 50 }
-            set_relations = { country = c:JUX value = 50 }
-            set_relations = { country = c:VHA value = 50 }
-			set_relations = { country = c:SAE value = 50 }
 	}
 	c:AHO = {
 		set_relations = { country = c:PFL value = -50 }
