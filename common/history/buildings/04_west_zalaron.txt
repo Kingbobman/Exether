@@ -2864,6 +2864,25 @@
   s:STATE_VITHKUQJA = {
 	region_state:VLT={
 		create_building={
+			building="building_government_administration"
+			level=3
+			reserves=1
+			activate_production_methods={ "pm_horizontal_drawer_cabinets"  }
+		}
+		create_building={
+			building="building_paper_mills"
+				add_ownership={ 
+					building={ 
+						type="building_financial_district"
+						country="c:VLT"
+						levels=1
+						region="STATE_VITHKUQJA"
+				   }
+				}
+			reserves=1
+			activate_production_methods={ "pm_pulp_pressing" "pm_automation_disabled" }
+		}
+		create_building={
 			building="building_coffee_plantation"
 					add_ownership={ 
 						building={ 
@@ -4295,7 +4314,7 @@
         }
   }
   s:STATE_THASAMAKI = {
-		region_state:SNB={
+		region_state:VLT={
 			create_building={
                 building="building_port"
                 level=1
@@ -4307,7 +4326,7 @@
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:SNB"
+						country="c:VLT"
 						levels=6
 						region="STATE_THASAMAKI"
 				   }
@@ -4320,7 +4339,7 @@
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:SNB"
+						country="c:VLT"
 						levels=2
 						region="STATE_THASAMAKI"
 				   }
@@ -4333,52 +4352,26 @@
                 add_ownership={ 
                     building={ 
                         type="building_financial_district"
-                        country="c:SNB"
-                        levels=4
+                        country="c:VLT"
+                        levels=2
                         region="STATE_THASAMAKI"
                    }
                 }
 				reserves=1
 				activate_production_methods={ "pm_saw_mills" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
 			}	
-            create_building={
-				building="building_textile_mills"
-                add_ownership={ 
-                    building={ 
-                        type="building_financial_district"
-                        country="c:SNB"
-                        levels=3
-                        region="STATE_THASAMAKI"
-                   }
-                }
-				reserves=1
-				activate_production_methods={ "pm_dye_workshops" "pm_no_luxury_clothes" "pm_traditional_looms" }
-			}
 			create_building={
 				building="building_tobacco_plantation"
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:SNB"
+						country="c:VLT"
 						levels=3
 						region="STATE_THASAMAKI"
 				   }
 				}
 				reserves=1
 				activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }
-			}
-			create_building={
-				building="building_maize_farm"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:SNB"
-						levels=1
-						region="STATE_THASAMAKI"
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "pm_soil_enriching_farming" "pm_no_secondary" "pm_tools_disabled" }
 			}
 		}
   }
@@ -5458,7 +5451,7 @@
 						  building={ 
 							  type="building_financial_district"
 							  country="c:KHD"
-							  levels=2
+							  levels=3
 							  region="STATE_SHIMAKAI"
 						 }
 					  }

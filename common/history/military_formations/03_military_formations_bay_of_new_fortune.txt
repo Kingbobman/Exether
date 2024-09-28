@@ -42,14 +42,20 @@
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_PWANIQWA
-				count = 10
+				state_region = s:STATE_KILIMASAWA
+				count = 15
 			}
 			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_MAWINGUCHANYA
-				service_type = conscript
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_KILIMASAWA
 				count = 15
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_KILIMASAWA
+				service_type = conscript
+				count = 10
 			}
 
 			save_scope_as = skr_army
@@ -57,7 +63,7 @@
 
 		create_character = {
 			is_general = yes
-			commander_rank = commander_rank_2
+			commander_rank = commander_rank_1
 			hq = sr:region_hyena_plains
 			interest_group = ig_armed_forces
 			age = 32
@@ -69,6 +75,37 @@
 		}
 		scope:skr_general = {
 			transfer_to_formation = scope:skr_army
+		}
+
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_hyena_plains
+
+			name = "Hyena Packs"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_KILIMADADA
+				count = 20
+			}
+
+				save_scope_as = kvgarmy2
+		}
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			hq = sr:region_hyena_plains
+			interest_group = ig_armed_forces
+			age = 30
+			traits = {
+				plains_commander
+				surveyor
+			}
+			save_scope_as = kvggen2
+		}
+		
+		scope:kvggen2 = {
+			transfer_to_formation = scope:kvgarmy2
 		}
 	}
 	c:GPK ?= {
