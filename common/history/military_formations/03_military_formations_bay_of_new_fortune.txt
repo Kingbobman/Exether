@@ -116,27 +116,21 @@
 			name = "Navakai Pass Guards"
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
+				type = unit_type:combat_unit_type_skirmish_infantry
 				state_region = s:STATE_SUYANAKU
-				count = 10
+				count = 15
 			}
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_mobile_artillery
 				state_region = s:STATE_SUYANAKU
-				count = 10
+				count = 25
 			}
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
+				type = unit_type:combat_unit_type_skirmish_infantry
 				state_region = s:STATE_NAVAKAI
 				count = 20
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
-				state_region = s:STATE_NAVAKAI
-				count = 5
 			}
 
 			save_scope_as = gpk_army
@@ -146,6 +140,13 @@
 			is_general = yes
 			commander_rank = commander_rank_2
 			hq = region_south_chin_desert
+			interest_group = ig_devout
+			age = 30
+			traits = {
+				mountain_commander
+				stalwart_defender
+				surveyor
+			}
 			save_scope_as = gpk_general
 		}
 		scope:gpk_general = {

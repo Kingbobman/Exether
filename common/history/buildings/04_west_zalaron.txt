@@ -4378,23 +4378,30 @@
   s:STATE_NAVAKAI = {
 	region_state:GPK = {
 		create_building={
-			building="building_government_administration"
-			level=8
+			building="building_railway"
+				add_ownership={ 
+					building={ 
+						type="building_financial_district"
+						country="c:GPK"
+						levels=1
+						region="STATE_SUYANAKU"
+					}
+				}
 			reserves=1
-			activate_production_methods={ "pm_simple_organization"  }
+			activate_production_methods={ "pm_steam_trains" "pm_wooden_passenger_carriages" }
 		}
 		create_building={
-			building="building_tooling_workshops"
-			add_ownership={ 
-				building={ 
-					type="building_financial_district"
-					country="c:GPK"
-					levels=1
-					region="STATE_NAVAKAI"
-			   }
-			}
+			building="building_furniture_manufacturies"
+				add_ownership={ 
+					building={ 
+						type="building_financial_district"
+						country="c:GPK"
+						levels=1
+						region="STATE_NAVAKAI"
+				   }
+				}
 			reserves=1
-			activate_production_methods={ "pm_pig_iron" "pm_automation_disabled" }
+			activate_production_methods={ "pm_lathe" "pm_automation_disabled" "pm_precision_tools" }
 		}
 		create_building={
 			building="building_arms_industry"
@@ -4402,7 +4409,7 @@
 					building={ 
 						type="building_financial_district"
 						country="c:GPK"
-						levels=1
+						levels=3
 						region="STATE_NAVAKAI"
 				   }
 				}
@@ -4415,12 +4422,12 @@
 				building={ 
 					type="building_financial_district"
 					country="c:GPK"
-					levels=1
+					levels=3
 					region="STATE_NAVAKAI"
 			   }
 			}
 			reserves=1
-			activate_production_methods={ "pm_saw_mills" "pm_no_equipment" "pm_road_carts" "pm_increased_hardwood" }
+			activate_production_methods={ "pm_saw_mills" "pm_no_equipment" "pm_road_carts" "pm_increased_hardwood" "pm_stoneskin_potion" }
 		}
 		create_building={
 			building="building_iron_mine"
@@ -4433,7 +4440,7 @@
 				   }
 				}
 			reserves=1
-			activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			activate_production_methods={ "pm_atmospheric_engine_pump_building_iron_mine" "pm_iron_mines_potions_of_strength" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
 		}
 	}
   }
