@@ -1,26 +1,26 @@
-﻿je_antarctica = {
-
-	group = je_group_expeditions
+﻿je_everfrost_expedition = {
+	group = je_group_quests
 
 	on_monthly_pulse = {
 		random_events = {
 			100 = 0
 			10 = expedition_events.20 #posts a notification
-			65 = cold.5 #the pole
-			50 = cold.2 #discovery hut
-			20 = cold.1 #mountains
-			10 = cold.3 #lost
-			10 = cold.6 #eating the dogs
-			30 = cold.8 #pack ice
-			50 = cold.11 #great ice barrier
-			20 = cold.12 #glacier
-			5 = cold.13 #strange rock
+			65 = everfrost_expedition.5 #the pole
+			50 = everfrost_expedition.2 #discovery hut
+			20 = everfrost_expedition.1 #mountains
+			10 = everfrost_expedition.3 #lost
+			10 = everfrost_expedition.6 #eating the dogs
+			30 = everfrost_expedition.8 #pack ice
+			50 = everfrost_expedition.11 #great ice barrier
+			20 = everfrost_expedition.12 #glacier
+			5 = everfrost_expedition.13 #strange rock
 		}
 	}
 	
 	immediate = {
-		random_scope_character = {
+		random_character_in_void = {
 			limit = {
+				owner = root
 				has_variable = expedition_leader_var
 			}
 			save_scope_as = expedition_leader
@@ -58,11 +58,12 @@
     }
 	
 	on_fail = {
-		trigger_event = { id = cold.4 }
+		trigger_event = { id = everfrost_expedition.4 }
 		remove_variable = on_expedition
 		remove_modifier = modifier_large_expedition_cost
-		random_scope_character = {
+		random_character_in_void = {
 			limit = {
+				owner = root
 				has_variable = expedition_leader_var
 			}
 			remove_variable = expedition_leader_var
@@ -88,12 +89,13 @@
 	}
 	
 	on_complete = {
-		trigger_event = { id = cold.7 }
+		trigger_event = { id = everfrost_expedition.7 }
 		remove_variable = on_expedition
 		remove_modifier = modifier_large_expedition_cost
-		set_variable = antarctica_expedition_success_var #great exhibition check
-		random_scope_character = {
+		set_variable = everfrost_expedition_success_var #great exhibition check
+		random_character_in_void = {
 			limit = {
+				owner = root
 				has_variable = expedition_leader_var
 			}
 			remove_variable = expedition_leader_var

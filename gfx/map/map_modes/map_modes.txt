@@ -85,7 +85,7 @@ mm_default = {
 	map_painting_mode = countries
 	map_painting_mode_alternate = colonizable_provinces
 	map_names = countries
-	map_markers = { battle_marker construction_marker construction_summary_marker construction_queue_marker event_marker front_marker city_marker input_shortage_marker input_goods_shortage_summary_marker state_effect_marker sea_node_marker colony_marker revolutionary_movement_marker diplomatic_play_marker }
+	map_markers = {  battle_marker construction_marker construction_summary_marker construction_queue_marker event_marker front_marker city_marker input_shortage_marker input_goods_shortage_summary_marker state_effect_marker sea_node_marker colony_marker revolutionary_movement_marker diplomatic_play_marker }
 	map_tooltip_offset = state
 
 	is_visible = no 					# special behaviour, overriden in code
@@ -1241,6 +1241,21 @@ mm_mass_migration_pull = {
 
 	gradient_border_settings = heatmap
 	has_fog_of_war = no
+
+	soundeffect = "snapshot:/Dynamic/low_pass_world"
+}
+
+mm_situations = {
+	map_painting_mode = strategic_regions
+	map_names = strategic_regions
+	map_markers = { event_marker strategic_region_marker }
+	map_tooltip_offset = strategic_region
+	is_visible = yes
+
+	gradient_border_settings = default
+
+	has_fog_of_war = yes
+	
 
 	soundeffect = "snapshot:/Dynamic/low_pass_world"
 }

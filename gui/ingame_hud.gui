@@ -106,6 +106,8 @@ widget = {
 
 	pause_border = {}
 
+
+
 	generate_retainer_type = {
 		visible = "[GetVariableSystem.Exists('show_recruit_retainer')]"
 		name = generate_character_retainer
@@ -124,6 +126,27 @@ widget = {
 			datamodel = "[GetPlayer.MakeScope.GetList('available_retainers_list')]"
 		}
 	}
+
+	assign_retainer_type = {
+		visible = "[GetVariableSystem.Exists('show_assign_retainer')]"
+		name = assign_character_retainer
+	
+		blockoverride "window_header_name" {
+			text = "ASSIGN_CHARACTER_RETAINER_HEADER"
+		}
+	
+		blockoverride "header_close_button" {
+			visible = yes
+			onclick = "[GetVariableSystem.Clear('show_assign_retainer')]"
+		}
+	
+		blockoverride "datamodel"
+		{
+			datamodel = "[GetPlayer.MakeScope.GetList('hired_retainers_list')]"
+		}
+	}
+
+
 	
 	# fullscreens
 	using = information_panels_fullscreens
@@ -228,6 +251,8 @@ widget = {
 			using = sidebar_margin
 		}
 	}
+
+
 
 	# topbar / alerts / timemanip
 	vbox = {
