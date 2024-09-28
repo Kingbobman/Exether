@@ -810,7 +810,7 @@ types commander_panel_types
 
 								blockoverride "divider" {
 									divider_clean = {
-										visible = "[And(Character.IsAgitator, Not(Character.MakeScope.Var('is_retainer').IsSet))]"
+										visible = "[Or(And(Character.IsAgitator, Not(Character.MakeScope.Var('is_retainer').IsSet)), And(Character.IsAgitator, Character.MakeScope.Var('assigned_region').IsSet))]"
 										parentanchor = bottom|hcenter
 										position = { 0 -2 }
 									}
@@ -819,6 +819,7 @@ types commander_panel_types
 
 							### POLITICAL MOVEMENT PREDICTION - WHEN IN EXILE POOL
 							character_stats_entry = {
+								visible = "[Not(Character.MakeScope.Var('is_retainer').IsSet)]"
 								datacontext = "[Character.PredictLawToAgitate(GetPlayer.Self)]"
 								datacontext = "[Law.GetPoliticalMovement]"
 
@@ -913,6 +914,49 @@ types commander_panel_types
 										multiline = yes
 										align = left|nobaseline
 										text = "AGITATOR_POLITICAL_MOVEMENT"
+									}
+								}
+							}
+
+							character_stats_entry = {
+								visible = "[And(Character.MakeScope.Var('is_retainer').IsSet, Character.MakeScope.Var('assigned_region').IsSet)]"
+
+								datacontext = "[Character.PredictLawToAgitate(GetPlayer.Self)]"
+								datacontext = "[Law.GetPoliticalMovement]"
+
+								blockoverride "icon" {
+									icon = {
+										size = { 35 35 }
+										texture = "gfx/interface/icons/invention_icons/navigation.dds"
+										parentanchor = left|vcenter
+										position = { 10 0 }
+									}
+
+									icon = {
+										visible = "[Not(Law.IsValid)]"
+										size = { 35 35 }
+										texture = "gfx/interface/icons/generic_icons/red_cross.dds"
+										parentanchor = left|vcenter
+										position = { 10 0 }
+									}
+								}
+
+								blockoverride "double_entry_label" {}
+								blockoverride "double_entry_value" {}
+								blockoverride "single_text_entry" {}
+
+								blockoverride "divider" {}
+
+								blockoverride "additional_items" {
+									textbox = {
+										size = { 170 40 }
+										position = { 55 0 }
+										parentanchor = vcenter
+										elide = right
+										fontsize_min = 14
+										multiline = yes
+										align = left|nobaseline
+										text = "RETAINER_ASSIGNED_REGION"
 									}
 								}
 							}

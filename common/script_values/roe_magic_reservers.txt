@@ -74,10 +74,12 @@ magic_arcana_costs = {
 
 arcana_generation = {
 	value = modifier:country_arcana_pos_add
-	multiply = {
-		value = 1
-		add = modifier:country_arcana_gen_mult
-	}
+	multiply = arcana_generation_mult
+}
+
+arcana_generation_mult = {
+	value = 1
+	add = modifier:country_arcana_gen_mult
 }
 
 arcana_usage = {
