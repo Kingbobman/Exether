@@ -43,14 +43,6 @@ types magic_panel
 			back_button_large = {
 				position = { 8 30 }
 				onclick = "[GetVariableSystem.Toggle('show_magic')]"
-				visible = "[GetVariableSystem.Exists('show_magic')]"
-				input_action = "back"
-			}
-
-			back_button_large = {
-				position = { 8 30 }
-				onclick = "[GetVariableSystem.Toggle('show_magic')]"
-				visible = "[Not(GetVariableSystem.Exists('show_magic'))]"
 				input_action = "back"
 			}
 		}

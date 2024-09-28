@@ -862,12 +862,12 @@ container = {
 	layer = layer_map_markers
 	parentanchor = bottom|hcenter
 
+
 	### BACKGROUND (HAS INTEREST)
 	widget = {
+		visible = "[And(GetPlayer.HasInterestIn( StrategicRegion.Self), Not(IsMapModeSelected('mm_situations')))]"
 		size = { 100% 100% }
 		datacontext = "[StrategicRegionMarker.GetStrategicRegion]"
-		visible = "[GetPlayer.HasInterestIn( StrategicRegion.Self )]"
-
 		background = {
 			using = paper_bg
 		}
@@ -875,9 +875,10 @@ container = {
 
 	### BACKGROUND (NO INTEREST)
 	widget = {
+		visible = "[And(Not(GetPlayer.HasInterestIn( StrategicRegion.Self)), Not(IsMapModeSelected('mm_situations')))]"
 		size = { 100% 100% }
 		datacontext = "[StrategicRegionMarker.GetStrategicRegion]"
-		visible = "[Not(GetPlayer.HasInterestIn( StrategicRegion.Self ))]"
+		
 
 		background = {
 			using = default_background
@@ -889,8 +890,10 @@ container = {
 		direction = vertical
 		margin = { 7 7 }
 		spacing = 7
-
+		using = clickthrough_blocker
+		
 		textbox = {
+			visible = "[And(IsZoomLevelNear, Not(IsMapModeSelected('mm_situations')))]"
 			multiline = yes
 			datacontext = "[StrategicRegionMarker.GetStrategicRegion]"
 			raw_text = "#BOLD [StrategicRegion.GetNameNoFormatting]#!"
@@ -898,7 +901,6 @@ container = {
 			align = hcenter|nobaseline
 			parentanchor = top|hcenter
 			margin = { 25 0 }
-			visible = "[IsZoomLevelNear]"
 			using = fontsize_large
 
 			tooltipwidget = {
@@ -908,12 +910,13 @@ container = {
 
 		### NATIONS WITH INTEREST MARKERS
 		dynamicgridbox = {
+			visible = "[And(Not(IsDataModelEmpty(StrategicRegionMarker.GetStrategicRegion.GetInterests)), Not(IsMapModeSelected('mm_situations')))]"
 			parentanchor = hcenter
 			flipdirection = yes
 			name = "interest_marker_box"
 			datamodel = "[StrategicRegionMarker.GetStrategicRegion.GetInterests]"
 			datamodel_wrap = 8
-			visible = "[Not(IsDataModelEmpty(StrategicRegionMarker.GetStrategicRegion.GetInterests))]"
+			
 
 			item = {
 				container = {
@@ -1025,7 +1028,7 @@ container = {
 		### DIPLO PLAY
 		flowcontainer = {
 			using = default_list_position
-			visible = "[StrategicRegionMarker.GetStrategicRegion.HasDiplomaticPlay]"
+			visible = "[And(StrategicRegionMarker.GetStrategicRegion.HasDiplomaticPlay, Not(IsMapModeSelected( 'mm_situations')))]"
 			margin_top = 5
 
 			diplomatic_play_item = {
@@ -1040,7 +1043,78 @@ container = {
 				}
 			}
 		}
+
+		container = {
+			resizeparent = no
+			visible = "[IsMapModeSelected('mm_situations'))]"
+			datamodel = "[GetPlayer.MakeScope.GetList('hired_retainers_list')]"
+			direction = horizontal
+			
+			spacing = 5
+			parentanchor = hcenter|vcenter
+			using = clickthrough_blocker
+	
+			item = {
+				character_portrait_large = {
+					visible = "[And(ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('chosen_retainer', Character.MakeScope).AddScope('chosen_region', StrategicRegion.MakeScope).End), Character.IsValid)]"
+					using = clickthrough_blocker
+					blockoverride "highlight" {}
+					datacontext = "[Scope.GetCharacter]"
+					parentanchor = hcenter|vcenter
+					using = tooltip_below
+					datacontext = "[StrategicRegionMarker.GetStrategicRegion]"
+					datacontext = "[GetScriptedGui('retainer_check_region')]"
+					
+	
+					button_icon_round = {
+						size = { 38 38 }
+						position = { -2 0 }
+						parentanchor = bottom|right
+						visible = "[InterestGroup.IsValid]"
+						block "onclick" {
+							onclick = "[InformationPanelBar.OpenInterestGroupPanel(InterestGroup.AccessSelf)]"
+							onrightclick = "[RightClickMenuManager.ShowForIG(InterestGroup.AccessSelf)]"
+						}
+		
+						blockoverride "icon" {
+							texture = "gfx/interface/icons/generic_icons/red_cross.dds"
+						}
+						blockoverride "icon_size" {
+							size = { 50% 50% }
+						}
+						datacontext = "[GetScriptedGui('unassign_chosen_retainer')]"
+						onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('chosen_retainer', Character.MakeScope).End)]"
+						enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('chosen_retainer', Character.MakeScope).End)]"
+						tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('chosen_retainer', Character.MakeScope).End)]"
+					}
+				}
+			}
+	
+			add_character_button = {
+				visible = "[IsMapModeSelected( 'mm_situations')]"
+				using = clickthrough_blocker
+				size = { 83 83 }
+				parentanchor = hcenter|vcenter
+				datacontext = "[StrategicRegionMarker.GetStrategicRegion]"
+				datacontext = "[GetScriptedGui('assign_retainer')]"
+				tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('selected_region', StrategicRegion.MakeScope).End)]"
+				enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('selected_region', StrategicRegion.MakeScope).End)]"
+		
+				
+				blockoverride "tooltip" {
+					tooltip = "RECRUIT_CHARACTER_RETAINER"
+				}
+				
+				blockoverride "onclick" {
+					onclick = "[GetVariableSystem.Toggle('show_assign_retainer')]"
+					onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).AddScope('selected_region', StrategicRegion.MakeScope).End)]"
+				}
+			}
+		}
 	}
+
+
+
 }
 
 ### DIPLOMATIC PLAY

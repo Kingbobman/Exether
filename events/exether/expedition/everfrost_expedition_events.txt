@@ -1,13 +1,13 @@
-﻿namespace = cold
+﻿namespace = everfrost_expedition
 
 # Start Event
-cold.101 = {
+everfrost_expedition.101 = {
 	type = country_event
 	placement = ROOT
 	
-	title = cold.101.t
-	desc = cold.101.d
-	flavor = cold.101.f
+	title = everfrost_expedition.101.t
+	desc = everfrost_expedition.101.d
+	flavor = everfrost_expedition.101.f
 	
 	duration = 3
 	
@@ -18,18 +18,18 @@ cold.101 = {
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	
 	option = {
-		name = cold.101.a
-		trigger_event = { id = cold.102 days = 0 popup = yes }
+		name = everfrost_expedition.101.a
+		trigger_event = { id = everfrost_expedition.102 days = 0 popup = yes }
 	}
 }
 
-cold.102 = { #Choose commander
+everfrost_expedition.102 = { #Choose commander
 	type = country_event
     placement = ROOT
 
-    title = cold.102.t
-    desc = cold.102.d
-    flavor = cold.102.f
+    title = everfrost_expedition.102.t
+    desc = everfrost_expedition.102.d
+    flavor = everfrost_expedition.102.f
 
     duration = 3
 	
@@ -40,29 +40,20 @@ cold.102 = { #Choose commander
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	
 	trigger = {
-		any_scope_character = {
-			has_role = admiral
-			is_busy = no
-		}
+		has_free_retainer = yes
 	}
 
 	immediate = {
-		random_scope_character = {
+		random_character_in_void = {
 			limit = {
-				is_busy = no
-				has_role = admiral
-				has_variable = polar_explorer
-				is_ruler = no
+				is_owned_unassigned_retainer = yes
 			}
 			save_scope_as = expedition_leader_1
 		}
 		if = {
-			random_scope_character = {
+			random_character_in_void = {
 				limit = {
-					is_busy = no
-					is_ruler = no
-					has_role = admiral
-					has_trait = explorer
+					is_owned_unassigned_retainer = yes
 					NOT = {
 						this = scope:expedition_leader_1
 					}
@@ -71,11 +62,9 @@ cold.102 = { #Choose commander
 			}
 		}
 		else = {
-			random_scope_character = {
+			random_character_in_void = {
 				limit = {
-					is_busy = no
-					is_ruler = no
-					has_role = admiral
+					is_owned_unassigned_retainer = yes
 					NOT = {
 						this = scope:expedition_leader_1
 					}
@@ -83,11 +72,9 @@ cold.102 = { #Choose commander
 				save_scope_as = expedition_leader_2
 			}
 		}
-		random_scope_character = {
+		random_character_in_void = {
 			limit = {
-				is_busy = no
-				is_ruler = no
-				has_role = admiral
+				is_owned_unassigned_retainer = yes
 				NOR = {
 					this = scope:expedition_leader_1
 					this = scope:expedition_leader_2
@@ -95,11 +82,9 @@ cold.102 = { #Choose commander
 			}
 			save_scope_as = expedition_leader_3
 		}
-		random_scope_character = {
+		random_character_in_void = {
 			limit = {
-				is_busy = no
-				is_ruler = no
-				has_role = admiral
+				is_owned_unassigned_retainer = yes
 				NOR = {
 					this = scope:expedition_leader_1
 					this = scope:expedition_leader_2
@@ -119,7 +104,7 @@ cold.102 = { #Choose commander
 	}
 
 	option = {
-		name = cold.102.a
+		name = everfrost_expedition.102.a
 		custom_tooltip = expedition_costs_tt
 		trigger = {
 			exists = scope:expedition_leader_1
@@ -135,12 +120,12 @@ cold.102 = { #Choose commander
 			set_character_busy_and_immortal = yes
 		}
 		add_journal_entry = {
-			type = je_antarctica
+			type = je_everfrost_expedition
 		}
 	}
 
 	option = {
-		name = cold.102.b
+		name = everfrost_expedition.102.b
 		custom_tooltip = expedition_costs_tt
 		trigger = {
 			exists = scope:expedition_leader_2
@@ -154,12 +139,12 @@ cold.102 = { #Choose commander
 			set_character_busy_and_immortal = yes
 		}
 		add_journal_entry = {
-			type = je_antarctica
+			type = je_everfrost_expedition
 		}
 	}
 
 	option = {
-		name = cold.102.c
+		name = everfrost_expedition.102.c
 		custom_tooltip = expedition_costs_tt
 		trigger = {
 			exists = scope:expedition_leader_3
@@ -173,12 +158,12 @@ cold.102 = { #Choose commander
 			set_character_busy_and_immortal = yes
 		}
 		add_journal_entry = {
-			type = je_antarctica
+			type = je_everfrost_expedition
 		}
 	}
 	
 	option = {
-		name = cold.102.e
+		name = everfrost_expedition.102.e
 		custom_tooltip = expedition_costs_tt
 		trigger = {
 			NOT = { exists = scope:expedition_leader_1 }
@@ -193,19 +178,19 @@ cold.102 = { #Choose commander
 			set_character_busy_and_immortal = yes
 		}
 		add_journal_entry = {
-			type = je_antarctica
+			type = je_everfrost_expedition
 		}
 	}
 }
 
 # Mountains
-cold.1 = {
+everfrost_expedition.1 = {
 	type = country_event
 	placement = ROOT
 	
-	title = cold.1.t
-	desc = cold.1.d
-	flavor = cold.1.f
+	title = everfrost_expedition.1.t
+	desc = everfrost_expedition.1.d
+	flavor = everfrost_expedition.1.f
 	
 	duration = 3
 	
@@ -225,13 +210,13 @@ cold.1 = {
 	}
 	
 	option = { # Move on
-		name = cold.1.a
+		name = everfrost_expedition.1.a
 		default_option = yes
 		expedition_minor_progress_effect = yes
 	}
 	
 	option = { # Do some science
-		name = cold.1.b
+		name = everfrost_expedition.1.b
 		random_list = { 
 			50 = {
 				scope:expedition_leader = {
@@ -241,7 +226,7 @@ cold.1 = {
 					}
 				}
 				add_modifier = {
-					name = antarctic_research
+					name = everfrost_research
 					months = normal_modifier_time
 				}
 				expedition_minor_progress_effect = yes
@@ -252,7 +237,7 @@ cold.1 = {
 		}
 	}
 	option = { # climb Erebus
-		name = cold.1.c
+		name = everfrost_expedition.1.c
 		random_list = {
 			25 = {
 				scope:expedition_leader = {
@@ -263,7 +248,7 @@ cold.1 = {
 					}
 				}
 				add_modifier = {
-					name = climbed_erebus
+					name = climbed_krutum
 					months = normal_modifier_time
 				}
 				expedition_minor_progress_effect = yes
@@ -276,28 +261,28 @@ cold.1 = {
 }
 
 # Discovery Hut
-cold.2 = {
+everfrost_expedition.2 = {
 	type = country_event
 	placement = ROOT
 	
-	title = cold.2.t
+	title = everfrost_expedition.2.t
 	desc = {
 		first_valid = {
 			triggered_desc = {
-				desc = cold.2.d
+				desc = everfrost_expedition.2.d
 				trigger = {
 					NOT = { has_global_variable = discovery_hut }
 				}
 			}
 			triggered_desc = {
-				desc = cold.2.d2
+				desc = everfrost_expedition.2.d2
 				trigger = {
 					has_global_variable = discovery_hut
 				}
 			}
 		}
 	}
-	flavor = cold.2.f
+	flavor = everfrost_expedition.2.f
 	
 	duration = 3
 	
@@ -323,7 +308,7 @@ cold.2 = {
 	}
 	
 	option = { # make a durable hut and leave supplies
-		name = cold.2.a
+		name = everfrost_expedition.2.a
 		trigger = {
 			NOT = { has_global_variable = discovery_hut_established }
 		}
@@ -333,14 +318,14 @@ cold.2 = {
 		add_small_peril_effect = yes
 	}
 	option = { # make a flimsy base camp, won't last
-		name = cold.2.b
+		name = everfrost_expedition.2.b
 		trigger = {
 			NOT = { has_global_variable = discovery_hut_established }
 		}
 		expedition_minor_progress_effect = yes
 	}
 	option = { # rest and resupply at the hut
-		name = cold.2.c
+		name = everfrost_expedition.2.c
 		trigger = {
 			has_global_variable = discovery_hut_established
 		}
@@ -350,25 +335,25 @@ cold.2 = {
 }
 
 # Overshot and lost
-cold.3 = {
+everfrost_expedition.3 = {
 	type = country_event
 	placement = ROOT
 	
-	title = cold.3.t
-	desc = cold.3.d
+	title = everfrost_expedition.3.t
+	desc = everfrost_expedition.3.d
 	flavor = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
 					var:expedition_peril >= 7
 				}
-				desc = cold.3.f
+				desc = everfrost_expedition.3.f
 			}
 			triggered_desc = {
 				trigger = {
 					var:expedition_peril < 7
 				}
-				desc = cold.3.f2
+				desc = everfrost_expedition.3.f2
 			}
 		}
 	}	
@@ -391,7 +376,7 @@ cold.3 = {
 	}
 	
 	option = { # go back
-		name = cold.3.a
+		name = everfrost_expedition.3.a
 		default_option = yes
 		random_list = {
 			75 = {
@@ -403,7 +388,7 @@ cold.3 = {
 		}
 	}
 	option = {
-		name = cold.3.b
+		name = everfrost_expedition.3.b
 		random_list = {
 			25 = {
 				expedition_minor_progress_effect = yes
@@ -416,13 +401,13 @@ cold.3 = {
 }
 
 # Doomed
-cold.4 = {
+everfrost_expedition.4 = {
 	type = country_event
 	placement = ROOT
 	
-	title = cold.4.t
-	desc = cold.4.d
-	flavor = cold.4.f
+	title = everfrost_expedition.4.t
+	desc = everfrost_expedition.4.d
+	flavor = everfrost_expedition.4.f
 	
 	duration = 3
 	
@@ -432,14 +417,17 @@ cold.4 = {
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	immediate = {
-		random_scope_character = {
-			limit = { has_variable = expedition_leader_var }
+		random_character_in_void = {
+			limit = {
+				is_owned_unassigned_retainer = yes
+				has_variable = expedition_leader_var
+		 }
 			save_scope_as = expedition_leader
 		}
 	}
 
 	option = {
-		name = cold.4.a
+		name = everfrost_expedition.4.a
 		default_option = yes
 		scope:expedition_leader = {
 			kill_character = yes
@@ -450,28 +438,28 @@ cold.4 = {
 }
 
 # The Pole!
-cold.5 = {
+everfrost_expedition.5 = {
 	type = country_event
 	placement = ROOT
 	
-	title = cold.5.t
+	title = everfrost_expedition.5.t
 	desc = {
 		first_valid = {
 			triggered_desc = {
-				desc = cold.5.d
+				desc = everfrost_expedition.5.d
 				trigger = {
-					NOT = { has_global_variable = south_pole_reached }
+					NOT = { has_global_variable = ice_wall_reached }
 				}
 			}
 			triggered_desc = {
-				desc = cold.5.d2
+				desc = everfrost_expedition.5.d2
 				trigger = {
-					has_global_variable = south_pole_reached
+					has_global_variable = ice_wall_reached
 				}
 			}
 		}
 	}
-	flavor = cold.5.f
+	flavor = everfrost_expedition.5.f
 	
 	duration = 3
 	
@@ -483,48 +471,51 @@ cold.5 = {
 	
 	trigger = {
 		var:expedition_progress >= 6
-		NOT = { has_variable = first_to_reach_south_pole }
+		NOT = { has_variable = first_to_reach_ice_wall }
 	}
 	
 	immediate = {
 		save_scope_as = expedition_country
-		random_scope_character = {
-			limit = { has_variable = expedition_leader_var }
+		random_character_in_void = {
+			limit = {
+				is_owned_unassigned_retainer = yes
+				has_variable = expedition_leader_var 
+			}
 			save_scope_as = expedition_leader
 		}
 		if = {
 			limit = {
 				any_country = {
-					has_variable = first_to_reach_south_pole
+					has_variable = first_to_reach_ice_wall
 				}
 			}
 			random_country = {
 				limit = {
-					has_variable = first_to_reach_south_pole
+					has_variable = first_to_reach_ice_wall
 				}
 				save_scope_as = pole_winner_country
 			}
 		}
-		set_variable = south_pole_event_var
+		set_variable = ice_wall_event_var
 	}
 	
 	option = {
-		name = cold.5.a
+		name = everfrost_expedition.5.a
 		trigger = {
-			NOT = { has_global_variable = south_pole_reached }
+			NOT = { has_global_variable = ice_wall_reached }
 		}
 		default_option = yes
-		set_global_variable = { name = south_pole_reached }
+		set_global_variable = { name = ice_wall_reached }
 		set_variable = {
-			name = first_to_reach_south_pole
+			name = first_to_reach_ice_wall
 		}
 		expedition_minor_progress_effect = yes
 		# Disables future expeditions, we did the thing.
 	}
 	option = {
-		name = cold.5.b
+		name = everfrost_expedition.5.b
 		trigger = {
-			has_global_variable = south_pole_reached
+			has_global_variable = ice_wall_reached
 		}
 		default_option = yes
 		expedition_minor_progress_effect = yes
@@ -532,13 +523,13 @@ cold.5 = {
 }
 
 # Eating the dogs
-cold.6 = {
+everfrost_expedition.6 = {
 	type = country_event
 	placement = ROOT
 	
-	title = cold.6.t
-	desc = cold.6.d
-	flavor = cold.6.f
+	title = everfrost_expedition.6.t
+	desc = everfrost_expedition.6.d
+	flavor = everfrost_expedition.6.f
 	
 	duration = 3
 	
@@ -555,14 +546,17 @@ cold.6 = {
 	
 	immediate = {
 		set_variable = dog_meat
-		random_scope_character = {
-			limit = { has_variable = expedition_leader_var }
+		random_character_in_void = {
+			limit = {
+				is_owned_unassigned_retainer = yes
+			 	has_variable = expedition_leader_var 
+			}
 			save_scope_as = expedition_leader
 		}
 	}
 	
 	option = {
-		name = cold.6.a
+		name = everfrost_expedition.6.a
 		default_option = yes
 		scope:expedition_leader = {
 			add_modifier = {
@@ -573,7 +567,7 @@ cold.6 = {
 		expedition_minor_progress_effect = yes
 	}
 	option = {
-		name = cold.6.b
+		name = everfrost_expedition.6.b
 		custom_tooltip = pet_dog.tt
 		add_medium_peril_effect = yes
 		expedition_minor_progress_effect = yes
@@ -581,28 +575,28 @@ cold.6 = {
 }
 
 # Returning home - Success event
-cold.7 = {
+everfrost_expedition.7 = {
 	type = country_event
 	placement = ROOT
 	
-	title = cold.7.t
+	title = everfrost_expedition.7.t
 	desc = {
 		first_valid = {
 			triggered_desc = {
-				desc = cold.7.d
+				desc = everfrost_expedition.7.d
 				trigger = {
-					NOT = { has_variable = first_to_reach_south_pole }
+					NOT = { has_variable = first_to_reach_ice_wall }
 				}
 			}
 			triggered_desc = {
-				desc = cold.7.d2
+				desc = everfrost_expedition.7.d2
 				trigger = {
-					has_variable = first_to_reach_south_pole
+					has_variable = first_to_reach_ice_wall
 				}
 			}
 		}
 	}
-	flavor = cold.7.f
+	flavor = everfrost_expedition.7.f
 	
 	duration = 3
 	
@@ -614,16 +608,19 @@ cold.7 = {
 	
 	immediate = {
 		save_scope_as = expedition_country
-		random_scope_character = {
-			limit = { has_variable = expedition_leader_var }
+		random_character_in_void = {
+			limit = {
+				is_owned_unassigned_retainer = yes
+				 has_variable = expedition_leader_var 
+			}
 			save_scope_as = expedition_leader
 		}
 	}
 	
 	option = {
-		name = cold.7.a
+		name = everfrost_expedition.7.a
 		trigger = {
-			NOT = { has_variable = first_to_reach_south_pole }
+			NOT = { has_variable = first_to_reach_ice_wall }
 		}
 		default_option = yes
 		scope:expedition_leader = {
@@ -631,43 +628,43 @@ cold.7 = {
 			set_variable = polar_explorer
 			set_character_busy_and_immortal = no
 			add_modifier = {
-				name = succesfull_south_pole_modifier
+				name = succesfull_ice_wall_modifier
 				multiplier = 2
 			}
 		}
 		add_modifier = {
-			name = pole_expedition_returned
+			name = everfrost_expedition_returned
 			months = normal_modifier_time
 		}
 	}
 	option = {
-		name = cold.7.b
+		name = everfrost_expedition.7.b
 		trigger = {
-			has_variable = first_to_reach_south_pole
+			has_variable = first_to_reach_ice_wall
 		}
 		scope:expedition_leader = {
 			add_trait = explorer
 			set_variable = polar_explorer
 			set_character_busy_and_immortal = no
 			add_modifier = {
-				name = succesfull_south_pole_modifier
+				name = succesfull_ice_wall_modifier
 			}
 		}
 		add_modifier = {
-			name = first_to_the_pole
+			name = first_beyond_the_wall
 			months = normal_modifier_time
 		}
 	}
 }
 
 # Pack Ice
-cold.8 = {
+everfrost_expedition.8 = {
 	type = country_event
 	placement = ROOT
 	
-	title = cold.8.t
-	desc = cold.8.d
-	flavor = cold.8.f
+	title = everfrost_expedition.8.t
+	desc = everfrost_expedition.8.d
+	flavor = everfrost_expedition.8.f
 	
 	duration = 3
 	
@@ -684,18 +681,21 @@ cold.8 = {
 	
 	immediate = {
 		set_variable = pack_ice
-		random_scope_character = {
-			limit = { has_variable = expedition_leader_var }
+		random_character_in_void = {
+			limit = {
+				is_owned_unassigned_retainer = yes
+				has_variable = expedition_leader_var 
+			}
 			save_scope_as = expedition_leader
 		}
 	}
 	
 	option = { # Push on!
-		name = cold.8.a
+		name = everfrost_expedition.8.a
 		default_option = yes
 		random_list = {
 			50 = {
-				trigger_event = { id = cold.9 days = day_until_next_expedition_event }
+				trigger_event = { id = everfrost_expedition.9 days = day_until_next_expedition_event }
 				add_small_peril_effect = yes
 			}
 			50 = {
@@ -704,7 +704,7 @@ cold.8 = {
 		}
 	}
 	option = { # Leader is good at this somehow?
-		name = cold.8.b
+		name = everfrost_expedition.8.b
 		trigger = {
 			scope:expedition_leader = {
 				OR = {
@@ -726,28 +726,28 @@ cold.8 = {
 }
 
 # Icebound
-cold.9 = {
+everfrost_expedition.9 = {
 	type = country_event
 	placement = ROOT
 	
-	title = cold.9.t
+	title = everfrost_expedition.9.t
 	desc = {
 		first_valid = {
 			triggered_desc = {
-				desc = cold.9.d
+				desc = everfrost_expedition.9.d
 				trigger = {
 					NOT = { has_variable = icebound_var }
 				}
 			}
 			triggered_desc = { # if you already had this
-				desc = cold.9.d2
+				desc = everfrost_expedition.9.d2
 				trigger = {
 					has_variable = icebound_var
 				}
 			}
 		}
 	}
-	flavor = cold.9.f
+	flavor = everfrost_expedition.9.f
 	
 	duration = 3
 	
@@ -758,29 +758,29 @@ cold.9 = {
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	
 	option = { # Try to free yourself
-		name = cold.9.a
+		name = everfrost_expedition.9.a
 		default_option = yes
 		random_list = {
 			20 = {
 				expedition_minor_progress_effect = yes
 			}
 			80 = {
-				trigger_event = { id = cold.9 days = day_until_next_expedition_event }
+				trigger_event = { id = everfrost_expedition.9 days = day_until_next_expedition_event }
 			}
 		}
 		set_variable = icebound_var
 	}
 	option = { # Abandon ship, try to reach a whaling station
-		name = cold.9.b
+		name = everfrost_expedition.9.b
 		trigger = {
 			has_variable = icebound_var
 		}
 		random_list = {
 			50 = { # everyone lives!
-				trigger_event = { id = cold.10 days = day_until_next_expedition_event }
+				trigger_event = { id = everfrost_expedition.10 days = day_until_next_expedition_event }
 			}
 			50 = { # everyone dies!
-				trigger_event = { id = cold.4 days = day_until_next_expedition_event }
+				trigger_event = { id = everfrost_expedition.4 days = day_until_next_expedition_event }
 			}
 			# Either way, this expedition is a failure
 		}
@@ -788,13 +788,13 @@ cold.9 = {
 }
 
 # Whaling Station
-cold.10 = {
+everfrost_expedition.10 = {
 	type = country_event
 	placement = ROOT
 	
-	title = cold.10.t
-	desc = cold.10.d
-	flavor = cold.10.f
+	title = everfrost_expedition.10.t
+	desc = everfrost_expedition.10.d
+	flavor = everfrost_expedition.10.f
 	
 	duration = 3
 	
@@ -806,14 +806,17 @@ cold.10 = {
 	
 	immediate = {
 		save_scope_as = expedition_country
-		random_scope_character = {
-			limit = { has_variable = expedition_leader_var }
+		random_character_in_void = {
+			limit = {
+				is_owned_unassigned_retainer = yes
+				has_variable = expedition_leader_var
+			 }
 			save_scope_as = expedition_leader
 		}
 	}
 	
 	option = { # go home, end expedition
-		name = cold.10.a
+		name = everfrost_expedition.10.a
 		default_option = yes
 		scope:expedition_leader = {
 			add_trait = explorer
@@ -831,13 +834,13 @@ cold.10 = {
 
 
 # The Great Ice Barrier
-cold.11 = {
+everfrost_expedition.11 = {
 	type = country_event
 	placement = ROOT
 	
-	title = cold.11.t
-	desc = cold.11.d
-	flavor = cold.11.f
+	title = everfrost_expedition.11.t
+	desc = everfrost_expedition.11.d
+	flavor = everfrost_expedition.11.f
 	
 	duration = 3
 	
@@ -858,7 +861,7 @@ cold.11 = {
 	}
 	
 	option = { # beware of fissures
-		name = cold.11.a
+		name = everfrost_expedition.11.a
 		default_option = yes
 		random_list = {
 			75 = {
@@ -870,20 +873,21 @@ cold.11 = {
 		}
 	}
 	option = { # take a cautious approach
-		name = cold.11.b
+		name = everfrost_expedition.11.b
 		custom_tooltip = expedition_event_ongoing_tt
 	}
 }
 
 # The Transantarctic Mountains - find a route, or use an established route if there is one
-	# Ascend a glacier!
-cold.12 = {
+
+# Ascend a glacier!
+everfrost_expedition.12 = {
 	type = country_event
 	placement = ROOT
 	
-	title = cold.12.t
-	desc = cold.12.d
-	flavor = cold.12.f
+	title = everfrost_expedition.12.t
+	desc = everfrost_expedition.12.d
+	flavor = everfrost_expedition.12.f
 	
 	duration = 3
 	
@@ -907,7 +911,7 @@ cold.12 = {
 	}
 	
 	option = { # Find a new route
-		name = cold.12.a
+		name = everfrost_expedition.12.a
 		default_option = yes
 		random_list = {
 			33 = {
@@ -922,7 +926,7 @@ cold.12 = {
 		}
 	}
 	option = { # Take a known approach
-		name = cold.12.b
+		name = everfrost_expedition.12.b
 		trigger = {
 			has_variable = transantarctic_mountains_var
 		}
@@ -931,25 +935,25 @@ cold.12 = {
 }
 
 # Strange rock
-cold.13 = {
+everfrost_expedition.13 = {
 	type = country_event
 	placement = ROOT
 	
-	title = cold.13.t
-	desc = cold.13.d
+	title = everfrost_expedition.13.t
+	desc = everfrost_expedition.13.d
 	flavor = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
 					var:expedition_peril >= 7
 				}
-				desc = cold.13.f2
+				desc = everfrost_expedition.13.f2
 			}
 			triggered_desc = {
 				trigger = {
 					var:expedition_peril < 7
 				}
-				desc = cold.13.f
+				desc = everfrost_expedition.13.f
 			}
 		}
 	}
@@ -972,7 +976,7 @@ cold.13 = {
 	}
 	
 	option = { #study it
-		name = cold.13.a
+		name = everfrost_expedition.13.a
 		default_option = yes
 		set_variable = took_strange_rock_var #grand exhibition bonus
 		random_list = {
@@ -988,7 +992,7 @@ cold.13 = {
 		}
 	}
 	option = { #ignore it
-		name = cold.13.b
+		name = everfrost_expedition.13.b
 		expedition_minor_progress_effect = yes
 	}
 }
