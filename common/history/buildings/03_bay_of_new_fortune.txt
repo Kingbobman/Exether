@@ -52,7 +52,7 @@
                     building={ 
                         type="building_financial_district"
                         country="c:SKR"
-                        levels=4
+                        levels=2
                         region="STATE_KILIMASAWA"
                    }
                 }
@@ -272,6 +272,32 @@
 	s:STATE_UZURIPWA = {
 		region_state:SKR = {
 			create_building={
+				building="building_livestock_ranch"
+				add_ownership={ 
+					building={ 
+						type="building_manor_house"
+						country="c:SKR"
+						levels=1
+						region="STATE_UZURIPWA"
+				   }
+				}
+				reserves=1
+				activate_production_methods={ "pm_open_air_stockyards" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated"  }
+			}
+			create_building={
+				building="building_fishing_wharf"
+                add_ownership={ 
+                    building={ 
+                        type="building_adventuring_guild"
+                        country="c:SKR"
+                        levels=5
+                        region="STATE_UZURIPWA"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_fishing_trawlers" "pm_unrefrigerated" }
+			}
+			create_building={
 				building="building_cotton_plantation"
 				add_ownership={ 
 					building={ 
@@ -339,6 +365,32 @@
 	s:STATE_KILIMADADA = {
 		region_state:SKR = {
 			create_building={
+				building="building_furniture_manufacturies"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:SKR"
+							levels=2
+							region="STATE_KILIMADADA"
+					   }
+					}
+				reserves=1
+				activate_production_methods={ "pm_handcrafted_furniture" "pm_automation_disabled" "pm_no_luxuries" }
+			}
+			create_building={
+				building="building_logging_camp"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:SKR"
+                        levels=4
+                        region="STATE_KILIMADADA"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_simple_forestry" "pm_no_equipment" "pm_road_carts" "pm_no_hardwood" }
+			}
+			create_building={
 				building="building_millet_farm"
 				add_ownership={ 
 					building={ 
@@ -357,6 +409,58 @@
 	s:STATE_JITOMREMBO = {
 		region_state:SKR = {
 			create_building={
+				building="building_coffee_plantation"
+						add_ownership={ 
+							building={ 
+								type="building_manor_house"
+								country="c:SKR"
+								levels=2
+								region="STATE_JITOMREMBO"
+						   }
+						}
+				reserves=1
+				activate_production_methods={  "default_building_coffee_plantation" "pm_road_carts"  }
+			  }
+			create_building={
+				building="building_shipyards"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:SKR"
+                        levels=1
+                        region="STATE_JITOMREMBO"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_basic_shipbuilding" }
+			}
+			create_building={
+				building="building_fishing_wharf"
+                add_ownership={ 
+                    building={ 
+                        type="building_adventuring_guild"
+                        country="c:SKR"
+                        levels=5
+                        region="STATE_JITOMREMBO"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_fishing_trawlers" "pm_unrefrigerated" }
+			}
+			create_building={
+				building="building_logging_camp"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:SKR"
+                        levels=2
+                        region="STATE_JITOMREMBO"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_simple_forestry" "pm_no_equipment" "pm_road_carts" "pm_no_hardwood" }
+			}
+			create_building={
 				building="building_tobacco_plantation"
 				add_ownership={ 
 					building={ 
@@ -369,7 +473,6 @@
 				reserves=1
 				activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }
 			}
-			
 		}
 	}
 	s:STATE_PACHAQULLU = {
