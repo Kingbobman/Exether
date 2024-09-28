@@ -82,7 +82,7 @@
   dragonblight_pulse.3.t: "A Blight On The Nation"
   dragonblight_pulse.3.d: "We don't know how it got here. Perhaps it came by boat, or cart. We don't know who Patient Zero was, perhaps an immigrant or a merchant. We don't even know when exactly it reached our lands. At long last, the Dragonblight is here."
   dragonblight_pulse.3.f: "First, the scales fall off, piece by piece, revealing smooth skin under. Second comes the the warping of the face into a snout. Then there's the agonising fever and body ache as the body shrinks. The end goal of this metamorphis is a sad, twisted creature called a kobold."
-  dragonblight_pulse.3.a: "Woe! Woe unto us!"
+  dragonblight_pulse.3.a: "Perhaps we should take special measures..."
   dragonblight_pulse.4.t: "Blighted [SCOPE.sState('dragonblight_port').GetPortHubName]"
   dragonblight_pulse.4.d: "Due to our failure to enact port controls across the nation, cargo ships and travellers have brought the Blight to [SCOPE.sState('dragonblight_port').GetName], with dire consequences for us all."
   dragonblight_pulse.4.f: "The only thing necessary for the triumph of disease is for healthy dragonborn to do nothing."
@@ -320,8 +320,18 @@
   synthetic_dawn.1.f: ""You ought to go see it sometime. They have their own street vendors, and musicians. The only think they didn't serve was food. I wonder what they'd serve at a Soulwrought restaurant...""
   synthetic_dawn.1.a: "I, for one, welcome our new Soulwrought neighbors."
   synthetic_dawn.1.b: "They ought to spend less time on such trivial pursuits."
-
+  synthetic_dawn.2.t: "Soulwrought Equality Movement"
+  synthetic_dawn.2.d: "Large groups of [GetCulture('soulwrought').GetName] have gathered in [SCOPE.GetRootScope.GetCountry.GetCapital.GetCityHubName] to voice their support for [GetPlayer.GetLawBeingEnacted]."
+  synthetic_dawn.2.f: "The Soulwrought gathered in the Capitol Gardens just after dawn and gave speeches and sang songs until late into the night. Discussed were not just topics of legal personhood and equality under the law, but a question that had long weighed upon the Soulwrought psyche: "What does it mean to live?"  \nMany bright minds spoke on the question, but none had a singular answer for what it meant to be a Soulwrought."
+  synthetic_dawn.2.a: "Of course we shall support such a righteous cause."
+  synthetic_dawn.2.b: "Soulwrought belong in the factories and the fields, not in the Capitol."
+  synthetic_dawn.3.t: "Equality Under The Law"
+  synthetic_dawn.3.d: "With the passage of [SCOPE.GetRootScope.GetCountry.GetActiveLawFromGroup('lawgroup_citizenship').GetName], [GetCulture('soulwrought').GetName] are now equal to all other sentient beings in [ROOT.GetCountry.GetNameNoFlag]."
+  synthetic_dawn.3.f: ""Why, did you hear?  A restaurant owned by a #italic soulwrought#! opened up!" \n"Why, what on earth do they serve?"\n"Oh, just regular pastries and cakes.  What do they eat, anyway?""
+  synthetic_dawn.3.a: "They have fought hard for their new legal status."
  # Age of Rosess
+  
+
  je_beauty_in_bloom: "The Age of Roses"
  je_beauty_in_bloom_reason: "The status of the #bold Progress Bar#! will be determined by various #tooltippable;tooltip:[Country.GetTooltipTag],je_beauty_in_bloom_special_tooltip_advance positive#! or #tooltippable;tooltip:[Country.GetTooltipTag],je_beauty_in_bloom_special_tooltip_deplete negative#! conditions. The #bold Progress Bar#! reaching #bold 100#! will cement the power of Florensires in [SCOPE.sCountry('beauty_in_bloom_country_scope').GetName]. Next month, the #bold Progress Bar#! will change by #variable [Country.MakeScope.Var('beauty_in_bloom_next').GetValue|+=]#!.\n\nDepleting the progress bar and keeping the [GetInterestGroupVariant('ig_devout',GetPlayer).GetNameWithCountryVariant] out of government will end the #bold Age of Roses#! in the [GetInterestGroupVariant('ig_devout',GetPlayer).GetNameWithCountryVariant] and end the threat of Florensires in the country.\n\n#italic Following the [concept_blooming], charismatic [SCOPE.GetRootScope.GetCountry.GetInterestGroupOfType('ig_devout').GetName] leaders have been on a crusade to spread the virtues of the Rose Court beyond [ROOT.GetCountry.GetName]'s borders'. These "Florensires" have come to define much of [ROOT.GetCountry.GetAdjective] poltics.#!"
  je_beauty_in_bloom_special_tooltip_advance: "The [concept_journal_entry] will end when the progress bar is either full or empty. \n\nThese factors will #bold advance#! the progress bar by #bold 1 per month each:#!\n• The [GetInterestGroupVariant('ig_devout',GetPlayer).GetNameWithCountryVariant] are [concept_powerful]\n• The [GetInterestGroupVariant('ig_devout',GetPlayer).GetNameWithCountryVariant] are [concept_in_government]\n• We have [GetLawType('law_autocracy').GetName], [GetLawType('law_oligarchy').GetName], [GetLawType('law_technocracy').GetName], or [GetLawType('law_single_party_state').GetName]\n• We have a [concept_general] or [concept_admiral] who is [Concept('concept_popularity','$loved$')]\n• We have a [concept_ruler] with the #bold Authoritarian#! ideology"

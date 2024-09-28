@@ -61,6 +61,27 @@ combat_unit_type_irregular_infantry = {
     }
 
     combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = bear
+        }
+        texture = "gfx/unit_illustrations/infantry_bear_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = mousefolk
+        }
+        texture = "gfx/unit_illustrations/infantry_mouse_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = orc
+        }
+        texture = "gfx/unit_illustrations/infantry_orc_irregular.dds"
+    }
+
+    combat_unit_image = {
 		# fallback
         texture = "gfx/unit_illustrations/infantry_eu_irregular.dds"
     }
@@ -115,6 +136,20 @@ combat_unit_type_line_infantry = {
             has_culture_graphics = arabic
         }
         texture = "gfx/unit_illustrations/infantry_arabic_line.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = bear
+        }
+        texture = "gfx/unit_illustrations/infantry_bear_line.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = mousefolk
+        }
+        texture = "gfx/unit_illustrations/infantry_mouse_line.dds"
     }
 
     combat_unit_image = {
@@ -175,6 +210,27 @@ combat_unit_type_skirmish_infantry = {
     }
 
     combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = bear
+        }
+        texture = "gfx/unit_illustrations/infantry_bear_skirmish.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = mousefolk
+        }
+        texture = "gfx/unit_illustrations/infantry_mouse_skirmish.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = orc
+        }
+        texture = "gfx/unit_illustrations/infantry_orc_skirmish.dds"
+    }
+
+    combat_unit_image = {
 		# fallback
         texture = "gfx/unit_illustrations/infantry_eu_skirmish.dds"
     }
@@ -228,6 +284,27 @@ combat_unit_type_trench_infantry = {
             has_culture_graphics = arabic
         }
         texture = "gfx/unit_illustrations/infantry_arabic_trench.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = bear
+        }
+        texture = "gfx/unit_illustrations/infantry_bear_trench.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = mousefolk
+        }
+        texture = "gfx/unit_illustrations/infantry_mouse_trench.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = orc
+        }
+        texture = "gfx/unit_illustrations/infantry_orc_trench.dds"
     }
 
     combat_unit_image = {
@@ -285,6 +362,27 @@ combat_unit_type_squad_infantry = {
         }
         texture = "gfx/unit_illustrations/infantry_arabic_squad.dds"
     }
+    
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = bear
+        }
+        texture = "gfx/unit_illustrations/infantry_bear_squad.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = mousefolk
+        }
+        texture = "gfx/unit_illustrations/infantry_mouse_squad.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = orc
+        }
+        texture = "gfx/unit_illustrations/infantry_orc_squad.dds"
+    }
 
     combat_unit_image = {
         # fallback
@@ -308,7 +406,7 @@ combat_unit_type_mechanized_infantry = {
     upkeep_modifier = {
         goods_input_small_arms_add = 3
         goods_input_ammunition_add = 3
-        goods_input_oil_add = 1
+        goods_input_blubber_add = 1
         goods_input_radios_add = 1
         goods_input_tanks_add = 1
     }
@@ -638,7 +736,7 @@ combat_unit_type_heavy_tank = {
         goods_input_artillery_add = 4
 		goods_input_ammunition_add = 4
         goods_input_radios_add = 1
-        goods_input_oil_add = 3
+        goods_input_blubber_add = 3
     }
 
     battle_modifier = {
@@ -932,7 +1030,7 @@ combat_unit_type_light_tanks = {
     upkeep_modifier = {
         goods_input_tanks_add = 2
         goods_input_artillery_add = 2
-        goods_input_oil_add = 2
+        goods_input_blubber_add = 2
         goods_input_ammunition_add = 2
         goods_input_radios_add = 2
     }

@@ -89,6 +89,7 @@ building_snail_herder_ranch = {
 		pmg_fencing
 		pmg_refrigeration_building_livestock_ranch
 	}
+	ownership_type = self
 	required_construction = construction_cost_low
 
 	terrain_manipulator = pasture
@@ -98,12 +99,13 @@ building_snail_herder_ranch = {
 
 building_shrimp_farm = {
 	building_group = bg_shrimp_farms
-	texture = "gfx/interface/icons/building_icons/fishing_wharf.dds"
+	texture = "gfx/interface/icons/building_icons/brine_shrimp.dds"
 	city_type = farm
 	required_construction = construction_cost_low
 
 	production_method_groups = {
 		pmg_base_building_shrimp_farms
+		pmg_harvesting_process_building_rye_farm
 		pmg_refrigeration_building_fishing_wharf
 	}
 	

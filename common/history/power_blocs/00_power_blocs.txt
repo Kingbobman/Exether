@@ -5,9 +5,17 @@
 	
 			map_color = { 111 111 111 }
 	
-			founding_date = 1015.6.9 
-			identity = identity_military_treaty_organization
-			principle = principle_defensive_cooperation_1
+			founding_date = 58.5.12
+			identity = identity_sovereign_empire
+			principle = principle_vassalization_1
+
+			member = c:MGR
+			member = c:KHE
+			member = c:OKH
+			member = c:BRJ
+			member = c:LAZ
+			member = c:QAR
+			member = c:ORO
 		}
 
 		if = {
@@ -15,16 +23,19 @@
 				has_dlc_feature = power_bloc_features
 			}
 			power_bloc = {
-				add_principle = principle_vassalization_1
+				add_principle = principle_foreign_investment_1
 			}
 		}
+
+
+
 	}
 
 	c:RAV = {
 		create_power_bloc = {
 			name = THIRD_CRUSADE
 
-			map_color = { 219 211 157 }
+			map_color = { 0 49 83 }
 
 			founding_date = 1015.6.9 
 			identity = identity_military_treaty_organization
@@ -67,6 +78,28 @@
 		}
 	}
 
+	c:THI = {
+		create_power_bloc = {
+			name = THI_BLOC
+
+			map_color = { 179 46 162 }
+
+			founding_date = 1015.6.9 
+			identity = identity_religious
+			principle = principle_divine_economics_2
+
+			member = c:FEY
+			member = c:LEO
+			member = c:RDM
+			member = c:DSB
+		}
+		if = {
+			limit = {
+				has_dlc_feature = power_bloc_features
+			}
+		}
+	}
+
 	c:VAI = {
 		create_power_bloc = {
 			name = ICEBREAKER_FLEETS
@@ -96,8 +129,8 @@
 			map_color = hsv{ 0.99  0.7  0.9 }
 
 			founding_date = 784.5.12
-			identity = identity_sovereign_empire
-			principle = principle_vassalization_1
+			identity = identity_cultural
+			principle = principle_police_coordination_1
 
 			# subjects are automatically part of the bloc
 		}
@@ -107,6 +140,14 @@
 			}
 			power_bloc = {
 				add_principle = principle_sacred_civics_2
+			}
+		}
+		if = {
+			limit = {
+				has_dlc_feature = power_bloc_features
+			}
+			power_bloc = {
+				add_principle = principle_vassalization_1
 			}
 		}
 	}
@@ -181,43 +222,9 @@
 				has_dlc_feature = power_bloc_features
 			}
 			power_bloc = {
-				add_principle = principle_freedom_of_movement_1
+				add_principle = principle_internal_trade_1
 			}
 		}
-	}
-
-	c:AIZ = {
-		create_power_bloc = {
-			name =  ENDURING_EMPIRE
-
-			map_color = { 255  55  55 }
-
-			founding_date = 1044.01.04
-			identity = identity_ideological_union
-			principle = principle_ideological_truth_1
-				
-			member = c:HIZ
-			member = c:PIU
-			member = c:IHE
-		}
-
-	}
-
-	c:LUR = {
-		create_power_bloc = {
-
-			name = ONE_SKY_FEDERATION
-
-			map_color = { 250 190 250}
-
-			founding_date = 1044.01.04
-			identity = identity_ideological_union
-			principle = principle_creative_legislature_1
-
-			member = c:CRG
-			member = c:GAI
-		}
-
 	}
 
 	c:TEF = {
@@ -240,6 +247,55 @@
 				has_dlc_feature = power_bloc_features
 			}
 			power_bloc = {
+			}
+		}
+	}
+
+	c:CER = {
+		create_power_bloc = {
+			name = CER_BLOC
+
+			map_color = { 200 100 100 }
+
+			founding_date = 1068.03.04
+			identity = identity_military_treaty_organization
+			principle = principle_defensive_cooperation_2
+
+			member = c:SMA
+		}
+		if = {
+			limit = {
+				has_dlc_feature = power_bloc_features
+			}
+			power_bloc = {
+				add_principle = principle_market_unification_1
+			}
+		}
+	}
+
+	c:SNB = {
+		create_power_bloc = {
+			name = THA_BLOC
+
+			map_color = { 147 130 110 }
+
+			founding_date = 978.03.04
+			identity = identity_cultural
+			principle = principle_freedom_of_movement_1
+			
+			member = c:VHO
+			member = c:JUX
+			member = c:SAE
+			member = c:VHA
+
+
+		}
+		if = {
+			limit = {
+				has_dlc_feature = power_bloc_features
+			}
+			power_bloc = {
+				add_principle = principle_market_unification_1
 			}
 		}
 	}

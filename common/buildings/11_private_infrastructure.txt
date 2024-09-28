@@ -134,6 +134,22 @@ building_manor_house = {
 					multiply = 2.0
 				}					
 			}
+		}
+		bg_plantations_discoverable_score = {
+			group = "bg_plantations_discoverable"
+			score = {
+				value = 1
+				
+				if = {
+					limit = {
+						OR = {
+							has_law = law_type:law_agrarianism
+							has_law = law_type:law_industry_banned
+						}						
+					}
+					multiply = 2.0
+				}					
+			}
 		}		
 		bg_arts_score = {
 			group = "bg_arts"
@@ -153,14 +169,14 @@ building_manor_house = {
 				value = 0.25
 			}
 		}
-		bg_rubber_score = {
-			group = "bg_rubber"
+		bg_whaling_score = {
+			group = "bg_whaling"
 			score = {
 				value = 0.25
 			}
 		}
-		bg_whaling_score = {
-			group = "bg_whaling"
+		bg_hippos_score = {
+			group = "bg_hippos"
 			score = {
 				value = 0.25
 			}
@@ -317,6 +333,26 @@ building_financial_district = {
 				}
 			}
 		}
+		bg_plantations_discoverable_score = {
+			group = "bg_plantations_discoverable"
+			score = {
+				value = 0.75
+				
+				if = {
+					limit = {
+						has_law = law_type:law_traditionalism
+					}
+					multiply = 0.5
+				}				
+				
+				if = {
+					limit = {
+						has_law = law_type:law_commercialized_agriculture
+					}
+					add = 0.25
+				}
+			}
+		}
 		bg_arts_score = {
 			group = "bg_arts"
 			score = {
@@ -368,8 +404,8 @@ building_financial_district = {
 				}			
 			}
 		}
-		bg_rubber_score = {
-			group = "bg_rubber"
+		bg_whaling_score = {
+			group = "bg_whaling"
 			score = {
 				value = 1
 				
@@ -378,11 +414,11 @@ building_financial_district = {
 						has_law = law_type:law_traditionalism
 					}
 					multiply = 0.5
-				}				
+				}					
 			}
 		}
-		bg_whaling_score = {
-			group = "bg_whaling"
+		bg_hippos_score = {
+			group = "bg_hippos"
 			score = {
 				value = 1
 				
@@ -607,6 +643,21 @@ building_wizard_tower = {
 					add = 4.0
 				}					
 			}
+		}
+		bg_plantations_discoverable_score = {
+			group = "bg_plantations_discoverable"
+			score = {
+				value = 0.0
+				
+				if = {
+					limit = {
+						OR = {
+							has_law = law_type:law_druidic_circles
+						}						
+					}
+					add = 4.0
+				}					
+			}
 		}		
 		bg_power_score = {
 			group = "bg_power"
@@ -658,32 +709,6 @@ building_adventuring_guild = {
 	}
 	
 	investment_scores = {
-		bg_whaling_score = {
-			group = "bg_whaling"
-			score = {
-				value = 1
-				
-				if = {
-					limit = {
-						has_law = law_type:law_traditionalism
-					}
-					multiply = 0.5
-				}					
-			}
-		}
-		bg_fishing_score = {
-			group = "bg_fishing"
-			score = {
-				value = 1
-				
-				if = {
-					limit = {
-						has_law = law_type:law_traditionalism
-					}
-					multiply = 0.5
-				}				
-			}
-		}
 		bg_infrastructure_score = {
 			group = "bg_infrastructure"
 			score = {
@@ -719,6 +744,12 @@ building_adventuring_guild = {
 			group = "bg_hunting"
 			score = {
 				value = 3	
+			}
+		}
+		bg_ruins = {
+			group = "bg_ruins"
+			score = {
+				value = 1
 			}
 		}
 	}

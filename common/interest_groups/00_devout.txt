@@ -130,7 +130,27 @@
 			ig:ig_devout = {
 				set_interest_group_name = ig_bloomwardens
 				remove_ideology = ideology_patriarchal
-				add_ideology = ideology_russian_patriarch
+				add_ideology = ideology_chivalrous_conservative
+			}
+		}
+
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						country_has_state_religion = rel:rose_court
+						OR = {
+							country_has_primary_culture = cu:thiralian
+							country_has_primary_culture = cu:astreval
+						}
+					}
+					c:AUM ?= this
+				}
+
+			}
+			ig:ig_devout = {
+				remove_ideology = ideology_moralist
+				add_ideology = ideology_theocratic_moralist
 			}
 		}
 
@@ -481,7 +501,7 @@
 	}
 
 	female_politician_chance = {
-		value = 0.0
+		value = 0.1
 
 		if = {
 			limit = {
@@ -491,7 +511,7 @@
 
 			}
 			add = {
-				value = 0.99
+				value = 0.89
 			}
 		}
 		else_if = {
@@ -505,6 +525,24 @@
 				value = 0.01
 			}
 		}
+		if = {
+			limit = {
+				owner = {
+					exists = c:WHI
+					OR = {
+						c:WHI = this
+						civil_war_origin_country = c:WHI
+					}
+						
+				}
+
+			}
+			add = {
+				value = 0.3
+			}
+
+		}
+	
 	}
 
 	female_agitator_chance = {

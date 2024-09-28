@@ -2059,12 +2059,27 @@
                 scope:character = {
                     is_female = no
 
-                    owner ?= {
-                        is_in_power_bloc = yes
-                        power_bloc ?= {
-                            has_identity = identity:identity_military_treaty_organization
+                    OR = {
+                        AND = {
+                            owner ?= {
+                                is_in_power_bloc = yes
+                                power_bloc ?= {
+                                    has_identity = identity:identity_religious
+                                }
+                                religion = rel:rose_court
+                            }
+                        }
+                        AND = {
+                            owner ?= {
+                                is_in_power_bloc = yes
+                                power_bloc ?= {
+                                    has_identity = identity:identity_military_treaty_organization
+                                }
+                            }
                         }
                     }
+
+      
                 }
                 OR = {
                     european_clothes_trigger = yes

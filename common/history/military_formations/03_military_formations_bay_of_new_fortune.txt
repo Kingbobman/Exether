@@ -13,7 +13,7 @@
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mobile_artillery
-				state_region = s:STATE_MAWIMBIMAJI
+				state_region = s:STATE_PWANIQILIMA
 				count = 5
 			}
 			combat_unit = {
@@ -24,7 +24,7 @@
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_MAWIMBIMAJI
+				state_region = s:STATE_PWANIQILIMA
 				count = 20
 			}
 			combat_unit = {
@@ -161,42 +161,23 @@
 			type = army
 			hq_region = sr:region_north_chin_desert
 
+			name = "Royal Army of Raihouro"
+
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				service_type = conscript
 				state_region = s:STATE_TAYTAQOCHA
-				count = 14
+				count = 10
 			}
 			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
-				service_type = conscript
-				state_region = s:STATE_TAYTAQOCHA
-				count = 2
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_TAYTAQOCHA
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_NAWIYANU
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_KUNTURPAMPA
-				count = 5
+				type = unit_type:combat_unit_type_dragoons
+				state_region = s:STATE_TINKUYUQ
+				count = 10
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_TINKUYUQ
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
-				state_region = s:STATE_URQUNAYUQ
-				count = 5
+				count = 15
 			}
 			save_scope_as = hor_army
 		}
@@ -204,6 +185,11 @@
 		create_character = {
 			is_general = yes
 			hq = region_north_chin_desert
+			interest_group = ig_landowners
+			age = 50
+			traits = {
+				romantic
+			}
 			save_scope_as = hor_general
 		}
 		scope:hor_general = {
@@ -215,25 +201,22 @@
 			type = army
 			hq_region = sr:region_salt_wastes
 
+			name = "Rustaxe Warriors"
+
 			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
+				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_BLOODAXE_TERRITORY
-				count = 7
+				count = 20
 			}
 			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
+				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_SAVAGE_REACH
-				count = 5
+				count = 20
 			}
 			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
+				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_THIRSTRIDGE
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_hussars
-				state_region = s:STATE_BLOODAXE_TERRITORY
-				count = 2
+				count = 20
 			}
 
 			save_scope_as = rux_army
@@ -242,31 +225,54 @@
 		create_character = {
 			is_general = yes
 			hq = region_salt_wastes
+			interest_group = ig_armed_forces
+			age = 32
+			traits = {
+				brave
+				persistent
+			}
 			save_scope_as = rux_general
-		}
 		scope:rux_general = {
 			transfer_to_formation = scope:rux_army
 		}
+	}
+
+		create_character = {
+			is_general = yes
+			hq = region_salt_wastes
+			interest_group = ig_armed_forces
+			age = 45
+			traits = {
+				innovative
+				charismatic
+			}
+			save_scope_as = rux2
+		scope:rux2 = {
+			transfer_to_formation = scope:rux_army
+		}
+	}
 	}
 	c:BLD ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_salt_wastes
 
+			name = "Bloodthorn Ravagers"
+
 			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
+				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_BLOODTHORN_WASTES
-				count = 16
+				count = 25
 			}
 			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_FIERCEHOLD
-				count = 6
+				type = unit_type:combat_unit_type_cuirassiers
+				state_region = s:STATE_BLOODTHORN_WASTES
+				count = 20
 			}
 			combat_unit = {
-				type = unit_type:combat_unit_type_hussars
-				state_region = s:STATE_BLOODTHORN_WASTES
-				count = 4
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_BLOODTHORN_WASTES_2
+				count = 20
 			}
 
 			save_scope_as = bld_army
@@ -274,10 +280,33 @@
 		
 		create_character = {
 			is_general = yes
+			commander_rank = commander_rank_1
 			hq = region_salt_wastes
+			interest_group = ig_armed_forces
+			age = 34
+			traits = {
+				cruel
+				expert_offensive_planner
+			}
 			save_scope_as = bld_general
 		}
 		scope:bld_general = {
+			transfer_to_formation = scope:bld_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			hq = region_salt_wastes
+			interest_group = ig_armed_forces
+			age = 38
+			traits = {
+				surveyor
+				plains_commander
+			}
+			save_scope_as = bld_general2
+		}
+		scope:bld_general2 = {
 			transfer_to_formation = scope:bld_army
 		}
 	}
@@ -286,20 +315,22 @@
 			type = army
 			hq_region = sr:region_salt_wastes
 
+			name = "Guardians of Roughstone"
+
 			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_ROUGHSTONE_TERRITORY
-				count = 13
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_SAVAGE_LANDS_2
+				count = 20
 			}
 			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
+				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_SAVAGE_LANDS
-				count = 13
+				count = 10
 			}
 			combat_unit = {
-				type = unit_type:combat_unit_type_hussars
-				state_region = s:STATE_ROUGHSTONE_TERRITORY
-				count = 2
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_SAVAGE_LANDS
+				count = 10
 			}
 
 			save_scope_as = rse_army
@@ -307,7 +338,14 @@
 		
 		create_character = {
 			is_general = yes
+			commander_rank = commander_rank_2
 			hq = region_salt_wastes
+			interest_group = ig_armed_forces
+			age = 37
+			traits = {
+				mountain_commander
+				experienced_defensive_strategist
+			}
 			save_scope_as = rse_general
 		}
 		scope:rse_general = {
@@ -319,20 +357,22 @@
 			type = army
 			hq_region = sr:region_north_chin_desert
 
+			name = "Wastewalker Ambush Parties"
+
 			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
+				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_NAWIYANU
-				count = 10
+				count = 5
 			}
 			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
+				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_SAVAGE_REACH
-				count = 4
+				count = 5
 			}
 			combat_unit = {
-				type = unit_type:combat_unit_type_hussars
+				type = unit_type:combat_unit_type_dragoons
 				state_region = s:STATE_NAWIYANU
-				count = 2
+				count = 5
 			}
 			save_scope_as = gmr_army
 		}
@@ -340,6 +380,12 @@
 		create_character = {
 			is_general = yes
 			hq = region_north_chin_desert
+			interest_group = ig_armed_forces
+			age = 28
+			traits = {
+				stalwart_defender
+				expert_defensive_strategist
+			}
 			save_scope_as = gmr_general
 		}
 		scope:gmr_general = {
@@ -351,15 +397,32 @@
 			type = army
 			hq_region = sr:region_salt_wastes
 
+			name = "Fist of the Crucicle"
+
 			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
+				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_SNAILBANE
-				count = 16
+				count = 15
 			}
+
 			combat_unit = {
-				type = unit_type:combat_unit_type_hussars
+				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_SNAILBANE
-				count = 4
+				service_type = conscript
+				count = 10
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_dragoons
+				state_region = s:STATE_SNAILBANE
+				count = 10
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_dragoons
+				state_region = s:STATE_SNAILBANE
+				service_type = conscript
+				count = 5
 			}
 			save_scope_as = snl_army
 		}
@@ -367,32 +430,86 @@
 		create_character = {
 			is_general = yes
 			hq = region_salt_wastes
+			interest_group = ig_armed_forces
+			age = 28
+			traits = {
+				stalwart_defender
+				expert_defensive_strategist
+			}
 			save_scope_as = snl_general
 		}
 		scope:snl_general = {
 			transfer_to_formation = scope:snl_army
 		}
+
+		create_character = {
+			is_general = yes
+			hq = region_salt_wastes
+			interest_group = ig_armed_forces
+			age = 28
+			traits = {
+				pillager
+				plains_commander
+			}
+			save_scope_as = snl_general2
+		}
+		scope:snl_general2 = {
+			transfer_to_formation = scope:snl_army
+		}
+
 	}
 	c:BGR ?= {
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_salt_wastes
 
+			name = "Wastewalker Raiders"
+
 			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
+				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_ROUGHSTONE_TERRITORY_2
-				count = 11
+				count = 15
 			}
 			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
+				type = unit_type:combat_unit_type_cuirassiers
 				state_region = s:STATE_FIERCEHOLD
-				count = 6
+				count = 5
+			}
+		}
+	}
+	c:YKU ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_salt_wastes
+
+			name = "Yakuway Guard"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_ANTAQAQA
+				count = 20
 			}
 			combat_unit = {
-				type = unit_type:combat_unit_type_hussars
-				state_region = s:STATE_ROUGHSTONE_TERRITORY_2
-				count = 4
+				type = unit_type:combat_unit_type_dragoons
+				state_region = s:STATE_SALTSHORE_2
+				count = 10
 			}
+			save_scope_as = yku_army
+		}
+		
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			hq = region_salt_wastes
+			interest_group = ig_armed_forces
+			age = 37
+			traits = {
+				mountain_commander
+			}
+			save_scope_as = ykugen
+		}
+		scope:ykugen = {
+			transfer_to_formation = scope:yku_army
 		}
 	}
 	c:KUN ?= {

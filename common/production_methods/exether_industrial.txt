@@ -1,4 +1,4 @@
-﻿pm_basic_gizmos = {
+pm_basic_gizmos = {
 	texture = "gfx/interface/icons/production_method_icons/crude_tools.dds"
 	
 	building_modifiers = {
@@ -28,7 +28,7 @@ pm_functional_gizmos = {
 		workforce_scaled = {
 			# input goods
 			goods_input_wishstone_add = 20		#x50 = 1000
-			goods_input_relics_add = 5			#x100 = 500
+			goods_input_relics_add = 10			#x50 = 500
 			
 			# output goods
 			goods_output_gizmos_add = 40		#x60 = 2400
@@ -71,7 +71,7 @@ pm_otherworldly_gizmos = {
 	texture = "gfx/interface/icons/production_method_icons/pig_iron_tools.dds"
 	
 	unlocking_technologies = {
-		soulforges 
+		pumpjacks
 	}	
 	
 	building_modifiers = {
@@ -163,7 +163,7 @@ pm_assembly_lines_building_gizmo_workshop = {
 		workforce_scaled = {
 			# input goods
 			goods_input_tools_add = 5
-			goods_input_oil_add = 5
+			goods_input_blubber_add = 5
 			goods_input_electricity_add = 5
 		}
 
@@ -318,7 +318,7 @@ pm_universally_based_potions = {
 	texture = "gfx/interface/icons/production_method_icons/steamworks.dds"
 
 	unlocking_technologies = {
-		soulforges
+		pumpjacks
 	}
 
 	building_modifiers = {
@@ -508,7 +508,7 @@ pm_assembly_line_bottling_godsblood_building_potion_distillery = {
 		workforce_scaled = {
 			# input goods
 			goods_input_tools_add = 5
-			goods_input_oil_add = 5
+			goods_input_blubber_add = 5
 			goods_input_electricity_add = 5
 		}
 
@@ -828,13 +828,12 @@ pm_early_soulwrought = { #balance me
 			building_employment_machinists_add = 500
 		}
 	}
-	required_input_goods = thaumacores
 }
 
 pm_clockwork_soulwrought = {
 	texture = "gfx/interface/icons/production_method_icons/steamworks.dds"
 	unlocking_technologies = {
-		soulforges
+		rotary_valve_engine
 	}
 
 	state_modifiers = {
@@ -857,7 +856,6 @@ pm_clockwork_soulwrought = {
 		}
 		
 	}
-	required_input_goods = thaumacores
 }
 
 pm_streamlined_soulwrought = {
@@ -886,18 +884,16 @@ pm_streamlined_soulwrought = {
 			building_employment_machinists_add = 1250
 		}
 	}
-	required_input_goods = thaumacores
 }
 pm_basic_thaumacores = {
 	texture = "gfx/interface/icons/production_method_icons/steamworks.dds"
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_ectoplasm_add = 50 #50 x 20 = 1500
-			goods_input_gizmos_add = 15 #60 x 25 = 1200
-			#Input Cost = 2700
+			goods_input_ectoplasm_add = 50 #50 x 20 = 2500
+			#Input Cost = 2800
 
-			goods_output_thaumacores_add = 25 #25 x 150 = 3750 (Base Profit = 750)
+			goods_output_thaumacores_add = 25 #25 x 150 = 3750 (Base Profit = 1250)
 		}
 		
 		level_scaled = {
@@ -917,12 +913,12 @@ pm_frankenstien_thaumacores = {
 	}
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_ectoplasm_add = 100 #50 x 30 = 3000
-			goods_input_gizmos_add = 40 #60 x 50 = 3000
-			goods_input_electricity_add = 20 #30 x 30 = 600
-			#Input Cost = 6600
+			goods_input_ectoplasm_add = 100 #50 x 30 = 5000
+			goods_input_gizmos_add = 15 #60 x 50 = 900
+			goods_input_electricity_add = 5 #30 x 30 = 150
+			#Input Cost = 6050
 
-			goods_output_thaumacores_add = 50 #50 x 150 = 7,500 ( 900 Base Profit)
+			goods_output_thaumacores_add = 50 #50 x 150 = 7,500 ( 1450 Base Profit)
 		}
 
 		level_scaled = {
@@ -938,17 +934,17 @@ pm_frankenstien_thaumacores = {
 pm_godsblood_thaumacores = {
 	texture = "gfx/interface/icons/production_method_icons/diesel_engines.dds"
 	unlocking_technologies = {
-		soulforges
+		pumpjacks
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_ectoplasm_add = 140 #50 x 40 = 4200
-			goods_input_gizmos_add = 65 #60 x 15 = 3750
+			goods_input_ectoplasm_add = 120 #50 x 40 = 6000
+			goods_input_gizmos_add = 40 #60 x 15 = 2400
 			goods_input_oil_add = 50 #40 x 50 = 2000
-			#Input Cost = 9950
+			#Input Cost = 10400
 
-			goods_output_thaumacores_add = 75 #75 x 150 = 11,250 (1300 Base Profit)
+			goods_output_thaumacores_add = 80 #80 x 150 = 12,000( 1600 Base Profit)
 		}
 
 		level_scaled = {
@@ -1015,7 +1011,7 @@ pm_assembly_line_building_thaumacore_foundry = {
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_tools_add = 5
-			goods_input_oil_add = 5
+			goods_input_blubber_add = 5
 			goods_input_electricity_add = 5
 		}
 
@@ -1033,9 +1029,6 @@ pm_assembly_line_building_thaumacore_foundry = {
 
 pm_nimbium_manufacture_1 = {
 	texture = "gfx/interface/icons/production_method_icons/blister_steel_process.dds"
-		unlocking_technologies = {
-		floating_buildings
-	}
 	state_modifiers = {
 		workforce_scaled = {
 			state_pollution_generation_add = 10
@@ -1057,7 +1050,7 @@ pm_nimbium_manufacture_1 = {
 			building_employment_shopkeepers_add = 500
 			building_employment_laborers_add = 3500
 			building_employment_artificers_add = 750
-			building_employment_wizards_add = 185
+			building_employment_engineers_add = 250
 		}
 	}
 }
@@ -1065,8 +1058,9 @@ pm_nimbium_manufacture_1 = {
 pm_nimbium_manufacture_2 = {
 	texture = "gfx/interface/icons/production_method_icons/blister_steel_process.dds"
 		unlocking_technologies = {
-		floating_buildings
+		open_hearth_process
 	}
+
 	state_modifiers = {
 		workforce_scaled = {
 			state_pollution_generation_add = 10
@@ -1087,7 +1081,7 @@ pm_nimbium_manufacture_2 = {
 			building_employment_shopkeepers_add = 500
 			building_employment_laborers_add = 3000
 			building_employment_artificers_add = 1000
-			building_employment_wizards_add = 375
+			building_employment_engineers_add = 500
 		}
 	}
 }
@@ -1095,8 +1089,9 @@ pm_nimbium_manufacture_2 = {
 pm_nimbium_manufacture_3 = {
 	texture = "gfx/interface/icons/production_method_icons/blister_steel_process.dds"
 		unlocking_technologies = {
-		floating_buildings
+		electric_arc_process
 	}
+
 	state_modifiers = {
 		workforce_scaled = {
 			state_pollution_generation_add = 10
@@ -1117,7 +1112,7 @@ pm_nimbium_manufacture_3 = {
 			building_employment_shopkeepers_add = 500
 			building_employment_laborers_add = 2500
 			building_employment_artificers_add = 1250
-			building_employment_wizards_add = 560
+			building_employment_engineers_add = 750
 		}
 	}
 }
@@ -1125,8 +1120,9 @@ pm_nimbium_manufacture_3 = {
 pm_nimbium_manufacture_4 = {
 	texture = "gfx/interface/icons/production_method_icons/blister_steel_process.dds"
 		unlocking_technologies = {
-		floating_buildings
+		arc_welding
 	}
+
 	state_modifiers = {
 		workforce_scaled = {
 			state_pollution_generation_add = 10
@@ -1148,8 +1144,8 @@ pm_nimbium_manufacture_4 = {
 			# employment
 			building_employment_shopkeepers_add = 500
 			building_employment_laborers_add = 2000
-			building_employment_artificers_add = 1500
-			building_employment_wizards_add = 750
+			building_employment_machinists_add = 1500
+			building_employment_engineers_add = 1000
 		}
 	}
 	
@@ -1159,19 +1155,7 @@ pm_nimbium_manufacture_4 = {
 
 pm_nimbium_charcoalfired = {
 	texture = "gfx/interface/icons/production_method_icons/no_automation.dds"
-		unlocking_technologies = {
-		cloud_castles
-	}
-	building_modifiers = {
-		workforce_scaled = {
-			goods_input_tools_add = 5
-			goods_input_wood_add = 5
-		}
-		level_scaled = {
-			building_employment_laborers_add = 1500
-			building_employment_artificers_add = 750
-		}
-	}
+
 }
 
 pm_nimbium_coalfired = {
@@ -1188,8 +1172,7 @@ pm_nimbium_coalfired = {
 		}
 
 		level_scaled = {
-			building_employment_laborers_add = 750
-			building_employment_artificers_add = 525
+			building_employment_laborers_add = -1500
 		}
 	}
 }
@@ -1206,13 +1189,11 @@ pm_nimbium_flashfired = {
 		workforce_scaled = {
 			# input goods
 			goods_input_tools_add = 5
-			goods_input_coal_add = 5
-			goods_input_blubber_add = 5
+			goods_input_coal_add = 10
 		}
 
 		level_scaled = {
-			building_employment_laborers_add = 500
-			building_employment_artificers_add = 250
+			building_employment_laborers_add = -2000
 		}
 	}
 }
@@ -1227,13 +1208,11 @@ pm_nimbium_assembly_lines = {
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_tools_add = 5
-			goods_input_blubber_add = 5
-			goods_input_electricity_add = 5
+			goods_input_electricity_add = 10
 		}
 
 		level_scaled = {
-			building_employment_laborers_add = 100
-			building_employment_artificers_add = 150
+			building_employment_laborers_add = -2500
 		}
 	}
 
@@ -1352,7 +1331,7 @@ pm_automobile_production = {
 			# input goods
 			goods_output_engines_add = -20
 			goods_input_rubber_add = 10
-			goods_input_oil_add = 20
+			goods_input_blubber_add = 20
 
 			# output goods
 			goods_output_automobiles_add = 25

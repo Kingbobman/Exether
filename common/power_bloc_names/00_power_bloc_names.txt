@@ -353,7 +353,7 @@ non_aligned_conference = {
 		country_rank < rank_value:great_power
 		NOT = {
 			any_scope_ally = {
-				country_rank = rank_value:great_power
+				country_rank >= rank_value:great_power
 			}
 		}
 	}

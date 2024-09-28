@@ -65,115 +65,108 @@ synthetic_dawn.1 = {
 	}
 }
 
-airship.11 = {  #this is the event that triggers new airship routes as new airship docks are made
+synthetic_dawn.2 = { #soulwrought protesting for legal acceptance
 	type = country_event
-	placement = ROOT
-	hidden = yes
-
-	trigger = {
-		OR = {
-			year >= 1210
-			OR = {
-				any_scope_state = {
-					state_region = s:STATE_BANOKIK 
-					any_scope_building = {
-						is_building_type = building_airship_dock
-					}
-				}
-
-				any_scope_state = {
-					state_region = s:STATE_NAN 
-					any_scope_building = {
-						is_building_type = building_airship_dock
-					}
-				}
-
-				any_scope_state = {
-					state_region = s:STATE_LIPOLAN
-					any_scope_building = {
-						is_building_type = building_airship_dock
-					}
-				}
-				#more states go here
-			}	
-		}
-		NOT = {
-			has_variable = wolkara_airship 
-		}
+	placement = root
+	title = synthetic_dawn.2.t
+	desc = synthetic_dawn.2.d
+	flavor = synthetic_dawn.2.f
+    dlc = dlc_roe
+	duration = 3
+    cooldown = {
+        years = 8
+    }
+	event_image = {
+		video = "europenorthamerica_sufferage"
 	}
 
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	trigger = {            
+        OR = {
+			is_enacting_law = law_type:law_cultural_exclusion
+			is_enacting_law = law_type:law_multicultural
+		}
+	}
 	immediate = {
-
-		set_variable = wolkara_airship 
-		random_scope_state = {
-			save_scope_as = hidden_canal_state
-		}
-		scope:hidden_canal_state = {
-			create_building = {
-				building = building_wolkara_heights_connection
-				level = 1
-
-			}	
+		random_primary_culture = {
+			save_scope_as = primary_culture_scope
 		}
 	}
+
+	
+	option = {
+		name = synthetic_dawn.2.a #we will support these demonstrations
+        add_modifier = {
+            name = supporting_soulwrought_demonstrations
+            years = 2
+           }  
+		   add_radicals = {
+			value = 0.03
+			culture = scope:primary_culture_scope
+		   }  
+	}
+
+    option = {
+		name = synthetic_dawn.2.b #we will clamp 
+        add_modifier = {
+            name = clamping_down_on_soulwrought_protests
+            years = 3
+           }
+		   add_radicals = {
+			value = 0.1
+			culture = cu:soulwrought
+		   }  
+	}
+    
 }
 
-airship.12 = {  #this is the event that triggers new airship routes as new airship docks are made
+synthetic_dawn.3 = { #soulwrought protesting for legal acceptance
 	type = country_event
-	placement = ROOT
-	hidden = yes
-
-	trigger = {
-		OR = {
-			year >= 1210
-			OR = {
-				any_scope_state = {
-					state_region = s:STATE_FOBAN
-					any_scope_building = {
-						is_building_type = building_airship_dock
-					}
-				}
-
-				any_scope_state = {
-					state_region = s:STATE_POFIKAN
-					any_scope_building = {
-						is_building_type = building_airship_dock
-					}
-				}
-
-				any_scope_state = {
-					state_region = s:STATE_BIFAN
-					any_scope_building = {
-						is_building_type = building_airship_dock
-					}
-				}
-
-				any_scope_state = {
-					state_region = s:STATE_KOTIK
-					any_scope_building = {
-						is_building_type = building_airship_dock
-					}
-				}
-				#more states go here
-			}	
-		}
-		NOT = {
-			has_variable = lumanta_airship 
-		}
+	placement = root
+	title = synthetic_dawn.3.t
+	desc = synthetic_dawn.3.d
+	flavor = synthetic_dawn.3.f
+    dlc = dlc_roe
+	duration = 3
+    cooldown = {
+        years = 8
+    }
+	event_image = {
+		video = "unspecific_politicians_arguing"
 	}
 
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	trigger = {            
+		#soulwrought subjects je success event
+	}
 	immediate = {
-
-		set_variable = lumanta_airship 
-		random_scope_state = {
-			save_scope_as = hidden_canal_state
-		}
-		scope:hidden_canal_state = {
-			create_building = {
-				building = building_lumantan_heights_connection
-				level = 1
-
-			}	
+		random_primary_culture = {
+			save_scope_as = primary_culture_scope
 		}
 	}
+
+	
+	option = {
+		name = synthetic_dawn.3.a #they have worked hard for their new status.
+        add_modifier = {
+            name = soulwrought_legal_equality
+            years = 4
+           }
+		add_loyalists = {
+			value = 0.1
+			culture = cu:soulwrought
+		}  
+		show_as_tooltip = {
+			add_primary_culture = cu:soulwrought
+		}
+	}
+
+    
 }
+

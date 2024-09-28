@@ -22,6 +22,18 @@
 	possible = {
 		scope:target_country = {
 			NOT = { religion = root.religion }
+			custom_tooltip = {
+				text = supports_independence_tt
+				NOT = {
+					any_country = {
+						has_diplomatic_pact = {
+							who = scope:target_country
+							type = support_independence
+						}
+					}
+				}
+			}
+
 		}
 
 		power_bloc = {
