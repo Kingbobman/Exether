@@ -18,6 +18,15 @@ GLOBAL = {
 		trigger_event = {
             id = civic_setup.1
         }
+		if = {
+			limit = {
+				NOT = { has_variable = num_arcana }
+			}
+			set_variable = {
+				name = num_arcana
+				value = 0
+			}
+		}
 	}
 
 	#Retainers 
@@ -204,18 +213,28 @@ GLOBAL = {
 		if = {
 			limit = {
 				any_primary_culture = {
-					OR = {
-						has_discrimination_trait = namkhazen_heritage
-						has_discrimination_trait = naga
 						has_discrimination_trait = beast
-					}
-					
 				}
 			}
-			add_technology_researched = psionic_tech
+			add_technology_researched = awakened_tech
 		}
-	}
-
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = naga
+				}
+			}
+			add_technology_researched = naga_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = namkhazen_heritage
+				}
+			}
+			add_technology_researched = namkhazen_tech
+		}
+}
 	# International List
 
 	every_country = {

@@ -184,12 +184,12 @@ pro_lobby_war_valid_check = {
 	trigger_if = { # You need worthy opponents.
 		limit = {
 			scope:third_party_country = {
-				country_rank = rank_value:great_power
+				country_rank >= rank_value:great_power
 			}
 		}
 		scope:relevant_country = { 
 			OR = {
-				country_rank = rank_value:great_power
+				country_rank >= rank_value:great_power
 				country_rank = rank_value:major_power
 			}
 		}		
@@ -203,7 +203,7 @@ pro_lobby_war_valid_check = {
 		}
 		scope:relevant_country = { 
 			OR = {
-				country_rank = rank_value:great_power
+				country_rank >= rank_value:great_power
 				country_rank = rank_value:major_power
 				country_rank = rank_value:minor_power
 			}

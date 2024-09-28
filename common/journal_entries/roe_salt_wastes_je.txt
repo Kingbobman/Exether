@@ -25,16 +25,7 @@
 			text = control_every_salt_waste_state
 			fully_owns_the_salt_wastes = yes
 		}
-		
-		custom_tooltip = {
-			text = no_salt_waste_pop_discriminated
-			NOT = {
-				any_scope_pop = {
-					culture = { has_discrimination_trait = saltwaste_survivor_culture_group }
-					pop_is_discriminated = yes
-				}
-			}
-		}
+		accept_the_salt_waste_natives = yes
 	}
 
 	on_complete = {

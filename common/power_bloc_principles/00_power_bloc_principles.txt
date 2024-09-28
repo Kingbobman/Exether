@@ -467,13 +467,9 @@ principle_defensive_cooperation_3 = {
 	icon = "gfx/interface/icons/principles_icons/defensive_coorperation.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_3.dds"
 
-	member_modifier = {
-		# Countries forced to join defensive plays against members
-		country_join_power_bloc_member_in_defensive_plays_bool = yes
-	}
-
 	power_bloc_modifier = {
 		# Modifiers from previous level(s)
+		power_bloc_leader_can_add_wargoal_bool = yes
 		power_bloc_disallow_war_bool = yes
 		power_bloc_target_sway_cost_mult = -0.5
 	}

@@ -5600,7 +5600,7 @@
 	region_state:RAV={
 		create_building={
 			building="building_government_administration"
-			level=10
+			level=11
 			reserves=1
 			activate_production_methods={ "pm_horizontal_drawer_cabinets" }
 		}
@@ -5784,7 +5784,7 @@
 				building={ 
 					type="building_financial_district"
 					country="c:RAV"
-					levels=6
+					levels=3
 					region="STATE_TROMMELKUST"
 			   }
 			}
@@ -5976,35 +5976,7 @@
 		}
 	}
   }
-  s:STATE_VUURHOEK = {
-	region_state:RAV={
-		create_building={
-			building="building_government_administration"
-			level=1
-			reserves=1
-			activate_production_methods={ "pm_horizontal_drawer_cabinets" }
-		}	
-		create_building={
-			building="building_railway"
-				add_ownership={ 
-					building={ 
-						type="building_financial_district"
-						country="c:RAV"
-						levels=1
-						region="STATE_VUURHOEK"
-					}
-				}
-			reserves=1
-			activate_production_methods={ "pm_steam_trains" "pm_wooden_passenger_carriages" }
-		}	
-		create_building={
-			building="building_port"
-			level=1
-			reserves=1
-			activate_production_methods={ "pm_basic_port" }
-		}				
-	}
-  }
+
   s:STATE_DRAAIVELD = {
 	region_state:RAV={
             create_building={
@@ -6076,7 +6048,7 @@
 						type="building_manor_house"
 						country="c:RAV"
 						levels=1
-						region="STATE_VUURHOEK"
+						region="STATE_TROMMELKUST"
 				   }
 				}
 			reserves=1
@@ -6914,7 +6886,7 @@
 				building={ 
 					type="building_financial_district"
 					country="c:RAV"
-					levels=5
+					levels=2
 					region="STATE_KRULHOVEN"
 			   }
 			}
@@ -6992,7 +6964,7 @@
                     building={ 
                         type="building_adventuring_guild"
                         country="c:RAV"
-                        levels=2
+                        levels=1
                         region="STATE_KRULHOVEN"
                    }
                 }
@@ -9825,13 +9797,13 @@
 	}
   }
   s:STATE_REINFALL = {
-	region_state:RAV={
+	region_state:DRI={
             create_building={
 			building="building_fishing_wharf"
                 add_ownership={ 
                     building={ 
                         type="building_adventuring_guild"
-                        country="c:RAV"
+                        country="c:DRI"
                         levels=1
                         region="STATE_REINFALL"
                    }

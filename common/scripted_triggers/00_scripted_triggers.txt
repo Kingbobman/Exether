@@ -264,11 +264,11 @@ countries_are_valid_rivals = {
 	
 	trigger_if = {
 		limit = {
-			country_rank = rank_value:great_power
+			country_rank >= rank_value:great_power
 		}
 		scope:target_country = { 
 			OR = {
-				country_rank = rank_value:great_power
+				country_rank >= rank_value:great_power
 				country_rank = rank_value:major_power
 			}
 		}		
@@ -280,7 +280,7 @@ countries_are_valid_rivals = {
 		}
 		scope:target_country = { 
 			OR = {
-				country_rank = rank_value:great_power
+				country_rank >= rank_value:great_power
 				country_rank = rank_value:major_power
 				country_rank = rank_value:minor_power
 			}
