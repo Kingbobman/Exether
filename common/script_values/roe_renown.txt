@@ -6,6 +6,35 @@ renown = {
 	add = renown_usage
 }
 
+renown_reputation = {
+	add = renown 
+	round_to = 1000
+	divide = 1000
+}
+
+renown_prestige = {
+	add = renown_reputation
+	multiply = 10
+}
+
+
+renown_modulo = {
+	add = renown_generation
+	add = renown_upkeep
+	add = renown_usage
+	modulo = 1000
+}
+
+renown_level_max = {
+	add = renown_generation
+	add = renown_upkeep
+	add = renown_usage
+	add = 1000
+	divide = 1000
+	round_to = 1
+	multiply = 1000
+}
+
 renown_multiplier = {
 	value = 1
 	add = modifier:country_renown_gen_mult
@@ -26,11 +55,6 @@ renown_usage = {
 		value = 1
 		add = modifier:country_renown_cost_mult
 	}
-	subtract = retainer_1_cost
-	subtract = retainer_2_cost
-	subtract = retainer_3_cost
-	subtract = retainer_4_cost
-	subtract = retainer_5_cost
 }
 
 renown_upkeep = {
