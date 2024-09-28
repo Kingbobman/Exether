@@ -55,24 +55,21 @@ fully_owns_the_salt_wastes = {
 	}
 }
 
-discriminate_against_salt_waste_natives = {
-	any_scope_pop = {
-		culture = { has_discrimination_trait = saltwaste_survivor_culture_group }
-		NOT = { is_pop_type = slaves }
+accept_the_salt_waste_natives = {
+	AND = {
 		OR = {
 			AND = {
-				ROOT = { has_law = law_type:law_state_atheism }
-				has_pop_religion = atheist
-			}
-			AND = {
-				ROOT = { NOT = { has_law = law_type:law_state_atheism } }
-				OR = {
-					has_pop_religion = fathers_command
-					has_pop_religion = mothers_embrace
-					has_pop_religion = salt_crucible
+				rel:fathers_command = {
+					is_state_religion = ROOT
 				}
+				has_law = law_type:law_freedom_of_conscience
 			}
+			has_law = law_type:law_total_separation
+			has_law = law_type:law_state_atheism
 		}
-		pop_is_discriminated = yes
+		OR = {
+			has_law = law_type:law_cultural_exclusion
+			has_law = law_type:law_multicultural
+		}
 	}
 }

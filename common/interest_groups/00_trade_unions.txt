@@ -339,7 +339,7 @@
 	}
 
 	female_commander_chance = {
-		value = 0.0
+		value = 0.15
 
 		if = {
 			limit = {
@@ -349,13 +349,30 @@
 
 			}
 			add = {
-				value = 1.0
+				value = 0.85
 			}
+		}
+		if = {
+			limit = {
+				owner = {
+					exists = c:WHI
+					OR = {
+						c:WHI = this
+						civil_war_origin_country = c:WHI
+					}
+						
+				}
+
+			}
+			add = {
+				value = 0.4
+			}
+
 		}
 	}
 
 	female_politician_chance = {
-		value = 0.0
+		value = 0.15
 
 		if = {
 			limit = {
@@ -365,7 +382,7 @@
 
 			}
 			add = {
-				value = 0.95
+				value = 0.8
 			}
 		}
 		else_if = {
@@ -376,10 +393,28 @@
 
 			}
 			add = {
-				value = 0.05
+				value = 0.1
 			}
 		}
+		if = {
+			limit = {
+				owner = {
+					exists = c:WHI
+					OR = {
+						c:WHI = this
+						civil_war_origin_country = c:WHI
+					}
+						
+				}
+
+			}
+			add = {
+				value = 0.4
+			}
+
+		}
 	}
+	
 
 	female_agitator_chance = {
 		value = 0.05
@@ -430,6 +465,23 @@
 			add = {
 				value = 0.9
 			}
+		}
+		if = {
+			limit = {
+				owner = {
+					exists = c:WHI
+					OR = {
+						c:WHI = this
+						civil_war_origin_country = c:WHI
+					}
+						
+				}
+
+			}
+			add = {
+				value = 0.35
+			}
+
 		}	
 	}
 

@@ -650,7 +650,12 @@ gfx_has_no_culture_trains_trigger = {
 
 gfx_military_mobilization_culture_is_european = {
 
-	any_primary_culture = { has_culture_graphics = european }
+	any_primary_culture = { 			
+		OR = {
+				has_culture_graphics = european
+				has_culture_graphics = mousefolk
+		} 
+	}
 
 }
 
@@ -753,7 +758,12 @@ gfx_military_deploy_culture_is_european = {
 
 	scope:military_formation = {
 		any_combat_unit = {
-			culture = { has_culture_graphics = european }
+			culture = { 		
+				OR = {
+					has_culture_graphics = european
+					has_culture_graphics = mousefolk
+				}  
+			}
 		}
 	}
 

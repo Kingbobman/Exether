@@ -39,7 +39,10 @@ military_infantry_european_general_diorama_entity = {
 	
 	trigger = {
 		scope:culture = {
-			has_culture_graphics = european
+			OR = {
+				has_culture_graphics = european
+				has_culture_graphics = mousefolk
+			}
 		}
 	}
 }

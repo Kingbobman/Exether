@@ -15,7 +15,10 @@
 #			has_technology_researched = rifling
 #		}
 #		scope:culture = {
-#			has_culture_graphics = european
+#			OR = {
+				has_culture_graphics = european
+				has_culture_graphics = mousefolk
+			}
 #		}
 #		scope:combat_unit_type = unit_type:combat_unit_type_irregular_infantry
 #	}
@@ -54,7 +57,10 @@ military_cavalry_european_hussar_diorama_entity = {
 	
 	trigger = {
 		scope:culture = {
-			has_culture_graphics = european
+			OR = {
+				has_culture_graphics = european
+				has_culture_graphics = mousefolk
+			}	
 		}
 
 		scope:combat_unit_type = unit_type:combat_unit_type_hussars
@@ -68,7 +74,10 @@ military_cavalry_european_dragoon_diorama_entity = {
 	
 	trigger = {
 		scope:culture = {
-			has_culture_graphics = european
+			OR = {
+				has_culture_graphics = european
+				has_culture_graphics = mousefolk
+			}
 		}
 		scope:combat_unit_type = unit_type:combat_unit_type_dragoons
 	}
@@ -81,7 +90,10 @@ military_cavalry_european_cuirassier_diorama_entity = {
 	
 	trigger = {
 		scope:culture = {
-			has_culture_graphics = european
+			OR = {
+				has_culture_graphics = european
+				has_culture_graphics = mousefolk
+			}
 		}
 		scope:combat_unit_type = unit_type:combat_unit_type_cuirassiers
 	}
@@ -94,7 +106,10 @@ military_cavalry_european_lancer_diorama_entity = {
 	
 	trigger = {
 		scope:culture = {
-			has_culture_graphics = european
+			OR = {
+				has_culture_graphics = european
+				has_culture_graphics = mousefolk
+			}
 		}
 		scope:combat_unit_type = unit_type:combat_unit_type_lancers
 	}
