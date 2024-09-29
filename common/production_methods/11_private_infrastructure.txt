@@ -1,4 +1,4 @@
-﻿pm_early_trains = {
+pm_early_trains = {
 	texture = "gfx/interface/icons/production_method_icons/experimental_trains.dds"
 
 	building_modifiers = {
@@ -209,6 +209,24 @@ pm_steel_passenger_carriages = {
 		}
 		level_scaled = {
 			building_employment_clerks_add = 500
+		}
+	}			
+}
+
+pm_nimbium_passenger_carriages = {
+	texture = "gfx/interface/icons/production_method_icons/passenger_carriages.dds"
+	unlocking_technologies = {
+		floating_buildings
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_steel_add = 3
+goods_input_nimbium_add = 2
+			goods_output_transportation_add = 20
+		}
+		level_scaled = {
+			
+building_employment_clerks_add = 500		building_employment_artificers_add = 50
 		}
 	}			
 }
