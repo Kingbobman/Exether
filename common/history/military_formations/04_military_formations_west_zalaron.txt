@@ -4,28 +4,30 @@
 			type = army
 			hq_region = sr:region_embervein_arroyo
 
+			name = "Masters of the Mountain"
+
 			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
+				type = unit_type:combat_unit_type_skirmish_infantry
 				state_region = s:STATE_SHANAKONG
-				count = 20
+				count = 25
 			}
 			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
+				type = unit_type:combat_unit_type_skirmish_infantry
 				state_region = s:STATE_SHANAKONG
 				service_type = conscript
 				count = 10
 			}
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
+				type = unit_type:combat_unit_type_mobile_artillery
 				state_region = s:STATE_MLIMASHWARI
-				count = 20
+				count = 10
 			}
 			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
+				type = unit_type:combat_unit_type_skirmish_infantry
 				state_region = s:STATE_MLIMASHWARI
 				service_type = conscript
-				count = 10
+				count = 15
 			}
 
 			save_scope_as = thk_army
@@ -46,40 +48,18 @@
 			type = army
 			hq_region = sr:region_embervein_arroyo
 
+			name = "The Forgebound"
+
 			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_DIYINAKHAD
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_NAKOTHAI
 				count = 20
 			}
+
 			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
+				type = unit_type:combat_unit_type_mobile_artillery
 				state_region = s:STATE_NAKOTHAI
 				count = 10
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_KAINAVA
-				count = 10
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_NASHAYAZH
-				count = 10
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_SHINOGOZH
-				count = 10
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_SHIBADUAI
-				count = 10
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_hussars
-				state_region = s:STATE_DIYINAKHAD
-				count = 6
 			}
 
 			save_scope_as = tsh_army
@@ -101,14 +81,9 @@
 			hq_region = sr:region_rust_gorge
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_THAGHIZHI
-				count = 26
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_hussars
-				state_region = s:STATE_THAGHIZHI
-				count = 4
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_SHINAKHAD
+				count = 25
 			}
 
 			save_scope_as = hoz_army
@@ -117,6 +92,12 @@
 		create_character = {
 			is_general = yes
 			hq = region_rust_gorge
+			interest_group = ig_armed_forces
+			age = 35
+			traits = {
+				surveyor
+				mountain_commander
+			}
 			save_scope_as = hoz_general
 		}
 		scope:hoz_general = {
@@ -128,20 +109,22 @@
 			type = army
 			hq_region = sr:region_rust_gorge
 
+			name = "Duneshar Land Command"
+
 			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_DINASHIN
+				type = unit_type:combat_unit_type_skirmish_infantry
+				state_region = s:STATE_KEENAVOK
 				count = 10
 			}
 			combat_unit = {
-				type = unit_type:combat_unit_type_hussars
-				state_region = s:STATE_DINASHIN
-				count = 2
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_KEENAVOK
+				count = 15
 			}
 			combat_unit = {
-				type = unit_type:combat_unit_type_cannon_artillery
-				state_region = s:STATE_DINASHIN
-				count = 4
+				type = unit_type:combat_unit_type_skirmish_infantry
+				state_region = s:STATE_KEENAVAZH
+				count = 10
 			}
 
 			save_scope_as = khd_army
@@ -149,13 +132,84 @@
 
 		create_character = {
 			is_general = yes
+			commander_rank = commander_rank_2
 			hq = region_rust_gorge
-			save_scope_as = khd_general
-		}
+			interest_group = ig_armed_forces
+			age = 47
+			traits = {
+				surveyor
+				mountain_commander
+			}
 		scope:khd_general = {
 			transfer_to_formation = scope:khd_army
 		}
 	}
+
+	create_military_formation = {
+		type = army
+		hq_region = sr:region_rust_gorge
+
+		name = "Khaduras Marine Corps"
+
+		combat_unit = {
+			type = unit_type:combat_unit_type_skirmish_infantry
+			state_region = s:STATE_DINASHIN
+			count = 15
+		}
+		combat_unit = {
+			type = unit_type:combat_unit_type_mobile_artillery
+			state_region = s:STATE_DINASHIN
+			count = 15
+		}
+
+		save_scope_as = khd_army
+	}
+
+	create_character = {
+		is_general = yes
+		commander_rank = commander_rank_1
+		hq = region_rust_gorge
+		interest_group = ig_armed_forces
+		age = 33
+		traits = {
+			meticulous
+			brave
+		}
+	scope:khd_general = {
+		transfer_to_formation = scope:khd_army
+	}
+}
+
+create_military_formation = {
+	type = fleet
+	hq_region = sr:region_rust_gorge
+	name = "Shimakai Dockyard"
+
+	combat_unit = {
+		type = unit_type:combat_unit_type_man_o_war
+		state_region = s:STATE_SHIMAKAI
+		count = 4
+	}
+
+	combat_unit = {
+		type = unit_type:combat_unit_type_frigate
+		state_region = s:STATE_SHIMAKAI
+		count = 11
+	}
+	save_scope_as = khd_fleet
+}
+
+create_character = {
+	is_admiral = yes
+	hq = region_rust_gorge
+	save_scope_as = khd_admiral
+}
+
+scope:khd_admiral = {
+	transfer_to_formation = scope:khd_fleet
+}
+
+}
 	c:RAV ?= {
 		create_military_formation = {
 			type = army
@@ -854,39 +908,6 @@
 			transfer_to_formation = scope:dhr_army
 		}
 	}
-	c:VLT ?= {
-		create_military_formation = {
-			type = army
-			hq_region = sr:region_embervein_arroyo
-
-			name = "Viletok Horde"
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_VITHKUQJA
-				count = 15
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
-				state_region = s:STATE_VITHKUQJA
-				count = 15
-			}
-
-			save_scope_as = vltarmy
-		}
-
-		create_character = {
-			is_general = yes
-			hq = sr:region_embervein_arroyo
-			save_scope_as = vltgen
-		}
-		
-		scope:vltgen = {
-			set_commander_rank = 3
-			transfer_to_formation = scope:vltarmy
-		}
-	}
 
 	c:LGZ ?= {
 		create_military_formation = {
@@ -969,8 +990,8 @@
 #		scope:lgzgen2 = {
 #			transfer_to_formation = scope:lgzarmy2
 #		}
-#	}
-#
+	}
+
 	c:REM ?= {
 		create_military_formation = {
 			type = army
@@ -1443,46 +1464,6 @@
 			transfer_to_formation = scope:gra_army
 		}
 	}
-	c:SKR ?= {
-		create_military_formation = {
-			type = army
-			hq_region = sr:region_hyena_plains
-
-			name = "Hyena Packs"
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_MAWINGUCHANYA
-				count = 15
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_PWANIQWA
-				count = 15
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_KIJITOQWA
-				count = 15
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_SAWAMAJI
-				count = 10
-			}
-				save_scope_as = kvgarmy2
-		}
-		create_character = {
-			is_general = yes
-			commander_rank = commander_rank_2
-			hq = sr:region_hyena_plains
-			save_scope_as = kvggen2
-		}
-		
-		scope:kvggen2 = {
-			transfer_to_formation = scope:kvgarmy2
-		}
-	}
 c:SBH ?= {
 	create_military_formation = {
 		type = army
@@ -1532,19 +1513,14 @@ c:SNB ?= {
 
 		combat_unit = {
 			type = unit_type:combat_unit_type_line_infantry
-			state_region = s:STATE_THASAMAKI
-			service_type = conscript
+			state_region = s:STATE_SWAHATHAI
 			count = 5
 		}
 		combat_unit = {
 			type = unit_type:combat_unit_type_line_infantry
-			state_region = s:STATE_THASAMAKI
-			count = 2
-		}
-		combat_unit = {
-			type = unit_type:combat_unit_type_line_infantry
-			state_region = s:STATE_BONGSAF
-			count = 3
+			state_region = s:STATE_SWAHATHAI
+			service_type = conscript
+			count = 10
 		}
 		combat_unit = {
 			type = unit_type:combat_unit_type_line_infantry
@@ -1552,9 +1528,21 @@ c:SNB ?= {
 			count = 5
 		}
 		combat_unit = {
+			type = unit_type:combat_unit_type_line_infantry
+			state_region = s:STATE_KEEDZAI
+			service_type = conscript
+			count = 10
+		}
+		combat_unit = {
 			type = unit_type:combat_unit_type_mobile_artillery
-			state_region = s:STATE_SWAHATHAI
+			state_region = s:STATE_KISIKLONG
 			count = 5
+		}
+		combat_unit = {
+			type = unit_type:combat_unit_type_mobile_artillery
+			state_region = s:STATE_KISIKLONG
+			service_type = conscript
+			count = 10
 		}
 		save_scope_as = snb_army
 	}
@@ -1579,19 +1567,14 @@ c:SNB ?= {
 
 		combat_unit = {
 			type = unit_type:combat_unit_type_line_infantry
-			state_region = s:STATE_SWAHATHAI
-			service_type = conscript
+			state_region = s:STATE_KLONGBARIDI
 			count = 5
 		}
 		combat_unit = {
 			type = unit_type:combat_unit_type_line_infantry
-			state_region = s:STATE_KILIMAMAI
-			count = 2
-		}
-		combat_unit = {
-			type = unit_type:combat_unit_type_line_infantry
-			state_region = s:STATE_JUACHAI
-			count = 3
+			state_region = s:STATE_KLONGBARIDI
+			service_type = conscript
+			count = 5
 		}
 		combat_unit = {
 			type = unit_type:combat_unit_type_line_infantry
@@ -1599,9 +1582,21 @@ c:SNB ?= {
 			count = 5
 		}
 		combat_unit = {
+			type = unit_type:combat_unit_type_line_infantry
+			state_region = s:STATE_MAJISAMAKI
+			service_type = conscript
+			count = 10
+		}
+		combat_unit = {
 			type = unit_type:combat_unit_type_mobile_artillery
-			state_region = s:STATE_SWAHATHAI
+			state_region = s:STATE_KILIMAMAI
 			count = 5
+		}
+		combat_unit = {
+			type = unit_type:combat_unit_type_mobile_artillery
+			state_region = s:STATE_KILIMAMAI
+			service_type = conscript
+			count = 10
 		}
 		save_scope_as = snb_army2
 	}
@@ -1626,18 +1621,25 @@ c:SNB ?= {
 
 		combat_unit = {
 			type = unit_type:combat_unit_type_line_infantry
-			state_region = s:STATE_KILIMAMAI
-			count = 2
+			state_region = s:STATE_JUACHAI
+			count = 5
 		}
 		combat_unit = {
 			type = unit_type:combat_unit_type_line_infantry
-			state_region = s:STATE_SWAHATHAI
-			count = 3
+			state_region = s:STATE_JUACHAI
+			service_type = conscript
+			count = 10
 		}
 		combat_unit = {
 			type = unit_type:combat_unit_type_mobile_artillery
-			state_region = s:STATE_SWAHATHAI
+			state_region = s:STATE_SAWATHONG
 			count = 5
+		}
+		combat_unit = {
+			type = unit_type:combat_unit_type_mobile_artillery
+			state_region = s:STATE_SAWATHONG
+			service_type = conscript
+			count = 10
 		}
 		save_scope_as = snb_army3
 	}
@@ -1666,20 +1668,20 @@ c:SNB ?= {
 	
 		combat_unit = {
 			type = unit_type:combat_unit_type_man_o_war
-			state_region = s:STATE_SWAHATHAI
+			state_region = s:STATE_SAWATHONG
 			count = 2
 		}
 
 		combat_unit = {
 			type = unit_type:combat_unit_type_frigate
-			state_region = s:STATE_SWAHATHAI
-			count = 3
+			state_region = s:STATE_SAWATHONG
+			count = 5
 		}
 
 		combat_unit = {
 			type = unit_type:combat_unit_type_frigate
-			state_region = s:STATE_THASAMAKI
-			count = 3
+			state_region = s:STATE_JUACHAI
+			count = 5
 		}
 		save_scope_as = snb_fleet
 	}
@@ -1713,7 +1715,7 @@ c:LPS ?= {
 		combat_unit = {
 			type = unit_type:combat_unit_type_mobile_artillery
 			state_region = s:STATE_MAJIWAZIRI
-			count = 10
+			count = 5
 		}
 
 		save_scope_as = lps_army
@@ -1751,12 +1753,6 @@ c:LPS ?= {
 			count = 10
 		}
 
-		combat_unit = {
-			type = unit_type:combat_unit_type_man_o_war
-			state_region = s:STATE_MAJIWAZIRI
-			count = 5
-		}
-
 		save_scope_as = lps_fleet
 	}
 
@@ -1786,15 +1782,44 @@ c:FMJ ?= {
 			count = 25
 		}
 
+		save_scope_as = fmj_army
+	}
+
+	create_character = {
+		is_general = yes
+		hq = sr:region_sanbang
+		commander_rank = commander_rank_1
+		interest_group = ig_armed_forces
+		save_scope_as = fmj_general
+	}
+	
+	scope:fmj_general = {
+		transfer_to_formation = scope:fmj_army
+	}
+}
+
+c:VLT ?= {
+	create_military_formation = {
+		type = army
+		hq_region = sr:region_sanbang
+
+		name = "Bavolian Volunteer Army"
+
 		combat_unit = {
 			type = unit_type:combat_unit_type_line_infantry
-			state_region = s:STATE_CHEJATAN_DO
+			state_region = s:STATE_THASAMAKI
 			count = 5
 		}
 
 		combat_unit = {
+			type = unit_type:combat_unit_type_line_infantry
+			state_region = s:STATE_VITHKUQJA
+			count = 10
+		}
+
+		combat_unit = {
 			type = unit_type:combat_unit_type_mobile_artillery
-			state_region = s:STATE_CHEJATAN_DO
+			state_region = s:STATE_VITHKUQJA
 			count = 5
 		}
 

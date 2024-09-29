@@ -21,19 +21,6 @@
         reserves=1
         activate_production_methods={ "pm_iron_frame_buildings" }
       }		
-            create_building={
-        building="building_artillery_foundries"
-                add_ownership={ 
-                    building={ 
-                        type="building_financial_district"
-                        country="c:DUM"
-                        levels=1
-                        region="STATE_CROWNPEAK"
-                   }
-                }
-        reserves=1
-        activate_production_methods={ "pm_cannons" "pm_automation_disabled" }
-      }
 			create_building={
 				building="building_construction_sector"
 				level=2
@@ -188,32 +175,6 @@
           reserves=1
           activate_production_methods={  "pm_tools_disabled" "pm_simple_farming" }
         }
-            create_building={
-          building="building_arms_industry"
-                add_ownership={ 
-                    building={ 
-                        type="building_financial_district"
-                        country="c:DUM"
-                        levels=5
-                        region="STATE_CROWNPEAK"
-                   }
-                }
-          reserves=1
-          activate_production_methods={ "pm_muskets" }
-        }
-            create_building={
-          building="building_artillery_foundries"
-                add_ownership={ 
-                    building={ 
-                        type="building_financial_district"
-                        country="c:DUM"
-                        levels=1
-                        region="STATE_CALDAMUS"
-                   }
-                }
-          reserves=1
-          activate_production_methods={ "pm_cannons" "pm_automation_disabled" }
-        }
         create_building={
           building="building_port"
           level=3
@@ -238,6 +199,19 @@
           reserves=1
           activate_production_methods={ "pm_iron_frame_buildings" }
         }		
+        create_building={
+          building="building_artillery_foundries"
+                  add_ownership={ 
+                      building={ 
+                          type="building_financial_district"
+                          country="c:DUM"
+                          levels=2
+                          region="STATE_SERONTAIN"
+                     }
+                  }
+          reserves=1
+          activate_production_methods={ "pm_cannons" "pm_automation_disabled" }
+        }
         create_building={
           building="building_food_industry"
           add_ownership={
@@ -270,7 +244,7 @@
                       building={ 
                           type="building_financial_district"
                           country="c:DUM"
-                          levels=4
+                          levels=3
                           region="STATE_SERONTAIN"
                      }
                   }
@@ -627,6 +601,19 @@
           level=7
           reserves=1
           activate_production_methods={ "pm_horizontal_drawer_cabinets" }
+        }
+        create_building={
+          building="building_arms_industry"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:DUM"
+                        levels=1
+                        region="STATE_LAST_HEARTH"
+                   }
+                }
+          reserves=1
+          activate_production_methods={ "pm_muskets" }
         }
             create_building={
           building="building_paper_mills"
@@ -1590,6 +1577,19 @@ reserves=1
           reserves=1
           activate_production_methods={ "pm_scholastic_education" }
         }
+        create_building={
+          building="building_arms_industry"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:ABR"
+                        levels=1
+                        region="STATE_MIDCLACK"
+                   }
+                }
+          reserves=1
+          activate_production_methods={ "pm_muskets" }
+        }
             create_building={
           building="building_paper_mills"
                 add_ownership={ 
@@ -1743,6 +1743,19 @@ reserves=1
     s:STATE_BANEKERT = {
       region_state:DUM={
         create_building={
+          building="building_arms_industry"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:DUM"
+                        levels=1
+                        region="STATE_BANEKERT"
+                   }
+                }
+          reserves=1
+          activate_production_methods={ "pm_muskets" }
+        }
+        create_building={
           building="building_logging_camp"
                 add_ownership={ 
                     building={ 
@@ -1852,6 +1865,19 @@ reserves=1
           level=1
           reserves=1
           activate_production_methods={ "pm_wooden_buildings" }
+        }
+        create_building={
+          building="building_artillery_foundries"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:DUM"
+                        levels=1
+                        region="STATE_ADRIANSEN"
+                   }
+                }
+          reserves=1
+          activate_production_methods={ "pm_cannons" "pm_automation_disabled" }
         }
 			create_building={
           building="building_iron_mine"
@@ -2087,6 +2113,19 @@ reserves=1
 
     s:STATE_MELENLECK = {
       region_state:DUM={
+        create_building={
+          building="building_arms_industry"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:DUM"
+                        levels=1
+                        region="STATE_MELENLECK"
+                   }
+                }
+          reserves=1
+          activate_production_methods={ "pm_muskets" }
+        }
             create_building={
           building="building_paper_mills"
                 add_ownership={ 
@@ -2569,7 +2608,7 @@ reserves=1
                }
             }
           reserves=1
-          activate_production_methods={ "pm_simple_underfarming"  "pm_tools" "pm_farms_basic_earth_shaping" "pm_lichen_dyes" }
+          activate_production_methods={ "pm_simple_underfarming"  "pm_tools_building_rice_farm" "pm_farms_basic_earth_shaping" "pm_lichen_dyes" }
         }
         create_building={
           building="building_motor_industry"
@@ -2794,19 +2833,6 @@ reserves=1
                 }
           reserves=1
           activate_production_methods={ "pm_saw_mills" "pm_hardwood" "pm_no_equipment" "pm_road_carts" }
-        }
-            create_building={
-          building="building_arms_industry"
-                add_ownership={ 
-                    building={ 
-                        type="building_financial_district"
-                        country="c:DUM"
-                        levels=2
-                        region="STATE_MALINMORE"
-                   }
-                }
-          reserves=1
-          activate_production_methods={ "pm_muskets" }
         }
             create_building={
           building="building_fishing_wharf"
@@ -3748,7 +3774,7 @@ reserves=1
                     building={ 
                         type="building_financial_district"
                         country="c:AUM"
-                        levels=2
+                        levels=1
                         region="STATE_FALNALECK"
                    }
                 }
