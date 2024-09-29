@@ -512,11 +512,11 @@
 				building="building_construction_sector"
 				level=4
 				reserves=1
-				activate_production_methods={ "pm_iron_frame_buildings" }
+				activate_production_methods={ "pm_wooden_buildings" }
 			}
 			create_building={
 				building="building_government_administration"
-				level=7
+				level=8
 				reserves=1
 				activate_production_methods={ "pm_simple_organization" }
 			}
@@ -631,9 +631,9 @@
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:REM"
+						country="c:EKA"
 						levels=1
-						region="STATE_GJILANIJA"
+						region="STATE_KAVAJANA"
 				   }
 				}
 			reserves=1
@@ -648,27 +648,14 @@
                 add_ownership={ 
                     building={ 
                         type="building_financial_district"
-                        country="c:REM"
-                        levels=1
-                        region="STATE_GJILANIJA"
-                   }
-                }
-			reserves=1
-			activate_production_methods={ "pm_saw_mills" "pm_no_equipment" "pm_road_carts" "pm_hardwood" }
-		}
-            create_building={
-          building="building_military_shipyards"
-                add_ownership={ 
-                    building={ 
-                        type="building_financial_district"
                         country="c:EKA"
                         levels=1
                         region="STATE_PODBARDISHTA"
                    }
                 }
-          reserves=1
-          activate_production_methods={ "pm_military_shipbuilding_wooden" }
-        }
+			reserves=1
+			activate_production_methods={ "pm_saw_mills" "pm_no_equipment" "pm_road_carts" "pm_no_hardwood" }
+		}
 	}
   }
   s:STATE_RUSYLESH = {
@@ -778,7 +765,7 @@
 	region_state:EKA={
 		create_building={
 			building="building_government_administration"
-			level=2
+			level=8
 			reserves=1
 			activate_production_methods={ "pm_simple_organization" }
 		}
@@ -854,32 +841,6 @@
   }
   s:STATE_KRUSHEVA = {
 	region_state:EKA={
-			create_building={
-			building="building_iron_mine"
-				add_ownership={ 
-					building={ 
-						type="building_financial_district"
-						country="c:KGM"
-						levels=1
-						region="STATE_SHKODERIA"
-				   }
-				}
-			reserves=1
-			activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
-		}
-            create_building={
-			building="building_artillery_foundries"
-                add_ownership={ 
-                    building={ 
-                        type="building_financial_district"
-                        country="c:KGM"
-                        levels=1
-                        region="STATE_SHKODERIA"
-                   }
-                }
-			reserves=1
-			activate_production_methods={ "pm_cannons" "pm_automation_disabled" }
-		}
 	}
   }
   s:STATE_DEBARIA = {
