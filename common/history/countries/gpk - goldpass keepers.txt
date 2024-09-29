@@ -2,10 +2,18 @@
 	c:GPK	?= {
 		effect_starting_technology_tier_orc_tech = yes
 		add_technology_researched = lathe
+		add_technology_researched = drydocks
+		add_technology_researched = mechanical_tools
+		add_technology_researched = intensive_agriculture
+		add_technology_researched = atmospheric_engine
+		add_technology_researched = railways
 		add_technology_researched = skyports
 		add_technology_researched = academia
 		add_technology_researched = medical_degrees
+		add_technology_researched = general_staff
+		add_technology_researched = percussion_cap
 		add_technology_researched = nationalism
+		add_technology_researched = central_archives
 		add_technology_researched = steelworking
 		add_technology_researched = monster_hunters
 
@@ -16,8 +24,14 @@
 			add_ruling_interest_group = yes
 		}
 
+				ig:ig_devout = {
+			remove_ideology = ideology_patriarchal
+			add_ideology = ideology_isolationist
+			}
+
 
 		activate_law = law_type:law_theocracy
+		activate_law = law_type:law_divine_miracles
 		activate_law = law_type:law_isolationism
 		activate_law = law_type:law_interventionism
 		activate_law = law_type:law_censorship
@@ -32,6 +46,12 @@
 		activate_law = law_type:law_national_guard
 		activate_law = law_type:law_ethnostate
 		activate_law = law_type:law_dedicated_police
-		activate_law = law_type:law_land_based_taxation
+		activate_law = law_type:law_per_capita_based_taxation
+
+		add_modifier = {
+			name = gpk_clergy_power
+		}
+
+
 	}
 }
