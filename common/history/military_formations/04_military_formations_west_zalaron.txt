@@ -854,52 +854,6 @@
 			transfer_to_formation = scope:dhr_army
 		}
 	}
-	c:VOR ?= {
-		create_military_formation = {
-			type = army
-			hq_region = sr:region_verdant_shore
-
-			name = "Dawnridge Watch"
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_DAWNRIDGE
-				count = 3
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_dragoons
-				state_region = s:STATE_DAWNRIDGE
-				count = 2
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_DAWNRIDGE
-				service_type = conscript
-				count = 10
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_dragoons
-				state_region = s:STATE_DAWNRIDGE
-				service_type = conscript
-				count = 5
-			}
-
-			save_scope_as = vor_army
-		}
-
-		create_character = {
-			is_general = yes
-			hq = region_verdant_shore
-			save_scope_as = vor_general
-		}
-		
-		scope:vor_general = {
-			transfer_to_formation = scope:vor_army
-		}
-	}
 	c:VLT ?= {
 		create_military_formation = {
 			type = army
@@ -1051,19 +1005,20 @@
 			type = army
 			hq_region = sr:region_kengurudal
 
-			name = "Shkoderian Volunteer Army"
+			name = "Kullgrimi Militias"
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
+				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_SHKODERIA
-				count = 28
+				count = 20
 			}
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_mobile_artillery
-				state_region = s:STATE_SHKODERIA
-				count = 7
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_VALBARDA
+				count = 20
 			}
+
 
 			save_scope_as = kgmarmy
 		}
@@ -1078,38 +1033,6 @@
 		scope:kgmgen = {
 			transfer_to_formation = scope:kgmarmy
 		}
-
-		create_military_formation = {
-			type = army
-			hq_region = sr:region_kengurudal
-
-			name = "Valbardan Volunteer Army"
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_mobile_artillery
-				state_region = s:STATE_VALBARDA
-				count = 7
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_VALBARDA
-				count = 28
-			}
-
-			save_scope_as = kgmarmy2
-		}
-
-		create_character = {
-			is_general = yes
-			commander_rank = commander_rank_2
-			hq = sr:region_kengurudal
-			save_scope_as = kgmgen2
-		}
-		
-		scope:kgmgen2 = {
-			transfer_to_formation = scope:kgmarmy2
-		}
 	}
 
 	c:TUF ?= {
@@ -1117,12 +1040,12 @@
 			type = army
 			hq_region = sr:region_gavkhan
 
-			name = "Freed of the North"
+			name = "Elbashtia Levies"
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_ELBASHTIA
-				count = 50
+				count = 20
 			}
 
 			save_scope_as = tufarmy
@@ -1246,13 +1169,13 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_ERSEKERA
-				count = 20
+				count = 15
 			}
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_LUMADHIA
-				count = 20
+				count = 15
 			}
 
 			save_scope_as = mjearmy
@@ -1260,7 +1183,7 @@
 
 		create_character = {
 			is_general = yes
-			commander_rank = commander_rank_2
+			commander_rank = commander_rank_1
 			hq = sr:region_gavkhan
 			save_scope_as = mjegen
 		}
@@ -1278,13 +1201,13 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_ERSEKERA
-				count = 20
+				count = 10
 			}
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_LUMADHIA
-				count = 20
+				count = 10
 			}
 
 			save_scope_as = mjearmy2
@@ -1292,7 +1215,7 @@
 
 		create_character = {
 			is_general = yes
-			commander_rank = commander_rank_2
+			commander_rank = commander_rank_1
 			hq = sr:region_gavkhan
 			save_scope_as = mjegen2
 		}
@@ -1318,13 +1241,13 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_ZATYRE
-				count = 25
+				count = 30
 			}
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_PRESPIA
-				count = 10
+				count = 20
 			}
 
 			save_scope_as = kvgarmy
@@ -1343,7 +1266,7 @@
 
 		create_character = {
 			is_general = yes
-			commander_rank = commander_rank_1
+			commander_rank = commander_rank_2
 			hq = sr:region_verdant_shore
 			save_scope_as = kvggen2
 		}
@@ -1463,23 +1386,10 @@
 				state_region = s:STATE_CERRIKUA
 				count = 20
 			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
-				state_region = s:STATE_SHPYNTESI
-				count = 10
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_dragoons
-				state_region = s:STATE_KUKESPIA
-				count = 10
-			}
-
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_KUKESPIA
-				count = 5
+				count = 10
 			}
 
 			save_scope_as = dko_army2
