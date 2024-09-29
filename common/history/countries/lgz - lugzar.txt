@@ -1,35 +1,26 @@
 ﻿COUNTRIES = {
 	c:LGZ = {
 		effect_starting_technology_tier_goblin_tech = yes
-		add_technology_researched = empiricism
-		add_technology_researched = medical_degrees
-		add_technology_researched = mass_communication
-		add_technology_researched = nationalism
 
 		ig:ig_devout = {
 			add_ruling_interest_group = yes
 		}
+
+		add_technology_researched = academia
+		add_technology_researched = medical_degrees
 
 		set_ruling_interest_groups = {
         	ig_devout
         }
 
 
-		add_taxed_goods = g:tobacco
-		add_taxed_goods = g:clothes
-		add_taxed_goods = g:furniture
-		add_taxed_goods = g:coal
-		add_taxed_goods = g:services
-		add_taxed_goods = g:fabric
-		
-
-		activate_law = law_type:law_slave_trade
-		activate_law = law_type:law_homesteading
-		activate_law = law_type:law_interventionism
+		activate_law = law_type:law_slavery_banned
+		activate_law = law_type:law_tenant_farmers
+		activate_law = law_type:law_traditionalism
 		activate_law = law_type:law_mass_conscription
 		activate_law = law_type:law_national_guard
 	    activate_law = law_type:law_isolationism
-		activate_law = law_type:law_consumption_based_taxation
+		activate_law = law_type:law_land_based_taxation
 		activate_law = law_type:law_oligarchy
 		activate_law = law_type:law_religious_schools
 		activate_law = law_type:law_theocracy
@@ -37,8 +28,6 @@
 		activate_law = law_type:law_charitable_health_system
 		activate_law = law_type:law_mage_hunters
 		activate_law = law_type:law_appointed_bureaucrats
-		activate_law = law_type:law_slave_trade
-		activate_law = law_type:law_dedicated_police
 		activate_law = law_type:law_censorship
 
 	}
