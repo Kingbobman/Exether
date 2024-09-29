@@ -1839,4 +1839,102 @@ c:VLT ?= {
 	}
 }
 
+c:EKA ?= {
+	create_military_formation = {
+		type = army
+		hq_region = sr:region_tokalivar
+
+		combat_unit = {
+			type = unit_type:combat_unit_type_irregular_infantry
+			state_region = s:STATE_RUSYLESH
+			count = 30
+		}
+
+		combat_unit = {
+			type = unit_type:combat_unit_type_irregular_infantry
+			state_region = s:STATE_PODBARDISHTA
+			count = 30
+		}
+
+		combat_unit = {
+			type = unit_type:combat_unit_type_irregular_infantry
+			state_region = s:STATE_STRUGOVA
+			count = 30
+		}
+
+		save_scope_as = eka_army
+	}
+
+	create_character = {
+		is_general = yes
+		hq = region_tokalivar
+		commander_rank = commander_rank_2
+		save_scope_as = eka_general
+	}
+	scope:eka_general = {
+		transfer_to_formation = scope:eka_army
+	}
+
+	create_character = {
+		is_general = yes
+		hq = region_tokalivar
+		commander_rank = commander_rank_1
+		save_scope_as = eka_general2
+	}
+	scope:eka_general2 = {
+		transfer_to_formation = scope:eka_army
+	}
+
+
+	create_military_formation = {
+		type = fleet
+		hq_region = sr:region_tokalivar
+	
+		combat_unit = {
+			type = unit_type:combat_unit_type_man_o_war
+			state_region = s:STATE_STRUGOVA
+			count = 5
+		}
+
+		combat_unit = {
+			type = unit_type:combat_unit_type_frigate
+			state_region = s:STATE_STRUGOVA
+			count = 15
+		}
+		save_scope_as = eka_fleet
+	}
+
+	create_character = {
+		is_admiral = yes
+		hq = region_tokalivar
+		save_scope_as = eka_admiral
+	}
+	scope:eka_admiral = {
+		transfer_to_formation = scope:eka_fleet
+	}
+}
+c:ZIN ?= {
+	create_military_formation = {
+		type = army
+		hq_region = sr:region_tokalivar
+
+		combat_unit = {
+			type = unit_type:combat_unit_type_irregular_infantry
+			state_region = s:STATE_XHAMADHANI
+			count = 15
+		}
+
+		save_scope_as = zin_army
+	}
+
+	create_character = {
+		is_general = yes
+		hq = region_tokalivar
+		save_scope_as = zin_general
+	}
+	scope:zin_general = {
+		transfer_to_formation = scope:zin_army
+	}
+}
+
 }

@@ -622,10 +622,30 @@
 		}
   }
   s:STATE_TETOVAJA = {
+	region_state:EKA = {
+		create_building={
+			building="building_government_administration"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_simple_organization" }
+		}
+		create_building={
+			building="building_port"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_basic_port" }
+		}
+	}
 
   }
   s:STATE_KAVAJANA = {
 	region_state:EKA={
+		create_building={
+			building="building_port"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_basic_port" }
+		}
 			create_building={
 			building="building_tobacco_plantation"
 				add_ownership={ 
@@ -643,6 +663,12 @@
   }
   s:STATE_PODBARDISHTA = {
 	region_state:EKA={
+		create_building={
+			building="building_government_administration"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_simple_organization" }
+		}
             create_building={
 			building="building_logging_camp"
                 add_ownership={ 
@@ -662,6 +688,27 @@
 
   }
   s:STATE_ZARJAPE = {
+	region_state:EKA = {
+		create_building={
+			building="building_government_administration"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_simple_organization" }
+		}
+		create_building={
+			building="building_shipyards"
+			add_ownership={ 
+				building={ 
+					type="building_financial_district"
+					country="c:EKA"
+					levels=1
+					region="STATE_ZARJAPE"
+			   }
+			}
+			reserves=1
+			activate_production_methods={ "pm_basic_shipbuilding" }
+		}
+	}
 
   }
   s:STATE_DIBRA = {
@@ -765,10 +812,36 @@
 	region_state:EKA={
 		create_building={
 			building="building_government_administration"
-			level=8
+			level=5
 			reserves=1
 			activate_production_methods={ "pm_simple_organization" }
 		}
+		create_building={
+			building="building_iron_mine"
+			add_ownership={ 
+				building={ 
+					type="building_financial_district"
+					country="c:EKA"
+					levels=1
+					region="STATE_STRUGOVA"
+			   }
+			}
+			reserves=1
+			activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+		}
+		create_building={
+			building="building_military_shipyards"
+				add_ownership={ 
+					building={ 
+						type="building_financial_district"
+						country="c:EKA"
+						levels=1
+						region="STATE_STRUGOVA"
+				   }
+				}
+			reserves=1
+			activate_production_methods={ "pm_military_shipbuilding_wooden" }
+		}	
             create_building={
 			building="building_logging_camp"
                 add_ownership={ 
@@ -841,9 +914,35 @@
   }
   s:STATE_KRUSHEVA = {
 	region_state:EKA={
+		create_building={
+			building="building_government_administration"
+			level=3
+			reserves=1
+			activate_production_methods={ "pm_simple_organization" }
+		}
+		create_building={
+			building="building_port"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_basic_port" }
+		}
 	}
   }
   s:STATE_DEBARIA = {
+	region_state:EKA = {
+		create_building={
+			building="building_government_administration"
+			level=3
+			reserves=1
+			activate_production_methods={ "pm_simple_organization" }
+		}
+		create_building={
+			building="building_port"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_basic_port" }
+		}
+	}
 
   }
   s:STATE_SHKUMBINIA = {
@@ -1656,23 +1755,22 @@
   }
   s:STATE_XHAMADHANI = {
 	region_state:ZIN = {
-			create_building={
-			building="building_wheat_farm"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:LGZ"
-						levels=1
-						region="STATE_KURBULL"
-                    }
-				}
+		create_building={
+			building="building_port"
+			level=1
 			reserves=1
-			activate_production_methods={  "pm_simple_farming" "pm_citrus_orchards" "pm_tools_disabled" }
+			activate_production_methods={ "pm_basic_port" }
 		}
     }
   }
   s:STATE_KORCOVA = {
 	region_state:ZIN = {
+		create_building={
+			building="building_port"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_basic_port" }
+		}
     }
   }
   s:STATE_VITHKUQJA = {
@@ -1780,13 +1878,19 @@
   s:STATE_MILOTI = {
 	region_state:ZIN={
 			create_building={
+				create_building={
+					building="building_port"
+					level=1
+					reserves=1
+					activate_production_methods={ "pm_basic_port" }
+				}
         building="building_coffee_plantation"
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:EKA"
+						country="c:ZIN"
 						levels=1
-						region="STATE_KLOSI"
+						region="STATE_MILOTI"
 				   }
 				}
         reserves=1
@@ -1796,6 +1900,12 @@
   }
   s:STATE_LISIJA = {
 	region_state:EKA={
+		create_building={
+			building="building_government_administration"
+			level=1
+			reserves=1
+			activate_production_methods={ "pm_simple_organization" }
+		}
 		create_building={
 			building="building_port"
 			level=1
