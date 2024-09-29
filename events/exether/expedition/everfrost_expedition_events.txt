@@ -3,6 +3,7 @@
 # Start Event
 everfrost_expedition.101 = {
 	type = country_event
+	dlc = dlc_roe
 	placement = ROOT
 	
 	title = everfrost_expedition.101.t
@@ -25,6 +26,7 @@ everfrost_expedition.101 = {
 
 everfrost_expedition.102 = { #Choose commander
 	type = country_event
+	dlc = dlc_roe
     placement = ROOT
 
     title = everfrost_expedition.102.t
@@ -186,6 +188,7 @@ everfrost_expedition.102 = { #Choose commander
 # Mountains
 everfrost_expedition.1 = {
 	type = country_event
+	dlc = dlc_roe
 	placement = ROOT
 	
 	title = everfrost_expedition.1.t
@@ -195,7 +198,7 @@ everfrost_expedition.1 = {
 	duration = 3
 	
 	event_image = {
-		video = "europenorthamerica_antarctica"
+		texture = "gfx/event_images/runestone.dds"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -207,6 +210,13 @@ everfrost_expedition.1 = {
 	
 	immediate = {
 		set_variable = mountains_of_madness
+		random_character_in_void = {
+			limit = {
+				is_owned_unassigned_retainer = yes
+				has_variable = expedition_leader_var
+		 }
+			save_scope_as = expedition_leader
+		}
 	}
 	
 	option = { # Move on
@@ -221,7 +231,7 @@ everfrost_expedition.1 = {
 			50 = {
 				scope:expedition_leader = {
 					add_modifier = {
-						name = antarctic_mountains_modifier
+						name = gruaav_mountains_modifier
 						months = normal_modifier_time
 					}
 				}
@@ -236,13 +246,13 @@ everfrost_expedition.1 = {
 			}
 		}
 	}
-	option = { # climb Erebus
+	option = { # climb Krutum
 		name = everfrost_expedition.1.c
 		random_list = {
 			25 = {
 				scope:expedition_leader = {
 					add_modifier = {
-						name = antarctic_mountains_modifier
+						name = gruaav_mountains_modifier
 						months = normal_modifier_time
 						multiplier = 2
 					}
@@ -263,6 +273,7 @@ everfrost_expedition.1 = {
 # Discovery Hut
 everfrost_expedition.2 = {
 	type = country_event
+	dlc = dlc_roe
 	placement = ROOT
 	
 	title = everfrost_expedition.2.t
@@ -337,6 +348,7 @@ everfrost_expedition.2 = {
 # Overshot and lost
 everfrost_expedition.3 = {
 	type = country_event
+	dlc = dlc_roe
 	placement = ROOT
 	
 	title = everfrost_expedition.3.t
@@ -403,6 +415,7 @@ everfrost_expedition.3 = {
 # Doomed
 everfrost_expedition.4 = {
 	type = country_event
+	dlc = dlc_roe
 	placement = ROOT
 	
 	title = everfrost_expedition.4.t
@@ -440,8 +453,9 @@ everfrost_expedition.4 = {
 # The Pole!
 everfrost_expedition.5 = {
 	type = country_event
+	dlc = dlc_roe
 	placement = ROOT
-	
+	gui_window = newspaper_superevent
 	title = everfrost_expedition.5.t
 	desc = {
 		first_valid = {
@@ -459,12 +473,28 @@ everfrost_expedition.5 = {
 			}
 		}
 	}
-	flavor = everfrost_expedition.5.f
+
+	flavor = {
+		first_valid = {
+			triggered_desc = {
+				desc = everfrost_expedition.5.f
+				trigger = {
+					NOT = { has_global_variable = ice_wall_reached }
+				}
+			}
+			triggered_desc = {
+				desc = everfrost_expedition.5.f2
+				trigger = {
+					has_global_variable = ice_wall_reached
+				}
+			}
+		}
+	}
 	
 	duration = 3
 	
 	event_image = {
-		video = "europenorthamerica_antarctica"
+		texture = "gfx/event_images/ice_wall.dds"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -525,6 +555,7 @@ everfrost_expedition.5 = {
 # Eating the dogs
 everfrost_expedition.6 = {
 	type = country_event
+	dlc = dlc_roe
 	placement = ROOT
 	
 	title = everfrost_expedition.6.t
@@ -534,7 +565,7 @@ everfrost_expedition.6 = {
 	duration = 3
 	
 	event_image = {
-		video = "europenorthamerica_antarctica"
+		texture = "gfx/event_images/runestone.dds"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -577,6 +608,7 @@ everfrost_expedition.6 = {
 # Returning home - Success event
 everfrost_expedition.7 = {
 	type = country_event
+	dlc = dlc_roe
 	placement = ROOT
 	
 	title = everfrost_expedition.7.t
@@ -601,7 +633,7 @@ everfrost_expedition.7 = {
 	duration = 3
 	
 	event_image = {
-		video = "europenorthamerica_antarctica"
+		texture = "gfx/event_images/runestone.dds"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -660,6 +692,7 @@ everfrost_expedition.7 = {
 # Pack Ice
 everfrost_expedition.8 = {
 	type = country_event
+	dlc = dlc_roe
 	placement = ROOT
 	
 	title = everfrost_expedition.8.t
@@ -728,6 +761,7 @@ everfrost_expedition.8 = {
 # Icebound
 everfrost_expedition.9 = {
 	type = country_event
+	dlc = dlc_roe
 	placement = ROOT
 	
 	title = everfrost_expedition.9.t
@@ -790,6 +824,7 @@ everfrost_expedition.9 = {
 # Whaling Station
 everfrost_expedition.10 = {
 	type = country_event
+	dlc = dlc_roe
 	placement = ROOT
 	
 	title = everfrost_expedition.10.t
@@ -823,7 +858,7 @@ everfrost_expedition.10 = {
 			set_variable = polar_explorer
 			set_character_busy_and_immortal = no
 			add_modifier = {
-				name = safe_polar_exp_modifier
+				name = safe_everfrost_exp_modifier
 				months = normal_modifier_time
 			}
 		}
@@ -836,6 +871,7 @@ everfrost_expedition.10 = {
 # The Great Ice Barrier
 everfrost_expedition.11 = {
 	type = country_event
+	dlc = dlc_roe
 	placement = ROOT
 	
 	title = everfrost_expedition.11.t
@@ -883,6 +919,7 @@ everfrost_expedition.11 = {
 # Ascend a glacier!
 everfrost_expedition.12 = {
 	type = country_event
+	dlc = dlc_roe
 	placement = ROOT
 	
 	title = everfrost_expedition.12.t
@@ -892,7 +929,7 @@ everfrost_expedition.12 = {
 	duration = 3
 	
 	event_image = {
-		video = "europenorthamerica_antarctica"
+		texture = "gfx/event_images/runestone.dds"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -937,6 +974,7 @@ everfrost_expedition.12 = {
 # Strange rock
 everfrost_expedition.13 = {
 	type = country_event
+	dlc = dlc_roe
 	placement = ROOT
 	
 	title = everfrost_expedition.13.t
@@ -961,7 +999,7 @@ everfrost_expedition.13 = {
 	duration = 3
 	
 	event_image = {
-		video = "europenorthamerica_antarctica"
+		texture = "gfx/event_images/runestone.dds"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"

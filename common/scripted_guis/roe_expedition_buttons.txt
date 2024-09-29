@@ -71,10 +71,20 @@
 				is_ai = no
 				NOT = { has_variable = ai_expedition_cooldown }
 			}
-			has_technology_researched = sea_lane_strategies
+			has_technology_researched = trench_works
 			is_at_war = no
 
 			has_free_retainer = yes
+
+			custom_tooltip = {
+				text = not_giant_tt
+				NOT = {
+					any_primary_culture = {
+						has_discrimination_trait = giant_heritage
+					}
+				}
+			}
+
 
 	
 	
@@ -219,6 +229,21 @@
 				text = coming_soon_tt
 				always = no
 			}
+
+			has_interest_marker_in_region = region_fahavalo
+			custom_tooltip = {
+				text = has_expedition_tt
+				NOT = { has_variable = on_expedition }	
+			}
+					
+			OR = {
+				is_ai = no
+				NOT = { has_variable = ai_expedition_cooldown }
+			}
+			has_technology_researched = sea_lane_strategies
+			is_at_war = no
+
+			has_free_retainer = yes
 		
 		}
 	}
