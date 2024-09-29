@@ -3539,6 +3539,25 @@
 				activate_production_methods={ "pm_vertical_filing_cabinets" }
 			}
 			create_building={
+				building="building_construction_sector"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_iron_frame_buildings" }
+			}
+			create_building={
+				building="building_tooling_workshops"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:EMP"
+							levels=2
+							region="STATE_THE_AMBER_RUN"
+					   }
+					}
+				reserves=1
+				activate_production_methods={ "pm_pig_iron" "pm_automation_disabled" }
+			}
+			create_building={
 				building="building_artifactory"
 					add_ownership={ 
 						building={ 
@@ -3648,12 +3667,12 @@
 						building={ 
 							type="building_financial_district"
 							country="c:EMP"
-							levels=1
+							levels=3
 							region="STATE_THE_AMBER_RUN"
 					   }
 					}
 				reserves=1
-				activate_production_methods={ "pm_atmospheric_engine_pump_building_iron_mine" "pm_no_explosives"    "pm_rockrollers_mine" "pm_road_carts" }
+				activate_production_methods={ "pm_atmospheric_engine_pump_building_iron_mine" "pm_no_explosives" "pm_rockrollers_mine" "pm_road_carts" }
 			}		
 			create_building={
 				building="building_gizmo_workshop"
