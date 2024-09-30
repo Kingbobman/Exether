@@ -281,3 +281,22 @@ is_sky_region = {
 	}
 	}
 }
+
+
+should_show_building_in_panel = {
+	saved_scopes = { selected_building_type }
+
+	is_valid = {
+		
+			AND = { 
+				scope:selected_building_type = bt:building_rice_farm
+				ROOT = {
+					any_scope_state = {
+						GetMaxPotentialFor(b:bg_rice_farm) > 0
+					}
+				}
+
+			}
+
+	}
+}
