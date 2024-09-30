@@ -1106,6 +1106,12 @@ scope:khd_admiral = {
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_KORCAJA
+				count = 20
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_SARANDOVA
 				count = 50
 			}
@@ -1132,6 +1138,17 @@ scope:khd_admiral = {
 		}
 		
 		scope:zixgen2 = {
+			transfer_to_formation = scope:zixarmy
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			hq = sr:region_gavkhan
+			save_scope_as = zixgen3
+		}
+		
+		scope:zixgen3 = {
 			transfer_to_formation = scope:zixarmy
 		}
 
@@ -1847,13 +1864,13 @@ c:EKA ?= {
 		combat_unit = {
 			type = unit_type:combat_unit_type_irregular_infantry
 			state_region = s:STATE_RUSYLESH
-			count = 30
+			count = 35
 		}
 
 		combat_unit = {
 			type = unit_type:combat_unit_type_irregular_infantry
 			state_region = s:STATE_PODBARDISHTA
-			count = 30
+			count = 35
 		}
 
 		combat_unit = {
@@ -1884,10 +1901,20 @@ c:EKA ?= {
 	create_character = {
 		is_general = yes
 		hq = region_tokalivar
-		commander_rank = commander_rank_1
+		commander_rank = commander_rank_2
 		save_scope_as = eka_general2
 	}
 	scope:eka_general2 = {
+		transfer_to_formation = scope:eka_army
+	}
+
+	create_character = {
+		is_general = yes
+		hq = region_tokalivar
+		commander_rank = commander_rank_1
+		save_scope_as = eka_general3
+	}
+	scope:eka_general3 = {
 		transfer_to_formation = scope:eka_army
 	}
 
@@ -1912,6 +1939,7 @@ c:EKA ?= {
 
 	create_character = {
 		is_admiral = yes
+		commander_rank = commander_rank_2
 		hq = region_tokalivar
 		save_scope_as = eka_admiral
 	}
