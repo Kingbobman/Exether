@@ -1126,7 +1126,7 @@ scope:khd_admiral = {
 
 		create_character = {
 			is_general = yes
-			commander_rank = commander_rank_2
+			commander_rank = commander_rank_3
 			hq = sr:region_gavkhan
 			save_scope_as = zixgen2
 		}
@@ -1858,8 +1858,14 @@ c:EKA ?= {
 
 		combat_unit = {
 			type = unit_type:combat_unit_type_irregular_infantry
-			state_region = s:STATE_STRUGOVA
+			state_region = s:STATE_ZARJAPE
 			count = 30
+		}
+
+		combat_unit = {
+			type = unit_type:combat_unit_type_irregular_infantry
+			state_region = s:STATE_STRUGOVA
+			count = 35
 		}
 
 		save_scope_as = eka_army
@@ -1893,13 +1899,13 @@ c:EKA ?= {
 		combat_unit = {
 			type = unit_type:combat_unit_type_man_o_war
 			state_region = s:STATE_STRUGOVA
-			count = 5
+			count = 8
 		}
 
 		combat_unit = {
 			type = unit_type:combat_unit_type_frigate
 			state_region = s:STATE_STRUGOVA
-			count = 15
+			count = 13
 		}
 		save_scope_as = eka_fleet
 	}
