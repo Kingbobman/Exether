@@ -619,6 +619,48 @@ ideology_goblin_stratocratic = {
 	}
 }
 
+ideology_hobgoblin_stratocratic = {
+	icon = "gfx/interface/icons/ideology_icons/stratocratic.dds"
+	
+	lawgroup_army_model = {
+		law_peasant_levies = approve
+		law_professional_army = approve
+		law_national_militia = neutral
+		law_mass_conscription = neutral
+	}
+	
+	lawgroup_land_reform = {
+		law_serfdom = strongly_approve
+		law_tenant_farmers = approve
+		law_commercialized_agriculture = neutral
+		law_homesteading = strongly_disapprove
+		law_collectivized_agriculture = strongly_disapprove
+	}
+	
+	lawgroup_taxation = {
+		law_consumption_based_taxation = approve
+		law_land_based_taxation = approve
+		law_per_capita_based_taxation = neutral
+		law_proportional_taxation = disapprove
+		law_graduated_taxation = strongly_disapprove
+	}
+
+	lawgroup_welfare = {
+		law_no_social_security = approve
+		law_poor_laws = neutral
+		law_wage_subsidies = disapprove
+		law_old_age_pension = disapprove
+	}
+	lawgroup_magic = {
+		law_no_magic = neutral
+		law_divine_miracles = approve
+		law_druidic_circles = neutral
+		law_artificer_guilds = neutral
+		law_astrological_studies = neutral
+		law_mage_hunters = neutral
+	}
+}
+
 	ideology_hobgoblin_hegemony = {
 		icon = "gfx/interface/icons/ideology_icons/caudillismo.dds"
 		
