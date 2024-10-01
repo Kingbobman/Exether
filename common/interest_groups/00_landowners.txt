@@ -82,6 +82,19 @@
 							}
 		}
 
+		if = {
+			limit ={
+				owner ={
+					any_primary_culture = {
+						has_discrimination_trait = hobgoblin
+					}
+				}
+			}
+			ig:ig_landowners = {
+				add_ideology = ideology_hobgoblin_hegemony
+				set_interest_group_name = ig_hobgoblin_restaz
+			}
+		}
 
 		if = {
 			limit = {
@@ -106,20 +119,11 @@
 
 		if = {
 			limit = {
-				country_has_state_religion = rel:nilbogism
-				OR = {
-					country_has_primary_culture = cu:xhurlob
-					country_has_primary_culture = cu:varbat
-					country_has_primary_culture = cu:rethrashar
-					country_has_primary_culture = cu:dales_togrul
-					country_has_primary_culture = cu:atiukura
-					country_has_primary_culture = cu:shkemger
-					country_has_primary_culture = cu:morevnamarya
-					country_has_primary_culture = cu:puarfeijiin
-					country_has_primary_culture = cu:zangedlittuy
-					country_has_primary_culture = cu:sarhbalb
-					country_has_primary_culture = cu:kojiniu
-					country_has_primary_culture = cu:yakamimbo
+				any_primary_culture = {
+					has_discrimination_trait = goblin_heritage
+					NOT = {
+						has_discrimination_trait = hobgoblin
+					}
 				}
 			}
 			ig:ig_landowners = {
@@ -142,7 +146,7 @@
 		}
 
 		# Theocratic
-		else_if = {
+		if = {
 			limit = {
 				OR = {
 					c:AUM ?= this
