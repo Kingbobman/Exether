@@ -21,7 +21,7 @@
   }
 
   s:STATE_TUKHUR = {
-    region_state: = {
+    region_state:YUL = {
 	  create_building={
         building="building_iron_mine"
         level=3
@@ -130,7 +130,7 @@
   }
 
   s:STATE_KHAIRI = {
-    region_state:YUL = {
+    region_state:SUN = {
       create_building={
           building="building_iron_mine"
           level=4
@@ -194,24 +194,18 @@
   # }
 
   s:STATE_CHANMA = {
-    region_state:YUL = {
+    region_state:SAI = {
 	  create_building={
         building="building_government_administration"
-        level=21
+        level=5
         reserves=1
-        activate_production_methods={ "pm_horizontal_drawer_cabinets" }
-      }
-	  create_building={
-        building="building_construction_sector"
-        level=2
-        reserves=1
-        activate_production_methods={ "pm_wooden_buildings" }
+        activate_production_methods={ "pm_simple_organization" }
       }
     }
   }
 
   s:STATE_DALKH = {
-    region_state:PUA = {
+    region_state:SAI = {
 	  create_building={
         building="building_iron_mine"
         level=2
@@ -228,7 +222,7 @@
   }
 
   s:STATE_SUKHIA = {
-    region_state:PUA = {
+    region_state:YUL = {
 	  create_building={
         building="building_government_administration"
         level=21
@@ -245,12 +239,12 @@
   }
 
   s:STATE_ALTANU = {
-    region_state:PUA = {
+    region_state:YUL = {
 	  create_building={
         building="building_government_administration"
-        level=21
+        level=5
         reserves=1
-        activate_production_methods={ "pm_horizontal_drawer_cabinets" }
+        activate_production_methods={ "pm_simple_organization" }
       }
     }
   }
@@ -259,12 +253,12 @@
   }
 
   s:STATE_SAINO = {
-    region_state:PUA = {
+    region_state:SAI = {
 	  create_building={
         building="building_government_administration"
-        level=21
+        level=5
         reserves=1
-        activate_production_methods={ "pm_horizontal_drawer_cabinets" }
+        activate_production_methods={ "pm_simple_organization" }
       }
     }
   }
@@ -322,7 +316,7 @@
   }
 
   s:STATE_GURVA = {
-    region_state:KCN = {
+    region_state:PUA = {
 	  create_building={
         building="building_logging_camp"
         level=10
@@ -339,7 +333,7 @@
   }
 
   s:STATE_KHONGO = {
-    region_state:KCN = {
+    region_state:PUA = {
 	  create_building={
         building="building_textile_mills"
         level=11
@@ -455,7 +449,7 @@
   }
 
   s:STATE_ALBAIN = {
-    region_state:ZHU = {
+    region_state:MOK = {
 	  create_building={
         building="building_port"
         level=1
@@ -466,13 +460,13 @@
   }
 
   s:STATE_GULTHYR = {
-    region_state:ZHU = {
+    region_state:MOK = {
       create_building={
 				building="building_fishing_wharf_glowfish"
                 add_ownership={ 
                     building={ 
                         type="building_adventuring_guild"
-                        country="c:ZHU"
+                        country="c:MOK"
                         levels=2
                         region="STATE_KYRKAZ"
                    }
@@ -484,7 +478,7 @@
   }
 
   s:STATE_THARKYR = {
-    region_state:ZHU = {
+    region_state:MOK = {
       create_building={
 				building="building_fishing_wharf_glowfish"
                 add_ownership={ 
@@ -519,7 +513,7 @@
     }
   }
   s:STATE_KYRTHAL = {
-    region_state:QON = {
+    region_state:OGR = {
       create_building={
         building="building_port"
         level=1
@@ -549,7 +543,7 @@
   }
 
   s:STATE_ZURKYL = {
-    region_state:QON = {
+    region_state:OGR = {
       create_building={
         building="building_logging_camp"
         level=1
@@ -654,7 +648,7 @@
   }
 
   s:STATE_DRUKYN = {
-    region_state:QON = {
+    region_state:OGR = {
       create_building={
         building="building_logging_camp"
         level=1
@@ -665,7 +659,7 @@
   }
 
   s:STATE_KAZTHOK = {
-    region_state:SHJ = {
+    region_state:OGR = {
       create_building={
         building="building_wheat_farm"
         level=20
@@ -840,7 +834,7 @@
   }
 
   s:STATE_GROMMOK = {
-    region_state:SUN = {
+    region_state:MOK = {
 	  create_building={
         building="building_port"
         level=1
@@ -851,7 +845,7 @@
   }
 
   s:STATE_KYRKAZ = {
-    region_state:ZHU = {
+    region_state:MOK = {
       create_building={
         building="building_government_administration"
         level=2
@@ -871,7 +865,7 @@
   }
 
   s:STATE_KAZKYL = {
-    region_state:TAH = {
+    region_state:SAI = {
 	  create_building={
         building="building_logging_camp"
         level=3
@@ -902,7 +896,7 @@
   }
 
   s:STATE_HIRAMACHI = {
-    region_state:PIN = {
+    region_state:HIR = {
       create_building={
         building="building_wheat_farm"
         level=1
@@ -1139,7 +1133,7 @@
   }
 
   s:STATE_HARUGAWASAI = {
-    region_state:YOK = {
+    region_state:RUG = {
       create_building={
         building="building_wheat_farm"
         level=25
