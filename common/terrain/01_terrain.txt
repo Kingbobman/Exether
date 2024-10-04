@@ -262,7 +262,17 @@ forest = {
 hills = {
 	label = label_elevated
 	label = label_travel_harsh_environment
-	weight = 2
+	weight = {
+		value = 2
+		if = {
+			limit = {
+				state = {
+					state_region = s:STATE_SKYPIERCER_PEAK
+				}
+			}
+			add = 4
+		}
+	}
 	textures = {
 		{
 			weight = {
@@ -333,6 +343,21 @@ hills = {
 			path = "gfx/state_pictures/hills_desert.dds"
 			effect = "vfx_entity_ui_state_mountains_arid"
 		}
+	{	
+		weight = {
+			value = 0
+			if = {
+				limit = {
+					scope:state = { #bro you gotta use a different syntax here wtf
+						state_region = s:STATE_SKYPIERCER_PEAK
+					}
+				}
+				add = 4
+			}
+		}
+		path = "gfx/state_pictures/skypiercer.dds"
+		effect = "vfx_entity_ui_state_arctic"
+	}
 		{
 			weight = {
 				value = 0
@@ -486,6 +511,21 @@ mountain = {
 			path = "gfx/state_pictures/volcano_snow.dds"
 			effect = "vfx_entity_ui_state_arctic"
 		}
+		{	
+			weight = {
+				value = 0
+				if = {
+					limit = {
+						scope:state = {
+							state_region = s:STATE_SKYPIERCER_PEAK
+						}
+					}
+					add = 4
+				}
+			}
+			path = "gfx/state_pictures/skypiercer.dds"
+			effect = "vfx_entity_ui_state_arctic"
+		}
 	}
 
 	combat_width = 0.4
@@ -603,6 +643,24 @@ desert = {
 	label = label_travel_harsh_environment
 	weight = 2
 	textures = {
+		{	
+			weight = {
+				value = 0
+				if = {
+					limit = {
+						scope:state = {
+						
+								state_region = s:STATE_SKYPIERCER_PEAK
+							
+							
+						}
+					}
+					add = 604
+				}
+			}
+			path = "gfx/state_pictures/skypiercer.dds"
+			effect = "vfx_entity_ui_state_desert_northamerica"
+		}
 		{
 			weight = {
 				value = 0
