@@ -9,28 +9,7 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_PWANIQILIMA
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_mobile_artillery
-				state_region = s:STATE_PWANIQILIMA
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_PWANIQILIMA
-				service_type = conscript
-				count = 10
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_PWANIQILIMA
-				count = 20
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_PWANIQILIMA
-				count = 20
+				count = 35
 			}
 
 			save_scope_as = pro_army
@@ -38,12 +17,12 @@
 
 		create_character = {
 			is_general = yes
-			commander_rank = commander_rank_2
+			commander_rank = commander_rank_1
 			hq = sr:region_hyena_plains
 			interest_group = ig_armed_forces
 			age = 35
 			traits = {
-				stalwart_defender
+				mountain_commander
 				expert_defensive_strategist
 			}
 			save_scope_as = pro_general
@@ -59,38 +38,24 @@
 			type = army
 			hq_region = sr:region_hyena_plains
 
-			name = "Reformed Skravend Army"
+			name = "Reformed Army of Skravend"
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_PWANIQWA
-				count = 10
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_KIJITOQWA
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_MAWINGUCHANYA
-				count = 10
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_dragoons
-				state_region = s:STATE_SAWAMAJI
-				count = 5
+				state_region = s:STATE_KILIMASAWA
+				count = 15
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mobile_artillery
-				state_region = s:STATE_PWANIQWA
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_MAWINGUCHANYA
-				service_type = conscript
+				state_region = s:STATE_KILIMASAWA
 				count = 15
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_KILIMASAWA
+				service_type = conscript
+				count = 10
 			}
 
 			save_scope_as = skr_army
@@ -98,7 +63,7 @@
 
 		create_character = {
 			is_general = yes
-			commander_rank = commander_rank_2
+			commander_rank = commander_rank_1
 			hq = sr:region_hyena_plains
 			interest_group = ig_armed_forces
 			age = 32
@@ -111,6 +76,37 @@
 		scope:skr_general = {
 			transfer_to_formation = scope:skr_army
 		}
+
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_hyena_plains
+
+			name = "Gnoll Hunting Packs"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_KILIMADADA
+				count = 20
+			}
+
+				save_scope_as = kvgarmy2
+		}
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			hq = sr:region_hyena_plains
+			interest_group = ig_armed_forces
+			age = 30
+			traits = {
+				plains_commander
+				surveyor
+			}
+			save_scope_as = kvggen2
+		}
+		
+		scope:kvggen2 = {
+			transfer_to_formation = scope:kvgarmy2
+		}
 	}
 	c:GPK ?= {
 		create_military_formation = {
@@ -120,27 +116,21 @@
 			name = "Navakai Pass Guards"
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
+				type = unit_type:combat_unit_type_skirmish_infantry
 				state_region = s:STATE_SUYANAKU
-				count = 10
+				count = 15
 			}
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_mobile_artillery
 				state_region = s:STATE_SUYANAKU
-				count = 10
+				count = 25
 			}
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
+				type = unit_type:combat_unit_type_skirmish_infantry
 				state_region = s:STATE_NAVAKAI
 				count = 20
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
-				state_region = s:STATE_NAVAKAI
-				count = 5
 			}
 
 			save_scope_as = gpk_army
@@ -150,6 +140,13 @@
 			is_general = yes
 			commander_rank = commander_rank_2
 			hq = region_south_chin_desert
+			interest_group = ig_devout
+			age = 30
+			traits = {
+				mountain_commander
+				stalwart_defender
+				surveyor
+			}
 			save_scope_as = gpk_general
 		}
 		scope:gpk_general = {
@@ -280,7 +277,7 @@
 		
 		create_character = {
 			is_general = yes
-			commander_rank = commander_rank_1
+			commander_rank = commander_rank_2
 			hq = region_salt_wastes
 			interest_group = ig_armed_forces
 			age = 34
