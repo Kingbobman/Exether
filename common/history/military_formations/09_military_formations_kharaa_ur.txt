@@ -115,7 +115,7 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_HARUGAWASAI
-				count = 35
+				count = 30
 			}
 
 			save_scope_as = rug_army
@@ -143,12 +143,18 @@
 				count = 25
 			}
 
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_KHASUNEN
+				count = 15
+			}
+
 			save_scope_as = koj_army
 		}
 
 		create_character = {
 			is_general = yes
-			commander_rank = commander_rank_1
+			commander_rank = commander_rank_2
 			save_scope_as = koj_general
 		}
 
