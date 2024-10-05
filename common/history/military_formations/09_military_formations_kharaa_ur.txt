@@ -107,6 +107,63 @@
 		}
 	}
 
+	c:MOK ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_khantar
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_BAIZOR
+				count = 30
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_GROMMOK
+				count = 30
+			}
+
+			save_scope_as = mok_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			save_scope_as = mok_general
+		}
+
+		scope:mok_general = {
+			transfer_to_formation = scope:mok_army
+		}
+	}
+
+	c:ZHU ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_khantar
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_KAZTHYR
+				count = 50
+			}
+			
+
+			save_scope_as = zhu_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			save_scope_as = zhu_general
+		}
+
+		scope:zhu_general = {
+			transfer_to_formation = scope:zhu_army
+		}
+	}
+
 	c:RUG ?= {
 		create_military_formation = {
 			type = army
