@@ -107,4 +107,54 @@
 		}
 	}
 
+	c:RUG ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_hirugolaima
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_HARUGAWASAI
+				count = 35
+			}
+
+			save_scope_as = rug_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			save_scope_as = rug_general
+		}
+
+		scope:rug_general = {
+			transfer_to_formation = scope:rug_army
+		}
+	}
+
+	c:KOJ ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_hirugolaima
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_TSUKHANJUKU
+				count = 25
+			}
+
+			save_scope_as = koj_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			save_scope_as = koj_general
+		}
+
+		scope:koj_general = {
+			transfer_to_formation = scope:koj_army
+		}
+	}
+
 }
