@@ -149,6 +149,9 @@ wasteland = {
 	
 	combat_width = 0.5
 	risk = 0.6
+	materials = {
+		wasteland_permafrost_3 = 10000
+	}
 	created_material = DYNAMIC-Pollution_01
 	debug_color = hsv { 0.15 0.15 0.15 }
 	
@@ -262,7 +265,17 @@ forest = {
 hills = {
 	label = label_elevated
 	label = label_travel_harsh_environment
-	weight = 2
+	weight = {
+		value = 2
+		if = {
+			limit = {
+				state = {
+					state_region = s:STATE_SKYPIERCER_PEAK
+				}
+			}
+			add = 4
+		}
+	}
 	textures = {
 		{
 			weight = {
@@ -333,6 +346,21 @@ hills = {
 			path = "gfx/state_pictures/hills_desert.dds"
 			effect = "vfx_entity_ui_state_mountains_arid"
 		}
+	{	
+		weight = {
+			value = 0
+			if = {
+				limit = {
+					scope:state = { #bro you gotta use a different syntax here wtf
+						state_region = s:STATE_SKYPIERCER_PEAK
+					}
+				}
+				add = 4
+			}
+		}
+		path = "gfx/state_pictures/skypiercer.dds"
+		effect = "vfx_entity_ui_state_arctic"
+	}
 		{
 			weight = {
 				value = 0
@@ -486,6 +514,21 @@ mountain = {
 			path = "gfx/state_pictures/volcano_snow.dds"
 			effect = "vfx_entity_ui_state_arctic"
 		}
+		{	
+			weight = {
+				value = 0
+				if = {
+					limit = {
+						scope:state = {
+							state_region = s:STATE_SKYPIERCER_PEAK
+						}
+					}
+					add = 4
+				}
+			}
+			path = "gfx/state_pictures/skypiercer.dds"
+			effect = "vfx_entity_ui_state_arctic"
+		}
 	}
 
 	combat_width = 0.4
@@ -603,6 +646,24 @@ desert = {
 	label = label_travel_harsh_environment
 	weight = 2
 	textures = {
+		{	
+			weight = {
+				value = 0
+				if = {
+					limit = {
+						scope:state = {
+						
+								state_region = s:STATE_SKYPIERCER_PEAK
+							
+							
+						}
+					}
+					add = 604
+				}
+			}
+			path = "gfx/state_pictures/skypiercer.dds"
+			effect = "vfx_entity_ui_state_desert_northamerica"
+		}
 		{
 			weight = {
 				value = 0
@@ -672,11 +733,11 @@ desert = {
 	combat_width = 1
 	risk = 0.2
 	materials = { 
-		Desert_01 = 0.5
-		Desert_03 = 0.5
-		Desert_04 = 0.5
-		Desert_05 = 0.5
-		Desert_06 = 0.5
+		Desert_01 = 0.65
+		Desert_03 = 0.65
+		Desert_04 = 0.65
+		Desert_05 = 0.65
+		Desert_06 = 0.65
 	}
 	debug_color = hsv { 0.15 1 1 }
 	
@@ -702,8 +763,8 @@ tundra = {
 	combat_width = 0.7
 	risk = 0.15
 	materials = { 
-		Permafrost_01 = 3
-		Permafrost_03 = 3
+		Permafrost_01 = 1.7
+		Permafrost_03 = 1.7
 	}
 	debug_color = { 200 100 25 }
 	
@@ -1689,16 +1750,16 @@ undermountain = {  #Exether
 		Cliff_Sandstone_blank = 6000 #I'm not sure I'm using this feature correctly
 		Cliff_Granite_blank = 6000
 		Mountains_NonDirectional_01 = 5
-		Cliff_Granite_02 = 2.5
-		Cliff_Granite_03 = 2.5
-		Cliff_Granite_05 = 2.5
-		Cliff_Granite_06 = 2.5
-		Cliff_Granite_07 = 2.5
-		Cliff_Limestone_02 = 2.5
-		Cliff_Sandstone_01 = 2.5
-		Cliff_Sandstone_03 = 2.5
-		Cliff_Sandstone_04 = 2.5
-		Cliff_Sandstone_05 = 2.5
+		Cliff_Granite_02 = 0.5
+		Cliff_Granite_03 = 0.5
+		Cliff_Granite_05 = 0.5
+		Cliff_Granite_06 = 0.5
+		Cliff_Granite_07 = 0.5
+		Cliff_Limestone_02 = 0.5
+		Cliff_Sandstone_01 = 0.5
+		Cliff_Sandstone_03 = 0.5
+		Cliff_Sandstone_04 = 0.5
+		Cliff_Sandstone_05 = 0.5
 
 	}
 	debug_color = hsv { 0.55 0.75 1 }
