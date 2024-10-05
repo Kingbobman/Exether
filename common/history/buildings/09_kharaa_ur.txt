@@ -633,6 +633,19 @@
   s:STATE_ALBAIN = {
     region_state:MOK = {
       create_building={
+				building="building_food_industry"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:MOK"
+                        levels=1
+                        region="STATE_ALBAIN"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_disabled_canning" "pm_bakery" "pm_live_dough" "pm_manual_dough_processing"}
+			}
+      create_building={
         building="building_port"
         level=1
         reserves=1
@@ -644,7 +657,7 @@
                     building={ 
                         type="building_financial_district"
                         country="c:MOK"
-                        levels=4
+                        levels=5
                         region="STATE_ALBAIN"
                    }
                 }
@@ -657,7 +670,7 @@
 						building={ 
 							type="building_financial_district"
 							country="c:MOK"
-							levels=2
+							levels=5
 							region="STATE_ALBAIN"
 					   }
 					}
@@ -668,6 +681,19 @@
 
   s:STATE_GULTHYR = {
     region_state:MOK = {
+      create_building={
+				building="building_food_industry"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:MOK"
+                        levels=1
+                        region="STATE_GULTHYR"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_disabled_canning" "pm_bakery" "pm_live_dough" "pm_manual_dough_processing"}
+			}
       create_building={
 				building="building_fishing_wharf_glowfish"
                 add_ownership={ 
@@ -705,7 +731,7 @@
                     building={ 
                         type="building_financial_district"
                         country="c:MOK"
-                        levels=2
+                        levels=1
                         region="STATE_THARKYR"
                    }
                 }
@@ -832,22 +858,69 @@
   s:STATE_DALSHTOK = {
     region_state:SHJ = {
       create_building={
-        building="building_wheat_farm"
-        level=30
+        building="building_military_shipyards"
+        add_ownership={ 
+          building={ 
+            type="building_financial_district"
+            country="c:SHJ"
+            levels=1
+            region="STATE_DALSHTOK"
+           }
+        }
         reserves=1
-        activate_production_methods={ "pm_simple_farming"  "pm_tools_disabled" "pm_no_secondary" }
+        activate_production_methods={ "pm_military_shipbuilding_wooden" }
       }
+      create_building={
+				building="building_food_industry"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:SHJ"
+                        levels=1
+                        region="STATE_DALSHTOK"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_disabled_canning" "pm_bakery" "pm_live_dough" "pm_manual_dough_processing"}
+			}
+      create_building={
+				building="building_shipyards"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:SHJ"
+							levels=1
+							region="STATE_DALSHTOK"
+					   }
+					}
+				reserves=1
+				activate_production_methods={ "pm_basic_shipbuilding" }
+			}
 	  create_building={
         building="building_fishing_wharf"
-        level=1
-        reserves=1
-        activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
+        add_ownership={ 
+          building={ 
+            type="building_financial_district"
+            country="c:SHJ"
+            levels=5
+            region="STATE_DALSHTOK"
+           }
+        }
+      reserves=1
+        activate_production_methods={ "pm_fishing_trawlers" "pm_unrefrigerated" }
       }
 	  create_building={
         building="building_logging_camp"
-        level=3
-        reserves=1
-        activate_production_methods={ "pm_saw_mills" "pm_no_equipment" "pm_road_carts" "pm_no_hardwood" }
+        add_ownership={ 
+          building={ 
+            type="building_financial_district"
+            country="c:SHJ"
+            levels=4
+            region="STATE_DALSHTOK"
+           }
+        }
+      reserves=1
+        activate_production_methods={ "pm_saw_mills" "pm_no_equipment" "pm_road_carts" "pm_hardwood" }
       }
     }
   }
@@ -855,34 +928,42 @@
   s:STATE_BURZOK = {
     region_state:SHJ = {
       create_building={
-        building="building_wheat_farm"
-        level=30
-        reserves=1
-        activate_production_methods={ "pm_simple_farming"  "pm_tools_disabled" "pm_no_secondary" }
-      }
-	  create_building={
-        building="building_fishing_wharf"
-        level=1
-        reserves=1
-        activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
-      }
-	  create_building={
-        building="building_shipyards"
-        level=1
-        reserves=1
-        activate_production_methods={ "pm_basic_shipbuilding" }
-      }
-	  create_building={
-        building="building_logging_camp"
+        building="building_government_administration"
         level=3
         reserves=1
-        activate_production_methods={ "pm_saw_mills" "pm_no_equipment" "pm_road_carts" "pm_no_hardwood" }
+        activate_production_methods={ "pm_simple_organization" }
       }
-	  create_building={
+      create_building={
         building="building_port"
         level=1
         reserves=1
         activate_production_methods={ "pm_basic_port" }
+      }
+      create_building={
+				building="building_food_industry"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:SHJ"
+                        levels=1
+                        region="STATE_BURZOK"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_disabled_canning" "pm_bakery" "pm_live_dough" "pm_manual_dough_processing"}
+			}
+      create_building={
+        building="building_tobacco_plantation"
+          add_ownership={ 
+            building={ 
+              type="building_manor_house"
+              country="c:SHJ"
+              levels=6
+              region="STATE_BURZOK"
+             }
+          }
+        reserves=1
+        activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }
       }
     }
   }
@@ -900,68 +981,79 @@
 
   s:STATE_GOLMOK = {
     region_state:QON = {
-      create_building={
-        building="building_logging_camp"
-        level=1
-        reserves=1
-        activate_production_methods={ "pm_simple_forestry" "pm_no_equipment" "pm_road_carts" "pm_hardwood" }
-      }
     }
   }
 
   s:STATE_KRAGKYL = {
     region_state:QON = {
-      create_building={
-        building="building_logging_camp"
-        level=1
-        reserves=1
-        activate_production_methods={ "pm_simple_forestry" "pm_no_equipment" "pm_road_carts" "pm_hardwood" }
-      }
     }
   }
 
   s:STATE_DRUKYN = {
     region_state:OGR = {
-      create_building={
-        building="building_logging_camp"
-        level=1
-        reserves=1
-        activate_production_methods={ "pm_simple_forestry" "pm_no_equipment" "pm_road_carts" "pm_hardwood" }
-      }
     }
   }
 
   s:STATE_KAZTHOK = {
     region_state:OGR = {
-      create_building={
-        building="building_wheat_farm"
-        level=20
-        reserves=1
-        activate_production_methods={ "pm_simple_farming"  "pm_tools_disabled" "pm_no_secondary" }
-      }
-	  create_building={
-        building="building_fishing_wharf"
-        level=1
-        reserves=1
-        activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
-      }
-	  create_building={
-        building="building_tooling_workshops"
-        level=1
-        reserves=1
-        activate_production_methods={ "pm_crude_tools" "pm_automation_disabled" }
-    }
-      create_building={
-      building="building_coal_mine"
-      level=5
-      reserves=1
-      activate_production_methods={ "pm_picks_and_shovels_building_coal_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
-      
-      }
     }
   }
 
   s:STATE_BAZKYL = {
+    region_state:SHJ = {
+      create_building={
+				building="building_logging_camp"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:SHJ"
+                        levels=2
+                        region="STATE_BAZKYL"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_saw_mills" "pm_hardwood" "pm_no_equipment" "pm_road_carts" }
+			}
+      create_building={
+				building="building_desert_hunting_lodge"
+					  add_ownership={ 
+						  building={ 
+							  type="building_adventuring_guild"
+							  country="c:SHJ"
+							  levels=2
+							  region="STATE_BAZKYL"
+						 }
+					  }
+				reserves=1
+				activate_production_methods={ "pm_firearms_desert_hunting" "pm_no_equipment_hunting_lodges"  }
+			  }	
+      create_building={
+				building="building_food_industry"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:SHJ"
+                        levels=2
+                        region="STATE_BAZKYL"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_disabled_canning" "pm_bakery" "pm_live_dough" "pm_manual_dough_processing"}
+			}
+      create_building={
+				building="building_arms_industry"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:SHJ"
+							levels=2
+							region="STATE_BAZKYL"
+					   }
+					}
+				reserves=1
+				activate_production_methods={ "pm_muskets" "pm_automation_disabled" }
+			}
+    }
   }
 
   s:STATE_KYRTHOR = {
@@ -983,67 +1075,219 @@
   s:STATE_RAZOK = {
     region_state:SHJ = {
       create_building={
-        building="building_wheat_farm"
-        level=30
-        reserves=1
-        activate_production_methods={ "pm_simple_farming"  "pm_tools_disabled" "pm_no_secondary" }
-      }
-	  create_building={
-        building="building_fishing_wharf"
-        level=1
-        reserves=1
-        activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
-      }
+				building="building_food_industry"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:SHJ"
+                        levels=2
+                        region="STATE_RAZOK"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_disabled_canning" "pm_bakery" "pm_live_dough" "pm_manual_dough_processing"}
+			}
     }
   }
 
   s:STATE_KYRGRUK = {
     region_state:SHJ = {
+       create_building={
+        building="building_construction_sector"
+        level=3
+        reserves=1
+        activate_production_methods={ "pm_wooden_buildings" }
+      }
       create_building={
-        building="building_tobacco_plantation"
-        level=5
+        building="building_government_administration"
+        level=10
         reserves=1
-        activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }
+        activate_production_methods={ "pm_horizontal_drawer_cabinets" }
       }
-	  create_building={
-        building="building_fishing_wharf"
-        level=1
+      create_building={
+				building="building_cotton_plantation"
+				  add_ownership={ 
+					building={ 
+					  type="building_manor_house"
+					  country="c:SHJ"
+					  levels=2
+					  region="STATE_KYRGRUK"
+					 }
+				  }
+				reserves=1
+				activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts" }
+			  }
+      create_building={
+				building="building_food_industry"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:SHJ"
+                        levels=2
+                        region="STATE_KYRGRUK"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_disabled_canning" "pm_bakery" "pm_live_dough" "pm_manual_dough_processing"}
+			}
+      create_building={
+        building="building_paper_mills"
+                  add_ownership={ 
+                      building={ 
+                          type="building_financial_district"
+                          country="c:SHJ"
+                          levels=3
+                          region="STATE_KYRGRUK"
+                     }
+                  }
         reserves=1
-        activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
+        activate_production_methods={ "pm_pulp_pressing" "pm_automation_disabled" }
       }
+      create_building={
+				building="building_logging_camp"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:SHJ"
+                        levels=5
+                        region="STATE_KYRGRUK"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_saw_mills" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
+			}
     }
   }
 
   s:STATE_DORAZ = {
     region_state:SHJ = {
+      create_building={
+				building="building_food_industry"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:SHJ"
+                        levels=1
+                        region="STATE_DORAZ"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_disabled_canning" "pm_bakery" "pm_live_dough" "pm_manual_dough_processing"}
+			}
+      create_building={
+        building="building_coffee_plantation"
+            add_ownership={ 
+              building={ 
+                type="building_manor_house"
+                country="c:SHJ"
+                levels=6
+                region="STATE_DORAZ"
+               }
+            }
+        reserves=1
+        activate_production_methods={  "default_building_coffee_plantation" "pm_road_carts"  }
+        }
     }
   }
 
   s:STATE_BALDBAN = {
     region_state:SHJ = {
       create_building={
-        building="building_government_administration"
-        level=23
+				building="building_desert_hunting_lodge"
+					  add_ownership={ 
+						  building={ 
+							  type="building_adventuring_guild"
+							  country="c:SHJ"
+							  levels=1
+							  region="STATE_BALDBAN"
+						 }
+					  }
+				reserves=1
+				activate_production_methods={ "pm_firearms_desert_hunting" "pm_no_equipment_hunting_lodges"  }
+			  }	
+      create_building={
+				building="building_food_industry"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:SHJ"
+                        levels=3
+                        region="STATE_BALDBAN"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_disabled_canning" "pm_bakery" "pm_live_dough" "pm_manual_dough_processing"}
+			}
+      create_building={
+				building="building_logging_camp"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:SHJ"
+                        levels=1
+                        region="STATE_BALDBAN"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_saw_mills" "pm_hardwood" "pm_no_equipment" "pm_road_carts" }
+			}
+      create_building={
+				building="building_arms_industry"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:SHJ"
+							levels=1
+							region="STATE_BALDBAN"
+					   }
+					}
+				reserves=1
+				activate_production_methods={ "pm_muskets" "pm_automation_disabled" }
+			}
+      create_building={
+        building="building_tooling_workshops"
+                  add_ownership={ 
+                      building={ 
+                          type="building_financial_district"
+                          country="c:SHJ"
+                          levels=1
+                          region="STATE_BALDBAN"
+                     }
+                  }
         reserves=1
-        activate_production_methods={ "pm_simple_organization" }
+        activate_production_methods={ "pm_pig_iron" "pm_automation_disabled" }
       }
       create_building={
-        building="building_textile_mills"
-        level=5
+        building="building_iron_mine"
+          add_ownership={ 
+            building={ 
+              type="building_financial_district"
+              country="c:SHJ"
+              levels=2
+              region="STATE_BALDBAN"
+             }
+          }
         reserves=1
-        activate_production_methods={ "pm_handsewn_clothes" "pm_traditional_looms" "pm_no_luxury_clothes" }
-      }
-	  create_building={
-        building="building_fishing_wharf"
-        level=1
-        reserves=1
-        activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
-      }
+        activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+      }	
     }
   }
 
   s:STATE_KRAKYR = {
     region_state:SHJ = {
+      create_building={
+				building="building_food_industry"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:SHJ"
+                        levels=1
+                        region="STATE_KRAKYR"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_disabled_canning" "pm_bakery" "pm_live_dough" "pm_manual_dough_processing"}
+			}
     }
   }
 
@@ -1371,12 +1615,31 @@
 
   s:STATE_TAKAYAMAAN = {
     region_state:SHJ = {
-	  create_building={
-        building="building_fishing_wharf"
-        level=1
-        reserves=1
-        activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
-      }
+      create_building={
+				building="building_textile_mills"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:SHJ"
+                        levels=5
+                        region="STATE_TAKAYAMAAN"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_handsewn_clothes" "pm_traditional_looms" "pm_craftsman_sewing" }
+			}
+      create_building={
+				building="building_silk_plantation"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:SHJ"
+							levels=5
+							region="STATE_TAKAYAMAAN"
+					   }
+					}
+				reserves=1
+			}
 	  create_building={
         building="building_port"
         level=1

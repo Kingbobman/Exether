@@ -220,4 +220,61 @@
 		}
 	}
 
+	c:SHJ ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_shkumbdash
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_BAZKYL
+				count = 30
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_BALDBAN
+				count = 30
+			}
+
+			save_scope_as = shj_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			hq = region_shkumbdash
+			save_scope_as = shj_general
+		}
+		scope:shj_general = {
+			transfer_to_formation = scope:shj_army
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_shkumbdash
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_DALSHTOK
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_DALSHTOK
+				count = 10
+			}
+			save_scope_as = shj_fleet
+		}
+
+		create_character = {
+			is_admiral = yes
+			hq = region_shkumbdash
+			save_scope_as = shj_admiral
+		}
+		scope:shj_admiral = {
+			transfer_to_formation = scope:shj_fleet
+		}
+	}
+
 }
