@@ -348,3 +348,19 @@ building_mushroom_logging  = {
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
 }
+
+building_underground_wharf = {
+	building_group = bg_underground_fishing
+	texture = "gfx/interface/icons/building_icons/underground_fishing.dds"
+	city_type = port
+	required_construction = construction_cost_low
+
+	production_method_groups = {
+		pmg_base_building_underground_wharf
+		pmg_refrigeration_building_fishing_wharf
+	}
+	
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_fishing.dds"
+}
