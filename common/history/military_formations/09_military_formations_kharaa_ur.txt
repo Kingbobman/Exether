@@ -277,4 +277,35 @@
 		}
 	}
 
+	c:OGR ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_shkumbdash
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_KAZTHOK
+				count = 45
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cuirassiers
+				state_region = s:STATE_GROMKYL
+				count = 20
+			}
+
+			save_scope_as = shj_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			hq = region_shkumbdash
+			save_scope_as = shj_general
+		}
+		scope:shj_general = {
+			transfer_to_formation = scope:shj_army
+		}
+	}
+
 }
