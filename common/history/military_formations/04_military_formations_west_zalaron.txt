@@ -908,52 +908,6 @@ scope:khd_admiral = {
 			transfer_to_formation = scope:dhr_army
 		}
 	}
-	c:VOR ?= {
-		create_military_formation = {
-			type = army
-			hq_region = sr:region_verdant_shore
-
-			name = "Dawnridge Watch"
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_DAWNRIDGE
-				count = 3
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_dragoons
-				state_region = s:STATE_DAWNRIDGE
-				count = 2
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_DAWNRIDGE
-				service_type = conscript
-				count = 10
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_dragoons
-				state_region = s:STATE_DAWNRIDGE
-				service_type = conscript
-				count = 5
-			}
-
-			save_scope_as = vor_army
-		}
-
-		create_character = {
-			is_general = yes
-			hq = region_verdant_shore
-			save_scope_as = vor_general
-		}
-		
-		scope:vor_general = {
-			transfer_to_formation = scope:vor_army
-		}
-	}
 
 	c:LGZ ?= {
 		create_military_formation = {
@@ -963,15 +917,21 @@ scope:khd_admiral = {
 			name = "Fist of the Theocracy"
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
+				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_GJAKOVA
-				count = 25
+				count = 50
 			}
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
+				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_VLORIANA
-				count = 25
+				count = 50
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_KURBULL
+				count = 20
 			}
 
 			save_scope_as = lgzarmy
@@ -979,34 +939,13 @@ scope:khd_admiral = {
 
 		create_character = {
 			is_general = yes
-			commander_rank = commander_rank_2
+			commander_rank = commander_rank_3
 			hq = sr:region_kengurudal
 			save_scope_as = lgzgen
 		}
 		
 		scope:lgzgen = {
 			transfer_to_formation = scope:lgzarmy
-		}
-
-		create_military_formation = {
-			type = army
-			hq_region = sr:region_kengurudal
-
-			name = "Peshkopinan Vanguard"
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_cuirassiers
-				state_region = s:STATE_PESHKOPINA
-				count = 20
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_PESHKOPINA
-				count = 20
-			}
-
-			save_scope_as = lgzarmy2
 		}
 
 		create_character = {
@@ -1017,8 +956,40 @@ scope:khd_admiral = {
 		}
 		
 		scope:lgzgen2 = {
-			transfer_to_formation = scope:lgzarmy2
+			transfer_to_formation = scope:lgzarmy
 		}
+#
+#		create_military_formation = {
+#			type = army
+#			hq_region = sr:region_kengurudal
+#
+#			name = "Peshkopinan Vanguard"
+#
+#			combat_unit = {
+#				type = unit_type:combat_unit_type_cuirassiers
+#				state_region = s:STATE_PESHKOPINA
+#				count = 20
+#			}
+#
+#			combat_unit = {
+#				type = unit_type:combat_unit_type_line_infantry
+#				state_region = s:STATE_PESHKOPINA
+#				count = 20
+#			}
+#
+#			save_scope_as = lgzarmy2
+#		}
+#
+#		create_character = {
+#			is_general = yes
+#			commander_rank = commander_rank_2
+#			hq = sr:region_kengurudal
+#			save_scope_as = lgzgen2
+#		}
+#		
+#		scope:lgzgen2 = {
+#			transfer_to_formation = scope:lgzarmy2
+#		}
 	}
 
 	c:REM ?= {
@@ -1026,18 +997,12 @@ scope:khd_admiral = {
 			type = army
 			hq_region = sr:region_kengurudal
 
-			name = "Republican Guard"
+			name = "Zagoldem Militia"
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
+				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_DIBRA
-				count = 25
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_mobile_artillery
-				state_region = s:STATE_GJILANIJA
-				count = 15
+				count = 60
 			}
 
 			save_scope_as = remarmy
@@ -1054,43 +1019,6 @@ scope:khd_admiral = {
 			transfer_to_formation = scope:remarmy
 		}
 
-		create_military_formation = {
-			type = army
-			hq_region = sr:region_kengurudal
-
-			name = "Republican Vanguard"
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_KRUJANA
-				count = 10
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_dragoons
-				state_region = s:STATE_LEZHANIA
-				count = 15
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_GJILANIJA
-				count = 10
-			}
-
-			save_scope_as = remarmy2
-		}
-
-		create_character = {
-			is_general = yes
-			commander_rank = commander_rank_2
-			hq = sr:region_kengurudal
-			save_scope_as = remgen2
-		}
-		
-		scope:remgen2 = {
-			transfer_to_formation = scope:remarmy2
-		}
 	}
 
 	c:KGM ?= {
@@ -1098,19 +1026,20 @@ scope:khd_admiral = {
 			type = army
 			hq_region = sr:region_kengurudal
 
-			name = "Shkoderian Volunteer Army"
+			name = "Kullgrimi Militias"
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
+				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_SHKODERIA
-				count = 28
+				count = 20
 			}
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_mobile_artillery
-				state_region = s:STATE_SHKODERIA
-				count = 7
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_VALBARDA
+				count = 20
 			}
+
 
 			save_scope_as = kgmarmy
 		}
@@ -1125,38 +1054,6 @@ scope:khd_admiral = {
 		scope:kgmgen = {
 			transfer_to_formation = scope:kgmarmy
 		}
-
-		create_military_formation = {
-			type = army
-			hq_region = sr:region_kengurudal
-
-			name = "Valbardan Volunteer Army"
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_mobile_artillery
-				state_region = s:STATE_VALBARDA
-				count = 7
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_VALBARDA
-				count = 28
-			}
-
-			save_scope_as = kgmarmy2
-		}
-
-		create_character = {
-			is_general = yes
-			commander_rank = commander_rank_2
-			hq = sr:region_kengurudal
-			save_scope_as = kgmgen2
-		}
-		
-		scope:kgmgen2 = {
-			transfer_to_formation = scope:kgmarmy2
-		}
 	}
 
 	c:TUF ?= {
@@ -1164,16 +1061,10 @@ scope:khd_admiral = {
 			type = army
 			hq_region = sr:region_gavkhan
 
-			name = "Freed of the North"
+			name = "Elbashtia Levies"
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_ELBASHTIA
-				count = 20
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_dragoons
+				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_ELBASHTIA
 				count = 20
 			}
@@ -1192,37 +1083,6 @@ scope:khd_admiral = {
 			transfer_to_formation = scope:tufarmy
 		}
 
-		create_military_formation = {
-			type = army
-			hq_region = sr:region_gavkhan
-
-			name = "Freed of the South"
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_dragoons
-				state_region = s:STATE_ELBASHTIA
-				count = 20
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_ELBASHTIA
-				count = 20
-			}
-
-			save_scope_as = tufarmy2
-		}
-
-		create_character = {
-			is_general = yes
-			commander_rank = commander_rank_2
-			hq = sr:region_gavkhan
-			save_scope_as = tufgen2
-		}
-		
-		scope:tufgen2 = {
-			transfer_to_formation = scope:tufarmy2
-		}
 	}
 
 	c:ZIX ?= {
@@ -1233,27 +1093,27 @@ scope:khd_admiral = {
 			name = "Khan's Fist"
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
+				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_BERATIA
+				count = 50
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_FIERANA
+				count = 50
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_KORCAJA
 				count = 20
 			}
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
+				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_SARANDOVA
-				count = 10
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_dragoons
-				state_region = s:STATE_SARANDOVA
-				count = 10
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_dragoons
-				state_region = s:STATE_BERATIA
-				count = 20
+				count = 50
 			}
 
 			save_scope_as = zixarmy
@@ -1261,7 +1121,7 @@ scope:khd_admiral = {
 
 		create_character = {
 			is_general = yes
-			commander_rank = commander_rank_2
+			commander_rank = commander_rank_3
 			hq = sr:region_gavkhan
 			save_scope_as = zixgen
 		}
@@ -1270,50 +1130,72 @@ scope:khd_admiral = {
 			transfer_to_formation = scope:zixarmy
 		}
 
-		create_military_formation = {
-			type = army
-			hq_region = sr:region_gavkhan
-
-			name = "Eastern Warriors"
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_dragoons
-				state_region = s:STATE_KORCAJA
-				count = 10
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_dragoons
-				state_region = s:STATE_KULLAMAL
-				count = 10
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_DURRESIA
-				count = 15
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_FIERANA
-				count = 15
-			}
-
-			save_scope_as = zixarmy2
-		}
-
 		create_character = {
 			is_general = yes
-			commander_rank = commander_rank_2
+			commander_rank = commander_rank_3
 			hq = sr:region_gavkhan
 			save_scope_as = zixgen2
 		}
 		
 		scope:zixgen2 = {
-			transfer_to_formation = scope:zixarmy2
+			transfer_to_formation = scope:zixarmy
 		}
-	}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			hq = sr:region_gavkhan
+			save_scope_as = zixgen3
+		}
+		
+		scope:zixgen3 = {
+			transfer_to_formation = scope:zixarmy
+		}
+
+#		create_military_formation = {
+#			type = army
+#			hq_region = sr:region_gavkhan
+#
+#			name = "Eastern Warriors"
+#
+#			combat_unit = {
+#				type = unit_type:combat_unit_type_irregular_infantry
+#				state_region = s:STATE_KORCAJA
+#				count = 10
+#			}
+#
+#			combat_unit = {
+#				type = unit_type:combat_unit_type_irregular_infantry
+#				state_region = s:STATE_KULLAMAL
+#				count = 10
+#			}
+#
+#			combat_unit = {
+#				type = unit_type:combat_unit_type_irregular_infantry
+#				state_region = s:STATE_DURRESIA
+#				count = 15
+#			}
+#
+#			combat_unit = {
+#				type = unit_type:combat_unit_type_irregular_infantry
+#				state_region = s:STATE_FIERANA
+#				count = 15
+#			}
+#
+#			save_scope_as = zixarmy2
+#		}
+#
+#		create_character = {
+#			is_general = yes
+#			commander_rank = commander_rank_2
+#			hq = sr:region_gavkhan
+#			save_scope_as = zixgen2
+#		}
+#		
+#		scope:zixgen2 = {
+#			transfer_to_formation = scope:zixarmy2
+#		}
+#	}
 
 	c:MJE ?= {
 		create_military_formation = {
@@ -1323,15 +1205,15 @@ scope:khd_admiral = {
 			name = "East Garrison"
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
+				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_ERSEKERA
-				count = 30
+				count = 5
 			}
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_mobile_artillery
+				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_LUMADHIA
-				count = 7
+				count = 10
 			}
 
 			save_scope_as = mjearmy
@@ -1339,7 +1221,7 @@ scope:khd_admiral = {
 
 		create_character = {
 			is_general = yes
-			commander_rank = commander_rank_2
+			commander_rank = commander_rank_1
 			hq = sr:region_gavkhan
 			save_scope_as = mjegen
 		}
@@ -1355,15 +1237,15 @@ scope:khd_admiral = {
 			name = "West Garrison"
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
+				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_ERSEKERA
-				count = 30
+				count = 10
 			}
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_mobile_artillery
+				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_LUMADHIA
-				count = 7
+				count = 10
 			}
 
 			save_scope_as = mjearmy2
@@ -1371,7 +1253,7 @@ scope:khd_admiral = {
 
 		create_character = {
 			is_general = yes
-			commander_rank = commander_rank_2
+			commander_rank = commander_rank_1
 			hq = sr:region_gavkhan
 			save_scope_as = mjegen2
 		}
@@ -1386,18 +1268,24 @@ scope:khd_admiral = {
 			type = army
 			hq_region = sr:region_verdant_shore
 
-			name = "Northern Army"
+			name = "Rethrasher Warhost"
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
+				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_USTRIZHYVKA
+				count = 50
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_ZATYRE
 				count = 30
 			}
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_dragoons
-				state_region = s:STATE_ZATYRE
-				count = 15
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_PRESPIA
+				count = 20
 			}
 
 			save_scope_as = kvgarmy
@@ -1414,27 +1302,6 @@ scope:khd_admiral = {
 			transfer_to_formation = scope:kvgarmy
 		}
 
-		create_military_formation = {
-			type = army
-			hq_region = sr:region_verdant_shore
-
-			name = "Southern Army"
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_PRESPIA
-				count = 25
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
-				state_region = s:STATE_KERCOVA
-				count = 10
-			}
-
-			save_scope_as = kvgarmy2
-		}
-
 		create_character = {
 			is_general = yes
 			commander_rank = commander_rank_2
@@ -1443,8 +1310,9 @@ scope:khd_admiral = {
 		}
 		
 		scope:kvggen2 = {
-			transfer_to_formation = scope:kvgarmy2
+			transfer_to_formation = scope:kvgarmy
 		}
+
 	}
 
 	c:MGR ?= {
@@ -1456,20 +1324,14 @@ scope:khd_admiral = {
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_NYZHNE_SENIA
+				state_region = s:STATE_BREZHKE
 				count = 15
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_TROPOJA
-				count = 10
 			}
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_dragoons
-				state_region = s:STATE_HUTSULANE
-				count = 15
+				state_region = s:STATE_TROPOJA
+				count = 20
 			}
 
 			save_scope_as = mgrarmy
@@ -1495,19 +1357,13 @@ scope:khd_admiral = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_SHKUMBINIA
-				count = 15
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_BREZHKE
 				count = 10
 			}
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_cuirassiers
-				state_region = s:STATE_BREZHKE
-				count = 20
+				type = unit_type:combat_unit_type_dragoons
+				state_region = s:STATE_NYZHNE_SENIA
+				count = 10
 			}
 
 			save_scope_as = mgrarmy2
@@ -1515,7 +1371,7 @@ scope:khd_admiral = {
 
 		create_character = {
 			is_general = yes
-			commander_rank = commander_rank_2
+			commander_rank = commander_rank_1
 			hq = sr:region_gavkhan
 			save_scope_as = mgrgen2
 		}
@@ -1568,23 +1424,10 @@ scope:khd_admiral = {
 				state_region = s:STATE_CERRIKUA
 				count = 20
 			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
-				state_region = s:STATE_SHPYNTESI
-				count = 10
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_dragoons
-				state_region = s:STATE_KUKESPIA
-				count = 10
-			}
-
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_KUKESPIA
-				count = 5
+				count = 10
 			}
 
 			save_scope_as = dko_army2
@@ -2010,6 +1853,121 @@ c:VLT ?= {
 	
 	scope:fmj_general = {
 		transfer_to_formation = scope:fmj_army
+	}
+}
+
+c:EKA ?= {
+	create_military_formation = {
+		type = army
+		hq_region = sr:region_tokalivar
+
+		combat_unit = {
+			type = unit_type:combat_unit_type_irregular_infantry
+			state_region = s:STATE_RUSYLESH
+			count = 35
+		}
+
+		combat_unit = {
+			type = unit_type:combat_unit_type_irregular_infantry
+			state_region = s:STATE_PODBARDISHTA
+			count = 35
+		}
+
+		combat_unit = {
+			type = unit_type:combat_unit_type_irregular_infantry
+			state_region = s:STATE_ZARJAPE
+			count = 30
+		}
+
+		combat_unit = {
+			type = unit_type:combat_unit_type_irregular_infantry
+			state_region = s:STATE_STRUGOVA
+			count = 35
+		}
+
+		save_scope_as = eka_army
+	}
+
+	create_character = {
+		is_general = yes
+		hq = region_tokalivar
+		commander_rank = commander_rank_2
+		save_scope_as = eka_general
+	}
+	scope:eka_general = {
+		transfer_to_formation = scope:eka_army
+	}
+
+	create_character = {
+		is_general = yes
+		hq = region_tokalivar
+		commander_rank = commander_rank_2
+		save_scope_as = eka_general2
+	}
+	scope:eka_general2 = {
+		transfer_to_formation = scope:eka_army
+	}
+
+	create_character = {
+		is_general = yes
+		hq = region_tokalivar
+		commander_rank = commander_rank_1
+		save_scope_as = eka_general3
+	}
+	scope:eka_general3 = {
+		transfer_to_formation = scope:eka_army
+	}
+
+
+	create_military_formation = {
+		type = fleet
+		hq_region = sr:region_tokalivar
+	
+		combat_unit = {
+			type = unit_type:combat_unit_type_man_o_war
+			state_region = s:STATE_STRUGOVA
+			count = 8
+		}
+
+		combat_unit = {
+			type = unit_type:combat_unit_type_frigate
+			state_region = s:STATE_STRUGOVA
+			count = 13
+		}
+		save_scope_as = eka_fleet
+	}
+
+	create_character = {
+		is_admiral = yes
+		commander_rank = commander_rank_2
+		hq = region_tokalivar
+		save_scope_as = eka_admiral
+	}
+	scope:eka_admiral = {
+		transfer_to_formation = scope:eka_fleet
+	}
+}
+c:ZIN ?= {
+	create_military_formation = {
+		type = army
+		hq_region = sr:region_tokalivar
+
+		combat_unit = {
+			type = unit_type:combat_unit_type_irregular_infantry
+			state_region = s:STATE_XHAMADHANI
+			count = 15
+		}
+
+		save_scope_as = zin_army
+	}
+
+	create_character = {
+		is_general = yes
+		hq = region_tokalivar
+		save_scope_as = zin_general
+	}
+	scope:zin_general = {
+		transfer_to_formation = scope:zin_army
 	}
 }
 
