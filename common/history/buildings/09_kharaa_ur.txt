@@ -1275,22 +1275,209 @@
 
   s:STATE_ERKBALB = {
     region_state:QON = {
+      create_building={
+        building="building_government_administration"
+        level=2
+        reserves=1
+        activate_production_methods={ "pm_simple_organization" }
+      }
 	  create_building={
         building="building_port"
         level=1
         reserves=1
-        activate_production_methods={ "pm_basic_port" }
+        activate_production_methods={ "pm_anchorage" }
       }
+      create_building={
+        building="building_coffee_plantation"
+            add_ownership={ 
+              building={ 
+                type="building_manor_house"
+                country="c:QON"
+                levels=1
+                region="STATE_ERKBALB"
+               }
+            }
+        reserves=1
+        activate_production_methods={  "default_building_coffee_plantation" "pm_road_carts"  }
+        }
+      create_building={
+				building="building_textile_mills"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:QON"
+                        levels=1
+                        region="STATE_ERKBALB"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_handsewn_clothes" "pm_traditional_looms" "pm_no_luxury_clothes" }
+			}
+      create_building={
+				building="building_rice_farm"
+				add_ownership={ 
+					building={ 
+						type="building_manor_house"
+						country="c:QON"
+						levels=3
+						region="STATE_ERKBALB"
+				   }
+				}
+				reserves=1
+				activate_production_methods={ "pm_simple_farming_building_rice_farm"  "pm_tools_disabled" "pm_no_secondary" }
+			}
+      create_building={
+        building="building_banana_plantation"
+        add_ownership={ 
+          building={ 
+            type="building_manor_house"
+            country="c:QON"
+            levels=2
+            region="STATE_ERKBALB"
+           }
+        }
+        reserves=1
+        activate_production_methods={ "default_building_banana_plantation" "pm_road_carts"  }
+      }
+    create_building = {
+      building = "building_distillery"
+      add_ownership = {
+          building = {
+            type="building_financial_district"
+          country="c:QON"
+          levels=2
+          region="STATE_ERKBALB"
+          }
+      }
+      reserves = 1
+      activate_production_methods={ "pm_basic_distillery" "pm_some_fruit" "pm_monster_grapes" }
+    }
     }
   }
 
   s:STATE_GOLMOK = {
     region_state:QON = {
+      create_building={
+        building="building_government_administration"
+        level=5
+        reserves=1
+        activate_production_methods={ "pm_simple_organization" }
+      }
+      create_building={
+				building="building_rice_farm"
+				add_ownership={ 
+					building={ 
+						type="building_manor_house"
+						country="c:QON"
+						levels=3
+						region="STATE_GOLMOK"
+				   }
+				}
+				reserves=1
+				activate_production_methods={ "pm_simple_farming_building_rice_farm"  "pm_tools_disabled" "pm_no_secondary" }
+			}
+        create_building={
+          building="building_banana_plantation"
+          add_ownership={ 
+            building={ 
+              type="building_manor_house"
+              country="c:QON"
+              levels=1
+              region="STATE_GOLMOK"
+             }
+          }
+          reserves=1
+          activate_production_methods={ "default_building_banana_plantation" "pm_road_carts"  }
+        }
+      create_building = {
+        building = "building_distillery"
+        add_ownership = {
+            building = {
+              type="building_financial_district"
+            country="c:QON"
+            levels=3
+            region="STATE_GOLMOK"
+            }
+        }
+        reserves = 1
+        activate_production_methods={ "pm_basic_distillery" "pm_some_fruit" "pm_monster_grapes" }
+      }
     }
   }
 
   s:STATE_KRAGKYL = {
     region_state:QON = {
+      create_building={
+        building="building_government_administration"
+        level=5
+        reserves=1
+        activate_production_methods={ "pm_simple_organization" }
+      }
+      create_building={
+        building="building_coffee_plantation"
+            add_ownership={ 
+              building={ 
+                type="building_manor_house"
+                country="c:QON"
+                levels=1
+                region="STATE_KRAGKYL"
+               }
+            }
+        reserves=1
+        activate_production_methods={  "default_building_coffee_plantation" "pm_road_carts"  }
+        }
+      create_building={
+				building="building_textile_mills"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:QON"
+                        levels=1
+                        region="STATE_KRAGKYL"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_handsewn_clothes" "pm_traditional_looms" "pm_no_luxury_clothes" }
+			}
+      create_building={
+				building="building_rice_farm"
+				add_ownership={ 
+					building={ 
+						type="building_manor_house"
+						country="c:QON"
+						levels=4
+						region="STATE_KRAGKYL"
+				   }
+				}
+				reserves=1
+				activate_production_methods={ "pm_simple_farming_building_rice_farm"  "pm_tools_disabled" "pm_no_secondary" }
+			}
+      create_building={
+        building="building_banana_plantation"
+        add_ownership={ 
+          building={ 
+            type="building_manor_house"
+            country="c:QON"
+            levels=1
+            region="STATE_KRAGKYL"
+           }
+        }
+        reserves=1
+        activate_production_methods={ "default_building_banana_plantation" "pm_road_carts"  }
+      }
+    create_building = {
+      building = "building_distillery"
+      add_ownership = {
+          building = {
+            type="building_financial_district"
+          country="c:QON"
+          levels=1
+          region="STATE_KRAGKYL"
+          }
+      }
+      reserves = 1
+      activate_production_methods={ "pm_basic_distillery" "pm_some_fruit" "pm_monster_grapes" }
+    }
     }
   }
 
@@ -1590,12 +1777,96 @@
 
   s:STATE_KYRTHOR = {
     region_state:QON = {
-	  create_building={
+      create_building={
+        building="building_construction_sector"
+        level=3
+        reserves=1
+        activate_production_methods={ "pm_wooden_buildings" }
+      }
+      create_building={
         building="building_government_administration"
         level=5
         reserves=1
         activate_production_methods={ "pm_simple_organization" }
       }
+    create_building = {
+      building = "building_distillery"
+      add_ownership = {
+          building = {
+            type="building_financial_district"
+          country="c:QON"
+          levels=3
+          region="STATE_KYRTHOR"
+          }
+      }
+      reserves = 1
+      activate_production_methods={ "pm_basic_distillery" "pm_some_fruit" "pm_monster_grapes" }
+    }
+      create_building={
+				building="building_banana_plantation"
+				add_ownership={ 
+					building={ 
+						type="building_manor_house"
+						country="c:QON"
+						levels=2
+						region="STATE_KYRTHOR"
+				   }
+				}
+				reserves=1
+				activate_production_methods={ "default_building_banana_plantation" "pm_road_carts"  }
+			}
+      create_building={
+        building="building_coffee_plantation"
+            add_ownership={ 
+              building={ 
+                type="building_manor_house"
+                country="c:QON"
+                levels=1
+                region="STATE_KYRTHOR"
+               }
+            }
+        reserves=1
+        activate_production_methods={  "default_building_coffee_plantation" "pm_road_carts"  }
+        }
+      create_building={
+        building="building_furniture_manufacturies"
+                  add_ownership={ 
+                      building={ 
+                          type="building_financial_district"
+                          country="c:QON"
+                          levels=2
+                          region="STATE_KYRTHOR"
+                     }
+                  }
+        reserves=1
+        activate_production_methods={ "pm_handcrafted_furniture" "pm_automation_disabled" "pm_no_luxuries" }
+      }
+      create_building={
+				building="building_logging_camp"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:QON"
+                        levels=6
+                        region="STATE_KYRTHOR"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_simple_forestry" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
+			}
+      create_building={
+				building="building_cotton_plantation"
+				  add_ownership={ 
+					building={ 
+					  type="building_manor_house"
+					  country="c:QON"
+					  levels=3
+					  region="STATE_KYRTHOR"
+					 }
+				  }
+				reserves=1
+				activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts" }
+			  }
     }
   }
 

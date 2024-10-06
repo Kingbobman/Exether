@@ -294,17 +294,54 @@
 				count = 20
 			}
 
-			save_scope_as = shj_army
+			save_scope_as = ogr_army
 		}
 
 		create_character = {
 			is_general = yes
 			commander_rank = commander_rank_1
 			hq = region_shkumbdash
-			save_scope_as = shj_general
+			save_scope_as = ogr_general
 		}
-		scope:shj_general = {
-			transfer_to_formation = scope:shj_army
+		scope:ogr_general = {
+			transfer_to_formation = scope:ogr_army
+		}
+	}
+
+	c:QON ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_tundgara
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_KRAGKYL
+				count = 40
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_KYRTHOR
+				count = 25
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_ERKBALB
+				count = 25
+			}
+
+			save_scope_as = qon_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			hq = region_tundgara
+			save_scope_as = qon_general
+		}
+		scope:qon_general = {
+			transfer_to_formation = scope:qon_army
 		}
 	}
 
