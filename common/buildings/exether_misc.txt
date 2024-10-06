@@ -22,6 +22,7 @@
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
 }
 
+
 building_desert_hunting_lodge = {
 	building_group = bg_desert_hunting
 	texture = "gfx/interface/icons/building_icons/essence_desert.dds"
@@ -68,6 +69,52 @@ building_khus_hunting_lodge = {
 	ownership_type = self
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+}
+
+building_big_game_hunts = {
+	building_group = bg_big_game_hunting
+	texture = "gfx/interface/icons/building_icons/cave_hunting.dds"
+	city_type = wood
+	required_construction = construction_cost_low
+	terrain_manipulator = forestry
+	levels_per_mesh = 5
+
+	unlocking_technologies = {
+		hunting_lodges
+	}
+
+	production_method_groups = {
+		pmg_big_hunts
+		pmg_carapace_usage
+		pmg_big_game_hunting_equipment
+		
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+}
+
+building_rotfarm = {
+	building_group = bg_rotfarm
+	texture = "gfx/interface/icons/building_icons/rot_farms.dds"
+	city_type = wood
+	required_construction = construction_cost_medium
+	terrain_manipulator = forestry
+	levels_per_mesh = 5
+
+	unlocking_technologies = {
+		hunting_lodges
+	}
+
+	production_method_groups = {
+		pmg_grubhub
+		pmg_monster_wine
+		pmg_harvesting_process_building_wheat_farm
+		
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_light_industry.dds"
 }
 
 building_logging_camp_stonewood = {
