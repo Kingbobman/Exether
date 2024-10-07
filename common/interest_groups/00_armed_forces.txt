@@ -22,10 +22,78 @@
 	}
 
 	on_enable = {
-		ig:ig_armed_forces = {
-		set_ig_trait = ig_trait:ig_trait_materiel_waste
-		set_ig_trait = ig_trait:ig_trait_veteran_consultation
-		set_ig_trait = ig_trait:ig_trait_patriotic_fervor
+
+		if = {
+			limit = {
+				owner ={
+					any_primary_culture = {
+						has_discrimination_trait = goblin_heritage
+						NOT = {
+							has_discrimination_trait = hobgoblin
+						}
+					}
+				}
+			}
+			ig:ig_armed_forces = {
+				set_ig_trait = ig_trait:ig_trait_raider_logistics
+				set_ig_trait = ig_trait:ig_trait_sparkpowder_legacy
+				set_ig_trait = ig_trait:ig_trait_parochial_leadership
+			}
+		}
+		else_if = {
+			limit = {
+				owner ={
+					any_primary_culture = {
+						has_discrimination_trait = goblin_heritage
+							has_discrimination_trait = hobgoblin
+					}
+				}
+			}
+			ig:ig_armed_forces = {
+				set_ig_trait = ig_trait:ig_trait_materiel_waste
+				set_ig_trait = ig_trait:ig_trait_sparkpowder_legacy
+				set_ig_trait = ig_trait:ig_trait_red_hand
+				}
+		}
+		else = {
+			ig:ig_armed_forces = {
+				set_ig_trait = ig_trait:ig_trait_materiel_waste
+				set_ig_trait = ig_trait:ig_trait_veteran_consultation
+				set_ig_trait = ig_trait:ig_trait_patriotic_fervor
+			}
+		}
+
+
+
+		if = {
+			limit = {
+				owner ={
+					any_primary_culture = {
+						has_discrimination_trait = goblin_heritage
+						NOT = {
+							has_discrimination_trait = hobgoblin
+						}
+					}
+				}
+			}
+			ig:ig_armed_forces = {
+				set_interest_group_name = ig_armed_forces
+				remove_ideology = ideology_jingoist
+				add_ideology = ideology_goblin_jingoist
+			}
+		}
+
+		if = {
+			limit ={
+					OR = {
+						owner = { c:TEM ?= this }
+						owner = { c:YUL ?= this }
+					}
+			}
+			ig:ig_armed_forces = {
+				add_ideology = ideology_kreva_fingo
+				set_interest_group_name = ig_yernit
+			}
 		}
 
 		if = {
@@ -80,8 +148,9 @@
 				add_ideology = ideology_admiralty
 			}
 		}
-
 	}
+
+
 
 
 	on_disable = {}

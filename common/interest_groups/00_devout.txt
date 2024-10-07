@@ -34,14 +34,26 @@
 				set_ig_trait = ig_trait:ig_trait_the_oculi_vigiles
 			}
 
-
-
 		else ={
 			set_ig_trait = ig_trait:ig_trait_be_fruitful_and_multiply
 			set_ig_trait = ig_trait:ig_trait_divine_right
 			set_ig_trait = ig_trait:ig_trait_pious_fiction
 			}
 
+		}
+
+		if = {
+			limit = {
+				owner ={
+					any_primary_culture = {
+						has_discrimination_trait = hobgoblin
+					}
+				}
+			}
+			ig:ig_devout = {
+				remove_ideology = ideology_moralist
+				add_ideology = ideology_hobgoblin_moralist
+			}
 		}
 		
 		### Specific

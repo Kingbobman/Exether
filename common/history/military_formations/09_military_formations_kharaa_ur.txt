@@ -220,4 +220,160 @@
 		}
 	}
 
+	c:SHJ ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_shkumbdash
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_BAZKYL
+				count = 30
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_BALDBAN
+				count = 30
+			}
+
+			save_scope_as = shj_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			hq = region_shkumbdash
+			save_scope_as = shj_general
+		}
+		scope:shj_general = {
+			transfer_to_formation = scope:shj_army
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_shkumbdash
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_DALSHTOK
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_man_o_war
+				state_region = s:STATE_DALSHTOK
+				count = 10
+			}
+			save_scope_as = shj_fleet
+		}
+
+		create_character = {
+			is_admiral = yes
+			hq = region_shkumbdash
+			save_scope_as = shj_admiral
+		}
+		scope:shj_admiral = {
+			transfer_to_formation = scope:shj_fleet
+		}
+	}
+
+	c:OGR ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_shkumbdash
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_KAZTHOK
+				count = 45
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cuirassiers
+				state_region = s:STATE_GROMKYL
+				count = 20
+			}
+
+			save_scope_as = ogr_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_1
+			hq = region_shkumbdash
+			save_scope_as = ogr_general
+		}
+		scope:ogr_general = {
+			transfer_to_formation = scope:ogr_army
+		}
+	}
+
+	c:YOK ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_ongoryu
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_KHULEKI
+				count = 30
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_HAYAKHAMURA
+				count = 30
+			}
+
+			save_scope_as = yok_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			hq = region_ongoryu
+			save_scope_as = yok_general
+		}
+		scope:yok_general = {
+			transfer_to_formation = scope:yok_army
+		}
+	}
+
+	c:QON ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_tundgara
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_KRAGKYL
+				count = 40
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_KYRTHOR
+				count = 25
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_ERKBALB
+				count = 25
+			}
+
+			save_scope_as = qon_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			hq = region_tundgara
+			save_scope_as = qon_general
+		}
+		scope:qon_general = {
+			transfer_to_formation = scope:qon_army
+		}
+	}
+
 }
