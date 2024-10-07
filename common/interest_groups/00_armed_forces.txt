@@ -96,6 +96,31 @@
 			}
 		}
 
+		if = {
+			limit = {
+				country_has_state_religion = rel:nilbogism
+				OR = {
+					country_has_primary_culture = cu:xhurlob
+					country_has_primary_culture = cu:varbat
+					country_has_primary_culture = cu:rethrashar
+					country_has_primary_culture = cu:dales_togrul
+					country_has_primary_culture = cu:atiukura
+					country_has_primary_culture = cu:shkemger
+					country_has_primary_culture = cu:morevnamarya
+					country_has_primary_culture = cu:puarfeijiin
+					country_has_primary_culture = cu:zangedlittuy
+					country_has_primary_culture = cu:sarhbalb
+					country_has_primary_culture = cu:kojiniu
+					country_has_primary_culture = cu:yakamimbo
+				}
+			}
+			ig:ig_armed_forces = {
+				set_interest_group_name = ig_armed_forces
+				remove_ideology = ideology_jingoist
+				add_ideology = ideology_goblin_jingoist
+			}
+		}
+
 	if = {
 		limit = {
 			OR = {
