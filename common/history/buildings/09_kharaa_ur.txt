@@ -2672,7 +2672,7 @@
                       building={ 
                           type="building_financial_district"
                           country="c:YOK"
-                          levels=1
+                          levels=2
                           region="STATE_TSURUKHAN"
                      }
                   }
@@ -2685,7 +2685,7 @@
             building={ 
               type="building_financial_district"
               country="c:YOK"
-              levels=4
+              levels=5
               region="STATE_TSURUKHAN"
              }
           }
@@ -2724,7 +2724,7 @@
 						building={ 
 							type="building_financial_district"
 							country="c:YOK"
-							levels=1
+							levels=2
 							region="STATE_TSURUKHAN"
 					   }
 					}
@@ -3316,6 +3316,12 @@
   s:STATE_MONGOGAWA = {
     region_state:YOK = {
       create_building={
+				building="building_port"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_basic_port" }
+			}
+      create_building={
         building="building_government_administration"
         level=7
         reserves=1
@@ -3339,6 +3345,32 @@
         }
         reserves=1
         activate_production_methods={ "pm_watering_hole" }
+        }
+        create_building={
+          building="building_cotton_plantation"
+            add_ownership={ 
+            building={ 
+              type="building_manor_house"
+              country="c:YOK"
+              levels=2
+              region="STATE_MONGOGAWA"
+             }
+            }
+          reserves=1
+          activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts" }
+          }
+        create_building={
+          building="building_textile_mills"
+                  add_ownership={ 
+                      building={ 
+                          type="building_financial_district"
+                          country="c:YOK"
+                          levels=2
+                          region="STATE_MONGOGAWA"
+                     }
+                  }
+          reserves=1
+          activate_production_methods={ "pm_handsewn_clothes" "pm_traditional_looms" "pm_no_luxury_clothes" }
         }
       create_building={
         building="building_iron_mine"

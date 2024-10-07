@@ -16,7 +16,7 @@
 
 	building_modifiers = {	
 		level_scaled = {
-			building_employment_adventurers_add = 2500
+			building_employment_clerks_add = 4000
 		}
 	}		
 }		
@@ -46,7 +46,7 @@ pm_questing_boards = {
 		}			
 	
 		level_scaled = {
-			building_employment_adventurers_add = 3000
+			building_employment_clerks_add = 4000
 		}
 	}		
 }
@@ -75,7 +75,7 @@ pm_newspaper_ads = {
 		}	
 	
 		level_scaled = {
-			building_employment_adventurers_add = 3500
+			building_employment_clerks_add = 4000
 		}
 	}	
 }
@@ -105,13 +105,13 @@ pm_questing_switchboards = {
 		}
 
 		level_scaled = {
-			building_employment_adventurers_add = 4000
-			building_employment_bureaucrats_add = 1250
+			building_employment_clerks_add = 4000
+			building_employment_adventurers_add = 1250
 		}
 	}	
 }
 
-pm_hereditary_bureaucrats = {
+pm_hereditary_guild_leadership = {
 	texture = "gfx/interface/icons/production_method_icons/ownership_aristocrats.dds"
 	
 	unlocking_laws = {
@@ -121,12 +121,12 @@ pm_hereditary_bureaucrats = {
 	building_modifiers = {
 		level_scaled = {
 			building_employment_aristocrats_add = 250
-			building_employment_bureaucrats_add = 250
+			building_employment_adventurers_add = 250
 		}
 	}			
 }
 
-pm_professional_bureaucrats = {
+pm_professional_guild_leadership = {
 	texture = "gfx/interface/icons/production_method_icons/professional_bureaucrats.dds"
 	
 	disallowing_laws = {
@@ -135,12 +135,13 @@ pm_professional_bureaucrats = {
 	
 	building_modifiers = {
 		level_scaled = {
-			building_employment_bureaucrats_add = 500
+			building_employment_heroes_add = 250
+			building_employment_adventurers_add = 250
 		}
 	}			
 }	
 
-pm_secular_bureaucrats = {
+pm_secular_oversight = {
 	texture = "gfx/interface/icons/production_method_icons/ownership_bureacrats.dds"
 	
 	disallowing_laws = {
@@ -149,12 +150,13 @@ pm_secular_bureaucrats = {
 	
 	building_modifiers = {
 		level_scaled = {
-			building_employment_bureaucrats_add = 500
+			building_employment_adventurers_add = 250
+			building_employment_officers_add = 150
 		}
 	}			
 }
 
-pm_religious_bureaucrats = {
+pm_private_oversight = {
 	texture = "gfx/interface/icons/production_method_icons/ownership_clergy.dds"
 	
 	disallowing_laws = {
@@ -164,8 +166,7 @@ pm_religious_bureaucrats = {
 	
 	building_modifiers = {
 		level_scaled = {
-			building_employment_clergymen_add = 250
-			building_employment_bureaucrats_add = 250
+			building_employment_adventurers_add = 500
 		}
 	}			
 }	
