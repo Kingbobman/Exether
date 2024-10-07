@@ -2540,6 +2540,19 @@
   s:STATE_HOKUKHAN = {
     region_state:YOK = {
       create_building={
+				building="building_coal_mine"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:YOK"
+							levels=2
+							region="STATE_HOKUKHAN"
+					   }
+					}
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_coal_mine" "pm_mines_no_potions" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+      create_building={
 				building="building_cotton_plantation"
 				  add_ownership={ 
 					building={ 
@@ -2571,7 +2584,7 @@
                       building={ 
                           type="building_financial_district"
                           country="c:YOK"
-                          levels=2
+                          levels=3
                           region="STATE_HOKUKHAN"
                      }
                   }
@@ -2584,7 +2597,7 @@
                     building={ 
                         type="building_financial_district"
                         country="c:YOK"
-                        levels=3
+                        levels=4
                         region="STATE_HOKUKHAN"
                    }
                 }
@@ -2623,7 +2636,7 @@
 					building={ 
 						type="building_manor_house"
 						country="c:YOK"
-						levels=5
+						levels=8
 						region="STATE_HOKUKHAN"
 				   }
 				}
@@ -2648,6 +2661,38 @@
   s:STATE_TSURUKHAN = {
     region_state:YOK = {
       create_building={
+        building="building_construction_sector"
+        level=1
+        reserves=1
+        activate_production_methods={ "pm_iron_frame_buildings" }
+      }
+      create_building={
+        building="building_tooling_workshops"
+                  add_ownership={ 
+                      building={ 
+                          type="building_financial_district"
+                          country="c:YOK"
+                          levels=1
+                          region="STATE_TSURUKHAN"
+                     }
+                  }
+        reserves=1
+        activate_production_methods={ "pm_pig_iron" "pm_automation_disabled" }
+      }
+      create_building={
+        building="building_iron_mine"
+          add_ownership={ 
+            building={ 
+              type="building_financial_district"
+              country="c:YOK"
+              levels=4
+              region="STATE_TSURUKHAN"
+             }
+          }
+        reserves=1
+        activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+      }	
+      create_building={
 				building="building_opium_plantation"
 				add_ownership={ 
 					building={ 
@@ -2666,12 +2711,25 @@
 					building={ 
 						type="building_manor_house"
 						country="c:YOK"
-						levels=4
+						levels=10
 						region="STATE_TSURUKHAN"
 				   }
 				}
 				reserves=1
 				activate_production_methods={ "pm_butchering_tools" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated" }
+			}
+      create_building={
+				building="building_coal_mine"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:YOK"
+							levels=1
+							region="STATE_TSURUKHAN"
+					   }
+					}
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_coal_mine" "pm_mines_no_potions" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
 			}
     }
   }
@@ -2852,6 +2910,12 @@
         activate_production_methods={ "pm_simple_organization" }
       }
       create_building={
+				building="building_port"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_basic_port" }
+			}
+      create_building={
         building="building_questing_office"
         level=5
         reserves=1
@@ -2954,7 +3018,7 @@
                       building={ 
                           type="building_financial_district"
                           country="c:YOK"
-                          levels=1
+                          levels=2
                           region="STATE_KHULEKI"
                      }
                   }
@@ -2967,7 +3031,7 @@
             building={ 
               type="building_financial_district"
               country="c:YOK"
-              levels=2
+              levels=3
               region="STATE_KHULEKI"
              }
           }
@@ -3373,11 +3437,43 @@
   s:STATE_HAYAKHAMURA = {
     region_state:YOK = {
       create_building={
+				building="building_port"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_basic_port" }
+			}
+      create_building={
         building="building_questing_office"
         level=5
         reserves=1
         activate_production_methods={ "pm_questing_boards" }
       }
+      create_building={
+				building="building_shipyards"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:YOK"
+							levels=1
+							region="STATE_HAYAKHAMURA"
+					   }
+					}
+				reserves=1
+				activate_production_methods={ "pm_basic_shipbuilding" }
+			}
+      create_building={
+				building="building_coal_mine"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:YOK"
+							levels=2
+							region="STATE_HAYAKHAMURA"
+					   }
+					}
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_coal_mine" "pm_mines_no_potions" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
       create_building={
         building="building_tavern"
         add_ownership={ 
@@ -3390,6 +3486,19 @@
         }
         reserves=1
         activate_production_methods={ "pm_watering_hole" }
+        }
+        create_building={
+          building="building_opium_plantation"
+          add_ownership={ 
+            building={ 
+              type="building_financial_district"
+              country="c:YOK"
+              levels=5
+              region="STATE_HAYAKHAMURA"
+             }
+          }
+          reserves=1
+          activate_production_methods={ "default_building_opium_plantation" "pm_road_carts"  }
         }
       create_building={
         building="building_furniture_manufacturies"
@@ -3410,7 +3519,7 @@
                     building={ 
                         type="building_financial_district"
                         country="c:YOK"
-                        levels=3
+                        levels=4
                         region="STATE_HAYAKHAMURA"
                    }
                 }
@@ -3436,7 +3545,7 @@
 					building={ 
 						type="building_manor_house"
 						country="c:YOK"
-						levels=5
+						levels=10
 						region="STATE_HAYAKHAMURA"
 				   }
 				}
