@@ -538,7 +538,8 @@ on_character_death = {
 			limit = {
 				has_variable = is_retainer
 			}
-
+			free_character_from_void = yes
+			set_character_busy_and_immortal = no
 			save_scope_as = dead_retainer
 
 			#Remove buffs from region if assigned
@@ -739,6 +740,8 @@ on_character_death = {
 
 					
 			}
+
+			kill_character = yes
 
 
 
