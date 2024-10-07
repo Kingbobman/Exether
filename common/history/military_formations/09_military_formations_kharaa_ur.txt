@@ -49,4 +49,175 @@
 			transfer_to_formation = scope:dth_fleet
 		}
 	}
+
+	c:YUL ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_valley_of_golden_fields
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_KHORTA
+				count = 35
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_TUKHUR
+				count = 25
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery
+				state_region = s:STATE_TUKHUR
+				count = 25
+			}
+
+			save_scope_as = yul_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			save_scope_as = yul_general
+		}
+
+		scope:yul_general = {
+			transfer_to_formation = scope:yul_army
+		}
+
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_valley_of_golden_fields
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_frigate
+				state_region = s:STATE_GARBOL
+				count = 15
+			}
+			save_scope_as = yul_fleet
+		}
+
+		create_character = {
+			is_admiral = yes
+			save_scope_as = yul_admiral
+		}
+		scope:yul_admiral = {
+			transfer_to_formation = scope:yul_fleet
+		}
+	}
+
+	c:MOK ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_khantar
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_HAHKDRAD
+				count = 30
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_GROMMOK
+				count = 30
+			}
+
+			save_scope_as = mok_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			save_scope_as = mok_general
+		}
+
+		scope:mok_general = {
+			transfer_to_formation = scope:mok_army
+		}
+	}
+
+	c:ZHU ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_khantar
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_KAZTHYR
+				count = 50
+			}
+			
+
+			save_scope_as = zhu_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			save_scope_as = zhu_general
+		}
+
+		scope:zhu_general = {
+			transfer_to_formation = scope:zhu_army
+		}
+	}
+
+	c:RUG ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_hirugolaima
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_HARUGAWASAI
+				count = 30
+			}
+
+			save_scope_as = rug_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			save_scope_as = rug_general
+		}
+
+		scope:rug_general = {
+			transfer_to_formation = scope:rug_army
+		}
+	}
+
+	c:KOJ ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_hirugolaima
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_TSUKHANJUKU
+				count = 25
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_KHASUNEN
+				count = 15
+			}
+
+			save_scope_as = koj_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			save_scope_as = koj_general
+		}
+
+		scope:koj_general = {
+			transfer_to_formation = scope:koj_army
+		}
+	}
+
 }
