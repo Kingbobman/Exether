@@ -7,8 +7,9 @@ pm_rusttail_fishing = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods										
-			goods_output_fish_add = -10
-			goods_output_iron_add = 5
+			goods_output_fish_add = -8			#x20 = 160
+
+			goods_output_iron_add = 7			#x30 = 210
 		}
 	}
 }
@@ -23,8 +24,9 @@ pm_intensified_rusttail_fishing = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods										
-			goods_output_fish_add = -20
-			goods_output_iron_add = 10
+			goods_output_fish_add = -15			#x20 = 300
+
+			goods_output_iron_add = 13			#x30 = 390
 		}
 	}
 }
@@ -39,46 +41,9 @@ pm_magebred_rusttail_fish_farming = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods										
-			goods_output_fish_add = -40
-			goods_output_iron_add = 20
-		}
-	}
-}
-
-pm_early_blubberfish_harvesting = {
-	texture = "gfx/interface/icons/production_method_icons/hardwood_selection.dds"
-	building_modifiers = {
-		workforce_scaled = {
-			# output goods										
-			goods_output_fish_add = -4
-			goods_output_blubber_add = 3
-		}
-	}
-}
-
-pm_organized_blubberfish_harvesting = {
-	texture = "gfx/interface/icons/production_method_icons/hardwood_selection.dds"
-	building_modifiers = {
-		workforce_scaled = {
-			# output goods										
-			goods_output_fish_add = -8
-			goods_output_blubber_add = 6
-		}
-	}
-}
-
-pm_dedicated_blubberfish_harvesting = {
-	texture = "gfx/interface/icons/production_method_icons/hardwood_selection.dds"
-
-	unlocking_technologies = {
-		electric_railway
-	}
-
-	building_modifiers = {
-		workforce_scaled = {
-			# output goods										
-			goods_output_fish_add = -13
-			goods_output_blubber_add = 10
+			goods_output_fish_add = -20			#x20 = 400
+			
+			goods_output_iron_add = 20			#x30 = 600
 		}
 	}
 }
@@ -88,19 +53,26 @@ pm_early_glowfish_harvesting = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods										
-			goods_output_fish_add = -4
-			goods_output_monster_essence_add = 3
+			goods_output_fish_add = -10				#x20 = 200
+
+			goods_output_monster_essence_add = 5	#x40 = 200
 		}
 	}
 }
 
 pm_organized_glowfish_harvesting = {
 	texture = "gfx/interface/icons/production_method_icons/hardwood_selection.dds"
+	
+	unlocking_technologies = {
+		mechanical_tools
+	}
+
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods										
-			goods_output_fish_add = -8
-			goods_output_monster_essence_add = 6
+			goods_output_fish_add = -15				#x20 = 300
+
+			goods_output_monster_essence_add = 10	#x40 = 400
 		}
 	}
 }
@@ -115,8 +87,9 @@ pm_dedicated_glowfish_harvesting = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods										
-			goods_output_fish_add = -13
-			goods_output_monster_essence_add = 10
+			goods_output_fish_add = -20				#x20 = 400
+
+			goods_output_monster_essence_add = 15	#x40 = 600
 		}
 	}
 }
@@ -126,19 +99,26 @@ pm_early_squidlets_harvesting = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods										
-			goods_output_fish_add = -4
-			goods_output_dyes_add = 3
+			goods_output_fish_add = -10				#x20 = 200
+
+			goods_output_dye_add = 5				#x40 = 200
 		}
 	}
 }
 
 pm_organized_squidlets_harvesting = {
 	texture = "gfx/interface/icons/production_method_icons/hardwood_selection.dds"
+	
+	unlocking_technologies = {
+		mechanical_tools
+	}
+
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods										
-			goods_output_fish_add = -8
-			goods_output_dyes_add = 6
+			goods_output_fish_add = -15				#x20 = 300
+
+			goods_output_dye_add = 7				#x40 = 280
 		}
 	}
 }
@@ -153,8 +133,9 @@ pm_dedicated_squidlets_harvesting = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods										
-			goods_output_fish_add = -13
-			goods_output_dyes_add = 10
+			goods_output_fish_add = -20				#x20 = 400
+
+			goods_output_dye_add = 10				#x40 = 400
 		}
 	}
 }
@@ -164,8 +145,14 @@ pm_early_goldfish_harvesting = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods										
-			goods_output_fish_add = -12
-			goods_output_gold_add = 5
+			goods_output_fish_add = -15				#x20 = 300
+
+			goods_output_gold_add = 5				#x100 = 500
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_minting_add = 100
 		}
 	}
 }
@@ -174,20 +161,47 @@ pm_organized_goldfish_harvesting = {
 	texture = "gfx/interface/icons/production_method_icons/hardwood_selection.dds"
 
 	unlocking_technologies = {
-		electric_railway
+		mechanical_tools
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods										
-			goods_output_fish_add = -25
-			goods_output_gold_add = 10
+			goods_output_fish_add = -25				#x20 = 500
+
+			goods_output_gold_add = 10				#x100 = 1000
 		}
 	}
-	possible = {
-		error_check = {
-			severity = fail
-			has_state_trait = state_trait_goldfish_fields
+	country_modifiers = {
+		workforce_scaled = {
+			country_minting_add = 200
+		}
+	}
+}
+
+pm_dedicated_goldfish_harvesting = {
+	texture = "gfx/interface/icons/production_method_icons/hardwood_selection.dds"
+
+	unlocking_technologies = {
+		mechanical_tools
+	}
+
+	unlocking_production_methods = {
+		pm_fishing_trawlers
+		pm_steam_trawlers
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods										
+			goods_output_fish_add = -40				#x20 = 800
+
+			goods_output_gold_add = 15				#x100 = 1500
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_minting_add = 300
 		}
 	}
 }
@@ -196,35 +210,6 @@ pm_organized_goldfish_harvesting = {
 
 pm_no_regional_logging = {
 	texture = "gfx/interface/icons/production_method_icons/no_hardwood_selection.dds"
-}
-
-pm_mimosa_trees = {  #this is a reference to dmt extraction methods irl
-	texture = "gfx/interface/icons/production_method_icons/orchards.dds"
-	
-	unlocking_production_methods = {
-		pm_no_hardwood
-		pm_saw_mills
-		pm_electric_saw_mills
-	}
-
-	building_modifiers = {
-		workforce_scaled = {
-			goods_output_wood_add = -15
-			goods_output_tea_add = 9
-			goods_output_glass_add = 3
-		}
-	}
-}
-
-pm_canada_reference_here = {  #maple syrup
-texture = "gfx/interface/icons/production_method_icons/orchards.dds"  #we need a syrup icon
-
-building_modifiers = {
-	workforce_scaled = {
-		goods_output_wood_add = -10
-		goods_output_sugar_add = 10
-	}
-}
 }
 
 pm_simple_forestry_crystalwood = {
@@ -297,12 +282,13 @@ pm_simple_forestry_stonewood = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_hardwood_add = 20
+			goods_output_wood_add = 25
+			goods_output_hardwood_add = 15
 		}
 
 		level_scaled = {
 			# employment
-			building_employment_laborers_add = 4500
+			building_employment_laborers_add = 5000
 		}
 	}
 }
@@ -319,12 +305,13 @@ pm_saw_mills_stonewood = {
 			goods_input_tools_add = 5
 			
 			# output goods
-			goods_output_wood_add = 30
+			goods_output_wood_add = 50
+			goods_output_hardwood_add = 25
 		}
 
 		level_scaled = {
 			# employment
-			building_employment_laborers_add = 4000
+			building_employment_laborers_add = 4500
 			building_employment_machinists_add = 500
 		}
 	}
@@ -343,12 +330,13 @@ pm_electric_saw_mills_stonewood = {
 			goods_input_electricity_add = 5
 			
 			# output goods
-			goods_output_wood_add = 50 
+			goods_output_wood_add = 90
+			goods_output_hardwood_add = 35
 		}
 
 		level_scaled = {
 			# employment
-			building_employment_laborers_add = 3000
+			building_employment_laborers_add = 3500
 			building_employment_machinists_add = 1000
 			building_employment_engineers_add = 500
 		}
@@ -362,14 +350,14 @@ pm_ghost_hunters = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_ectoplasm_add = 20
+			goods_output_ectoplasm_add = 10 #50 500
 		}
 
 		level_scaled = {
 			# employment
-			building_employment_laborers_add = 3500
-			building_employment_clergymen_add = 500
-			building_employment_adventurers_add = 1000
+			building_employment_shopkeepers_add = 500
+			building_employment_clergymen_add = 250
+			building_employment_adventurers_add = 1250
 		}
 		
 	}
@@ -390,17 +378,17 @@ pm_exorcists = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_gizmos_add = 5
+			goods_input_wishstone_add = 3  #50 150
 			
 			# output goods
-			goods_output_ectoplasm_add = 30
+			goods_output_ectoplasm_add = 20  #50 1000 == 850
 		}
 
 		level_scaled = {
 			# employment
-			building_employment_laborers_add = 2500
-			building_employment_clergymen_add = 1000
-			building_employment_adventurers_add = 1500
+			building_employment_shopkeepers_add = 500
+			building_employment_clergymen_add = 500
+			building_employment_adventurers_add = 1000
 		}
 	}
 
@@ -420,19 +408,18 @@ pm_paranormal_containment_fields = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_gizmos_add = 10
-			goods_input_electricity_add = 5
+			goods_input_gizmos_add = 5 #60 300
+			goods_input_electricity_add = 10 #30 150  = 450
 			
 			# output goods
-			goods_output_ectoplasm_add = 50 
+			goods_output_ectoplasm_add = 30 #50 1500 == 1050
 		}
 
 		level_scaled = {
 			# employment
-			building_employment_laborers_add = 2000
-			building_employment_adventurers_add = 1500
-			building_employment_clergymen_add = 1000
-			building_employment_artificers_add = 500
+			building_employment_shopkeepers_add = 500
+			building_employment_adventurers_add = 1000
+			building_employment_artificers_add = 1000
 		}
 	}
 
@@ -456,6 +443,10 @@ pm_revealing_field_generators = {
 		steam_donkey
 	}
 
+	unlocking_production_methods = {
+		pm_exorcists
+	}
+
 	disallowing_laws = {
 		law_industry_banned
 	}
@@ -464,21 +455,67 @@ pm_revealing_field_generators = {
 		workforce_scaled = {
 			# input goods
 			goods_input_thaumacores_add = 1
-			goods_input_wishstone_add = 4
 		}
 
 		level_scaled = {
 			# employment
-			building_employment_laborers_add = -1000
-			building_employment_artificers_add = 500
+			building_employment_clergymen_add = -250
+			building_employment_adventurers_add = -250
 		}
 	}
 }
 
 pm_portable_ethereal_vacuums = {
+	                                                                                          
+                #                   .-=+***++=:.                                            
+                #                 .==::-+*****##*=.                                         
+                #                -+-*    *#########*:                                       
+                #               :#-:#::- +###########=                                      
+                #               +#+-***++#############*                                     
+                #               -####%%##########%%%%###*.                                  
+                #              =%%%%%#***#%%%%####%%%%%%%%                                  
+                #              *%%%%@%#***+-=====++*@@@%%%.                                 
+                #               -*%%#+==-- -+=-==++*@@%+++.     ...                         
+                #                  .*-**--.*#%===+*%@@*+##+:   ==:::.                       
+                #                   -=--===+*++#@+*@@%**#+=:  :*+-..::.                     
+                #                  -=----==+*%@@@#=+*+==---   ####+:...:.                   
+                #                 .*+====++*%@@@@#+=-:..-   ..++%@@%:::..:.                 
+                #                  *#****#%@@@@%#*++==-..:=-=++*#@@@++===-=.                
+                #              ...  -*#%@%######*++:... ..:--:. .=%%%#****-                 
+                #          ........  .:=###*+++**+:... ....::      -#%%##=                  
+                #       .. .:..===++++#%%#*##***##++*+=::::::        -**=                   
+                #      :  . :+==*++*+=-:-=*%%######%%#*+=--:::                              
+                #      =-:-++=*+*=-  .=##*#%##########*==---=.                              
+                #    .::=*****####=:+%%%*#%##%#############%%#                              
+                #   .:-==.--*###*##%%%%%%%%##%%##%%%######%%@@=                             
+                #   --==     :+####%%%%%%%###%#%%%%%%#%#%%%@@@%                             
+                #   =-=-        :=%%%%%%%%%##%%%%%%%*#%@@@@@@@%                             
+                #   --=+.        :%%%%%%%%%%##%%%%%%#%%##**#%@%                             
+                #    -+=+-.      :%%%%%%%%%%%##%%%%@@%*=---=+*@#                            
+                #     .=+++++===+*%%%%%%%%%%%%%%#%%%@*=-:-==+*%%                            
+                #        :-=++++=:.%@%%%%%###%%%%%%@@#+-=++++*%#                            
+                #                  +@@@%%%####%%%%%%@@#******%#.                            
+                #                  *%%@@%%#####%%%%=+#@@%%%@#:                              
+                #                  %#%%%%%####%%%%%:   :--:.                                
+                #                  %##%%%%#####%%%%%.                                       
+                #                  %%%%%%%%#####%%%%%:                                      
+                #                  *%%%%%%%%####%%%%%%+                                     
+                #                  :%%%%%%%%%####%%%%%%#:                                   
+                #                   *%%%%%%%%%%####%%%%%%=.                                 
+                #                 ..=%%%%%%%%%%%%%%%%%%%%%#                                 
+                #               *%%%%%%%%%%%%%%%%%%%#####%%:                                
+                #              =%%%%%%%%@@@@@%@%%%%#%%%%%%@@-                               
+                #              -@%%%@@@@@@@@@@@@@@@@@@@@@@@@%                               
+                #               :%@@@@@@@@%#@@%%%%%%%%%%@@@@#                               
+                #                 .......    +%%%%%%%%%@@@@*.                               
+                #                             #@@@@@@@@@@@+                                 
+                #                             .+*#%@@@%#+.  
 	texture = "gfx/interface/icons/production_method_icons/chainsaws.dds"
 	unlocking_technologies = {
 		combustion_engine
+	}
+	unlocking_production_methods = {
+		pm_paranormal_containment_fields
 	}
 	disallowing_laws = {
 		law_industry_banned
@@ -486,14 +523,12 @@ pm_portable_ethereal_vacuums = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_gizmos_add = 10
-			goods_input_oil_add = 5
+			goods_input_gizmos_add = 5
 		}
 
 		level_scaled = {
 			# employment
-			building_employment_laborers_add = -2000
-			building_employment_artificers_add = 500
+			building_employment_artificers_add = -500
 		}
 	}
 }
@@ -507,7 +542,7 @@ pm_potion_sap = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods										
-			goods_output_hardwood_add = -12
+			goods_output_hardwood_add = -10
 			goods_output_potions_add = 10
 		}
 	}
@@ -567,8 +602,9 @@ pm_chimesilt_extraction = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_grain_add = -15
-			goods_output_opium_add = 15
+			goods_output_grain_add = -15	#x20 = 300
+
+			goods_output_opium_add = 10		#x50 = 500
 		}
 	}
 }
@@ -721,9 +757,9 @@ pm_hunting_meat = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods										
-			goods_output_monster_essence_add = -5		# x40 = -200
+			goods_output_monster_essence_add = -6		# x40 = -300
 
-			goods_output_meat_add = 15					# x30 = 450
+			goods_output_meat_add = 10					# x30 = 300
 		}
 	}
 }
@@ -739,9 +775,9 @@ pm_increased_hunting_meat = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods
-			goods_output_monster_essence_add = -10		# x40 = -400
+			goods_output_monster_essence_add = -14		# x40 = -600
 			
-			goods_output_meat_add = 25					# x30 = 750
+			goods_output_meat_add = 20					# x30 = 600
 		}
 	}
 }
@@ -761,8 +797,8 @@ pm_tracking_tools = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_thaumacores_add = 1
-			goods_input_wishstone_add = 4
+			goods_input_gizmos_add = 1
+			goods_input_tools_add = 4
 		}
 
 		level_scaled = {
@@ -786,8 +822,8 @@ pm_beast_divination = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_gizmos_add = 10
-			goods_input_oil_add = 5
+			goods_input_gizmos_add = 5
+			goods_input_wishstone_add = 5
 		}
 
 		level_scaled = {
@@ -808,9 +844,8 @@ pm_simple_desert_hunting = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_monster_essence_add = 10  #40 = 400
-			goods_output_opium_add = 5             #50 = 250
-		}                                          #Profit = 650
+			goods_output_monster_essence_add = 20  #40 = 600
+		}                                          #Profit = 600
 
 		level_scaled = {
 			# employment
@@ -842,12 +877,11 @@ pm_firearms_desert_hunting= {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_small_arms_add = 5        #60 = 300
-			goods_input_groceries_add = 5         #30 = 150
+			goods_input_small_arms_add = 5        
+			goods_input_groceries_add = 5         
 			# output goods
-			goods_output_monster_essence_add = 30 #40 = 1200
-			goods_output_opium_add = 10           #50 = 500
-			                                      #Profit = 750
+			goods_output_monster_essence_add = 40
+			    
 		}
 
 		level_scaled = {
@@ -881,14 +915,13 @@ pm_heavy_weapons_desert_hunting = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_small_arms_add = 10 #10x60 = 600
-			goods_input_ammunition_add = 5  #5x50 = 250
-			goods_input_groceries_add = 5         #30 = 150
+			goods_input_small_arms_add = 10 		#10x60 = 600
+			goods_input_ammunition_add = 5  		#5x50 = 250
+			goods_input_groceries_add = 5         	#30 = 150
 			
 			# output goods
-			goods_output_monster_essence_add = 50 #40 = 2000
-			goods_output_opium_add = 30           #30x50 = 1500
-		}                                         #Profit = 2500
+			goods_output_monster_essence_add = 60 	
+		}                                         	
 
 		level_scaled = {
 			# employment
@@ -912,34 +945,36 @@ pm_heavy_weapons_desert_hunting = {
 	}
 }
 
-pm_no_hunting_chimesilt = {
+pm_no_hunting_dyes = {
 	texture = "gfx/interface/icons/production_method_icons/no_meat.dds"
 }
 
-pm_hunting_chimesilt = {
+pm_hunting_dyes = {
 	texture = "gfx/interface/icons/production_method_icons/meat.dds"
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods										
-			goods_output_monster_essence_add = -10
-			goods_output_opium_add = 8
+			goods_output_monster_essence_add = -3		#x40 = 400
+
+			goods_output_dye_add = 3				#x40 = 320
 		}
 	}
 }
 
-pm_increased_hunting_chimesilt = {
+pm_increased_hunting_dyes = {
 	texture = "gfx/interface/icons/production_method_icons/increased_meat.dds"
 
 	unlocking_production_methods = {
 		pm_firearms_desert_hunting
 		pm_heavy_weapons_desert_hunting
 	}
-
+                                              # I made the dye pms small for actual worthwhile ease of use - Myx
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods
-			goods_output_monster_essence_add = -20
-			goods_output_opium_add = 16
+			goods_output_monster_essence_add = -6		#x40 = 800 
+
+			goods_output_dye_add = 6				#x40 = 640
 		}
 	}
 }
@@ -951,10 +986,10 @@ pm_simple_khus_hunting = {
 		workforce_scaled = {
 
 			# input goods
-		    goods_input_small_arms_add = 5       #5x60 = 300
+		    goods_input_small_arms_add = 10       #5x60 = 600
 
-			goods_output_monster_essence_add = 40  #25x50 = 2000
-		}                                          #Profit = 1700
+			goods_output_monster_essence_add = 40  #40x40 = 1600
+		}                                          #Profit = 1000
 
 		level_scaled = {
 			# employment
@@ -966,8 +1001,8 @@ pm_simple_khus_hunting = {
 
 		unscaled = {
 			# mortality
-			building_laborers_mortality_mult = 0.40
-			building_adventurers_mortality_mult = 0.70
+			building_laborers_mortality_mult = 0.20
+			building_adventurers_mortality_mult = 0.35
 		}
 	}
 
@@ -987,11 +1022,13 @@ pm_firearms_khus_hunting= {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_small_arms_add = 10       #10x60 = 600
-			
+			goods_input_small_arms_add = 10       	#x60 = 600
+			goods_input_luxury_clothes_add = 5		#x60 = 300
+			goods_input_groceries_add = 10			#x30 = 300
+
 			# output goods
-			goods_output_monster_essence_add = 80 #80x50 = 4000
-			                                      #Profit = 3600
+			goods_output_monster_essence_add = 80 	#x40 = 3200
+			                                      	#Profit = 2000
 		}
 
 		level_scaled = {
@@ -1003,8 +1040,8 @@ pm_firearms_khus_hunting= {
 		}
 		unscaled = {
 			# mortality
-			building_laborers_mortality_mult = 0.35
-			building_adventurers_mortality_mult = 0.55
+			building_laborers_mortality_mult = 0.15
+			building_adventurers_mortality_mult = 0.25
 		}
 	}
 
@@ -1024,12 +1061,14 @@ pm_heavy_weapons_khus_hunting = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_small_arms_add = 20 #20x60 = 1200
-			goods_input_ammunition_add = 10 #10x50 = 500
+			goods_input_small_arms_add = 20 		#x60 = 1200
+			goods_input_ammunition_add = 10 		#x50 = 500
+			goods_input_luxury_clothes_add = 5		#x60 = 300
+			goods_input_groceries_add = 10			#x30 = 300
 			
 			# output goods
-			goods_output_monster_essence_add = 140 #140x50 = 7000
-		}                                         #Profit = 5300
+			goods_output_monster_essence_add = 140 	#140x40 = 5600
+		}                                        	#Profit = 3000
 
 		level_scaled = {
 			# employment
@@ -1040,8 +1079,8 @@ pm_heavy_weapons_khus_hunting = {
 		}
 		unscaled = {
 			# mortality
-			building_laborers_mortality_mult = 0.25
-			building_adventurers_mortality_mult = 0.40
+			building_laborers_mortality_mult = 0.1
+			building_adventurers_mortality_mult = 0.2
 		}
 	}
 
@@ -1061,13 +1100,9 @@ pm_hunting_khus_chimesilt = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods										
-			goods_output_monster_essence_add = -20
-			goods_output_opium_add = 20
-		}
-		unscaled = {
-			# mortality
-			building_laborers_mortality_mult = 0.10
-			building_adventurers_mortality_mult = 0.20
+			goods_output_monster_essence_add = -20		#x40 = 800
+
+			goods_output_opium_add = 15					#x50 = 750
 		}
 	}
 }
@@ -1083,13 +1118,9 @@ pm_increased_hunting_khus_chimesilt = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods
-			goods_output_monster_essence_add = -40
-			goods_output_opium_add = 40
-		}
-		unscaled = {
-			# mortality
-			building_laborers_mortality_mult = 0.30
-			building_adventurers_mortality_mult = 0.50
+			goods_output_monster_essence_add = -40		#x40 = 1600
+
+			goods_output_opium_add = 30					#x50 = 1500
 		}
 	}
 }
@@ -1167,9 +1198,6 @@ pm_self_regulation = {
 	
 	disallowing_laws = {
 		law_divine_miracles
-		law_druidic_circles
-		law_dark_arts
-		law_mage_hunters
 	}
 	
 	building_modifiers = {
@@ -1181,14 +1209,6 @@ pm_self_regulation = {
 
 pm_clerical_oversight = {
 	texture = "gfx/interface/icons/production_method_icons/ownership_clergy.dds"
-	
-	disallowing_laws = {
-		law_dark_arts
-		law_mage_hunters
-		law_no_magic
-		law_artificer_guilds
-		law_astrological_studies
-	}
 	
 	building_modifiers = {
 		level_scaled = {
@@ -1215,4 +1235,167 @@ pm_government_oversight = {
 			building_employment_bureaucrats_add = 1000
 		}
 	}			
+}
+
+pm_simple_hippo_ranching = {
+	texture = "gfx/interface/icons/production_method_icons/open_air_stockyards.dds"		
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input 
+			
+			# output
+			goods_output_meat_add = 5
+			goods_output_blubber_add = 10
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 4500
+		}
+	}
+}
+
+pm_butchering_tools_hippos = {
+	texture = "gfx/interface/icons/production_method_icons/butchering_tools.dds"	
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input
+			goods_input_tools_add = 7
+			
+			# output
+			goods_output_meat_add = 10
+			goods_output_blubber_add = 20
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 4000
+			building_employment_machinists_add = 500
+		}
+	}
+}
+
+pm_slaughterhouses_hippos = {
+	texture = "gfx/interface/icons/production_method_icons/slaughterhouses.dds"	
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	
+	unlocking_technologies = {
+		gantry_cranes
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input
+			goods_input_small_arms_add = 5
+			goods_input_tools_add = 15
+			
+			goods_output_meat_add = 20
+			goods_output_blubber_add = 40
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 3000
+			building_employment_machinists_add = 1000
+			building_employment_engineers_add = 500
+		}
+	}
+}
+
+pm_no_magic_automation = {
+	texture = "gfx/interface/icons/production_method_icons/no_automation.dds"
+	building_modifiers = {
+	}
+}
+
+pm_basic_magic_automation = {
+	texture = "gfx/interface/icons/production_method_icons/steam_donkey.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 5 #magic
+		}
+	}
+
+	unlocking_technologies = {
+		atmospheric_engine
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input
+			goods_input_gizmos_add = 5  #60 = + +300
+			goods_input_tools_add = -10   #40 = -400
+
+		}
+
+		level_scaled = {
+			# employment
+		}
+	}
+}
+
+pm_advanced_magic_automation = {
+	texture = "gfx/interface/icons/production_method_icons/steam_donkey.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 5 #magic
+		}
+	}
+
+	unlocking_technologies = {
+		watertube_boiler
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input
+			goods_input_gizmos_add = 8  #60 = + +480
+			goods_input_tools_add = -15   #40 = -600
+
+		}
+
+		level_scaled = {
+			# employment
+		}
+	}
+}
+
+pm_state_of_the_art_automation = {
+	texture = "gfx/interface/icons/production_method_icons/steam_donkey.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 5 #magic
+		}
+	}
+
+	unlocking_technologies = {
+		compression_ignition
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input
+			goods_input_gizmos_add = 8  #60 = + +480
+			goods_input_tools_add = -15   #40 = -600
+			goods_input_blubber_add = -4   #40 = -160
+			goods_input_thaumacores_add = 1 #150
+
+		}
+
+		level_scaled = {
+			# employment
+		}
+	}
 }

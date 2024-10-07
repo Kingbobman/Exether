@@ -1,0 +1,94 @@
+﻿je_restore_upashna = {
+    icon = "gfx/interface/icons/event_icons/event_military.dds"
+    group = je_group_historical_content
+
+    should_be_pinned_by_default = yes
+
+    complete = {
+        custom_tooltip = {
+            text = nbi_formed
+            c:NBI ?= THIS
+        }
+        OR = {
+            has_modifier = toldek_paseb
+            has_modifier = jihduk_paseb
+        }
+    }
+
+    fail = {
+        if = {
+            limit = {
+                c:AKB ?= THIS
+            }
+            NOT = { has_modifier = toldek_paseb }
+        }
+        if = {
+            limit = {
+                c:SAP ?= THIS
+            }
+            NOT = { has_modifier = jihduk_paseb }
+        }
+    }
+
+    on_complete = {
+        add_modifier = {
+            name = upashna_dhaalum
+        }
+        add_modifier = {
+            name = upshana_restored
+            months = short_modifier_time
+        }
+    }
+}
+
+je_dragon_tombs = {
+    icon = "gfx/interface/icons/event_icons/event_map.dds"
+    group = je_group_historical_content
+
+    should_be_pinned_by_default = yes
+
+    complete = {
+        s:STATE_ELENIKAR = {
+            any_scope_state = {
+                NOT = {
+                    has_modifier = modifier_dragon_tomb_site
+                }
+            }
+        }
+        s:STATE_TSURWA = {
+            any_scope_state = {
+                NOT = {
+                    has_modifier = modifier_dragon_tomb_site
+                }
+            }
+        }
+        s:STATE_JALALABAKOV = {
+            any_scope_state = {
+                NOT = {
+                    has_modifier = modifier_dragon_tomb_site
+                }
+            }
+        }
+        s:STATE_IVONDRO = {
+            any_scope_state = {
+                NOT = {
+                    has_modifier = modifier_dragon_tomb_site
+                }
+            }
+        }
+        s:STATE_JERMENION = {
+            any_scope_state = {
+                NOT = {
+                    has_modifier = modifier_dragon_tomb_site
+                }
+            }
+        }
+    }
+
+    on_complete = {
+        add_modifier = {
+            name = found_dragon_tombs
+            months = long_modifier_time
+        }
+    }
+}

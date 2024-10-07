@@ -16,12 +16,13 @@
 
     every_country = {
 		limit = {
-			country_rank = rank_value:great_power
+			country_rank >= rank_value:great_power
 			any_country = {			
 				OR = {
 					country_has_primary_culture = cu:lake_thalorian
 					country_has_primary_culture = cu:littoral_thalorian
 					country_has_primary_culture = cu:heartland_thalorian
+					country_has_primary_culture = cu:gnome_thalorian
 				}				
 			}
 		}
@@ -29,11 +30,12 @@
 		save_scope_as = first_country
 		every_country = {
 			limit = { 
-				NOT = { country_rank = rank_value:great_power }
+				NOT = { country_rank >= rank_value:great_power }
 				OR = {
 					country_has_primary_culture = cu:lake_thalorian
 					country_has_primary_culture = cu:littoral_thalorian
 					country_has_primary_culture = cu:heartland_thalorian
+					country_has_primary_culture = cu:gnome_thalorian
 				}				
 			}
 			effect_set_non_hostile_mutual_secret_goal_power_difference = yes
@@ -42,7 +44,7 @@
 
 	every_country = {
 		limit = {
-			country_rank = rank_value:great_power
+			country_rank >= rank_value:great_power
 			any_country = {			
 				country_has_primary_culture = cu:dorite		
 			}
@@ -51,7 +53,7 @@
 		save_scope_as = first_country
 		every_country = {
 			limit = { 
-				NOT = { country_rank = rank_value:great_power }
+				NOT = { country_rank >= rank_value:great_power }
 				OR = {
 					country_has_primary_culture = cu:highland_halfling
 					country_has_primary_culture = cu:clearbough

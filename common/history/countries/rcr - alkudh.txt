@@ -1,7 +1,21 @@
 ﻿COUNTRIES = {
 	c:RCR = {
-		effect_starting_technology_tier_6_tech = yes
+		effect_starting_technology_tier_orc_tech = yes
+
 		effect_starting_politics_traditional = yes
-		effect_native_conscription_10 = yes	
+
+		activate_law = law_type:law_slavery_banned
+		activate_law = law_type:law_tenant_farmers
+		activate_law = law_type:law_protectionism
+		activate_law = law_type:law_national_supremacy
+		activate_law = law_type:law_professional_army
+
+		add_taxed_goods = g:liquor
+
+		ig:ig_landowners = {
+			add_ruling_interest_group = yes
+		}
+
+		
 	}
 }

@@ -1,4 +1,4 @@
-pm_simple_accumulation_dragon_ruins = {
+﻿pm_simple_accumulation_dragon_ruins = {
 	texture = "gfx/interface/icons/production_method_icons/picks_and_shovels.dds"
 
 	building_modifiers = {
@@ -8,7 +8,7 @@ pm_simple_accumulation_dragon_ruins = {
 			goods_output_gold_add     = 5  # x100 = 500
 			goods_output_relics_add   = 5  # x100 = 500
 
-			# Yield:      600 = 1000 - 400
+			# Yield:      600 = 1000 - 400 = Outdated
 			# Efficiency: 2.5
 		}
 
@@ -30,9 +30,9 @@ pm_complex_accumulation_dragon_ruins = {
 			goods_input_groceries_add   = 12  # x30 = 360
 
 			goods_output_gold_add       = 8  # x100 = 800
-			goods_output_relics_add     = 8  # x100 = 800
+			goods_output_relics_add     = 10  # x100 = 800
 
-            # Yield:        900 = 1600 - 840
+            # Yield:        900 = 1600 - 840 = Outdated
 			# Efficiency:   1.9
 		}
 
@@ -58,9 +58,9 @@ pm_uses_gizmo_accumulation_dragon_ruins = {
 			goods_input_groceries_add = 10  # x30 = 300
 
 			goods_output_gold_add     = 10  # x100 = 1000
-			goods_output_relics_add   = 14  # x100 = 1400
+			goods_output_relics_add   = 15  # x100 = 1400
 
-			# Yield of:     1180 = 2400 - 1440
+			# Yield of:     1180 = 2400 - 1440 = Outdated
 			# Efficiency:   1.94
 		}
 
@@ -69,6 +69,304 @@ pm_uses_gizmo_accumulation_dragon_ruins = {
 			building_employment_shopkeepers_add = 500
 			building_employment_machinists_add = 500
 			building_employment_wizards_add = 500
+		}
+	}
+}
+
+pm_simple_accumulation_dwarven_ruins = {
+	texture = "gfx/interface/icons/production_method_icons/picks_and_shovels.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_tools_add     = 5  # x40  = 400
+
+			goods_output_cloudsilver_add = 7  # x45= 315
+			goods_output_gold_add = 2 # x100 = 200 #to stabilize the profitability a little bit
+			goods_output_relics_add = 5  # x100 = 500
+
+			# Yield:      615 = 1015 - 400
+			# Efficiency: 2.5
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 4500
+			building_employment_shopkeepers_add = 500
+		}
+	}
+}
+
+pm_complex_accumulation_dwarven_ruins = {
+	texture = "gfx/interface/icons/production_method_icons/picks_and_shovels.dds"
+	unlocking_technologies = {
+		mechanical_tools
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_tools_add = 12  # x40 = 480
+			goods_input_groceries_add = 12  # x30 = 360
+
+			goods_output_cloudsilver_add = 12  # x45 = 540
+			goods_output_gold_add = 4 # x100 = 400
+			goods_output_relics_add = 10  # x100 = 800
+
+            # Yield:        900 = 1740 - 840
+			# Efficiency:   1.9
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 4000
+			building_employment_shopkeepers_add = 500
+			building_employment_machinists_add = 500
+		}
+	}
+}
+
+pm_uses_gizmo_accumulation_dwarven_ruins = {
+	texture = "gfx/interface/icons/production_method_icons/picks_and_shovels.dds"
+
+	unlocking_technologies = {
+		mechanical_tools
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_gizmos_add = 10  # x60 = 600
+			goods_input_tools_add = 8   # x40 = 320
+			goods_input_groceries_add = 10  # x30 = 300
+
+			goods_output_cloudsilver_add = 14  # x45 = 630
+			goods_output_gold_add = 6 #600
+			goods_output_relics_add = 15  # x100 = 1400
+
+			# Yield of:     1190 = 2630 - 1440
+			# Efficiency:   1.94
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 3500
+			building_employment_shopkeepers_add = 500
+			building_employment_machinists_add = 500
+			building_employment_wizards_add = 500
+		}
+	}
+}
+
+pm_diggy_dwarf_collapsed = {
+	texture = "gfx/interface/icons/production_method_icons/picks_and_shovels.dds"
+	unlocking_technologies = {
+		dwarf_tech
+	}
+
+	is_hidden_when_unavailable = yes
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_diggy_diggy_dwarf_add = 75
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = -250
+			building_employment_clergymen_add = 250
+		}
+
+	}
+}
+
+pm_diggy_diggy_dwarf_renovated = {
+	texture = "gfx/interface/icons/production_method_icons/picks_and_shovels.dds"
+	unlocking_technologies = {
+		dwarf_tech
+	}
+
+	is_hidden_when_unavailable = yes
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_diggy_diggy_dwarf_add = 200
+			state_diggy_diggy_dwarf_mult = 0.02 #we have reinvented throughput bonuses
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = -250
+			building_employment_clergymen_add = 250
+		}
+
+	}
+}
+
+pm_no_diggy_dwarf = {
+	texture = "gfx/interface/icons/production_method_icons/no_automation.dds"
+	is_hidden_when_unavailable = yes
+	
+	disallowing_religions = { #START DIGGING
+		buried_gods
+		kragmorn
+	}
+}
+pm_no_ritual_vault = {
+	texture = "gfx/interface/icons/production_method_icons/no_automation.dds"
+	is_hidden_when_unavailable = yes
+}
+
+pm_buried_rituals = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+	unlocking_religions = {
+		buried_gods
+	}
+
+	is_hidden_when_unavailable = yes
+	country_modifiers = {
+		workforce_scaled = {
+			interest_group_ig_devout_pol_str_mult = 0.01
+			country_legitimacy_base_add = 0.15 #this is pretty strong
+			country_authority_add = 10
+		}
+	}
+	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = -250
+			building_employment_clergymen_add = 250
+		}
+
+	}
+}
+
+pm_terrace_dwarf_rituals = { #I forgor what Kragmorn was called
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+	unlocking_religions = {
+		kragmorn
+	}
+
+	is_hidden_when_unavailable = yes
+	country_modifiers = {
+		workforce_scaled = {
+			interest_group_ig_devout_pol_str_mult = 0.01
+			country_legitimacy_base_add = 0.15 #this is pretty strong
+			country_authority_add = 10
+		}
+	}
+	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = -250
+			building_employment_clergymen_add = 250
+		}
+
+	}
+}
+
+pm_base_archaeology_survey = {
+	texture = "gfx/interface/icons/production_method_icons/picks_and_shovels.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_tools_add = 5
+			
+			# output goods
+			goods_output_relics_add = 15
+		}
+
+		level_scaled = {
+			building_employment_adventurers_add = 500
+			building_employment_laborers_add = 4500
+		}
+	}
+}
+
+pm_base_archaeology_excavation = {
+	texture = "gfx/interface/icons/production_method_icons/pumps.dds"
+
+	unlocking_technologies = {
+		atmospheric_engine
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 5
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_tools_add = 10
+			
+			# output goods
+			goods_output_relics_add = 24
+		}
+
+		level_scaled = {
+			building_employment_adventurers_add = 500
+			building_employment_laborers_add = 3750
+			building_employment_machinists_add = 500
+			building_employment_academics_add = 190
+		}
+	}
+}
+
+pm_base_archaeology_reconstruction = {
+	texture = "gfx/interface/icons/production_method_icons/condensing_engine_pump.dds"
+
+	unlocking_technologies = {
+		watertube_boiler
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_tools_add = 15
+			
+			# output goods
+			goods_output_relics_add = 36
+		}
+
+		level_scaled = {
+			building_employment_adventurers_add = 500
+			building_employment_laborers_add = 3000
+			building_employment_machinists_add = 1000
+			building_employment_academics_add = 375
+		}
+	}
+}
+
+pm_base_archaeology_restoration = {
+	texture = "gfx/interface/icons/production_method_icons/diesel_pump.dds"
+
+	unlocking_technologies = {
+		compression_ignition
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 15
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_tools_add = 15
+			goods_input_blubber_add = 5
+			
+			# output goods
+			goods_output_relics_add = 54
+		}
+
+		level_scaled = {
+			building_employment_adventurers_add = 500
+			building_employment_laborers_add = 2250
+			building_employment_machinists_add = 1500
+			building_employment_academics_add = 565
 		}
 	}
 }

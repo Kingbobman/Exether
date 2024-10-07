@@ -1,31 +1,23 @@
-raid = {
+﻿raid = {
     is_shown = {
 		root = {country_has_primary_culture = cu:south_sea_ravager}
 	}
 
 	possible = {
-		root.var:raid_cooldown <= 0 
+		NOT = { has_modifier = raid_cooldown}
 		NOT = { root.navy_size < 10}
 	}
 	
 	when_taken = {
-		set_variable = {
+		add_modifier = {
 			name = raid_cooldown
-            value = 3
+			months = 12
 		}
-
 		trigger_event = {
-			id = pirate_raid.0
+			id = pirate_raid.1
 			popup = yes
 		}
 	}
-    
-    on_monthly_pulse = {
-        change_variable = {
-            name = raid_cooldown
-            subtract = 1
-        }
-    }
 	
 	ai_chance = {
 		base = 1

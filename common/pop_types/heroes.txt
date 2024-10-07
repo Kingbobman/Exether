@@ -60,26 +60,18 @@
 				}
 				desc = "QUALIFICATIONS_LITERACY_FACTOR"
 			}
-
+			
 			if = {
 				limit = {
-					is_pop_type = adventurers
-				}
-				multiply = {
-					value = 4
-					desc = "QUALIFICATIONS_FAVORED_TYPE"
-				}
-			}
-			else_if = {
-				limit = {
 					OR = {
+						is_pop_type = adventurers
 						is_pop_type = farmers
 						is_pop_type = clergymen
 						is_pop_type = officers
 						}
 				}
 				multiply = {
-					value = 3
+					value = 4
 					desc = "QUALIFICATIONS_FAVORED_TYPE"
 				}
 			}

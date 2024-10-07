@@ -3,11 +3,10 @@
 	selection_behavior = weighted_random
 	fallback = no_hair
 
-
     no_hair = {
         dna_modifiers = {
             accessory = {
-                mode = replace
+                mode = add
                 gene = hairstyles
                 template = no_hairstyles
                 range = { 0 1 } # For the randomness to work correctly
@@ -17,7 +16,6 @@
             base = 0
         }
     }
-
 
     no_portrait_hair = {
         dna_modifiers = {
@@ -65,31 +63,31 @@
        }
     }
 
-    european_hair_styles = {
-        dna_modifiers = {
-            accessory = {
-                mode = replace
-                gene = hairstyles
-                template = european_hairstyles
-                range = { 0 1 } # For the randomness to work correctly
-           }
-         }
-    
-       weight = {
-           base = 0
-           modifier = {
-                add = 100
-                AND = {
-                    exists = scope:character
-                        scope:character = {
-                             european_clothes_trigger = yes
-                        }
-                }
-                
-              
-          }
-       }
-    }
+    #european_hair_styles = {
+    #    dna_modifiers = {
+    #        accessory = {
+    #            mode = add
+    #            gene = hairstyles
+    #            template = european_hairstyles
+    #            range = { 0 1 } # For the randomness to work correctly
+    #       }
+    #     }
+    #
+    #   weight = {
+    #       base = 0
+    #       modifier = {
+    #            add = 100
+    #            AND = {
+    #                exists = scope:character
+    #                    scope:character = {
+    #                         european_clothes_trigger = yes
+    #                    }
+    #            }
+    #            
+    #          
+    #      }
+    #   }
+    #}
 
     chinese_manchu_queue_hairstyle = {
         dna_modifiers = {
@@ -115,7 +113,7 @@
     chinese_hair_styles = {
         dna_modifiers = {
             accessory = {
-                mode = replace
+                mode = add
                 gene = hairstyles
                 template = chinese_hairstyles
                 range = { 0 1 } # For the randomness to work correctly

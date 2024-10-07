@@ -184,6 +184,7 @@ s:STATE_RAVENCLIFF = {
 	owned_provinces = { "x39EBED" "x86E2FC" "x8BDAEA" "x97C2CC" "xAE6DEA" "xC66ED6" "xC7C3FD" "xD7C8A9" "xE3B268" "xF5E634" "xFD18FD" }
 	}
 	add_homeland = cu:meriwyn
+	add_homeland = cu:jalian
 	add_homeland = cu:vampire
 }
 
@@ -264,6 +265,7 @@ s:STATE_WHISPERPINE_WOODS = {
 	owned_provinces = { "x61F3EF" "x88FCC5" "x9E99C7" "xA5BAE0" "xA6CE94" "xB5E56B" "xBEEAA3" "xC1CC6B" "xD097E6" "xDFF5E2" "xEBD19E" "xF8F2D0" }
 	}
 	add_homeland = cu:wood_giant #Sets the state to be a homeland for whatever culture you put here.
+	add_homeland = cu:zakonish
 	add_claim = c:ZKW
 }
 
@@ -332,7 +334,6 @@ s:STATE_KILCREE = {
 	owned_provinces = { "x46E9EB" "x78C3BB" "x9FD0D3" "xCFDE86" "xDCBA8F" "xE1BBEC" "xE1F13F" "xE2FD58" "xE7D27F" "xF9FA3C" "xFD5EBF" }
 	}
 	add_homeland = cu:dumonian
-	add_homeland = cu:jalian
 }
 
 s:STATE_HAG_MARSHES = {
@@ -451,13 +452,14 @@ s:STATE_SHROUDGUARD = {
 	owned_provinces = { "x42ECF5" "x9FB4F5" "xCBDECE" "xCFDB66" "xD7D0C4" "xE4C68A" "xE5858B" "xF6E0E7" "xFBF82A" "xFE91DB" }
 	}
 	add_homeland = cu:meriwyn
+	add_homeland = cu:jalian
 	add_homeland = cu:vampire
 }
 
 s:STATE_THORNWALL = {
 	create_state = {
 	country = c:DOV
-	owned_provinces = { "x7DEAEA" "x81F0C1" "x92F7B5" "x95D2B9" "x97D0C1" "xB1CD9D" "xD4C0D6" "xE3F5C9" "xEE24F1" "xFCDC62" }
+	owned_provinces = { "x92F7B5" "x95D2B9" "x97D0C1" "xD4C0D6" "xE3F5C9" "xEE24F1" "xFCDC62" }
 	}
 	add_homeland = cu:jalian
 }
@@ -570,7 +572,7 @@ s:STATE_PONTBRAN = {
 	}
 	create_state = {
 		country = c:RVD
-		owned_provinces = { "x7DEAEA" "x81F0C1" "xB1CD9D" "xE3F5C9" }
+		owned_provinces = { "x7DEAEA" "x81F0C1" "xB1CD9D" }
 		}
 	add_homeland = cu:meriwyn
 	add_homeland = cu:jalian
@@ -594,6 +596,7 @@ s:STATE_YSTRAD = {
 	owned_provinces = { "x8190FB" "x98FEFE" "xBFDC82" "xC9A8F6" "xD7A9CB" "xEF63E1" "xF37BD8" }
 	}
 	add_homeland = cu:meriwyn
+	add_homeland = cu:jalian
 	add_homeland = cu:vampire
 }
 
@@ -666,6 +669,7 @@ s:STATE_BLACKDON = {
 	owned_provinces = { "x7CF5D3" "xA072EC" "xA1EE8B" "xB78EB2" "xB7BBAE" "xC0D5F5" "xD292EF" "xD3CBE4" "xDBD3A6" "xF6E630" "xF8DFB3" "xFDFB14" }
 	}
 	add_homeland = cu:meriwyn
+	add_homeland = cu:jalian
 	add_homeland = cu:vampire
 }
 
@@ -748,6 +752,7 @@ s:STATE_HRAUNLUND = {
 	owned_provinces = { "x69D1D1" "x70CDE2" "x83DBF4" "x9B9EDD" "x9BDBF1" "xABC1BF" "xB0C7CC" "xB5FBC5" "xCAFCF7" "xCDC9C7" "xD557D2" "xD8DDA0" "xD9EE5F" "xDBD593" "xDCC86B" "xE879C0" "xE9A0BC" "xEF7DFD" "xF278CE" "xFE9690" }
 	}
 	add_homeland = cu:frost_giant #Sets the state to be a homeland for whatever culture you put here.
+	add_homeland = cu:jimwanth
 }
 
 s:STATE_ZAWADKA = {
@@ -757,6 +762,8 @@ s:STATE_ZAWADKA = {
 	state_type = unincorporated	
 	}
 	add_homeland = cu:wood_giant #Sets the state to be a homeland for whatever culture you put here.
+	add_homeland = cu:jimwanth
+	add_homeland = cu:zakonish
 }
 
 s:STATE_HRAFNSDALR = {
@@ -792,6 +799,7 @@ s:STATE_SKALKA = {
 	owned_provinces = { "x69D7B5" "x75F5BB" "x77A2E6" "x7FF397" "x85FDD1" "x91F689" "x95AEED" "x9E95F3" "xB5EF55" "xB8BFC8" "xD0D4ED" "xD1B686" "xDC9CB4" "xDE69E3" "xE6F7F2" "xEC789B" "xF35FB7" "xF6DB38" "xF8A75D" "xFD68D7" }
 	}
 	add_homeland = cu:wood_giant #Sets the state to be a homeland for whatever culture you put here.
+	add_homeland = cu:zakonish
 	add_claim = c:ZKW
 }
 
@@ -860,12 +868,13 @@ s:STATE_HLIDSKJALF = {
 	owned_provinces = { "x68C3E7" "x6CEBAA" "x85CBB9" "x8CB1ED" "x93D6A4" "x9B81E8" "x9CF6BA" "x9DFEFC" "x9EEBB2" "xA09DED" "xA3EEC4" "xB1C4A8" "xB8CAD4" "xBBA79A" "xBD9DF0" "xCA92BB" "xCD62F3" "xCFDFBE" "xD075B7" "xD39BD0" "xD6B2E2" "xD835FA" "xDBEA88" "xDCA6E0" "xDFA695" "xE9F3EC" "xF0EA26" "xF0F491" "xF0FB5E" "xFC68D5" "xFD28FB" }
 	}
 	add_homeland = cu:frost_giant #Sets the state to be a homeland for whatever culture you put here.
+	add_homeland = cu:jimwanth
 }
 
 s:STATE_LUMO = {
 	create_state = {
 	country = c:DUM
-	owned_provinces = { "x64E1F1" "x84B3EC" "x8DF6EB" "x95FA69" "xBCEFF1" "xDDBAF9" "xE0C363" "xF0E238" }
+	owned_provinces = { "x64E1F1" "x84B3EC" "x8DF6EB" "xBCEFF1" "xDDBAF9" "xE0C363" "xF0E238" }
 	state_type = unincorporated	
 	}
 	add_homeland = cu:korafri #Sets the state to be a homeland for whatever culture you put here.
@@ -873,10 +882,11 @@ s:STATE_LUMO = {
 
 s:STATE_ZEPHROPULU = {
 	create_state = {
-	country = c:DUF
+	country = c:SEN
 	owned_provinces = { "x37D5EB" "x6EAAE3" "x91F86D" "x97AAC0" "x9EC9C0" "xA7A3EF" "xBC92E0" "xBEBF79" "xD2AC7A" "xD3D2C6" "xD4B9DB" "xE495D9" "xE7C9C7" "xEC4FFD" "xF0E095" }
 	}
 	add_homeland = cu:korafri #Sets the state to be a homeland for whatever culture you put here.
+	add_homeland = cu:castaway_dwarf
 }
 
 s:STATE_BARICORA = {
@@ -885,6 +895,7 @@ s:STATE_BARICORA = {
 	owned_provinces = { "x35F4ED" "x6DDCD3" "x6FDAD1" "x97BDA2" "xA8E7E0" "xA9E988" "xAAE5EB" "xC5A7E8" "xCC86BF" "xCEB4DE" "xD5CF79" "xD8D8A3" "xDFFE6E" "xE285A8" "xE8C3FA" "xECD7D8" "xEF987A" "xFBA7DA" }
 	}
 	add_homeland = cu:korafri #Sets the state to be a homeland for whatever culture you put here.
+	add_homeland = cu:castaway_dwarf
 }
 
 s:STATE_ANGERTORP = {
@@ -957,6 +968,7 @@ s:STATE_HALSTEAD = {
 	owned_provinces = { "x63A3F8" "x72F8F7" "x79FEB4" "x8CEEBF" "x9D8EFE" "x9EFA5F" "xAEBD92" "xAEE7A6" "xB0AEA5" "xB4F56F" "xBA8AEF" "xC4D0E3" "xC7F491" "xD7BC76" "xD93FFD" "xDE93D2" "xDEEC59" "xE0BD99" "xE4C1A4" "xE6F937" "xE6FC2C" "xECCC83" "xF1A1B4" "xF5B56C" "xF9DF27" "xFBACC8" "xFC9992" "xFCC96C" }
 	}
 	add_homeland = cu:frost_giant #Sets the state to be a homeland for whatever culture you put here.
+	add_homeland = cu:jimwanth
 }
 
 s:STATE_FREYRSFJORDR = {
@@ -965,6 +977,7 @@ s:STATE_FREYRSFJORDR = {
 	owned_provinces = { "x44EFFA" "x75C3D8" "x96F482" "x97F8B1" "x9DF9BC" "x9EDBA2" "xAF8ED0" "xB6B3E5" "xC2CFEC" "xC5FE4D" "xDC5BE4" "xDEC559" "xDFC969" "xE4D05D" "xE7BDD2" "xEB2CF6" "xEBC8DF" "xEEB079" "xF247D3" "xF540C0" "xF9D0A7" "xFEE942" }
 	}
 	add_homeland = cu:frost_giant #Sets the state to be a homeland for whatever culture you put here.
+	add_homeland = cu:jimwanth
 }
 
 s:STATE_SIFSKER = {
@@ -973,6 +986,7 @@ s:STATE_SIFSKER = {
 	owned_provinces = { "x89D8B6" "x8F9CF1" "x8FEE81" "x92F4FA" "x93D890" "xA388EF" "xA9B8C4" "xAC87E1" "xB8F36B" "xBC99B8" "xD9DBAA" "xDC76EA" "xDFF38A" "xE2A080" "xE3C873" "xEBA2E8" "xEBFE0C" "xF1F2CA" "xF83FF2" "xFE5EE1" }
 	}
 	add_homeland = cu:frost_giant #Sets the state to be a homeland for whatever culture you put here.
+	add_homeland = cu:jimwanth
 }
 
 s:STATE_GRYTINGARIK = {

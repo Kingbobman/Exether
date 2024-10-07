@@ -1,4 +1,8 @@
-﻿salt_waste_half_orcs_birth = {
+﻿raid_cooldown = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+}
+
+salt_waste_half_orcs_birth = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
 	state_accepted_birth_rate_mult = 0.1
 }
@@ -10,7 +14,7 @@ salt_waste_rangers = {
 
 salt_waste_wards = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_book2_negative.dds
-	country_magic_reserves_total_subtract = 100
+	country_arcana_neg_add = 100
 }
 
 salt_waste_patrols = {
@@ -32,54 +36,40 @@ salt_waste_patrols_cooldown = {
 
 salt_waste_cure_ritual_1 = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_book_negative.dds
-	country_magic_reserves_total_subtract = 200
+	country_arcana_neg_add = -200
 }
 
 salt_waste_cure_ritual_2 = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_book_negative.dds
-	country_magic_reserves_total_subtract = 400
-}
-
-salt_waste_cure_ritual_2_clerics = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_book_negative.dds
-	country_magic_reserves_total_subtract = 200
-	country_bureaucracy_mult = -0.05
-	country_expenses_add = 0.35
+	country_arcana_neg_add = -400
 }
 
 salt_waste_cure_ritual_2_druids = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_book_negative.dds
-	country_magic_reserves_total_subtract = 200
-	country_expenses_add = 0.7
+	country_arcana_neg_add = -200
+	country_expenses_add = 2500
 }
 
 salt_waste_cure_ritual_2_mage_hunters = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_book_negative.dds
-	country_magic_reserves_total_subtract = 200
+	country_arcana_neg_add = -200
 	country_bureaucracy_mult = -0.1
 }
 
 salt_waste_cure_ritual_3 = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_book_negative.dds
-	country_magic_reserves_total_subtract = 500
-}
-
-salt_waste_cure_ritual_3_clerics = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_book_negative.dds
-	country_magic_reserves_total_subtract = 300
-	country_bureaucracy_mult = -0.05
-	country_expenses_add = 0.35
+	country_arcana_neg_add = -500
 }
 
 salt_waste_cure_ritual_3_druids = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_book_negative.dds
-	country_magic_reserves_total_subtract = 300
-	country_expenses_add = 0.7
+	country_arcana_neg_add = -300
+	country_expenses_add = 3500
 }
 
 salt_waste_cure_ritual_3_mage_hunters = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_book_negative.dds
-	country_magic_reserves_total_subtract = 300
+	country_arcana_neg_add = -300
 	country_bureaucracy_mult = -0.1
 }
 
@@ -95,4 +85,135 @@ salt_waste_extra_evil = {
 salt_waste_curse_resolved = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 	country_prestige_mult = 0.10
+}
+
+lighthouse_survey = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_bureaucrat_negative.dds"
+	country_bureaucracy_add = -500
+}
+
+lighthouse_built = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_prestige_add = 20
+}
+
+toldek_paseb = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_skull_positive.dds"
+	unit_advancement_speed_mult = 0.1
+	unit_morale_recovery_mult = 0.2
+	military_formation_organization_gain_mult = 0.1
+	unit_morale_loss_mult = -0.1
+	country_military_goods_cost_mult = -0.1
+	state_mortality_mult = 0.1
+	state_poor_standard_of_living_add = -1
+	country_infamy_generation_mult = 0.25
+}
+
+abolished_toldek_paseb = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	interest_group_ig_landowners_approval_add = -5
+	interest_group_ig_devout_approval_add = -5
+	interest_group_ig_mages_approval_add = -5
+	interest_group_ig_armed_forces_approval_add = -5
+	interest_group_ig_rural_folk_approval_add = 5
+	interest_group_ig_trade_unions_approval_add = 5
+	interest_group_ig_industrialists_approval_add = 5
+}
+
+jihduk_paseb = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_skull_positive.dds"
+	state_mortality_mult = 0.1
+	unit_morale_recovery_mult = 0.1
+	military_formation_organization_gain_mult = 0.1
+	unit_morale_loss_mult = -0.2
+	country_military_goods_cost_mult = -0.1
+	country_authority_mult = 0.1
+	state_poor_standard_of_living_add = -1
+	country_infamy_generation_mult = 0.25
+}
+
+abolished_jihduk_paseb = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	interest_group_ig_landowners_approval_add = -5
+	interest_group_ig_devout_approval_add = -5
+	interest_group_ig_armed_forces_approval_add = -5
+	interest_group_ig_mages_approval_add = -5
+	interest_group_ig_rural_folk_approval_add = 5
+	interest_group_ig_trade_unions_approval_add = 5
+	interest_group_ig_industrialists_approval_add = 5
+}
+
+upashna_dhaalum = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	unit_morale_recovery_mult = 0.1
+	military_formation_organization_gain_mult = 0.1
+	unit_morale_damage_mult = 0.1
+	country_military_goods_cost_mult = -0.1
+	building_throughput_add = 0.1
+	country_arcana_pos_add = 100
+	state_mortality_mult = 0.05
+}
+
+upshana_restored = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	interest_group_ig_landowners_approval_add = 5
+	interest_group_ig_devout_approval_add = 5
+	interest_group_ig_mages_approval_add = 5
+	interest_group_ig_armed_forces_approval_add = 5
+	interest_group_ig_rural_folk_approval_add = -5
+	interest_group_ig_trade_unions_approval_add = -5
+	interest_group_ig_industrialists_approval_add = -5
+}
+
+draconic_carvings_examined = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_map_positive.dds"
+	interest_group_ig_devout_approval_add = 5
+	interest_group_ig_devout_pol_str_mult = 0.2
+	country_minting_mult = 0.05
+}
+
+examining_dragon_carvings = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_bureaucracy_mult = -0.1
+}
+
+found_dragon_tombs = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_map_positive.dds"
+	country_minting_mult = 0.2
+	country_authority_mult = 0.1
+}
+
+industrialists_pies_restricted = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_food_negative.dds
+	interest_group_approval_add = -2
+}
+
+industrialists_pies_unrestricted = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_food_positive.dds
+	interest_group_approval_add = 3
+}
+
+rural_folk_pies_restricted = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_food_negative.dds
+	interest_group_approval_add = 3
+}
+
+rural_folk_pies_unrestricted = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_food_positive.dds
+	interest_group_approval_add = -2
+}
+
+industrialists_pie_intervention = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_food_positive.dds
+	interest_group_approval_add = -1
+}
+
+baking_powder_regulations = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_food_negative.dds
+	building_food_industry_throughput_add = -0.1
+}
+
+modifier_pastry_subsidy_cost = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	country_expenses_add = 1
 }
