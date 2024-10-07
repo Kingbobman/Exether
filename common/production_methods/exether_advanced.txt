@@ -3,9 +3,9 @@
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_liquor_add = 3				# x30 = 90
+			goods_input_liquor_add = 5				# x30 = 150
 
-			goods_output_services_add = 12
+			goods_output_services_add = 17          #30 = 510
 		}
 		level_scaled = {
 			building_employment_adventurers_add = 500
@@ -25,9 +25,9 @@ pm_dive_bar = {
 	building_modifiers = {
 
 		workforce_scaled = { 
-			goods_input_liquor_add = 5				# x30 = 150
+			goods_input_liquor_add = 10				# x30 = 300
 
-			goods_output_services_add = 23
+			goods_output_services_add = 33          #30 1000
 		}
 		level_scaled = {
 			building_employment_adventurers_add = 1000
@@ -47,10 +47,10 @@ pm_wine_bar = {
 	building_modifiers = {
 
 		workforce_scaled = { 
-			goods_input_liquor_add = 5				# x30 = 150
-			goods_input_wine_add = 3				# x50 = 150
+			goods_input_liquor_add = 10				# x30 = 300
+			goods_input_wine_add = 5				# x50 = 250
 
-			goods_output_services_add = 35
+			goods_output_services_add = 45 	          #30   1350
 		}
 		level_scaled = {
 			building_employment_adventurers_add = 1000
@@ -71,16 +71,85 @@ pm_fantastic_cocktails = {
 	building_modifiers = {
 
 		workforce_scaled = { 
-			goods_input_liquor_add = 5 				# x30 = 150
+			goods_input_liquor_add = 10 				# x30 = 300
 			goods_input_wine_add = 5 				# x50 = 250
-			goods_input_luxury_potions_add = 2 		# x85 = 170
+			goods_input_luxury_potions_add = 2 		# x85 = 170  == 720
 
-			goods_output_services_add = 47
+			goods_output_services_add = 55 #30 1650
 		}
 		level_scaled = {
 			building_employment_adventurers_add = 1500
 			building_employment_clerks_add = 1500
 			building_employment_laborers_add = 2000
+		}
+	}
+}
+
+pm_no_alt = {
+	texture = "gfx/interface/icons/production_method_icons/watering_hole.dds"
+
+}
+
+pm_tobacco = {
+	texture = "gfx/interface/icons/production_method_icons/watering_hole.dds"
+
+	unlocking_production_methods = {
+		pm_wine_bar
+		pm_fantastic_cocktails
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_wine_add = -5				# x50 = 250
+			goods_input_tobacco_add = 6
+		}
+	}
+}
+
+pm_tea = {
+	texture = "gfx/interface/icons/production_method_icons/watering_hole.dds"
+
+	unlocking_production_methods = {
+		pm_wine_bar
+		pm_fantastic_cocktails
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_wine_add = -5				# x50 = 250
+			goods_input_tea_add = 5
+		}
+	}
+}
+
+pm_coffee = {
+	texture = "gfx/interface/icons/production_method_icons/watering_hole.dds"
+
+	unlocking_production_methods = {
+		pm_wine_bar
+		pm_fantastic_cocktails
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_wine_add = -5				# x50 = 250
+			goods_input_coffee_add = 5
+		}
+	}
+}
+
+pm_opium = {
+	texture = "gfx/interface/icons/production_method_icons/watering_hole.dds"
+
+	unlocking_production_methods = {
+		pm_wine_bar
+		pm_fantastic_cocktails
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_wine_add = -5				# x50 = 250
+			goods_input_opium_add = 5
 		}
 	}
 }
