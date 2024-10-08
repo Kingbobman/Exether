@@ -1155,4 +1155,34 @@
 			transfer_to_formation = scope:yanarmy
 		}
 	}	
+
+	c:BCT ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_coldreach
+			name = "Covenant Guard"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_LIGHTSCOURGE
+				count = 30
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_LIGHTSCOURGE
+				count = 25
+			}
+			save_scope_as = bctarmy
+
+		}
+		create_character = {
+			is_general = yes
+			hq = sr:region_coldreach
+			commander_rank = commander_rank_2
+			save_scope_as = bctgen
+		}
+		scope:bctgen= {
+			transfer_to_formation = scope:bctarmy
+		}
+	}	
 }
