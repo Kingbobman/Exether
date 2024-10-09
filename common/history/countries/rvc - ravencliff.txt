@@ -2,9 +2,11 @@
 	c:RVC = {
 		effect_starting_technology_tier_knowledge_tech = yes
 		add_technology_researched = napoleonic_warfare
-		add_technology_researched = empiricism
+		add_technology_researched = railways
+		add_technology_researched = atmospheric_engine
+		add_technology_researched = mechanical_tools
 		
-		set_tax_level = low 
+		set_tax_level = medium
 
 		#ig:ig_mages = {
 		#	remove_ideology = ideology_arcane_scholars
@@ -72,20 +74,31 @@
 		activate_law = law_type:law_professional_army
 		activate_law = law_type:law_censorship
 		activate_law = law_type:law_women_own_property
-		activate_law = law_type:law_isolationism
+		activate_law = law_type:law_protectionism
 		activate_law = law_type:law_divine_miracles
 		
 
 
 		add_taxed_goods = g:liquor
 
-		set_institution_investment_level = {
-			institution = institution_schools
-			level = 1
+		add_taxed_goods = g:luxury_potions
+
+		add_taxed_goods = g:transportation
+
+		add_taxed_goods = g:fine_art
+
+				ig:ig_mages = { 
+			remove_ideology = ideology_anti-censorship
+			add_ideology = ideology_jingoist
 		}
 
 		set_institution_investment_level = {
 			institution = institution_magical_focus
+			level = 3
+		}
+
+		set_institution_investment_level = {
+			institution = institution_schools
 			level = 1
 		}
 

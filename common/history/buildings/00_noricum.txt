@@ -1269,18 +1269,17 @@ reserves=1
 
     s:STATE_RAVENCLIFF = {
       region_state:RVC={
-            create_building={
-          building="building_textile_mills"
-                add_ownership={ 
-                    building={ 
-                        type="building_wizard_tower"
-                        country="c:RVC"
-                        levels=1
-                        region="STATE_RAVENCLIFF"
-                   }
-                }
+        create_building={
+          building="building_construction_sector"
+          level=4
           reserves=1
-          activate_production_methods={ "pm_handsewn_clothes" "pm_permanent_prestidigitation" "pm_no_luxury_clothes" "pm_that_scary_ass_shit_from_sleeping_beauty" }
+          activate_production_methods={ "pm_iron_frame_buildings" }
+        }
+        create_building={
+          building="building_government_administration"
+          level=7
+          reserves=1
+          activate_production_methods={ "pm_horizontal_drawer_cabinets" }
         }
         create_building={
           building="building_university"
@@ -1289,7 +1288,98 @@ reserves=1
           activate_production_methods={ "pm_scholastic_education" }
         }
         create_building={
-          building="building_logging_camp"
+          building="building_motor_industry"
+          add_ownership={ 
+            building={ 
+              type="building_financial_district"
+              country="c:RVC"
+              levels=1
+              region="STATE_RAVENCLIFF"
+            }
+          }
+        reserves=1
+          activate_production_methods={ "pm_steam_engines" }
+        }
+        create_building={
+          building="building_railway"
+            add_ownership={ 
+              building={ 
+                type="building_financial_district"
+                country="c:RVC"
+                levels=2
+                region="STATE_RAVENCLIFF"
+              }
+            }
+          reserves=1
+          activate_production_methods={ "pm_steam_trains" "pm_wooden_passenger_carriages" }
+        }
+        create_building = {
+          building = "building_distillery"
+          add_ownership = {
+              building = {
+                type="building_wizard_tower"
+                      country="c:RVC"
+                      levels=2
+                      region="STATE_RAVENCLIFF"
+              }
+          }
+          reserves = 1
+          activate_production_methods={ "pm_basic_distillery" "pm_no_fruit" "pm_bottomless_bottles" "pm_added_spirits" }
+        }
+        create_building={
+          building="building_hunting_lodge"
+              add_ownership={ 
+                building={ 
+                  type="building_wizard_tower"
+                  country="c:RVC"
+                  levels=3
+                  region="STATE_RAVENCLIFF"
+               }
+              }
+          reserves=1
+          activate_production_methods={ "pm_firearms_hunting" "pm_tracking_tools" }
+          }
+        create_building={
+          building="building_coal_mine"
+       add_ownership={ 
+        building={ 
+        type="building_financial_district"
+        country="c:RVC"
+        levels=1
+        region="STATE_RAVENCLIFF"
+       }
+    }
+          reserves=1
+          activate_production_methods={ "pm_atmospheric_engine_pump_building_coal_mine" "pm_coal_mines_potions_of_strength" "pm_no_explosives" "pm_basic_magic_automation" "pm_rockrollers_building_coal_mine" "pm_no_steam_automation" "pm_rail_transport_mine" }
+      }
+        create_building={
+          building="building_wishstone_mine"
+              add_ownership={ 
+              building={ 
+                  type="building_wizard_tower"
+                  country="c:RVC"
+                  levels=3
+                  region="STATE_RAVENCLIFF"
+             }
+          }
+          reserves=1
+          activate_production_methods={ "pm_dedicated_diggers" "pm_no_mirrors" "pm_road_carts" }
+      }
+        create_building={
+          building="building_steel_mills"
+          add_ownership={ 
+            building={ 
+              type="building_financial_district"
+              country="c:RVC"
+              levels=1
+              region="STATE_RAVENCLIFF"
+            }
+          }
+        reserves=1
+          activate_production_methods={ "pm_blister_steel_process" }
+        }
+            create_building={
+          building="building_textile_mills"
                 add_ownership={ 
                     building={ 
                         type="building_wizard_tower"
@@ -1299,20 +1389,46 @@ reserves=1
                    }
                 }
           reserves=1
-          activate_production_methods={ "pm_saw_mills" "pm_increased_hardwood" "pm_no_equipment" "pm_road_carts" }
+          activate_production_methods={ "pm_handsewn_clothes" "pm_permanent_prestidigitation" "pm_no_luxury_clothes" "pm_that_scary_ass_shit_from_sleeping_beauty" }
+        }
+        create_building={
+          building="building_logging_camp"
+                add_ownership={ 
+                    building={ 
+                        type="building_wizard_tower"
+                        country="c:RVC"
+                        levels=3
+                        region="STATE_RAVENCLIFF"
+                   }
+                }
+          reserves=1
+          activate_production_methods={ "pm_saw_mills" "pm_hardwood" "pm_no_equipment" "pm_stoneskin_potion" "pm_road_carts" }
         }	
+        create_building={
+          building="building_gizmo_workshop"
+                  add_ownership={ 
+                      building={ 
+                          type="building_financial_district"
+                          country="c:RVC"
+                          levels=2
+                          region="STATE_RAVENCLIFF"
+                     }
+                  }
+          reserves=1
+          activate_production_methods={ "pm_basic_gizmos" }
+        }
         create_building={
           building="building_potion_distillery"
             add_ownership={
               building={
                 type="building_wizard_tower"
                 country="c:RVC"
-                levels=4
+                levels=3
                 region="STATE_RAVENCLIFF"
             }
           }
           reserves=1
-          activate_production_methods={ "pm_simple_potion_production" "pm_alcohol-based_potions" "pm_no_mixins" "pm_basic_filters" }
+          activate_production_methods={ "pm_wishtone_potion_process_production" "pm_alcohol-based_potions" "pm_functional_mixins" "pm_basic_filters" }
         }	
         create_building={
           building="building_arts_academy"
@@ -1320,7 +1436,7 @@ reserves=1
 			building={
 				type="building_wizard_tower"
 				country="c:RVC"
-				levels=1
+				levels=3
 				region="STATE_RAVENCLIFF"
 			}
 		}
@@ -1333,7 +1449,7 @@ reserves=1
 					building={ 
 						type="building_wizard_tower"
 						country="c:RVC"
-						levels=1
+						levels=3
 						region="STATE_RAVENCLIFF"
 				   }
 				}
@@ -1346,24 +1462,12 @@ reserves=1
                         building={ 
                             type="building_wizard_tower"
                             country="c:RVC"
-                            levels=4
+                            levels=6
                             region="STATE_RAVENCLIFF"
                        }
                     }
           reserves=1
-          activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_iron_mines_potions_of_fortitude" "pm_road_carts" }
-        }
-        create_building={
-          building="building_construction_sector"
-          level=2
-          reserves=1
-          activate_production_methods={ "pm_iron_frame_buildings" }
-        }
-        create_building={
-          building="building_government_administration"
-          level=2
-          reserves=1
-          activate_production_methods={ "pm_horizontal_drawer_cabinets" }
+          activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_rockrollers_mine" "pm_iron_mines_potions_of_strength" "pm_rail_transport_mine" }
         }
         create_building={
           building="building_tooling_workshops"
@@ -1371,12 +1475,12 @@ reserves=1
                         building={ 
                             type="building_wizard_tower"
                             country="c:RVC"
-                            levels=2
+                            levels=3
                             region="STATE_RAVENCLIFF"
                        }
                     }
           reserves=1
-          activate_production_methods={ "pm_pig_iron" "pm_automation_disabled" }
+          activate_production_methods={ "pm_steel" "pm_automation_disabled" }
         }
         create_building={
           building="building_arms_industry"
@@ -1384,7 +1488,7 @@ reserves=1
                         building={ 
                             type="building_wizard_tower"
                             country="c:RVC"
-                            levels=3
+                            levels=2
                             region="STATE_RAVENCLIFF"
                        }
                     }
@@ -1397,12 +1501,25 @@ reserves=1
                       building={ 
                           type="building_wizard_tower"
                           country="c:RVC"
-                          levels=1
+                          levels=2
                           region="STATE_RAVENCLIFF"
                      }
                   }
           reserves=1
           activate_production_methods={ "pm_cannons" "pm_automation_disabled" }
+        }
+        create_building={
+          building="building_paper_mills"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:RVC"
+                        levels=2
+                        region="STATE_RAVENCLIFF"
+                   }
+                }
+          reserves=1
+          activate_production_methods={ "pm_pulp_pressing" "pm_automation_disabled" }
         }
       }
   }
@@ -3200,11 +3317,11 @@ reserves=1
           building={ 
           type="building_wizard_tower"
           country="c:BCT"
-          levels=6
+          levels=3
           region="STATE_ARCTHARAL"
            }
         }
-        activate_production_methods={ "pm_mushroom_mills" "pm_extra_essence" "pm_road_carts" }
+        activate_production_methods={ "pm_mushroom_mills" "pm_extra_wood" "pm_road_carts" }
         }	
     }
   }
@@ -3467,6 +3584,32 @@ reserves=1
     s:STATE_SHROUDGUARD = {
       region_state:RVC={
         create_building={
+          building="building_textile_mills"
+                    add_ownership={ 
+                        building={ 
+                            type="building_financial_district"
+                            country="c:RVC"
+                            levels=1
+                            region="STATE_RAVENCLIFF"
+                       }
+                    }
+          reserves=1
+          activate_production_methods={ "pm_handsewn_clothes" "pm_no_luxury_clothes" "pm_that_scary_ass_shit_from_sleeping_beauty" }
+        }
+        create_building={
+          building="building_arms_industry"
+                    add_ownership={ 
+                        building={ 
+                            type="building_wizard_tower"
+                            country="c:RVC"
+                            levels=1
+                            region="STATE_RAVENCLIFF"
+                       }
+                    }
+          reserves=1
+          activate_production_methods={ "pm_muskets" }
+        }
+        create_building={
           building="building_fur_hunting_lodge"
           add_ownership = {
             building = {
@@ -3508,7 +3651,7 @@ reserves=1
                 region="STATE_RAVENCLIFF"
            }
         }
-          activate_production_methods={ "pm_picks_and_shovels_building_lead_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+          activate_production_methods={ "pm_picks_and_shovels_building_lead_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_basic_magic_automation" "pm_road_carts" }
       }
         create_building={
           building="building_government_administration"
@@ -3527,7 +3670,7 @@ reserves=1
                        }
                     }
           reserves=1
-          activate_production_methods={ "pm_forest_glass" "pm_manual_glassblowing" "pm_disabled_ceramics" }
+          activate_production_methods={ "pm_leaded_glass" "pm_manual_glassblowing" "pm_disabled_ceramics" }
         }
         create_building={
           building="building_wishstone_mine"
@@ -3553,7 +3696,7 @@ reserves=1
                    }
                 }
           reserves=1
-          activate_production_methods={ "pm_saw_mills" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
+          activate_production_methods={ "pm_saw_mills" "pm_hardwood" "pm_no_equipment" "pm_stoneskin_potion" "pm_road_carts" }
         }	
       }
   }
@@ -3574,25 +3717,6 @@ reserves=1
           reserves=1
           activate_production_methods={ "pm_simple_forestry" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
         }	
-        create_building={
-          building="building_port"
-          level=1
-          reserves=1
-          activate_production_methods={ "pm_anchorage" }
-        }
-        create_building={
-          building="building_fishing_wharf"
-                    add_ownership={ 
-                        building={ 
-                            type="building_adventuring_guild"
-                            country="c:DOV"
-                            levels=1
-                            region="STATE_THORNWALL"
-                       }
-                    }
-          reserves=1
-          activate_production_methods={ "pm_unrefrigerated" "pm_fishing_trawlers" }
-        }
         create_building={
           building="building_textile_mills"
                     add_ownership={ 
@@ -4488,7 +4612,7 @@ reserves=1
                      }
                   }
         reserves=1
-        activate_production_methods={ "pm_saw_mills" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
+        activate_production_methods={ "pm_saw_mills" "pm_no_hardwood" "pm_no_equipment" "pm_stoneskin_potion" "pm_road_carts" }
       }
       create_building={
 				building="building_wishstone_mine"
@@ -4502,19 +4626,6 @@ reserves=1
                 }
 				reserves=1
 				activate_production_methods={ "pm_detect_wishstone" "pm_no_mirrors" "pm_road_carts" }
-			}
-      create_building={
-				building="building_livestock_ranch"
-				add_ownership={ 
-					building={ 
-						type="building_wizard_tower"
-						country="c:RVC"
-						levels=1
-						region="STATE_RAVENCLIFF"
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "pm_open_air_stockyards" "pm_simple_ranch" "pm_livestock_fertility_rites" "pm_standard_fences" "pm_unrefrigerated"  }
 			}
       create_building={
         building="building_shipyards"
@@ -4581,17 +4692,43 @@ reserves=1
           activate_production_methods={ "pm_scholastic_education" }
         }
         create_building={
+          building="building_arms_industry"
+                    add_ownership={ 
+                        building={ 
+                            type="building_wizard_tower"
+                            country="c:RVC"
+                            levels=1
+                            region="STATE_RAVENCLIFF"
+                       }
+                    }
+          reserves=1
+          activate_production_methods={ "pm_muskets" "pm_automation_disabled" }
+        }
+        create_building={
+          building="building_haunted_grounds"
+                    add_ownership={ 
+                        building={ 
+                            type="building_wizard_tower"
+                            country="c:RVC"
+                            levels=2
+                            region="STATE_RAVENCLIFF"
+                       }
+                    }
+          reserves=1
+          activate_production_methods={ "pm_exorcists" "pm_no_equipment_haunted_grounds" }
+        }
+        create_building={
           building="building_fur_hunting_lodge"
           add_ownership = {
             building = {
               type="building_wizard_tower"
               country="c:RVC"
-              levels=2
+              levels=3
               region="STATE_RAVENCLIFF"
             }
           }
           reserves=1
-          activate_production_methods={ "pm_hunting_parties" "pm_no_exotic" }
+          activate_production_methods={ "pm_hunting_parties" "pm_exotic_hides" }
         }
 			     create_building={
           building="building_rye_farm"
@@ -4630,7 +4767,7 @@ reserves=1
               }
           }
           reserves = 1
-          activate_production_methods={ "pm_basic_distillery" "pm_no_fruit" "pm_bottomless_bottles" "pm_monster_grapes" }
+          activate_production_methods={ "pm_basic_distillery" "pm_no_fruit" "pm_bottomless_bottles" "pm_added_spirits" }
         }
             create_building={
           building="building_tooling_workshops"
@@ -4675,7 +4812,7 @@ reserves=1
              }
           }
           reserves=1
-          activate_production_methods={ "pm_detect_wishstone" "pm_no_mirrors" "pm_road_carts" }
+          activate_production_methods={ "pm_dedicated_diggers" "pm_no_mirrors" "pm_road_carts" }
       }
       create_building={
         building="building_paper_mills"
@@ -4701,7 +4838,7 @@ reserves=1
                      }
                   }
         reserves=1
-        activate_production_methods={ "pm_santa_clause_style" "pm_luxury_furniture" "pm_automation_disabled" }
+        activate_production_methods={ "pm_santa_clause_style" "pm_luxury_furniture" "pm_permanent_prestidigitation_furniture" "pm_automation_disabled" }
       }
       create_building={
         building="building_textile_mills"
@@ -4709,12 +4846,12 @@ reserves=1
                   building={ 
                       type="building_wizard_tower"
                       country="c:RVC"
-                      levels=3
+                      levels=1
                       region="STATE_RAVENCLIFF"
                  }
               }
         reserves=1
-        activate_production_methods={ "pm_handsewn_clothes" "pm_no_magic_clothes" "pm_no_luxury_clothes" "pm_that_scary_ass_shit_from_sleeping_beauty" }
+        activate_production_methods={ "pm_handsewn_clothes" "pm_permanent_prestidigitation" "pm_craftsman_sewing" "pm_that_scary_ass_shit_from_sleeping_beauty" }
       }
       }
      
@@ -5228,6 +5365,32 @@ reserves=1
 
     s:STATE_BLACKDON = {
       region_state:RVC={
+        create_building={
+          building="building_arms_industry"
+                    add_ownership={ 
+                        building={ 
+                            type="building_wizard_tower"
+                            country="c:RVC"
+                            levels=1
+                            region="STATE_RAVENCLIFF"
+                       }
+                    }
+          reserves=1
+          activate_production_methods={ "pm_muskets" }
+        }
+        create_building={
+          building="building_food_industry"
+          add_ownership={ 
+             building={ 
+              type="building_wizard_tower"
+              country="c:RVC"
+              levels=2
+              region="STATE_RAVENCLIFF"
+                   }
+                }
+          reserves=1
+          activate_production_methods={ "pm_bakery" "pm_disabled_canning" "pm_live_dough" "pm_manual_dough_processing" }
+        }
 			create_building={
           building="building_rye_farm"
 				add_ownership={ 
@@ -5258,7 +5421,7 @@ reserves=1
                }
               }
           reserves=1
-          activate_production_methods={ "pm_firearms_hunting" }
+          activate_production_methods={ "pm_firearms_hunting" "pm_tracking_tools" }
           }
             create_building={
           building="building_logging_camp"
@@ -5266,7 +5429,7 @@ reserves=1
                     building={ 
                         type="building_wizard_tower"
                         country="c:RVC"
-                        levels=8
+                        levels=4
                         region="STATE_RAVENCLIFF"
                    }
                 }

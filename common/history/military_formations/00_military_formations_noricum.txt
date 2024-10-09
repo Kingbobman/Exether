@@ -144,34 +144,29 @@
 			type = army
 			hq_region = sr:region_ravencliff
 
-			name = "Legion of Dreadmoor"
+			name = "Legions of Dreadmoor"
 
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_RAVENCLIFF
-				count = 10
+				count = 15
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_SHROUDGUARD
-				count = 15
+				count = 20
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_YSTRAD
 				count = 20
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
-				state_region = s:STATE_BLACKDON
-				count = 5
-			}
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_mobile_artillery
 				state_region = s:STATE_RAVENCLIFF
-				count = 10
+				count = 20
 			}
 		     save_scope_as = rvcarmy
 		}
@@ -183,6 +178,16 @@
 			save_scope_as = rvcgen
 		}
 		scope:rvcgen = {
+			transfer_to_formation = scope:rvcarmy
+		}
+
+		create_character = {
+			is_general = yes
+			hq = sr:region_ravencliff
+			commander_rank = commander_rank_1
+			save_scope_as = rvcge2
+		}
+		scope:rvcgen2 = {
 			transfer_to_formation = scope:rvcarmy
 		}
 
