@@ -26,6 +26,33 @@ get_investment_income_sq = {
 get_wanted_construction = {
 	value = 10
 
+		# Add a baseline if trying to industrialize
+		if = {
+			limit = {
+				OR = {
+					has_strategy = ai_strategy_resource_expansion
+					has_strategy = ai_strategy_industrial_expansion
+				}
+			}
+
+			if = {
+				limit = { country_rank >= rank_value:great_power }
+				add = 50
+			}		
+			else_if = {
+				limit = { 
+					OR = {
+						country_rank >= rank_value:major_power
+						country_rank >= rank_value:unrecognized_major_power
+					}
+				}
+				add = 25
+			}	
+			else = {
+				add = 10
+			}				
+		}	
+
 		add = {
 			value = get_net_income
 			divide = 400		
@@ -63,6 +90,30 @@ get_wanted_construction = {
 			}
 			multiply = 0.20
 		}
+
+		if = {
+			limit = { has_law = law_type:law_traditionalism }
+			multiply = 0.75
+		}		
+
+		if = {
+			limit = { has_strategy = ai_strategy_placate_population }
+			multiply = 0.5
+		}
+		else_if = {
+			limit = {
+				NOR = {
+					has_strategy = ai_strategy_resource_expansion
+					has_strategy = ai_strategy_industrial_expansion				
+				}
+			}
+			multiply = 0.75
+		}
+		
+		if = {
+			limit = { has_strategy = ai_strategy_maintain_mandate_of_heaven }
+			multiply = 0.1		
+		}	
 		
 		min = { 
 			value = income
