@@ -2872,7 +2872,7 @@ STATE_ZARGIKS = {
 STATE_KASHANIR = {
     id = 4367
     subsistence_building = "building_subsistence_pastures"
-    provinces = { x66C336 x7EFB7F x839FF0 x83DBBF x99F0A3 xD4C0EF xE0C4A0 xE5EBED xF881C2 xFAC460 xFAE0FA }
+    provinces = { x66C336 x7EFB7F x839FF0 x83DBBF x99F0A3 xE0C4A0 xE5EBED xFAC460 xFAE0FA }
     city = xFAC460
     farm = xF881C2
     mine = xE5EBED
@@ -2976,7 +2976,7 @@ STATE_QAMARUD = {
     id = 4371
     traits = { "state_trait_fractured_veil" }
     subsistence_building = "building_subsistence_pastures"
-    provinces = { x4EFDD0 x5BB6F6 x76F4BE x78C7C7 x7AC1C8 x80ED99 x83E0C3 x84C1DE x91D8D6 x94B3F5 xA4CAA7 xC8D0B9 xCA91E9 xD2B79B xD6AA92 xE8ADAD xF1E0CB xFA15F6 xFADEA6 xFC8AB9 xFDB8E9 xFDD469 }
+    provinces = { x5BB6F6 x76F4BE x78C7C7 x7AC1C8 x80ED99 x83E0C3 x84C1DE x91D8D6 x94B3F5 xA4CAA7 xC8D0B9 xCA91E9 xD6AA92 xE8ADAD xFA15F6 xFADEA6 xFC8AB9 xFDD469 }
     city = xFDB8E9
     farm = xFC8AB9
     mine = xFADEA6
@@ -2992,6 +2992,7 @@ STATE_QAMARUD = {
     }
     resource = {
         type = "bg_collapsed_godsbane_vault"
+        depleted_type = "bg_renovated_godsbane_vault"
         discovered_amount = 3
         undiscovered_amount = 3
     }
@@ -3010,7 +3011,7 @@ STATE_ZAHRAFI = {
     id = 4372
     traits = { "state_trait_fractured_veil" }
     subsistence_building = "building_subsistence_pastures"
-    provinces = { x4EB6F8 x59CCDF x6EEFC2 x72CBEB x9EF0BF xADEC70 xB5A7A2 xC7A88E xDB6ED7 xE4D092 xF0D59B xFE4EFB }
+    provinces = { x4EB6F8 x59CCDF x6EEFC2 x72CBEB x9EF0BF xADEC70 xB5A7A2 xC7A88E xDB6ED7 xE4D092 xFE4EFB }
     city = xF0D59B
     farm = xE4D092
     mine = xDB6ED7
@@ -3108,10 +3109,38 @@ STATE_ALQADIM = {
     }
     resource = {
         type = "bg_collapsed_godsbane_vault"
+        depleted_type = "bg_renovated_godsbane_vault"
         discovered_amount = 3
         undiscovered_amount = 9
     }
     naval_exit_id = 3194
+}
+STATE_GIRAR = {
+    id = 4307
+    subsistence_building = "building_subsistence_lichen_farms"
+    provinces = { "x0C7F96" "x0F0956" "x2CF612" "x4EFDD0" "x50CFD9" "x5172EC" "x58C1ED" "x5DFDD5" "x7CB0DA" "x94E4C6" "x98F5AD" "xA322D2" "xA9BDDA" "xB4E17F" "xB6B4E6" "xB6BC89" "xB788CF" "xC2B363" "xC2D0CC" "xC4E88C" "xC69130" "xC8C3F2" "xD061D5" "xD2B79B" "xD4C0EF" "xDA5ECE" "xDA6ED2" "xEFC98B" "xF0D59B" "xF1E0CB" "xF3ECF9" "xF5C4DC" "xF881C2" "xF8E0FE" "xFDB8E9" }
+    impassable = { "x4EFDD0" "x50CFD9" "x58C1ED" "x7CB0DA" "x94E4C6" "x98F5AD" "xA9BDDA" "xB4E17F" "xB6B4E6" "xB788CF" "xC2D0CC" "xC4E88C" "xD061D5" "xD2B79B" "xD4C0EF" "xDA5ECE" "xDA6ED2" "xEFC98B" "xF0D59B" "xF1E0CB" "xF3ECF9" "xF5C4DC" "xF881C2" "xF8E0FE" "xFDB8E9" }
+    #port = xFDB347
+    city = xC2B363
+    farm = x0C7F96
+    mine = x5172EC
+    wood = xB6BC89
+    traits = { "state_trait_mirazara_mountains" }
+    arable_land = 55
+    arable_resources = { "bg_livestock_ranches" }
+    capped_resources = {
+        bg_cloudsilver_mining = 33
+        bg_coal_mining = 35
+        bg_iron_mining = 25
+        bg_mushroom_logging = 19
+        bg_monuments = 1
+    }
+    resource = {
+        type = "bg_collapsed_godsbane_vault"
+        depleted_type = "bg_renovated_godsbane_vault"
+        undiscovered_amount = 10
+    }
+
 }
 STATE_ZAHRIFAR = {
     id = 4376
@@ -3171,7 +3200,7 @@ STATE_ALNAHFID = {
     id = 4378
     traits = { "state_trait_fractured_veil" }
     subsistence_building = "building_subsistence_pastures"
-    provinces = { x50CFD9 x61D4F4 x73EBBA x7CB0DA x90ED94 xAFFCE4 xB6B4E6 xBDD0F3 xC2D0CC xCD7FCE xDA6ED2 xDF76B8 xE979A2 xEBDED8 xEFC98B xF0CD44 xF3ECF9 xF5AC98 xF8E0FE xFE63D9 xFEA2E6 }
+    provinces = { x61D4F4 x73EBBA x90ED94 xAFFCE4 xBDD0F3 xCD7FCE xDF76B8 xE979A2 xEBDED8 xF0CD44 xF5AC98 xFE63D9 xFEA2E6 }
     city = xFE63D9
     farm = xF8E0FE
     mine = xF5AC98
@@ -3665,13 +3694,12 @@ STATE_WÉSSWÚL = {
 STATE_KÁLMBIQÚIS = {
     id = 4215
     subsistence_building = "building_subsistence_pastures"
-    provinces = { x54EAFA x57FED8 x58C1ED x6DE3C7 x74FAB9 x8EC0B3 x94E4C6 x98F5AD xA9BDDA xB4E17F xB788CF xB7FE8A xB84DFB xC461F6 xC4E88C xD061D5 xD884CF xDA5ECE xE46DDC xF0DF91 xF5C4DC xF989BA xF9B0B3 xFCCF58 }
+    provinces = { x54EAFA x57FED8 x6DE3C7 x74FAB9 x8EC0B3 xB7FE8A xB84DFB xC461F6 xD884CF xE46DDC xF0DF91 xF989BA xF9B0B3 xFCCF58 }
     port = xFCCF58
     city = xF9B0B3
     farm = xF989BA
     mine = xF5C4DC
     wood = xF0DF91
-    impassable = { x94E4C6 xB788CF xC4E88C xD061D5 xDA5ECE }
     traits = { "state_trait_mirazara_mountains" }
     arable_land = 155
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_sunweave_plantations" "bg_tobacco_plantations" }
