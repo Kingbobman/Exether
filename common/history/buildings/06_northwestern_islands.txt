@@ -2362,25 +2362,6 @@
 	}
 	s:STATE_SAMIEL = {
 		region_state:ORO = {
-			create_building={
-				building="building_logging_camp"
-				level=3
-				reserves=1
-				activate_production_methods={ "pm_saw_mills" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
-			}
-            create_building={
-				building="building_tooling_workshops"
-                add_ownership={ 
-                    building={ 
-                        type="building_financial_district"
-                        country="c:DIS"
-                        levels=1
-                        region="STATE_LEPIDRA"
-                   }
-                }
-				reserves=1
-				activate_production_methods={ "pm_pig_iron" "pm_automation_disabled" }
-			}
 		}
 	}
 	s:STATE_GUHKESLUOKTA = {
@@ -2404,19 +2385,6 @@
 				reserves=1
 				activate_production_methods={ "pm_anchorage" }
 			}
-			create_building={
-				building="building_leviathan_outpost"
-				 add_ownership={ 
-                    building={ 
-                        type="building_adventuring_guild"
-                        country="c:ORO"
-                        levels=2
-						region="STATE_SILENTWISP"
-					}
-				}
-				reserves=1
-				activate_production_methods={ "pm_manowar_leviathan_ships" "pm_manual_harvesting" }
-      		}
 		}
 	}
 	s:STATE_RAHKIS = {
