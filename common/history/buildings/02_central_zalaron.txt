@@ -9141,13 +9141,197 @@
 		
 	s:STATE_ALQADIM = {
 		region_state:BSK={
+			create_building={
+				building="building_dwarf_tunnels"
+				level=1
+			  }
+			create_building={
+				building="building_construction_sector"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_iron_frame_buildings" }
+			  }	
+			create_building={
+				building="building_government_administration"
+				level=5
+				reserves=1
+				activate_production_methods={ "pm_horizontal_drawer_cabinets" }
+			  }
+			  create_building={
+				building="building_undertea"
+				  add_ownership={ 
+					building={ 
+					  type="building_manor_house"
+					  country="c:BSK"
+					  levels=1
+					  region="STATE_ALQADIM"
+					 }
+				  }
+				reserves=1
+				activate_production_methods={ "default_building_tea_plantation" "pm_steam_rail_transport"  }
+			  }
+			  create_building={
+				building="building_artifactory"
+						  add_ownership={ 
+							  building={ 
+								  type="building_financial_district"
+								  country="c:BSK"
+								  levels=4
+								  region="STATE_ALQADIM"
+							 }
+						  }
+				reserves=1
+				activate_production_methods={ "pm_artifactory_hand_sorting" "pm_artifactory_no_automation" }
+			  }
+			  create_building={
+				building="building_steel_mills"
+				add_ownership={ 
+				  building={ 
+					type="building_financial_district"
+					country="c:BSK"
+					levels=2
+					region="STATE_ALQADIM"
+				  }
+				}
+			  reserves=1
+				activate_production_methods={ "pm_blister_steel_process" }
+			  }
+			  create_building={
+				building="building_motor_industry"
+				add_ownership={ 
+				  building={ 
+					type="building_financial_district"
+					country="c:BSK"
+					levels=1
+					region="STATE_ALQADIM"
+				  }
+				}
+			  reserves=1
+				activate_production_methods={ "pm_steam_engines" }
+			  }
+			  create_building={
+				building="building_railway"
+				  add_ownership={ 
+					building={ 
+					  type="building_financial_district"
+					  country="c:BSK"
+					  levels=3
+					  region="STATE_ALQADIM"
+					}
+				  }
+				reserves=1
+				activate_production_methods={ "pm_steam_trains" "pm_wooden_passenger_carriages" }
+			  }
+			  create_building={
+				building="building_mushroom_logging"
+				add_ownership={ 
+				  building={ 
+				  type="building_wizard_tower"
+				  country="c:BSK"
+				  levels=9
+				  region="STATE_ALQADIM"
+				   }
+				}
+				activate_production_methods={ "pm_mushroom_mills" "pm_no_focus" "pm_rail_transport_building_logging_camp" }
+				}
+				create_building = {
+					building = "building_distillery"
+					add_ownership = {
+					  building={
+						type="building_financial_district"
+						country="c:BSK"
+						levels=1
+						region="STATE_ALQADIM"
+					  }
+					}
+					reserves = 1
+					activate_production_methods = {"pm_no_fruit" "pm_monster_grapes" }
+				  } 	
+			  create_building={
+				building="building_potion_distillery"
+				  add_ownership={
+					building={
+					  type="building_wizard_tower"
+					  country="c:BSK"
+					  levels=3
+					  region="STATE_ALQADIM"
+				  }
+				}
+				reserves=1
+				activate_production_methods={ "pm_simple_potion_production" "pm_water-based_potions" "pm_no_mixins" "pm_basic_filters" }
+			  }	
+			  create_building={
+				building="building_rotfarm"
+				add_ownership={ 
+				   building={ 
+					type="building_manor_house"
+					country="c:BSK"
+					levels=4
+					region="STATE_ALQADIM"
+						 }
+					  }
+				reserves=1
+				activate_production_methods={ "pm_grubbing2" "pm_tools"  }
+			  }
+			  create_building={
+				building="building_big_game_hunts"
+					  add_ownership={ 
+						  building={ 
+							  type="building_adventuring_guild"
+							  country="c:BSK"
+							  levels=4
+							  region="STATE_ALQADIM"
+						 }
+					  }
+				reserves=1
+				activate_production_methods={ "pm_dedicated_expedition" "pm_carapace_increase" "pm_nobfg" }
+			  }
+			  create_building={
+				building="building_coal_mine"
+			 add_ownership={ 
+			  building={ 
+			  type="building_financial_district"
+			  country="c:BSK"
+			  levels=3
+			  region="STATE_ALQADIM"
+			 }
+		  }
+				reserves=1
+				activate_production_methods={ "pm_atmospheric_engine_pump_building_coal_mine" "pm_coal_mines_potions_of_strength" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+			  create_building={
+				building="building_paper_mills"
+				add_ownership={ 
+					building={ 
+						type="building_financial_district"
+						country="c:BSK"
+						levels=2
+						region="STATE_ALQADIM"
+				   }
+				}
+				reserves=1
+				activate_production_methods={ "pm_sulfite_pulping" "pm_automation_disabled" }
+			}
+			create_building={
+				building="building_sulfur_mine"
+				add_ownership={ 
+				  building={ 
+					  type="building_financial_district"
+					  country="c:BSK"
+					  levels=1
+					  region="STATE_ALQADIM"
+				 }
+			  }
+		reserves=1
+				activate_production_methods={ "pm_atmospheric_engine_pump_building_sulfur_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_rail_transport_mine" }
+			  }
             create_building={
 			  building="building_arms_industry"
                 add_ownership={ 
                     building={ 
                         type="building_financial_district"
                         country="c:BSK"
-                        levels=1
+                        levels=4
                         region="STATE_ALQADIM"
                    }
                 }
@@ -9155,52 +9339,17 @@
 			  activate_production_methods={ "pm_muskets" }
 			}
 			create_building={
-			  building="building_government_administration"
-			  level=3
-			  reserves=1
-			  activate_production_methods={ "pm_vertical_filing_cabinets" }
-			}
-			create_building={
-			  building="building_airship_dock"
-			  level=2
-			  reserves=1
-			}
-			create_building={
-			building="building_airshipyards"
-                add_ownership={ 
-                    building={ 
-                        type="building_financial_district"
-                        country="c:BSK"
-                        levels=1
-                        region="STATE_ALQADIM"
-                   }
-                }
-			reserves=1
-		}
-			create_building={
-			  building="building_cloudsilver_mine"
-                add_ownership={ 
-                    building={ 
-                        type="building_financial_district"
-                        country="c:BSK"
-                        levels=1
-                        region="STATE_ALQADIM"
-                   }
-                }
-			  reserves=1
-			}
-			create_building={
 			  building="building_iron_mine"
 				add_ownership={ 
 					building={ 
 						type="building_financial_district"
 						country="c:BSK"
-						levels=6
+						levels=2
 						region="STATE_ALQADIM"
 				   }
 				}
 			  reserves=1
-			  activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_mines_no_potions" "pm_no_steam_automation" "pm_road_carts" }
+			  activate_production_methods={ "pm_atmospheric_engine_pump_building_iron_mine" "pm_no_explosives" "pm_iron_mines_potions_of_strength" "pm_no_steam_automation" "pm_rail_transport_mine" }
 			}
             create_building={
 			  building="building_tooling_workshops"
@@ -9208,43 +9357,220 @@
                     building={ 
                         type="building_financial_district"
                         country="c:BSK"
-                        levels=1
+                        levels=4
                         region="STATE_ALQADIM"
                    }
                 }
 			  reserves=1
-			  activate_production_methods={ "pm_pig_iron" "pm_automation_disabled" }
+			  activate_production_methods={ "pm_steel" "pm_automation_disabled" }
 			}
 			create_building={
-			  building="building_livestock_ranch"
-				add_ownership={ 
+				building="building_textile_mills"
+					  add_ownership={ 
+						  building={ 
+							  type="building_financial_district"
+							  country="c:BSK"
+							  levels=4
+							  region="STATE_ALQADIM"
+						 }
+					  }
+				reserves=1
+				activate_production_methods={ "pm_dye_workshops" "pm_craftsman_sewing" "pm_traditional_looms" }
+			  }
+			  create_building={
+				building="building_underfarm"
+				  add_ownership={ 
 					building={ 
-						type="building_manor_house"
-						country="c:BSK"
-						levels=2
-						region="STATE_ALQADIM"
+					type="building_wizard_tower"
+					  country="c:BSK"
+					  levels=5
+					  region="STATE_ALQADIM"
+					 }
+				  }
+				reserves=1
+				activate_production_methods={ "pm_goo_infused_underfarming"  "pm_tools_building_rice_farm" "pm_farms_no_enhancement" "pm_lichen_dyes" }
+			  }
+			create_building={
+				building="building_spider_ranch"
+				add_ownership={ 
+				  building={ 
+					type="building_financial_district"
+					country="c:BSK"
+					levels=6
+					region="STATE_ALQADIM"
 				   }
 				}
-			  reserves=1
-			  activate_production_methods={ "pm_sheep_farms" "pm_slaughterhouses" "pm_standard_fences" "pm_unrefrigerated"  }
-			}
-			create_building={
-			  building="building_construction_sector"
-			  level=1
-			  reserves=1
-			  activate_production_methods={ "pm_iron_frame_buildings" }
-			}	
-			create_building={
-			  building="building_barracks"
-			  level=5
-			  reserves=1
-			  activate_production_methods={ "pm_no_organization" }
-			}
-			create_building={
-			  building="building_dwarf_tunnels"
-			  level=1
-			}
+				reserves=1
+				activate_production_methods={ "pm_advanced_spiders" "pm_spiderman" "pm_spider_enlargement" "pm_standard_spidey_fence" "pm_no_warding"  }
+			  }	
 		  }
+	}
+
+	s:STATE_GIRAR = {
+        region_state:BSK = {
+			create_building={
+				building="building_government_administration"
+				level=5
+				reserves=1
+				activate_production_methods={ "pm_horizontal_drawer_cabinets" }
+			  }
+			  create_building={
+				building="building_railway"
+					add_ownership={ 
+						building={ 
+							type="building_financial_district"
+							country="c:BSK"
+							levels=2
+							region="STATE_GIRAR"
+						}
+					}
+				reserves=1
+				activate_production_methods={ "pm_steam_trains" "pm_wooden_passenger_carriages" }
+			}
+			create_building={
+				building="building_potion_distillery"
+				  add_ownership={
+					building={
+					  type="building_wizard_tower"
+					  country="c:BSK"
+					  levels=1
+					  region="STATE_GIRAR"
+				  }
+				}
+				reserves=1
+				activate_production_methods={ "pm_simple_potion_production" "pm_water-based_potions" "pm_no_mixins" "pm_basic_filters" }
+			  }	
+			create_building={
+				building="building_textile_mills"
+					  add_ownership={ 
+						  building={ 
+							  type="building_financial_district"
+							  country="c:BSK"
+							  levels=2
+							  region="STATE_GIRAR"
+						 }
+					  }
+				reserves=1
+				activate_production_methods={ "pm_dye_workshops" "pm_no_luxury_clothes" "pm_traditional_looms" }
+			  }
+			create_building={
+				building="building_big_game_hunts"
+					  add_ownership={ 
+						  building={ 
+							  type="building_adventuring_guild"
+							  country="c:BSK"
+							  levels=1
+							  region="STATE_GIRAR"
+						 }
+					  }
+				reserves=1
+				activate_production_methods={ "pm_dedicated_expedition" "pm_carapace_increase" "pm_nobfg" }
+			  }
+			  create_building={
+				building="building_iron_mine"
+				  add_ownership={ 
+					  building={ 
+						  type="building_financial_district"
+						  country="c:BSK"
+						  levels=2
+						  region="STATE_GIRAR"
+					 }
+				  }
+				reserves=1
+				activate_production_methods={ "pm_atmospheric_engine_pump_building_iron_mine" "pm_no_explosives" "pm_iron_mines_potions_of_strength" "pm_no_steam_automation" "pm_rail_transport_mine" }
+			  }
+			  create_building={
+				building="building_artillery_foundries"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:BSK"
+                        levels=2
+                        region="STATE_GIRAR"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_cannons" "pm_automation_disabled" }
+			}
+			  create_building={
+				building="building_underfarm"
+				  add_ownership={ 
+					building={ 
+					type="building_wizard_tower"
+					  country="c:BSK"
+					  levels=6
+					  region="STATE_GIRAR"
+					 }
+				  }
+				reserves=1
+				activate_production_methods={ "pm_goo_infused_underfarming" "pm_tools_disabled" "pm_farms_no_enhancement" "pm_no_lichen_dyes" }
+			  }
+			  create_building={
+				building="building_mushroom_logging"
+				add_ownership={ 
+				  building={ 
+				  type="building_wizard_tower"
+				  country="c:BSK"
+				  levels=8
+				  region="STATE_GIRAR"
+				   }
+				}
+				activate_production_methods={ "pm_mushroom_mills" "pm_extra_essence" "pm_rail_transport_building_logging_camp" }
+				}	
+			  create_building={
+				building="building_furniture_manufacturies"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:BSK"
+                        levels=3
+                        region="STATE_GIRAR"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_lathe" "pm_no_luxuries" "pm_automation_disabled" }
+			}
+			create_building = {
+				building = "building_distillery"
+				add_ownership = {
+				  building={
+					type="building_financial_district"
+					country="c:BSK"
+					levels=5
+					region="STATE_GIRAR"
+				  }
+				}
+				reserves = 1
+				activate_production_methods = {"pm_no_fruit" "pm_monster_grapes" }
+			  } 
+			create_building={
+				building="building_underground_wharf"
+					  add_ownership={ 
+						  building={ 
+							  type="building_adventuring_guild"
+							  country="c:BSK"
+							  levels=4
+							  region="STATE_GIRAR"
+						 }
+					  }
+				reserves=1
+				activate_production_methods={ "pm_underfish_boating" "pm_unrefrigerated" }
+			  }	
+			create_building={
+				building="building_undertea"
+				  add_ownership={ 
+					building={ 
+					  type="building_manor_house"
+					  country="c:BSK"
+					  levels=3
+					  region="STATE_GIRAR"
+					 }
+				  }
+				reserves=1
+				activate_production_methods={ "default_building_tea_plantation" "pm_steam_rail_transport"  }
+			  }
+			
+		}
 	}
 		
 	s:STATE_ZAHRIFAR = {

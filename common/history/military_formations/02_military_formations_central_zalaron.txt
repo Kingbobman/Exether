@@ -1,5 +1,37 @@
 ﻿MILITARY_FORMATIONS = {
 
+	c:BSK ?={
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_old_khus
+
+			name = "Reformed Starwoken Army"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_GIRAR
+				count = 23
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_ALQADIM
+				count = 37
+			}
+
+			save_scope_as = bsk_army
+		}
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			hq = region_old_khus
+			save_scope_as = bsk_general
+		}
+		scope:bsk_general = {
+			transfer_to_formation = scope:bsk_army
+		}
+	}
+
+
 	c:OPA ?= {
 		create_military_formation = {
 			type = army
