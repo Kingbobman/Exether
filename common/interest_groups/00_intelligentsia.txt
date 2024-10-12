@@ -81,6 +81,17 @@
 				remove_ideology = ideology_anti_clerical
 			}
 		}
+		else_if = {
+			limit = {
+				OR = {
+					c:DUM ?= THIS
+				}
+			}
+			ig:ig_intelligentsia = {
+				remove_ideology = ideology_republican
+				add_ideology = ideology_constitutionalist
+			}
+		}
 		
 		if = {
 			limit = {
