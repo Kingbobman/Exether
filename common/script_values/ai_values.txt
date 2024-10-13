@@ -74,24 +74,6 @@ get_wanted_construction = {
 		}
 
 		if = {
-			limit = { country_rank >= rank_value:great_power }
-			multiply = 1.2
-		
-		}		
-		else_if = {
-			limit = { 
-				country_rank >= rank_value:major_power
-			}
-			multiply = 1.1
-		}
-		else_if = {
-			limit = {
-				is_country_type = unrecognized
-			}
-			multiply = 0.20
-		}
-
-		if = {
 			limit = { has_law = law_type:law_traditionalism }
 			multiply = 0.75
 		}		
