@@ -211,6 +211,18 @@ druidic = {
 	} 
 }
 
+human_druidism = {
+	texture = "gfx/interface/icons/religion_icons/druidic.dds"
+	traits = {
+		kraken_domain fey_domain uriks_pantheon
+	}
+	color = { 0.1 0.5 0.3 }
+	
+	taboos = {
+		meat
+	} 
+}
+
 avian_druidism = {
 	texture = "gfx/interface/icons/religion_icons/druidic.dds"
 	traits = {
@@ -282,7 +294,7 @@ wild_fosirmi = {
 southern_fosirmi = {
 	texture = "gfx/interface/icons/religion_icons/southern_elf.dds"
 	traits = {
-		gryphon_domain kraken_domain elf_pantheon cosmopolitan
+		gryphon_domain kraken_domain elf_pantheon
 	}
 	color = { 0.7 0.4 0.6 }
 }
@@ -310,9 +322,19 @@ gnollstianity = {
 lords_of_avarice = {
 	texture = "gfx/interface/icons/religion_icons/bloody_coins.dds"
 	traits = {
-		angel_domain fiend_domain evil_heritage
+		angel_domain fiend_domain evil_heritage materialistic
 	}
 	color = { 0.7 0.4 0.3 }
+	taboos = {
+	}
+}
+
+lunar_masquerade = {
+	texture = "gfx/interface/icons/religion_icons/bloody_coins.dds"
+	traits = {
+		angel_domain fiend_domain evil_heritage
+	}
+	color = { 0.2 0.2 0.3 }
 	taboos = {
 	}
 }
@@ -451,6 +473,15 @@ cult_of_war = {
 	texture = "gfx/interface/icons/religion_icons/shinto.dds"
 	traits = {
 		fiend_domain phoenix_domain uriks_pantheon
+	}
+	color = { 0.7 0.2 0.2 }
+}
+
+
+cult_of_commerce = {
+	texture = "gfx/interface/icons/religion_icons/shinto.dds"
+	traits = {
+		golem_domain kraken_domain uriks_pantheon materialistic
 	}
 	color = { 0.7 0.2 0.2 }
 }
