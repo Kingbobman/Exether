@@ -82,9 +82,43 @@
 		color2 = "red"
 		instance = { scale = { 0.18 0.20 } position = { 0.8 0.75 } }
 	}
+}
 
+TPK = {
+	pattern = "pattern_solid.tga"
+	color1 = "green_light"
 
+        colored_emblem = {
+		texture = "ce_kanaka.dds"
+		color1 = "blue"
+		instance = { scale = { 1 1 } position = { 0.5 0.05 } rotation = 180 }			
+	}
 
+        colored_emblem = {
+		texture = "ce_star_08_eureka.dds"
+		color1 = "yellow_light"
+                color2 = "yellow_light"
+		instance = { scale = { 0.3 0.3 } position = { 0.5 0.4 } }			
+	}	
+
+        colored_emblem = {
+		texture = "ce_bicolor_bottom.dds"
+		color1 = "blue"
+		instance = { scale = { 1 1 } position = { 0.5 0.75 } }			
+	}
+
+        colored_emblem = {
+		texture = "ce_rhombus.dds"
+		color1 = "blue"
+		instance = { scale = { 0.4 0.4 } position = { 0.5 0.75 } rotation = 90 }			
+	} 
+
+        colored_emblem = {
+		texture = "ce_star_08_eureka.dds"
+		color1 = "yellow_light"
+                color2 = "yellow_light"
+		instance = { scale = { 0.3 0.3 } position = { 0.5 0.75 } }			
+	}
 }
 
 BLD = {
@@ -118,10 +152,11 @@ RSE = {
                 instance = { scale = { 0.7 0.7 } position = { 0.5 0.635 } rotation = 180 }
 	}
 
-
 	colored_emblem = {
 		texture = "ce_roe_orc_triangle.dds"
 		color1 = "white"
+                color2 = "white"
+                color3 = "white" 
 		instance = { scale = { 1.2 1.2 } position = { 0.5 0.375 } rotation = 180 }
 	}
 
@@ -129,8 +164,7 @@ RSE = {
 
 GRO = {
 	pattern = "pattern_solid.tga"
-	color1 = "khmer_green"
-
+	color1 = "green_light"
 
 	colored_emblem = {
 		texture = "ce_kato.dds"
@@ -139,31 +173,42 @@ GRO = {
                 instance = { scale = { 1 1 } position = { 0.5 0.5 } }
 	}
 
-	colored_emblem = {
-		texture = "ce_circle.dds"
-		color1 = "black"
+        colored_emblem = {
+		texture = "ce_indonesian_flower.dds"
+		color1 = "green_light"
 
-                instance = { scale = { 0.9 0.9 } position = { 0.5 0.5 } }
+                instance = { scale = { 0.2 0.2 } position = { 0.33 0.5 } }
 	}
 
+        colored_emblem = {
+		texture = "ce_indonesian_flower.dds"
+		color1 = "green_light"
+
+                instance = { scale = { 0.2 0.2 } position = { 0.67 0.5 } }
+	}
 
 	colored_emblem = {
 		texture = "ce_indonesian_flower.dds"
-		color1 = "white"
-		instance = { scale = { 0.5 0.5 } position = { 0.5 0.5 } }
+		color1 = "green_light"
+		instance = { scale = { 0.2 0.2 } position = { 0.5 0.265 } }
 	}
 
+        colored_emblem = {
+		texture = "ce_indonesian_flower.dds"
+		color1 = "green_light"
+		instance = { scale = { 0.2 0.2 } position = { 0.5 0.735 } }
+	} 
 
 }
 
 TTN = {
 	pattern = "pattern_solid.tga"
-	color1 = "tokugawa_green"
+	color1 = "green_light"
 
-	colored_emblem = {
+       colored_emblem = {
 		texture = "ce_star_16.dds"
 		color1 = "white"
-		instance = { scale = { 0.45 0.45 } position = { 0.5 0.45 } }
+		instance = { scale = { 0.45 0.45 } position = { 0.5 0.375 } }
 	}  
 
 	colored_emblem = {
@@ -175,19 +220,16 @@ TTN = {
 
         colored_emblem = {
 		texture = "ce_iresun.dds"
-		color1 = "black"
+		color1 = "green_light"
 
                 instance = { scale = { 0.9 0.9 } position = { 0.5 0.85 } }
 	} 
-
-	
-
     
 }
 
 EKE = {
 	pattern = "pattern_solid.tga"
-	color1 = "feldgrau"   
+	color1 = "green_light"   
 
        colored_emblem = {
 		texture = "ce_three_arrows_square.dds"
@@ -197,7 +239,7 @@ EKE = {
 
 	colored_emblem = {
 		texture = "ce_waves.dds"
-		color1 = "black"
+		color1 = "blue"
                 color2 = "white" 
 
                 instance = { scale = { 1 1 } position = { 0.5 0.75 } }
@@ -212,38 +254,54 @@ EKE = {
 
         colored_emblem = {
 		texture = "ce_star_04.dds"
-		color1 = "feldgrau" 
+		color1 = "green_light" 
 
                 instance = { scale = { 0.45 0.45 } position = { 0.5 0.35 } }
 	}
  
         colored_emblem = {
 		texture = "ce_star_04.dds"
-		color1 = "black" 
+		color1 = "blue" 
 
                 instance = { scale = { 0.35 0.35 } position = { 0.5 0.35 } }
 	}  
 }
 
 DRI = {
-    pattern = "pattern_solid.tga"
-    color1 = "technate_grey"
+	pattern = "pattern_solid.tga"
+	color1 = "grey"
 
-    colored_emblem = {
-        texture = "ce_delta.dds"
-        color1 = "black"
-        instance = { scale = { 0.75 0.75 } position = { 0.5 0.5 } }
-    }
-    colored_emblem = {
-        texture = "ce_delta.dds"
-        color1 = "white"
-        instance = { scale = { 0.5 0.5 } position = { 0.5 0.5 } }
-    }
-    colored_emblem = {
-        texture = "ce_delta.dds"
-        color1 = "black"
-        instance = { scale = { 0.4 0.4 } position = { 0.5 0.5 } }
-    }
+        colored_emblem = {
+		texture = "ce_three_arrows_square.dds"
+		color1 = "red_light"
+		instance = { scale = { 0.75 0.75 } position = { 0.5 0.4 } }		
+	}
+
+        colored_emblem = {
+		texture = "ce_three_arrows_square.dds"
+		color1 = "red_light"
+		instance = { scale = { 0.75 0.75 } position = { 0.5 0.6 } rotation = 180 }		
+	}
+ 
+ 
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = "grey"
+
+		instance = { scale = { 0.9 0.9 } position = { 0.5 0.5 } }		
+	}	
+
+        colored_emblem = {
+		texture = "ce_triangle.dds"
+                color1 = "red_light"
+		instance = { scale = { 0.4 0.4 } position = { 0.5 0.45 } }
+	}
+
+        colored_emblem = {
+		texture = "ce_triangle.dds"
+                color1 = "black"
+		instance = { scale = { 0.35 0.35 } position = { 0.5 0.55 } rotation = 180 }
+	}
 
 }
 
