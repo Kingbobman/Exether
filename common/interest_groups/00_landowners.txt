@@ -135,6 +135,19 @@
 		}
 
 		if = {
+			limit = {
+				owner ={
+					any_primary_culture = {
+						has_discrimination_trait = elf_heritage
+					}
+				}
+			}
+			ig:ig_landowners = {
+				add_ideology = ideology_pious
+			}
+		}
+
+		if = {
 			limit ={
 				owner ={
 					country_has_primary_culture = cu:south_sea_ravager
