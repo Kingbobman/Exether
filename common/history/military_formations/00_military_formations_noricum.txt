@@ -1173,4 +1173,114 @@
 			transfer_to_formation = scope:bctarmy
 		}
 	}	
+
+	c:PYH ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_east_everfrost
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_FORRTORP
+				count = 20
+
+				save_scope_as = pyharmy
+			}
+		}
+		create_character = {
+			is_general = yes
+			hq = sr:region_east_everfrost
+			commander_rank = commander_rank_1
+			save_scope_as = pyhgen
+		}
+		scope:pyhgen= {
+			transfer_to_formation = scope:pyharmy
+		}
+	}
+
+	c:FFG ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_east_everfrost
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_VIGAKULL
+				count = 20
+
+				save_scope_as = ffgarmy
+			}
+		}
+		create_character = {
+			is_general = yes
+			hq = sr:region_east_everfrost
+			commander_rank = commander_rank_1
+			save_scope_as = ffggen
+		}
+		scope:ffggen= {
+			transfer_to_formation = scope:ffgarmy
+		}
+	}
+
+	c:SDN ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_west_everfrost
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_HRAFNSDALR
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_WYRMBONE_CLIFFS
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_NORDFJALL
+				count = 10
+			}
+				save_scope_as = sdnarmy
+		}
+		create_character = {
+			is_general = yes
+			hq = sr:region_west_everfrost
+			commander_rank = commander_rank_1
+			save_scope_as = sdngen
+		}
+		scope:sdngen= {
+			transfer_to_formation = scope:sdnarmy
+		}
+	}
+
+	c:CTI ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_west_everfrost
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_DRAGONBANE_TUNDRA
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_HALDORHEIMR
+				count = 10
+			}
+				save_scope_as = ctiarmy
+		}
+		create_character = {
+			is_general = yes
+			hq = sr:region_west_everfrost
+			commander_rank = commander_rank_1
+			save_scope_as = ctigen
+		}
+		scope:ffggen= {
+			transfer_to_formation = scope:ctiarmy
+		}
+	}
+
 }

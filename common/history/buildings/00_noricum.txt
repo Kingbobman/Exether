@@ -6119,11 +6119,119 @@ reserves=1
 
 
     s:STATE_VIGAKULL = {
+      region_state:FFG = {
+        create_building={
+          building="building_tooling_workshops"
+          add_ownership={
+            building={
+              type="building_tooling_workshops"
+              country="c:FFG"
+              levels=1
+              region="STATE_VIGAKULL"
+            }
+          }
+          reserves=1
+          activate_production_methods={ "pm_crude_tools" "pm_automation_disabled" }
+        }	
+        create_building={
+          building="building_gold_mine"
+        add_ownership={ 
+          building={ 
+            type="building_manor_house"
+            country="c:FFG"
+            levels=2
+            region="STATE_VIGAKULL"
+         }
+        }
+          reserves=1
+          activate_production_methods={ "pm_picks_and_shovels_building_gold_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+       }
+        create_building={
+          building="building_logging_camp"
+                add_ownership={ 
+                    building={ 
+                        type="building_manor_house"
+                        country="c:FFG"
+                        levels=2
+                        region="STATE_VIGAKULL"
+                   }
+                }
+          reserves=1
+          activate_production_methods={ "pm_simple_forestry" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
+          }
+        create_building={
+          building="building_fur_hunting_lodge"
+          add_ownership = {
+            building = {
+              type="building_adventuring_guild"
+              country="c:FFG"
+              levels=2
+              region="STATE_VIGAKULL"
+            }
+          }
+          reserves=1
+          activate_production_methods={ "pm_trapping_teams" "pm_no_exotic" }
+        }
+      }
 
     }
 
 
     s:STATE_FORRTORP = {
+      region_state:PYH = {
+        create_building={
+          building="building_tooling_workshops"
+          add_ownership={
+            building={
+              type="building_tooling_workshops"
+              country="c:PYH"
+              levels=1
+              region="STATE_FORRTORP"
+            }
+          }
+          reserves=1
+          activate_production_methods={ "pm_crude_tools" "pm_automation_disabled" }
+        }	
+        create_building={
+          building="building_gold_mine"
+        add_ownership={ 
+          building={ 
+            type="building_manor_house"
+            country="c:PYH"
+            levels=2
+            region="STATE_FORRTORP"
+         }
+        }
+          reserves=1
+          activate_production_methods={ "pm_picks_and_shovels_building_gold_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+       }
+        create_building={
+          building="building_logging_camp"
+                add_ownership={ 
+                    building={ 
+                        type="building_manor_house"
+                        country="c:PYH"
+                        levels=2
+                        region="STATE_FORRTORP"
+                   }
+                }
+          reserves=1
+          activate_production_methods={ "pm_simple_forestry" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
+          }
+        create_building={
+          building="building_fur_hunting_lodge"
+          add_ownership = {
+            building = {
+              type="building_adventuring_guild"
+              country="c:PYH"
+              levels=2
+              region="STATE_FORRTORP"
+            }
+          }
+          reserves=1
+          activate_production_methods={ "pm_trapping_teams" "pm_no_exotic" }
+        }
+      }
 
     }
 
