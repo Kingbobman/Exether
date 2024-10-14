@@ -1520,6 +1520,33 @@ salt_waste_narrative_events.18 = {
 			}
 			post_notification = unification_notification_three_culture
 		}
+		
+		if = {
+			limit = {
+				rel:salt_crucible = { is_state_religion = ROOT }
+			}
+			add_journal_entry = {
+				type = je_tql_salt_crucible
+			}
+		} else_if = {
+			limit = {
+				rel:skarrakhlot = { is_state_religion = ROOT }
+			}
+			add_journal_entry = {
+				type = je_tql_skarrakhlot
+			}
+		} else_if = {
+			limit = {
+				rel:vurzaratmoda = { is_state_religion = ROOT }
+			}
+			add_journal_entry = {
+				type = je_tql_vurzaratmoda
+			}
+		} else = {
+			add_journal_entry = {
+				type = je_tql_default
+			}
+		}
 	}
 
 	option = {
