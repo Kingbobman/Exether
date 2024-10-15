@@ -60,55 +60,6 @@
 			transfer_to_formation = scope:var_fleet
 		}
 	}
-	c:ORO ?= {
-		create_military_formation = {
-			type = army
-			hq_region = sr:region_south_toftir
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_RAHKIS
-				count = 8
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_hussars
-				state_region = s:STATE_RAHKIS
-				count = 2
-			}
-			save_scope_as = oro_army
-		}
-
-		create_character = {
-			is_general = yes
-			hq = region_south_toftir
-			save_scope_as = oro_general
-		}
-		scope:oro_general = {
-			transfer_to_formation = scope:oro_army
-		}
-
-		create_military_formation = {
-			type = fleet
-			hq_region = sr:region_south_toftir
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_frigate
-				state_region = s:STATE_RAHKIS
-				count = 8
-			}
-			save_scope_as = oro_fleet
-		}
-
-		create_character = {
-			is_admiral = yes
-			hq = region_south_toftir
-			save_scope_as = oro_admiral
-		}
-		scope:oro_admiral = {
-			transfer_to_formation = scope:oro_fleet
-		}
-	}
 	c:NRA ?= {
 		create_military_formation = {
 			type = army
@@ -653,6 +604,37 @@
 		}
 		scope:imr_general = {
 			transfer_to_formation = scope:imr_army
+		}
+	}
+
+	c:ORO ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_south_toftir
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_RAHKIS
+				count = 25
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_HADRA
+				count = 15
+			}
+
+			save_scope_as = oro_army
+		}
+
+		create_character = {
+			is_general = yes
+			commander_rank = commander_rank_2
+			hq = region_south_toftir
+			save_scope_as = oro_general
+		}
+		scope:oro_general = {
+			transfer_to_formation = scope:oro_army
 		}
 	}
 }
