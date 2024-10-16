@@ -3,7 +3,7 @@ from wand.image import Image
 from pathlib import Path
 
 for png_image in (
-    glob.iglob("gfx/interface/**/*.png", recursive=True)
+    glob.iglob("gfx/event_images/*.png", recursive=True)
     or glob.iglob("gfx/coat_of_arms/**/*.png")
     or glob.iglob("gfx/models/**/*.png")
 ):
