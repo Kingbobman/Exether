@@ -229,6 +229,35 @@ DUM = {
 
 }
 
+KLA = {
+	states = { 
+		STATE_KULUWANDU
+		STATE_KURUBBA
+        STATE_KUL_KEDLI
+        STATE_LUBVUDOLPA
+        STATE_PANTAMOLPO
+		STATE_KUTHOPAHOP
+		STATE_LAZILKEP
+	}
+
+	required_num_states = 4
+	
+	ai_will_do = { #if the AI is recognized and is not gulf naga, they will release this territory as a vassal
+		AND = {
+			is_country_type = recognized
+			NOT = {
+				OR = {
+					country_has_primary_culture = cu:gulf_naga
+					country_has_primary_culture = cu:jungle_naga
+				}
+				
+			}
+	} 
+
+	} 
+
+}
+
 CER = {
 	use_culture_states = yes
 
@@ -238,6 +267,26 @@ CER = {
 
 }
 
+YRI = {
+	use_culture_states = yes
+
+	required_num_states = 1
+	
+	ai_will_do = { always = no }
+}
+
+SPA = {
+	states = {
+		STATE_SPRANKELMEER
+		STATE_KLOMPPLEIN
+		STATE_KRULHOVEN
+		STATE_PIEPERHAVEN
+	}
+
+	required_num_states = 3
+	
+	ai_will_do = { always = no }
+}
 EME = {
 	use_culture_states = yes
 
@@ -299,6 +348,20 @@ SAI = {
 		STATE_DALKH
 		STATE_KAZKYL
 		STATE_SAINO
+	}
+
+	required_num_states = 2
+	
+	ai_will_do = { always = no }
+
+}
+
+SAP = {
+	
+	states = {
+		STATE_PANTAMOLPO
+		STATE_LAZILKEP
+		STATE_KUTHOPAHOP
 	}
 
 	required_num_states = 2
