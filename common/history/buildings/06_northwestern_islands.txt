@@ -1154,7 +1154,7 @@
 					building={ 
 						type="building_financial_district"
 						country="c:MVI"
-						levels=5
+						levels=6
 						region="STATE_GADIRIS"
 					}
 				}
@@ -2356,10 +2356,9 @@
 		region_state:ORO = {
 			create_building={
 				building="building_port"
-				level=1
+				level=2
 				reserves=1
-				activate_production_methods={ "pm_anchorage" }
-			}
+				activate_production_methods={ "pm_basic_port" }
 			}
 			create_building={
 				building="building_furniture_manufacturies"
@@ -2406,7 +2405,7 @@
                     building={ 
                         type="building_financial_district"
                         country="c:ORO"
-                        levels=1
+                        levels=2
                         region="STATE_SILENTWISP"
                    }
                 }
@@ -2458,8 +2457,60 @@
 			create_building={
 				building="building_port"
 				reserves=1
-				level = 1
-				activate_production_methods={ "pm_anchorage" }
+				level= 2
+				activate_production_methods={ "pm_basic_port" }
+			}
+			create_building={
+				building="building_textile_mills"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:oro"
+                        levels=1
+                        region="STATE_RAHKIS"
+                   }
+                }
+				reserves=1
+				activate_production_methods={ "pm_handsewn_clothes" "pm_traditional_looms" "pm_no_luxury_clothes" }
+			}
+			create_building={
+				building="building_fur_hunting_lodge"
+				add_ownership = {
+				  building = {
+					type="building_adventuring_guild"
+					country="c:ORO"
+					levels=1
+					region="STATE_RAHKIS"
+				  }
+				}
+				reserves=1
+				activate_production_methods={ "pm_trapping_teams" "pm_no_exotic" }
+			  }
+			create_building = {
+				building = "building_distillery"
+				add_ownership = {
+					building={ 
+						type="building_financial_district"
+						country="c:ORO"
+						levels=1
+						region="STATE_RAHKIS"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_basic_distillery" "pm_no_fruit" "pm_no_spice" }
+			}
+			create_building={
+				building="building_rye_farm"
+				add_ownership={ 
+					building={ 
+						type="building_manor_house"
+						country="c:ORO"
+						levels=5
+						region="STATE_RAHKIS"
+				   }
+				}
+				reserves=1
+				activate_production_methods={ "pm_simple_farming" "pm_potatoes" "pm_tools_disabled"  }
 			}
 			create_building={
 				building="building_tooling_workshops"
@@ -2493,7 +2544,7 @@
                     building={ 
                         type="building_financial_district"
                         country="c:ORO"
-                        levels=2
+                        levels=4
                         region="STATE_RAHKIS"
                    }
                 }
