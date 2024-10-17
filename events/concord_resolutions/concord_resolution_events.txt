@@ -197,7 +197,7 @@ concord_resolution_events.100 = {
 			has_variable = concord_member
 		}
 		is_player = no
-		country_rank = rank_value:great_power
+		country_rank >= rank_value:great_power
 		game_date >= 1956.1.1
 		NOR = {
 			has_global_variable = pending_resolution_concord
@@ -224,7 +224,7 @@ concord_resolution_events.101 = {
 			has_global_variable = pending_resolution_concord
 			has_global_variable = korean_resolution_complete
 			has_global_variable = korean_resolution_fail
-			exists = c:KOR
+		#	exists = c:KOR
 		}
 		game_date >= 1947.6.1
 	}

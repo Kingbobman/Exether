@@ -8,6 +8,7 @@ building_subsistence_farms = {
 		pmg_base_building_subsistence_farms
 		pmg_home_workshops_building_subsistence_farms
 		pmg_serfdom_building_subsistence_farms
+		pmg_racial_tech
 	}
 	
 	buildable = no
@@ -88,6 +89,27 @@ building_subsistence_terrace_farms = {
 		pmg_base_building_subsistence_terrace_farms
 		pmg_home_workshops_building_subsistence_terrace_farms
 		pmg_serfdom_building_subsistence_terrace_farms
+		
+	}
+	
+	buildable = no
+	expandable = no
+	downsizeable = no
+	min_raise_to_hire = 0.30
+	slaves_role = peasants
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+}
+
+building_subsistence_lichen_farms = {
+	building_group = bg_subsistence_agriculture
+	texture = "gfx/interface/icons/building_icons/building_subsistence_farm.dds"
+
+	production_method_groups = {
+		pmg_base_building_subsistence_lichen_farms
+		pmg_home_workshops_building_subsistence_lichen_farms
+		pmg_serfdom_building_subsistence_lichen_farms
 		
 	}
 	

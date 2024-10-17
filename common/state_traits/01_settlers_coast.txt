@@ -11,7 +11,7 @@ state_trait_lake_bossard = {
 	icon = "gfx/interface/icons/state_trait_icons/river.dds"
 	
 	modifier = {
-		state_infrastructure_add = 15
+		state_infrastructure_add = 20
 	}	
 }
 
@@ -36,11 +36,21 @@ state_trait_cauront_bay = {
 
 state_trait_plaguewood = {
 	icon = "gfx/interface/icons/state_trait_icons/resources_lumber.dds"
+	disabling_technologies = {
+		"orc_tech"
+	}
 	modifier = {
 		state_construction_mult = -0.2
 		state_infrastructure_mult = -0.2
+		state_non_homeland_mortality_mult = 0.25
+	}
+}
+
+state_trait_plaguewood_lumber = {
+	icon = "gfx/interface/icons/state_trait_icons/resources_lumber.dds"
+	modifier = {
 		goods_output_hardwood_mult = 0.25
-		state_non_homeland_mortality_mult = 0.15
+		battle_defense_owned_province_mult = 0.05
 	}
 }
 
@@ -60,7 +70,7 @@ state_trait_nogi_sands = {
     icon = "gfx/interface/icons/state_trait_icons/good_soils.dds"   
 	modifier = {
         building_group_bg_agriculture_throughput_add = 0.15
-	building_group_bg_plantations_throughput_add = 0.15
+		building_group_bg_plantations_throughput_add = 0.15
     }
 }
 
@@ -68,9 +78,8 @@ state_trait_the_chasm_delveroux = {
     icon = "gfx/interface/icons/state_trait_icons/resources_ore.dds"   
 	modifier = {
         building_coal_mine_throughput_add = 0.15
-		building_iron_mine_throughput_add = 0.10
-        state_laborers_mortality_mult = 0.10 
-        state_machinists_mortality_mult = 0.05
+		building_iron_mine_throughput_add = 0.15
+		state_infrastructure_mult = -0.05
     }
 }
 
@@ -124,3 +133,10 @@ state_trait_sirens_lagoon_fisheries = {
 	}
 }
 
+state_trait_moorweald_forest = {
+	icon = "gfx/interface/icons/state_trait_icons/resources_lumber.dds"
+	modifier = {
+		building_group_bg_logging_throughput_add = 0.1
+		building_group_bg_hunting_throughput_add = 0.1
+	}
+}

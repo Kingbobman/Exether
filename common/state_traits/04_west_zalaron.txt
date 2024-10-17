@@ -26,7 +26,7 @@ state_trait_salt_wastes_extra_evil = {
 
 state_trait_lake_thalori = {
 	icon = "gfx/interface/icons/state_trait_icons/river.dds"
-	modifier = { state_infrastructure_add = 15 }
+	modifier = { state_infrastructure_add = 20 }
 }
 
 state_trait_silverspine_iron = {
@@ -94,4 +94,22 @@ state_trait_glimmervallei_sulfur_deposits = {
 	modifier = {
         building_sulfur_mine_throughput_add = 0.20
     }
+}
+
+state_trait_misery_steppe = {
+    icon = "gfx/interface/icons/building_icons/ectoplasm.dds"  
+	modifier = {
+        building_haunted_grounds_throughput_add = 0.10
+		state_migration_pull_mult = -0.15
+    }
+}
+
+state_trait_prowlhold = {
+    icon = "gfx/interface/icons/state_trait_icons/mountain.dds"
+		
+	modifier = {
+		state_infrastructure_mult = 0.10
+		battle_offense_owned_province_mult = 0.15
+		battle_defense_owned_province_mult = 0.15
+	}
 }

@@ -1,4 +1,4 @@
-# EXETHER church and sate laws
+﻿# EXETHER church and sate laws
 
 law_denominational_exclusion = {
 	group = lawgroup_church_and_state
@@ -51,6 +51,19 @@ law_denominational_exclusion = {
 
 	possible_political_movements = {
 		law_total_separation
+	}
+
+	can_impose = {
+		OR = {
+			AND = {
+				is_in_same_power_bloc = scope:target_country
+				AND = {
+					modifier:country_can_impose_same_lawgroup_church_and_state_in_power_bloc_bool = yes
+					has_law = scope:law
+				}
+			}
+			can_impose_law_default = yes
+		}
 	}
 
 	pop_support = {

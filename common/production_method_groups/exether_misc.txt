@@ -1,20 +1,10 @@
-﻿
-pmg_rusttails = {
+﻿pmg_rusttails = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		pm_no_special_fish
 		pm_rusttail_fishing
 		pm_intensified_rusttail_fishing
 		pm_magebred_rusttail_fish_farming
-	}
-}
-
-pmg_blubberfish = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	production_methods = {
-		pm_no_special_fish
-		pm_early_blubberfish_harvesting
-		pm_dedicated_blubberfish_harvesting
 	}
 }
 
@@ -32,6 +22,7 @@ pmg_goldfish = {
 	production_methods = {
 		pm_no_special_fish
 		pm_early_goldfish_harvesting
+		pm_organized_goldfish_harvesting
 		pm_dedicated_goldfish_harvesting
 	}
 }
@@ -41,6 +32,7 @@ pmg_squidlets = {
 	production_methods = {
 		pm_no_special_fish
 		pm_early_squidlets_harvesting
+		pm_organized_squidlets_harvesting
 		pm_dedicated_squidlets_harvesting
 	}
 }
@@ -60,22 +52,6 @@ pmg_monster_hunters_squids = { #HUNTING BIGGER SQUIDS
 		pm_no_monster_hunters
 		pm_maritime_adventuring_parties
 		pm_squid_squads
-	}
-}
-
-pmg_regional_mimosa = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	production_methods = {
-		pm_no_regional_logging
-		pm_mimosa_trees
-	}
-}
-
-pmg_syrup_trees = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	production_methods = {
-		pm_no_regional_logging
-		pm_canada_reference_here
 	}
 }
 
@@ -106,20 +82,21 @@ pmg_base_building_logging_camp_stonewood = {
 	}
 }
 
+pmg_cactus_fruit = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		pm_no_cactus_fruit
+		pm_cactus_fruit
+		pm_increased_cactus_fruit
+	}
+}
+
 pmg_base_building_logging_camp_crystalwood = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		pm_simple_forestry_crystalwood
 		pm_saw_mills_crystalwood
 		pm_electric_saw_mills_crystalwood
-	}
-}
-
-pmg_liquortrees = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	production_methods = {
-		pm_no_regional_logging
-		pm_liquortrees
 	}
 }
 
@@ -195,12 +172,12 @@ pmg_base_building_desert_hunting_lodge = {
 	}
 }
 
-pmg_hunting_chimesilt = {
+pmg_hunting_dye = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
 	production_methods = {
-		pm_no_hunting_chimesilt
-		pm_hunting_chimesilt
-		pm_increased_hunting_chimesilt
+		pm_no_hunting_dyes
+		pm_hunting_dyes
+		pm_increased_hunting_dyes
 	}
 }
 
@@ -222,3 +199,11 @@ pmg_hunting_khus_chimesilt = {
 	}
 }
 
+pmg_base_building_hippo_ranches = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_simple_hippo_ranching
+		pm_butchering_tools_hippos
+		pm_slaughterhouses_hippos
+	}
+}

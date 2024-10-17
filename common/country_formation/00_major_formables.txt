@@ -20,7 +20,7 @@
 				country_has_primary_culture = cu:qinnaat
 				country_has_primary_culture = cu:azmaraan
 			}	
-			has_technology_researched = nationalism	
+			has_technology_researched = pan-nationalism
 		}
 	}
 }
@@ -71,14 +71,16 @@ TLA = {
 			country_has_primary_culture = cu:littoral_thalorian
 			country_has_primary_culture = cu:heartland_thalorian
 			country_has_primary_culture = cu:lake_thalorian
+			country_has_primary_culture = cu:gnome_thalorian
 		}	
 		any_country = {
 			OR = {
 				country_has_primary_culture = cu:littoral_thalorian
 				country_has_primary_culture = cu:heartland_thalorian
 				country_has_primary_culture = cu:lake_thalorian
+				country_has_primary_culture = cu:gnome_thalorian
 			}	
-			has_technology_researched = nationalism	
+			has_technology_researched = pan-nationalism
 		}
 	}
 }
@@ -91,22 +93,33 @@ NBI = {
 	unification_play = dp_unify_nagabumi
 	leadership_play = dp_leadership_nagabumi
 
-	required_states_fraction = 0.7
+	required_states_fraction = 0.8
 	
 	ai_will_do = { always = yes }
 
 	possible = {
 		OR = {
-			country_has_primary_culture = cu:gulf_naga
-			country_has_primary_culture = cu:jungle_naga
+			AND = {
+				OR = {
+					country_has_primary_culture = cu:gulf_naga
+					country_has_primary_culture = cu:jungle_naga
+				}
+				OR = {
+					has_modifier = toldek_paseb
+					has_modifier = jihduk_paseb
+				}
+			}
+
+			AND = {
+				any_country = {
+					OR = {
+						country_has_primary_culture = cu:gulf_naga
+						country_has_primary_culture = cu:jungle_naga
+					}	
+					has_technology_researched = nationalism	
+				}
+			}
 		}	
-		any_country = {
-			OR = {
-				country_has_primary_culture = cu:gulf_naga
-				country_has_primary_culture = cu:jungle_naga
-			}	
-			has_technology_researched = nationalism	
-		}
 	}
 }
 

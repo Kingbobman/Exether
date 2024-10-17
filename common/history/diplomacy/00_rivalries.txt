@@ -1,6 +1,18 @@
 ﻿DIPLOMACY = {
-	
-
+	c:FLU ?= {
+	}
+	c:DIS ?= {
+		create_diplomatic_pact = {
+			country = c:VAI
+			type = rivalry
+		}
+	}
+	c:VAI ?= {
+		create_diplomatic_pact = {
+			country = c:DIS
+			type = rivalry
+		}
+	}
 	c:TLE ?= {
 		create_diplomatic_pact = {
 			country = c:RAV
@@ -13,7 +25,60 @@
 			type = rivalry
 		}
 	}	
-
+	c:RAV ?= {
+		create_diplomatic_pact = {
+			country = c:VAI
+			type = rivalry
+		}
+	}	
+	c:VAI ?= {
+		create_diplomatic_pact = {
+			country = c:RAV
+			type = rivalry
+		}
+	}	
+	c:SNB ?= {
+		create_diplomatic_pact = {
+			country = c:TSH
+			type = rivalry
+		}
+		create_diplomatic_pact = {
+			country = c:THK
+			type = rivalry
+		}
+		create_diplomatic_pact = {
+			country = c:KHD
+			type = rivalry
+		}
+		create_diplomatic_pact = {
+			country = c:HOZ
+			type = rivalry
+		}
+	}
+	c:HOZ ?= {
+		create_diplomatic_pact = {
+			country = c:SNB
+			type = rivalry
+		}
+	}
+	c:TSH ?= {
+		create_diplomatic_pact = {
+			country = c:SNB
+			type = rivalry
+		}
+	}
+	c:KHD ?= {
+		create_diplomatic_pact = {
+			country = c:SNB
+			type = rivalry
+		}
+	}
+	c:THK ?= {
+		create_diplomatic_pact = {
+			country = c:SNB
+			type = rivalry
+		}
+	}
 	c:XXP ?= {
 		create_diplomatic_pact = {
 			country = c:OPA
@@ -23,6 +88,18 @@
 	c:OPA ?= {
 		create_diplomatic_pact = {
 			country = c:XXP
+			type = rivalry
+		}
+	}
+	c:PVA ?= {
+		create_diplomatic_pact = {
+			country = c:RLP
+			type = rivalry
+		}
+	}
+	c:RLP ?= {
+		create_diplomatic_pact = {
+			country = c:PVA
 			type = rivalry
 		}
 	}		

@@ -85,22 +85,22 @@ ai_has_enact_weight_modifier_journal_entries = {
 
 has_je_conquest_reason = {
 	can_reach_target_country = yes
-
 	OR = {
 		AND = {
-			exists = c:EGY
-			$TARGET$ = c:EGY		
+			always = no
+			exists = c:DUM
+			$TARGET$ = c:DUM		
 		}
 	}
 }
 
 has_je_subjugation_reason = {
 	can_reach_target_country = yes
-
 	OR = {
 		AND = {
-			exists = c:EGY
-			$TARGET$ = c:EGY		
+			always = no
+			exists = c:DUM
+			$TARGET$ = c:DUM		
 		}
 	}
 }
@@ -108,11 +108,11 @@ has_je_subjugation_reason = {
 has_je_befriend_reason = {
 	can_reach_target_country = yes
 	country_rank <= $TARGET$.country_rank
-	
 	OR = {
 		AND = {
-			exists = c:EGY
-			$TARGET$ = c:EGY		
+			always = no
+			exists = c:DUM
+			$TARGET$ = c:DUM		
 		}
 	}
 }
@@ -120,11 +120,11 @@ has_je_befriend_reason = {
 has_je_protect_reason = {
 	can_reach_target_country = yes
 	country_rank > $TARGET$.country_rank
-	
 	OR = {
 		AND = {
-			exists = c:EGY
-			$TARGET$ = c:EGY		
+			always = no
+			exists = c:DUM
+			$TARGET$ = c:DUM		
 		}
 	}
 }

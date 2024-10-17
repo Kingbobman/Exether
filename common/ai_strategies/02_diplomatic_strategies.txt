@@ -561,7 +561,7 @@ ai_strategy_colonial_expansion = {
 		}	
 
 		if = {
-			limit = { country_rank = rank_value:great_power }
+			limit = { country_rank >= rank_value:great_power }
 			add = 5
 		}			
 		
@@ -686,7 +686,7 @@ ai_strategy_armed_isolationism = {
 	
 	possible = {
 		is_subject = no
-		NOT = { country_rank = rank_value:great_power }
+		NOT = { country_rank >= rank_value:great_power }
 		NOT = { has_radical_leftist_government = yes }
 	}
 	
@@ -709,7 +709,7 @@ ai_strategy_armed_isolationism = {
 		}	
 
 		if = {
-			limit = { country_rank = rank_value:great_power }
+			limit = { country_rank >= rank_value:great_power }
 			multiply = 0.1
 		}			
 		
@@ -987,7 +987,7 @@ ai_strategy_economic_imperialism = {
 		
 			if = {
 				limit = {
-					country_rank = rank_value:great_power
+					country_rank >= rank_value:great_power
 					can_reach_target_country = yes
 					scope:target_country = {
 						has_law = law_type:law_isolationism
@@ -1010,7 +1010,7 @@ ai_strategy_economic_imperialism = {
 		
 			if = {
 				limit = {
-					country_rank = rank_value:great_power
+					country_rank >= rank_value:great_power
 					can_reach_target_country = yes
 					scope:target_country = {
 						has_law = law_type:law_isolationism
@@ -1037,7 +1037,7 @@ ai_strategy_economic_imperialism = {
 		NOT = { has_law = law_type:law_isolationism }
 		OR = {
 			country_rank = rank_value:major_power
-			country_rank = rank_value:great_power
+			country_rank >= rank_value:great_power
 		}	
 	}
 
@@ -1045,7 +1045,7 @@ ai_strategy_economic_imperialism = {
 		value = 10		
 
 		if = {
-			limit = { country_rank = rank_value:great_power }
+			limit = { country_rank >= rank_value:great_power }
 			add = 10
 		}
 
@@ -1203,7 +1203,7 @@ ai_strategy_socialism_in_one_country = {
 		}	
 
 		if = {
-			limit = { country_rank = rank_value:great_power }
+			limit = { country_rank >= rank_value:great_power }
 			multiply = 0.25
 		}			
 		
@@ -1418,7 +1418,7 @@ ai_strategy_world_revolution = {
 		}	
 
 		if = {
-			limit = { country_rank = rank_value:great_power }
+			limit = { country_rank >= rank_value:great_power }
 			multiply = 1.25
 		}			
 		
@@ -1936,6 +1936,7 @@ ai_strategy_unify_thaloria = {
 					country_has_primary_culture = cu:lake_thalorian
 					country_has_primary_culture = cu:littoral_thalorian
 					country_has_primary_culture = cu:heartland_thalorian
+					country_has_primary_culture = cu:gnome_thalorian
 					}
 				}
 			}
@@ -1965,6 +1966,7 @@ ai_strategy_unify_thaloria = {
 					country_has_primary_culture = cu:lake_thalorian
 					country_has_primary_culture = cu:littoral_thalorian
 					country_has_primary_culture = cu:heartland_thalorian
+					country_has_primary_culture = cu:gnome_thalorian
 					}
 				}
 			}
@@ -2018,6 +2020,7 @@ ai_strategy_unify_thaloria = {
 						is_homeland = cu:lake_thalorian
 						is_homeland = cu:littoral_thalorian
 						is_homeland = cu:heartland_thalorian
+						is_homeland = cu:gnome_thalorian
 						}
 					}
 				}
@@ -2042,6 +2045,7 @@ ai_strategy_unify_thaloria = {
 							country_has_primary_culture = cu:lake_thalorian
 							country_has_primary_culture = cu:littoral_thalorian
 							country_has_primary_culture = cu:heartland_thalorian
+							country_has_primary_culture = cu:gnome_thalorian
 						}
 						NOT = { is_unification_candidate = TLA }
 						OR = { 
@@ -2062,6 +2066,7 @@ ai_strategy_unify_thaloria = {
 							country_has_primary_culture = cu:lake_thalorian
 							country_has_primary_culture = cu:littoral_thalorian
 							country_has_primary_culture = cu:heartland_thalorian
+							country_has_primary_culture = cu:gnome_thalorian
 						}					
 						NOT = { is_unification_candidate = TLA }
 						NOR = { 

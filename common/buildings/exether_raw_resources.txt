@@ -7,7 +7,7 @@
 	terrain_manipulator = mining
 	
 	unlocking_technologies = {
-		cloudsilver_refining
+		shaft_mining
 	}
 
 	production_method_groups = {
@@ -15,7 +15,6 @@
 		pmg_arcane_building_cloud_collector
 		pmg_steam_automation_building_iron_mine
 		pmg_train_automation_building_iron_mine
-		
 	}
 
 	
@@ -39,6 +38,7 @@
 	production_method_groups = {
 		pmg_wishstone_gathering
 		pmg_wishstone_mirrors
+		pmg_magic_automation
 		pmg_wishstone_transport
 	}
 
@@ -113,17 +113,39 @@ building_wishstone_reefs = {
 	}
 
 	possible = {
-		error_check = {
-			severity = fail
-			is_sea_adjacent = yes
-		}
+		is_sea_adjacent = yes #removed to give more possiblitys to devs, Copying building_fishing_wharf ##leaving this one on for split state purposes, we can just use regular wishstone mines on land
+	}
+	ownership_type = self
+}
+
+building_ship_graveyard = {
+	building_group = bg_ship_graveyard
+	texture = "gfx/interface/icons/building_icons/wishstone_reefs.dds"
+	city_type = port
+	levels_per_mesh = 5
+	required_construction = construction_cost_medium
+
+	unlocking_technologies = {
+		hydraulic_cranes
+	}
+	
+	production_method_groups = {
+		pmg_base_building_ship_graveyard
+		pmg_potions_ship_graveyard
+		pmg_transportation_building_ship_graveyard
+		
+		
+	}
+
+	possible = {
+		is_sea_adjacent = yes
 	}
 	ownership_type = self
 }
 
 building_blubber_plants = {
 	building_group = bg_heavy_industry
-	texture = "gfx/interface/icons/building_icons/synthetics_plants.dds"
+	texture = "gfx/interface/icons/building_icons/blubber_plant.dds"
 	city_type = city
 	levels_per_mesh = 5
 	
@@ -140,15 +162,11 @@ building_blubber_plants = {
 	required_construction = construction_cost_very_high
 
 	possible = {
-		error_check = {
-			severity = fail
-			this = {
-				owner = { 
-					NOT = { has_law = law_type:law_industry_banned } 
-				}
-			}
+		owner = { 
+			NOT = { has_law = law_type:law_industry_banned } 
 		}
 	}
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_heavy_industry.dds"
 }
 
 building_squid_squad = {
@@ -165,10 +183,7 @@ building_squid_squad = {
 	}
 		
 	possible = {
-		error_check = {
-			severity = fail
-			is_sea_adjacent = yes
-		}
+		#is_sea_adjacent = yes #removed to give more possiblitys to devs, Copying building_fishing_wharf
 	}
 
 	ownership_type = self
@@ -189,16 +204,14 @@ building_seasnake_wharf = {
 	}
 	
 	possible = {
-		error_check = {
-			severity = fail
-			is_sea_adjacent = yes
-		}
+		is_sea_adjacent = yes
 	}
 
 	ownership_type = self
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_fishing.dds"
 }
+
 building_krakeneer_outpost = { 
 	building_group = bg_fishing
 	texture = "gfx/interface/icons/building_icons/fishing_wharf.dds"
@@ -212,10 +225,7 @@ building_krakeneer_outpost = {
 	}
 	
 	possible = {
-		error_check = {
-			severity = fail
-			is_sea_adjacent = yes
-		}
+		is_sea_adjacent = yes
 	}
 
 	ownership_type = self
@@ -235,16 +245,14 @@ building_medium_sea_monster_outpost = { #sharks?  hydro-hydras??
 	}
 	
 	possible = {
-		error_check = {
-			severity = fail
-			is_sea_adjacent = yes
-		}
+		is_sea_adjacent = yes
 	}
 
 	ownership_type = self
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_fishing.dds"
 }
+
 building_leviathan_outpost = {
 	building_group = bg_leviathan_outpost
 	texture = "gfx/interface/icons/building_icons/whaling_station.dds"
@@ -257,106 +265,12 @@ building_leviathan_outpost = {
 	}
 	
 	possible = {
-		error_check = {
-			severity = fail
-			is_sea_adjacent = yes
-		}
+		is_sea_adjacent = yes
 	}
 
 	ownership_type = self
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_fishing.dds"
-}
-
-building_fishing_wharf_rusttails = {
-	building_group = bg_fishing_rusttails
-	texture = "gfx/interface/icons/building_icons/rusttail.dds"
-	city_type = port
-	required_construction = construction_cost_low
-
-	production_method_groups = {
-		pmg_base_building_fishing_wharf
-		pmg_rusttails
-		pmg_refrigeration_building_fishing_wharf
-		
-	}
-
-	ownership_type = self
-
-	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_fishing.dds"
-}
-
-building_fishing_wharf_blubberfish = {
-	building_group = bg_fishing_blubberfish
-	texture = "gfx/interface/icons/building_icons/fishing_wharf.dds"
-	city_type = port
-	required_construction = construction_cost_low
-
-	production_method_groups = {
-		pmg_base_building_fishing_wharf
-		pmg_blubberfish
-		pmg_refrigeration_building_fishing_wharf
-		
-	}
-
-	ownership_type = self
-
-	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_fishing.dds"
-}
-
-building_fishing_wharf_goldfish = {
-	building_group = bg_fishing_goldfish
-	texture = "gfx/interface/icons/building_icons/true_goldfish.dds"
-	city_type = port
-	required_construction = construction_cost_low
-
-	production_method_groups = {
-		pmg_base_building_fishing_wharf
-		pmg_goldfish
-		pmg_refrigeration_building_fishing_wharf
-		
-	}
-
-	ownership_type = self
-
-	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_fishing.dds"
-}
-
-building_fishing_wharf_glowfish = {
-	building_group = bg_fishing_glowfish
-	texture = "gfx/interface/icons/building_icons/lanternfish.dds"
-	city_type = port
-	required_construction = construction_cost_low
-
-	production_method_groups = {
-		pmg_base_building_fishing_wharf
-		pmg_glowfish
-		pmg_refrigeration_building_fishing_wharf
-		
-	}
-
-	ownership_type = self
-
-	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_fishing.dds"
-}
-
-building_dragon_ruins = {
-	building_group = bg_dragon_ruins
-	texture = "gfx/interface/icons/building_icons/logging_camp.dds" #change this
-	city_type = wood
-	required_construction = construction_cost_low
-	terrain_manipulator = forestry
-	levels_per_mesh = 5
-
-	production_method_groups = {
-		pmg_equipment_dragon_ruins
-		pmg_dragon_trinket_priority
-		pmg_train_automation_building_dragon_ruins
-	}
-	cannot_switch_owner = yes
-	ownership_type = self
-
-	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
 }
 
 # Underground survival
@@ -376,7 +290,7 @@ building_underfarm = {
 	production_method_groups = {
 		pmg_base_building_underfarm
 		pmg_secondary_building_underfarm
-		pmg_harvesting_process_building_rye_farm
+		pmg_harvesting_process_building_rice_farm
 		pmg_farms_enhancements
 	}
 

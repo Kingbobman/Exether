@@ -1675,6 +1675,49 @@
             }
         }
     }
+    
+    historical_karl_marx_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = waistcoats
+                template = historical_waistcoats_madero
+                range = { 0 1 }
+            }
+ 
+            accessory = {
+                mode = add
+                gene = civilian_coats
+                template = european_civilian_coat_black
+                range = { 0 1 } # For the randomness to work correctly
+            }
+ 
+            accessory = {
+                 mode = add
+                 gene = legwear
+                 template = european_legwear
+                 range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+
+        weight = {
+            base = 0
+            modifier = {
+                add = 90000
+                scope:character ?= {
+                    OR = {
+                        always = no
+                        #has_template = agitator_karl_marx
+                        #has_template = agitator_charlie_marx
+                    }
+                    NOR = {
+                        has_role = general
+                        has_role = admiral
+                    }
+                }
+            }
+        }
+    }
 
 ### BACK TO YOUR REGULAR SCHEDULED PROGRAMMING ###
 
@@ -2016,12 +2059,27 @@
                 scope:character = {
                     is_female = no
 
-                    owner ?= {
-                        is_in_power_bloc = yes
-                        power_bloc ?= {
-                            has_identity = identity:identity_military_treaty_organization
+                    OR = {
+                        AND = {
+                            owner ?= {
+                                is_in_power_bloc = yes
+                                power_bloc ?= {
+                                    has_identity = identity:identity_religious
+                                }
+                                religion = rel:rose_court
+                            }
+                        }
+                        AND = {
+                            owner ?= {
+                                is_in_power_bloc = yes
+                                power_bloc ?= {
+                                    has_identity = identity:identity_military_treaty_organization
+                                }
+                            }
                         }
                     }
+
+      
                 }
                 OR = {
                     european_clothes_trigger = yes
@@ -2428,11 +2486,21 @@
 
                 american_clothes_pop_trigger = yes
                 OR = {
-                    AND = {
-                        c:VAI ?= {
-                            NOT = { has_technology_researched = bolt_action_rifles }
-                        }
-                        american_clothes_pop_trigger = yes
+                    officers_clothes_pop_trigger = yes
+                    soldier_clothes_pop_trigger = yes
+                }
+            }
+            modifier = {
+                add = 10000
+
+                american_clothes_trigger = yes
+                scope:character ?= {
+                    age >= define:NCharacters|ADULT_AGE
+                    is_female = no
+                }
+                OR = {
+                    monarchy_clothes_trigger = yes
+                    scope:character ?= {
                         OR = {
                             has_role = general
                             has_role = admiral
@@ -2465,7 +2533,7 @@
         weight = {
             base = 0
             modifier = {
-                add = 10000
+                add = 20000
                 c:VAI ?= {
                     has_technology_researched = bolt_action_rifles
                 }
@@ -3128,7 +3196,7 @@
                 scope:character ?= {
                     age >= define:NCharacters|ADULT_AGE
                     OR = {
-                        religion = rel:horse_worship
+                        religion = rel:skystride
                         culture = cu:yanger
                         culture = cu:nivaskyan
                     }
@@ -3156,7 +3224,7 @@
                     OR = {
                         AND = {
                             OR = {
-                                religion = rel:horse_worship
+                                religion = rel:skystride
                                 culture = cu:yanger
                                 culture = cu:nivaskyan
                             }
@@ -3177,7 +3245,7 @@
                 scope:character ?= {
                     age >= define:NCharacters|ADULT_AGE
                     OR = {
-                        religion = rel:horse_worship
+                        religion = rel:skystride
                         culture = cu:yanger
                         culture = cu:nivaskyan
                     }

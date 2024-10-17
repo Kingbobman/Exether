@@ -1,4 +1,4 @@
-﻿pm_wooden_buildings = {
+pm_wooden_buildings = {
 	texture = "gfx/interface/icons/production_method_icons/wooden_buildings.dds"
 	
 	is_default = yes
@@ -72,45 +72,6 @@ pm_iron_frame_buildings = {
 	}
 }
 
-pm_early_cloudsilver_buildings = { 
-	texture = "gfx/interface/icons/production_method_icons/iron_frame_buildings.dds"
-	
-	unlocking_technologies = {
-		cloudsilver_refining
-	}
-
-	country_modifiers = {
-		workforce_scaled = {
-			country_construction_add = 5
-		}
-
-	}
-	building_modifiers = {
-		workforce_scaled = {
-			goods_input_iron_add = 10 #40 = 400
-			goods_input_fabric_add = 20 #20 = 400
-			goods_input_cloudsilver_add = 49 #45 = 2200
-			goods_input_tools_add = 15 #40 = 600     == 3600 expenses
-		}
-	
-		level_scaled = {
-			building_employment_bureaucrats_add = 250
-			building_employment_clerks_add = 500
-			building_employment_machinists_add = 1000
-			building_employment_laborers_add = 3000
-			building_employment_engineers_add = 250
-		}
-		unscaled = {
-			building_laborers_mortality_mult = 0.05
-		}
-	}
-	
-	state_modifiers = {
-		workforce_scaled = {
-			state_construction_mult = 0.005
-		}	
-	}
-}
 
 pm_steel_frame_buildings = {
 	texture = "gfx/interface/icons/production_method_icons/steel_frame_buildings.dds"
@@ -127,10 +88,10 @@ pm_steel_frame_buildings = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_steel_add = 50
-			goods_input_glass_add = 40
-			goods_input_explosives_add = 10
-			goods_input_tools_add = 20
+			goods_input_steel_add = 50 #50 = 2500
+			goods_input_glass_add = 40 #40 = 1600
+			goods_input_explosives_add = 10 #50 = 500
+			goods_input_tools_add = 20 #40 = 800  == 5400
 		}
 
 		level_scaled = {
@@ -192,4 +153,134 @@ pm_arc_welded_buildings = {
 	}
 
 	required_input_goods = electricity
+}
+
+pm_normally_lifted_buildings = { 
+	texture = "gfx/interface/icons/production_method_icons/iron_frame_buildings.dds"
+	
+	unlocking_technologies = {
+		manufacturies
+	}
+}
+pm_cloudsilver_lifted_buildings = { 
+	texture = "gfx/interface/icons/production_method_icons/iron_frame_buildings.dds"
+	
+	unlocking_technologies = {
+		cloudsilver_harvesting
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_construction_add = 0.5
+		}
+
+	}
+	unlocking_production_methods = {
+			pm_iron_frame_buildings
+			pm_nimbium_lifted_buildings
+			pm_sky_lifted_buildings
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_iron_add = -20
+			goods_input_cloudsilver_add = 15
+			goods_input_gizmos_add = 5			
+			goods_input_tools_add = -5
+		}
+	
+		level_scaled = {
+			building_employment_machinists_add = -150
+			building_employment_laborers_add = -1000
+			building_employment_artificers_add = 1150			
+			building_laborers_mortality_mult = -0.001 #So at 30 levels it has -3% LabMort
+		}
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_construction_mult = 0.005
+		}	
+	}
+}
+
+pm_nimbium_lifted_buildings = { 
+	texture = "gfx/interface/icons/production_method_icons/iron_frame_buildings.dds"
+	
+	unlocking_technologies = {
+		floating_buildings
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_construction_add = 1
+		}
+
+	}
+	unlocking_production_methods = {
+			pm_steel_frame_buildings
+			pm_arc_welded_buildings
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_steel_add = -20
+			goods_input_nimbium_add = 15
+			goods_input_gizmos_add = 10	
+			goods_input_tools_add = -10
+		}
+	
+		level_scaled = {
+			building_employment_machinists_add = -300
+			building_employment_laborers_add = -1250
+			building_employment_artificers_add = 1550			
+			building_laborers_mortality_mult = -0.002 #So at 30 levels it has -6% LabMort
+		}
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_construction_mult = 0.007
+		}	
+	}
+}
+
+pm_sky_lifted_buildings = { 
+	texture = "gfx/interface/icons/production_method_icons/iron_frame_buildings.dds"
+	
+	unlocking_technologies = {
+		floating_empire
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_construction_add = 2
+		}
+
+	}
+	unlocking_production_methods = {
+			pm_steel_frame_buildings
+			pm_arc_welded_buildings
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_steel_add = -20
+			goods_input_nimbium_add = 15
+			goods_input_gizmos_add = 15	
+			goods_input_airships_add = 5
+			goods_input_tools_add = -15
+		}
+	
+		level_scaled = {
+			building_employment_machinists_add = -450
+			building_employment_laborers_add = -1500
+			building_employment_artificers_add = 1950			
+			building_laborers_mortality_mult = -0.003 #So at 30 levels it has -9% LabMort
+		}
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_construction_mult = 0.01
+		}	
+	}
 }

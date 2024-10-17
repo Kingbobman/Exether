@@ -89,7 +89,7 @@ state_trait_mammoth_cliffs = {
 	}
 }
 #Everfrost
-state_trait_birstall_range = {
+state_trait_gruaav_range = {
     icon = "gfx/interface/icons/state_trait_icons/mountain.dds"
 		
 	modifier = {
@@ -237,10 +237,6 @@ state_trait_mirazara_mountains = {
 
 state_trait_crescent_range = {
     icon = "gfx/interface/icons/state_trait_icons/mountain.dds"
-		
-	modifier = {
-		state_construction_mult = -0.05
-	}
 }
 
 #Rannor
@@ -310,14 +306,28 @@ state_trait_toftir_mountains = {
 
 state_trait_paylaz_mountains = {
     icon = "gfx/interface/icons/state_trait_icons/mountain.dds"
+	modifier = {
+		state_construction_mult = -0.05
+		state_infrastructure_mult = -0.05
+	}
 }
 
-state_trait_mindred_sands_mountains = {
+state_trait_mindrend_sands_mountains = {
     icon = "gfx/interface/icons/state_trait_icons/mountain.dds"
+	modifier = {
+		state_construction_mult = -0.1
+		state_infrastructure_mult = -0.1
+		building_opium_plantation_throughput_add = 0.15
+		building_group_bg_agriculture_throughput_add = -0.1
+	}
 }
 
-state_trait_west_mindred_sands_mountains = {
+state_trait_west_mindrend_sands_mountains = {
     icon = "gfx/interface/icons/state_trait_icons/mountain.dds"
+	modifier = {
+		state_construction_mult = -0.1
+		state_infrastructure_mult = -0.1
+	}
 }
 
 state_trait_dove_mountains = {
@@ -325,5 +335,9 @@ state_trait_dove_mountains = {
 }
 
 state_trait_anantadesh_mountains = {
+    icon = "gfx/interface/icons/state_trait_icons/mountain.dds"
+}
+
+state_trait_the_dirtmound = {
     icon = "gfx/interface/icons/state_trait_icons/mountain.dds"
 }

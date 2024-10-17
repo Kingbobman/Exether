@@ -17,6 +17,23 @@ state_building_airship_dock_max_level_add = {
 	}
 }
 
+state_building_soulwrought_assembly_plant_max_level_add={
+	decimals=0
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+state_building_observatory_max_level_add = {
+	color=good
+	percent = no
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
+
 state_building_military_shipyards_max_level_add  = {
 	color=good
 	percent = no
@@ -34,16 +51,6 @@ state_building_shipyards_max_level_add = {
 		ai_value=0
 	}
 }
-
-state_building_roads_max_level_add = {
-	color=good
-	percent = no
-	decimals=0
-	game_data={
-		ai_value=0
-	}
-}
-
 building_goods_output_mult = {
 	color=good
 	percent = yes
@@ -51,7 +58,9 @@ building_goods_output_mult = {
 		ai_value=0
 	}
 }
-building_gizmo_workshop_throughput_add = {
+
+building_group_bg_magic_manufacturing_throughput_add = {
+	decimals = 1
 	color = good
 	percent = yes
 	game_data={
@@ -102,7 +111,6 @@ state_adventurer_coverage_mult = {
 		ai_value=0
 	}
 }
-
 
 country_adventurers_pol_str_mult={
 	decimals=1
@@ -193,61 +201,34 @@ building_employment_wizards_add = {
 	}
 }
 
-country_wizards_pol_str_mult={
-	decimals=1
-	color=neutral
-	percent=yes
-	game_data={
-		ai_value=0
-	}
-}
-
-state_wizards_mortality_mult={
-	decimals=1
-	color=bad
-	percent=yes
-	game_data={
-		ai_value=0
-	}
-}
-
-
-building_wizards_mortality_mult={
-	decimals=1
-	color=bad
-	percent=yes
-	game_data={
-		ai_value=0
-	}
-}
-
-building_wizards_shares_add={
-	decimals=0
-	color=neutral
-	game_data={
-		ai_value=0
-	}
-}
-
-state_wizards_investment_pool_contribution_add={
-	decimals=0
-	color=good
-	percent=yes
-	game_data={
-		ai_value=0
-	}
-}
-
-state_wizards_investment_pool_efficiency_mult={
-	decimals=0
-	color=good
-	percent=yes
-	game_data={
-		ai_value=0
-	}
-}
-
 country_archmages_pol_str_mult={
+	decimals=1
+	color=neutral
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+
+country_archmages_voting_power_add={
+	decimals=1
+	color=neutral
+	game_data={
+		ai_value=0
+	}
+}
+
+building_employment_war_slaves_add={
+	decimals=0
+	color=neutral
+	game_data={
+		ai_value=0
+	}
+}
+
+# for ordering purposes
+country_wizards_pol_str_mult={
 	decimals=1
 	color=neutral
 	percent=yes
@@ -264,7 +245,6 @@ state_archmages_mortality_mult={
 		ai_value=0
 	}
 }
-
 
 building_archmages_mortality_mult={
 	decimals=1
@@ -301,6 +281,51 @@ state_archmages_investment_pool_efficiency_mult={
 	}
 }
 
+
+state_wizards_mortality_mult={
+	decimals=1
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_wizards_mortality_mult={
+	decimals=1
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_wizards_shares_add={
+	decimals=0
+	color=neutral
+	game_data={
+		ai_value=0
+	}
+}
+
+state_wizards_investment_pool_contribution_add={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_wizards_investment_pool_efficiency_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
 country_heroes_pol_str_mult={
 	decimals=1
 	color=neutral
@@ -318,7 +343,6 @@ state_heroes_mortality_mult={
 		ai_value=0
 	}
 }
-
 
 building_heroes_mortality_mult={
 	decimals=1
@@ -408,24 +432,6 @@ state_artificers_investment_pool_efficiency_mult={
 	}
 }
 
-country_magic_reserves_total_add = {
-	color=good
-	percent = no
-	decimals=0
-	game_data={
-		ai_value=0
-	}
-}
-
-country_magic_reserves_total_subtract = {
-	color=bad
-	percent = no
-	decimals=0
-	game_data={
-		ai_value=0
-	}
-}
-
 building_group_bg_military_throughput_add={
 	decimals=0
 	color=good
@@ -435,8 +441,26 @@ building_group_bg_military_throughput_add={
 	}
 }
 
+building_group_bg_manufacturing_throughput_mult={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_group_bg_mining_throughput_mult={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
 building_group_bg_rice_farms_leechgardens_throughput_add={
-	decimals=0
+	decimals=1
 	color=good
 	percent=yes
 	game_data={
@@ -445,9 +469,163 @@ building_group_bg_rice_farms_leechgardens_throughput_add={
 }
 
 building_group_bg_wishstone_mining_throughput_add={
-	decimals=0
+	decimals=1
 	color=good
 	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_leviathan_outpost_throughput_add={
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+country_renown_pos_add = {
+	color=good
+	percent = no
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
+
+country_renown_neg_add = {
+	color=good
+	percent = no
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
+
+country_renown_gen_mult = {
+	color=good
+	percent = yes
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
+
+country_renown_cost_mult = {
+	color=bad
+	percent = yes
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
+
+country_renown_upkeep = {
+	color=good
+	percent = no
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
+
+
+country_arcana_pos_add = {
+	color=good
+	percent = no
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
+
+country_arcana_neg_add = {
+	color=good
+	percent = no
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
+
+country_arcana_gen_mult = {
+	color=good
+	percent = yes
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
+
+country_arcana_cost_mult = {
+	color=bad
+	percent = yes
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
+
+country_arcana_upkeep = {
+	color=good
+	percent = no
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
+
+building_group_bg_public_infrastructure_throughput_add = {
+	color=good
+	percent = yes
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
+
+building_group_bg_airshipyards_throughput_add = {
+	color=good
+	percent = yes
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
+
+building_group_bg_trade_tax_mult = {
+	color=good
+	percent = yes
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
+
+state_archmages_standard_of_living_add = {
+	color=good
+	percent = no
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
+
+state_wizards_standard_of_living_add = {
+	color=good
+	percent = no
+	decimals=0
+	game_data={
+		ai_value=0
+	}
+}
+
+state_artificers_standard_of_living_add = {
+	color=good
+	percent = no
+	decimals=0
 	game_data={
 		ai_value=0
 	}
@@ -537,6 +715,24 @@ unit_combat_unit_type_cuirassiers_defense_mult = {
 
 unit_combat_unit_type_lancers_defense_mult = {
 	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_group_bg_hunting_throughput_add = {
+	decimals=1
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_haunted_grounds_throughput_add = {
+	decimals=1
 	color=good
 	percent=yes
 	game_data={

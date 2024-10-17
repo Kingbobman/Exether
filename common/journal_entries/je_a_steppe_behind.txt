@@ -1,5 +1,5 @@
 ﻿je_a_steppe_behind = {
-	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	icon = "gfx/interface/icons/event_icons/event_horse.dds"
 	
 	group = je_group_historical_content
 
@@ -12,7 +12,7 @@
             save_scope_as = dumonia_scope
         }
 		c:FOX?= {
-            save_scope_as = foxworth_scope
+            save_scope_as = stagworth_scope
         }
 	}
 	possible = {
@@ -86,7 +86,7 @@ on_fail = {
 
 		}
 		custom_tooltip = {
-			text = foxworth_steppe_rights_tt
+			text = stagworth_steppe_rights_tt
 			if = {
 				limit = {
 					exists = c:FOX
@@ -105,7 +105,7 @@ on_fail = {
 	
 		}
 		}
-		hidden = {
+		hidden_effect = {
 			trigger_event = { id = stepping_forward.7 }
 		}
 
@@ -113,7 +113,7 @@ on_fail = {
 }
 	timeout = 4380
 	on_timeout = {
-		hidden = {
+		hidden_effect = {
 
 		
 		activate_law = law_type:law_free_trade
@@ -140,7 +140,7 @@ on_fail = {
 
 		}
 		custom_tooltip = {
-			text = foxworth_steppe_rights_tt
+			text = stagworth_steppe_rights_tt
 			if = {
 				limit = {
 					exists = c:FOX
@@ -159,7 +159,7 @@ on_fail = {
 	
 		}
 		}
-		hidden = {
+		hidden_effect = {
 			trigger_event = { id = stepping_forward.7 }
 		}
 		}
@@ -183,7 +183,7 @@ je_a_steppe_forward = {
             save_scope_as = dumonia_scope
         }
 		c:FOX?= {
-            save_scope_as = foxworth_scope
+            save_scope_as = stagworth_scope
         }
 	}
 
@@ -230,7 +230,7 @@ je_a_steppe_forward = {
 	on_fail = {
 		remove_modifier = call_of_the_steppe
 		remove_modifier = last_of_the_horselords
-		hidden = {
+		hidden_effect = {
 			trigger_event = { id = stepping_forward.6 popup = yes }
 		}
 	}
@@ -295,7 +295,7 @@ je_about_a_horse = { #I have to see a man about a horse
 	}
 
 	fail = {
-		#hidden = {
+		#hidden_effect = {
 			AND = {
 				c:YAN = {
 					gdp_ownership_ratio = {

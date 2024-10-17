@@ -1,4 +1,4 @@
-#Intensify raids!
+﻿#Intensify raids!
 pirate_start_raids_button = {
 
     name = "pirate_start_raids_button_name"
@@ -9,6 +9,9 @@ pirate_start_raids_button = {
     }
     possible = {
         AND = {
+            NOT = {
+                has_variable = pirates_raiding
+            }
             0 > {
                 value = c:DUM.navy_size
 			    add = c:COV.navy_size
@@ -18,9 +21,6 @@ pirate_start_raids_button = {
 			    subtract = c:BTR.navy_size
 			    subtract = c:IMA.navy_size
 			    subtract = c:CCO.navy_size
-            }
-            NOT = {
-                has_variable = pirates_raiding
             }
         }
     }
@@ -32,15 +32,17 @@ pirate_start_raids_button = {
                     has_variable = first_raid_done
                 }
             }
-
             trigger_event = {
-			id = pirate_raid.1
+			id = pirate_raid.2
 			popup = yes
 		    }
-            set_variable = first_raid_done 
+            set_variable = {
+                name = first_raid_done 
+            }
         }
-        set_variable = pirates_raiding
-
+        set_variable = {
+            name = pirates_raiding
+        }
     }
 }
 
@@ -76,10 +78,12 @@ pirate_consolidation_1_button = {
     }
     effect = {
         trigger_event = {
-            id = pirate_raid.2
+            id = pirate_raid.3
             popup = yes
         }
-        set_variable = cove_raided
+        set_variable = {
+            name = cove_raided
+        }
         root = {
             create_diplomatic_pact = {
             country = scope:minor_pirate_1

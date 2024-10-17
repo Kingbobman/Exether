@@ -1,6 +1,6 @@
-# production
+﻿# production
 
-exether_pm_artifactory_hand_sorting = {
+pm_artifactory_hand_sorting = {
 
 	texture = "gfx/interface/icons/production_method_icons/crude_tools.dds"
 
@@ -15,7 +15,7 @@ exether_pm_artifactory_hand_sorting = {
 
         workforce_scaled = {
             goods_input_tools_add    = 6    # x40  = 240
-            goods_input_relics_add = 4    # x100 = 400
+            goods_input_relics_add = 8    # x50 = 400
 
             goods_output_trinkets_add = 5   # x200 = 1000
 
@@ -25,7 +25,7 @@ exether_pm_artifactory_hand_sorting = {
     }
 }
 
-exether_pm_artifactory_lenses_of_identification = {
+pm_artifactory_lenses_of_identification = {
 
 	texture = "gfx/interface/icons/production_method_icons/pig_iron_tools.dds"
 
@@ -44,7 +44,7 @@ exether_pm_artifactory_lenses_of_identification = {
         workforce_scaled = {
             goods_input_tools_add    = 6      # x40  = 240
             goods_input_gizmos_add   = 5      # x60  = 300
-            goods_input_relics_add = 6      # x100 = 600
+            goods_input_relics_add = 12      # x50 = 600
 
             goods_output_trinkets_add = 10    # x200 = 2000
 
@@ -56,7 +56,7 @@ exether_pm_artifactory_lenses_of_identification = {
 
 # oversight
 
-exether_pm_artifactory_adventurer_crews = {
+pm_artifactory_adventurer_crews = {
 
 	texture = "gfx/interface/icons/production_method_icons/state_atheism.dds"
 
@@ -68,7 +68,7 @@ exether_pm_artifactory_adventurer_crews = {
     }
 }
 
-exether_pm_artifactory_clergy_oversight = {
+pm_artifactory_clergy_oversight = {
 
 	texture = "gfx/interface/icons/production_method_icons/ownership_clergy.dds"
 
@@ -79,7 +79,7 @@ exether_pm_artifactory_clergy_oversight = {
     }
 }
 
-exether_pm_artifactory_government_run = {
+pm_artifactory_government_run = {
 
 	texture = "gfx/interface/icons/production_method_icons/ownership_bureacrats.dds"
 
@@ -92,7 +92,7 @@ exether_pm_artifactory_government_run = {
 
 # automation
 
-exether_pm_artifactory_no_automation = {
+pm_artifactory_no_automation = {
 
     texture = "gfx/interface/icons/production_method_icons/no_automation.dds"
 
@@ -102,15 +102,19 @@ exether_pm_artifactory_no_automation = {
     }
 }
 
-exether_pm_artifactory_conveyor_belts = {
+pm_artifactory_conveyor_belts = {
 
 	texture = "gfx/interface/icons/production_method_icons/assembly_lines.dds"
 
     unlocking_technologies = {
-        assembly_lines
+        conveyors
 	}
 
 	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_tools_add = 5		# x40 = 400
+		}
 	    level_scaled = {
             building_employment_laborers_add   = -1000
 	    }

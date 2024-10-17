@@ -74,6 +74,35 @@ DRM = {
 	ai_will_do = { always = no }
 }
 
+FMJ = {
+	states = { 
+		STATE_CHEJATAN_DO
+		STATE_MDLEMNO_KETHIN
+	}
+	required_num_states = 1
+
+	ai_will_do = { always = no }
+}
+
+LPS = {
+	states = { 
+		STATE_JUALALA
+		STATE_MAJIWAZIRI
+		STATE_SWAHAKLONG
+	}
+	required_num_states = 1
+
+	ai_will_do = { always = no }
+}
+PRO = {
+	states = { 
+		STATE_PWANIQILIMA
+	}
+	required_num_states = 1
+
+	ai_will_do = { always = no }	
+}
+
 DRK = {
 	states = { 
 		STATE_CASTELL_DRYSGOLMARK
@@ -263,3 +292,193 @@ DRO = {
 
 }
 
+MVI = {
+	states = {
+		STATE_ZUCARA
+		STATE_GADIRIS
+		STATE_BYSSYRA
+	}
+	required_num_states = 1
+
+	ai_will_do = { AND = {
+		c:DIS ?= this
+		has_journal_entry = je_dragonblight 
+	} 
+}
+}
+
+IAL = {
+	states = {
+		STATE_RUSARYA
+	}
+	required_num_states = 1
+
+	ai_will_do = { 
+		AND = {
+			c:DIS ?= this
+			has_journal_entry = je_dragonblight 
+		} 
+	}
+}
+
+IMR = {
+	states = {
+		STATE_ZAMARA
+		STATE_LEPTORIA
+	}
+	required_num_states = 1
+
+	ai_will_do = { AND = {
+		c:DIS ?= this
+		has_journal_entry = je_dragonblight 
+	} 
+}
+}
+SVN = {
+	states = {
+		STATE_EBYSS
+		STATE_GADYRUS
+	}
+	required_num_states = 1
+
+	ai_will_do = { 
+		AND = {
+			c:DIS ?= this
+			has_journal_entry = je_dragonblight 
+		} 
+	}
+}
+
+TKR = {
+	states = {
+		STATE_BYRTHAS
+		STATE_HADRA
+	}
+	required_num_states = 1
+
+	ai_will_do = { 
+		AND = {
+			c:DIS ?= this
+			has_journal_entry = je_dragonblight 
+		} 
+	}
+}
+
+RKO = {
+	states = {
+		STATE_EBYSUS
+		STATE_KURTHARA
+	}
+	required_num_states = 1
+
+	ai_will_do = { 
+		AND = {
+			c:DIS ?= this
+			has_journal_entry = je_dragonblight 
+		} 
+	}
+}
+
+GUR = {
+	states = {
+		STATE_MYSARA
+		STATE_THYRIS
+		STATE_ZABARA
+	}
+	required_num_states = 1
+
+	ai_will_do = { 
+		AND = {
+			c:DIS ?= this
+			has_journal_entry = je_dragonblight 
+		} 
+	}
+}
+
+ORO = {
+	states = {
+		STATE_SILENTWISP
+		STATE_SAMIEL
+		STATE_RAHKIS
+		STATE_GUHKESLUOKTA
+		STATE_AIRU
+		STATE_ELVERA
+		STATE_AKNU
+
+	}
+	required_num_states = 3
+
+	ai_will_do = { 
+		AND = {
+			c:DIS ?= this
+			has_journal_entry = je_dragonblight 
+		} 
+	}
+}
+
+MGR = {
+	states = {
+		STATE_TROPOJA
+		STATE_HUTSULANE
+		STATE_NYZHNE_SENIA
+		STATE_BREZHKE
+		STATE_SHKUMBINIA
+	}
+	required_num_states = 2
+
+	ai_will_do = { 
+		AND = {
+			c:DIS ?= this
+			has_journal_entry = je_dragonblight 
+		} 
+	}
+}
+
+KVA = {
+	states = {
+		STATE_CYRRA
+		STATE_OYSSARA
+		STATE_LEPTARIA
+	}
+	required_num_states = 1
+
+	ai_will_do = { 
+		AND = {
+			c:DIS ?= this
+			has_journal_entry = je_dragonblight 
+		} 
+	}
+}
+
+KHE = {
+	states = {
+		STATE_OSTATU
+		STATE_TXINPART
+		STATE_TIHAR
+	}
+	required_num_states = 1
+
+	ai_will_do = { 
+		AND = {
+			c:DIS ?= this
+			has_journal_entry = je_dragonblight 
+		} 
+	}
+}
+
+QAR = {
+	states = {
+		STATE_WHIRINAKI
+		STATE_RAROMARA
+		STATE_PATARENI
+		STATE_PUCOVATU
+	}
+	required_num_states = 2
+
+	ai_will_do = { 
+		AND = {
+			c:DIS ?= this
+			has_journal_entry = je_dragonblight 
+		} 
+	}
+}

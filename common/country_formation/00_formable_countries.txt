@@ -36,6 +36,7 @@ UTS = {
 			c:DRO ?= this
 		}
 		has_technology_researched = pan-nationalism
+		has_law = law_type:law_womens_suffrage
 		cu:vozi = {
 			NOT = { culture_is_discriminated_in = ROOT }
 		}
@@ -104,6 +105,7 @@ CHE = {
 
 }
 
+
 ORK = {
 	use_culture_states = yes
 
@@ -112,7 +114,7 @@ ORK = {
 	ai_will_do = { always = yes }
 
 	possible = {
-		has_technology_researched = nationalism
+		has_technology_researched = pan-nationalism
 	}
 
 }
@@ -125,7 +127,8 @@ TQL = {
 	ai_will_do = { always = yes }
 
 	possible = {
-		has_technology_researched = nationalism
+		has_technology_researched = pan-nationalism
+		accept_the_salt_waste_natives = yes
 	}
 
 }
@@ -232,22 +235,6 @@ MAN = {
 
 }
 
-PLG = {
-	states = { 
-		STATE_FORESTS_HEART_3_2
-		STATE_EASTERN_PLAGUEWOOD
-		STATE_NORTHERN_EXPANSE
-		STATE_BURAMONG
-		STATE_FORESTS_HEART
-		STATE_PLAGUEBRUSH
-	}
-
-	required_states_fraction = 0.8
-	
-	ai_will_do = { always = yes }
-
-}
-
 HOF = {
 	use_culture_states = yes
 
@@ -296,12 +283,12 @@ AST = {
 KNG = {
 	use_culture_states = yes
 
-	required_states_fraction = 0.76
+	required_states_fraction = 0.65
 	
 	ai_will_do = { always = yes }
 
 	possible = {
-		has_technology_researched = pan-nationalism
+		has_technology_researched = nationalism
 	}
 }
 
@@ -337,5 +324,74 @@ KAI = {
 		cu:south_sea_ravager = {
 			is_primary_culture_of = ROOT
 		}
+	}
+}
+
+GFL = {
+	states = { 
+		STATE_JOURNEYEND
+		STATE_INTOKI
+		STATE_KUNCHI
+		STATE_EISENMORA
+		STATE_RIVER_SOLILOQUE
+		STATE_RIVER_SOLILOQUE_2
+		STATE_LILLESO
+		STATE_SLETTEJUNGEL
+		STATE_BJERGHOLM
+		STATE_HOJLAND
+		STATE_KLIPPEBJERG
+		STATE_CAM_NUALA
+		STATE_CAM_RINNARA
+		STATE_CAM_LIADRINE
+		STATE_SOUTHERN_FEYSTALK
+		STATE_CAM_CALLAIRD
+		STATE_NORTHERN_FEYSTALK
+		STATE_FAOLNA_PASS
+	}
+
+	required_states_fraction = 0.8
+	
+	ai_will_do = { always = yes }
+
+	possible = {
+		OR = {
+			c:FLU ?= this
+		}
+		has_technology_researched = nationalism
+	}
+}
+
+SFD = {
+	states = { 
+		STATE_MARZEHZARIN
+		STATE_HIGH_HARAVA
+		STATE_PORCELAINGATE
+		STATE_LAERANELS_DESOLATION
+		STATE_AZHARIM
+		STATE_FARASHIL
+		STATE_SHIRAZAN
+		STATE_PARSIMAH
+		STATE_COBALT_KEEP
+		STATE_ASARSHIR
+		STATE_ANWARTH_VALLEYS
+		STATE_ANWARTH_VALLEYS_2
+		STATE_THINSILVER
+		STATE_BROKENPILLAR
+		STATE_POMMELFALL
+		STATE_POMMELFALL_2
+		STATE_FAOLNA_PASS
+		STATE_AUTUMN_HILLS
+		STATE_ZYRELIANAR
+		STATE_SHIRBIN_LOWLANDS
+		STATE_MARBLEGATE
+		STATE_SHADGOL
+	}
+
+	required_states_fraction = 0.8
+	
+	ai_will_do = { always = yes }
+
+	possible = {
+		has_technology_researched = nationalism
 	}
 }

@@ -44,47 +44,26 @@
 		}
 		else_if = {
 			limit = {
-				literacy_rate > 0.5
-				wealth > 10
+				AND = {
+					OR = {
+						is_pop_type = wizards
+						is_pop_type = academics
+					}
+					literacy_rate > 0.5
+					wealth > 15
+				}
 			}
 			# baseline: literacy * 4 + ( wealth - 10 / 10 ) norm 2 for Wealth 10 and Literacy 50%
 			add = {
 				value = literacy_rate
-				multiply = 4
+				multiply = 10
 				desc = "QUALIFICATIONS_LITERACY_FACTOR"
 			}
 			add = {
 				value = wealth
-				subtract = 10
+				subtract = 15
 				divide = 10
 				desc = "QUALIFICATIONS_WEALTH_FACTOR"
-			}
-			if = {
-				limit = {
-					is_pop_type = wizards
-				}
-				multiply = {
-					value = 5
-					desc = "QUALIFICATIONS_FAVORED_TYPE"
-				}
-			}
-			if = {
-				limit = {
-					is_pop_type = academics
-				}
-				multiply = {
-					value = 5
-					desc = "QUALIFICATIONS_FAVORED_TYPE"
-				}
-			}
-			if = {
-				limit = {
-					culture_accepted = no
-				}
-				multiply = {
-					value = 0.1
-					desc = "QUALIFICATIONS_CULTURAL_DISCRIMINATION"
-				}
 			}
 		}
 		else_if = {

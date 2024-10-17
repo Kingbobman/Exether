@@ -1809,7 +1809,10 @@
                 has_dlc_feature = ep1_cosmetics
 
                 scope:character ?= {
-                   
+
+                    age >= define:NCharacters|ADULT_AGE
+
+                                       
                     OR = {
                         european_clothes_trigger = yes
                         african_diaspora_clothes_trigger = yes
@@ -1820,8 +1823,6 @@
                         monarchy_clothes_trigger = yes
                         army_traits_trigger = yes
                     }
-                    age >= define:NCharacters|ADULT_AGE
-
                     OR = {
                         AND = {
                             is_ruler = yes
@@ -1831,10 +1832,20 @@
                                     has_identity = identity:identity_military_treaty_organization
                                 }
                             }
+                            NOT = {
+                                owner ?= c:CER
+                            }
                         }
-          
-
-                        owner ?= c:THI
+                        AND = {
+                            is_ruler = yes
+                            owner ?= {
+                                is_in_power_bloc = yes
+                                power_bloc ?= {
+                                    has_identity = identity:identity_religious
+                                }
+                                religion = rel:rose_court
+                            }
+                        }
                     }
 
 

@@ -30,3 +30,157 @@ fund_lobbies_monthly_events = {
 		10 = fund_lobbies_events.5
 	}
 }
+
+queue_port = {
+	effect = {
+		set_variable = {
+			name = convoy_ratio
+			value = {
+				value = num_convoys_available
+				subtract = num_convoys_required
+				min = 0
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+					is_ai = yes
+					num_trade_routes > 0
+					get_net_income > 0
+					var:convoy_ratio <= 800
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						any_scope_building = {
+							is_building_type = building_port
+							can_queue_building_levels = 1
+							is_under_construction = no
+						}
+						NOT = {
+							any_scope_building = {
+								is_building_type = building_port
+								is_under_construction = yes
+								count = 3
+							}
+						}
+					}
+				}
+				random_scope_building = {
+					limit = {
+						is_building_type = building_port
+						can_queue_building_levels = 1
+						is_under_construction = no
+					}
+					state = {
+						start_building_construction = building_port
+					}
+				}				
+			}		
+		}
+	}
+}
+
+calculate_arcana_surplus = {
+	effect = {
+		remove_modifier = surplus_arcana
+		add_modifier = {
+			name = surplus_arcana 
+			multiplier = {
+				value = root.arcana
+				divide = 600
+			}
+		}
+	}
+}
+
+calculate_adventurer_coverage_deficit = {
+	effect = {
+		every_scope_state = {
+			remove_modifier = coverage_deficit
+			set_local_variable = {
+				name  = coverage_state
+				value = this
+			}
+			if = {
+				limit = {
+					state_adventurer_coverage_balance < 0
+				}
+				add_modifier = {
+					name = coverage_deficit
+					multiplier = {
+						value = local_var:coverage_state.state_adventurer_coverage_multiplier
+					}
+				}
+			}
+		}
+	}
+}
+
+calculate_veil_top_damage = {
+	effect = {
+		set_local_variable = {
+			name = current_rank
+			value = 0
+		}
+		ordered_country = {
+			limit = {
+				this = {
+					has_variable = veil_damage
+				}		
+			}
+			order_by = var:veil_damage
+			max = 3
+			change_local_variable = {
+				name = current_rank
+				add = 1
+			}
+			set_variable = {
+				name = player_rank
+				value = local_var:current_rank
+			}
+			
+			if = {
+				limit = {
+					var:player_rank = 1
+				}
+				set_global_variable = {
+					name = veil_damage_top_1
+					value = this
+				}
+				set_global_variable = {
+					name = veil_damage_top_1_value
+					value = var:veil_damage
+				}
+			}
+			else_if = {
+				limit = {
+					var:player_rank = 2
+				}
+				set_global_variable = {
+					name = veil_damage_top_2
+					value = this
+				}
+				set_global_variable = {
+					name = veil_damage_top_2_value
+					value = var:veil_damage
+				}
+			}
+			else_if = {
+				limit = {
+					var:player_rank = 3
+				}
+				set_global_variable = {
+					name = veil_damage_top_3
+					value = this
+				}
+				set_global_variable = {
+					name = veil_damage_top_3_value
+					value = var:veil_damage
+				}
+			}
+		}
+
+	}
+}
