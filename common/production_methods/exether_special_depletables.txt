@@ -54,7 +54,10 @@ base_building_wishstone_comet = {
 	
 	state_modifiers = {
 		
-		state_mortality_mult = -0.05  #could scale this to level so it stacks.  If we don't make it stackable, we should raise the base value
+		unscaled = {
+			state_mortality_mult = -0.05  #could scale this to level so it stacks.  If we don't make it stackable, we should raise the base value
+		}
+		
 		#workforce_scaled = {
 		#	state_pollution_generation_add = 5 #add magic pollution
 		#}
