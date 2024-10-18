@@ -38,27 +38,6 @@
 		scope:var_general = {
 			transfer_to_formation = scope:var_army
 		}
-
-		create_military_formation = {
-			type = fleet
-			hq_region = sr:region_south_toftir
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_frigate
-				state_region = s:STATE_ELVERWISP
-				count = 12
-			}
-			save_scope_as = var_fleet
-		}
-
-		create_character = {
-			is_admiral = yes
-			hq = region_south_toftir
-			save_scope_as = var_admiral
-		}
-		scope:var_admiral = {
-			transfer_to_formation = scope:var_fleet
-		}
 	}
 	c:NRA ?= {
 		create_military_formation = {
@@ -86,27 +65,6 @@
 		}
 		scope:nra_general = {
 			transfer_to_formation = scope:nra_army
-		}
-
-		create_military_formation = {
-			type = fleet
-			hq_region = sr:region_south_toftir
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_frigate
-				state_region = s:STATE_SYLVARIN
-				count = 7
-			}
-			save_scope_as = nra_fleet
-		}
-
-		create_character = {
-			is_admiral = yes
-			hq = region_south_toftir
-			save_scope_as = nra_admiral
-		}
-		scope:nra_admiral = {
-			transfer_to_formation = scope:nra_fleet
 		}
 	}
 	c:KVA ?= {

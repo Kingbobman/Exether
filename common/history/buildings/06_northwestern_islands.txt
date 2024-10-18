@@ -2118,13 +2118,13 @@
 		
 	}
 	s:STATE_ELVERWISP = {
-		region_state:NRA={
+		region_state:ZRA={
 			create_building={
 				building="building_rye_farm"
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:NRA"
+						country="c:ZRA"
 						levels=3
 						region="STATE_SYLVARIN"
 				   }
@@ -2136,32 +2136,6 @@
 	}
 	s:STATE_AURORIL = {
 		region_state:NRA={
-			create_building={
-				building="building_livestock_ranch"
-				add_ownership={ 
-					building={ 
-						type="building_manor_house"
-						country="c:NRA"
-						levels=3
-						region="STATE_ELVERWISP"
-				   }
-				}
-				reserves=1
-				activate_production_methods={ "pm_simple_ranch" "pm_open_air_stockyards" "pm_standard_fences" "pm_unrefrigerated"  }
-			}
-            create_building={
-				building="building_textile_mills"
-                add_ownership={ 
-                    building={ 
-                        type="building_financial_district"
-                        country="c:NRA"
-                        levels=1
-                        region="STATE_ELVERWISP"
-                   }
-                }
-				reserves=1
-				activate_production_methods={ "pm_handsewn_clothes" "pm_traditional_looms" "pm_no_luxury_clothes" }
-			}
 		}
 	}
 	s:STATE_GIELAS = {
@@ -2195,7 +2169,7 @@
 		
 	}
 	s:STATE_ELVENSHROUD = {
-		region_state:VAR = {
+		region_state:ZRA = {
 			create_building={
 				building="building_government_administration"
 				level=2
@@ -2348,6 +2322,19 @@
 				activate_production_methods={ "pm_basic_port" }
 			}
 			create_building={
+				building="building_mint_tea_plantation"
+				add_ownership={ 
+					building={ 
+						type="building_financial_district"
+						country="c:ORO"
+						levels=1
+						region="STATE_SILENTWISP"
+				   }
+				}
+				reserves=1
+				activate_production_methods={ "default_building_tea_plantation" }
+			}
+			create_building={
 				building="building_furniture_manufacturies"
                 add_ownership={ 
                     building={ 
@@ -2446,6 +2433,19 @@
 				reserves=1
 				level= 2
 				activate_production_methods={ "pm_basic_port" }
+			}
+			create_building={
+				building="building_mint_tea_plantation"
+				add_ownership={ 
+					building={ 
+						type="building_financial_district"
+						country="c:ORO"
+						levels=1
+						region="STATE_RAHKIS"
+				   }
+				}
+				reserves=1
+				activate_production_methods={ "default_building_tea_plantation" }
 			}
 			create_building={
 				building="building_textile_mills"
