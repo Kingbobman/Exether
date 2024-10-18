@@ -743,22 +743,7 @@ pm_steam_leviathan_ships = {
 		}
 	}
 	}
-	pm_no_medical = {
-		#texture = "gfx/interface/icons/production_method_icons/simple_fishing.dds"
-	}
-	pm_drink_and_a_prayer = {
-		#texture = "gfx/interface/icons/production_method_icons/simple_fishing.dds"
-		workforce_scaled = {
-			# input
-			goods_input_liquor_add = 2
-	}
-	unscaled = {
-		# mortality
-		building_laborers_mortality_mult = -0.1
-		building_machinists_mortality_mult = -0.1
-		building_adventurers_mortality_mult = -0.05
-	}
-}
+
 pm_manual_harvesting = {
 	texture = "gfx/interface/icons/production_method_icons/picks_and_shovels.dds"
 }
@@ -1410,7 +1395,7 @@ pm_potions_of_waterbreathing_wishstone_reef = { #now this is podracing
 		}
 
 		unscaled = {
-			building_output_potions_mult = 0.15
+			goods_output_potions_mult = 0.15
 			building_laborers_mortality_mult = -0.1
 		}
 	}
@@ -1434,7 +1419,7 @@ pm_potions_of_waterbreathing_ship_graveyard = { #now this is podracing
 		}
 
 		unscaled = {
-			building_output_add = 0.15
+			building_goods_output_add = 0.15
 			building_laborers_mortality_mult = -0.1
 		}
 	}
