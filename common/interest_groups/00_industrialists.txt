@@ -34,6 +34,16 @@
 			}
 			if = {
 				limit = {
+					owner = {
+						any_primary_culture = {
+							has_discrimination_trait = goblin_heritage
+						}
+					}
+				}
+				set_interest_group_name = ig_taskmasters
+			}
+			if = {
+				limit = {
 					#owner = { c:RVC ?= this }
 					always = no
 				}
@@ -275,7 +285,7 @@
 	}
 
 	female_politician_chance = {
-		value = 0.0
+		value = 0.15
 
 		if = {
 			limit = {
@@ -285,7 +295,7 @@
 
 			}
 			add = {
-				value = 0.975
+				value = 0.825
 			}
 		}
 		else_if = {
@@ -296,13 +306,30 @@
 
 			}
 			add = {
-				value = 0.025
+				value = 0.075
 			}
+		}
+		if = {
+			limit = {
+				owner = {
+					exists = c:WHI
+					OR = {
+						c:WHI = this
+						civil_war_origin_country = c:WHI
+					}
+						
+				}
+
+			}
+			add = {
+				value = 0.3
+			}
+
 		}
 	}
 
 	female_agitator_chance = {
-		value = 0.025
+		value = 0.125
 		
 		if = {
 			limit = {
@@ -312,7 +339,7 @@
 
 			}
 			add = {
-				value = 0.025
+				value = 0.075
 			}
 		}	
 		
@@ -324,7 +351,7 @@
 
 			}
 			add = {
-				value = 0.025
+				value = 0.075
 			}
 		}
 
@@ -336,7 +363,7 @@
 
 			}
 			add = {
-				value = 0.025
+				value = 0.075
 			}
 		}	
 		
@@ -348,7 +375,7 @@
 
 			}
 			add = {
-				value = 0.95
+				value = 0.85
 			}
 		}
 	}

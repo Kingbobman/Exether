@@ -22,10 +22,103 @@
 	}
 
 	on_enable = {
-		ig:ig_armed_forces = {
-		set_ig_trait = ig_trait:ig_trait_materiel_waste
-		set_ig_trait = ig_trait:ig_trait_veteran_consultation
-		set_ig_trait = ig_trait:ig_trait_patriotic_fervor
+
+		if = {
+			limit = {
+				owner ={
+					any_primary_culture = {
+						has_discrimination_trait = goblin_heritage
+						NOT = {
+							has_discrimination_trait = hobgoblin
+						}
+					}
+				}
+			}
+			ig:ig_armed_forces = {
+				set_ig_trait = ig_trait:ig_trait_raider_logistics
+				set_ig_trait = ig_trait:ig_trait_sparkpowder_legacy
+				set_ig_trait = ig_trait:ig_trait_parochial_leadership
+			}
+		}
+		else_if = {
+			limit = {
+				owner ={
+					any_primary_culture = {
+						has_discrimination_trait = goblin_heritage
+							has_discrimination_trait = hobgoblin
+					}
+				}
+			}
+			ig:ig_armed_forces = {
+				set_ig_trait = ig_trait:ig_trait_materiel_waste
+				set_ig_trait = ig_trait:ig_trait_sparkpowder_legacy
+				set_ig_trait = ig_trait:ig_trait_red_hand
+				}
+		}
+		else = {
+			ig:ig_armed_forces = {
+				set_ig_trait = ig_trait:ig_trait_materiel_waste
+				set_ig_trait = ig_trait:ig_trait_veteran_consultation
+				set_ig_trait = ig_trait:ig_trait_patriotic_fervor
+			}
+		}
+
+
+
+		if = {
+			limit = {
+				owner ={
+					any_primary_culture = {
+						has_discrimination_trait = goblin_heritage
+						NOT = {
+							has_discrimination_trait = hobgoblin
+						}
+					}
+				}
+			}
+			ig:ig_armed_forces = {
+				set_interest_group_name = ig_armed_forces
+				remove_ideology = ideology_jingoist
+				add_ideology = ideology_goblin_jingoist
+			}
+		}
+
+		if = {
+			limit ={
+					OR = {
+						owner = { c:TEM ?= this }
+						owner = { c:YUL ?= this }
+					}
+			}
+			ig:ig_armed_forces = {
+				add_ideology = ideology_kreva_fingo
+				set_interest_group_name = ig_yernit
+			}
+		}
+
+		if = {
+			limit = {
+				country_has_state_religion = rel:nilbogism
+				OR = {
+					country_has_primary_culture = cu:xhurlob
+					country_has_primary_culture = cu:varbat
+					country_has_primary_culture = cu:rethrashar
+					country_has_primary_culture = cu:dales_togrul
+					country_has_primary_culture = cu:atiukura
+					country_has_primary_culture = cu:shkemger
+					country_has_primary_culture = cu:morevnamarya
+					country_has_primary_culture = cu:puarfeijiin
+					country_has_primary_culture = cu:zangedlittuy
+					country_has_primary_culture = cu:sarhbalb
+					country_has_primary_culture = cu:kojiniu
+					country_has_primary_culture = cu:yakamimbo
+				}
+			}
+			ig:ig_armed_forces = {
+				set_interest_group_name = ig_armed_forces
+				remove_ideology = ideology_jingoist
+				add_ideology = ideology_goblin_jingoist
+			}
 		}
 
 	if = {
@@ -55,8 +148,9 @@
 				add_ideology = ideology_admiralty
 			}
 		}
-
 	}
+
+
 
 
 	on_disable = {}
@@ -376,6 +470,23 @@
 				value = 1.0
 			}
 		}
+		if = {
+			limit = {
+				owner = {
+					exists = c:WHI
+					OR = {
+						c:WHI = this
+						civil_war_origin_country = c:WHI
+					}
+						
+				}
+
+			}
+			add = {
+				value = 0.3
+			}
+
+		}
 	}
 
 	female_politician_chance = {
@@ -391,6 +502,23 @@
 			add = {
 				value = 1.0
 			}
+		}
+		if = {
+			limit = {
+				owner = {
+					exists = c:WHI
+					OR = {
+						c:WHI = this
+						civil_war_origin_country = c:WHI
+					}
+						
+				}
+
+			}
+			add = {
+				value = 0.15
+			}
+
 		}
 	}
 
@@ -461,4 +589,6 @@
 			}
 		}
 	}
+
 }
+

@@ -927,7 +927,7 @@ je_tutorial_improve_rank = {
 	immediate = {
 		if = { 
 			limit = {
-				country_rank = rank_value:great_power
+				country_rank >= rank_value:great_power
 			}
 			set_variable = tut_great_power
 		}
@@ -988,7 +988,7 @@ je_tutorial_improve_rank = {
 				limit = {
 					has_variable = tut_major_power		
 				}
-				country_rank = rank_value:great_power
+				country_rank >= rank_value:great_power
 			}
 			trigger_else_if = {
 				limit = {

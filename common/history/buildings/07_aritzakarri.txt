@@ -1,6 +1,6 @@
 ﻿BUILDINGS = {
 
-  s:STATE_URRATEGI = {
+  s:STATE_GLARDIH = {
 
   }
 
@@ -320,7 +320,7 @@
   }
 
   s:STATE_NISHIGARRA = {
-	region_state:ZHU = {
+	region_state:NIS = {
 	  create_building={
         building="building_port"
         level=1
@@ -350,18 +350,18 @@
 
   s:STATE_ERDIGARA = {
 	region_state:LUR={
-			create_building={
-			building="building_maize_farm"
+		create_building={
+			building="building_mountain_maize_farm"
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:POA"
-						levels=1
-						region="STATE_HIRUMENDI"
+						country="c:LUR"
+						levels=7
+						region="STATE_ERDIGARA"
 				   }
 				}
 			reserves=1
-			activate_production_methods={ "pm_simple_farming" }
+			activate_production_methods={ "pm_simple_farming" "pm_chimesilt_extraction" "pm_tools"  }
 		}
             create_building={
 			building="building_fishing_wharf"
@@ -612,7 +612,7 @@
   }
 
   s:STATE_MUGARA = {
-    region_state:ZHU = {
+    region_state:NIS = {
 	  create_building={
         building="building_port"
         level=1
@@ -636,12 +636,6 @@
 				}
 			reserves=1
 			activate_production_methods={ "pm_open_air_stockyards" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated"  }
-		}
-		create_building={
-			building="building_barracks"
-			level=8
-			reserves=1
-			activate_production_methods={ "pm_no_organization" }
 		}
 	}
   }
@@ -955,18 +949,18 @@
 			reserves=1
 			activate_production_methods={ "pm_simple_organization" "pm_hereditary_bureaucrats" "pm_religious_bureaucrats" }
 		}
-			create_building={
-			building="building_rye_farm"
+		create_building={
+			building="building_mountain_maize_farm"
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:POA"
-						levels=1
-						region="STATE_HIRUMENDI"
+						country="c:AIZ"
+						levels=3
+						region="STATE_URRIKO"
 				   }
 				}
 			reserves=1
-			activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled"  }
+			activate_production_methods={ "pm_simple_farming" "pm_chimesilt_extraction" "pm_tools"  }
 		}
 			create_building={
 			building="building_livestock_ranch"
@@ -1422,18 +1416,18 @@
 
   s:STATE_TXORI = {
 	region_state:BRY={
-			create_building={
-			building="building_rye_farm"
+		create_building={
+			building="building_mountain_maize_farm"
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
-						country="c:AIZ"
-						levels=1
-						region="STATE_ZUBEROA"
+						country="c:BRY"
+						levels=3
+						region="STATE_TXORI"
 				   }
 				}
 			reserves=1
-			activate_production_methods={ "pm_simple_farming"  "pm_tools_disabled" "pm_potatoes" }
+			activate_production_methods={ "pm_simple_farming" "pm_chimesilt_extraction" "pm_tools"  }
 		}
 			create_building={
 			building="building_livestock_ranch"
@@ -1651,18 +1645,18 @@
 			reserves=1
 			activate_production_methods={ "pm_atmospheric_engine_pump_building_sulfur_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
 		}
-			create_building={
-			building="building_rye_farm"
+		create_building={
+			building="building_mountain_maize_farm"
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
 						country="c:BRY"
-						levels=2
+						levels=7
 						region="STATE_BAZKA"
 				   }
 				}
 			reserves=1
-			activate_production_methods={ "pm_soil_enriching_farming" "pm_potatoes" "pm_tools"  }
+			activate_production_methods={ "pm_simple_farming" "pm_chimesilt_extraction" "pm_tools"  }
 		}
 	}
   }

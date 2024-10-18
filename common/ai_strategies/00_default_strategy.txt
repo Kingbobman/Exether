@@ -192,7 +192,7 @@ ai_strategy_default = {
 		
 		# Bonus for obligations from Great Powers
 		if = {
-			limit = { scope:target_country.country_rank = rank_value:great_power }
+			limit = { scope:target_country.country_rank >= rank_value:great_power }
 			add = 5
 		}
 		
@@ -1173,7 +1173,7 @@ ai_strategy_default = {
 		# Very high aggression against pariah countries by Great Powers
 		if = {
 			limit = {
-				country_rank = rank_value:great_power
+				country_rank >= rank_value:great_power
 				scope:target_country = {
 					infamy >= infamy_threshold:pariah
 					NOT = {
@@ -1270,6 +1270,7 @@ ai_strategy_default = {
 					has_strategy = ai_strategy_unify_khus
 					has_strategy = ai_strategy_unify_gavkhan
 					has_strategy = ai_strategy_unify_nagabumi
+					has_strategy = ai_strategy_unify_atamzotayit
 				}
 			}
 			multiply = 1.5
@@ -1308,7 +1309,7 @@ ai_strategy_default = {
 		
 		# Extra army size from rank
 		if = {
-			limit = { country_rank = rank_value:great_power }
+			limit = { country_rank >= rank_value:great_power }
 			add = 25
 		}
 		if = {
@@ -1433,6 +1434,11 @@ ai_strategy_default = {
 			multiply = 0.5
 		}	
 
+		if = {
+			limit = { has_strategy = ai_strategy_maintain_mandate_of_heaven }
+			multiply = 0.25
+		}	
+
 		max = 500
 		min = 0		
 	}		
@@ -1475,7 +1481,7 @@ ai_strategy_default = {
 		combat_unit_group_capital_ship = {
 			value = 0
 			if = {
-				limit = { country_rank = rank_value:great_power }
+				limit = { country_rank >= rank_value:great_power }
 				add = 75
 			}
 			if = {
@@ -1749,7 +1755,7 @@ ai_strategy_default = {
 				limit = {
 					OR = {
 						AND = {
-							country_rank = rank_value:great_power
+							country_rank >= rank_value:great_power
 							has_technology_researched = civilizing_mission
 						}
 						has_journal_entry = je_colonial_administration
@@ -1763,7 +1769,7 @@ ai_strategy_default = {
 				limit = {
 					OR = {
 						AND = {
-							country_rank = rank_value:great_power
+							country_rank >= rank_value:great_power
 							has_technology_researched = civilizing_mission
 						}
 						has_journal_entry = je_colonial_administration
@@ -1777,7 +1783,7 @@ ai_strategy_default = {
 				limit = {
 					OR = {
 						AND = {
-							country_rank = rank_value:great_power
+							country_rank >= rank_value:great_power
 							has_technology_researched = civilizing_mission
 						}
 						has_journal_entry = je_colonial_administration
@@ -1791,7 +1797,7 @@ ai_strategy_default = {
 				limit = {
 					OR = {
 						AND = {
-							country_rank = rank_value:great_power
+							country_rank >= rank_value:great_power
 							has_technology_researched = civilizing_mission
 						}
 						has_journal_entry = je_colonial_administration
@@ -1805,7 +1811,7 @@ ai_strategy_default = {
 				limit = {
 					OR = {
 						AND = {
-							country_rank = rank_value:great_power
+							country_rank >= rank_value:great_power
 							has_technology_researched = civilizing_mission
 						}
 						has_journal_entry = je_colonial_administration
@@ -1819,7 +1825,7 @@ ai_strategy_default = {
 				limit = {
 					OR = {
 						AND = {
-							country_rank = rank_value:great_power
+							country_rank >= rank_value:great_power
 							has_technology_researched = civilizing_mission
 						}
 						has_journal_entry = je_colonial_administration
@@ -1833,7 +1839,7 @@ ai_strategy_default = {
 				limit = {
 					OR = {
 						AND = {
-							country_rank = rank_value:great_power
+							country_rank >= rank_value:great_power
 							has_technology_researched = civilizing_mission
 						}
 						has_journal_entry = je_colonial_administration
@@ -1847,7 +1853,7 @@ ai_strategy_default = {
 				limit = {
 					OR = {
 						AND = {
-							country_rank = rank_value:great_power
+							country_rank >= rank_value:great_power
 							has_technology_researched = civilizing_mission
 						}
 						has_journal_entry = je_colonial_administration
@@ -2398,7 +2404,7 @@ ai_strategy_default = {
 			if = {
 				limit = {		
 					NOR = {
-						country_rank = rank_value:great_power
+						country_rank >= rank_value:great_power
 						has_strategic_adjacency = scope:target_country
 						AND = {
 							country_rank >= rank_value:major_power
@@ -3029,7 +3035,7 @@ ai_strategy_default = {
 			if = {
 				limit = {		
 					NOR = {
-						country_rank = rank_value:great_power
+						country_rank >= rank_value:great_power
 						has_strategic_adjacency = scope:target_country 
 						AND = {
 							country_rank >= rank_value:major_power

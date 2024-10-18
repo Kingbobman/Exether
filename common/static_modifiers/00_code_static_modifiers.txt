@@ -22,6 +22,8 @@ base_values = {
 	country_arcana_pos_add = 100
 	country_renown_pos_add = 100
 
+	state_adventurer_coverage_add = 50
+
 	country_secession_progress_add = 0.1
 
 	state_education_access_wealth_add = 0.005
@@ -46,6 +48,7 @@ base_values = {
 	state_clergymen_investment_pool_contribution_add = 0.20
 	state_aristocrats_investment_pool_contribution_add = 0.20
 	state_archmages_investment_pool_contribution_add = 0.25
+	state_wizards_investment_pool_contribution_add = 0.15
 	state_capitalists_investment_pool_contribution_add = 0.30
 	state_heroes_investment_pool_contribution_add = 0.25
 	
@@ -819,17 +822,4 @@ agreeable_to_imposition = {
 successfully_met_foreign_imposition_legitimacy = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
 	country_legitimacy_base_add = 10
-}
-
-beauty_in_bloom_modifier = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
-	interest_group_ig_devout_pop_attraction_mult = 0.1
-	interest_group_ig_devout_pol_str_mult = 0.3
-	country_clergymen_pol_str_mult = 0.5
-}
-
-beauty_in_bloom_rule_by_decree_modifier = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
-	state_decree_cost_mult = -0.5
-	interest_group_in_opposition_approval_add = -5
 }

@@ -17,10 +17,10 @@ SNB = {
 
 	country_type = colonial
 
-	tier = empire
+	tier = kingdom
 
 	cultures = { pabardian } 
-	capital = STATE_SWAHATHAI
+	capital = STATE_SAWATHONG
 }
 
 LPS = {
@@ -60,7 +60,7 @@ GRA = {
 
 #Rrëmprak
 REM = {
-	color = rgb{ 60 75 80 } 
+	color = rgb{ 5 65 85 } 
 
 	country_type = unrecognized 
 
@@ -74,17 +74,17 @@ REM = {
 VLT = {
 	color = rgb{ 75 75 5 } 
 
-	country_type = unrecognized 
+	country_type = recognized
 
 	tier = principality
 
-	cultures = { dales_togrul } 
+	cultures = { kaalkid } 
 	capital = STATE_VITHKUQJA
 }
 
 #Lugzar
 LGZ = {
-	color = rgb{ 5 75 75 } 
+	color = rgb{ 35 105 75 } 
 
 	country_type = unrecognized 
 
@@ -138,29 +138,30 @@ HOF = {
 	tier = kingdom
 
 	cultures = { kaalkid tozhi } 
-	capital = STATE_DIYINAKHAD
+	capital = STATE_SHANAKONG
 }
 
 #Kullgrim
 KGM = {
-	color = rgb{ 75 5 75 } 
+	color = rgb{ 60 75 80 } 
 
 	country_type = unrecognized 
 
 	tier = principality
 
-	cultures = { varbat kaalkid } 
+	cultures = { varbat } 
 	capital = STATE_GJAKOVA
 }
 
 #Zinxhiron
 ZIX = {
-	color = rgb{ 175 15 75 } 
+	color = rgb{ 120 70 15 } 
 
 	country_type = unrecognized 
 
 	tier = kingdom
 
+	religion = scourgelore
 	cultures = { xhurlob } 
 	capital = STATE_BERATIA
 }
@@ -168,13 +169,13 @@ ZIX = {
 
 #Tufagar
 TUF = {
-	color = rgb{ 175 15 175 } 
+	color = rgb{ 115 115 115 } 
 
 	country_type = unrecognized 
 
 	tier = principality
 
-	cultures = { xhurlob varbat rethrashar } 
+	cultures = { xhurlob } 
 	capital = STATE_BERATIA
 }
 
@@ -186,13 +187,13 @@ KNG = {
 
 	tier = empire
 
-	cultures = { xhurlob varbat rethrashar dales_togrul } 
+	cultures = { dales_togrul atiukura shkemger } 
 	capital = STATE_BERATIA
 }
 
 #Mjekëtor
 MJE = {
-	color = rgb{ 100 150 75 } 
+	color = rgb{ 120 50 75 } 
 
 	country_type = unrecognized 
 
@@ -200,6 +201,19 @@ MJE = {
 
 	cultures = { xhurlob } 
 	capital = STATE_LUMADHIA
+}
+
+
+#Megrelfen
+MGR = {
+	color = rgb{ 100 150 75 } 
+
+	country_type = unrecognized 
+
+	tier = principality
+
+	cultures = { larltri } 
+	capital = STATE_BREZHKE
 }
 
 #Thracovya
@@ -210,8 +224,20 @@ THY = {
 
 	tier = principality
 
-	cultures = { lake_thalorian } 
+	cultures = { heartland_thalorian lake_thalorian } 
 	capital = STATE_VONKENDAM
+}
+
+#Thalrea
+THA = {
+	color = rgb{ 120 30 55 } 
+
+	country_type = recognized 
+
+	tier = principality
+
+	cultures = { gnome_thalorian } 
+	capital = STATE_HAVENSHIRE
 }
 
 #Dunavara
@@ -226,6 +252,38 @@ DNV = {
 	capital = STATE_STORMHOLM
 }
 
+YRI = {
+	color = rgb{ 0 82 41 } 
+
+	country_type = recognized 
+
+	tier = principality
+
+	cultures = { yrian } 
+	capital = STATE_BELLENBOS
+}
+
+GAK = {
+	color = rgb{ 0 62 40 } 
+
+	country_type = recognized 
+
+	tier = principality
+
+	cultures = { florishnom } 
+	capital = STATE_TIKKERHAVEN
+}
+
+SPA = {
+	color = rgb{ 82 0 82 } 
+
+	country_type = recognized 
+
+	tier = principality
+
+	cultures = { ravikian } 
+	capital = STATE_SPRANKELMEER
+}
 #Vranceana
 VRC = {
 	color = rgb{ 100 150 125 } 
@@ -277,7 +335,7 @@ BDT = {
 
 #Sanbahar
 SBH = {
-	color = rgb{ 100 50 175 } 
+	color = rgb{ 120 70 105 } 
 
 	country_type = recognized 
 
@@ -289,7 +347,7 @@ SBH = {
 
 #Kvararag
 KVG = {
-	color = rgb{ 120 70 15 } 
+	color = rgb{ 120 170 15 } 
 
 	country_type = unrecognized 
 
@@ -301,7 +359,7 @@ KVG = {
 
 #Vorglota
 VOR = {
-	color = rgb{ 60 90 195 } 
+	color = rgb{ 60 165 90 } 
 
 	country_type = unrecognized 
 
@@ -325,7 +383,7 @@ DHR = {
 
 #Drakoria
 DKO = {
-	color = rgb{ 100 70 245 } 
+	color = { 0 149 183 }
 
 	country_type = recognized 
 
@@ -339,7 +397,7 @@ DKO = {
 HOZ = {
 	color = rgb{ 250 100 80 } 
 
-	country_type = unrecognized 
+	country_type = recognized 
 
 	tier = principality
 
@@ -351,12 +409,12 @@ HOZ = {
 TSH = {
 	color = rgb{ 100 100 100 } 
 
-	country_type = unrecognized 
+	country_type = recognized 
 
 	tier = principality
 
-	cultures = { kaalkid } 
-	capital = STATE_DIYINAKHAD
+	cultures = { tozhi } 
+	capital = STATE_KAINAVA
 }
 
 #Khaduras
@@ -365,17 +423,17 @@ KHD = {
 
 	country_type = recognized 
 
-	tier = principality
+	tier = kingdom
 
 	cultures = { duneshar } 
-	capital = STATE_DINASHIN
+	capital = STATE_KEENAVOK
 }
 
 #Tsidiiyah
 THK = {
 	color = rgb{ 100 180 180 } 
 
-	country_type = unrecognized 
+	country_type = recognized 
 
 	tier = principality
 
@@ -397,7 +455,7 @@ THA = {
 
 #Ekebyld
 EKE = {
-	color = rgb{ 25 62 74 }
+	color = rgb{ 65 100 74 }
 
 	country_type = recognized
 
@@ -407,15 +465,40 @@ EKE = {
 	capital = STATE_STJERRENFAL
 }
 
-#Driftwyn
-DRI = {
-	color = hsv360 { 225 62 74 }
+
+#Groenleed
+GRO = {
+	color = rgb{ 25 92 54 }
 
 	country_type = recognized
 
 	tier = principality
 
-	cultures = { florishnom } 
+	cultures = { waldgnomklaai } 
+	capital = STATE_STJERRENFAL
+}
+
+#Tûntûnarij
+TTN = {
+	color = rgb{ 52 107 37 }
+
+	country_type = recognized
+
+	tier = principality
+
+	cultures = { waldgnomklaai stranfolk } 
+	capital = STATE_NATUURBRUZJE
+}
+
+#Driftwyn
+DRI = {
+	color = rgb{ 0 57 40 }
+
+	country_type = recognized
+
+	tier = principality
+
+	cultures = { ravikian } 
 	capital = STATE_FLUSTERBEEK
 }
 
@@ -425,7 +508,7 @@ GAV = {
 
 	country_type = unrecognized
 	
-	tier = kingdom
+	tier = empire
 	
 	cultures = { varbat xhurlob rethrashar }
 	capital = STATE_BERATIA
@@ -439,7 +522,7 @@ TLA = {
 
 	tier = empire
 	
-	cultures = { littoral_thalorian lake_thalorian heartland_thalorian }
+	cultures = { littoral_thalorian lake_thalorian heartland_thalorian gnome_thalorian }
 	capital = STATE_VONKENDAM
 }
 

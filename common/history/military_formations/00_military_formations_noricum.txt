@@ -8,14 +8,8 @@
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_HUNTERS_HILL
-				count = 6
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_hussars
-				state_region = s:STATE_HUNTERS_HILL
-				count = 2
+				state_region = s:STATE_MAESBELAN
+				count = 10
 			}
 
 			combat_unit = {
@@ -242,57 +236,26 @@
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_dumonian_heartlands
-			name = Albriar_Defense_Force
+			name = "Provincial Militias"
 
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_KOTHIAN
-				count = 25
-			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_MIDCLACK
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_CARREGRICE
-				count = 5
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_mobile_artillery
-				state_region = s:STATE_CARREGRICE
-				count = 5
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_cuirassiers
-				state_region = s:STATE_CARREGRICE
-				count = 5
-			}
-
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_FROSTGATE
-				count = 18
+				count = 25
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mobile_artillery
-				state_region = s:STATE_FROSTGATE
-				count = 9
+				state_region = s:STATE_MIDCLACK
+				count = 5
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
-				state_region = s:STATE_FROSTGATE
-				count = 3
-			}
+
+
 			save_scope_as = dumarmy1
 		}
 		create_character = {
 			is_general = yes
 			hq = sr:region_dumonian_heartlands
-			commander_rank = commander_rank_3
+			commander_rank = commander_rank_2
 			save_scope_as = dumgen1
 		}
 		scope:dumgen1 = {
@@ -325,12 +288,12 @@
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_mobile_artillery
-				state_region = s:STATE_MALINMORE
+				state_region = s:STATE_SERONTAIN
 				count = 5
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_lancers
-				state_region = s:STATE_CALDAMUS
+				state_region = s:STATE_LOCHTYRE
 				count = 5
 			}
 			save_scope_as = dumarmy3
@@ -404,13 +367,8 @@
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_mobile_artillery
-				state_region = s:STATE_ALYEA
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
-				state_region = s:STATE_SLUDGE_COAST
-				count = 3
+				state_region = s:STATE_LAST_HEARTH
+				count = 5
 			}
 			save_scope_as = dumarmy3
 		}
@@ -427,29 +385,18 @@
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_central_noricum
-			name = "Jalian Volunteer Legion"
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_KILCREE
-				count = 5
-			}
+			name = "Eastern Garrisons"
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_MELENLECK
-				count = 5
+				count = 15
 			}
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_mobile_artillery
-				state_region = s:STATE_MELENLECK
-				count = 3
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
-				state_region = s:STATE_MELENLECK
-				count = 3
+				state_region = s:STATE_SERONTAIN
+				count = 5
 			}
 			save_scope_as = dumarmy4
 		}
@@ -627,7 +574,7 @@
 			type = army
 			hq_region = sr:region_ravencliff
 
-			name = "Foxworth National Army"
+			name = "Stagworth National Army"
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry

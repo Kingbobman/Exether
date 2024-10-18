@@ -34,14 +34,25 @@
 				set_ig_trait = ig_trait:ig_trait_the_oculi_vigiles
 			}
 
-
-
 		else ={
 			set_ig_trait = ig_trait:ig_trait_be_fruitful_and_multiply
 			set_ig_trait = ig_trait:ig_trait_divine_right
 			set_ig_trait = ig_trait:ig_trait_pious_fiction
 			}
 
+		}
+
+		if = {
+			limit = {
+				owner ={
+					country_has_state_religion = rel:scourgelore
+				}
+			}
+			ig:ig_devout = {
+				remove_ideology = ideology_moralist
+				add_ideology = ideology_hobgoblin_moralist
+				remove_ideology = ideology_pious
+			}
 		}
 		
 		### Specific
@@ -67,6 +78,8 @@
 							has_discrimination_trait = fey_domain
 							NOT = {
 								has_discrimination_trait = chivalrous_heritage
+								has_discrimination_trait = orc_pantheon
+								has_discrimination_trait = monastic_heritage
 							}
 						}
 					}
@@ -114,8 +127,48 @@
 				
 			}
 			ig:ig_devout = {
-				remove_ideology = ideology_pious
 				add_ideology = ideology_pious_magoclast
+			}
+		}
+
+		if = {
+			limit = {
+				OR = {
+					owner = {
+						religion = {
+							has_discrimination_trait = dwarf_pantheon
+						}
+					}
+				}
+				
+			}
+			ig:ig_devout = {
+				remove_ideology = ideology_moralist
+				add_ideology = ideology_ancestral_moralist
+			}
+		}
+
+		if = {
+			limit = {
+				owner = { 
+					OR = {
+						country_has_state_religion = rel:buried_gods
+						AND = {
+							religion = {
+								has_discrimination_trait = elf_pantheon
+							}
+							NOT = {
+								country_has_state_religion = rel:southern_fosirmi
+							}
+						}
+
+					}
+
+				}				
+			}
+			ig:ig_devout = {
+				remove_ideology = ideology_patriarchal
+				add_ideology = ideology_traditional
 			}
 		}
 
@@ -158,7 +211,7 @@
 			limit = {
 				owner = {
 					OR = {
-						religion = rel:mothers_embrace
+						religion = rel:vurzaratmoda
 						any_primary_culture = {
 							has_discrimination_trait = southern_elf
 						}
@@ -501,7 +554,7 @@
 	}
 
 	female_politician_chance = {
-		value = 0.0
+		value = 0.1
 
 		if = {
 			limit = {
@@ -511,7 +564,7 @@
 
 			}
 			add = {
-				value = 0.99
+				value = 0.89
 			}
 		}
 		else_if = {
@@ -525,6 +578,24 @@
 				value = 0.01
 			}
 		}
+		if = {
+			limit = {
+				owner = {
+					exists = c:WHI
+					OR = {
+						c:WHI = this
+						civil_war_origin_country = c:WHI
+					}
+						
+				}
+
+			}
+			add = {
+				value = 0.3
+			}
+
+		}
+	
 	}
 
 	female_agitator_chance = {

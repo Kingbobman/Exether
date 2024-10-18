@@ -250,6 +250,12 @@ SMA = {
     }   
 }
 
+RTD = {
+    pattern = "pattern_solid.tga"
+    color1 = "feldgrau"
+ 
+}
+
 #Gladcross
 GCS = {
 	pattern = "pattern_solid.tga"
@@ -318,7 +324,7 @@ GDS = {
 
     colored_emblem = {
         texture = "ce_flag_river.dds"
-    color1 = "white"
+        color1 = "white"
         instance = { scale = { 1.5 1.5 } position = { 0.5 0.5 } rotation = 135 }    
     }    
 
@@ -331,11 +337,40 @@ GDS = {
 
     colored_emblem = {
         texture = "ce_wheat_garb.dds"
-    color1 = "yellow"
+        color1 = "yellow"
         instance = { scale = { -0.5 0.5 } position = { 0.825 0.725 } }    
     }
 }
 
+#Pefril
+PFL = {
+    pattern = "pattern_solid.tga"
+    color1 = "blue" 
+   
+        colored_emblem = {
+		texture = "ce_rhombus.dds"
+		color1 = "red_light"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+	}
+ 
+        colored_emblem = {
+		texture = "ce_rhombus.dds"
+		color1 = "yellow_light"
+		instance = { scale = { 0.8 0.8 } position = { 0.5 0.5 } }
+	} 
+
+        colored_emblem = {
+		texture = "ce_rhombus.dds"
+		color1 = "blue_light"
+		instance = { scale = { 0.6 0.6 } position = { 0.5 0.5 } }
+       } 
+
+       colored_emblem = {
+		texture = "ce_rhombus.dds"
+		color1 = "blue"
+		instance = { scale = { 0.4 0.4 } position = { 0.5 0.5 } }
+       } 
+}
 
 #Dushambay
 DSB = {
@@ -353,7 +388,7 @@ DSB = {
 #Ceraun
 CER = {
 	pattern = "pattern_solid.tga" #Choose a base from gfx\coat_of_arms\patterns
-	color1 = "orange" #Use a predefined colour or you can do 'color1 = rgb{ x x x }'.
+	color1 = "orange_nice" #Use a predefined colour or you can do 'color1 = rgb{ x x x }'.
 
 	colored_emblem = {
 		texture = "ce_roe_curved_sword_details.dds"
@@ -841,27 +876,24 @@ DRO = {
 #Emerald League
 EME = {
 	pattern = "pattern_solid.tga"
-	color1 = "blue"
+	color1 = "white"
 
 	colored_emblem = {
-		texture = "ce_fess_fimbriated.dds"
-		color1 = "green_light"
-		color2 = "brown_light"
-		instance = { scale = { 1 1 } position = { 0.5 0.5 } }	
-	}
-
+		texture = "ce_solid.dds"
+		color1 = "blue"
+		instance = { scale = { 1.0 0.25 } position = { 0.5 0.125 } }	
+		instance = { scale = { 1.0 0.25 } position = { 0.5 0.875 } }			
+	}		
 	colored_emblem = {
-		texture = "ce_coa_rounded_base_2c.dds"
-		color1 = "white"
-		color2 = "brown_light"
-		instance = { scale = { 0.8 0.8 } position = { 0.5 0.5 } }	
-	}
-
+		texture = "ce_solid.dds"
+		color1 = "blue"
+		instance = { scale = { 0.28 0.56 } position = { 0.33 0.5 } rotation = 45 }				
+	}	
 	colored_emblem = {
-		texture = "ce_triangles.dds"
-		color1 = "green_light"
-		color2 = "black"
-		instance = { scale = { 0.56 0.56 } position = { 0.5 0.5 } }	
+		texture = "ce_solid.dds"
+		color1 = "algeria_green"
+		color2 = "white"
+		instance = { scale = { 0.25 0.5 } position = { 0.33 0.5 } rotation = 45 }				
 	}
 }
 

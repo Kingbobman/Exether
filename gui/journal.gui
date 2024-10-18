@@ -36,6 +36,16 @@ types journal
 			text = "JOURNAL_WINDOW_HEADER"
 		}
 
+		blockoverride "header_back_button" {
+				onclick = "[InformationPanelBar.OpenPreviousPanel]"
+				onclick = "[RemoveTempMapMode]"
+		}
+		
+		blockoverride "header_close_button" {
+			onclick = "[InformationPanelBar.ClosePanel]"
+			onclick = "[RemoveTempMapMode]"
+		}
+
 		blockoverride "fixed_top" {
 			tab_buttons = {
 				blockoverride "first_button" {
@@ -79,24 +89,25 @@ types journal
 					text = "INACTIVE_JOURNAL_ENTRIES"
 				}
 
-				#blockoverride "third_button" {
-				#	text = "SITUATIONS"
-				#}
-				#blockoverride "third_button_tooltip" {
-				#	tooltip = "SITUATIONS"
-				#}
-				#blockoverride "third_button_click" {
-				#	onclick = "[InformationPanel.SelectTab('situations')]"
-				#}
-				#blockoverride "third_button_visibility" {
-				#	visible = "[InformationPanel.IsTabSelected('situations')]"
-				#}
-				#blockoverride "third_button_visibility_checked" {
-				#	visible = "[Not( InformationPanel.IsTabSelected('situations') )]"
-				#}
-				#blockoverride "third_button_selected" {
-				#	text = "SITUATIONS"
-				#}
+				blockoverride "third_button" {
+					text = "RETAINERS"
+				}
+				blockoverride "third_button_tooltip" {
+					tooltip = "RETAINERS"
+				}
+				blockoverride "third_button_click" {
+					onclick = "[InformationPanel.SelectTab('situations')]"
+					onclick = "[SetTempMapModeByKey('mm_situations')]"
+				}
+				blockoverride "third_button_visibility" {
+					visible = "[InformationPanel.IsTabSelected('situations')]"
+				}
+				blockoverride "third_button_visibility_checked" {
+					visible = "[Not( InformationPanel.IsTabSelected('situations') )]"
+				}
+				blockoverride "third_button_selected" {
+					text = "RETAINERS"
+				}
 			}
 		}
 		
@@ -312,27 +323,27 @@ types journal
 							parentanchor = vcenter|right
 
 							icon = {
-								position = { 40 0 }
+								position = { 15 0 }
 								size = { 73% 100% }
 								texture = "gfx/interface/progressbar/cohesion_bar.dds"
 							}
 						}
 
-						icon = {
+						textbox = {
+							raw_text = "[AccessPlayer.MakeScope.ScriptValue('renown_reputation')|v0]"
 							parentanchor = vcenter|left
+							using = header_font_fancy
+							using = header_font_fancy_size
 							size = { 85 85 }
-							position = { 10 0 }
-							texture = "gfx/interface/icons/topbar/num_one.dds"
-
-
+							position = { 30 -7.5 }
 						}
 
 						widget = {
 			
-							position = { 0 10 }
+							position = { -25 -5 }
 							parentanchor = hcenter|vcenter
 							block "progressbar_size" {
-								size = { 347 0 }
+								size = { 347 20 }
 							}
 							tooltip = "RENOWN_TOOLTIP"
 							onmousehierarchyenter = "[PdxGuiWidget.FindChild('reputation_max').InterruptThenTriggerAnimation('hide_reputation_max','show_reputation_max')]"
@@ -344,7 +355,7 @@ types journal
 								alpha = "[TransparentIfFalse(Building.IsActive)]"
 				
 								blockoverride "glow_size" {
-									size = { 347 100% }
+									size = { 347 20 }
 								}
 				
 								parentanchor = hcenter
@@ -353,7 +364,7 @@ types journal
 								blockoverride "values" {
 									min = 0
 									max = 1000
-									value = "[AccessPlayer.MakeScope.ScriptValue('renown')]"
+									value = "[AccessPlayer.MakeScope.ScriptValue('renown_modulo')]"
 								}
 				
 								progressbar_highlight = {
@@ -389,8 +400,7 @@ types journal
 										using = Animation_Curve_Default
 									}
 				
-									raw_text = " / #maximum 1000#!"
-									visible = "[LessThan_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('renown'), '(CFixedPoint)1000')]"
+									raw_text = " / #maximum [AccessPlayer.MakeScope.ScriptValue('renown_level_max')]#!"
 									align = hcenter|nobaseline
 									autoresize = yes
 									parentanchor = vcenter
@@ -398,13 +408,51 @@ types journal
 							}
 						}
 
+						flowcontainer = {
+							position = { -25 -7.5 }
+							direction = vertical
+							parentanchor = vcenter|right
+							minimumsize = { 50 40 }
+							maximumsize = { 80 65 }
+							datacontext = "[PowerBloc.GetCohesionLevel]"
+							tooltip = "COHESION_LEVEL_ACTIVE_TOOLTIP"
+				
+							textbox = {
+								align = nobaseline
+								parentanchor = hcenter
+								text = "REPUTATION_EFFECTS"
+								autoresize = yes
+								elide = right
+							}
+		
+							flowcontainer = {
+								parentanchor = hcenter|right
+				
+								textbox = {
+									align = nobaseline
+									parentanchor = vcenter
+									text = "RETAINER_SLOTS"
+									autoresize = yes
+									elide = right
+								}
+							}
+
+							flowcontainer = {
+								parentanchor = hcenter|right
+				
+								textbox = {
+									align = nobaseline
+									parentanchor = vcenter
+									raw_text = "[AccessPlayer.MakeScope.ScriptValue('renown_prestige')|=+D] [concept_prestige]"
+									autoresize = yes
+									elide = right
+								}
+							}
+						}
 
 					}
 
 					default_header = {
-						
-			
-					
 						blockoverride "text" {
 							text = "ON_RETAINER"
 						}
@@ -427,16 +475,133 @@ types journal
 						}
 					}
 
+										### DECISIONS
+					default_header = {
+						visible = "[InformationPanel.IsTabSelected('situations')]"
+						blockoverride "text" {
+							text = "EXPEDITIONS"
+						}
+					}
+
+
+				
+
+					flowcontainer = {
+						visible = "[InformationPanel.IsTabSelected('situations')]"
+						spacing = 20
+						minimumsize = { 100 85 }
+						direction = horizontal
+						parentanchor = hcenter|left
+						margin_left = 30
+
+						start_expedition_button = {
+							size = { 83 83 }
+							resizeparent = yes
+							parentanchor = hcenter|left
+							texture = "gfx/interface/illustrations/expeditions/expedition_everfrost.dds"
+
+							blockoverride "datacontext" {
+								datacontext = "[GetScriptedGui('start_everfrost_expedition')]"
+							}
+							blockoverride "onclick" {
+								onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+							}
+							blockoverride "enabled" {
+								enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+							}
+							blockoverride "tooltip" {
+								tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+							}
+						}
+						start_expedition_button = {
+							resizeparent = yes
+							size = { 83 83 }
+							parentanchor = hcenter|left
+							texture = "gfx/interface/illustrations/expeditions/expedition_locari.dds"
+
+							blockoverride "datacontext" {
+								datacontext = "[GetScriptedGui('start_dreamweaver_expedition')]"
+							}
+							blockoverride "onclick" {
+								onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+							}
+							blockoverride "enabled" {
+								enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+							}
+							blockoverride "tooltip" {
+								tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+							}
+						}
+						start_expedition_button = {
+							resizeparent = yes
+							size = { 83 83 }
+							parentanchor = hcenter|left
+							texture = "gfx/interface/illustrations/expeditions/expedition_mindrend.dds"
+							blockoverride "datacontext" {
+								datacontext = "[GetScriptedGui('start_mindrend_expedition')]"
+							}
+							blockoverride "onclick" {
+								onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+							}
+							blockoverride "enabled" {
+								enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+							}
+							blockoverride "tooltip" {
+								tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+							}
+						}
+						start_expedition_button = {
+							resizeparent = yes
+							size = { 83 83 }
+							parentanchor = hcenter|left
+							texture = "gfx/interface/illustrations/expeditions/expedition_iaslesh.dds"
+							blockoverride "datacontext" {
+								datacontext = "[GetScriptedGui('start_iaslesh_expedition')]"
+							}
+							blockoverride "onclick" {
+								onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+							}
+							blockoverride "enabled" {
+								enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+							}
+							blockoverride "tooltip" {
+								tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+							}
+						}
+						start_expedition_button = {
+							resizeparent = yes
+							size = { 83 83 }
+							parentanchor = hcenter|left
+							texture = "gfx/interface/illustrations/expeditions/expedition_khus.dds"
+							blockoverride "datacontext" {
+								datacontext = "[GetScriptedGui('start_khus_expedition')]"
+							}
+							blockoverride "onclick" {
+								onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+							}
+							blockoverride "enabled" {
+								enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+							}
+							blockoverride "tooltip" {
+								tooltip = "[ScriptedGui.BuildTooltip(GuiScope.SetRoot(AccessPlayer.MakeScope).End)]"
+							}
+						}
+					}
+
+
+
 					### ACTIVE
 					default_header = {
+						visible = "[InformationPanel.IsTabSelected('situations')]"
 						blockoverride "text" {
 							text = "SITUATIONS"
 						}
 					}
 
 					empty_state = {
+						datacontext = "[GetJournalEntryGroup('je_group_quests')]"
 						blockoverride "visible" {
-							 visible = "[IsDataModelEmpty(AccessPlayer.AccessActiveNonPlayerObjectiveJournalEntries)]"
+							 visible = "[And(IsDataModelEmpty(JournalEntryGroup.GetActiveJournalEntryTypes(GetPlayer.Self)), InformationPanel.IsTabSelected('situations'))]"
 						}
 						blockoverride "text" {
 							text = "NO_SITUATIONS"
@@ -444,22 +609,24 @@ types journal
 					}
 
 					flowcontainer = {
+						
+						datacontext = "[GetJournalEntryGroup('je_group_quests')]"
+						visible = "[And(Not(IsDataModelEmpty(JournalEntryGroup.GetActiveJournalEntryTypes(GetPlayer.Self))), InformationPanel.IsTabSelected('situations'))]"
 						margin = { 0 10 }
 						direction = vertical
 						parentanchor = hcenter
-						datamodel = "[AccessPlayer.GetGroupsForActiveJournalEntries]"
 						spacing = 10
 
-						item = {
 							flowcontainer = {
 								direction = vertical
+								
 								textbox = {
-									text = "[JournalEntryGroup.GetName]"
+									raw_text = "Active"
 									autoresize = yes
 									align = nobaseline
 									default_format = "#title"
 									margin_left = 3
-								}							
+								}				
 								flowcontainer = {
 									direction = vertical
 									datamodel = "[JournalEntryGroup.GetActiveJournalEntryTypes(GetPlayer.Self)]"
@@ -467,58 +634,58 @@ types journal
 									item = {
 										journal_entry = {
 											datacontext = "[AccessPlayer.GetJournalEntry(JournalEntryType.Self)]"
+											alpha = 0.75
+											blockoverride "fontsize" {}
+											blockoverride "iconsize" {
+												size = { 35 35 }
+											}
+										}
+									}
+								}			
+
+							}
+					}
+					flowcontainer = {
+						datacontext = "[GetJournalEntryGroup('je_group_quests')]"
+						visible = "[And(Not(IsDataModelEmpty(JournalEntryGroup.GetInactiveJournalEntryTypes(GetPlayer.Self))), InformationPanel.IsTabSelected('situations'))]"
+						margin = { 0 10 }
+						direction = vertical
+						parentanchor = hcenter
+						spacing = 10
+
+							flowcontainer = {
+								direction = vertical
+								
+								textbox = {
+									raw_text = "Inactive"
+									autoresize = yes
+									align = nobaseline
+									default_format = "#title"
+									margin_left = 3
+								}					
+								flowcontainer = {
+									direction = vertical
+									datamodel = "[JournalEntryGroup.GetInactiveJournalEntryTypes(GetPlayer.Self)]"
+									spacing = 2
+									item = {
+										journal_entry = {
+											datacontext = "[AccessPlayer.GetJournalEntry(JournalEntryType.Self)]"
+											alpha = 0.75
+											blockoverride "fontsize" {}
+											blockoverride "iconsize" {
+												size = { 35 35 }
+											}
 										}
 									}
 								}
+
 							}
-						}
 					}
-
-					### DECISIONS
-					default_header = {
-						blockoverride "text" {
-							text = "EXPEDITIONS"
-						}
-					}
-
-					flowcontainer = {
-						using = default_list_position
-						direction = vertical
-						margin_bottom = 10
-						using = default_content_fade
-
-						
-						textbox = {
-							visible = "[IsDataModelEmpty(GetPlayer.GetDecisions)]"
-							text = NO_DECISIONS
-							autoresize = yes
-							align = left|nobaseline
-							using = fontsize_xxl
-							parentanchor = top|hcenter
-							margin_bottom = 25
-							margin_top = 10
-							alpha = 0.3
-						}
-
-						dynamicgridbox = {
-							parentanchor = hcenter
-							datamodel = "[GetPlayer.GetDecisions]"
-							item = {
-								flowcontainer = {
-									margin = { 0 2 }
-									direction = vertical
-									
-									decision = {
-										minimumsize = { @panel_width_minus_30 -1 }
-									}
-								}
-							}
-						}
-					}
+				}
 				}
 			}
 		}
-	}
+	
 
 	### JOURNAL ENTRY
 	type journal_entry = button {
@@ -1322,7 +1489,7 @@ types journal
 					size = { 83 83 }
 					position = { 0 -20 }
 					parentanchor = hcenter|bottom
-					
+					enabled = "[GreaterThanOrEqualTo_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('renown'), '(CFixedPoint)1000')]"
 					visible = "[Not(GetPlayer.MakeScope.Var('first_retainer').IsSet)]"
 
 					blockoverride "tooltip" {
@@ -1352,7 +1519,7 @@ types journal
 					size = { 55 55 }
 					position = { -110 -20 }
 					parentanchor = hcenter|bottom
-					
+					enabled = "[And(GreaterThanOrEqualTo_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('renown'), '(CFixedPoint)2000'), GetPlayer.MakeScope.Var('first_retainer').IsSet)]"
 					visible = "[Not(GetPlayer.MakeScope.Var('second_retainer').IsSet)]"
 
 					blockoverride "tooltip" {
@@ -1382,7 +1549,7 @@ types journal
 					size = { 55 55 }
 					position = { 110 -20 }
 					parentanchor = hcenter|bottom
-					
+					enabled = "[And(GreaterThanOrEqualTo_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('renown'), '(CFixedPoint)3000'), GetPlayer.MakeScope.Var('second_retainer').IsSet)]"
 					visible = "[Not(GetPlayer.MakeScope.Var('third_retainer').IsSet)]"
 
 					blockoverride "tooltip" {
@@ -1411,7 +1578,7 @@ types journal
 					size = { 55 55 }
 					position = { -210 -20 }
 					parentanchor = hcenter|bottom
-					
+					enabled = "[And(GreaterThanOrEqualTo_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('renown'), '(CFixedPoint)4000'), GetPlayer.MakeScope.Var('third_retainer').IsSet)]"
 					visible = "[Not(GetPlayer.MakeScope.Var('fourth_retainer').IsSet)]"
 
 					blockoverride "tooltip" {
@@ -1439,7 +1606,7 @@ types journal
 					size = { 55 55 }
 					position = { 210 -20 }
 					parentanchor = hcenter|bottom
-					
+					enabled = "[And(GreaterThanOrEqualTo_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('renown'), '(CFixedPoint)5000'), GetPlayer.MakeScope.Var('fourth_retainer').IsSet)]"
 					visible = "[Not(GetPlayer.MakeScope.Var('fifth_retainer').IsSet)]"
 
 					blockoverride "tooltip" {

@@ -24,7 +24,7 @@
 
 building_desert_hunting_lodge = {
 	building_group = bg_desert_hunting
-	texture = "gfx/interface/icons/building_icons/essence_temperate.dds"
+	texture = "gfx/interface/icons/building_icons/essence_desert.dds"
 	city_type = wood
 	required_construction = construction_cost_low
 	terrain_manipulator = forestry
@@ -68,6 +68,52 @@ building_khus_hunting_lodge = {
 	ownership_type = self
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+}
+
+building_big_game_hunts = {
+	building_group = bg_big_game_hunting
+	texture = "gfx/interface/icons/building_icons/cave_hunting.dds"
+	city_type = wood
+	required_construction = construction_cost_low
+	terrain_manipulator = forestry
+	levels_per_mesh = 5
+
+	unlocking_technologies = {
+		hunting_lodges
+	}
+
+	production_method_groups = {
+		pmg_big_hunts
+		pmg_carapace_usage
+		pmg_big_game_hunting_equipment
+		
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+}
+
+building_rotfarm = {
+	building_group = bg_rotfarm
+	texture = "gfx/interface/icons/building_icons/rot_farms.dds"
+	city_type = wood
+	required_construction = construction_cost_medium
+	terrain_manipulator = forestry
+	levels_per_mesh = 5
+
+	unlocking_technologies = {
+		hunting_lodges
+	}
+
+	production_method_groups = {
+		pmg_grubhub
+		pmg_monster_wine
+		pmg_harvesting_process_building_wheat_farm
+		
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_light_industry.dds"
 }
 
 building_logging_camp_stonewood = {
@@ -159,8 +205,8 @@ building_fur_hunting_lodge = {
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
 }
 building_cactus_farm = {
-	building_group = bg_logging
-	texture = "gfx/interface/icons/building_icons/logging_camp.dds"
+	building_group = bg_cactus_farm
+	texture = "gfx/interface/icons/building_icons/cactus_fields.dds"
 	city_type = wood
 	required_construction = construction_cost_low
 	terrain_manipulator = forestry
@@ -168,7 +214,7 @@ building_cactus_farm = {
 
 	production_method_groups = {
 		pmg_base_building_logging_camp
-		pmg_hardwood
+		pmg_cactus_fruit
 		pmg_equipment
 		pmg_transportation_building_logging_camp
 		pmg_logging_potions
@@ -230,4 +276,25 @@ building_fishing_wharf_glowfish = {
 	ownership_type = self
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_fishing.dds"
+}
+
+building_hippo_ranches = {
+	building_group = bg_hippos
+	texture = "gfx/interface/icons/building_icons/hippos.dds"
+	city_type = farm
+	required_construction = construction_cost_low
+	
+	unlocking_technologies = {
+		enclosure
+	}
+
+	production_method_groups = {
+		pmg_base_building_hippo_ranches
+		pmg_refrigeration_building_whaling_station
+	}
+	
+	terrain_manipulator = pasture
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
 }

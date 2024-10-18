@@ -84,7 +84,27 @@ salt_waste_extra_evil = {
 
 salt_waste_curse_resolved = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_prestige_mult = 0.10
+	country_prestige_mult = 0.05
+}
+
+diplomats_of_the_wastes = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_diplomacy_positive.dds
+	country_prestige_from_navy_power_projection_mult = 0.2
+	country_influence_mult = 0.05
+	country_trade_route_competitiveness_mult = 0.25
+}
+
+age_of_orcs = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	country_prestige_from_army_power_projection_mult = 0.15
+	unit_experience_gain_mult = 0.25
+	building_group_bg_mining_throughput_add = 0.1
+	building_group_bg_logging_throughput_add = 0.1
+}
+
+atamzotayit_triumphant = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_mult = 0.05
 }
 
 lighthouse_survey = {
@@ -181,4 +201,51 @@ found_dragon_tombs = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_map_positive.dds"
 	country_minting_mult = 0.2
 	country_authority_mult = 0.1
+}
+
+industrialists_pies_restricted = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_food_negative.dds
+	interest_group_approval_add = -2
+}
+
+industrialists_pies_unrestricted = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_food_positive.dds
+	interest_group_approval_add = 3
+}
+
+rural_folk_pies_restricted = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_food_negative.dds
+	interest_group_approval_add = 3
+}
+
+rural_folk_pies_unrestricted = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_food_positive.dds
+	interest_group_approval_add = -2
+}
+
+industrialists_pie_intervention = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_food_positive.dds
+	interest_group_approval_add = -1
+}
+
+baking_powder_regulations = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_food_negative.dds
+	building_food_industry_throughput_add = -0.1
+}
+
+modifier_pastry_subsidy_cost = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	country_expenses_add = 1
+}
+
+hobgoblin_training_standards = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_soldier_positive.dds"
+
+	interest_group_ig_armed_forces_pol_str_mult = 0.30
+	country_military_wages_mult = 0.5
+	unit_morale_loss_mult = 0.35
+	country_military_goods_cost_mult = 0.35
+	unit_kill_rate_mult = 0.05
+	unit_army_offense_mult = 0.15
+	unit_army_defense_mult = 0.15
 }

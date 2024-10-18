@@ -2094,7 +2094,7 @@ sg_form_power_bloc = {
 
 	trigger = {
 		OR = {
-			country_rank = rank_value:great_power
+			country_rank >= rank_value:great_power
 			AND = {
 				country_rank = rank_value:major_power
 				has_variable = tutorial_form_pb_end

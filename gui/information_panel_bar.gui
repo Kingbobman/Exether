@@ -864,6 +864,7 @@ types information_panel_bar_types {
 				sidebar_label_button_small = {
 					#enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 					enabled = no
+					visible = no
 					position = { -100 @international_position }
 					blockoverride "onclick" {
 						onclick = "[GetVariableSystem.Toggle('international_open')]"
@@ -881,12 +882,14 @@ types information_panel_bar_types {
 				}
 
 				sidebar_label_text_small = {
+					visible = no
 					position = { -100 @international_position }
 					text = "INTERNATIONAL_ORGANIZATIONS"
 				}
 				widget = {
 					#enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
 					enabled = no
+					visible = no
 					name = "tutorial_highlight_international"
 					position = { 0 @international_position }
 					using = clickthrough_blocker

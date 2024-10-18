@@ -92,88 +92,11 @@ on_monthly_pulse_country = {
 		#delay = { days = 7 }
 		fund_lobbies_monthly_events
 		queue_port
+		calculate_adventurer_coverage_deficit
 	}
 }
 
-calculate_arcana_surplus = {
-	effect = {
-		remove_modifier = surplus_arcana
-		add_modifier = {
-			name = surplus_arcana 
-			multiplier = {
-				value = root.arcana
-				divide = 600
-			}
-		}
-	}
-}
 
-calculate_veil_top_damage = {
-	effect = {
-		set_local_variable = {
-			name = current_rank
-			value = 0
-		}
-		ordered_country = {
-			limit = {
-				this = {
-					has_variable = veil_damage
-				}		
-			}
-			order_by = var:veil_damage
-			max = 3
-			change_local_variable = {
-				name = current_rank
-				add = 1
-			}
-			set_variable = {
-				name = player_rank
-				value = local_var:current_rank
-			}
-			
-			if = {
-				limit = {
-					var:player_rank = 1
-				}
-				set_global_variable = {
-					name = veil_damage_top_1
-					value = this
-				}
-				set_global_variable = {
-					name = veil_damage_top_1_value
-					value = var:veil_damage
-				}
-			}
-			else_if = {
-				limit = {
-					var:player_rank = 2
-				}
-				set_global_variable = {
-					name = veil_damage_top_2
-					value = this
-				}
-				set_global_variable = {
-					name = veil_damage_top_2_value
-					value = var:veil_damage
-				}
-			}
-			else_if = {
-				limit = {
-					var:player_rank = 3
-				}
-				set_global_variable = {
-					name = veil_damage_top_3
-					value = this
-				}
-				set_global_variable = {
-					name = veil_damage_top_3_value
-					value = var:veil_damage
-				}
-			}
-		}
-
-	}
-}
 
 on_yearly_pulse_country = {
 	effect = {
@@ -611,6 +534,220 @@ on_character_death = {
 				trigger_event = { id = beauty_in_bloom.5 days = 1 }
 			}
 		}
+
+		#Handle retainer death
+		if = {
+			limit = {
+				has_variable = is_retainer
+			}
+			free_character_from_void = yes
+			set_character_busy_and_immortal = no
+			save_scope_as = dead_retainer
+
+			#Remove buffs from region if assigned
+			if = {
+				limit = {
+					exists = scope:dead_retainer.var:assigned_region
+				}
+				scope:dead_retainer.owner = {
+					every_scope_state = {
+						limit = {
+							region = scope:dead_retainer.var:assigned_region
+						}
+						remove_modifier = state_retainer_assigned
+					}
+					scope:dead_retainer = {
+						remove_variable = assigned_region
+					}
+
+				}
+
+			}
+
+			#Remove retainer position, used in next step
+			if = {
+				limit = { 
+					has_variable = is_first_retainer
+				}
+				remove_variable = is_first_retainer
+				scope:dead_retainer.owner = {
+					remove_variable = first_retainer
+				}
+			}
+			if = {
+				limit = { 
+					has_variable = is_second_retainer
+				}
+				remove_variable = is_second_retainer
+				scope:dead_retainer.owner = {
+					remove_variable = second_retainer
+				}
+			}
+			if = {
+				limit = { 
+					has_variable = is_third_retainer
+				}
+				remove_variable = is_third_retainer
+				scope:dead_retainer.owner = {
+					remove_variable = third_retainer
+				}
+			}
+			if = {
+				limit = { 
+					has_variable = is_fourth_retainer
+				}
+				remove_variable = is_fourth_retainer
+				scope:dead_retainer.owner = {
+					remove_variable = fourth_retainer
+				}
+			}
+			if = {
+				limit = { 
+					has_variable = is_fifth_retainer
+				}
+				remove_variable = is_fifth_retainer
+				scope:dead_retainer.owner = {
+					remove_variable = fifth_retainer
+				}
+			}
+
+			scope:dead_retainer.owner = {
+		
+				#Move up retainer counts
+				if = {
+					limit = {
+						NOT = {
+							any_character_in_void = {
+								owner = scope:dead_retainer.owner
+								has_variable = is_first_retainer
+							}
+						}
+					}
+					random_character_in_void = {
+						limit = { 
+							owner = scope:dead_retainer.owner
+							has_variable = is_second_retainer
+						}
+						remove_variable = is_second_retainer
+						set_variable = is_first_retainer
+						set_local_variable = {
+							name = replacement_retainer1
+							value = this
+						} 
+						local_var:replacement_retainer1.owner = {
+							remove_variable = second_retainer
+							set_variable = {
+								name = first_retainer
+								value = local_var:replacement_retainer1
+							}
+						}
+					}
+
+				}
+				if = {
+					limit = {
+						NOT = {
+							any_character_in_void = {
+								owner = scope:dead_retainer.owner
+								has_variable = is_second_retainer
+							}
+						}
+					}
+					random_character_in_void = {
+						limit = { 
+							owner = scope:dead_retainer.owner
+							has_variable = is_third_retainer 
+						}
+						remove_variable = is_third_retainer
+						set_variable = is_second_retainer
+						set_local_variable = {
+							name = replacement_retainer2
+							value = this
+						} 
+						local_var:replacement_retainer2.owner = {
+							remove_variable = third_retainer
+							set_variable = {
+								name = second_retainer
+								value = local_var:replacement_retainer2
+							}
+						}
+					}
+
+				}
+				if = {
+					limit = {
+						NOT = {
+							any_character_in_void = {
+								owner = scope:dead_retainer.owner
+								has_variable = is_third_retainer
+							}
+						}
+					}
+					random_character_in_void = {
+						limit = { 
+							owner = scope:dead_retainer.owner
+							has_variable = is_fourth_retainer 
+						}
+						remove_variable = is_fourth_retainer
+						set_variable = is_third_retainer
+						set_local_variable = {
+							name = replacement_retainer3
+							value = this
+						} 
+						local_var:replacement_retainer3.owner = {
+							remove_variable = fourth_retainer
+							set_variable = {
+								name = third_retainer
+								value = local_var:replacement_retainer3
+							}
+						}
+					}
+
+				}
+				if = {
+					limit = {
+						NOT = {
+							any_character_in_void = {
+								owner = scope:dead_retainer.owner
+								has_variable = is_fourth_retainer
+							}
+						}
+					}
+					random_character_in_void = {
+						limit = { 
+							owner = scope:dead_retainer.owner
+							has_variable = is_fifth_retainer 
+						}
+						remove_variable = is_fifth_retainer
+						set_variable = is_fourth_retainer
+						set_local_variable = {
+							name = replacement_retainer4
+							value = this
+						}
+						local_var:replacement_retainer4.owner = {
+							remove_variable = fifth_retainer
+							set_variable = {
+								name = fourth_retainer
+								value = local_var:replacement_retainer4
+							}
+						}
+					}
+				}
+		
+				#Remove from owned retainers
+				remove_list_variable = {
+					name = hired_retainers_list
+					target = scope:dead_retainer
+				}  
+
+					
+			}
+
+			kill_character = yes
+
+
+
+		}
 	}
 }
 
@@ -873,6 +1010,12 @@ on_country_formed = {
 			limit = {
 				c:GAV ?= ROOT
 			}
+		}
+		if = {
+			limit = {
+				c:TQL ?= ROOT
+			}
+			trigger_event = { id = salt_waste_narrative_events.18 popup = yes }
 		}
 		else = {
 			trigger_event = { id = formation.17 popup = yes }

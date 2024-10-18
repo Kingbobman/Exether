@@ -1,38 +1,4 @@
 ﻿MILITARY_FORMATIONS = {
-	c:JUX ?= {
-		create_military_formation = {
-			type = army
-			hq_region = sr:region_vindon_narrows
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_PLACIUKATAL
-				count = 6
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_hussars
-				state_region = s:STATE_PLACIUKATAL
-				count = 2
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_cannon_artillery
-				state_region = s:STATE_PLACIUKATAL
-				count = 2
-			}
-			save_scope_as = pel_army
-		}
-
-		create_character = {
-			is_general = yes
-			hq = region_vindon_narrows
-			save_scope_as = pel_general
-		}
-		scope:pel_general = {
-			transfer_to_formation = scope:pel_army
-		}
-	}
 	c:LAC ?= {
 		create_military_formation = {
 			type = army
@@ -42,67 +8,12 @@
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_APAFONTE
+				state_region = s:STATE_CREUCHE
 				count = 15
 			}
 		}
 	}
-	
-	c:VHA ?= {
-		create_military_formation = {
-			type = army
-			hq_region = sr:region_vindon_narrows
 
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_ZVEJYCATIA
-				count = 3
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_hussars
-				state_region = s:STATE_ZVEJYCATIA
-				count = 3
-			}
-			save_scope_as = lem_army
-		}
-
-		create_character = {
-			is_general = yes
-			hq = region_vindon_narrows
-			save_scope_as = lem_general
-		}
-		scope:lem_general = {
-			transfer_to_formation = scope:lem_army
-		}
-
-		create_military_formation = {
-			type = fleet
-			hq_region = sr:region_vindon_narrows
-		
-			combat_unit = {
-				type = unit_type:combat_unit_type_man_o_war
-				state_region = s:STATE_ZVEJYCATIA
-				count = 1
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_frigate
-				state_region = s:STATE_ZVEJYCATIA
-				count = 3
-			}
-			save_scope_as = lem_fleet
-		}
-
-		create_character = {
-			is_admiral = yes
-			hq = region_vindon_narrows
-			save_scope_as = lem_admiral
-		}
-		scope:lem_admiral = {
-			transfer_to_formation = scope:lem_fleet
-		}
-	}
 	c:COC ?= {
 		create_military_formation = {
 			type = army
@@ -333,4 +244,137 @@
 			transfer_to_formation = scope:dev_army1
 		}
 	}
+
+	c:JUX ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_vindon_narrows
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_SALASLITVA
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_UOSTOCATAL
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_PLACIUKATAL
+				count = 5
+			}
+			save_scope_as = juxarmy
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_vindon_narrows
+			save_scope_as = juxgen
+		}
+		scope:juxgen = {
+			transfer_to_formation = scope:juxgen
+		}
+	}
+
+	c:VHO ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_vindon_narrows
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_AKVALITVA
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_SMILTYNECAT
+				count = 5
+			}
+			save_scope_as = vhoarmy
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_vindon_narrows
+			save_scope_as = vhogen
+		}
+		scope:vhogen = {
+			transfer_to_formation = scope:vhogen
+		}
+	}
+
+	c:SAE ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_vindon_narrows
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_RAMUMARI
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_LAIVINMAR
+				count = 5
+			}
+			save_scope_as = saearmy
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_vindon_narrows
+			save_scope_as = saegen
+		}
+		scope:saegen = {
+			transfer_to_formation = scope:saegen
+		}
+	}
+
+	c:VHA ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_vindon_narrows
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_mobile_artillery
+				state_region = s:STATE_ZVEJYCATIA
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_MARITIMLIS
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_KRIOKLYKATAL
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_VANDECATAL
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry
+				state_region = s:STATE_UPESTARR
+				count = 5
+			}
+			save_scope_as = lem_army
+		}
+
+		create_character = {
+			is_general = yes
+			hq = region_vindon_narrows
+			save_scope_as = lem_general
+		}
+		scope:lem_general = {
+			transfer_to_formation = scope:lem_army
+		}
+	}
+	
 }

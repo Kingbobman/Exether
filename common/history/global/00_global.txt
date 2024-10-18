@@ -18,6 +18,32 @@ GLOBAL = {
 		trigger_event = {
             id = civic_setup.1
         }
+		if = {
+			limit = {
+				NOT = { has_variable = num_arcana }
+			}
+			set_variable = {
+				name = num_arcana
+				value = 0
+			}
+		}
+		every_scope_state = {
+			set_local_variable = {
+				name  = coverage_state
+				value = this
+			}
+            if = {
+                limit = {
+                    state_adventurer_coverage_balance < 0
+                }
+                add_modifier = {
+                    name = coverage_deficit
+                    multiplier = {
+                        value = local_var:coverage_state.state_adventurer_coverage_multiplier 
+                    }
+                }
+            }
+        }
 	}
 
 	#Retainers 
@@ -204,18 +230,28 @@ GLOBAL = {
 		if = {
 			limit = {
 				any_primary_culture = {
-					OR = {
-						has_discrimination_trait = namkhazen_heritage
-						has_discrimination_trait = naga
 						has_discrimination_trait = beast
-					}
-					
 				}
 			}
-			add_technology_researched = psionic_tech
+			add_technology_researched = awakened_tech
 		}
-	}
-
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = naga
+				}
+			}
+			add_technology_researched = naga_tech
+		}
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = namkhazen_heritage
+				}
+			}
+			add_technology_researched = namkhazen_tech
+		}
+}
 	# International List
 
 	every_country = {
@@ -356,15 +392,15 @@ GLOBAL = {
 		value = 0
 	}
 
-	setup_arcana_active = yes
-	setup_arcana_unicorn = yes
-	setup_arcana_golem = yes
-	setup_arcana_phoenix = yes
-	setup_arcana_sphinx = yes
-	setup_arcana_fiend = yes
-	setup_arcana_justice = yes
-	setup_arcana_siren = yes
-	setup_arcana_surplus = yes
+	#setup_arcana_active = yes
+	#setup_arcana_unicorn = yes
+	#setup_arcana_golem = yes
+	#setup_arcana_phoenix = yes
+	#setup_arcana_sphinx = yes
+	#setup_arcana_fiend = yes
+	#setup_arcana_justice = yes
+	#setup_arcana_siren = yes
+	#setup_arcana_surplus = yes
 	
 
 	every_country = {

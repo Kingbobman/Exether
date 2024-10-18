@@ -2364,7 +2364,7 @@ ideology_market_liberal = {
 		if = {
 			limit = {
 				owner = {
-					country_rank = rank_value:great_power
+					country_rank >= rank_value:great_power
 				}
 			}
 			add = 25
@@ -2403,6 +2403,15 @@ ideology_luddite = {
 		law_mercantilism = neutral
 		law_protectionism = approve		
 		law_isolationism = strongly_approve
+	}
+
+	lawgroup_magic = {
+		law_no_magic = neutral
+		law_divine_miracles = approve
+		law_druidic_circles = strongly_approve
+		law_artificer_guilds = strongly_disapprove
+		law_astrological_studies = neutral
+		law_mage_hunters = disapprove
 	}
 
 	possible = {
@@ -2728,7 +2737,7 @@ ideology_protectionist = {
 		if = {
 			limit = {
 				owner = {
-					country_rank = rank_value:great_power
+					country_rank >= rank_value:great_power
 				}
 			}
 			add = -75

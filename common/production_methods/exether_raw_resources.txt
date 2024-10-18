@@ -1157,7 +1157,7 @@ pm_diving_bells_ship_graveyard = { #diving bells to recover relics
 			
 			# output goods
 			goods_output_ectoplasm_add = 20 #1000
-			goods_output_gold_add = 3.5 #350
+			goods_output_relics_add = 6 #350
 			
 			#1350 - 500 = 850
 
@@ -1195,7 +1195,7 @@ pm_gantry_cranes_ship_graveyard = {
 			
 			# output goods
 			goods_output_ectoplasm_add = 40 #4000
-			goods_output_gold_add = 7 #350
+			goods_output_relics_add = 14 #350
 		}
 
 		level_scaled = {
@@ -1228,7 +1228,7 @@ pm_on_that_oceangate_grind_ship_graveyard = {
 			
 			# output goods
 			goods_output_ectoplasm_add = 60 #3000
-			goods_output_gold_add = 10.5 #1050
+			goods_output_relics_add = 21 #1050
 		}
 
 		level_scaled = {
@@ -1262,7 +1262,7 @@ pm_on_that_oceangate_grind_thaumacore_ship_graveyard = {
 			
 			# output goods
 			goods_output_ectoplasm_add = 69 #3450
-			goods_output_gold_add = 12 #1200
+			goods_output_relics_add = 24 #1200
 		}
 
 		level_scaled = {
@@ -2060,6 +2060,76 @@ pm_extra_wood = {
 			# output goods
 			goods_output_monster_essence_add = -5
 			goods_output_wood_add = 10
+		}
+	}
+}
+
+pm_simple_underfishing = {
+	texture = "gfx/interface/icons/production_method_icons/simple_fishing.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# output
+			goods_output_fish_add = 25 
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 4500
+		}
+	}
+}
+
+pm_underfish_boating = {
+	texture = "gfx/interface/icons/production_method_icons/trawlers.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input
+			goods_input_wood_add = 15 #20 300
+			goods_input_fabric_add = 5 #20 200
+			# output
+			goods_output_fish_add = 50
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 4000
+			building_employment_adventurers_add = 500
+		}
+	}
+}
+
+pm_steamboat_underfishing = {
+	texture = "gfx/interface/icons/production_method_icons/steam_trawlers.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	
+	unlocking_technologies = {
+		gantry_cranes
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input
+			goods_input_engines_add = 7 #60 420
+			goods_input_coal_add = 14 #30  420
+			
+			# output
+			goods_output_fish_add = 100
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 3000
+			building_employment_adventurers_add = 1000
+			building_employment_engineers_add = 500
 		}
 	}
 }

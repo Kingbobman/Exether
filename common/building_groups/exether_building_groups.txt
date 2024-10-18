@@ -375,6 +375,30 @@ bg_logging_liquortrees = {
 
 }
 
+bg_hippos = {
+	category = rural
+
+	capped_by_resources = yes
+	
+	economy_of_scale = yes
+	
+	default_building = building_hippo_ranches
+	
+	lens = forestry	
+	
+	cash_reserves_max = 25000
+	
+	urbanization = 5
+	infrastructure_usage_per_level = 1
+	
+	should_auto_expand = { 
+		default_auto_expand_rule = yes
+	}
+	
+	economy_of_scale_ai_factor = 2.0
+	foreign_investment_ai_factor = 0.75
+}
+
 bg_magic_resource = {
 	category = rural
 
@@ -437,6 +461,14 @@ bg_underfarms = {
 	cash_reserves_max = 25000
 }
 
+bg_underground_fishing = {
+	parent_group = bg_fishing
+	
+	default_building = building_underground_wharf
+	
+	cash_reserves_max = 25000
+}
+
 bg_spider_ranch = {
 	parent_group = bg_ranching
 	
@@ -451,7 +483,24 @@ bg_mushroom_logging = {
 
 	cash_reserves_max = 25000
 }
+	 
+bg_rotfarm = {
+    parent_group = bg_agriculture
+    default_building = building_rotfarm
+}
 
+bg_big_game_hunting = {
+    parent_group = bg_magic_resource
+    default_building = building_big_game_hunts
+}
+
+bg_undertea = {
+   	parent_group = bg_plantations
+    
+    default_building = building_undertea
+    
+    cash_reserves_max = 25000
+}
 
 bg_magic_manufacturing = {
 	category = urban
@@ -514,4 +563,12 @@ bg_sunweave_plantations = {
 
 bg_questing = {
 	parent_group = bg_government
+}
+
+bg_lapis_mining = {
+	parent_group = bg_mining
+	
+	default_building = building_lapis_mine
+
+	can_use_slaves = yes
 }
