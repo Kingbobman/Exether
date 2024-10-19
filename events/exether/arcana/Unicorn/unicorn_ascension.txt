@@ -1,0 +1,110 @@
+namespace = unicorn_ascension
+
+unicorn_ascension.1 = {
+	type = country_event
+    placement = ROOT
+    
+	title = unicorn.ascension.1.t
+    desc = unicorn.ascension.1.d
+    flavor = unicorn.ascension.1.f
+
+	event_image = {
+		video = "europenorthamerica_capitalists_meeting"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+    
+    duration = 7
+
+	option = {
+		default_option = yes
+		name = unicorn.ascension.1.a
+
+        custom_tooltip = {
+            text = arcana_dogmatic_add_three
+            change_variable = {
+                name = arcana_alignment_dogmatic
+                add = 3
+            }
+        }
+
+        random_scope_character = {
+            limit = {
+                is_ruler = yes
+            }
+            add_trait = unicorn_chosen_one
+        }
+	}
+
+	option = {
+		name = unicorn.ascension.1.b
+
+        custom_tooltip = {
+            text = arcana_iconoclast_add_three
+            change_variable = {
+                name = arcana_alignment_iconoclast
+                add = 3
+            }
+        }
+
+        random_scope_character = {
+            limit = {
+                is_ruler = yes
+            }
+            add_trait = unicorn_chosen_one
+        }
+
+        add_modifier = {
+            name = country_rejected_unicorn_chosen_gift
+            years = 5
+        }
+	}
+
+	option = {
+		name = unicorn.ascension.1.c
+
+        highlighted_option = yes
+
+		trigger = {
+			ruler = {
+                OR = {
+                    has_trait = ambitious
+                    has_trait = arrogant
+                    has_trait = pious
+                }
+            }
+		}
+
+		show_as_unavailable = { always = yes }
+
+        custom_tooltip = {
+            text = arcana_heretical_add_three
+            change_variable = {
+                name = arcana_alignment_heretical
+                add = 3
+            }
+        }
+
+        random_scope_character = {
+            limit = {
+                is_ruler = yes
+            }
+            add_trait = unicorn_chosen_one
+        }
+
+		every_scope_character = {
+			limit = {
+   			has_role = general
+            NOT = { has_trait = reserved }
+            NOT = { has_trait = charismatic }
+            NOT = { age < define:NCharacters|ADULT_AGE }
+            NOT = { has_role = agitator }
+			}
+
+			add_trait = imperious
+		}
+        
+	}
+}

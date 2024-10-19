@@ -15,9 +15,25 @@ GLOBAL = {
 
 	# Arcane Civics
 	every_country = {
-		trigger_event = {
-            id = civic_setup.1
-        }
+		# trigger_event = {
+        #     id = civic_setup.1
+        # }
+
+		set_variable = {
+			name = arcana_alignment_dogmatic
+			value = 0
+		}
+
+		set_variable = {
+			name = arcana_alignment_iconoclast
+			value = 0
+		}
+
+		set_variable = {
+			name = arcana_alignment_heretical
+			value = 100
+		}
+
 		if = {
 			limit = {
 				NOT = { has_variable = num_arcana }
@@ -27,6 +43,7 @@ GLOBAL = {
 				value = 0
 			}
 		}
+
 		every_scope_state = {
 			set_local_variable = {
 				name  = coverage_state
