@@ -538,7 +538,7 @@ mountain = {
 				value = 0
 				if = {
 					limit = {
-						scope:state = {
+						state = {
 							state_region = s:STATE_SKYPIERCER_PEAK
 						}
 					}
@@ -1475,7 +1475,7 @@ urban = {
 		if = {
 			limit = {
 				AND = {
-					scope:region = {
+					state = {
 						undermountain_state = no
 					}
 					exists = state.b:building_urban_center
@@ -1799,7 +1799,7 @@ undermountain_urban = {  #Exether
 		if = {
 			limit = {
 				AND = {
-					scope:region = {
+					scope:state = {
 						undermountain_state = yes
 					}
 					exists = state.b:building_urban_center
