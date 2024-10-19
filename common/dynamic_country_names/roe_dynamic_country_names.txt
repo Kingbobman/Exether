@@ -1,0 +1,71 @@
+﻿DUM = { # Dumonia
+	dynamic_country_name = { # Dumonia Empire
+	name = dyn_c_dumonia_empire
+	adjective = dyn_c_dumonia_empire
+
+	is_main_tag_only = yes
+	priority = 10
+
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { 
+				has_law = law_type:law_monarchy
+			}
+
+		}
+	}
+	dynamic_country_name = { # Dumonia
+		name = dyn_c_dumonia
+		adjective = dyn_c_dumonia
+		
+		is_main_tag_only = yes
+		priority = 5
+		
+		trigger = {
+			exists = scope:actor
+		}
+	}
+
+}
+
+OLC = { # Ocelian Locari Company
+	dynamic_country_name = {
+		name = dyn_c_locari_company
+		adjective = dyn_c_locari_company_adj
+		use_overlord_prefix = yes
+
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_subject_trigger = yes
+		}
+	}
+}
+
+CER = { # Ceraun
+	dynamic_country_name = {
+		name = dyn_c_ceraun_cherryn
+		adjective = dyn_c_ceraun_cherryn_adj
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { country_has_primary_culture = cu:rivierling }
+			NOT = {
+				OR = {
+					exists = c:CHE
+					c:CER ?= {
+						has_diplomatic_pact = {
+							who = c:CHE
+							type = real_union
+							is_initiator = yes
+						}
+					}
+				}
+			}
+		}
+	}
+}
