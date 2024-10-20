@@ -45,14 +45,13 @@
 		if = {
 			limit = {
 				owner ={
-					any_primary_culture = {
-						has_discrimination_trait = hobgoblin
-					}
+					country_has_state_religion = rel:scourgelore
 				}
 			}
 			ig:ig_devout = {
 				remove_ideology = ideology_moralist
 				add_ideology = ideology_hobgoblin_moralist
+				remove_ideology = ideology_pious
 			}
 		}
 		
@@ -79,6 +78,8 @@
 							has_discrimination_trait = fey_domain
 							NOT = {
 								has_discrimination_trait = chivalrous_heritage
+								has_discrimination_trait = orc_pantheon
+								has_discrimination_trait = monastic_heritage
 							}
 						}
 					}
@@ -126,8 +127,48 @@
 				
 			}
 			ig:ig_devout = {
-				remove_ideology = ideology_pious
 				add_ideology = ideology_pious_magoclast
+			}
+		}
+
+		if = {
+			limit = {
+				OR = {
+					owner = {
+						religion = {
+							has_discrimination_trait = dwarf_pantheon
+						}
+					}
+				}
+				
+			}
+			ig:ig_devout = {
+				remove_ideology = ideology_moralist
+				add_ideology = ideology_ancestral_moralist
+			}
+		}
+
+		if = {
+			limit = {
+				owner = { 
+					OR = {
+						country_has_state_religion = rel:buried_gods
+						AND = {
+							religion = {
+								has_discrimination_trait = elf_pantheon
+							}
+							NOT = {
+								country_has_state_religion = rel:southern_fosirmi
+							}
+						}
+
+					}
+
+				}				
+			}
+			ig:ig_devout = {
+				remove_ideology = ideology_patriarchal
+				add_ideology = ideology_traditional
 			}
 		}
 

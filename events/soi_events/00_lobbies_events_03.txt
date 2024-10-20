@@ -2130,13 +2130,6 @@ lobby_events.57 = {
 					}
 				}
 				AND = {
-					target = { has_technology_researched = quinine }
-					ROOT = {
-						NOT = { has_technology_researched = quinine }
-						can_research = quinine
-					}
-				}
-				AND = {
 					target = { has_technology_researched = malaria_prevention }
 					ROOT = {
 						NOT = { has_technology_researched = malaria_prevention }
@@ -2174,13 +2167,6 @@ lobby_events.57 = {
 						ROOT = {
 							NOT = { has_technology_researched = pharmaceuticals }
 							can_research = pharmaceuticals
-						}
-					}
-					AND = {
-						target = { has_technology_researched = quinine }
-						ROOT = {
-							NOT = { has_technology_researched = quinine }
-							can_research = quinine
 						}
 					}
 					AND = {
@@ -2244,13 +2230,6 @@ lobby_events.57 = {
  				can_research = pharmaceuticals
  			}
  			add_technology_progress = { progress = 3500 technology = pharmaceuticals }
- 		}
- 		 else_if = {
- 			limit = {
- 				NOT = { has_technology_researched = quinine }
- 				can_research = quinine
- 			}
- 			add_technology_progress = { progress = 3500 technology = quinine }
  		}
  		else_if = {
  			limit = {

@@ -607,9 +607,9 @@ pm_steam_seasnake_trawlers = {
 
 		level_scaled = {
 			# employment
-			building_employment_laborers_add = 2500
-			building_employment_machinists_add = 1000
-			building_employment_adventurers_add = 1500
+			building_employment_laborers_add = 3000
+			building_employment_machinists_add = 750
+			building_employment_adventurers_add = 1250
 		}
 	}
 }
@@ -743,22 +743,7 @@ pm_steam_leviathan_ships = {
 		}
 	}
 	}
-	pm_no_medical = {
-		#texture = "gfx/interface/icons/production_method_icons/simple_fishing.dds"
-	}
-	pm_drink_and_a_prayer = {
-		#texture = "gfx/interface/icons/production_method_icons/simple_fishing.dds"
-		workforce_scaled = {
-			# input
-			goods_input_liquor_add = 2
-	}
-	unscaled = {
-		# mortality
-		building_laborers_mortality_mult = -0.1
-		building_machinists_mortality_mult = -0.1
-		building_adventurers_mortality_mult = -0.05
-	}
-}
+
 pm_manual_harvesting = {
 	texture = "gfx/interface/icons/production_method_icons/picks_and_shovels.dds"
 }
@@ -1242,7 +1227,7 @@ pm_on_that_oceangate_grind_ship_graveyard = {
 
 pm_on_that_oceangate_grind_thaumacore_ship_graveyard = {
 	texture = "gfx/interface/icons/production_method_icons/simple_oil_extraction.dds"
-	required_input_goods = thaumacores
+
 	unlocking_technologies = {
 		submarine
 	}
@@ -1362,7 +1347,7 @@ pm_on_that_oceangate_grind_wishstone_reef = {
 
 pm_on_that_oceangate_grind_thaumacore_wishstone_reef = {
 	texture = "gfx/interface/icons/production_method_icons/simple_oil_extraction.dds"
-	required_input_goods = thaumacores
+
 	unlocking_technologies = {
 		submarine
 	}
@@ -1410,7 +1395,7 @@ pm_potions_of_waterbreathing_wishstone_reef = { #now this is podracing
 		}
 
 		unscaled = {
-			building_output_potions_mult = 0.15
+			goods_output_potions_mult = 0.15
 			building_laborers_mortality_mult = -0.1
 		}
 	}
@@ -1434,7 +1419,7 @@ pm_potions_of_waterbreathing_ship_graveyard = { #now this is podracing
 		}
 
 		unscaled = {
-			building_output_add = 0.15
+			building_goods_output_add = 0.15
 			building_laborers_mortality_mult = -0.1
 		}
 	}

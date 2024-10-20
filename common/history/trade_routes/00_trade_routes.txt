@@ -720,52 +720,6 @@
 			direction = import
 		}
 	}
-	c:SET ?= {
-	}
-	c:BCT ?= {
-		create_trade_route = {
-			goods = wood
-			level = 3
-			target = c:DUM.market
-			direction = import
-		}
-		create_trade_route = {
-			goods = grain
-			level = 7
-			target = c:DUM.market
-			direction = import
-		}
-		create_trade_route = {
-			goods = fabric
-			level = 2
-			target = c:DUM.market
-			direction = import
-		}
-		create_trade_route = {
-			goods = clothes
-			level = 2
-			target = c:DUM.market
-			direction = import
-		}
-		create_trade_route = {
-			goods = liquor
-			level = 3
-			target = c:DUM.market
-			direction = import
-		}
-		create_trade_route = {
-			goods = iron
-			level = 5
-			target = c:DUM.market
-			direction = export
-		}
-		create_trade_route = {
-			goods = wood
-			level = 3
-			target = c:ICE.market
-			direction = import
-		}
-	}
 	c:ROF ?= {
 		create_trade_route = {
 			goods = artillery
@@ -987,8 +941,6 @@
 			direction = import
 		}
 	}
-	c:DIS ?= {	
-	}
 	c:VLT ?= {
 		create_trade_route = {
 			goods = hardwood
@@ -1077,6 +1029,15 @@ c:OCR ?= {
 		level = 1
 		target = c:RCR.market
 		direction = export
+	}	
+}
+
+c:ORO ?= {
+	create_trade_route = {
+		goods = liquor
+		level = 4
+		target = c:DIS.market
+		direction = import
 	}	
 }
 #South Sea

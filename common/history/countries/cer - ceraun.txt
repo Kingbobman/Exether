@@ -40,8 +40,10 @@
 			level = 1
 		}
 		
-		ig:ig_landowners = { 
+		ig:ig_landowners = {
 			add_ruling_interest_group = yes
+			add_ideology = ideology_cerunite_hegemony
+			set_interest_group_name = human_aristocracy
 		}
 
 		ig:ig_armed_forces = {
@@ -54,6 +56,10 @@
 
 		add_journal_entry = {
 			type = je_grey_boar
+		}
+
+		add_journal_entry = {
+			type = je_rivierling_unrest
 		}
 
 		effect_has_custom_journals = yes

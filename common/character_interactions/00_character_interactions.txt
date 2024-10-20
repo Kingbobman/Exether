@@ -294,7 +294,12 @@ marry_ruler_or_heir = {
 	possible = {
 		any_country = {
 			NOT = { THIS = scope:actor }
-			NOT = { is_subject_type = subject_type_personal_union }
+			NOT = { 					
+				OR = {
+					is_subject_type = subject_type_personal_union 
+					is_subject_type = subject_type_real_union 
+				}
+			}
 			has_law = law_type:law_monarchy
 			religion = scope:actor.religion
 			ruler = {

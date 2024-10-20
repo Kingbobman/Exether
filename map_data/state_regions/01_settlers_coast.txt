@@ -436,7 +436,7 @@ STATE_PEARFIELDS = {
         depleted_type = "bg_archeology"
         undiscovered_amount = 5
     }
-    naval_exit_id = 3028
+    naval_exit_id = 3038
 }
 
 STATE_VOZMEAD_BORDERLANDS = {
@@ -608,7 +608,7 @@ STATE_BURAMONG = {
     mine = xF18A8B
     wood = xEDFCB9
     arable_land = 210
-    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_tea_plantations" "bg_vineyard_plantations" }
+    arable_resources = { "bg_rye_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_vineyard_plantations" }
     capped_resources = {
         bg_iron_mining = 36
         bg_logging = 20
@@ -648,7 +648,7 @@ STATE_PLAGUEBRUSH = {
     }
     naval_exit_id = 3208
 }
-STATE_FORESTS_HEART_3_2 = {
+STATE_BLACKWOOD = {
     traits = { "state_trait_plaguewood" "state_trait_sandwall_mountains" "state_trait_plaguewood_lumber" }
     id = 4714
     subsistence_building = "building_subsistence_farms"
@@ -1631,11 +1631,6 @@ STATE_VYNDERVOHT = {
         type = "bg_collapsed_godsbane_vault"
         depleted_type = "bg_renovated_godsbane_vault"
         discovered_amount = 4
-
-    }
-    resource = {
-        type = "bg_collapsed_godsbane_vault"
-        depleted_type = "bg_renovated_godsbane_vault"
         undiscovered_amount = 8
 
     }
@@ -1655,6 +1650,7 @@ STATE_SHIFTING_SCAR = {
     capped_resources = {
         bg_logging = 8
         bg_khus_hunting = 5
+        bg_logging_crystalwood = 15
         bg_haunted_grounds = 10
     }
     resource = {
@@ -1672,10 +1668,11 @@ STATE_SHIFTING_SCAR_2 = {
     farm = xECD142
     mine = xE64BDA
     wood = xE29BB5
-    arable_land = 14
+    arable_land = 30
     arable_resources = { "bg_livestock_ranches" }
     capped_resources = {
         bg_logging = 8
+        bg_logging_crystalwood = 15
         bg_khus_hunting = 5
         bg_haunted_grounds = 10
     }
@@ -1696,7 +1693,7 @@ STATE_OVERBURROW = {
     wood = xEDE6D9
     impassable = { x24E2F0 xA2F776 xF40EF4 xFBD4C1 }
     traits = { "state_trait_baxfil_ridge" }
-    arable_land = 96
+    arable_land = 100
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_beekeeping" "bg_tobacco_plantations" }
     capped_resources = {
         bg_coal_mining = 68
@@ -2105,10 +2102,9 @@ STATE_SKYPIERCER_PEAK = {
         bg_monuments = 1
     }
     resource = {
-        type = "bg_collapsed_godsbane_vault"
-        depleted_type = "bg_renovated_godsbane_vault"
-        undiscovered_amount = 4
-        discovered_amount = 4
+        type = "bg_dwarf_ruins"
+        depleted_type = "bg_archeology"
+        undiscovered_amount = 5
     }
     naval_exit_id = 3213
 }

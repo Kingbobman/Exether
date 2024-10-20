@@ -150,7 +150,7 @@ wasteland = {
 	combat_width = 0.5
 	risk = 0.6
 	materials = {
-		wasteland_permafrost_3 = 10000
+		Wasteland_3 = 10000
 	}
 	created_material = DYNAMIC-Pollution_01
 	debug_color = hsv { 0.15 0.15 0.15 }
@@ -468,6 +468,25 @@ mountain = {
 				if = {
 					limit = {
 						scope:region = {
+							OR = {
+								region = sr:region_thoughtsmith_ridge
+								region = sr:region_mindrend_sands
+							}
+						
+						}
+					}
+					add = 3
+				}
+			}
+			path = "gfx/state_pictures/undermountain_1.dds"
+			effect = "vfx_entity_ui_state_arctic"
+		}
+		{
+			weight = {
+				value = 0
+				if = {
+					limit = {
+						scope:region = {
 							AND = {
 								is_arid_region = no
 							}
@@ -519,7 +538,7 @@ mountain = {
 				value = 0
 				if = {
 					limit = {
-						scope:state = {
+						state = {
 							state_region = s:STATE_SKYPIERCER_PEAK
 						}
 					}
@@ -1455,7 +1474,12 @@ urban = {
 		value = 0.1
 		if = {
 			limit = {
-				exists = state.b:building_urban_center
+				AND = {
+					state = {
+						undermountain_state = no
+					}
+					exists = state.b:building_urban_center
+				}
 			}
 			add = state.b:building_urban_center.level
 			subtract = 5
@@ -1711,12 +1735,11 @@ undermountain = {  #Exether
 							OR = {
 								region = sr:region_west_everfrost
 								region = sr:region_coldreach
-								region = sr:region_razorwind
 							}
 						
 						}
 					}
-					add = 3
+					add = 2
 				}
 			}
 			path = "gfx/state_pictures/undermountain_arctic.dds"
@@ -1736,7 +1759,7 @@ undermountain = {  #Exether
 						
 						}
 					}
-					add = 3
+					add = 2
 				}
 			}
 			path = "gfx/state_pictures/undermountain_1.dds"
@@ -1776,7 +1799,7 @@ undermountain_urban = {  #Exether
 		if = {
 			limit = {
 				AND = {
-					scope:region = {
+					scope:state = {
 						undermountain_state = yes
 					}
 					exists = state.b:building_urban_center
@@ -1796,6 +1819,25 @@ undermountain_urban = {  #Exether
 				value = 1
 			}
 			path = "gfx/state_pictures/arctic_mountain.dds"
+			effect = "vfx_entity_ui_state_arctic"
+		}
+		{
+			weight = {
+				value = 0
+				if = {
+					limit = {
+						scope:region = {
+							OR = {
+								region = sr:region_thoughtsmith_ridge
+								region = sr:region_mindrend_sands
+							}
+						
+						}
+					}
+					add = 3
+				}
+			}
+			path = "gfx/state_pictures/undermountain_1.dds"
 			effect = "vfx_entity_ui_state_arctic"
 		}
 	}
