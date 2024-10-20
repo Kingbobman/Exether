@@ -42,18 +42,18 @@
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_KILIMASAWA
+				state_region = s:STATE_UTSOCUKU
 				count = 15
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mobile_artillery
-				state_region = s:STATE_KILIMASAWA
+				state_region = s:STATE_UTSOCUKU
 				count = 15
 			}
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_KILIMASAWA
+				state_region = s:STATE_UTSOCUKU
 				service_type = conscript
 				count = 10
 			}
@@ -85,7 +85,7 @@
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_KILIMADADA
+				state_region = s:STATE_DENYICUNU
 				count = 20
 			}
 
@@ -229,10 +229,11 @@
 				persistent
 			}
 			save_scope_as = rux_general
+		}
+
 		scope:rux_general = {
 			transfer_to_formation = scope:rux_army
 		}
-	}
 
 		create_character = {
 			is_general = yes
@@ -244,10 +245,11 @@
 				charismatic
 			}
 			save_scope_as = rux2
+		
+		}
 		scope:rux2 = {
 			transfer_to_formation = scope:rux_army
 		}
-	}
 	}
 	c:BLD ?= {
 		create_military_formation = {

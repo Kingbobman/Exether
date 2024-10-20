@@ -676,9 +676,6 @@
 			direction = import
 		}
 	}
-	c:SET ?= {
-	}
-	}
 	c:ROF ?= {
 		create_trade_route = {
 			goods = artillery
@@ -900,8 +897,6 @@
 			direction = import
 		}
 	}
-	c:DIS ?= {	
-	}
 	c:VLT ?= {
 		create_trade_route = {
 			goods = hardwood
@@ -990,6 +985,15 @@ c:OCR ?= {
 		level = 1
 		target = c:RCR.market
 		direction = export
+	}	
+}
+
+c:ORO ?= {
+	create_trade_route = {
+		goods = liquor
+		level = 4
+		target = c:DIS.market
+		direction = import
 	}	
 }
 #South Sea

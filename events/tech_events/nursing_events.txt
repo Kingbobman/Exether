@@ -219,7 +219,6 @@
  		trigger = {
  			OR = {
  				can_research = medical_degrees
- 				can_research = quinine
  				can_research = malaria_prevention
  				can_research = antibiotics
  			}
@@ -229,12 +228,6 @@
  				can_research = medical_degrees
  			}
  			add_technology_progress = { progress = 2500 technology = medical_degrees }
- 		}
- 		else_if = {
- 			limit = {
- 				can_research = quinine
- 			}
- 			add_technology_progress = { progress = 3500 technology = quinine }
  		}
  		else_if = {
  			limit = {
