@@ -370,6 +370,18 @@ types magic_panel
 									arcana_id_angel_item = {}
 								}
 							}
+							# DRAGON
+							flowcontainer = {
+								parentanchor = hcenter
+								visible = "[Not(IsDataModelEmpty(GetPlayer.MakeScope.GetList('active_arcana_id_dragon_list')))]"
+								datamodel = "[GetPlayer.MakeScope.GetList('active_arcana_id_dragon_list')]"
+								direction = vertical
+								spacing = 5
+		
+								item = {
+									arcana_id_dragon_item = {}
+								}
+							}
 						}		
 
 

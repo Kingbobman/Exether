@@ -34,10 +34,25 @@ GLOBAL = {
 			value = 0
 		}
 
-		set_variable = {
-			name = arcana_magic_opinion
-			value = 0
+		if = {
+			limit = {
+				religion = {
+					has_discrimination_trait = dragon_domain
+				}
+			}
+			set_variable = {
+				name = arcana_magic_opinion
+				value = -60
+			}
 		}
+		else = {
+			set_variable = {
+				name = arcana_magic_opinion
+				value = 0
+			}
+		}
+
+		
 
 		if = {
 			limit = {
