@@ -39,6 +39,9 @@
   country_arcana_cost_mult: "@magic! [concept_magic_reserves]"
   country_arcana_cost_mult_desc:  "An increase or decrease in @magic! [concept_magic_reserves]"
 
+  country_attunement: "[concept_attunement]"
+  country_attunement_desc: "An increase or decrease in [concept_attunement]"
+
 
   state_veil_integrity_contribution: "@veilneg! [Concept('concept_veil_integrity', 'Veil')] Disruption"
   state_veil_integrity_contribution_desc: "A decrease in @veilneg! [concept_veil_integrity]"
@@ -49,6 +52,10 @@
   country_archmages_pol_str_mult: "[concept_political_strength] of $archmages$"
   country_archmages_pol_str_mult_desc: "An increase or decrease in the [concept_political_strength] of $archmages$"
   country_archmages_voting_power_add: "[concept_political_strength] from the [concept_votes] of $archmages$"
+
+  country_dawn_heralds_pol_str_mult: "[concept_political_strength] of $dawn_heralds$"
+  country_dawn_heralds_pol_str_mult_desc: "An increase or decrease in the [concept_political_strength] of $dawn_heralds$"
+  country_dawn_heralds_voting_power_add: "[concept_political_strength] from the [concept_votes] of $dawn_heralds$"
 
   country_wizards_pol_str_mult: "[concept_political_strength] of $wizards$"
   country_wizards_pol_str_mult_desc: "An increase or decrease in the [concept_political_strength] of $wizards$"
@@ -230,7 +237,9 @@
   state_archmages_mortality_mult: "[Concept('concept_pop_growth', '$concept_pop_growth_mortality$')] of $archmages$"
   state_archmages_mortality_mult_desc: "An increase or decrease in the [Concept('concept_pop_growth', '$concept_pop_growth_mortality$')] of $archmages$"
   state_wizards_mortality_mult: "[Concept('concept_pop_growth', '$concept_pop_growth_mortality$')] of $wizards$"
-  state_wizards_mortality_mult_desc: "An increase or decrease in the [Concept('concept_pop_growth', '$concept_pop_growth_mortality$')] of $wizards$"
+  state_wizards_mortality_mult_desc: "An increase or decrease in the [Concept('concept_pop_growth', '$concept_pop_growth_mortality$')] of $wizards$"\
+  state_artificers_mortality_mult: "[Concept('concept_pop_growth', '$concept_pop_growth_mortality$')] of $artificers$"
+  state_artificers_mortality_mult_desc: "An increase or decrease in the [Concept('concept_pop_growth', '$concept_pop_growth_mortality$')] of $artificers$"
   building_adventurers_mortality_mult: "$state_adventurers_mortality_mult$"
   building_adventurers_mortality_mult_desc: "$state_adventurers_mortality_mult_desc$"
   building_archmages_mortality_mult: "$state_archmages_mortality_mult$"
@@ -255,6 +264,8 @@
   building_employment_artificers_add_desc: "Modifies the amount of $artificers$ a building can hire per level"
   building_employment_artificers_mult: "building_employment_artificers_mult"
   building_employment_artificers_mult_desc: "building_employment_artificers_mult_desc"
+  building_employment_dawn_heralds_add: "$dawn_heralds$ Per Level"
+  building_employment_dawn_heralds_add_desc: "Modifies the amount of $dawn_heralds$ a building can hire per level"
   goods_input_opium_add: "@chimesilt! Chimesilt input"
   goods_input_opium_add_desc: "The amount of @chimesilt! Chimesilt consumed by buildings"
   state_adventurer_coverage_add: "Adventurer Coverage"
@@ -395,6 +406,8 @@
 # STATE MODIFIERS
   state_integration_mult: "[concept_integration]"
   state_integration_mult_desc: "A bonus or penalty to [concept_integration]"
+  state_purification_mult: "[concept_purification]"
+  state_purification_mult_desc: "A bonus or penalty to [concept_purification]"
   toldek_paseb: "The Toldek Paseb"
   abolished_toldek_paseb: "Abolished Toldek Paseb"
   upshana_restored: "Upshana Dhaalum Restored"

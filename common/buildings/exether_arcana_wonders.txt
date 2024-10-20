@@ -1,4 +1,4 @@
-building_basillica_of_light = {
+building_basillica_of_dawn = {
 	building_group = bg_monuments
 	texture = "gfx/interface/icons/building_icons/building_basillica_of_light.dds"
 	expandable = no
@@ -7,11 +7,15 @@ building_basillica_of_light = {
 	unique = no
 	
 	production_method_groups = {
-		pmg_base_building_lighthouse
+		pmg_base_building_basillica
+		pmg_arcane_smithing
+		pmg_arcane_consecration
 	}
 	
 	possible = {
-        always = yes
+        owner = {
+			has_modifier = country_arcana_unicorn_2
+		}
 	}
 
 	required_construction = construction_cost_monument

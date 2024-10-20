@@ -437,3 +437,33 @@ integration_effect = {
 		}
 	}
 }
+
+purification_effect = {
+	effect = {
+		if = {
+			limit = {
+				modifier:state_purification_mult > 0
+			}
+	
+			save_scope_value_as = {
+				name = purify_amount
+				value = modifier:state_purification_mult
+			}
+	
+			every_scope_pop = {
+				limit = {
+					pop_is_discriminated = yes
+				}
+				change_pop_religion = {
+					target = rel:dummy_religion
+					value = scope:purify_amount
+				}
+			}
+
+			kill_population_percent_in_state = {
+				percent = 1
+				religion = rel:dummy_religion
+			}
+		}
+	}
+}

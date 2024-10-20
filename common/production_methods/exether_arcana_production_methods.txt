@@ -140,7 +140,6 @@ pm_no_arcane_construction = {
 	is_default = yes
 }
 
-
 pm_applied_telekinesis= {
 	texture = "gfx/interface/icons/production_method_icons/applied_telekinesis.dds"
 	
@@ -164,5 +163,71 @@ pm_applied_telekinesis= {
 		workforce_scaled = {
 			state_construction_mult = 0.01
 		}	
+	}
+}
+
+pm_no_arcane_smithing = {
+	texture = "gfx/interface/icons/production_method_icons/no_magic_active.dds"
+	
+	is_default = yes
+}
+
+pm_lightsmiths = {
+	texture = "gfx/interface/icons/production_method_icons/lightsmithing.dds"
+	
+	unlocking_laws = {
+		law_lightsmithing
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_wishstone_add = 30
+			
+			# output goods
+			goods_output_tools_add = 200
+		}
+
+		level_scaled = {
+			building_employment_dawn_heralds_add = 1000
+		}
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_laborers_mortality_mult = -0.25
+			state_artificers_mortality_mult = -0.25
+		}	
+	}
+}
+
+pm_no_arcane_consecration = {
+	texture = "gfx/interface/icons/production_method_icons/no_magic_active.dds"
+	
+	is_default = yes
+}
+
+pm_sanctified_ground = {
+	texture = "gfx/interface/icons/production_method_icons/sanctified_ground.dds"
+	
+	unlocking_laws = {
+		law_sanctified_grounds
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_dawn_heralds_add = 1000
+		}
+	}
+	
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = 10
+			country_influence_mult = 0.05
+		}	
+	}
+
+	state_modifiers = {
+		state_farmers_mortality_mult = -0.20
 	}
 }

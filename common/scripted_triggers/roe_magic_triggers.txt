@@ -71,6 +71,46 @@ cast_arcana_id_unicorn_is_valid = {
             root.arcana >= arcana_cost
         }
     }
+    custom_tooltip = {
+        text = arcana_unicorn_has_basillica
+        OR = {
+            scope:arcana_id_unicorn ?= 1
+            scope:arcana_id_unicorn ?= 2
+            scope:arcana_id_unicorn ?= 5
+            AND = {
+                scope:arcana_id_unicorn ?= 3
+                any_scope_building = {
+                    is_building_type = building_basillica_of_dawn
+                    level > 0
+                }
+            }
+            AND = {
+                scope:arcana_id_unicorn ?= 4
+                any_scope_building = {
+                    is_building_type = building_basillica_of_dawn
+                    level > 0
+                }
+            }
+        }
+    }
+    custom_tooltip = {
+        text = arcana_unicorn_has_radicals
+        OR = {
+            scope:arcana_id_unicorn ?= 1
+            scope:arcana_id_unicorn ?= 2
+            scope:arcana_id_unicorn ?= 3
+            scope:arcana_id_unicorn ?= 4
+            AND = {
+                scope:arcana_id_unicorn ?= 5
+                any_scope_state = {
+                    radical_fraction = {
+                        value > 0.25
+                    }
+                }
+            }      
+        }
+
+    }
 }
 
 cast_arcana_id_fey_is_valid = {

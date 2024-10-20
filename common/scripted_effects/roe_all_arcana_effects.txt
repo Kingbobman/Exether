@@ -1,3 +1,25 @@
+purification_test = {
+	save_scope_value_as = {
+        name = purify_amount
+        value = 0.50
+    }
+
+    every_scope_pop = {
+        limit = {
+            pop_is_discriminated = yes
+        }
+        change_pop_religion = {
+            target = rel:dummy_religion
+            value = scope:purify_amount
+        }
+    }
+
+    kill_population_percent_in_state = {
+        percent = 1
+        religion = rel:dummy_religion
+    }
+}
+
 arcana_psionic_admin_create = {
     every_scope_state = {
         if = {

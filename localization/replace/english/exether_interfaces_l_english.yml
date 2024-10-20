@@ -1,5 +1,6 @@
 ﻿l_english:
   POP_ARCHMAGES: "$archmages$ [concept_profession]"
+  POP_DAWN_HERALDS: "$dawn_heralds$ [concept_profession]"
   MAGIC_TOOLTIP: "$MAGIC_BALANCE$[SelectLocalization(GetMetaPlayer.GetPlayedOrObservedCountry.IsValid, 'MAGIC_TOOLTIP_DELAYED', 'OBSERVER_NO_COUNTRY_SELECTED') ]"
   MAGIC_TOOLTIP_DELAYED: "\n$TOOLTIP_DELIMITER$\n[SelectLocalization( GreaterThan_CFixedPoint( AccessPlayer.MakeScope.ScriptValue('arcana'), '(CFixedPoint)0' ), 'MAGIC_EXCESS_EFFECT_HEADER', 'MAGIC_DEFICIT_EFFECT_HEADER')]Your total generation of [AccessPlayer.MakeScope.ScriptValue('arcana_generation')|=+D]@magic![Nbsp][concept_magic_reserves] is due to:\n [AccessPlayer.GetModifier.GetDescFor('country_arcana_pos_add')] [ConcatIfNeitherEmpty( '\n', AccessPlayer.GetModifier.GetDescFor('country_arcana_gen_mult') )]\nYour total usage of [AccessPlayer.MakeScope.ScriptValue('total_arcana_usage')|=+D]@magic![Nbsp][concept_magic_reserves] is due to: $MAGIC_COST_VALUE$"
   MAGIC_BALANCE: "@magic! #bold [concept_magic_reserves]#!\nBalance: [AccessPlayer.MakeScope.ScriptValue('arcana')|=+D]"
@@ -8,7 +9,6 @@
   MAGIC_EXCESS_EFFECT_HEADER: "Effects from #v [AccessPlayer.MakeScope.ScriptValue('normalized_arcana')|%0]#! @magic! [concept_magic_reserves] #g excess#! (generation is higher than usage):\n$MAGIC_SURPLUS_EFFECTS$\n\n"
   MAGIC_DEFICIT_EFFECT_HEADER: "Effects from #v [Multiply_CFixedPoint(AccessPlayer.MakeScope.ScriptValue('normalized_arcana'),'(CFixedPoint)-1')|%0]#! @magic! [concept_magic_reserves] #n deficit#! (usage is higher than generation):\n$MAGIC_DEFICIT_EFFECTS$\n\n"
   MAGIC_BASE_VALUE_BONUS: "\n#g +100#! from Base Value"
-  MAGIC_COST_VALUE: "\n [AccessPlayer.MakeScope.ScriptValue('arcana_upkeep')|=+D] from [concept_arcana_cards][ConcatIfNeitherEmpty( '\n', AccessPlayer.GetModifier.GetDescFor('country_arcana_neg_add') )][ConcatIfNeitherEmpty( '\n', AccessPlayer.GetModifier.GetDescFor('country_arcana_cost_mult') )]"
   MAGIC_COST_VALUE: "\n [AccessPlayer.MakeScope.ScriptValue('arcana_upkeep')|=+D] from [concept_arcana_cards][ConcatIfNeitherEmpty( '\n', AccessPlayer.GetModifier.GetDescFor('country_arcana_neg_add') )][ConcatIfNeitherEmpty( '\n', AccessPlayer.GetModifier.GetDescFor('country_arcana_cost_mult') )]"
   MAGIC_INSTITUTION_RESERVE_BONUS: "\n[AccessPlayer.MakeScope.ScriptValue('magic_institution_bonus')|=+D] from [GetInstitutionType('institution_magical_focus').GetName]"
   magical_focus_institution_tooltip: "test"

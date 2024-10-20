@@ -1,117 +1,169 @@
 ﻿
-	magic_reserves_loc = {
-		type = country
+magic_reserves_loc = {
+	type = country
 
-		text = {
-			trigger = {
-				normalized_magic_surplus >= 1
-			}
-			localization_key = MAGIC_EXCESS_EFFECT_HEADER 
+	text = {
+		trigger = {
+			normalized_magic_surplus >= 1
 		}
-		text = {
-			trigger = {
-				normalized_magic_deficit < 0
-			}
-			localization_key = MAGIC_DEFICIT_EFFECT_HEADER 
-		}
+		localization_key = MAGIC_EXCESS_EFFECT_HEADER 
 	}
+	text = {
+		trigger = {
+			normalized_magic_deficit < 0
+		}
+		localization_key = MAGIC_DEFICIT_EFFECT_HEADER 
+	}
+}
 
-	magic_institution_bonus_loc = {
-		type = country
+magic_institution_bonus_loc = {
+	type = country
 
-		text = {
-			trigger = {
-				magic_institution_level > 0
-				NOT = {
-					has_law = law_type:law_mage_hunters
-				}
+	text = {
+		trigger = {
+			magic_institution_level > 0
+			NOT = {
+				has_law = law_type:law_mage_hunters
 			}
-			localization_key = MAGIC_INSTITUTION_RESERVE_BONUS
 		}
+		localization_key = MAGIC_INSTITUTION_RESERVE_BONUS
 	}
+}
 
-	adventurer_coverage_bonus_loc = {
-		type = state
+adventurer_coverage_bonus_loc = {
+	type = state
 
-		text = {
-			trigger = {
-				modifier:state_adventurer_coverage_add > 0
+	text = {
+		trigger = {
+			modifier:state_adventurer_coverage_add > 0
+		}
+		localization_key = ADVENTURER_COVERAGE_BUILDING_BONUS
+	}
+}
+
+adventurer_coverage_demand_bonus_loc = {
+	type = state
+
+	text = {
+		trigger = {
+			this.pollution_generation > 0
+		}
+		localization_key = ADVENTURER_COVERAGE_POLLUTION
+	}
+}
+
+adventurer_coverage_demand_urban_bonus_loc = {
+	type = state
+
+	text = {
+		trigger = {
+			any_scope_building = {
+				is_building_type = building_urban_center
+				level > 0
 			}
-			localization_key = ADVENTURER_COVERAGE_BUILDING_BONUS
 		}
+		localization_key = ADVENTURER_COVERAGE_DEMAND_BASE_VALUE_BONUS
 	}
+}
 
-	adventurer_coverage_demand_bonus_loc = {
-		type = state
+ritual_name_loc = {
+	type = country
 
-		text = {
-			trigger = {
-				this.pollution_generation > 0
-			}
-			localization_key = ADVENTURER_COVERAGE_POLLUTION
-		}
+	text = {
+		localization_key = RITUAL_1
 	}
+}
 
-	adventurer_coverage_demand_urban_bonus_loc = {
-		type = state
+has_journals_loc = {
+	type = country
 
-		text = {
-			trigger = {
-				any_scope_building = {
-					is_building_type = building_urban_center
-					level > 0
-				}
-			}
-			localization_key = ADVENTURER_COVERAGE_DEMAND_BASE_VALUE_BONUS
+	text = {
+		trigger = {
+			has_variable = has_custom_journals_var
 		}
+		localization_key = ICON_CHECK
 	}
-
-	ritual_name_loc = {
-		type = country
-
-		text = {
-			localization_key = RITUAL_1
-		}
+	text = {
+		localization_key = ICON_CROSS
 	}
+}
 
-	has_journals_loc = {
-		type = country
+has_major_formable_loc = {
+	type = country
 
-		text = {
-			trigger = {
-				has_variable = has_custom_journals_var
-			}
-			localization_key = ICON_CHECK
+	text = {
+		trigger = {
+			has_variable = has_major_formable_var
 		}
-		text = {
-			localization_key = ICON_CROSS
-		}
+		localization_key = ICON_CHECK
 	}
-
-	has_major_formable_loc = {
-		type = country
-
-		text = {
-			trigger = {
-				has_variable = has_major_formable_var
-			}
-			localization_key = ICON_CHECK
-		}
-		text = {
-			localization_key = ICON_CROSS
-		}
+	text = {
+		localization_key = ICON_CROSS
 	}
+}
 
-	has_flavored_interest_groups_loc = {
-		type = country
+has_flavored_interest_groups_loc = {
+	type = country
 
-		text = {
-			trigger = {
-				has_variable = has_flavored_interest_groups_var
-			}
-			localization_key = ICON_CHECK
+	text = {
+		trigger = {
+			has_variable = has_flavored_interest_groups_var
 		}
-		text = {
-			localization_key = ICON_CROSS
-		}
+		localization_key = ICON_CHECK
 	}
+	text = {
+		localization_key = ICON_CROSS
+	}
+}
+
+magic_opinion_loc = {
+	type = country
+
+	text = {
+		trigger = {
+			var:arcana_magic_opinion >= 90
+		}
+		localization_key = concept_of_concept_magic_worshipped
+	}
+	text = {
+		trigger = {
+			var:arcana_magic_opinion < 90
+			var:arcana_magic_opinion >= 60
+		}
+		localization_key = concept_of_concept_magic_approved
+	}
+	text = {
+		trigger = {
+			var:arcana_magic_opinion < 60
+			var:arcana_magic_opinion >= 30
+		}
+		localization_key = concept_of_concept_magic_acceptable
+	}
+	text = {
+		trigger = {
+			var:arcana_magic_opinion < 30
+			var:arcana_magic_opinion > -30
+		}
+		localization_key = concept_of_concept_magic_tolerable
+	}
+	text = {
+		trigger = {
+			var:arcana_magic_opinion <= -30
+			var:arcana_magic_opinion > -60
+		}
+		localization_key = concept_of_concept_magic_unacceptable
+	}
+	text = {
+		trigger = {
+			var:arcana_magic_opinion <= -60
+			var:arcana_magic_opinion > -90
+		}
+		localization_key = concept_of_concept_magic_hated
+	}
+	text = {
+		trigger = {
+			var:arcana_magic_opinion <= -90
+		}
+		localization_key = concept_of_concept_magic_abhorrent
+	}
+}

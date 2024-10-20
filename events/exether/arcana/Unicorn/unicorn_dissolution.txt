@@ -1,0 +1,108 @@
+namespace = unicorn_dissolution
+
+unicorn_dissolution.1 = {
+	type = country_event
+    placement = ROOT
+    
+	title = unicorn.dissolution.1.t
+    desc = unicorn.dissolution.1.d
+    flavor = unicorn.dissolution.1.f
+
+	event_image = {
+		video = "europenorthamerica_capitalists_meeting"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+    
+    duration = 1
+
+	option = {
+		default_option = yes
+		name = unicorn.dissolution.1.a
+
+        custom_tooltip = {
+            text = arcana_dogmatic_add_three
+            change_variable = {
+                name = arcana_alignment_dogmatic
+                add = 3
+            }
+        }
+
+        every_scope_state = {
+            if = {
+                limit = {
+                    radical_fraction = {
+                        value > 0.25
+                    }
+                }
+                add_modifier = {
+                    name = state_arcana_dissolution_of_strife
+                    years = 3
+                }
+
+            }
+        }
+	}
+
+	option = {
+		name = unicorn.dissolution.1.b
+
+        custom_tooltip = {
+            text = arcana_iconoclast_add_three
+            change_variable = {
+                name = arcana_alignment_iconoclast
+                add = 3
+            }
+        }
+
+        add_modifier = {
+            name = country_arcana_swords_to_plowshares
+            years = 3
+        }
+
+        every_scope_state = {
+            if = {
+                limit = {
+                    radical_fraction = {
+                        value > 0.25
+                    }
+                }
+                add_modifier = {
+                    name = state_arcana_dissolution_of_strife
+                    years = 1
+                }
+
+            }
+        }
+	}
+
+	option = {
+		name = unicorn.dissolution.1.c
+
+        highlighted_option = yes
+
+		trigger = {
+			arcana_heretical_devotion_one = yes
+		}
+
+		show_as_unavailable = { always = yes }
+
+        custom_tooltip = {
+            text = arcana_heretical_add_three
+            change_variable = {
+                name = arcana_alignment_heretical
+                add = 3
+            }
+        }
+
+        every_scope_state = {
+            add_modifier = {
+                name = state_arcana_perfect_oblivion
+                years = 3
+            }
+        }
+        
+	}
+}

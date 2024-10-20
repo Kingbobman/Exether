@@ -56,7 +56,7 @@ types magic_panel
 		{
 			### TOP PART
 			top_illu = {
-				size = { @panel_width 200}
+				size = { @panel_width 230}
 				blockoverride "illu" {
 					texture = "gfx/interface/illustrations/top_illus/top_illu_budget.dds"
 				}
@@ -73,7 +73,16 @@ types magic_panel
 						name = "tutorial_highlight_magic_reserves"
 						parentanchor = center
 						using = fontsize_mega
-						raw_text = "Alignment"
+						raw_text = "Overview"
+						autoresize = yes
+						align = center|nobaseline
+					}
+
+					textbox = {
+						name = "tutorial_magic_power"
+						parentanchor = center
+						using = fontsize_large
+						text = arcana_overview_tt
 						autoresize = yes
 						align = center|nobaseline
 					}
@@ -172,11 +181,6 @@ types magic_panel
 									}
 								}
 							}
-							
-							divider_clean = {
-								size = { 420 2 }
-							}
-	
 						}		
 					}
 	

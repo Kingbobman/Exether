@@ -82,6 +82,7 @@
 					is_pop_type = archmages
 					is_pop_type = wizards
 					is_pop_type = artificers
+					is_pop_type = dawn_heralds
 				}
 				literacy_rate > 0.25
 			}
@@ -119,6 +120,16 @@
 			if = {
 				limit = {
 					is_pop_type = archmages
+				}
+				value = 250
+			}
+		}
+
+		add = {
+			desc = "POP_DAWN_HERALDS"
+			if = {
+				limit = {
+					is_pop_type = dawn_heralds
 				}
 				value = 250
 			}

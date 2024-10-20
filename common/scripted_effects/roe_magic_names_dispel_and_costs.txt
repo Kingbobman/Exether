@@ -553,10 +553,12 @@ dispel_arcana_unicorn_2 = {
 }
 dispel_arcana_unicorn_3 = {
     remove_modifier = country_arcana_unicorn_3
+    deactivate_law = law_type:law_lightsmithing
     remove_cost = yes
 }
 dispel_arcana_unicorn_4 = {
     remove_modifier = country_arcana_unicorn_4
+    deactivate_law = law_type:law_sanctified_grounds
     remove_cost = yes
 }
 dispel_arcana_unicorn_5 = {
@@ -849,20 +851,29 @@ arcana_unicorn_2 = {
     add_modifier = {
         name = country_arcana_unicorn_2
     }
+    custom_tooltip = {
+        text = arcana_unicorn_2_tt
+    }
 }
 arcana_unicorn_3 = {
     add_modifier = {
         name = country_arcana_unicorn_3
     }
+    activate_law = law_type:law_lightsmithing
 }
 arcana_unicorn_4 = {
     add_modifier = {
         name = country_arcana_unicorn_4
     }
+    activate_law = law_type:law_sanctified_grounds
 }
 arcana_unicorn_5 = {
     add_modifier = {
         name = country_arcana_unicorn_5
+    }
+    custom_tooltip = {
+        text = unicorn_dissolution_tt
+        trigger_event = { id = unicorn_dissolution.1 popup = yes }
     }
 }
 
