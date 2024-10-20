@@ -452,41 +452,6 @@ modern_sewerage = {
 	}
 }
 
-quinine = {
-	# Permits colonization of state regions with the Malaria trait
-	era = era_2
-	texture = "gfx/interface/icons/invention_icons/quinine.dds"
-	category = society
-
-	modifier = {
-		country_institution_colonial_affairs_max_investment_add = 1
-	}
-	
-	unlocking_technologies = {
-		colonization
-		pharmaceuticals
-	}
-	
-	ai_weight = {
-		value = 1
-		
-		# Important for colonizers
-		if = {
-			limit = { 
-				navy_size >= 25
-				is_country_type = recognized
-			}
-			add = 1
-		}
-		if = {
-			limit = { 
-				has_strategy = ai_strategy_colonial_expansion
-			}
-			add = 1
-		}
-	}
-}
-
 organized_sports = {
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/organized_sports.dds"
@@ -568,7 +533,7 @@ joint_stock_companies = {
 dialectics = {
 	# Unlocks Philosophy Department PM in Universities
 	
-	era = era_2
+	era = era_1
 	texture = "gfx/interface/icons/invention_icons/dialectics.dds"
 	category = society
 	
@@ -586,7 +551,7 @@ dialectics = {
 }
 
 psychiatry = {
-	era = era_2
+	era = era_1
 	texture = "gfx/interface/icons/invention_icons/psychiatry.dds"
 	category = society
 	
@@ -607,7 +572,7 @@ psychiatry = {
 
 realism = {
 	# Unlocks Realist Art PM in Art Academies
-	era = era_2
+	era = era_1
 	texture = "gfx/interface/icons/invention_icons/realism.dds"
 	category = society
 	
@@ -617,6 +582,7 @@ realism = {
 	
 	unlocking_technologies = {
 		romanticism
+		mass_communication
 	}
 	
 	ai_weight = {
@@ -873,7 +839,7 @@ civilizing_mission = {
 	# Unlocks Panama Canal survey expedition decision
 	# Unlocks the Panama Canal
 
-	era = era_3
+	era = era_2
 	texture = "gfx/interface/icons/invention_icons/civilizing_mission.dds"
 	category = society
 
@@ -884,7 +850,7 @@ civilizing_mission = {
 	}
 	
 	unlocking_technologies = {
-		quinine
+		central_archives
 		nationalism
 	}
 	
@@ -945,7 +911,7 @@ socialism = {
 	# Unlocks Council Republic - Governance Principles Law
 	# Unlocks Graduated Taxation - Income Taxation Law
 	# New leaders may spawn with the Social Democrat, Communist Ideologies
-	era = era_3
+	era = era_2
 	texture = "gfx/interface/icons/invention_icons/socialism.dds"
 	category = society
 	
@@ -993,7 +959,7 @@ socialism = {
 }
 
 corporatism = {
-	era = era_3
+	era = era_2
 	texture = "gfx/interface/icons/invention_icons/corporatism.dds"
 	category = society
 
@@ -1220,7 +1186,7 @@ elevator = {
 
 malaria_prevention = {
 	# Should permit for colonization of state regions with severe malaria
-	era = era_4
+	era = era_3
 	texture = "gfx/interface/icons/invention_icons/malaria_prevention.dds"
 	category = society
 
@@ -1229,7 +1195,7 @@ malaria_prevention = {
 	}
 	
 	unlocking_technologies = {
-		civilizing_mission
+		pharmaceuticals
 	}
 	
 	ai_weight = {
@@ -1440,7 +1406,7 @@ mass_surveillance = {
 }
 
 antibiotics = {
-	era = era_5
+	era = era_4
 	texture = "gfx/interface/icons/invention_icons/antibiotics.dds"
 	category = society
 	
