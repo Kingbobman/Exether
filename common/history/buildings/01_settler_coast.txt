@@ -54,10 +54,23 @@
 		  region_state:EME={  
 			create_building={
 				building="building_government_administration"
-				level=5
+				level=7
 				reserves=1
 				activate_production_methods={ "pm_horizontal_drawer_cabinets" }
 		  }
+		  create_building={
+			building="building_vineyard_plantation"
+			add_ownership={
+				building={
+					type="building_manor_house"
+					country="c:EME"
+					levels=3
+					region="STATE_IAZIEMAVI"
+				}
+			}
+			reserves=1
+			activate_production_methods={ "default_building_vineyard_plantation"  }
+		}
 			create_building={
 				      building="building_coal_mine"
 				add_ownership={ 
@@ -339,6 +352,12 @@
  
   s:STATE_VANQUEL_CETEDRIN = {
 		  region_state:EME={  
+			create_building={
+				building="building_government_administration"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_horizontal_drawer_cabinets" }
+		  }
             create_building={
 				      building="building_fishing_wharf"
                 add_ownership={ 
@@ -429,18 +448,24 @@
   s:STATE_TROCREUL = {
 		  region_state:EME={ 
 			create_building={
-				building="building_vineyard_plantation"
-				add_ownership={
-					building={
-						type="building_manor_house"
-						country="c:EME"
-						levels=4
-						region="STATE_TROCREUL"
-					}
-				}
+				building="building_government_administration"
+				level=2
 				reserves=1
-				activate_production_methods={ "default_building_vineyard_plantation"  }
-			}
+				activate_production_methods={ "pm_horizontal_drawer_cabinets" }
+		  }
+		  create_building={
+			building="building_paper_mills"
+		add_ownership={ 
+			building={ 
+				type="building_financial_district"
+				country="c:EME"
+				levels=1
+				region="STATE_TROCREUL"
+		   }
+		}
+	reserves=1
+	activate_production_methods={ "pm_pulp_pressing" "pm_automation_disabled" }
+}
 			create_building={
 				building="building_tobacco_plantation"
 				add_ownership={
@@ -460,12 +485,12 @@
                     building={ 
                         type="building_financial_district"
                         country="c:EME"
-                        levels=3
+                        levels=5
                         region="STATE_TROCREUL"
                    }
                 }
 				reserves=1
-				activate_production_methods={ "pm_saw_mills" "pm_hardwood" "pm_no_equipment" "pm_road_carts" }
+				activate_production_methods={ "pm_saw_mills" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
 			}
 			create_building={
 				building="building_tobacco_plantation"
@@ -511,25 +536,38 @@
   
   s:STATE_JUERVIER = {
 		  region_state:EME={ 
+			create_building={
+				building="building_government_administration"
+				level=6
+				reserves=1
+				activate_production_methods={ "pm_horizontal_drawer_cabinets" }
+		  }
 				create_building={
 					building="building_logging_camp"
 					add_ownership={ 
 						building={ 
 							type="building_financial_district"
 							country="c:EME"
-							levels=3
+							levels=5
 							region="STATE_JUERVIER"
 					   }
 					}
 					reserves=1
 					activate_production_methods={ "pm_saw_mills" "pm_hardwood" "pm_no_equipment" "pm_road_carts" }
 				}		   
-			    create_building={
-				      building="building_government_administration"
-				      level=3
-				      reserves=1
-				      activate_production_methods={ "pm_horizontal_drawer_cabinets" }
-			    }
+				create_building={
+			        building="building_paper_mills"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:EME"
+                        levels=1
+                        region="STATE_JUERVIER"
+                   }
+                }
+			reserves=1
+			activate_production_methods={ "pm_pulp_pressing" "pm_automation_disabled" }
+		}
 				create_building={
 					building="building_fishing_wharf"
 						add_ownership={ 
