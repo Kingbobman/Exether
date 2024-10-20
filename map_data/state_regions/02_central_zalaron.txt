@@ -61,7 +61,7 @@ STATE_EASTERN_EQUINE_PLAIN = {
     mine = xF66EE5
     wood = xF549C0
     arable_land = 80
-    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tea_plantations" "bg_tea_plantations" "bg_vineyard_plantations" "bg_tobacco_plantations" }
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tea_plantations" "bg_vineyard_plantations" "bg_tobacco_plantations" }
     capped_resources = {
         bg_iron_mining = 60
         bg_sulfur_mining = 40
@@ -367,12 +367,13 @@ STATE_CHANSONBOIS = {
         bg_logging = 21
         bg_hunting = 34
         bg_wishstone_mining = 17
-        resource = {
+        
+    }
+    resource = {
             type = "bg_elvish_ruins"
             depleted_type = "bg_archeology"
             undiscovered_amount = 5
         }
-    }
     naval_exit_id = 3162
 }
 STATE_DRUIDS_CHANT = {
@@ -789,10 +790,6 @@ STATE_SOUTHERN_DRAIN = {
         type = "bg_ship_graveyard"
         undiscovered_amount = 5
     }
-    resource = {
-        type = "bg_ship_graveyard"
-        discovered_amount = 1
-    }
     naval_exit_id = 3087
 }
 STATE_AHORNAU = {
@@ -840,10 +837,6 @@ STATE_THE_WHITE = {
         type = "bg_orc_ruins"
         depleted_type = "bg_archeology"
         undiscovered_amount = 5
-    }
-    resource = {
-        type = "bg_oil_extraction"
-        undiscovered_amount = 10
     }
     resource = {
         type = "bg_oil_extraction"
@@ -2241,7 +2234,7 @@ STATE_ZALANIX = {
     wood = xE89399
     traits = { "state_trait_hostile_flora" }
     arable_land = 70
-    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_sunweave_plantations" "bg_sunweave_plantations" "bg_tobacco_plantations" }
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_sunweave_plantations" "bg_tobacco_plantations" }
     capped_resources = {
         bg_iron_mining = 27
         bg_logging = 19
@@ -2278,7 +2271,7 @@ STATE_KULIKAN = {
     wood = xCD93A9
     traits = { "state_trait_hostile_flora" }
     arable_land = 82
-    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_sunweave_plantations" "bg_tobacco_plantations" "bg_sunweave_plantations" }
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_sunweave_plantations" "bg_tobacco_plantations"}
     capped_resources = {
         bg_logging = 24
         bg_hunting = 10
@@ -2295,7 +2288,7 @@ STATE_POFIKAN = {
     wood = xD9E6DF
     traits = { "state_trait_wakaman_hill" "state_trait_hostile_flora" }
     arable_land = 80
-    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_sunweave_plantations" "bg_tobacco_plantations" "bg_sunweave_plantations" }
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_tobacco_plantations" "bg_sunweave_plantations" }
     capped_resources = {
         bg_iron_mining = 25
         bg_coal_mining = 48
@@ -2315,7 +2308,7 @@ STATE_NOLIPIK = {
     wood = xEDFA6E
     traits = { "state_trait_wakaman_hill" "state_trait_hostile_flora" }
     arable_land = 100
-    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_sunweave_plantations" "bg_sunweave_plantations" "bg_tobacco_plantations" }
+    arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_sunweave_plantations" "bg_tobacco_plantations" }
     capped_resources = {
         bg_iron_mining = 21
         bg_lead_mining = 18

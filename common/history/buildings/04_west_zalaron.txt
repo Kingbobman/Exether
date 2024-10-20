@@ -2519,14 +2519,13 @@
 			reserves=1
 			activate_production_methods={ "pm_simple_organization" }
 		}
-			create_building={
-				create_building={
+		create_building={
 					building="building_port"
 					level=1
 					reserves=1
 					activate_production_methods={ "pm_basic_port" }
 				}
-				create_building={
+		create_building={
 					building="building_logging_camp"
 					add_ownership={ 
 						building={ 
@@ -2539,7 +2538,7 @@
 					reserves=1
 					activate_production_methods={ "pm_saw_mills" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
 				}
-				create_building={
+		create_building={
 					building="building_furniture_manufacturies"
 						add_ownership={ 
 							building={ 
@@ -2552,7 +2551,8 @@
 					reserves=1
 					activate_production_methods={ "pm_handcrafted_furniture" "pm_no_luxuries" "pm_automation_disabled" }
 				}
-        building="building_coffee_plantation"
+		create_building = {
+			building="building_coffee_plantation"
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
@@ -2564,8 +2564,9 @@
         reserves=1
         activate_production_methods={  "default_building_coffee_plantation" "pm_road_carts"  }
       }
+		}
+        
 	}
-  }
   s:STATE_LISIJA = {
 	region_state:EKA={
 		create_building={
@@ -5100,7 +5101,6 @@
 			reserves=1
 			activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }
 		}
-		region_state:HOZ = {
 			create_building={
 			building="building_cotton_plantation"
 				add_ownership={ 
@@ -5127,7 +5127,6 @@
 			reserves=1
 			activate_production_methods={ "pm_saw_mills" "pm_no_equipment" "pm_road_carts" "pm_no_hardwood" }
 		}
-	}
 	}
   }
   s:STATE_SHINOGOZH = {
@@ -6283,6 +6282,45 @@
 			reserves=1
 			activate_production_methods={ "pm_simple_organization" }
 		}
+		create_building={
+			building="building_railway"
+				add_ownership={ 
+					building={ 
+						type="building_financial_district"
+						country="c:RAV"
+						levels=1
+						region="STATE_TIKKERHAVEN"
+					}
+				}
+			reserves=1
+			activate_production_methods={ "pm_steam_trains" "pm_wooden_passenger_carriages" }
+		}
+		create_building={
+			building="building_chemical_plants"
+                add_ownership={ 
+                    building={ 
+                        type="building_financial_district"
+                        country="c:RAV"
+                        levels=5
+                        region="STATE_TIKKERHAVEN"
+                   }
+                }
+			reserves=1
+			activate_production_methods={ "pm_artificial_fertilizers" }
+		}
+		create_building={
+			building="building_sulfur_mine"
+			add_ownership={ 
+				building={ 
+					type="building_financial_district"
+					country="c:RAV"
+					levels=5
+					region="STATE_TIKKERHAVEN"
+			   }
+			}
+		reserves=1
+			activate_production_methods={ "pm_atmospheric_engine_pump_building_sulfur_mine" "pm_no_explosives" "pm_mines_no_potions" "pm_no_steam_automation" "pm_road_carts" }
+		}
 			create_building={
 			building="building_maize_farm"
 				add_ownership={ 
@@ -6325,49 +6363,6 @@
 			reserves=1
 			activate_production_methods={ "pm_basic_port" }
 		}			
-	}
-  }
-  s:STATE_KLOMPWIJK = {
-	region_state:RAV={
-		create_building={
-			building="building_railway"
-				add_ownership={ 
-					building={ 
-						type="building_financial_district"
-						country="c:RAV"
-						levels=1
-						region="STATE_TIKKERHAVEN"
-					}
-				}
-			reserves=1
-			activate_production_methods={ "pm_steam_trains" "pm_wooden_passenger_carriages" }
-		}
-		create_building={
-			building="building_chemical_plants"
-                add_ownership={ 
-                    building={ 
-                        type="building_financial_district"
-                        country="c:RAV"
-                        levels=5
-                        region="STATE_TIKKERHAVEN"
-                   }
-                }
-			reserves=1
-			activate_production_methods={ "pm_artificial_fertilizers" }
-		}
-		create_building={
-			building="building_sulfur_mine"
-			add_ownership={ 
-				building={ 
-					type="building_financial_district"
-					country="c:RAV"
-					levels=5
-					region="STATE_TIKKERHAVEN"
-			   }
-			}
-		reserves=1
-			activate_production_methods={ "pm_atmospheric_engine_pump_building_sulfur_mine" "pm_no_explosives" "pm_mines_no_potions" "pm_no_steam_automation" "pm_road_carts" }
-		}
 	}
   }
   s:STATE_TROMMELKUST = {
