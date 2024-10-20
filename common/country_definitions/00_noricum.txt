@@ -21,7 +21,7 @@ DUM = {
 
 	tier = empire #See common\country_ranks
 
-	cultures = { dumonian uplander gelidrumin dewaric ralaurian avalorean } #What are their primary culture/s - you can set multiple.
+	cultures = { dumonian } #What are their primary culture/s - you can set multiple.
 	capital = STATE_CROWNPEAK #Which state holds this nation's default capital
 }
 
@@ -57,7 +57,7 @@ DEW = {
 	tier = principality #See common\country_ranks
 
 	cultures = { dewaric } #What are their primary culture/s - you can set multiple.
-	capital = STATE_ALYEA #Which state holds this nation's default capital
+	capital = STATE_SLUDGE_COAST #Which state holds this nation's default capital
 }
 
 #Ralauria
@@ -69,7 +69,7 @@ RAL = {
 	tier = principality #See common\country_ranks
 
 	cultures = { ralaurian } #What are their primary culture/s - you can set multiple.
-	capital = STATE_ALYEA #Which state holds this nation's default capital
+	capital = STATE_LAST_HEARTH #Which state holds this nation's default capital
 }
 
 #Gelidrun
@@ -81,7 +81,7 @@ GED = {
 	tier = principality #See common\country_ranks
 
 	cultures = { gelidrumin } #What are their primary culture/s - you can set multiple.
-	capital = STATE_ALYEA #Which state holds this nation's default capital
+	capital = STATE_MERCHANT_BAY #Which state holds this nation's default capital
 }
 
 #Upland
@@ -93,7 +93,7 @@ UPP = {
 	tier = principality #See common\country_ranks
 
 	cultures = { uplander } #What are their primary culture/s - you can set multiple.
-	capital = STATE_ALYEA #Which state holds this nation's default capital
+	capital = STATE_HIGHPASS #Which state holds this nation's default capital
 }
 
 #Cult of The Sun
@@ -124,7 +124,7 @@ YAN = {
 RVC = {
 	color = rgb{ 70  0  80 } 
 
-	country_type = recognized
+	country_type = unrecognized
 
 	tier = principality
 
@@ -132,6 +132,29 @@ RVC = {
 	capital = STATE_RAVENCLIFF
 }
 
+#Ravendale
+RVD = {
+	color = rgb{ 0 41 82 } 
+
+	country_type = unrecognized
+
+	tier = principality
+
+	cultures = { jalian } 
+	capital = STATE_RAVENCLIFF
+}
+
+#Silentrose
+RVE = {
+	color = rgb{ 82 0 0 } 
+
+	country_type = unrecognized
+
+	tier = principality
+
+	cultures = { meriwyn } 
+	capital = STATE_RAVENCLIFF
+}
 #Hag Marshes
 HAG = {
 	color = rgb{ 50  100  70 } 
@@ -215,6 +238,17 @@ BCT = {
 	capital = STATE_LIGHTSCOURGE
 }
 
+#Hag Marshes
+DWF = {
+	color = rgb{ 50  100  70 } 
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { arcthar } 
+	capital = STATE_ARCTHARAL
+}
 #Snowpeak Dominion
 SDN = {
 	color = rgb{ 150  150  255 } 
@@ -557,7 +591,7 @@ HEX = {
 
 #Dovedale
 DOV = {
-	color = rgb{ 200 200  200 } 
+	color = rgb{ 208 217 255 } 
 
 	country_type = recognized
 
@@ -570,7 +604,7 @@ DOV = {
 
 #Rosecroft
 ROF = {
-	color = rgb{ 200  50  50 } 
+	color = rgb{ 142 20 0 } 
 
 	country_type = recognized
 
@@ -580,9 +614,9 @@ ROF = {
 	capital = STATE_CAECARW
 }
 
-#Foxworth 
+#Stagworth
 FOX = {
-	color = rgb{ 250  65  0 } 
+	color = rgb{ 20 82 0 } 
 
 	country_type = recognized
 
@@ -592,6 +626,38 @@ FOX = {
 	capital = STATE_INCHMARA
 }
 
+GDL = {
+	color = rgb{ 82 61 0 } 
+
+	country_type = recognized
+
+	tier = principality
+
+	cultures = { jalian } 
+	capital = STATE_INCHMARA
+}
+
+HET = {
+	color = rgb{ 160 217 255 } 
+
+	country_type = recognized
+
+	tier = principality
+
+	cultures = { jalian } 
+	capital = STATE_GLASINBLAIR
+}
+
+BCF = {
+	color = rgb{ 122 20 0 } 
+
+	country_type = recognized
+
+	tier = principality
+
+	cultures = { meriwyn } 
+	capital = STATE_BANCFAN
+}
 #Brackenshire
 BIE = {
 	color = rgb{ 75  75  0 } 

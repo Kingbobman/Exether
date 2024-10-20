@@ -77,6 +77,7 @@
 			is_pop_type = shopkeepers
 			is_pop_type = officers
 			is_pop_type = archmages
+			is_pop_type = wizards
 		}
 		OR = {
 			AND = {
@@ -149,12 +150,27 @@
 		}
 
 		add = {
-			desc = "POP_STARBRANDS"
+			desc = "POP_artificers"
 			if = {
 				limit = {
-					is_pop_type = starbrands
+					is_pop_type = artificers
 				}
-				value = 50
+				value = 100
+			}
+		}
+
+		add = {
+			desc = "PHOENIX_LAW"
+			if = {
+				limit = {
+					OR = {
+					is_pop_type = artificers
+					}
+					owner = {
+						has_law = law_type:law_artificer_guilds
+					}
+				}
+				value = 25
 			}
 		}
 
@@ -323,7 +339,7 @@
 	}
 
 	female_commander_chance = {
-		value = 0.0
+		value = 0.15
 
 		if = {
 			limit = {
@@ -333,13 +349,30 @@
 
 			}
 			add = {
-				value = 1.0
+				value = 0.85
 			}
+		}
+		if = {
+			limit = {
+				owner = {
+					exists = c:WHI
+					OR = {
+						c:WHI = this
+						civil_war_origin_country = c:WHI
+					}
+						
+				}
+
+			}
+			add = {
+				value = 0.4
+			}
+
 		}
 	}
 
 	female_politician_chance = {
-		value = 0.0
+		value = 0.15
 
 		if = {
 			limit = {
@@ -349,7 +382,7 @@
 
 			}
 			add = {
-				value = 0.95
+				value = 0.8
 			}
 		}
 		else_if = {
@@ -360,10 +393,28 @@
 
 			}
 			add = {
-				value = 0.05
+				value = 0.1
 			}
 		}
+		if = {
+			limit = {
+				owner = {
+					exists = c:WHI
+					OR = {
+						c:WHI = this
+						civil_war_origin_country = c:WHI
+					}
+						
+				}
+
+			}
+			add = {
+				value = 0.4
+			}
+
+		}
 	}
+	
 
 	female_agitator_chance = {
 		value = 0.05
@@ -414,6 +465,23 @@
 			add = {
 				value = 0.9
 			}
+		}
+		if = {
+			limit = {
+				owner = {
+					exists = c:WHI
+					OR = {
+						c:WHI = this
+						civil_war_origin_country = c:WHI
+					}
+						
+				}
+
+			}
+			add = {
+				value = 0.35
+			}
+
 		}	
 	}
 

@@ -145,7 +145,14 @@
 				origin = c:TLE
 				state = s:STATE_STORMHOLM.region_state:TLE
 				on_created = { 
+					calculate_arcanas = yes
 					save_scope_as = dnv_scope
+					create_bidirectional_truce = {
+						country = c:RAV
+						months = 60
+					}
+					set_relations = { country = c:RAV value = -50 }
+					set_strategy = ai_strategy_unify_thaloria
 				}
 			}
 
@@ -158,7 +165,6 @@
 						OR = {
 							state_region = s:STATE_WINDSONG
 							state_region = s:STATE_MISTVALE
-							state_region = s:STATE_MOONSHADE
 							state_region = s:STATE_IRONWOOD
 							state_region = s:STATE_TIMMERHAVEN
 						}
@@ -174,7 +180,14 @@
 				origin = c:TLE
 				state = s:STATE_STORMWATCH.region_state:TLE
 				on_created = { 
+					calculate_arcanas = yes
 					save_scope_as = tha_scope
+					create_bidirectional_truce = {
+						country = c:RAV
+						months = 60
+					}
+					set_relations = { country = c:RAV value = -50 }
+					set_strategy = ai_strategy_unify_thaloria
 				}
 			}
 			
@@ -202,7 +215,14 @@
 				origin = c:TLE
 				state = s:STATE_SILVERCREST.region_state:TLE
 				on_created = { 
+					calculate_arcanas = yes
 					save_scope_as = olt_scope
+					create_bidirectional_truce = {
+						country = c:RAV
+						months = 60
+					}
+					set_relations = { country = c:RAV value = -50 }
+					set_strategy = ai_strategy_unify_thaloria
 				}
 			}
 
@@ -224,7 +244,14 @@
 				origin = c:TLE
 				state = s:STATE_BRIGHTWATER.region_state:TLE
 				on_created = { 
+					calculate_arcanas = yes
 					save_scope_as = vrc_scope
+					create_bidirectional_truce = {
+						country = c:RAV
+						months = 60
+					}
+					set_relations = { country = c:RAV value = -50 }
+					set_strategy = ai_strategy_unify_thaloria
 				}
 			}
 

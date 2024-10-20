@@ -294,7 +294,12 @@ marry_ruler_or_heir = {
 	possible = {
 		any_country = {
 			NOT = { THIS = scope:actor }
-			NOT = { is_subject_type = subject_type_personal_union }
+			NOT = { 					
+				OR = {
+					is_subject_type = subject_type_personal_union 
+					is_subject_type = subject_type_real_union 
+				}
+			}
 			has_law = law_type:law_monarchy
 			religion = scope:actor.religion
 			ruler = {
@@ -526,6 +531,43 @@ exile_character = {
 						name = modifier_exiled_leader
 						months = normal_modifier_time
 						is_decaying = yes
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				owner = { has_journal_entry = je_beauty_in_bloom }
+				interest_group = {
+					is_interest_group_type = ig_devout
+				}
+			}
+			if = {
+				limit = {
+					interest_group = {
+						leader = {
+							this = ROOT
+						}
+					}
+				}
+				owner = {
+					custom_tooltip = {
+						text = lose_large_beauty_in_bloom_points
+						change_variable = {
+							name = beauty_in_bloom_var
+							add = -200
+						}
+					}
+				}
+			}
+			else = {
+				owner = {
+					custom_tooltip = {
+						text = lose_beauty_in_bloom_points
+						change_variable = {
+							name = beauty_in_bloom_var
+							add = -100
+						}
 					}
 				}
 			}

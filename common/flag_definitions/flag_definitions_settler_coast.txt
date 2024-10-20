@@ -81,8 +81,8 @@ LEO = {
         priority = 50
         trigger = { 
 			exists = c:THI
-            c:LEO ?= {
-				is_subject_of ?= c:THI
+            c:LEO = {
+				is_subject_of = c:THI
 			}
         }
     }    
@@ -131,8 +131,8 @@ GCS = {
         priority = 50
         trigger = { 
 			exists = c:SMA
-            c:GCS ?= {
-				is_subject_of ?= c:SMA
+            c:GCS = {
+				is_subject_of = c:SMA
 			}
         }
     }    
@@ -149,8 +149,8 @@ KRC = {
         priority = 50
         trigger = { 
 			exists = c:EMP
-            c:KRC ?= {
-				is_subject_of ?= c:EMP
+            c:KRC = {
+				is_subject_of = c:EMP
 			}
         }
     }    

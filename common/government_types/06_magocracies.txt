@@ -1,4 +1,26 @@
-﻿gov_contechne = {
+﻿gov_alchemist_guild = {
+	transfer_of_power = dictatorial
+
+	male_ruler = "RULER_TITLE_CHIEF_ALCHEMIST"
+	female_ruler = "RULER_TITLE_CHIEF_ALCHEMIST"
+	
+	possible = {
+		has_law = law_type:law_magocracy
+		has_law = law_type:law_technocracy
+		OR = {
+			country_has_primary_culture = cu:cerunite
+		}
+	}
+
+	on_government_type_change = {
+		change_to_dictatorial = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_dictatorial = yes
+	}
+}
+
+gov_artificer_society = {
 	transfer_of_power = dictatorial
 	
 	male_ruler = "RULER_TITLE_ARCHMAGOS"
@@ -38,6 +60,8 @@ gov_magocratic_oligarchy = {
 		post_change_to_dictatorial = yes
 	}
 }
+
+
 
 gov_magocracy = {
 	transfer_of_power = dictatorial

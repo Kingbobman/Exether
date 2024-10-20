@@ -531,7 +531,7 @@ je_colonial_administration_button_east_mindrend_sands = {
 		country_is_in_africa = no
 		country_is_in_kailando = no
 		any_scope_state = {
-			region = sr:region_east_mindrend_sands
+			region = sr:region_mindrend_sands
 		}
 		NOT = {
 			any_subject_or_below = {
@@ -542,7 +542,7 @@ je_colonial_administration_button_east_mindrend_sands = {
 
 	possible = {
 		any_scope_state = {
-			region = sr:region_east_mindrend_sands
+			region = sr:region_mindrend_sands
 			is_largest_state_in_region = yes
 			count >= 2
 		}
@@ -569,13 +569,13 @@ je_colonial_administration_button_east_mindrend_sands = {
 		if = {
 			limit = {
 				any_scope_state = {
-					region = sr:region_east_mindrend_sands
+					region = sr:region_mindrend_sands
 					has_decree = decree_greener_grass_campaign
 				}
 			}
 			random_scope_state = {
 				limit = {
-					region = sr:region_east_mindrend_sands
+					region = sr:region_mindrend_sands
 					has_decree = decree_greener_grass_campaign
 				}
 				save_scope_as = newly_formed_colonial_nation_capital_scope
@@ -584,14 +584,14 @@ je_colonial_administration_button_east_mindrend_sands = {
 		else = {
 			random_scope_state = {
 				limit = {
-					region = sr:region_east_mindrend_sands
+					region = sr:region_mindrend_sands
 				}
 				save_scope_as = newly_formed_colonial_nation_capital_scope
 			}
 		}
 		every_scope_state = {
 			limit = {
-				region = sr:region_east_mindrend_sands
+				region = sr:region_mindrend_sands
 			}
 			set_variable = state_to_cede
 		}
@@ -635,7 +635,7 @@ je_colonial_administration_button_west_mindrend_sands = {
 	visible = {
 		country_is_in_africa = no
 		any_scope_state = {
-			region = sr:region_west_mindrend_sands
+			region = sr:region_mindrend_sands
 		}
 		NOT = {
 			any_subject_or_below = {
@@ -646,7 +646,7 @@ je_colonial_administration_button_west_mindrend_sands = {
 
 	possible = {
 		any_scope_state = {
-			region = sr:region_west_mindrend_sands
+			region = sr:region_mindrend_sands
 			is_largest_state_in_region = yes
 			count >= 2
 		}
@@ -673,13 +673,13 @@ je_colonial_administration_button_west_mindrend_sands = {
 		if = {
 			limit = {
 				any_scope_state = {
-					region = sr:region_west_mindrend_sands
+					region = sr:region_mindrend_sands
 					has_decree = decree_greener_grass_campaign
 				}
 			}
 			random_scope_state = {
 				limit = {
-					region = sr:region_west_mindrend_sands
+					region = sr:region_mindrend_sands
 					has_decree = decree_greener_grass_campaign
 				}
 				save_scope_as = newly_formed_colonial_nation_capital_scope
@@ -688,14 +688,14 @@ je_colonial_administration_button_west_mindrend_sands = {
 		else = {
 			random_scope_state = {
 				limit = {
-					region = sr:region_west_mindrend_sands
+					region = sr:region_mindrend_sands
 				}
 				save_scope_as = newly_formed_colonial_nation_capital_scope
 			}
 		}
 		every_scope_state = {
 			limit = {
-				region = sr:region_west_mindrend_sands
+				region = sr:region_mindrend_sands
 			}
 			set_variable = state_to_cede
 		}
@@ -1618,7 +1618,7 @@ je_colonial_administration_button_expand_east_mindrend_sands = {
 		
 		OR = {
 			any_scope_state = {
-				region = sr:region_east_mindrend_sands
+				region = sr:region_mindrend_sands
 				is_under_colonization = no
 			}
 
@@ -1649,13 +1649,13 @@ je_colonial_administration_button_expand_east_mindrend_sands = {
 		if = {
 			limit = {
 				any_scope_state = {
-					region = sr:region_east_mindrend_sands
+					region = sr:region_mindrend_sands
 					is_under_colonization = no
 				}
 			}
 			every_scope_state = {
 				limit = {
-					region = sr:region_east_mindrend_sands
+					region = sr:region_mindrend_sands
 					is_under_colonization = no
 				}
 				set_state_owner = scope:colonial_transfer_subject_scope
@@ -1708,7 +1708,7 @@ je_colonial_administration_button_expand_west_mindrend_sands = {
 		
 		OR = {
 			any_scope_state = {
-				region = sr:region_west_mindrend_sands
+				region = sr:region_mindrend_sands
 				is_under_colonization = no
 			}
 			custom_tooltip = {
@@ -1738,13 +1738,13 @@ je_colonial_administration_button_expand_west_mindrend_sands = {
 		if = {
 			limit = {
 				any_scope_state = {
-					region = sr:region_west_mindrend_sands
+					region = sr:region_mindrend_sands
 					is_under_colonization = no
 				}
 			}
 			every_scope_state = {
 				limit = {
-					region = sr:region_west_mindrend_sands
+					region = sr:region_mindrend_sands
 					is_under_colonization = no
 				}
 				set_state_owner = scope:colonial_transfer_subject_scope

@@ -153,7 +153,7 @@ ai_strategy_default = {
 			value = 10		
 		}
 		institution_magical_focus = {	
-			value = 10		
+			value = 50		
 		}			
 	}	
 	
@@ -192,7 +192,7 @@ ai_strategy_default = {
 		
 		# Bonus for obligations from Great Powers
 		if = {
-			limit = { scope:target_country.country_rank = rank_value:great_power }
+			limit = { scope:target_country.country_rank >= rank_value:great_power }
 			add = 5
 		}
 		
@@ -510,8 +510,8 @@ ai_strategy_default = {
 				limit = {
 					OR = {
 						country_has_primary_culture = cu:lake_thalorian
-						country_has_primary_culture = cu:west_thalorian
-						country_has_primary_culture = cu:central_thalorian
+						country_has_primary_culture = cu:littoral_thalorian
+						country_has_primary_culture = cu:heartland_thalorian
 					}	
 					scope:target_state = {
 						owner = {
@@ -529,8 +529,8 @@ ai_strategy_default = {
 						owner = {
 							OR = {
 								country_has_primary_culture = cu:lake_thalorian
-								country_has_primary_culture = cu:west_thalorian
-								country_has_primary_culture = cu:central_thalorian
+								country_has_primary_culture = cu:littoral_thalorian
+								country_has_primary_culture = cu:heartland_thalorian
 							}	
 						}
 					}
@@ -1109,7 +1109,39 @@ ai_strategy_default = {
 				is_subject_of = scope:target_country				
 			}
 			add = 1
-		}		
+		}	
+		
+		# Thalorian states are braver agaisnt Ravik
+		if = { 
+			limit = {
+				OR = {
+					country_has_primary_culture = cu:littoral_thalorian
+					country_has_primary_culture = cu:heartland_thalorian
+					country_has_primary_culture = cu:lake_thalorian
+				}	
+				scope:target_country = {
+					this ?= c:RAV
+				}
+			}
+			add = 1
+		}
+
+		# Ravik is braver agaisnt the Thalorian States
+		if = { 
+			limit = {
+				exists = c:RAV
+				THIS = c:RAV
+				scope:target_country = {
+					OR = {
+						country_has_primary_culture = cu:littoral_thalorian
+						country_has_primary_culture = cu:heartland_thalorian
+						country_has_primary_culture = cu:lake_thalorian
+					}	
+				}
+			}
+			add = 1
+		}
+
 	}
 	
 	# How likely is the AI to start a diplomatic play against another country if their attitude allows for it
@@ -1141,7 +1173,7 @@ ai_strategy_default = {
 		# Very high aggression against pariah countries by Great Powers
 		if = {
 			limit = {
-				country_rank = rank_value:great_power
+				country_rank >= rank_value:great_power
 				scope:target_country = {
 					infamy >= infamy_threshold:pariah
 					NOT = {
@@ -1195,35 +1227,60 @@ ai_strategy_default = {
             }
             add = -25
         }
+
+		# Ravik and Thaloria should be more aggressive agaisnt one another
+
+		# Thalorian states are more aggresive agaisnt Ravik
+		if = { 
+			limit = {
+				OR = {
+					country_has_primary_culture = cu:littoral_thalorian
+					country_has_primary_culture = cu:heartland_thalorian
+					country_has_primary_culture = cu:lake_thalorian
+				}	
+				scope:target_country = {
+					this ?= c:RAV
+				}
+			}
+			add = 10
+		}
+
+		# Ravik is aggresive agaisnt the Thalorian States
+		if = { 
+			limit = {
+				exists = c:RAV
+				THIS = c:RAV
+				scope:target_country = {
+					OR = {
+						country_has_primary_culture = cu:littoral_thalorian
+						country_has_primary_culture = cu:heartland_thalorian
+						country_has_primary_culture = cu:lake_thalorian
+					}	
+				}
+			}
+			add = 10
+		}
+
+		# Factor in strategies
+		if = {
+			limit = { 
+				OR = {
+					has_strategy = ai_strategy_territorial_expansion 
+					has_strategy = ai_strategy_unify_thaloria
+					has_strategy = ai_strategy_unify_khus
+					has_strategy = ai_strategy_unify_gavkhan
+					has_strategy = ai_strategy_unify_nagabumi
+					has_strategy = ai_strategy_unify_atamzotayit
+				}
+			}
+			multiply = 1.5
+		}
 	}
 	
 	# How much construction output should the AI aim for
 	# Using this value in other strategies will function additively
 	wanted_construction_output = {
-		value = 10 # Accounts for the 10 free construction from base modifiers
-
-		add = {
-			value = get_net_income
-			divide = 500		
-		}
-		
-		add = {
-			value = get_investment_income
-			divide = 1000
-		}
-
-		add = {
-			value = get_net_income_sq
-			divide = 50000000
-		}
-
-		add = {
-			value = get_investment_income_sq
-			divide = 1000000000
-		}
-
-		min = 1
-		max = 5000
+		value = get_wanted_construction
 	}
 	
 	# How many levels of barracks should the AI have
@@ -1232,69 +1289,39 @@ ai_strategy_default = {
 		value = 0
 		
 		# To increase base army size for small countries, capped at 1 million population
-		add = {
-			value = cached_ai_incorporated_population
-			divide = 100000 # 1 level of barracks per 100k incorporated population	
-			
-			max = 10
-		}			
-	
-		add = {
-			value = cached_ai_incorporated_population
-			divide = 250000 # 1 level of barracks per 250k incorporated population	
-		}		
+		if = {
+			limit = {
+				cached_ai_incorporated_population <= 1000000
+			}
+			add = 10
+		}
+		else = {
+			add = {
+				value = cached_ai_incorporated_population
+				divide = 250000 # 1 level of barracks per 250k incorporated population	
+			}	
+		}
 		
 		add = {
 			value = cached_ai_unincorporated_population
 			divide = 1000000 # 1 level of barracks per 1 million unincorporated population	
 		}
 		
-		# Coastal population reduces spending on army as that spending is needed for navy too
-		subtract = {
-			value = cached_ai_incorporated_coastal_population
-			divide = 1000000 
-		}		
-		
-		subtract = {
-			value = cached_ai_unincorporated_coastal_population
-			divide = 4000000 
-		}	
-		
 		# Extra army size from rank
 		if = {
-			limit = { country_rank = rank_value:great_power }
+			limit = { country_rank >= rank_value:great_power }
 			add = 25
 		}
 		if = {
 			limit = { country_rank = rank_value:major_power }
 			add = 10
-		}
-
-		save_temporary_value_as = pre_overseas_empire_value
-	
-		# Countries with a huge overseas subject population should focus more on navy
-		subtract = {
-			value = cached_ai_overseas_subject_population
-			divide = 10000000
-			max = {
-				value = scope:pre_overseas_empire_value
-				divide = 2
-			}
-		}			
+		}	
 		
 		max = 200 # No more than 200 from population & rank
 
 		add = {
 			value = income
-			multiply = {
-				value = 1
-				subtract = { # Coastal population reduces spending on army as that spending is needed for navy too
-					value = cached_ai_incorporated_coastal_population
-					divide = cached_ai_incorporated_population
-					divide = 4
-				}		
-			}
-			divide = 2000 # 1 level of barracks per 2k income					
+			divide = 2500 # 1 level of barracks per 2.5k income					
 		}			
 		
 		# More advanced standing armies are expensive and should be smaller relative to population
@@ -1340,7 +1367,7 @@ ai_strategy_default = {
 		# 1 level of naval base per 500k coastal incorporated population							
 		add = {
 			value = cached_ai_incorporated_coastal_population
-			divide = 500000 
+			divide = 400000 
 		}
 
 		# 1 level of naval base per 2 million coastal unincorporated population					
@@ -1349,20 +1376,20 @@ ai_strategy_default = {
 			divide = 2000000 
 		}
 
-		# 1 level of naval base per 2 million population in direct overseas subjects	
+		# 1 level of naval base per 5 million population in direct overseas subjects	
 		add = {
 			value = cached_ai_overseas_subject_population
-			divide = 2000000 
+			divide = 5000000 
 		}	
 
 		max = 100 # No more than 100 from population		
 
-		# 1 level of naval base per 3k income, multiplied by relative incorporated coastal population to total incorporated population
+		# 1 level of naval base per 2k income, multiplied by relative incorporated coastal population to total incorporated population
 		add = {
 			value = income
 			divide = cached_ai_incorporated_population
 			multiply = cached_ai_incorporated_coastal_population
-			divide = 3000
+			divide = 2000
 		}			
 		
 		# More advanced navies are expensive and should be smaller relative to population
@@ -1406,11 +1433,11 @@ ai_strategy_default = {
 			limit = { is_country_type = unrecognized }
 			multiply = 0.5
 		}	
-		
+
 		if = {
 			limit = { has_strategy = ai_strategy_maintain_mandate_of_heaven }
 			multiply = 0.25
-		}		
+		}	
 
 		max = 500
 		min = 0		
@@ -1454,7 +1481,7 @@ ai_strategy_default = {
 		combat_unit_group_capital_ship = {
 			value = 0
 			if = {
-				limit = { country_rank = rank_value:great_power }
+				limit = { country_rank >= rank_value:great_power }
 				add = 75
 			}
 			if = {
@@ -1480,7 +1507,7 @@ ai_strategy_default = {
 	# scope:military_formation = military formation
 	# Using this value in other strategies will function additively
 	conscript_battalion_ratio = {
-		value = 0.20
+		value = 0.50
 		if = {
 			limit = { has_law = law_type:law_national_militia }
 			add = 2.5
@@ -1546,6 +1573,7 @@ ai_strategy_default = {
 	# Using this value in other strategies will result in several multiplications
 	building_group_weights = {
 		bg_construction = 100
+
 	}
 	
 	# Which buildings should the AI subsidize
@@ -1563,6 +1591,20 @@ ai_strategy_default = {
 	# How should the AI plan for production and trade of specific goods
 	# Using a different value in a strategy will override this value
 	goods_stances = {
+		paper = {
+			stance = wants_high_supply
+			trigger = {
+				has_technology_researched = centralization
+				total_population >= 1000000
+				NOT = { has_law = law_type:law_traditionalism }
+			}
+		}
+		electricity = { 
+			stance = wants_high_supply
+			trigger = {
+				has_technology_researched = electrical_generation
+			}
+		}
 		small_arms = {
 			stance = wants_high_supply
 			trigger = {
@@ -1637,53 +1679,6 @@ ai_strategy_default = {
 				country_rank >= rank_value:major_power				
 			}
 		}	
-		paper = {
-			stance = wants_high_supply
-			trigger = {
-				has_technology_researched = centralization
-				total_population >= 1000000
-				NOT = { has_law = law_type:law_traditionalism }
-			}
-		}
-		electricity = { 
-			stance = wants_high_supply
-			trigger = {
-				has_technology_researched = electrical_generation
-			}
-		}			
-		coal = { 
-			stance = wants_high_supply
-			trigger = {
-				has_technology_researched = railways
-			}
-		}	
-		engines = { 
-			stance = wants_high_supply
-			trigger = {
-				has_technology_researched = railways
-			}
-		}		
-		dye = { 
-			stance = wants_high_supply 
-			trigger = {
-				has_building = building_textile_mills
-				has_technology_researched = lathe
-			}
-		}
-		silk = { 
-			stance = wants_high_supply 
-			trigger = {
-				has_building = building_textile_mills
-				total_population >= 1000000
-			}
-		}
-		hardwood = { 
-			stance = wants_high_supply 
-			trigger = {
-				has_building = building_furniture_manufacturies
-				total_population >= 1000000
-			}
-		}		
 	}
 	
 	# How many of its interests should the AI dedicate to regions with unrecognized and decentralized powers
@@ -1755,7 +1750,118 @@ ai_strategy_default = {
 				add = 100
 			}		
 		}
-	
+		region_east_mindrend_sands = {
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							country_rank >= rank_value:great_power
+							has_technology_researched = civilizing_mission
+						}
+						has_journal_entry = je_colonial_administration
+					}		
+				}
+				add = 200
+			}	
+		}
+		region_west_mindrend_sands = {
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							country_rank >= rank_value:great_power
+							has_technology_researched = civilizing_mission
+						}
+						has_journal_entry = je_colonial_administration
+					}		
+				}
+				add = 200
+			}	
+		}
+		region_scalethane_realms = {
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							country_rank >= rank_value:great_power
+							has_technology_researched = civilizing_mission
+						}
+						has_journal_entry = je_colonial_administration
+					}		
+				}
+				add = 200
+			}	
+		}
+		region_new_dumonia = {
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							country_rank >= rank_value:great_power
+							has_technology_researched = civilizing_mission
+						}
+						has_journal_entry = je_colonial_administration
+					}		
+				}
+				add = 200
+			}	
+		}
+		region_thoughtsmith_ridge = {
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							country_rank >= rank_value:great_power
+							has_technology_researched = civilizing_mission
+						}
+						has_journal_entry = je_colonial_administration
+					}		
+				}
+				add = 200
+			}	
+		}
+		region_anantadesh = {
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							country_rank >= rank_value:great_power
+							has_technology_researched = civilizing_mission
+						}
+						has_journal_entry = je_colonial_administration
+					}		
+				}
+				add = 200
+			}	
+		}
+		region_dreamweaver_jungle = {
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							country_rank >= rank_value:great_power
+							has_technology_researched = civilizing_mission
+						}
+						has_journal_entry = je_colonial_administration
+					}		
+				}
+				add = 200
+			}	
+		}
+		region_sarpakshetra = {
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							country_rank >= rank_value:great_power
+							has_technology_researched = civilizing_mission
+						}
+						has_journal_entry = je_colonial_administration
+					}		
+				}
+				add = 200
+			}	
+		}
 	}
 	
 	# How likely should the AI be to have a particular strategic desire towards another country
@@ -1779,6 +1885,39 @@ ai_strategy_default = {
 				}
 				multiply = 0.5
 			}		
+
+			# Thaloria would like to unify themselves first and foremost.
+			if = {
+				limit = {
+					country_rank < rank_value:major_power
+					OR = {
+						country_has_primary_culture = cu:lake_thalorian
+						country_has_primary_culture = cu:littoral_thalorian
+						country_has_primary_culture = cu:heartland_thalorian				
+					}
+					scope:target_country = {
+						NOR = {
+							country_has_primary_culture = cu:lake_thalorian
+							country_has_primary_culture = cu:littoral_thalorian
+							country_has_primary_culture = cu:heartland_thalorian					
+						}
+					}
+					scope:target_country = { NOT = { is_subject_of = root } }
+					root = { NOT = { is_subject_of = scope:target_country } }					
+					NOT = { is_adjacent_to_country = scope:target_country }
+				}
+				add = 1000
+			}
+			
+			# Large isolationist countries should ignore the world
+			if = {
+				limit = {
+					has_law = law_type:law_isolationism
+					gdp >= 5000000	
+				}
+				add = 10000
+			}			
+
 		}	
 		befriend = {
 			value = 200
@@ -1789,7 +1928,15 @@ ai_strategy_default = {
 				}
 				add = 100
 			}
-		
+
+			if = {
+				limit = {
+					has_journal_entry = je_earn_recognition
+					scope:target_country = { country_rank >= rank_value:great_power }
+					var:recognition_progress_var >= 100
+				}
+				add = 200
+			}
 		
 			if = {
 				limit = {
@@ -2257,7 +2404,7 @@ ai_strategy_default = {
 			if = {
 				limit = {		
 					NOR = {
-						country_rank = rank_value:great_power
+						country_rank >= rank_value:great_power
 						has_strategic_adjacency = scope:target_country
 						AND = {
 							country_rank >= rank_value:major_power
@@ -2888,7 +3035,7 @@ ai_strategy_default = {
 			if = {
 				limit = {		
 					NOR = {
-						country_rank = rank_value:great_power
+						country_rank >= rank_value:great_power
 						has_strategic_adjacency = scope:target_country 
 						AND = {
 							country_rank >= rank_value:major_power
@@ -3299,6 +3446,18 @@ ai_strategy_default = {
 					min = 0.5
 					max = 2.0
 				}				
+			}
+
+			# Great Powers with slavery banned will prioritize ending slavery
+			if = {
+				limit = {
+					has_law = law_type:law_slavery_banned
+					country_rank >= rank_value:great_power
+					scope:target_country = {
+						has_law = law_type:law_slave_trade
+					}
+				}
+				add = 50
 			}
 
 			min = 0

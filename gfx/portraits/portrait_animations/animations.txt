@@ -151,7 +151,12 @@ idle = {
 
 				modifier = {
 					add = 100
-					clergy_clothes_pop_trigger = yes
+					OR = {
+						clergy_clothes_pop_trigger = yes
+						wizard_clothes_pop_trigger = yes
+						archmage_clothes_pop_trigger = yes
+					}
+					
 					struggling_pop_trigger = no
 				}
 			}
@@ -458,7 +463,11 @@ idle = {
 
 				modifier = {
 					add = 150
-					clergy_clothes_pop_trigger = yes
+					OR = {
+						clergy_clothes_pop_trigger = yes
+						wizard_clothes_pop_trigger = yes
+						archmage_clothes_pop_trigger = yes
+					}
 					struggling_pop_trigger = yes
 				}
 			}

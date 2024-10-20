@@ -184,12 +184,12 @@ pro_lobby_war_valid_check = {
 	trigger_if = { # You need worthy opponents.
 		limit = {
 			scope:third_party_country = {
-				country_rank = rank_value:great_power
+				country_rank >= rank_value:great_power
 			}
 		}
 		scope:relevant_country = { 
 			OR = {
-				country_rank = rank_value:great_power
+				country_rank >= rank_value:great_power
 				country_rank = rank_value:major_power
 			}
 		}		
@@ -203,7 +203,7 @@ pro_lobby_war_valid_check = {
 		}
 		scope:relevant_country = { 
 			OR = {
-				country_rank = rank_value:great_power
+				country_rank >= rank_value:great_power
 				country_rank = rank_value:major_power
 				country_rank = rank_value:minor_power
 			}
@@ -446,14 +446,18 @@ goods_is_industrial = {
 	}
 }
 
-is_african_subject = {
+is_locari_subject = {
 	OR = {
-		has_variable = senegal_subject_var
-		has_variable = niger_subject_var
-		has_variable = zanj_subject_var
-		has_variable = congo_subject_var
-		has_variable = southern_africa_subject_var
-		has_variable = ethiopia_subject_var
+		has_variable = lacertia_subject_var
+		has_variable = elusive_coves_subject_var
+		has_variable = west_kailando_subject_var
+		has_variable = sarpakshetra_subject_var
+		has_variable = dreamweaver_jungle_subject_var
+		has_variable = east_mindrend_sands_subject_var
+		has_variable = west_mindrend_sands_subject_var
+		has_variable = scalethane_realms_subject_var
+		has_variable = thoughtsmith_ridge_subject_var
+		has_variable = anantadesh_subject_var
 	}
 }
 
@@ -494,6 +498,5 @@ meiji_completion_trigger = {
 		}
 		has_insurrectionary_interest_groups = no
 		is_at_war = no
-		owns_entire_state_region = STATE_KANTO		
 	}	
 }

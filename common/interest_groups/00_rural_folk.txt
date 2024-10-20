@@ -28,7 +28,7 @@
 					owner = { 
 						religion = {
 							AND = {
-								has_discrimination_trait = nature_domain
+								has_discrimination_trait = fey_domain
 								NOT = {
 									has_discrimination_trait = chivalrous_heritage
 								}
@@ -55,15 +55,25 @@
 				set_ig_trait = ig_trait:ig_trait_substitutio_tributi
 			}
 
-
-
-
 			else = {
 				set_ig_trait = ig_trait:ig_trait_old_ways
 				set_ig_trait = ig_trait:ig_trait_honest_work
 				set_ig_trait = ig_trait:ig_trait_farmers_markets
 			}
 		}
+
+		if = {
+				limit ={
+					owner ={
+						country_has_primary_culture = cu:south_sea_ravager
+					}
+				}
+				ig:ig_rural_folk = {
+					remove_ideology = ideology_agrarian
+					add_ideology = ideology_liberal_agrarian
+				}
+		}
+
 	}
 
 	on_disable = {}
@@ -76,7 +86,10 @@
 		}
 		OR = {
 			AND = {
-				NOT = { is_pop_type = wizards }
+				NOR = { 
+					is_pop_type = wizards 
+					is_pop_type = artificers
+				}
 				OR = {
 					pop_employment_building_group = bg_agriculture
 					pop_employment_building_group = bg_ranching
@@ -89,7 +102,10 @@
 				}
 			}
 			AND = {
-				is_pop_type = wizards
+				OR = {
+					is_pop_type = wizards
+					is_pop_type = artificers
+				}
 				owner = {
 					has_law = law_type:law_druidic_circles
 				}
@@ -120,10 +136,13 @@
 		}
 
 		add = {
-			desc = "DRUIDIC_LAW"
+			desc = "GOLEM_LAW"
 			if = {
 				limit = {
+					OR = {
 					is_pop_type = wizards
+					is_pop_type = artificers
+					}
 					owner = {
 						has_law = law_type:law_druidic_circles
 					}
@@ -322,13 +341,31 @@
 
 			}
 			add = {
-				value = 0.025
+				value = 0.05
 			}
 		}
+		if = {
+			limit = {
+				owner = {
+					exists = c:WHI
+					OR = {
+						c:WHI = this
+						civil_war_origin_country = c:WHI
+					}
+						
+				}
+
+			}
+			add = {
+				value = 0.35
+			}
+
+		}
 	}
+	
 
 	female_agitator_chance = {
-		value = 0.025
+		value = 0.15
 		
 		if = {
 			limit = {
@@ -350,7 +387,7 @@
 
 			}
 			add = {
-				value = 0.025
+				value = 0.05
 			}
 		}
 
@@ -362,7 +399,7 @@
 
 			}
 			add = {
-				value = 0.025
+				value = 0.075
 			}
 		}		
 
@@ -374,7 +411,7 @@
 
 			}
 			add = {
-				value = 0.95
+				value = 0.8
 			}
 		}
 	}

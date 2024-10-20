@@ -413,7 +413,12 @@ dp_reduce_autonomy = {
 	possible = {
 		OR = {
 			NOT = {
-				scope:target_country = { is_subject_type = subject_type_personal_union }
+				scope:target_country = { 
+					OR = {
+						is_subject_type = subject_type_personal_union 
+						is_subject_type = subject_type_real_union 
+					}
+				}
 			} 
 			has_technology_researched = nationalism
 		}		
@@ -726,8 +731,6 @@ dp_annex_subject = {
 	}
 	
 	on_weekly_pulse = {}
-	
-	on_war_begins = {}
 
 	on_war_end = {}
 }
@@ -1258,7 +1261,12 @@ dp_unify_nagabumi = {
 		NOT = { exists = c:NBI }
 		NOT = { is_country_type = decentralized }
 		NOT = { is_country_type = organization_tag }
-		has_technology_researched = nationalism
+		OR = {
+			has_technology_researched = nationalism
+			has_modifier = jihduk_paseb
+			has_modifier = toldek_paseb
+		}
+		
 	}
 	
 	on_weekly_pulse = {}

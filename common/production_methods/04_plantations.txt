@@ -15,12 +15,12 @@
 	}
 }
 
-gizmo_waterwrangler_irrigation_building_coffee_plantation = { #I will not name these seedspewers.  I will not name these seedspewers. I will not name these seedspewers.
+pm_gizmo_waterwrangler_irrigation_building_coffee_plantation = { 
 	texture = "gfx/interface/icons/production_method_icons/automatic_irrigation.dds"
 
 	state_modifiers = {
 		workforce_scaled = {
-			state_pollution_generation_add = 5
+			state_veil_integrity_contribution = 5 #magic
 		}
 	}
 		
@@ -31,18 +31,34 @@ gizmo_waterwrangler_irrigation_building_coffee_plantation = { #I will not name t
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods
-			goods_input_gizmos_add = 6
-			goods_output_coffee_add = 30
+			goods_input_gizmos_add = 7
+			goods_output_coffee_add = 10
 		}
 
-		level_scaled = {
-			# profit
-			building_employment_laborers_add = 3200
-			building_employment_farmers_add = 1000
-			building_employment_machinists_add = 200
-			building_employment_wizards_add = 300
-			building_employment_clergymen_add = 100
+	}
+}
+
+pm_gizmo_waterwrangler_2_coffee = { 
+	texture = "gfx/interface/icons/production_method_icons/automatic_irrigation.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 5 #magic
 		}
+	}
+		
+	unlocking_production_methods = {
+		automatic_irrigation_building_coffee_plantation
+	}
+
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_input_gizmos_add = 5
+			goods_input_engines_add = -5
+		}
+
 	}
 }
 
@@ -117,12 +133,12 @@ default_building_cotton_plantation = {
 	}
 }
 
-gizmo_waterwrangler_irrigation_building_cotton_plantation = { #I will not name these seedspewers.  I will not name these seedspewers. I will not name these seedspewers.
+pm_gizmo_waterwrangler_irrigation_building_cotton_plantation = { 
 	texture = "gfx/interface/icons/production_method_icons/automatic_irrigation.dds"
 
 	state_modifiers = {
 		workforce_scaled = {
-			state_pollution_generation_add = 5
+			state_veil_integrity_contribution = 5 #magic
 		}
 	}
 		
@@ -134,17 +150,33 @@ gizmo_waterwrangler_irrigation_building_cotton_plantation = { #I will not name t
 		workforce_scaled = {
 			# output goods
 			goods_input_gizmos_add = 6
-			goods_output_fabric_add = 70
+			goods_output_fabric_add = 20
 		}
 
-		level_scaled = {
-			# profit
-			building_employment_laborers_add = 3200
-			building_employment_farmers_add = 1000
-			building_employment_machinists_add = 200
-			building_employment_wizards_add = 300
-			building_employment_clergymen_add = 100
+	}
+}
+
+pm_gizmo_waterwrangler_2_cotton = { 
+	texture = "gfx/interface/icons/production_method_icons/automatic_irrigation.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 5 #magic
 		}
+	}
+		
+	unlocking_production_methods = {
+		automatic_irrigation_building_cotton_plantation
+	}
+
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_input_gizmos_add = 5
+			goods_input_engines_add = -5
+		}
+
 	}
 }
 
@@ -194,12 +226,12 @@ default_building_dye_plantation = {
 	}
 }
 
-gizmo_waterwrangler_irrigation_building_dye_plantation = { #I will not name these seedspewers.  I will not name these seedspewers. I will not name these seedspewers.
+pm_gizmo_waterwrangler_irrigation_building_dye_plantation = { 
 	texture = "gfx/interface/icons/production_method_icons/automatic_irrigation.dds"
 
 	state_modifiers = {
 		workforce_scaled = {
-			state_pollution_generation_add = 5
+			state_veil_integrity_contribution = 5 #magic
 		}
 	}
 		
@@ -210,18 +242,34 @@ gizmo_waterwrangler_irrigation_building_dye_plantation = { #I will not name thes
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods
-			goods_input_gizmos_add = 6
-			goods_output_dye_add = 35
+			goods_input_gizmos_add = 5
+			goods_output_dye_add = 10
 		}
 
-		level_scaled = {
-			# profit
-			building_employment_laborers_add = 3200
-			building_employment_farmers_add = 1000
-			building_employment_machinists_add = 200
-			building_employment_wizards_add = 300
-			building_employment_clergymen_add = 100
+	}
+}
+
+pm_gizmo_waterwrangler_2_dye = { 
+	texture = "gfx/interface/icons/production_method_icons/automatic_irrigation.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 5 #magic
 		}
+	}
+		
+	unlocking_production_methods = {
+		automatic_irrigation_building_dye_plantation
+	}
+
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_input_gizmos_add = 5
+			goods_input_engines_add = -5
+		}
+
 	}
 }
 
@@ -271,12 +319,12 @@ default_building_opium_plantation = {
 	}
 }
 
-gizmo_waterwrangler_irrigation_building_opium_plantation = { #I will not name these seedspewers.  I will not name these seedspewers. I will not name these seedspewers.
+pm_gizmo_waterwrangler_irrigation_building_opium_plantation = { 
 	texture = "gfx/interface/icons/production_method_icons/automatic_irrigation.dds"
 
 	state_modifiers = {
 		workforce_scaled = {
-			state_pollution_generation_add = 5
+			state_veil_integrity_contribution = 5 #magic
 		}
 	}
 		
@@ -287,18 +335,34 @@ gizmo_waterwrangler_irrigation_building_opium_plantation = { #I will not name th
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods
-			goods_input_gizmos_add = 6
-			goods_output_opium_add = 35
+			goods_input_gizmos_add = 7
+			goods_output_opium_add = 10
 		}
 
-		level_scaled = {
-			# profit
-			building_employment_laborers_add = 3200
-			building_employment_farmers_add = 1000
-			building_employment_machinists_add = 200
-			building_employment_wizards_add = 300
-			building_employment_clergymen_add = 100
+	}
+}
+
+pm_gizmo_waterwrangler_2_opium = { 
+	texture = "gfx/interface/icons/production_method_icons/automatic_irrigation.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 5 #magic
 		}
+	}
+		
+	unlocking_production_methods = {
+		automatic_irrigation_building_opium_plantation
+	}
+
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_input_gizmos_add = 5
+			goods_input_engines_add = -5
+		}
+
 	}
 }
 
@@ -348,12 +412,12 @@ default_building_tea_plantation = {
 	}
 }
 
-gizmo_waterwrangler_irrigation_building_tea_plantation = { #I will not name these seedspewers.  I will not name these seedspewers. I will not name these seedspewers.
+pm_gizmo_waterwrangler_irrigation_building_tea_plantation = { 
 	texture = "gfx/interface/icons/production_method_icons/automatic_irrigation.dds"
 
 	state_modifiers = {
 		workforce_scaled = {
-			state_pollution_generation_add = 5
+			state_veil_integrity_contribution = 5 #magic
 		}
 	}
 		
@@ -364,18 +428,34 @@ gizmo_waterwrangler_irrigation_building_tea_plantation = { #I will not name thes
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods
-			goods_input_gizmos_add = 6
-			goods_output_tea_add = 30
+			goods_input_gizmos_add = 7
+			goods_output_tea_add = 10
 		}
 
-		level_scaled = {
-			# profit
-			building_employment_laborers_add = 3200
-			building_employment_farmers_add = 1000
-			building_employment_machinists_add = 200
-			building_employment_wizards_add = 300
-			building_employment_clergymen_add = 100
+	}
+}
+
+pm_gizmo_waterwrangler_2_tea = { 
+	texture = "gfx/interface/icons/production_method_icons/automatic_irrigation.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 5 #magic
 		}
+	}
+		
+	unlocking_production_methods = {
+		automatic_irrigation_building_tea_plantation
+	}
+
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_input_gizmos_add = 5
+			goods_input_engines_add = -5
+		}
+
 	}
 }
 
@@ -425,12 +505,12 @@ default_building_tobacco_plantation = {
 	}
 }
 
-gizmo_waterwrangler_irrigation_building_tobacco_plantation = { #I will not name these seedspewers.  I will not name these seedspewers. I will not name these seedspewers.
+pm_gizmo_waterwrangler_irrigation_building_tobacco_plantation = { 
 	texture = "gfx/interface/icons/production_method_icons/automatic_irrigation.dds"
 
 	state_modifiers = {
 		workforce_scaled = {
-			state_pollution_generation_add = 5
+			state_veil_integrity_contribution = 5 #magic
 		}
 	}
 		
@@ -441,18 +521,34 @@ gizmo_waterwrangler_irrigation_building_tobacco_plantation = { #I will not name 
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods
-			goods_input_gizmos_add = 6
-			goods_output_tobacco_add = 35
+			goods_input_gizmos_add = 5
+			goods_output_tobacco_add = 10
 		}
 
-		level_scaled = {
-			# profit
-			building_employment_laborers_add = 3200
-			building_employment_farmers_add = 1000
-			building_employment_machinists_add = 200
-			building_employment_wizards_add = 300
-			building_employment_clergymen_add = 100
+	}
+}
+
+pm_gizmo_waterwrangler_2_tobacco = { 
+	texture = "gfx/interface/icons/production_method_icons/automatic_irrigation.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 5 #magic
 		}
+	}
+		
+	unlocking_production_methods = {
+		automatic_irrigation_building_tobacco_plantation
+	}
+
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_input_gizmos_add = 5
+			goods_input_engines_add = -5
+		}
+
 	}
 }
 
@@ -502,12 +598,12 @@ default_building_sugar_plantation = {
 	}
 }
 
-gizmo_waterwrangler_irrigation_building_sugar_plantation = { #I will not name these seedspewers.  I will not name these seedspewers. I will not name these seedspewers.
+pm_gizmo_waterwrangler_irrigation_building_sugar_plantation = { 
 	texture = "gfx/interface/icons/production_method_icons/automatic_irrigation.dds"
 
 	state_modifiers = {
 		workforce_scaled = {
-			state_pollution_generation_add = 5
+			state_veil_integrity_contribution = 5 #magic
 		}
 	}
 		
@@ -518,20 +614,37 @@ gizmo_waterwrangler_irrigation_building_sugar_plantation = { #I will not name th
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods
-			goods_input_gizmos_add = 6
-			goods_output_sugar_add = 45
+			goods_input_gizmos_add = 3
+			goods_output_sugar_add = 10
 		}
 
-		level_scaled = {
-			# profit
-			building_employment_laborers_add = 3200
-			building_employment_farmers_add = 1000
-			building_employment_machinists_add = 200
-			building_employment_wizards_add = 300
-			building_employment_clergymen_add = 100
-		}
 	}
 }
+
+pm_gizmo_waterwrangler_2_sugar = { 
+	texture = "gfx/interface/icons/production_method_icons/automatic_irrigation.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 5 #magic
+		}
+	}
+		
+	unlocking_production_methods = {
+		automatic_irrigation_building_sugar_plantation
+	}
+
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_input_gizmos_add = 5
+			goods_input_engines_add = -5
+		}
+
+	}
+}
+
 
 automatic_irrigation_building_sugar_plantation = {
 	texture = "gfx/interface/icons/production_method_icons/automatic_irrigation.dds"
@@ -577,12 +690,12 @@ default_building_banana_plantation = {
 	}
 }
 
-gizmo_waterwrangler_irrigation_building_banana_plantation = { #I will not name these seedspewers.  I will not name these seedspewers. I will not name these seedspewers.
+pm_gizmo_waterwrangler_irrigation_building_banana_plantation = { 
 	texture = "gfx/interface/icons/production_method_icons/automatic_irrigation.dds"
 
 	state_modifiers = {
 		workforce_scaled = {
-			state_pollution_generation_add = 5
+			state_veil_integrity_contribution = 5 #magic
 		}
 	}
 		
@@ -593,18 +706,34 @@ gizmo_waterwrangler_irrigation_building_banana_plantation = { #I will not name t
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods
-			goods_input_gizmos_add = 6
-			goods_output_banana_add = 45
+			goods_input_gizmos_add = 3
+			goods_output_fruit_add = 10
 		}
 
-		level_scaled = {
-			# profit
-			building_employment_laborers_add = 3200
-			building_employment_farmers_add = 1000
-			building_employment_machinists_add = 200
-			building_employment_wizards_add = 300
-			building_employment_clergymen_add = 100
+	}
+}
+
+pm_gizmo_waterwrangler_2_banana = { 
+	texture = "gfx/interface/icons/production_method_icons/automatic_irrigation.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 5 #magic
 		}
+	}
+		
+	unlocking_production_methods = {
+		automatic_irrigation_building_banana_plantation
+	}
+
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_input_gizmos_add = 5
+			goods_input_engines_add = -5
+		}
+
 	}
 }
 
@@ -654,12 +783,12 @@ default_building_silk_plantation = {
 	}
 }
 
-gizmo_waterwrangler_irrigation_building_silk_plantation = { #I will not name these seedspewers.  I will not name these seedspewers. I will not name these seedspewers.
+pm_gizmo_waterwrangler_irrigation_building_silk_plantation = { 
 	texture = "gfx/interface/icons/production_method_icons/automatic_irrigation.dds"
 
 	state_modifiers = {
 		workforce_scaled = {
-			state_pollution_generation_add = 5
+			state_veil_integrity_contribution = 5 #magic
 		}
 	}
 		
@@ -670,20 +799,37 @@ gizmo_waterwrangler_irrigation_building_silk_plantation = { #I will not name the
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods
-			goods_input_gizmos_add = 6
-			goods_output_silk_add = 30
+			goods_input_gizmos_add = 5
+			goods_output_silk_add = 10
 		}
 
-		level_scaled = {
-			# profit
-			building_employment_laborers_add = 3200
-			building_employment_farmers_add = 1000
-			building_employment_machinists_add = 200
-			building_employment_wizards_add = 300
-			building_employment_clergymen_add = 100
-		}
 	}
 }
+
+pm_gizmo_waterwrangler_2_silk = { 
+	texture = "gfx/interface/icons/production_method_icons/automatic_irrigation.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 5 #magic
+		}
+	}
+		
+	unlocking_production_methods = {
+		automatic_irrigation_building_silk_plantation
+	}
+
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_input_gizmos_add = 5
+			goods_input_engines_add = -5
+		}
+
+	}
+}
+
 
 automatic_irrigation_building_silk_plantation = {
 	texture = "gfx/interface/icons/production_method_icons/automatic_irrigation.dds"
@@ -731,12 +877,16 @@ default_building_vineyard_plantation = {
 	}
 }
 
-gizmo_waterwrangler_irrigation_building_vineyard_plantation = { 
+pm_no_wrangling = {
+	texture = "gfx/interface/icons/production_method_icons/plantation_production.dds"
+}
+
+pm_gizmo_waterwrangler_irrigation_building_vineyard_plantation = { 
 	texture = "gfx/interface/icons/production_method_icons/automatic_irrigation.dds"
 
 	state_modifiers = {
 		workforce_scaled = {
-			state_pollution_generation_add = 5
+			state_veil_integrity_contribution = 5 #magic
 		}
 	}
 		
@@ -747,18 +897,34 @@ gizmo_waterwrangler_irrigation_building_vineyard_plantation = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods
-			goods_input_gizmos_add = 6
-			goods_output_wine_add = 30
+			goods_input_gizmos_add = 7
+			goods_output_wine_add = 10
 		}
 
-		level_scaled = {
-			# profit
-			building_employment_laborers_add = 3200
-			building_employment_farmers_add = 1000
-			building_employment_machinists_add = 200
-			building_employment_wizards_add = 300
-			building_employment_clergymen_add = 100
+	}
+}
+
+pm_gizmo_waterwrangler_2_vineyard = { 
+	texture = "gfx/interface/icons/production_method_icons/automatic_irrigation.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 5 #magic
 		}
+	}
+		
+	unlocking_production_methods = {
+		automatic_irrigation_building_vineyard_plantation
+	}
+
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_input_gizmos_add = 5
+			goods_input_engines_add = -5
+		}
+
 	}
 }
 

@@ -81,6 +81,17 @@
 				remove_ideology = ideology_anti_clerical
 			}
 		}
+		else_if = {
+			limit = {
+				OR = {
+					c:DUM ?= THIS
+				}
+			}
+			ig:ig_intelligentsia = {
+				remove_ideology = ideology_republican
+				add_ideology = ideology_constitutionalist
+			}
+		}
 		
 		if = {
 			limit = {
@@ -342,7 +353,7 @@
 	}
 
 	female_commander_chance = {
-		value = 0.0
+		value = 0.15
 
 		if = {
 			limit = {
@@ -358,7 +369,7 @@
 	}
 
 	female_politician_chance = {
-		value = 0.0
+		value = 0.15
 
 		if = {
 			limit = {
@@ -368,7 +379,7 @@
 
 			}
 			add = {
-				value = 0.965
+				value = 0.815
 			}
 		}
 
@@ -380,13 +391,30 @@
 
 			}
 			add = {
-				value = 0.035
+				value = 0.1
 			}
+		}
+		if = {
+			limit = {
+				owner = {
+					exists = c:WHI
+					OR = {
+						c:WHI = this
+						civil_war_origin_country = c:WHI
+					}
+						
+				}
+
+			}
+			add = {
+				value = 0.3
+			}
+
 		}
 	}
 
 	female_agitator_chance = {
-		value = 0.035
+		value = 0.25
 		
 		if = {
 			limit = {
@@ -408,7 +436,7 @@
 
 			}
 			add = {
-				value = 0.035
+				value = 0.075
 			}
 		}
 
@@ -420,7 +448,7 @@
 
 			}
 			add = {
-				value = 0.035
+				value = 0.1
 			}
 		}		
 
@@ -432,8 +460,25 @@
 
 			}
 			add = {
-				value = 0.95
+				value = 0.8
 			}
+		}
+		if = {
+			limit = {
+				owner = {
+					exists = c:WHI
+					OR = {
+						c:WHI = this
+						civil_war_origin_country = c:WHI
+					}
+						
+				}
+
+			}
+			add = {
+				value = 0.25
+			}
+
 		}
 	}
 

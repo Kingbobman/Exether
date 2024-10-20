@@ -37,57 +37,6 @@ pm_soil_enriching_farming = {
 	}
 }
 
-pm_essence_enriched_soil_farming = {
-	texture = "gfx/interface/icons/production_method_icons/soil_enriching_farming.dds"
-	
-	unlocking_technologies = {
-		intensive_agriculture
-	}
-
-	building_modifiers = {
-		workforce_scaled = {
-			# input goods													
-			goods_input_monster_essence_add = 3				
-			
-			# output goods													
-			goods_output_grain_add = 60
-		}
-
-		level_scaled = {
-			# earnings														
-			building_employment_laborers_add = 3800
-			building_employment_farmers_add = 800
-			building_employment_clergymen_add = 300
-		}
-	}
-}
-
-pm_wishstone_enriched_soil_farming = {
-	texture = "gfx/interface/icons/production_method_icons/soil_enriching_farming.dds"
-	
-	unlocking_technologies = {
-		intensive_agriculture
-	}
-
-	building_modifiers = {
-		workforce_scaled = {
-			# input goods													
-			goods_input_wishstone_add = 3				
-			
-			# output goods													
-			goods_output_grain_add = 56
-		}
-
-		level_scaled = {
-			# earnings														
-			building_employment_laborers_add = 3600
-			building_employment_farmers_add = 800
-			building_employment_clergymen_add = 300
-			building_employment_wizards_add = 200
-		}
-	}
-}
-
 pm_fertilization = {
 	texture = "gfx/interface/icons/production_method_icons/fertilization.dds"
 	
@@ -130,30 +79,6 @@ pm_chemical_fertilizer = {
 			# earnings														
 			building_employment_laborers_add = 2500
 			building_employment_farmers_add = 2500
-		}
-	}
-}
-
-pm_refined_essence_fertilizer = {
-	texture = "gfx/interface/icons/production_method_icons/chemical_fertilizers.dds"
-	unlocking_technologies = {
-		nitrogen_fixation
-	}
-	building_modifiers = {
-		workforce_scaled = {
-			# input goods												   
-			goods_input_fertilizer_add = 18
-			goods_input_essence_add = 10				
-			
-			# output goods												   
-			goods_output_grain_add = 120
-		}
-
-		level_scaled = {
-			# earnings														
-			building_employment_laborers_add = 3400
-			building_employment_farmers_add = 1200
-			building_employment_clergymen_add = 300
 		}
 	}
 }
@@ -269,7 +194,7 @@ pm_compression_ignition_tractors = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods								
-			goods_input_oil_add = 2
+			goods_input_blubber_add = 2
 			goods_input_engines_add = 1
 		}
 
@@ -586,7 +511,8 @@ pm_barbed_wire_fences = {
 		}
 
 		level_scaled = {
-			building_employment_laborers_add = -800
+			building_employment_laborers_add = -600 # from -800
+			building_employment_farmers_add = -100
 		}
 	}
 }		
@@ -603,7 +529,8 @@ pm_electric_fencing = {
 		}
 
 		level_scaled = {
-			building_employment_laborers_add = -1400
+			building_employment_laborers_add = -1000 # from -1400
+			building_employment_farmers_add = -200
 		}
 	}
 
@@ -627,7 +554,8 @@ pm_refrigerated_storage_building_livestock_ranch = {
 		}
 
 		level_scaled = {
-			building_employment_laborers_add = -800
+			building_employment_laborers_add = -600 # from -800
+			building_employment_farmers_add = -100
 		}
 	}
 
@@ -648,7 +576,8 @@ pm_refrigerated_rail_cars_building_livestock_ranch = {
 		}
 
 		level_scaled = {
-			building_employment_laborers_add = -1400
+			building_employment_laborers_add = -1000 # from -1400
+			building_employment_farmers_add = -200
 		}
 	}
 

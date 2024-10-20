@@ -1,0 +1,35 @@
+﻿any_active_outbreaks = {
+	any_scope_state = {
+	has_modifier = modifier_active_dragonblight_outbreak	
+	}
+}
+
+is_hired_retainer = {
+	OR = {
+		has_variable = is_first_retainer
+		has_variable = is_second_retainer
+		has_variable = is_third_retainer
+		has_variable = is_fourth_retainer
+		has_variable = is_fifth_retainer
+	}
+}
+
+is_owned_unassigned_retainer = {
+	owner = root
+	is_hired_retainer = yes
+	NOT = { has_variable = assigned_region }
+}
+
+has_free_retainer = {
+	custom_tooltip = {
+		text = has_unassigned_retainer_tt
+		any_character_in_void = {
+			owner = root
+			has_variable = is_retainer
+			is_hired_retainer = yes
+			NOT = {
+				has_variable = assigned_region
+			}
+		}
+	}
+}

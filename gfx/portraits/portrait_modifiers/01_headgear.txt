@@ -15,7 +15,7 @@
         weight = {
             base = 0
             modifier = {
-                add = 90000
+                add = 96000
                 OR = {
                     scope:character ?= {
                         OR = {
@@ -952,7 +952,7 @@
                 french_empire_clothes_pop_trigger = yes
                 officers_clothes_pop_trigger = yes
 
-                root ?= {
+                c:ARR ?= {
                     has_technology_researched = automatic_machine_guns
                 }
             }
@@ -1079,7 +1079,7 @@
 
                 has_dlc_feature = ep1_cosmetics # the hat isn't DLC material but it doesn't make sense without DLC outfits
 
-                root ?= {
+                c:RAV ?= {
                     has_technology_researched = bolt_action_rifles
                 }
                 OR = {
@@ -1682,8 +1682,15 @@
         weight = {
             base = 0
             modifier = {
-                add = 100
-                chinese_manchu_queue_hairstyle_pops_trigger = yes
+                add = 10000
+                exists = scope:pop
+                scope:pop = { 
+                    culture = {
+                        has_discrimination_trait = goblin_heritage
+                    }
+                    
+                }
+             
                 poor_clothes_pop_trigger = yes
             }
         }
@@ -2079,7 +2086,8 @@
                     is_ruler = yes
                     is_female = no
                     OR = {
-                        has_culture = cu:zemvelo
+                        has_culture = cu:kaalkid
+                        has_culture = cu:tozhi
                     }
                 }
             }
@@ -2103,7 +2111,8 @@
                 OR = {
                     scope:pop ?= {
                         OR = {
-                            culture = cu:zemvelo
+                            culture = cu:kaalkid
+                            culture = cu:tozhi
                         }
                         OR = {
                             is_pop_type = aristocrats
@@ -2118,7 +2127,8 @@
                             has_role = general
                         }
                         OR = {
-                            has_culture = cu:zemvelo
+                            has_culture = cu:kaalkid
+                            has_culture = cu:tozhi
                         }                    
                     }
                 }

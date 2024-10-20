@@ -69,6 +69,9 @@ on_yearly_events = {
 		20 = technology_events.30
 		20 = technology_events.40
 		20 = technology_events.50
+
+		# RoE Technology
+		20 = exether_technology_events.1
 		
 		# Industrial Accidents
 		10 = industrial_accident_events.1
@@ -340,4 +343,43 @@ lobby_yearly_events = {
 		5 = lobby_events.59
 		5 = lobby_events.60 
 	}
+}
+
+rvc_blood_tithes = {
+	effect = {
+		if = {
+			limit = {
+				this ?= c:RVC
+				has_variable = established_blood_tribunals
+				}
+				random_list = {
+					50 = { trigger_event = {
+						id = blood_tribunal.5 #to capital
+					}  
+				}
+				50 = { 
+					trigger_event = {
+						id = blood_tribunal.6 #to a random state
+					}
+				}
+				}
+			}
+			else_if = {
+				limit = {
+					this ?= c:RVC
+					}
+					random_list = {
+						50 = { trigger_event = {
+							id = blood_tribunal.4
+						}  
+					}
+					50 = { 
+						trigger_event = {
+							id = blood_tribunal.7 #change this to a randomly scoped state
+						}
+					}	
+				}
+				
+		}
+	}	
 }

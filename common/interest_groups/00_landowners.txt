@@ -55,6 +55,20 @@
 			}
 		}
 
+		else_if = {
+			limit = {
+				OR = {
+					AND = {
+						c:CER ?= this
+					}
+					country_has_primary_culture = cu:cerunite
+				}
+			}
+			ig:ig_landowners = {
+				set_interest_group_name = ig_nobility
+			}
+		}
+
 		if = {
 			limit = {
 				#owner = { c:RVC ?= this }
@@ -68,12 +82,27 @@
 							}
 		}
 
+		if = {
+			limit ={
+				owner ={
+					any_primary_culture = {
+						has_discrimination_trait = hobgoblin
+					}
+				}
+			}
+			ig:ig_landowners = {
+				remove_ideology = ideology_stratocratic
+				add_ideology = ideology_hobgoblin_stratocratic
+				add_ideology = ideology_hobgoblin_hegemony
+				set_interest_group_name = ig_hobgoblin_restaz
+			}
+		}
 
 		if = {
 			limit = {
 				owner = {
 					OR = {
-						religion = rel:orc_mother
+						religion = rel:vurzaratmoda
 						any_primary_culture = {
 							has_discrimination_trait = southern_elf
 						}
@@ -90,7 +119,65 @@
 			}
 		}
 
+		if = {
+			limit = {
+				any_primary_culture = {
+					has_discrimination_trait = goblin_heritage
+					NOT = {
+						has_discrimination_trait = hobgoblin
+					}
+				}
+			}
+			ig:ig_landowners = {
+				remove_ideology = ideology_stratocratic
+				add_ideology = ideology_goblin_stratocratic
+			}
+		}
+
+		if = {
+			limit = {
+				owner ={
+					any_primary_culture = {
+						has_discrimination_trait = elf_heritage
+					}
+				}
+			}
+			ig:ig_landowners = {
+				add_ideology = ideology_pious
+			}
+		}
+
+		if = {
+			limit ={
+				owner ={
+					country_has_primary_culture = cu:south_sea_ravager
+				}
+			}
+			ig:ig_landowners = {
+				add_ideology = ideology_pro_slavery
+				remove_ideology = ideology_paternalistic
+				add_ideology = ideology_republican_paternalistic
+			}
+		}
+
+		# Theocratic
+		if = {
+			limit = {
+				OR = {
+					c:AUM ?= this
+					c:DSB ?= this
+					c:RDM ?= this
+					c:THI ?= this
+				}
+				
+			}
+			ig:ig_landowners = {
+				remove_ideology = ideology_paternalistic
+				add_ideology = ideology_papal_paternalistic
+			}
+		}
 	}
+
 	on_disable = {}
 	on_character_ig_membership = {}
 
@@ -331,6 +418,23 @@
 			add = {
 				value = 0.01
 			}
+		}
+		if = {
+			limit = {
+				owner = {
+					exists = c:WHI
+					OR = {
+						c:WHI = this
+						civil_war_origin_country = c:WHI
+					}
+						
+				}
+
+			}
+			add = {
+				value = 0.3
+			}
+
 		}
 	}
 

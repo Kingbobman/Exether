@@ -1,21 +1,45 @@
 ﻿COUNTRIES = {
 	c:GRA ?= {
 		effect_starting_technology_tier_3_tech = yes
-		effect_starting_politics_conservative = yes
+
+		set_ruling_interest_groups = {
+        	ig_petty_bourgeoisie
+        }
+		ig:ig_petty_bourgeoisie = {
+			add_ruling_interest_group = yes
+		}
+		ig:ig_industrialists = {
+			add_ruling_interest_group = yes
+		}
+
 		add_technology_researched = empiricism
+		add_technology_researched = alchemy
+		add_technology_researched = organized_adventuring
+		add_technology_researched = lathe
+		add_technology_researched = monster_hunters
+		add_technology_researched = modern_sewerage
+		add_technology_researched = pharmaceuticals
+		add_technology_researched = mass_communication
+		add_technology_researched = nationalism
 		
 		activate_law = law_type:law_presidential_republic
 		activate_law = law_type:law_oligarchy
 		activate_law = law_type:law_mercantilism
-		activate_law = law_type:law_agrarianism
-		activate_law = law_type:law_frontier_colonization
-		activate_law = law_type:law_land_based_taxation
-		activate_law = law_type:law_no_schools
+		activate_law = law_type:law_professional_army
+		activate_law = law_type:law_national_guard
+		activate_law = law_type:law_total_separation
+		activate_law = law_type:law_right_of_assembly
+		activate_law = law_type:law_appointed_bureaucrats
+		activate_law = law_type:law_homesteading
+		activate_law = law_type:law_interventionism
+		activate_law = law_type:law_per_capita_based_taxation
+		activate_law = law_type:law_private_schools
+		activate_law = law_type:law_private_health_insurance
 		
 		set_tariffs_import_priority = g:artillery
 		set_tariffs_import_priority = g:small_arms		
 
-		ig:ig_landowners = {
+		ig:ig_petty_bourgeoisie = {
 			add_ruling_interest_group = yes
 		}
 	}

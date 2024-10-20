@@ -19,7 +19,7 @@
 		law_druidic_circles = approve
 		law_artificer_guilds = approve
 		law_astrological_studies = strongly_approve
-		law_dark_arts = approve
+		
 		law_mage_hunters = strongly_disapprove
 	}
 
@@ -149,7 +149,7 @@ ideology_artificer_baron = { #magical liberal
 		law_druidic_circles = neutral
 		law_artificer_guilds = strongly_approve
 		law_astrological_studies = neutral
-		law_dark_arts = neutral
+		
 		law_mage_hunters = strongly_disapprove
 	}
 
@@ -318,7 +318,7 @@ ideology_artificer_baron = { #magical liberal
 		if = {
 			limit = {
 				owner = {
-					country_rank = rank_value:great_power
+					country_rank >= rank_value:great_power
 				}
 			}
 			add = 25
@@ -349,7 +349,7 @@ ideology_druid = {
 		law_druidic_circles = strongly_approve
 		law_artificer_guilds = strongly_disapprove
 		law_astrological_studies = neutral
-		law_dark_arts = neutral
+		
 		law_mage_hunters = disapprove
 	}
 
@@ -438,5 +438,103 @@ ideology_druid = {
 			}
 			add = 50
 		}
+	}
+}
+
+ideology_nomadic = {
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_traditionalist.dds"
+	
+	character_ideology = yes
+	
+	lawgroup_rights_of_women = {
+		law_no_womens_rights = disapprove
+		law_women_own_property = approve
+		law_women_in_the_workplace = neutral
+		law_womens_suffrage = disapprove
+	}
+
+	lawgroup_church_and_state = {
+		law_state_religion = approve
+		law_freedom_of_conscience = disapprove
+		law_total_separation = strongly_disapprove
+		law_state_atheism = strongly_disapprove
+	}
+	
+	lawgroup_economic_system = {
+		law_industry_banned = strongly_approve
+		law_agrarianism = approve
+		law_cooperative_ownership = neutral
+		law_traditionalism = neutral
+		law_laissez_faire = strongly_disapprove
+		law_interventionism = strongly_disapprove
+		law_command_economy = disapprove
+	}
+	possible = {
+		# Agitatos should have an ideology at odds with current laws
+		NAND = {
+			has_role = agitator
+			owner = {
+				has_law = law_type:law_no_womens_rights
+				has_law = law_type:law_state_religion
+				has_law = law_type:law_industry_banned
+			}
+		}
+		OR = {
+			owner = {
+				has_modifier = horselord_traditions #a surprise tool to help us later
+			}
+			owner = {
+				c:YAN ?= this
+				c:RDM ?= this
+				c:OCR ?= this
+			}
+		}
+
+	}
+		scope:interest_group = {
+			OR = {
+				is_interest_group_type = ig_rural_folk
+				is_interest_group_type = ig_trade_unions
+				is_interest_group_type = ig_armed_forces
+				is_interest_group_type = ig_petty_bourgeoisie
+				is_interest_group_type = ig_landowners
+				is_interest_group_type = ig_devout
+			}
+		}
+		scope:interest_group = {
+			NOR = {
+				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
+				has_variable = chose_fascism
+				has_variable = chose_ethno_nationalism
+			}
+		}
+	
+	
+	leader_weight = {
+		value = 75
+		# less likely for unions
+		if = {
+			limit = {
+				scope:interest_group = {
+					is_interest_group_type = ig_trade_unions
+				}
+			}
+			add = -60                                           
+		}
+		# more likely for landowners, devout and rural
+		if = {
+			limit = {
+				scope:interest_group = {
+					OR = {
+						is_interest_group_type = ig_landowners
+						is_interest_group_type = ig_devout
+						is_interest_group_type = ig_rural_folk
+					}
+				}
+			}
+			add = 50
+		}
+		# conservative and/or reactionary leaders have a higher spawn chance if the Anti-Dreyfusards won.
 	}
 }

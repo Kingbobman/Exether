@@ -31,7 +31,7 @@
 	
 	if = { #Depending on your rank add some points
 		limit = {
-			country_rank = rank_value:great_power
+			country_rank >= rank_value:great_power
 		}
 		add = 10
 	} 
@@ -52,7 +52,7 @@
 	
 	if = {
 		limit = {
-			has_variable = first_to_reach_south_pole
+			has_variable = first_to_reach_ice_wall
 		}
 		add = 10
 	}

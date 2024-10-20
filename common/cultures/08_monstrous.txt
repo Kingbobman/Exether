@@ -1,6 +1,6 @@
 ﻿hag = { # Ute and Shoshone
 	color= hsv{ 0.06 0.39 0.80 }
-	religion = animist
+	religion = lunar_masquerade
 	traits = { noric_culture_group monstrous_heritage }
 	male_common_first_names={
 		Antonga
@@ -74,6 +74,7 @@ gulf_naga={
 		Udayanacharaya
 		Vachaspati
 		Vatsyayana
+		Zokmir
 	}
 	female_common_first_names = {
 		Bhawana
@@ -83,6 +84,7 @@ gulf_naga={
 	}	
 	noble_last_names = {
 		Singh
+		Valak
 	}
 	common_last_names={
 		Devi
@@ -435,10 +437,13 @@ awakened={
 	graphics = european
 }
 
-awakened_east={
+plundboelka={
 	color={ 122 127 111 }
 	religion = animist
-	traits = { beast monstrous_heritage }
+	traits = { beast thoughtsmith_culture_group monstrous_heritage }
+	obsessions = {
+		fruit
+	}
 	male_common_first_names={
 		Gaghaz
 		Yori
@@ -463,12 +468,93 @@ awakened_east={
 	ethnicities = {
 		1 = bear
 	}
-	graphics = east_asian
+	graphics = bear
+}
+
+praprandgaw={
+	color={ 14 46 14 }
+	religion = animist
+	traits = { beast thoughtsmith_culture_group monstrous_heritage }
+	obsessions = {
+		fruit
+		coffee
+	}
+	male_common_first_names={
+		Gaghaz
+		Yori
+		Frong
+		Twaid
+		Vralk
+	}
+	female_common_first_names = {
+		Brahda
+		Droota
+		Kanka
+		Frifa
+	}	
+	noble_last_names = {
+		Longtooth
+		Longmane
+	}
+	common_last_names={
+		Grark
+		Howl
+	}
+	ethnicities = {
+		1 = bear
+	}
+	graphics = bear
+}
+
+bintukin={  #needs new namelist
+	color={ 122 127 111 }
+	religion = animist
+	traits = { beast thoughtsmith_culture_group monstrous_heritage }
+	obsessions = {
+		fruit
+	}
+	male_common_first_names={
+		Gaghaz
+		Yori
+		Frong
+		Twaid
+		Vralk
+		Gram
+	}
+	female_common_first_names = {
+		Brahda
+		Droota
+		Grifa
+		Kanka
+		Frifa
+		Needa
+	}	
+	noble_last_names = {
+		Bigheart
+		Finefur
+		Smallear
+		Sleekfur
+		Tallcat
+		Longcoat
+		Tinyfoot
+	}
+	common_last_names={
+		Grark
+		Howl
+		Curl
+		Slink
+		Shorthat
+		Mewler
+	}
+	ethnicities = {
+		1 = bintukin
+	}
+	graphics = bear
 }
 
 vampire={
 	color= hsv{ 0.12 0.41 0.54 }
-	religion = lords_of_avarice
+	religion = lunar_masquerade
 	traits = { noric_culture_group monstrous_heritage }
 	obsessions = {
 		fine_art

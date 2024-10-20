@@ -1,4 +1,5 @@
 ﻿l_english:
+  je_group_quests: "Quests"
   je_purpur_wedding: "The Purpur Wedding"
   je_purpur_wedding_goal: "The Union is Established"
   je_purpur_wedding_reason: "The dark elf nation of Yavira and the dwarven kingdom of Vozmead stand on the brink of a historic political union. Years of mutual reliance have led to this unprecedented alliance, combining Yavira's rich soils with Vozmead's unmatched craftsmanship. As leaders gather to seal the pact, the realm anticipates a new era of power and possibility. Will this union bring prosperity, or will their differences spark unforeseen strife? The future of both nations hangs in the balance."
@@ -8,9 +9,17 @@
   je_union_of_the_sands_reason: "Yavira and the Vozmead Peaks have been joined in a sacred bond through the marriage of their monarchs. This union has brought our peoples closer than ever, forging an alliance of unmatched strength and unity. Yet, a profound challenge lies before us.\n\nThe matriarchal traditions of Yavira and the patriarchal customs of Vozmead Peaks now stand at a crossroads. To truly unite our nations, we must find common ground and resolve these differences."
   union_of_the_sands_progress_bar_name: "Union of The Sands"
   union_of_the_sands_progress_bar_yavira_desc: "[GetGlobalVariable('yavira_gdp').GetValue|D]#!"
-  union_of_the_sands_progress_bar_vozmead_desc: "[GetGlobalVariable('vo zmead_gdp').GetValue|D]#!"
-  union_of_the_sands_progress_bar_yavira_gdp: "[GetGlobalVariable('yavira_scope').GetCountry.GetName] GDP"
-  union_of_the_sands_progress_bar_vozmead_gdp: "[GetGlobalVariable('vozmead_scope').GetCountry.GetName] GDP"
+  union_of_the_sands_progress_bar_vozmead_desc: "[GetGlobalVariable('vozmead_gdp').GetValue|D]#!"
+  union_of_the_sands_progress_bar_reset: "Internal Calculations"
+  replaces_progress_bar_with_your_var: "GDP Balance"
+
+  je_grey_boar: "The Gray Boar"
+  je_grey_boar_status: "Hushed whispers speak ill of the margrave's health"
+  je_grey_boar_reason: "The long shadow of Margrave Ludric Zarnak, once a figure of unwavering strength and iron will, now flickers as his health deteriorates. For nearly half a century, he has been the indomitable ruler of Ceraun, first as a hero of the Viceroy's War, then as the architect of a bloody coup that shattered the old nobility. His legacy is marked by the brutal Buramog Wars against the western orcs and the infamous order to the alchemists that unleashed the devastating Wyldfire Tincture, transforming the Wrentsay Forest into the cursed Plaguewoods.\n\nNow, with every raspy cough and weakening breath, the old Margrave’s hold on power slips. His once-loyal subjects, now wary and ambitious, circle him like vultures, eager to fill the inevitable power vacuum. The future of Ceraun teeters on the edge, as the looming struggle for succession threatens to plunge the realm into chaos. How long can the old strongman cling to life—and power—before his rivals strike?"
+  ludric_kicked_bucket: "Ludric Zarnak is #bold not#! the leader of [ROOT.GetCountry.GetNameNoFlag]"
+
+  je_rivierling_unrest: "The Halfling Question"
+  je_rivierling_unrest_reason: "Halfling nationalism is on the rise, and Rivierling elites are maneuvering for greater representation in government. If we allow these movements to become too powerful we may have to make an uncomfortable compromise."
 
   je_great_gavkhan: "The Khan of Khans"
   je_great_gavkhan_reason: "The land of Gavkhan is in turmoil. For generations, our goblin kin have battled fiercely for dominance, but now, with the changing tides of the nightfall, the fires of war burn hotter than ever before. Local warlords rally their forces, each determined to unite the region under their banner and claim the exalted title of Khan of Khans."
@@ -36,7 +45,7 @@
   je_colonial_administration_button_thoughtsmith_ridge_desc: "WIP"
   je_colonial_administration_button_anantadesh: "Establish a colony in Anantadesh"
   je_colonial_administration_button_anantadesh_desc: "WIP"
-  je_colonial_administration_button_dreamweaver_jungle: "Establish a colony in tge Dreamweaver Jungle"
+  je_colonial_administration_button_dreamweaver_jungle: "Establish a colony in the Dreamweaver Jungle"
   je_colonial_administration_button_dreamweaver_jungle_desc: "WIP"
   je_colonial_administration_button_sarpakshetra: "Establish a colony in Sarpakshetra"
   je_colonial_administration_button_sarpakshetra_desc: "WIP"
@@ -99,3 +108,91 @@
   colonial_administration_events.2.f: ""[SCOPE.GetRootScope.GetCountry.GetCustom('GetDivinity')] has created us free, and did not make us into heritage or estate. So by [SCOPE.  GetRootScope.GetCountry.GetCustom('GetDivinity')], we shall be bequeathed or enslaved no more."" # Urabi
   colonial_administration_events.2.a: "May [SCOPE.GetRootScope.GetCountry.GetCustom('GetDivinity')] preserve [ROOT.GetCountry.GetNameNoFormatting], for we may lack the means to."
   colony_alone_modifier: "Masterless Colony"
+
+  je_blood_tribunal: "The Blood Tribunals"
+  je_blood_tribunal_complete_tt: "[ROOT.GetCountry.GetName] has established 5 or more Blood Tribunals or Blood Tributaries.\nAll subjects, including tributaries, will count toward this goal."
+  je_blood_tribunal_reason: "Tending to the hunger of the lords of Ravencliff is a task unending. As our flock as grown, it has proven impossible to cultivate the tithes we require from our lands alone. Thus, the formation of cattle-puppets, known as Blood Tribunals, has been decreed."
+  je_blood_tribunal_more_tt: "We will begin to take larger blood-tithes from our subjects."
+  initiation_rites_decision: "Perform Initiation Rites"
+  initiations_rites_tt_1: "Has not performed an initiation arcana in the last two years"
+  initiations_rites_tt_2: "3% of all [Concept('concept_pop', '$concept_pops$')] will become vampires"
+  initiation_rites_decision_desc: "Our society can only bear the weight of so much cattle.  On occasion, the best of our servants must be uplifted and brought into the fold."
+  je_a_steppe_behind: "A Steppe Behind"
+  je_a_steppe_behind_reason: "Our lack of real centralized governance has allowed our neighbors to exploit our lands and our people with impunity.  Our ruralist way of life must be enshrined if we are to stand up to the might of [GetCulture('dumonian').GetName] capitalists."
+  je_a_steppe_forward: "Hostile Takeover"
+  je_a_steppe_forward_reason: "Now that we have begun to centralize our governance, the time has come to revisit the holdings of the foreign companies within our lands."
+  je_about_a_horse: "About A Horse"
+  je_about_a_horse_reason: "Our friends in the Brackenshire Investor's Guild have been busy buying up what little industry exists in [SCOPE.sCountry('yanger_scope').GetNameNoFlag]. They have approached us with an interesting proposal; they believe the [SCOPE.sCountry('yanger_scope').GetAdjectiveNoFlag] government to be incapable of enforcing its own trade agreements.  If we were to take control over a greater portion of their economy, we could pull them inseparably into our sphere." 
+
+
+  je_soulwrought_subjects: "Our [GetCulture('soulwrought').GetName] Subjects"
+  je_soulwrought_subjects_reason: "[GetCulture('soulwrought').GetName] make up a significant portion of nation's population, but have comparatively few legal rights and privileges.  As our citizens begin to discuss concepts such as legal personhood and equality before the law, a civil rights movement takes its first steps."
+
+  cult_1_tt: "Every state owned by [THIS.GetCountry.GetName] gets: "
+  conversion_cult_tt: "The Dragonblight will progress faster in this state."
+  dragonblight_2_tt: "Will begin a [Concept('concept_migration_target', '$concept_mass_migration$')] of [GetCulture('illvasaari').GetName] pops to a random state in Thassarcia"
+  je_dragonblight_vaccine: "A Cure for Kobolds"
+  je_dragonblight_vaccine_reason: "While there is little agreement regarding what causes the Dragonblight, there a few things that #italic undeniably#! prevent it.  If we invested more resources into learning what these things are, perhaps we could get this pandemic in check."
+  dragonblight_vaccine_full_tt: "The #variable $dragonblight_vaccine_progress_bar$#! progress bar has reached #bold 5000#!\n\nThe cure will progress faster by raising [concept_literacy] and building universities, as well as empowering the $ig_intelligentsia$ [concept_interest_group] by getting them into government and passing the [GetLawType('law_technocracy').GetName] or [GetLawType('law_appointed_bureaucrats').GetName] [Concept('concept_law','$concept_laws$')]."
+  je_dragonblight: "The Dragonblight"
+  je_dragonblight_reason: "Every day, more and more [GetCulture('illvasaari').GetName] dragonborn are turned into [GetCulture('kotskarvi').GetName] kobolds.  We must find a way to stop this disease before our administration collapses beneath the weight of this curse.\n\nThe spread of the Dragonblight can be slowed, and its effects reduced, with the [GetDecreeType('decree_special_measures').GetName] decree."
+  je_dragonblight_completion_tt: "[THIS.GetCountry.GetName] has found a cure for the Dragonblight"
+  dragon_vaccine_progress_from_literacy_tt: "cure progress from literacy"
+  dragon_vaccine_progress_from_intelligentsia_tt: "cure progress from intelligentsia clout"
+  dragon_vaccine_progress_from_universities_tt: "cure progress from universities"
+  dragon_vaccine_progress_from_bureaucrats_tt: "cure progress from bureaucrats"
+  kill_party_guy_tt: "[SCOPE.sCharacter('party_time_guy').GetFullName] will be imprisoned."
+  dragon_port_lockdown_button: "Lockdown the Ports"
+  dragon_port_lockdown_button_desc: "By taking a number of precautions in our ports, we may be able to slow the spread of the Dragonblight."
+  negotiate_kobold_settlements_button: "Negotiate Kobold Border Settlements"
+  negotiate_kobold_settlements_button_desc: "Many of our states have already suffered dearly to the Dragonblight.  By ceding key border territories to the kobolds nearby, we may hope to regain some semblance of control over our territories.\n#red This will cede land to the kobolds. Can only be done once per state.#!"
+  negotiate_kobold_tt: "At least one mainland state must have a population of greater than 35% [GetCulture('kotskarvi').GetName], and border a country with a kobold [Concept('concept_primary_cultures','$concept_primary_culture$')]."
+  negotiate_kobold_2_tt: "#red A new split state will be created out of at least one of your states.#! Many [GetCulture('kotskarvi').GetName] and [GetCulture('illvasaari').GetName] pops will resettle into their country's proper borders."
+  dragonblight_failure_tt: "All mainland states will defect to an adjacent country with a kobold [Concept('concept_primary_cultures','$concept_primary_culture$')]\n\nAny states bordering kobolds will defect #bold as they drop below 50% [GetCulture('illvasaari').GetName]#."
+  dragonblight_vaccine_progress_bar: "Cure for Kobolds"
+
+
+  je_cove_pirate_raiding: "Raiding the seas"
+  je_cove_pirate_raiding_reason: "The Empire of Dunomia gazes south. But in it's greed, it has dismissed our presence. Muster our fleets and send word to our fellow ravagers, it is time to make the Empire bleed!"
+  je_cove_pirate_raiding_status: "The Empire and it's lackeys have us heavily outnumbered. We are limited to small raids until we can regain the upper hand."
+  pirate_start_raids_button_name: "Intensify Raids!"
+  pirate_start_raids_button_desc: "We have gathered enough flotillas to put real hurt on the complacent Dunomians. Set Sail!"
+  pirate_consolidation_1_button_name: "Coordinate Raids!"
+  pirate_consolidation_1_button_desc: "By diplomacy or might, we are able to bring the other pirates in line with us. And we have the perfect goal in mind for our first combined foray..."
+
+  je_cove_devils_due: "The Devil's Due"
+  je_cove_devils_due_reason: "The three Devils of avarice have once again come to the Cove. They demand their due and we must pay, be it in gold or be it in blood."
+  je_cove_devils_due_status: "Every year we must pay the Devils of Avarice. If we fail to pay, they will take their due by force."
+
+  je_lighthouse_survey: "Survey the Lonely Islands"
+  je_lighthouse_survey_reason: "The petition made by the sailors that dare sail the oceans around the Lonely Islands have been met. After successfully gathering a team of genius engineers and mages, they've started to design a building that will stand tall amongst the waves. We will survey the islands to determine the feasibility of building a grand lighthouse"
+  je_lighthouse_survey_status: "We are conducting a survey on Ngurulan to understand the size of the project. Though the island is not the biggest, we believe it can be done."
+  je_lighthouse_survey_goal: "The Lonely Islands have been successfully surveyed"
+
+  je_lighthouse_construction: "Construction of the Light of Solitude"
+  je_lighthouse_construction_status: "The survey of the Lonely Islands has been completed. Our team has returned with a plan to build a grand lighthouse on the islands."
+  je_lighthouse_construction_reason: "The construction of the Light of Solitude can begin. Our team of mage-neers are working tirelessly to complete the lighthouse. It's completion will ensure the safety of our ships and secure the trade routes between our colonies, truly marking our presence in the world stage."
+
+  je_restore_upashna: "Restore the Upashna-Dhaalum"
+  je_restore_upashna_reason: "Our empire once ruled all Locari. The very earth would tremble from the march of our armies, and the sky would shrink back from the beating wings of our Asuroth."
+  je_restore_upashna_status: "Now psionic storms cause chaos while our rightful property has joined with awakened beasts to terrorize our sacred homeland and defile our once mighty temples. It's time to participate in a little blood sport. Or a lot of of blood sports. "
+  nbi_formed: "Nagabumi has been formed"
+  
+  je_dragon_tombs: "Search for the Dragon Tombs"
+  je_dragon_tombs_reason: "The discovery of the Gem Dragons' tombs has ignited a quest to find and uncover these legendary resting places. Our scholars and adventurers are now scouring the land, investigating sites rich with ancient draconic energy. With each step closer to locating the tombs, we come closer to unlocking knowledge and power lost for generations. Only time will tell what secrets and dangers await us."
+
+  je_hobgoblin_yoke: "The Crimson Yoke"
+  je_hobgoblin_yoke_reason: "After the rise of the Yulug Dynasty, goblins have found themselves at the mercy of military governors, strict enforcers of the empire's caste system. The hobgoblins, wielding power thanks to the discovery of Sparkpowder, rule with an iron fist.\n\nSmall goblins, often forced into labor or conscripted as cannon fodder, toil under the shadow of their hobgoblin overseers. Life for them is one of harsh duty, low status, and constant sacrifice, with few chances for advancement in the rigid, military-run hierarchy of the Authority."
+
+
+  je_hobgoblin_army: "Whip and Barrel"
+  je_hobgoblin_army_reason: "The hobgoblin armies are unmatched on the isle of Dornod, renowned for their iron discipline and ruthless efficiency. Recruitment is highly selective, allowing only the most capable to join, who must then endure a grueling training regime that forges them into elite soldiers. Rigorous drills, relentless physical tests, and unwavering loyalty are demanded from every recruit, ensuring their dominance on the battlefield.\n\nSociety under this system is entirely centered on military rule, where rank and status are earned through combat prowess. Hobgoblin leaders serve as both governors and generals, with their authority stemming from battlefield success. Civilian life is tightly controlled, with mandatory service and constant preparation for war, making military strength the foundation of Yulug society."
+
+
+  je_everfrost_expedition: "Beyond the Frost"
+  je_everfrost_expedition_goal: "Find out what lies beyond the Gruaav range"
+  je_everfrost_expedition_reason: "The secrets of the giants' homeland lie somewhere beyond the Gruaav Range, hidden from our charts and stories. To be the first to set foot in those fabled lands would unlock ancient truths, granting us a glimpse into legends long thought lost to time. The knowledge awaiting us could reshape our understanding of myth and history alike."
+  everfrost_research: "Everfrost Geological Survey"
+  climbed_krutum: "Scaled Mount Krutum"
+  first_beyond_the_wall: "First to Bremala"
+  everfrost_expedition_returned: "Successful Everfrost Expedition"

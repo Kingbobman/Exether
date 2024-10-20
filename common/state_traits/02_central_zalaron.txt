@@ -1,6 +1,8 @@
 ﻿state_trait_dark_morass = {
 	icon = "gfx/interface/icons/state_trait_icons/swamp.dds"
-	
+	disabling_technologies = {
+		"railways"
+	}
 	modifier = {
 		state_construction_mult = -0.15
 		state_infrastructure_mult = -0.15
@@ -11,7 +13,7 @@ state_trait_starshimmer_pool = {
 	icon = "gfx/interface/icons/state_trait_icons/river.dds"
 	
 	modifier = {
-		state_infrastructure_add = 15
+		state_infrastructure_add = 20
 	}	
 }
 
@@ -38,6 +40,20 @@ state_trait_inland_state = {
 	}	
 }
 
+#Vermillion Thicket
+state_trait_hostile_flora = {
+	icon = "gfx/interface/icons/state_trait_icons/resources_lumber.dds"
+
+    required_techs_for_colonization = { "flamethrowers" }
+	modifier = {
+		state_construction_mult = -0.30
+		state_infrastructure_mult = -0.30
+        state_non_homeland_colony_growth_speed_mult = -0.30
+        state_non_homeland_mortality_mult = 0.30
+		goods_output_hardwood_mult = 0.25
+	}
+}
+
 state_trait_leechgardens = {
 	icon = "gfx/interface/icons/state_trait_icons/good_soils.dds"
 
@@ -51,6 +67,7 @@ state_trait_thiralian_forest = {
 	
 	modifier = {
 		building_group_bg_logging_throughput_add = 0.20
+		building_group_bg_hunting_throughput_add = 0.20
 	}
 }
 
@@ -59,6 +76,7 @@ state_trait_feylight_forest = {
 	
 	modifier = {
 		building_group_bg_logging_throughput_add = 0.25
+		building_group_bg_hunting_throughput_add = 0.25
 	}
 }
 
@@ -67,9 +85,10 @@ state_trait_frayed_veil = {
 
 	required_techs_for_colonization = { "arcane_concentration" }
 	modifier = {
-		state_mortality_mult = 0.15
+		state_non_homeland_mortality_mult = 0.15
 		building_group_bg_agriculture_throughput_add = -0.15
 		building_group_bg_plantations_throughput_add = -0.15
+		building_haunted_grounds_throughput_add = 0.15
 	}
 }
 
@@ -78,8 +97,16 @@ state_trait_fractured_veil = {
 
 	required_techs_for_colonization = { "ethereal_mastery" }
 	modifier = {
-		state_mortality_mult = 0.3
+		state_non_homeland_mortality_mult = 0.3
 		building_group_bg_agriculture_throughput_add = -0.3
 		building_group_bg_plantations_throughput_add = -0.3
+		building_haunted_grounds_throughput_add = 0.30
 	}
+}
+
+state_trait_twilan_sulfur_deposits = {
+    icon = "gfx/interface/icons/state_trait_icons/resources_ore.dds"   
+	modifier = {
+        building_sulfur_mine_throughput_add = 0.20
+    }
 }

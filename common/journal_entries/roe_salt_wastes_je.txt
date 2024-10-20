@@ -1,0 +1,250 @@
+﻿je_salt_waste_half_orc = {
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	group = je_group_internal_affairs
+
+	is_shown_when_inactive = {
+		is_player = yes
+		NOT = { has_global_variable = salt_waste_half_orc_done }
+		has_technology_researched = nationalism
+		any_primary_culture = {
+			has_discrimination_trait = saltwaste_survivor_culture_group
+		}
+	}
+
+	possible = {
+		has_technology_researched = pan-nationalism
+		any_primary_culture = {
+			has_discrimination_trait = saltwaste_survivor_culture_group
+		}
+		NOT = { has_law = law_type:law_serfdom }
+	}
+
+	complete = {
+		custom_tooltip = {
+			text = control_every_salt_waste_state
+			fully_owns_the_salt_wastes = yes
+		}
+		accept_the_salt_waste_natives = yes
+	}
+
+	on_complete = {
+		trigger_event = {
+			id = salt_waste_narrative_events.1
+			popup = yes
+		}
+		set_global_variable = {
+			name = salt_waste_half_orc_done
+		}
+	}
+	
+	transferable = no
+}
+
+je_salt_waste_cure = {
+	should_be_pinned_by_default = yes
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	group = je_group_objectives
+	
+	on_monthly_pulse = {
+		effect = {
+			random_list = {
+				90 = { } # We want to trigger an event roughly one out of every 6 months, so a chance of 15-to-90
+				2 = { trigger_event = { id = salt_waste_narrative_events.3 popup = yes } }
+				2 = { trigger_event = { id = salt_waste_narrative_events.4 popup = yes } }
+				2 = { trigger_event = { id = salt_waste_narrative_events.5 popup = yes } }
+				2 = { trigger_event = { id = salt_waste_narrative_events.6 popup = yes } }
+				2 = { trigger_event = { id = salt_waste_narrative_events.7 popup = yes } }
+				2 = { trigger_event = { id = salt_waste_narrative_events.8 popup = yes } }
+				1 = { trigger_event = { id = salt_waste_narrative_events.9 popup = yes } }
+				1 = { trigger_event = { id = salt_waste_narrative_events.10 popup = yes } }
+				1 = { trigger_event = { id = salt_waste_narrative_events.11 popup = yes } }
+			}
+		}
+	}
+
+	scripted_button = cast_defensive_wards_button
+	scripted_button = establish_salt_rangers_button
+	scripted_button = fund_wasteland_patrols_button
+	scripted_button = handle_salt_waste_curse_button
+
+	is_shown_when_inactive = {
+		is_player = yes
+		any_primary_culture = {
+			has_discrimination_trait = saltwaste_survivor_culture_group
+		}
+	}
+	
+	possible = {
+		OR = {
+			any_scope_state = {
+				has_state_trait = state_trait_salt_wastes
+			}
+			hidden_trigger = {
+				has_variable = je_salt_waste_curse_resolved
+			}
+		}
+	}
+
+	complete = {
+		custom_tooltip = {
+			text = resolve_the_salt_waste_curse
+			has_variable = je_salt_waste_curse_resolved
+		}
+	}
+
+	on_complete = {
+		add_modifier = {
+			name = salt_waste_curse_resolved
+		}
+	}
+
+	transferable = no
+}
+
+je_tql_salt_crucible = {
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	group = je_group_objectives
+
+	complete = {
+		has_modifier = salt_waste_curse_resolved
+		any_state = {
+			percent = 1
+			filter = {
+				is_homeland_of_country_cultures = c:TQL
+			}
+			is_split_state = no
+			owner = ROOT
+		}
+		is_country_type = recognized
+		is_power_bloc_leader = yes
+	}
+
+	on_complete = {
+		add_modifier = { name = diplomats_of_the_wastes }
+	}
+
+	weight = 10
+	should_be_pinned_by_default = yes
+}
+
+je_tql_skarrakhlot = {
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	group = je_group_objectives
+
+	complete = {
+		has_modifier = salt_waste_curse_resolved
+		any_state = {
+			percent = 1
+			filter = {
+				is_homeland_of_country_cultures = c:TQL
+			}
+			is_split_state = no
+			owner = ROOT
+		}
+		any_state = {
+			percent = 0.5
+			filter = {
+				OR = {
+					state_region = s:STATE_RUMATARI
+					state_region = s:STATE_KAINAVA
+					state_region = s:STATE_SHANAKONG
+					state_region = s:STATE_BEARTZUNGUL
+					state_region = s:STATE_BURAMONG
+					state_region = s:STATE_DILAFSHAN
+				}
+			}
+			is_split_state = no
+			OR = {
+				owner = ROOT
+				owner = {
+					OR = {
+						is_subject_of = ROOT
+						AND = {
+							is_in_power_bloc = yes
+							power_bloc ?= {
+								power_bloc_leader = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		OR = {
+			country_rank = rank_value:great_power
+			country_rank = rank_value:unrecognized_major_power
+		}
+	}
+
+	on_complete = {
+		add_modifier = { name = age_of_orcs }
+	}
+
+	weight = 10
+	should_be_pinned_by_default = yes
+}
+
+je_tql_vurzaratmoda = {
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	group = je_group_objectives
+
+	complete = {
+		has_modifier = salt_waste_curse_resolved
+		any_state = {
+			percent = 1
+			filter = {
+				is_homeland_of_country_cultures = c:TQL
+			}
+			is_split_state = no
+			owner = ROOT
+		}
+		is_country_type = recognized
+		average_sol >= 15
+	}
+
+	on_complete = {
+		every_scope_state = {
+			limit = {
+				is_homeland_of_country_cultures = c:TQL
+			}
+			state_region = {
+				add_arable_land = 5
+			}
+		}
+	}
+
+	weight = 10
+	should_be_pinned_by_default = yes
+}
+
+je_tql_default = {
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	group = je_group_objectives
+
+	complete = {
+		has_modifier = salt_waste_curse_resolved
+		any_state = {
+			percent = 1
+			filter = {
+				is_homeland_of_country_cultures = c:TQL
+			}
+			is_split_state = no
+			owner = ROOT
+		}
+		country_rank >= rank_value:great_power
+	}
+
+	on_complete = {
+		add_modifier = {
+			name = atamzotayit_triumphant
+		}
+	}
+
+	weight = 10
+	should_be_pinned_by_default = yes
+}

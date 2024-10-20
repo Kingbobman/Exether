@@ -149,6 +149,9 @@ wasteland = {
 	
 	combat_width = 0.5
 	risk = 0.6
+	materials = {
+		Wasteland_3 = 10000
+	}
 	created_material = DYNAMIC-Pollution_01
 	debug_color = hsv { 0.15 0.15 0.15 }
 	
@@ -262,7 +265,17 @@ forest = {
 hills = {
 	label = label_elevated
 	label = label_travel_harsh_environment
-	weight = 2
+	weight = {
+		value = 2
+		if = {
+			limit = {
+				state = {
+					state_region = s:STATE_SKYPIERCER_PEAK
+				}
+			}
+			add = 4
+		}
+	}
 	textures = {
 		{
 			weight = {
@@ -323,7 +336,7 @@ hills = {
 						scope:region = {
 							is_arid_region = yes
 							NOT = {
-								region = sr:region_teferet
+								region = sr:region_starshimmer_pool
 							}
 						}
 					}
@@ -333,6 +346,21 @@ hills = {
 			path = "gfx/state_pictures/hills_desert.dds"
 			effect = "vfx_entity_ui_state_mountains_arid"
 		}
+	{	
+		weight = {
+			value = 0
+			if = {
+				limit = {
+					scope:state = { #bro you gotta use a different syntax here wtf
+						state_region = s:STATE_SKYPIERCER_PEAK
+					}
+				}
+				add = 4
+			}
+		}
+		path = "gfx/state_pictures/skypiercer.dds"
+		effect = "vfx_entity_ui_state_arctic"
+	}
 		{
 			weight = {
 				value = 0
@@ -341,7 +369,7 @@ hills = {
 						scope:region = {
 							is_arid_region = yes
 							NOT = {
-								region = sr:region_teferet
+								region = sr:region_starshimmer_pool
 							}
 						}
 					}
@@ -359,7 +387,6 @@ hills = {
 						scope:region = {
 							OR = {
 								region = sr:region_south_toftir
-								region = sr:region_exiles_burden
 								region = sr:region_razorwind
 								region = sr:region_rimeroot_jungle
 								region = sr:region_thawed_lands
@@ -441,6 +468,25 @@ mountain = {
 				if = {
 					limit = {
 						scope:region = {
+							OR = {
+								region = sr:region_thoughtsmith_ridge
+								region = sr:region_mindrend_sands
+							}
+						
+						}
+					}
+					add = 3
+				}
+			}
+			path = "gfx/state_pictures/undermountain_1.dds"
+			effect = "vfx_entity_ui_state_arctic"
+		}
+		{
+			weight = {
+				value = 0
+				if = {
+					limit = {
+						scope:region = {
 							AND = {
 								is_arid_region = no
 							}
@@ -487,6 +533,21 @@ mountain = {
 			path = "gfx/state_pictures/volcano_snow.dds"
 			effect = "vfx_entity_ui_state_arctic"
 		}
+		{	
+			weight = {
+				value = 0
+				if = {
+					limit = {
+						state = {
+							state_region = s:STATE_SKYPIERCER_PEAK
+						}
+					}
+					add = 4
+				}
+			}
+			path = "gfx/state_pictures/skypiercer.dds"
+			effect = "vfx_entity_ui_state_arctic"
+		}
 	}
 
 	combat_width = 0.4
@@ -522,6 +583,41 @@ jungle = {
 			}
 			path = "gfx/state_pictures/jungle.dds"
 			effect = "vfx_entity_ui_state_jungle"
+		}
+		{
+			weight = {
+				value = 0
+				if = {
+					limit = {
+						scope:region = {
+							region = sr:region_plaguewood
+						}
+					}
+					add = 3
+				}
+			}
+			path = "gfx/state_pictures/plaguewood.dds"
+			effect = "vfx_entity_ui_state_desert_northamerica"
+		}
+		{
+			weight = {
+				value = 0
+				if = {
+					limit = {
+						scope:state = {
+							OR = {
+								state_region = s:STATE_WICKENWOOD
+								state_region = s:STATE_SANDWOOD
+								state_region = s:STATE_PLAGUEBRUSH
+							}
+							
+						}
+					}
+					add = 5
+				}
+			}
+			path = "gfx/state_pictures/plaguewood2.dds"
+			effect = "vfx_entity_ui_state_desert_northamerica"
 		}
 	}
 	combat_width = 0.5
@@ -569,6 +665,24 @@ desert = {
 	label = label_travel_harsh_environment
 	weight = 2
 	textures = {
+		{	
+			weight = {
+				value = 0
+				if = {
+					limit = {
+						scope:state = {
+						
+								state_region = s:STATE_SKYPIERCER_PEAK
+							
+							
+						}
+					}
+					add = 604
+				}
+			}
+			path = "gfx/state_pictures/skypiercer.dds"
+			effect = "vfx_entity_ui_state_desert_northamerica"
+		}
 		{
 			weight = {
 				value = 0
@@ -592,7 +706,7 @@ desert = {
 						scope:region = {
 							OR = {
 								region = sr:region_nogi_desert
-								region = sr:region_anwarth
+								region = sr:region_starshimmer_pool
 							}
 							
 						}
@@ -638,11 +752,11 @@ desert = {
 	combat_width = 1
 	risk = 0.2
 	materials = { 
-		Desert_01 = 0.5
-		Desert_03 = 0.5
-		Desert_04 = 0.5
-		Desert_05 = 0.5
-		Desert_06 = 0.5
+		Desert_01 = 0.65
+		Desert_03 = 0.65
+		Desert_04 = 0.65
+		Desert_05 = 0.65
+		Desert_06 = 0.65
 	}
 	debug_color = hsv { 0.15 1 1 }
 	
@@ -668,8 +782,8 @@ tundra = {
 	combat_width = 0.7
 	risk = 0.15
 	materials = { 
-		Permafrost_01 = 3
-		Permafrost_03 = 3
+		Permafrost_01 = 1.7
+		Permafrost_03 = 1.7
 	}
 	debug_color = { 200 100 25 }
 	
@@ -1243,6 +1357,18 @@ mining = {
 		}
 		if = {
 			limit = {
+				exists = state.b:building_wishstone_mine
+			}
+			add = state.b:building_wishstone_mine.level
+		}
+		if = {
+			limit = {
+				exists = state.b:building_cloudsilver_mine
+			}
+			add = state.b:building_cloudsilver_mine.level
+		}
+		if = {
+			limit = {
 				exists = state.b:building_iron_mine
 			}
 			add = state.b:building_iron_mine.level
@@ -1277,6 +1403,24 @@ mining = {
 			}
 			path = "gfx/state_pictures/mining.dds"
 			effect = "vfx_entity_ui_state_mining"
+		}
+		{
+			weight = {
+				value = 0
+				if = {
+					limit = {
+						scope:state = {
+							OR = {
+								state_region = s:STATE_VYNDERVOHT
+							}
+							
+						}
+					}
+					add = 3
+				}
+			}
+			path = "gfx/state_pictures/secretkeepers.dds"
+			effect = "vfx_entity_ui_state_arctic"
 		}
 	}
 	
@@ -1330,7 +1474,12 @@ urban = {
 		value = 0.1
 		if = {
 			limit = {
-				exists = state.b:building_urban_center
+				AND = {
+					state = {
+						undermountain_state = no
+					}
+					exists = state.b:building_urban_center
+				}
 			}
 			add = state.b:building_urban_center.level
 			subtract = 5
@@ -1520,7 +1669,6 @@ docks = {
 							scope:region = {
 								OR = {
 									region = sr:region_south_toftir
-									region = sr:region_exiles_burden
 									region = sr:region_razorwind
 									region = sr:region_rimeroot_jungle
 									region = sr:region_thawed_lands
@@ -1572,23 +1720,70 @@ docks = {
 }
 
 undermountain = {  #Exether
+
 	label = label_elevated
 	label = label_hazardous
 	label = label_travel_harsh_environment
-	weight = 0
+	weight = 3
 	textures = {
 		{
 			weight = {
-				value = 1
+				value = 0
+				if = {
+					limit = {
+						scope:region = {
+							OR = {
+								region = sr:region_west_everfrost
+								region = sr:region_coldreach
+							}
+						
+						}
+					}
+					add = 2
+				}
 			}
-			path = "gfx/state_pictures/arctic_mountain.dds"
+			path = "gfx/state_pictures/undermountain_arctic.dds"
+			effect = "vfx_entity_ui_state_arctic"
+		}
+		{
+			weight = {
+				value = 0
+				if = {
+					limit = {
+						scope:region = {
+							NOR = {
+								region = sr:region_west_everfrost
+								region = sr:region_coldreach
+								region = sr:region_razorwind
+							}
+						
+						}
+					}
+					add = 2
+				}
+			}
+			path = "gfx/state_pictures/undermountain_1.dds"
 			effect = "vfx_entity_ui_state_arctic"
 		}
 	}
+	
 	combat_width = 0.3
-	risk = 0.5
+	risk = 0.6
 	materials = { 
-		#Woodlands_03 = 1
+		Cliff_Sandstone_blank = 6000 #I'm not sure I'm using this feature correctly
+		Cliff_Granite_blank = 6000
+		Mountains_NonDirectional_01 = 5
+		Cliff_Granite_02 = 0.5
+		Cliff_Granite_03 = 0.5
+		Cliff_Granite_05 = 0.5
+		Cliff_Granite_06 = 0.5
+		Cliff_Granite_07 = 0.5
+		Cliff_Limestone_02 = 0.5
+		Cliff_Sandstone_01 = 0.5
+		Cliff_Sandstone_03 = 0.5
+		Cliff_Sandstone_04 = 0.5
+		Cliff_Sandstone_05 = 0.5
+
 	}
 	debug_color = hsv { 0.55 0.75 1 }
 	
@@ -1599,7 +1794,25 @@ undermountain = {  #Exether
 undermountain_urban = {  #Exether
 	label = label_elevated
 	label = label_hazardous
-	weight = 0
+	weight = {
+		value = 0
+		if = {
+			limit = {
+				AND = {
+					scope:state = {
+						undermountain_state = yes
+					}
+					exists = state.b:building_urban_center
+				}
+				
+			}
+			add = state.b:building_urban_center.level
+			subtract = 5
+			min = 0.1
+			multiply = state.num_provinces
+			divide = 4
+		}
+	}
 	textures = {
 		{
 			weight = {
@@ -1608,14 +1821,155 @@ undermountain_urban = {  #Exether
 			path = "gfx/state_pictures/arctic_mountain.dds"
 			effect = "vfx_entity_ui_state_arctic"
 		}
+		{
+			weight = {
+				value = 0
+				if = {
+					limit = {
+						scope:region = {
+							OR = {
+								region = sr:region_thoughtsmith_ridge
+								region = sr:region_mindrend_sands
+							}
+						
+						}
+					}
+					add = 3
+				}
+			}
+			path = "gfx/state_pictures/undermountain_1.dds"
+			effect = "vfx_entity_ui_state_arctic"
+		}
 	}
-	combat_width = 0.3
+	combat_width = 0.5
 	risk = 0.5
 	materials = { 
-		#Woodlands_03 = 1
+		Cliff_Sandstone_blank = 6000
+		Mountains_NonDirectional_01 = 5
+		Cliff_Granite_02 = 2.5
+		Cliff_Granite_03 = 2.5
+		Cliff_Granite_05 = 2.5
+		Cliff_Granite_06 = 2.5
+		Cliff_Granite_07 = 2.5
+		Cliff_Limestone_02 = 2.5
+		Cliff_Sandstone_01 = 2.5
+		Cliff_Sandstone_03 = 2.5
+		Cliff_Sandstone_04 = 2.5
+		Cliff_Sandstone_05 = 2.5
 	}
 	debug_color = hsv { 0.55 0.75 1 }
 	
 	pollution_mask_strength = 1.0
 	devastation_mask_strength = 1.0
 }
+
+diseased_forest = {
+	label = label_forested
+	label = label_hazardous
+	label = label_travel_harsh_environment
+	weight = 2.5 ##TODO give forests heart more diseased forest and lower this weight
+	
+	textures = {
+		{
+			weight = {
+				value = 0
+				if = {
+					limit = {
+						scope:region = {
+							region = sr:region_plaguewood
+						}
+					}
+					add = 3
+				}
+			}
+			path = "gfx/state_pictures/plaguewood.dds"
+			effect = "vfx_entity_ui_state_desert_northamerica"
+		}
+		{
+			weight = {
+				value = 0
+				if = {
+					limit = {
+						scope:state = {
+							OR = {
+								state_region = s:STATE_WICKENWOOD
+								state_region = s:STATE_SANDWOOD
+								state_region = s:STATE_PLAGUEBRUSH
+							}
+							
+						}
+					}
+					add = 5
+				}
+			}
+			path = "gfx/state_pictures/plaguewood2.dds"
+			effect = "vfx_entity_ui_state_desert_northamerica"
+		}
+	}
+	combat_width = 0.45
+	risk = 0.7
+	materials = { 
+		disease_colored = 2600
+	}
+	debug_color = hsv { 0.45 1 1 }
+	
+	pollution_mask_strength = 1.0
+	devastation_mask_strength = 1.0
+}	
+
+dreamweaver_jungle = {
+	label = label_forested
+	label = label_hazardous
+	label = label_psionic
+	label = label_travel_harsh_environment
+	weight = 2
+	
+	textures = {
+		{
+			weight = {
+				value = 0
+				if = {
+					limit = {
+						scope:region = {
+							OR = {
+								region = sr:region_anantadesh
+								region = sr:region_dreamweaver_jungle
+							}
+						
+						}
+					}
+					add = 3
+				}
+			}
+			path = "gfx/state_pictures/dreamweaver_jungle.dds"
+			effect = "vfx_entity_ui_state_jungle"
+		}
+		{
+			weight = {
+				value = 0
+				if = {
+					limit = {
+						scope:region = {
+							OR = {
+								region = sr:region_sarpakshetra
+							}
+						
+						}
+					}
+					add = 3
+				}
+			}
+			path = "gfx/state_pictures/dreamweaver_jungle_2.dds"
+			effect = "vfx_entity_ui_state_jungle"
+		}
+	}
+	combat_width = 0.5
+	risk = 0.6
+	materials = { 
+		Dreamweaver = 2500
+	}
+	debug_color = hsv { 0.45 1 1 }
+	
+	pollution_mask_strength = 1.0
+	devastation_mask_strength = 1.0
+}	

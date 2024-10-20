@@ -17,6 +17,52 @@
         }
     }
 
+    no_portrait_hair = {
+        dna_modifiers = {
+            accessory = {
+                mode = replace
+                gene = hairstyles
+                template = no_hairstyles
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }   
+        weight = {
+            base = 0
+         
+            modifier = {
+                add = 90000
+                no_portrait_trigger = yes
+          }
+         
+        }
+    }
+
+    soranda_hair_styles = {
+        dna_modifiers = {
+            accessory = {
+                mode = replace
+                gene = hairstyles
+                template = arabic_hairstyles
+                range = { 0 0.1 } # For the randomness to work correctly
+           }
+         }
+    
+       weight = {
+           base = 0
+           modifier = {
+                add = 90000
+                AND = {
+                    exists = scope:character
+                        scope:character ?= {
+                             has_template = ARR_queen_soranda_template
+                        }
+                }
+                
+              
+          }
+       }
+    }
+
     #european_hair_styles = {
     #    dna_modifiers = {
     #        accessory = {
@@ -64,26 +110,26 @@
         }
     }
 
-#    chinese_hair_styles = {
-#        dna_modifiers = {
-#            accessory = {
-#                mode = add
-#                gene = hairstyles
-#                template = chinese_hairstyles
-#                range = { 0 1 } # For the randomness to work correctly
-#            }
-#        }
-#        weight = {
-#            base = 0
-#            modifier = {
-#                add = 100
-#                OR = {
-#                    chinese_court_clothes_trigger = yes
-#                    chinese_imperial_clothes_trigger = yes
-#                }
-#            }
-#        }
-#    }
+    chinese_hair_styles = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = chinese_hairstyles
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                OR = {
+                    chinese_court_clothes_trigger = yes
+                    chinese_imperial_clothes_trigger = yes
+                }
+            }
+        }
+    }
 
     japanese_hair_styles = {
         dna_modifiers = {

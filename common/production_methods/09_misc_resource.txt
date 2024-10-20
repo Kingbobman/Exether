@@ -144,9 +144,8 @@ pm_treebonkers = { #name wip, but hilarious
 
 		level_scaled = {
 			# employment
-			building_employment_laborers_add = -2100
-			building_employment_machinists_add = 200
-			building_employment_wizards_add = 200
+			building_employment_laborers_add = -2000
+			building_employment_artificers_add = 500
 		}
 	}
 }
@@ -252,6 +251,53 @@ default_building_rubber_plantation = {
 			building_employment_laborers_add = 4000
 			building_employment_farmers_add = 1000
 		}
+	}
+}
+
+pm_gizmo_waterwrangler_irrigation_building_rubber_plantation = { 
+	texture = "gfx/interface/icons/production_method_icons/automatic_irrigation.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 5 #magic
+		}
+	}
+		
+	unlocking_technologies = {
+		atmospheric_engine # this could come later
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_input_gizmos_add = 6
+			goods_output_rubber_add = 10
+		}
+
+	}
+}
+
+pm_gizmo_waterwrangler_2_rubber = { 
+	texture = "gfx/interface/icons/production_method_icons/automatic_irrigation.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_veil_integrity_contribution = 5 #magic
+		}
+	}
+		
+	unlocking_production_methods = {
+		automatic_irrigation_building_rubber_plantation
+	}
+
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_input_gizmos_add = 5
+			goods_input_engines_add = -5
+		}
+
 	}
 }
 
@@ -677,6 +723,39 @@ pm_tanker_cars = {
 
 		level_scaled = {
 			building_employment_laborers_add = -2000
+		}
+	}
+}
+
+
+pm_no_cactus_fruit = {
+	texture = "gfx/interface/icons/production_method_icons/no_orchards.dds"
+}
+
+pm_cactus_fruit = {
+	texture = "gfx/interface/icons/production_method_icons/orchards.dds"
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods										
+			goods_output_wood_add = -25  #20  500
+			goods_output_fruit_add = 17   #30  800
+		}
+	}
+}
+
+pm_increased_cactus_fruit = {
+	texture = "gfx/interface/icons/production_method_icons/orchards.dds"
+
+	unlocking_production_methods = {
+		pm_saw_mills
+		pm_electric_saw_mills
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_output_wood_add = -40  #20  800
+			goods_output_fruit_add = 27  #30  800
 		}
 	}
 }

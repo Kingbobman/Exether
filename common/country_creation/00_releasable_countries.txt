@@ -74,6 +74,92 @@ DRM = {
 	ai_will_do = { always = no }
 }
 
+FMJ = {
+	states = { 
+		STATE_CHEJATAN_DO
+		STATE_MDLEMNO_KETHIN
+	}
+	required_num_states = 1
+
+	ai_will_do = { always = no }
+}
+
+LPS = {
+	states = { 
+		STATE_JUALALA
+		STATE_MAJIWAZIRI
+		STATE_SWAHAKLONG
+	}
+	required_num_states = 1
+
+	ai_will_do = { always = no }
+}
+PRO = {
+	states = { 
+		STATE_PWANIQILIMA
+	}
+	required_num_states = 1
+
+	ai_will_do = { always = no }	
+}
+
+DRK = {
+	states = { 
+		STATE_CASTELL_DRYSGOLMARK
+	}
+	required_num_states = 1
+
+	ai_will_do = { always = no }
+}
+BCF = {
+	states = { 
+		STATE_BANCFAN
+	}
+	required_num_states = 1
+
+	ai_will_do = { c:RVC ?= this }
+}
+
+GDL = {
+	states = { 
+		STATE_INCHMARA
+		STATE_GLYNFFORDD
+	}
+	required_num_states = 1
+
+	ai_will_do = { c:RVC ?= this }
+}
+
+DOV = {
+	states = { 
+		STATE_ROSKIRK
+		STATE_THORNWALL
+		STATE_BALLYNE
+	}
+	required_num_states = 2
+
+	ai_will_do = { c:RVC ?= this }
+}
+
+FOX = {
+	states = { 
+		STATE_HARTHALGH
+		STATE_GWYNWEN
+		STATE_INCHMARA
+	}
+	required_num_states = 2
+
+	ai_will_do = { c:RVC ?= this }
+}
+HET = {
+	states = { 
+		STATE_GLASINBLAIR
+	}
+	required_num_states = 1
+
+	ai_will_do = { c:RVC ?= this }
+}
+
 GDS = {
 	states = { 
 		STATE_ORCBANE_PASS
@@ -123,4 +209,694 @@ DEW = {
 	
 	ai_will_do = { always = no }
 
+}
+
+ARR = {
+	use_culture_states = yes
+
+	required_num_states = 7
+	
+	ai_will_do = { always = no }
+
+}
+
+DUM = {
+	use_culture_states = yes
+
+	required_num_states = 9
+	
+	ai_will_do = { always = no }
+
+}
+
+KLA = {
+	states = { 
+		STATE_KULUWANDU
+		STATE_KURUBBA
+        STATE_KUL_KEDLI
+        STATE_LUBVUDOLPA
+        STATE_PANTAMOLPO
+		STATE_KUTHOPAHOP
+		STATE_LAZILKEP
+	}
+
+	required_num_states = 4
+	
+	ai_will_do = { #if the AI is recognized and is not gulf naga, they will release this territory as a vassal
+		AND = {
+			is_country_type = recognized
+			NOT = {
+				OR = {
+					country_has_primary_culture = cu:gulf_naga
+					country_has_primary_culture = cu:jungle_naga
+				}
+				
+			}
+	} 
+
+	} 
+
+}
+
+CER = {
+	use_culture_states = yes
+
+	required_num_states = 10
+	
+	ai_will_do = { always = no }
+
+}
+
+YRI = {
+	use_culture_states = yes
+
+	required_num_states = 1
+	
+	ai_will_do = { always = no }
+}
+
+SPA = {
+	states = {
+		STATE_SPRANKELMEER
+		STATE_KLOMPPLEIN
+		STATE_KRULHOVEN
+		STATE_PIEPERHAVEN
+		
+	}
+
+	required_num_states = 3
+	
+	ai_will_do = { always = no }
+}
+
+GAK = {
+	states = {
+		STATE_DRAAIKUST
+		STATE_RATELKUST
+		STATE_SMIDSHOEK
+		STATE_GNURKENRADE
+		STATE_TIKKERHAVEN
+		STATE_VONKPLEIN
+		STATE_MOLENWOUD
+		STATE_PIEPERDORP
+		STATE_KWETTERDIJK
+	}
+
+	required_num_states = 4
+	
+	ai_will_do = { always = no }
+}
+EME = {
+	use_culture_states = yes
+
+	required_num_states = 5
+	
+	ai_will_do = { always = no }
+
+}
+
+DAR = {
+	use_culture_states = yes
+
+	required_num_states = 1
+	
+	ai_will_do = { always = no }
+
+}
+
+DAR = {
+	use_culture_states = yes
+
+	required_num_states = 1
+	
+	ai_will_do = { always = no }
+
+}
+
+VHT = {
+	use_culture_states = yes
+
+	required_num_states = 1
+	
+	ai_will_do = { always = no }
+
+}
+
+VOZ = {
+	use_culture_states = yes
+
+	required_num_states = 6
+	
+	ai_will_do = { always = no }
+
+}
+
+DRO = {
+	use_culture_states = yes
+
+	required_num_states = 7
+	
+	ai_will_do = { always = no }
+
+}
+
+SAI = {
+	
+	states = {
+		STATE_CHANMA
+		STATE_DALKH
+		STATE_KAZKYL
+		STATE_SAINO
+	}
+
+	required_num_states = 2
+	
+	ai_will_do = { always = no }
+
+}
+
+SAP = {
+	
+	states = {
+		STATE_PANTAMOLPO
+		STATE_LAZILKEP
+		STATE_KUTHOPAHOP
+	}
+
+	required_num_states = 2
+	
+	ai_will_do = { always = no }
+
+}
+
+PUA = {
+	
+	states = {
+		STATE_ERKHE
+		STATE_DALAI
+		STATE_OROGOO
+		STATE_BOLDOO
+		STATE_GURVA
+		STATE_KHONGO
+	}
+
+	required_num_states = 3
+	
+	ai_will_do = { always = no }
+
+}
+
+TEM = {
+	
+	states = {
+		STATE_JARGALYO
+		STATE_KIYOMATSUE
+		STATE_FUJIMORIYAMA
+		STATE_NISHIGUCHI
+		STATE_MONGOROKKU
+		STATE_KAMISHINBA
+	}
+
+	required_num_states = 3
+	
+	ai_will_do = { always = no }
+
+}
+
+TEM = {
+	
+	states = {
+		STATE_KHULANJO
+		STATE_KURULANDU
+		STATE_JARGALTSAI
+		STATE_YAMAKHANJU
+		STATE_BUYANT
+		STATE_KYRZUR
+	}
+
+	required_num_states = 3
+	
+	ai_will_do = { always = no }
+
+}
+
+KOJ = {
+	
+	states = {
+		STATE_KHASUNEN
+		STATE_TSUKHANJUKU
+	}
+
+	required_num_states = 1
+	
+	ai_will_do = { always = no }
+
+}
+
+RUG = {
+	
+	states = {
+		STATE_HARUGAWASAI
+		STATE_KAMITAI
+	}
+
+	required_num_states = 1
+	
+	ai_will_do = { always = no }
+
+}
+
+QON = {
+	
+	states = {
+		STATE_KYRTHOR
+		STATE_KRAGKYL
+		STATE_GOLMOK
+		STATE_ERKBALB
+	}
+
+	required_num_states = 2
+	
+	ai_will_do = { always = no }
+
+}
+QQN = {
+	
+	states = {
+		STATE_ERKBALB
+	}
+
+	required_num_states = 1
+	
+	ai_will_do = { always = no }
+
+}
+
+KAY = {
+	
+	states = {
+		STATE_DHARMARAJYA
+	}
+
+	required_num_states = 1
+	
+	ai_will_do = { always = no }
+
+}
+
+GDY = {
+	
+	states = {
+		STATE_KUHWUNUKILI
+	}
+
+	required_num_states = 1
+	
+	ai_will_do = { always = no }
+
+}
+
+WLR = {
+	
+	states = {
+		STATE_CHINTANAGIRI
+	}
+
+	required_num_states = 1
+	
+	ai_will_do = { always = no }
+
+}
+
+VIP = {
+	
+	states = {
+		STATE_VISHUDDHIKARA
+		STATE_BUDAMURAYIRI
+	}
+
+	required_num_states = 1
+	
+	ai_will_do = { always = no }
+
+}
+
+AKB = {
+	
+	states = {
+		STATE_SHANTINAGAR
+		STATE_SADHANA_MANDAL
+		STATE_YARLUWANDU
+	}
+
+	required_num_states = 1
+	
+	ai_will_do = { always = no }
+
+}
+HIR = {
+	
+	states = {
+		STATE_GLARDIH
+		STATE_ERDENEA
+		STATE_HIRAMACHI
+		STATE_KITAYAMAO
+		STATE_HOKUDAIHAN
+		STATE_ORONAKA
+	}
+
+	required_num_states = 3
+	
+	ai_will_do = { always = no }
+
+}
+
+SUN = {
+	
+	states = {
+		STATE_KHAULAN
+		STATE_CHADBA
+		STATE_KHANGAWA
+		STATE_KHAIRI
+	}
+
+	required_num_states = 2
+	
+	ai_will_do = { always = no }
+
+}
+
+OGR = {
+	
+	states = {
+		STATE_KAZTHOK
+		STATE_KYRTHAL
+		STATE_GROMKYL
+		STATE_DRUKYN
+		STATE_ZURKYL
+	}
+
+	required_num_states = 2
+	
+	ai_will_do = { always = no }
+
+}
+
+ZHU = {
+	
+	states = {
+		STATE_DROKYN
+		STATE_KAZTHYR
+		STATE_URTHOR
+		STATE_KYRGRIM
+		
+	}
+
+	required_num_states = 2
+	
+	ai_will_do = { always = no }
+
+}
+
+OGT = {
+	
+	states = {
+		STATE_DRUKYN
+		STATE_ZURKYL
+	}
+
+	required_num_states = 1
+	
+	ai_will_do = { always = no }
+
+}
+
+GOL = {
+	
+	states = {
+		STATE_KIYOMORIN
+		STATE_KHULEKKA
+		STATE_BATOKYOAN
+	}
+
+	required_num_states = 1
+	
+	ai_will_do = { always = no }
+
+}
+
+NIS = {
+	
+	states = {
+		STATE_MUGARA
+		STATE_NISHIGARRA
+	}
+
+	required_num_states = 1
+	
+	ai_will_do = { always = no }
+
+}
+KCN = {
+	
+	states = {
+		STATE_SERGER
+		STATE_DORNO
+		STATE_TSENK
+		STATE_GALSHA
+		STATE_ONON
+		STATE_TOSON
+		STATE_BATSI
+		STATE_BAIDAL
+	}
+
+	required_num_states = 3
+	
+	ai_will_do = { always = no }
+
+}
+
+SHJ = {
+	
+	states = {
+		STATE_DORAZ
+		STATE_GNAKYR
+		STATE_KRAKYR
+		STATE_KYRGRUK
+		STATE_BAZKYL
+		STATE_BALDBAN
+		STATE_RAZOK
+		STATE_BURZOK
+		STATE_DALSHTOK
+	}
+
+	required_num_states = 4
+	
+	ai_will_do = { always = no }
+
+}
+
+SHZ = {
+	
+	states = {
+		STATE_RAZOK
+		STATE_BURZOK
+		STATE_DALSHTOK
+	}
+
+	required_num_states = 2
+	
+	ai_will_do = { always = no }
+
+}
+
+MVI = {
+	states = {
+		STATE_ZUCARA
+		STATE_GADIRIS
+		STATE_BYSSYRA
+	}
+	required_num_states = 1
+
+	ai_will_do = { AND = {
+		c:DIS ?= this
+		has_journal_entry = je_dragonblight 
+	} 
+}
+}
+
+IAL = {
+	states = {
+		STATE_RUSARYA
+	}
+	required_num_states = 1
+
+	ai_will_do = { 
+		AND = {
+			c:DIS ?= this
+			has_journal_entry = je_dragonblight 
+		} 
+	}
+}
+
+IMR = {
+	states = {
+		STATE_ZAMARA
+		STATE_LEPTORIA
+	}
+	required_num_states = 1
+
+	ai_will_do = { AND = {
+		c:DIS ?= this
+		has_journal_entry = je_dragonblight 
+	} 
+}
+}
+SVN = {
+	states = {
+		STATE_EBYSS
+		STATE_GADYRUS
+	}
+	required_num_states = 1
+
+	ai_will_do = { 
+		AND = {
+			c:DIS ?= this
+			has_journal_entry = je_dragonblight 
+		} 
+	}
+}
+
+TKR = {
+	states = {
+		STATE_BYRTHAS
+		STATE_HADRA
+	}
+	required_num_states = 1
+
+	ai_will_do = { 
+		AND = {
+			c:DIS ?= this
+			has_journal_entry = je_dragonblight 
+		} 
+	}
+}
+
+RKO = {
+	states = {
+		STATE_EBYSUS
+		STATE_KURTHARA
+	}
+	required_num_states = 1
+
+	ai_will_do = { 
+		AND = {
+			c:DIS ?= this
+			has_journal_entry = je_dragonblight 
+		} 
+	}
+}
+
+GUR = {
+	states = {
+		STATE_MYSARA
+		STATE_THYRIS
+		STATE_ZABARA
+	}
+	required_num_states = 1
+
+	ai_will_do = { 
+		AND = {
+			c:DIS ?= this
+			has_journal_entry = je_dragonblight 
+		} 
+	}
+}
+
+ORO = {
+	states = {
+		STATE_SILENTWISP
+		STATE_SAMIEL
+		STATE_RAHKIS
+		STATE_GUHKESLUOKTA
+		STATE_AIRU
+		STATE_ELVERA
+		STATE_AKNU
+
+	}
+	required_num_states = 3
+
+	ai_will_do = { 
+		AND = {
+			c:DIS ?= this
+			has_journal_entry = je_dragonblight 
+		} 
+	}
+}
+
+MGR = {
+	states = {
+		STATE_TROPOJA
+		STATE_HUTSULANE
+		STATE_NYZHNE_SENIA
+		STATE_BREZHKE
+		STATE_SHKUMBINIA
+	}
+	required_num_states = 2
+
+	ai_will_do = { 
+		AND = {
+			c:DIS ?= this
+			has_journal_entry = je_dragonblight 
+		} 
+	}
+}
+
+KVA = {
+	states = {
+		STATE_CYRRA
+		STATE_OYSSARA
+		STATE_LEPTARIA
+	}
+	required_num_states = 1
+
+	ai_will_do = { 
+		AND = {
+			c:DIS ?= this
+			has_journal_entry = je_dragonblight 
+		} 
+	}
+}
+
+KHE = {
+	states = {
+		STATE_OSTATU
+		STATE_TXINPART
+		STATE_TIHAR
+	}
+	required_num_states = 1
+
+	ai_will_do = { 
+		AND = {
+			c:DIS ?= this
+			has_journal_entry = je_dragonblight 
+		} 
+	}
+}
+
+QAR = {
+	states = {
+		STATE_WHIRINAKI
+		STATE_RAROMARA
+		STATE_PATARENI
+		STATE_PUCOVATU
+	}
+	required_num_states = 2
+
+	ai_will_do = { 
+		AND = {
+			c:DIS ?= this
+			has_journal_entry = je_dragonblight 
+		} 
+	}
 }

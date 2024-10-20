@@ -1,7 +1,12 @@
 ﻿state_adventurer_coverage_value = {
-	value = 50 #Base Value
 	add = modifier:state_adventurer_coverage_add
+	multiply = state_adventurer_coverage_bonus
 	min = 0
+}
+
+state_adventurer_coverage_bonus = {
+	add = 1
+	add = modifier:state_adventurer_coverage_mult 
 }
 
 state_adventurer_coverage_demand_urban_center_reduction = {
@@ -19,11 +24,13 @@ state_adventurer_coverage_demand_urban_center_reduction = {
 state_adventurer_coverage_demand_arable_land = {
 	value = 0
 	add = this.free_arable_land
+	max = 100
 }
 
 state_adventurer_coverage_demand_pollution = {
 	value = 0
 	add = pollution_generation
+	divide = arable_land
 }
 
 state_adventurer_coverage_demand = {
@@ -39,4 +46,12 @@ state_adventurer_coverage_balance = {
 	value = 0
 	add = state_adventurer_coverage_value
 	subtract = state_adventurer_coverage_demand
+}
+
+state_adventurer_coverage_multiplier = {
+	value = 0
+	add = state_adventurer_coverage_demand
+	divide = state_adventurer_coverage_value
+	subtract = 1
+	max = 2
 }

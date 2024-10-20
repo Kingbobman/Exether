@@ -4,9 +4,11 @@
 }
 
 get_net_income_sq = {
-	value = net_income
+	value = get_net_income
+	divide = 1000
+	save_temporary_value_as = small_net_income
 	min = 0
-	multiply = net_income
+	multiply = scope:small_net_income
 }
 
 get_investment_income = {
@@ -14,12 +16,102 @@ get_investment_income = {
 }
 
 get_investment_income_sq = {
-	value = investment_pool_income
+	value = get_investment_income
+	divide = 1000
+	save_temporary_value_as = small_investmnet_income
 	min = 0
-	multiply = investment_pool_income
+	multiply = scope:small_investmnet_income
 }
 
+get_wanted_construction = {
+	value = 10
 
+		# Add a baseline if trying to industrialize
+		if = {
+			limit = {
+				OR = {
+					has_strategy = ai_strategy_resource_expansion
+					has_strategy = ai_strategy_industrial_expansion
+				}
+			}
+
+			if = {
+				limit = { country_rank >= rank_value:great_power }
+				add = 50
+			}		
+			else_if = {
+				limit = { 
+					OR = {
+						country_rank >= rank_value:major_power
+						country_rank >= rank_value:unrecognized_major_power
+					}
+				}
+				add = 25
+			}	
+			else = {
+				add = 10
+			}				
+		}	
+
+		add = {
+			value = get_net_income
+			divide = 400		
+		}
+		
+		add = {
+			value = get_investment_income
+			divide = 1000
+		}
+
+		add = {
+			value = get_net_income_sq
+			divide = 45
+		}
+
+		add = {
+			value = get_investment_income_sq
+			divide = 300
+		}
+
+		if = {
+			limit = { has_law = law_type:law_traditionalism }
+			multiply = 0.75
+		}		
+
+		if = {
+			limit = { has_strategy = ai_strategy_placate_population }
+			multiply = 0.5
+		}
+		else_if = {
+			limit = {
+				NOR = {
+					has_strategy = ai_strategy_resource_expansion
+					has_strategy = ai_strategy_industrial_expansion				
+				}
+			}
+			multiply = 0.75
+		}
+		
+		if = {
+			limit = { has_strategy = ai_strategy_maintain_mandate_of_heaven }
+			multiply = 0.1		
+		}	
+		
+		min = { 
+			value = income
+			if = {
+				limit = {
+					is_country_type = unrecognized
+				}
+				divide = 4000
+			}
+			else = {
+				divide = 2000
+			}
+			
+		}
+		max = 2500
+}
 
 base_impose_law_weight= {
 	value = 0.01

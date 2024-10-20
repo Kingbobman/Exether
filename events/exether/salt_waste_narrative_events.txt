@@ -1,0 +1,1653 @@
+﻿namespace = salt_waste_narrative_events
+
+salt_waste_narrative_events.1 = {
+	dlc = dlc_roe
+	type = country_event
+
+	title = salt_waste_narrative_events.1.t
+	desc = salt_waste_narrative_events.1.d
+	flavor = salt_waste_narrative_events.1.f
+
+	event_image = {
+		texture = "gfx/event_images/salt_wastes_tea.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = salt_waste_narrative_events.1.a
+		add_modifier = {
+			name = salt_waste_half_orcs_birth
+			months = very_long_modifier_time
+		}
+	}
+}
+
+salt_waste_narrative_events.2 = {
+	dlc = dlc_roe
+	type = country_event
+
+	title = salt_waste_narrative_events.2.t
+	desc = salt_waste_narrative_events.2.d
+	flavor = salt_waste_narrative_events.2.f
+
+	event_image = {
+		texture = "gfx/event_images/salt_wastes_flats.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	trigger = {
+		accept_the_salt_waste_natives = no
+	}
+
+	immediate = {
+		remove_modifier = salt_waste_half_orcs_birth
+	}
+
+	option = {
+		name = salt_waste_narrative_events.2.a
+	}
+}
+
+salt_waste_narrative_events.3 = {
+	dlc = dlc_roe
+	type = country_event
+
+	title = salt_waste_narrative_events.3.t
+	desc = salt_waste_narrative_events.3.d
+	flavor = salt_waste_narrative_events.3.f
+
+	event_image = {
+		texture = "gfx/event_images/salt_wastes_barrens.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	trigger = {
+		any_scope_state = {
+			has_state_trait = state_trait_salt_wastes
+		}
+		OR = {
+			NOT = { has_modifier = salt_waste_rangers }
+			AND = {
+				has_modifier = salt_waste_rangers
+				NOT = { has_variable = brine_state_handled }
+			}
+		}
+	}
+
+	immediate = {
+		set_variable = salt_waste_rangers_consequences_happening
+		random_scope_state = {
+			limit = { has_state_trait = state_trait_salt_wastes }
+			save_scope_as = brine_state
+		}
+	}
+
+	option = {
+		name = salt_waste_narrative_events.3.a
+		trigger = {
+			NOT = { has_modifier = salt_waste_rangers }
+		}
+		remove_variable = salt_waste_rangers_consequences_happening
+		scope:brine_state = {
+			kill_population_percent_in_state = {
+				percent = 0.02
+			}
+			add_radicals_in_state = {
+				value = 0.02
+			}
+			add_modifier = {
+				name = modifier_state_salt_waste_brine
+				years = 2
+			}
+		}
+		custom_tooltip = {
+			text = salt_waste_state_rangers_would_have_helped
+			# Purposeful NoOp
+		}
+	}
+	
+	option = {
+		name = salt_waste_narrative_events.3.b
+		default_option = yes
+		trigger = {
+			has_modifier = salt_waste_rangers
+		}
+		remove_variable = salt_waste_rangers_consequences_happening
+		set_variable = brine_state_handled
+	}
+}
+
+salt_waste_narrative_events.4 = {
+	dlc = dlc_roe
+	type = country_event
+
+	title = salt_waste_narrative_events.4.t
+	desc = salt_waste_narrative_events.4.d
+	flavor = salt_waste_narrative_events.4.f
+
+	event_image = {
+		texture = "gfx/event_images/salt_wastes_barrens.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	trigger = {
+		any_scope_state = {
+			has_state_trait = state_trait_salt_wastes
+		}
+		OR = {
+			NOT = { has_modifier = salt_waste_wards }
+			AND = {
+				has_modifier = salt_waste_wards
+				NOT = { has_variable = possession_character_handled }
+			}
+		}
+	}
+
+	immediate = {
+		set_variable = salt_waste_wards_consequences_happening
+		random_scope_state = {
+			limit = { has_state_trait = state_trait_salt_wastes }
+			save_scope_as = possession_state
+		}
+		random_scope_character = {
+			limit = { has_role = politician }
+			save_scope_as = possession_character
+		}
+	}
+
+	option = {
+		name = salt_waste_narrative_events.4.a
+		trigger = {
+			NOT = { has_modifier = salt_waste_wards }
+		}
+		remove_variable = salt_waste_wards_consequences_happening
+		scope:possession_state = {
+			kill_population_percent_in_state = {
+				percent = 0.02
+			}
+			add_radicals_in_state = {
+				value = 0.02
+			}
+		}
+		scope:possession_character = {
+			change_character_religion = rel:lords_of_avarice
+			set_ideology = ideology:ideology_slaver
+		}
+		custom_tooltip = {
+			text = salt_waste_state_wards_would_have_helped
+			# Purposeful NoOp
+		}
+	}
+	
+	option = {
+		name = salt_waste_narrative_events.4.b
+		default_option = yes
+		trigger = {
+			has_modifier = salt_waste_wards
+		}
+		remove_variable = salt_waste_wards_consequences_happening
+		set_variable = possession_character_handled
+	}
+}
+
+salt_waste_narrative_events.5 = {
+	dlc = dlc_roe
+	type = country_event
+
+	title = salt_waste_narrative_events.5.t
+	desc = salt_waste_narrative_events.5.d
+	flavor = salt_waste_narrative_events.5.f
+
+	event_image = {
+		texture = "gfx/event_images/salt_wastes_flats.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	trigger = {
+		any_scope_state = {
+			has_state_trait = state_trait_salt_wastes
+		}
+		OR = {
+			NOT = { has_modifier = salt_waste_patrols }
+			AND = {
+				has_modifier = salt_waste_patrols
+				NOT = { has_variable = rural_attack_state_handled }
+			}
+		}
+	}
+
+	immediate = {
+		set_variable = salt_waste_patrols_consequences_happening
+		random_scope_state = {
+			limit = { has_state_trait = state_trait_salt_wastes }
+			save_scope_as = rural_attack_state
+		}
+	}
+
+	option = {
+		name = salt_waste_narrative_events.5.a
+		trigger = {
+			NOT = { has_modifier = salt_waste_patrols }
+		}
+		remove_variable = salt_waste_patrols_consequences_happening
+		scope:rural_attack_state = {
+			kill_population_percent_in_state = {
+				percent = 0.02
+			}
+			add_radicals_in_state = {
+				value = 0.02
+			}
+			add_modifier = {
+				name = modifier_state_salt_waste_rural_resource_bad
+				years = 2
+			}
+		}
+		custom_tooltip = {
+			text = salt_waste_state_patrols_would_have_helped
+			# Purposeful NoOp
+		}
+	}
+	
+	option = {
+		name = salt_waste_narrative_events.5.b
+		default_option = yes
+		trigger = {
+			has_modifier = salt_waste_patrols
+		}
+		remove_variable = salt_waste_patrols_consequences_happening
+		set_variable = rural_attack_state_handled
+	}
+}
+
+salt_waste_narrative_events.6 = {
+	dlc = dlc_roe
+	type = country_event
+
+	title = salt_waste_narrative_events.6.t
+	desc = salt_waste_narrative_events.6.d
+	flavor = salt_waste_narrative_events.6.f
+
+	event_image = {
+		texture = "gfx/event_images/salt_wastes_flats.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	trigger = {
+		any_scope_state = {
+			has_state_trait = state_trait_salt_wastes
+		}
+		OR = {
+			NOT = { has_modifier = salt_waste_rangers }
+			AND = {
+				has_modifier = salt_waste_rangers
+				NOT = { has_variable = nightmare_state_handled }
+			}
+		}
+	}
+
+	immediate = {
+		set_variable = salt_waste_rangers_consequences_happening
+		random_scope_state = {
+			limit = { has_state_trait = state_trait_salt_wastes }
+			save_scope_as = nightmare_state
+		}
+	}
+
+	option = {
+		name = salt_waste_narrative_events.6.a
+		trigger = {
+			NOT = { has_modifier = salt_waste_rangers }
+		}
+		remove_variable = salt_waste_rangers_consequences_happening
+		scope:nightmare_state = {
+			kill_population_percent_in_state = {
+				percent = 0.02
+			}
+			add_radicals_in_state = {
+				value = 0.02
+			}
+			add_modifier = {
+				name = modifier_state_salt_waste_nightmares
+				years = 2
+			}
+		}
+		custom_tooltip = {
+			text = salt_waste_state_rangers_would_have_helped
+			# Purposeful NoOp
+		}
+	}
+	
+	option = {
+		name = salt_waste_narrative_events.6.b
+		default_option = yes
+		trigger = {
+			has_modifier = salt_waste_rangers
+		}
+		remove_variable = salt_waste_rangers_consequences_happening
+		set_variable = nightmare_state_handled
+	}
+}
+
+salt_waste_narrative_events.7 = {
+	dlc = dlc_roe
+	type = country_event
+
+	title = salt_waste_narrative_events.7.t
+	desc = salt_waste_narrative_events.7.d
+	flavor = salt_waste_narrative_events.7.f
+
+	event_image = {
+		texture = "gfx/event_images/salt_wastes_rough.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	trigger = {
+		any_scope_state = {
+			has_state_trait = state_trait_salt_wastes
+		}
+		OR = {
+			NOT = { has_modifier = salt_waste_wards }
+			AND = {
+				has_modifier = salt_waste_wards
+				NOT = { has_variable = mass_possession_state_handled }
+			}
+		}
+	}
+
+	immediate = {
+		set_variable = salt_waste_wards_consequences_happening
+		random_scope_state = {
+			limit = { has_state_trait = state_trait_salt_wastes }
+			save_scope_as = mass_possession_state
+		}
+	}
+
+	option = {
+		name = salt_waste_narrative_events.7.a
+		trigger = {
+			NOT = { has_modifier = salt_waste_wards }
+		}
+		remove_variable = salt_waste_wards_consequences_happening
+		scope:mass_possession_state = {
+			kill_population_percent_in_state = {
+				percent = 0.02
+			}
+			add_radicals_in_state = {
+				value = 0.05
+			}
+		}
+		custom_tooltip = {
+			text = salt_waste_state_wards_would_have_helped
+			# Purposeful NoOp
+		}
+	}
+	
+	option = {
+		name = salt_waste_narrative_events.7.b
+		default_option = yes
+		trigger = {
+			has_modifier = salt_waste_wards
+		}
+		remove_variable = salt_waste_wards_consequences_happening
+		set_variable = mass_possession_state_handled
+	}
+}
+
+salt_waste_narrative_events.8 = {
+	dlc = dlc_roe
+	type = country_event
+
+	title = salt_waste_narrative_events.8.t
+	desc = salt_waste_narrative_events.8.d
+	flavor = salt_waste_narrative_events.8.f
+
+	event_image = {
+		texture = "gfx/event_images/salt_wastes_rough.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	trigger = {
+		any_scope_state = {
+			has_state_trait = state_trait_salt_wastes
+		}
+		OR = {
+			NOT = { has_modifier = salt_waste_patrols }
+			AND = {
+				has_modifier = salt_waste_patrols
+				NOT = { has_variable = urban_attack_state_handled }
+			}
+		}
+	}
+
+	immediate = {
+		set_variable = salt_waste_patrols_consequences_happening
+		random_scope_state = {
+			limit = { has_state_trait = state_trait_salt_wastes }
+			save_scope_as = urban_attack_state
+		}
+	}
+
+	option = {
+		name = salt_waste_narrative_events.8.a
+		trigger = {
+			NOT = { has_modifier = salt_waste_patrols }
+		}
+		remove_variable = salt_waste_patrols_consequences_happening
+		scope:urban_attack_state = {
+			kill_population_percent_in_state = {
+				percent = 0.02
+			}
+			add_radicals_in_state = {
+				value = 0.02
+			}
+			add_modifier = {
+				name = modifier_state_salt_waste_industrial_bad
+				years = 2
+			}
+		}
+		custom_tooltip = {
+			text = salt_waste_state_patrols_would_have_helped
+			# Purposeful NoOp
+		}
+	}
+	
+	option = {
+		name = salt_waste_narrative_events.8.b
+		default_option = yes
+		trigger = {
+			has_modifier = salt_waste_patrols
+		}
+		remove_variable = salt_waste_patrols_consequences_happening
+		set_variable = urban_attack_state_handled
+	}
+}
+
+salt_waste_narrative_events.9 = {
+	dlc = dlc_roe
+	type = country_event
+
+	title = salt_waste_narrative_events.9.t
+	desc = salt_waste_narrative_events.9.d
+	flavor = salt_waste_narrative_events.9.f
+
+	event_image = {
+		texture = "gfx/event_images/fiends_landscape.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	trigger = {
+		any_scope_state = {
+			has_state_trait = state_trait_salt_wastes
+		}
+		OR = {
+			NOT = { has_modifier = salt_waste_rangers }
+			NOT = { has_modifier = salt_waste_wards }
+			NOT = { has_modifier = salt_waste_patrols }
+			AND = {
+				has_modifier = salt_waste_rangers
+				has_modifier = salt_waste_wards
+				has_modifier = salt_waste_patrols
+				NOT = { has_variable = fiend_assault_state_handled }
+			}
+		}
+	}
+
+	immediate = {
+		set_variable = salt_waste_rangers_consequences_happening
+		set_variable = salt_waste_wards_consequences_happening
+		set_variable = salt_waste_patrols_consequences_happening
+		random_scope_state = {
+			limit = { has_state_trait = state_trait_salt_wastes }
+			save_scope_as = fiend_assault_state
+		}
+	}
+
+	option = {
+		name = salt_waste_narrative_events.9.a
+		trigger = {
+			OR = {
+				NOT = { has_modifier = salt_waste_patrols }
+				AND = {
+					NOT = { has_modifier = salt_waste_rangers }
+					NOT = { has_modifier = salt_waste_wards }
+				}
+			}
+		}
+		remove_variable = salt_waste_rangers_consequences_happening
+		remove_variable = salt_waste_wards_consequences_happening
+		remove_variable = salt_waste_patrols_consequences_happening
+		scope:fiend_assault_state = {
+			kill_population_percent_in_state = {
+				percent = 0.05
+			}
+			add_radicals_in_state = {
+				value = 0.05
+			}
+			add_modifier = {
+				name = modifier_state_salt_rampaging_fiends
+				years = 5
+			}
+		}
+		custom_tooltip = {
+			text = salt_waste_state_patrols_at_least_would_have_helped
+			# Purposeful NoOp
+		}
+	}
+	
+	option = {
+		name = salt_waste_narrative_events.9.ba
+		trigger = {
+			NOT = { has_modifier = salt_waste_rangers }
+			has_modifier = salt_waste_wards
+			has_modifier = salt_waste_patrols
+		}
+		remove_variable = salt_waste_rangers_consequences_happening
+		remove_variable = salt_waste_wards_consequences_happening
+		remove_variable = salt_waste_patrols_consequences_happening
+		scope:fiend_assault_state = {
+			kill_population_percent_in_state = {
+				percent = 0.02
+			}
+			add_radicals_in_state = {
+				value = 0.02
+			}
+		}
+		custom_tooltip = {
+			text = salt_waste_state_rangers_would_have_helped
+			# Purposeful NoOp
+		}
+	}
+	
+	option = {
+		name = salt_waste_narrative_events.9.bb
+		trigger = {
+			has_modifier = salt_waste_rangers
+			NOT = { has_modifier = salt_waste_wards }
+			has_modifier = salt_waste_patrols
+		}
+		remove_variable = salt_waste_rangers_consequences_happening
+		remove_variable = salt_waste_wards_consequences_happening
+		remove_variable = salt_waste_patrols_consequences_happening
+		scope:fiend_assault_state = {
+			kill_population_percent_in_state = {
+				percent = 0.02
+			}
+			add_radicals_in_state = {
+				value = 0.02
+			}
+		}
+		custom_tooltip = {
+			text = salt_waste_state_wards_would_have_helped
+			# Purposeful NoOp
+		}
+	}
+	
+	option = {
+		name = salt_waste_narrative_events.9.c
+		default_option = yes
+		trigger = {
+			has_modifier = salt_waste_rangers
+			has_modifier = salt_waste_wards
+			has_modifier = salt_waste_patrols
+		}
+		remove_variable = salt_waste_rangers_consequences_happening
+		remove_variable = salt_waste_wards_consequences_happening
+		remove_variable = salt_waste_patrols_consequences_happening
+		set_variable = fiend_assault_state_handled
+	}
+}
+
+salt_waste_narrative_events.10 = {
+	dlc = dlc_roe
+	type = country_event
+
+	title = salt_waste_narrative_events.10.t
+	desc = salt_waste_narrative_events.10.d
+	flavor = salt_waste_narrative_events.10.f
+
+	event_image = {
+		texture = "gfx/event_images/fiends_landscape.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	trigger = {
+		any_scope_state = {
+			has_state_trait = state_trait_salt_wastes
+		}
+		OR = {
+			NOT = { has_modifier = salt_waste_rangers }
+			NOT = { has_modifier = salt_waste_wards }
+			NOT = { has_modifier = salt_waste_patrols }
+			AND = {
+				has_modifier = salt_waste_rangers
+				has_modifier = salt_waste_wards
+				has_modifier = salt_waste_patrols
+				NOT = { has_variable = fiend_curse_state_handled }
+			}
+		}
+	}
+
+	immediate = {
+		set_variable = salt_waste_rangers_consequences_happening
+		set_variable = salt_waste_wards_consequences_happening
+		set_variable = salt_waste_patrols_consequences_happening
+		random_scope_state = {
+			limit = { has_state_trait = state_trait_salt_wastes }
+			save_scope_as = fiend_curse_state
+		}
+	}
+
+	option = {
+		name = salt_waste_narrative_events.10.a
+		trigger = {
+			OR = {
+				NOT = { has_modifier = salt_waste_wards }
+				AND = {
+					NOT = { has_modifier = salt_waste_rangers }
+					NOT = { has_modifier = salt_waste_patrols }
+				}
+			}
+		}
+		remove_variable = salt_waste_rangers_consequences_happening
+		remove_variable = salt_waste_wards_consequences_happening
+		remove_variable = salt_waste_patrols_consequences_happening
+		scope:fiend_curse_state = {
+			kill_population_percent_in_state = {
+				percent = 0.05
+			}
+			add_radicals_in_state = {
+				value = 0.05
+			}
+			add_modifier = {
+				name = modifier_state_salt_curse
+				years = 5
+			}
+		}
+		custom_tooltip = {
+			text = salt_waste_state_wards_at_least_would_have_helped
+			# Purposeful NoOp
+		}
+	}
+	
+	option = {
+		name = salt_waste_narrative_events.10.ba
+		trigger = {
+			has_modifier = salt_waste_rangers
+			has_modifier = salt_waste_wards
+			NOT = { has_modifier = salt_waste_patrols }
+		}
+		remove_variable = salt_waste_rangers_consequences_happening
+		remove_variable = salt_waste_wards_consequences_happening
+		remove_variable = salt_waste_patrols_consequences_happening
+		scope:fiend_curse_state = {
+			kill_population_percent_in_state = {
+				percent = 0.02
+			}
+			add_radicals_in_state = {
+				value = 0.02
+			}
+		}
+		custom_tooltip = {
+			text = salt_waste_state_patrols_would_have_helped
+			# Purposeful NoOp
+		}
+	}
+	
+	option = {
+		name = salt_waste_narrative_events.10.bb
+		trigger = {
+			NOT = { has_modifier = salt_waste_rangers }
+			has_modifier = salt_waste_wards
+			has_modifier = salt_waste_patrols
+		}
+		remove_variable = salt_waste_rangers_consequences_happening
+		remove_variable = salt_waste_wards_consequences_happening
+		remove_variable = salt_waste_patrols_consequences_happening
+		scope:fiend_curse_state = {
+			kill_population_percent_in_state = {
+				percent = 0.02
+			}
+			add_radicals_in_state = {
+				value = 0.02
+			}
+		}
+		custom_tooltip = {
+			text = salt_waste_state_rangers_would_have_helped
+			# Purposeful NoOp
+		}
+	}
+	
+	option = {
+		name = salt_waste_narrative_events.10.c
+		default_option = yes
+		trigger = {
+			has_modifier = salt_waste_rangers
+			has_modifier = salt_waste_wards
+			has_modifier = salt_waste_patrols
+		}
+		remove_variable = salt_waste_rangers_consequences_happening
+		remove_variable = salt_waste_wards_consequences_happening
+		remove_variable = salt_waste_patrols_consequences_happening
+		set_variable = fiend_curse_state_handled
+	}
+}
+
+salt_waste_narrative_events.11 = {
+	dlc = dlc_roe
+	type = country_event
+
+	title = salt_waste_narrative_events.11.t
+	desc = salt_waste_narrative_events.11.d
+	flavor = salt_waste_narrative_events.11.f
+
+	event_image = {
+		texture = "gfx/event_images/fiends_landscape.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	trigger = {
+		any_scope_state = {
+			has_state_trait = state_trait_salt_wastes
+		}
+		OR = {
+			NOT = { has_modifier = salt_waste_rangers }
+			NOT = { has_modifier = salt_waste_wards }
+			NOT = { has_modifier = salt_waste_patrols }
+			AND = {
+				has_modifier = salt_waste_rangers
+				has_modifier = salt_waste_wards
+				has_modifier = salt_waste_patrols
+				NOT = { has_variable = salt_storm_state_handled }
+			}
+		}
+	}
+
+	immediate = {
+		set_variable = salt_waste_rangers_consequences_happening
+		set_variable = salt_waste_wards_consequences_happening
+		set_variable = salt_waste_patrols_consequences_happening
+		random_scope_state = {
+			limit = { has_state_trait = state_trait_salt_wastes }
+			save_scope_as = salt_storm_state
+		}
+	}
+
+	option = {
+		name = salt_waste_narrative_events.11.a
+		trigger = {
+			OR = {
+				NOT = { has_modifier = salt_waste_rangers }
+				AND = {
+					NOT = { has_modifier = salt_waste_wards }
+					NOT = { has_modifier = salt_waste_patrols }
+				}
+			}
+		}
+		remove_variable = salt_waste_rangers_consequences_happening
+		remove_variable = salt_waste_wards_consequences_happening
+		remove_variable = salt_waste_patrols_consequences_happening
+		scope:salt_storm_state = {
+			kill_population_percent_in_state = {
+				percent = 0.05
+			}
+			add_radicals_in_state = {
+				value = 0.05
+			}
+			add_modifier = {
+				name = modifier_state_salt_raging_storms
+				years = 5
+			}
+		}
+		custom_tooltip = {
+			text = salt_waste_state_rangers_at_least_would_have_helped
+			# Purposeful NoOp
+		}
+	}
+	
+	option = {
+		name = salt_waste_narrative_events.11.ba
+		trigger = {
+			has_modifier = salt_waste_rangers
+			NOT = { has_modifier = salt_waste_wards }
+			has_modifier = salt_waste_patrols
+		}
+		remove_variable = salt_waste_rangers_consequences_happening
+		remove_variable = salt_waste_wards_consequences_happening
+		remove_variable = salt_waste_patrols_consequences_happening
+		scope:salt_storm_state = {
+			kill_population_percent_in_state = {
+				percent = 0.02
+			}
+			add_radicals_in_state = {
+				value = 0.02
+			}
+		}
+		custom_tooltip = {
+			text = salt_waste_state_wards_would_have_helped
+			# Purposeful NoOp
+		}
+	}
+	
+	option = {
+		name = salt_waste_narrative_events.11.bb
+		trigger = {
+			has_modifier = salt_waste_rangers
+			has_modifier = salt_waste_wards
+			NOT = { has_modifier = salt_waste_patrols }
+		}
+		remove_variable = salt_waste_rangers_consequences_happening
+		remove_variable = salt_waste_wards_consequences_happening
+		remove_variable = salt_waste_patrols_consequences_happening
+		scope:salt_storm_state = {
+			kill_population_percent_in_state = {
+				percent = 0.02
+			}
+			add_radicals_in_state = {
+				value = 0.02
+			}
+		}
+		custom_tooltip = {
+			text = salt_waste_state_patrols_would_have_helped
+			# Purposeful NoOp
+		}
+	}
+	
+	option = {
+		name = salt_waste_narrative_events.11.c
+		default_option = yes
+		trigger = {
+			has_modifier = salt_waste_rangers
+			has_modifier = salt_waste_wards
+			has_modifier = salt_waste_patrols
+		}
+		remove_variable = salt_waste_rangers_consequences_happening
+		remove_variable = salt_waste_wards_consequences_happening
+		remove_variable = salt_waste_patrols_consequences_happening
+		set_variable = salt_storm_state_handled
+	}
+}
+
+salt_waste_narrative_events.12 = {
+	dlc = dlc_roe
+	type = country_event
+
+	title = salt_waste_narrative_events.12.t
+	desc = salt_waste_narrative_events.12.d
+	flavor = salt_waste_narrative_events.12.f
+
+	event_image = {
+		texture = "gfx/event_images/salt_wastes_barrens.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	trigger = {
+		fully_owns_the_salt_wastes = yes
+	}
+	
+	option = {
+		name = salt_waste_narrative_events.12.a
+		add_modifier = {
+			name = salt_waste_cure_ritual_1
+		}
+		remove_variable = handle_salt_waste_curse_button_clicked
+		trigger_event = {
+			id = salt_waste_narrative_events.13
+			years = 1
+			popup = yes
+		}
+		custom_tooltip = {
+			text = salt_waste_need_mana_for_13
+			# Purposeful NoOp
+		}
+	}
+}
+
+salt_waste_narrative_events.13 = {
+	dlc = dlc_roe
+	type = country_event
+
+	title = salt_waste_narrative_events.12.continued.t
+	desc = salt_waste_narrative_events.12.continued.d
+	flavor = salt_waste_narrative_events.12.continued.f
+
+	event_image = {
+		texture = "gfx/event_images/salt_wastes_rough.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	trigger = {
+		has_modifier = salt_waste_cure_ritual_1
+	}
+
+	immediate = {
+		remove_modifier = salt_waste_cure_ritual_1
+	}
+
+	option = {
+		name = salt_waste_narrative_events.12.continued.aa
+		default_option = yes
+		trigger = {
+			fully_owns_the_salt_wastes = yes
+			arcana >= 400
+		}
+		add_modifier = {
+			name = salt_waste_cure_ritual_2
+		}
+		trigger_event = {
+			id = salt_waste_narrative_events.14
+			years = 1
+			popup = yes
+		}
+		custom_tooltip = {
+			text = salt_waste_need_mana_for_14
+			# Purposeful NoOp
+		}
+	}
+	
+	option = {
+		name = salt_waste_narrative_events.12.continued.ab
+		default_option = yes
+		trigger = {
+			fully_owns_the_salt_wastes = yes
+			religion = {
+				has_discrimination_trait = fey_domain
+			}
+			arcana >= 200
+		}
+		add_modifier = {
+			name = salt_waste_cure_ritual_2_druids
+		}
+		trigger_event = {
+			id = salt_waste_narrative_events.14
+			years = 1
+			popup = yes
+		}
+		custom_tooltip = {
+			text = salt_waste_need_mana_for_14_reduced
+			# Purposeful NoOp
+		}
+	}
+	
+	option = {
+		name = salt_waste_narrative_events.12.continued.ac
+		default_option = yes
+		trigger = {
+			fully_owns_the_salt_wastes = yes
+			religion = {
+				has_discrimination_trait = dragon_domain
+			}
+			arcana >= 200
+		}
+		add_modifier = {
+			name = salt_waste_cure_ritual_2_mage_hunters
+		}
+		trigger_event = {
+			id = salt_waste_narrative_events.14
+			years = 1
+			popup = yes
+		}
+		custom_tooltip = {
+			text = salt_waste_need_mana_for_14_reduced
+			# Purposeful NoOp
+		}
+	}
+	
+	option = {
+		name = salt_waste_narrative_events.12.continued.b
+		trigger = {
+			OR = {
+				arcana >= 400
+				AND = {
+					arcana >= 200
+					religion = {
+						OR = {
+							has_discrimination_trait = fey_domain
+							has_discrimination_trait = dragon_domain
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = salt_waste_narrative_events.12.continued.c
+		trigger = {
+			OR = {
+				arcana < 200
+				AND = {
+					arcana< 400
+					religion = {
+						AND = {
+							NOT = { has_discrimination_trait = fey_domain }
+							NOT = { has_discrimination_trait = dragon_domain }
+						}
+					}
+				}
+			}
+		}
+		trigger_event = {
+			id = salt_waste_narrative_events.16
+			days = 1
+			popup = yes
+		}
+	}
+}
+
+salt_waste_narrative_events.14 = {
+	dlc = dlc_roe
+	type = country_event
+
+	title = salt_waste_narrative_events.12.continued.t
+	desc = salt_waste_narrative_events.12.continued.d
+	flavor = salt_waste_narrative_events.12.continued.f
+
+	event_image = {
+		texture = "gfx/event_images/salt_wastes_flats.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	trigger = {
+		OR = {
+			has_modifier = salt_waste_cure_ritual_2
+			has_modifier = salt_waste_cure_ritual_2_druids
+			has_modifier = salt_waste_cure_ritual_2_mage_hunters
+		}
+	}
+
+	immediate = {
+		remove_modifier = salt_waste_cure_ritual_2
+		remove_modifier = salt_waste_cure_ritual_2_druids
+		remove_modifier = salt_waste_cure_ritual_2_mage_hunters
+	}
+	
+	option = {
+		name = salt_waste_narrative_events.12.continued.aa
+		default_option = yes
+		trigger = {
+			fully_owns_the_salt_wastes = yes
+			arcana >= 500
+		}
+		add_modifier = {
+			name = salt_waste_cure_ritual_3
+		}
+		trigger_event = {
+			id = salt_waste_narrative_events.15
+			years = 1
+			popup = yes
+		}
+		if = {
+			limit = {
+				religion = {
+					has_discrimination_trait = fiend_domain
+				}
+			}
+			trigger_event = {
+				id = salt_waste_narrative_events.17
+				months = 6
+				popup = yes
+			}
+		}
+	}
+	
+	option = {
+		name = salt_waste_narrative_events.12.continued.ab
+		default_option = yes
+		trigger = {
+			fully_owns_the_salt_wastes = yes
+			religion = {
+				has_discrimination_trait = fey_domain
+			}
+			arcana >= 300
+		}
+		add_modifier = {
+			name = salt_waste_cure_ritual_3_druids
+		}
+		trigger_event = {
+			id = salt_waste_narrative_events.15
+			years = 1
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = salt_waste_narrative_events.12.continued.ac
+		default_option = yes
+		trigger = {
+			fully_owns_the_salt_wastes = yes
+			religion = {
+				has_discrimination_trait = dragon_domain
+			}
+			arcana >= 300
+		}
+		add_modifier = {
+			name = salt_waste_cure_ritual_3_mage_hunters
+		}
+		trigger_event = {
+			id = salt_waste_narrative_events.15
+			years = 1
+			popup = yes
+		}
+	}
+	
+	option = {
+		name = salt_waste_narrative_events.12.continued.b
+		trigger = {
+			OR = {
+				arcana >= 500
+				AND = {
+					arcana >= 300
+					religion = {
+						OR = {
+							has_discrimination_trait = fey_domain
+							has_discrimination_trait = dragon_domain
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = salt_waste_narrative_events.12.continued.c
+		trigger = {
+			OR = {
+				arcana < 300
+				AND = {
+					arcana < 500
+					religion = {
+						AND = {
+							NOT = { has_discrimination_trait = fey_domain }
+							NOT = { has_discrimination_trait = dragon_domain }
+						}
+					}
+				}
+			}
+		}
+		trigger_event = {
+			id = salt_waste_narrative_events.16
+			days = 1
+			popup = yes
+		}
+	}
+}
+
+salt_waste_narrative_events.15 = {
+	dlc = dlc_roe
+	type = country_event
+
+	title = salt_waste_narrative_events.15.t
+	desc = salt_waste_narrative_events.15.d
+	flavor = salt_waste_narrative_events.15.f
+
+	event_image = {
+		texture = "gfx/event_images/salt_wastes_peaceful.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	trigger = {
+		OR = {
+			has_modifier = salt_waste_cure_ritual_3
+			has_modifier = salt_waste_cure_ritual_3_druids
+			has_modifier = salt_waste_cure_ritual_3_mage_hunters
+		}
+	}
+
+	immediate = {
+		remove_modifier = salt_waste_cure_ritual_3
+		remove_modifier = salt_waste_cure_ritual_3_druids
+		remove_modifier = salt_waste_cure_ritual_3_mage_hunters
+		set_variable = block_clicking_any_salt_waste_buttons
+	}
+
+	option = {
+		name = salt_waste_narrative_events.15.a
+		default_option = yes
+		trigger = {
+			fully_owns_the_salt_wastes = yes
+		}
+		if = {
+			limit = {
+				religion = {
+					has_discrimination_trait = dragon_domain
+				}
+			}
+			add_technology_researched = salt_waste_curse_suppressed
+		}
+		else_if = {
+			limit = {
+				has_variable = harness_the_salt_waste_curse
+			}
+			add_modifier = {
+				name = salt_waste_extra_evil
+			}
+			custom_tooltip = {
+				text = make_salt_waste_curse_worse
+				every_scope_state = {
+					limit = {
+						has_state_trait = state_trait_salt_wastes
+						is_split_state = no
+						owner = root
+					}
+					state_region = {
+						remove_state_trait = state_trait_salt_wastes
+						add_state_trait = state_trait_salt_wastes_extra_evil
+					}
+				}
+			}
+		}
+		else = {
+			every_scope_state = {
+				limit = {
+					has_state_trait = state_trait_salt_wastes
+					is_split_state = no
+					owner = root
+				}
+				state_region = {
+					remove_state_trait = state_trait_salt_wastes
+				}
+			}
+		}
+		if = {
+			limit = { has_modifier = salt_waste_rangers }
+			remove_modifier = salt_waste_rangers
+		}
+		if = {
+			limit = { has_modifier = salt_waste_wards }
+			remove_modifier = salt_waste_wards
+		}
+		if = {
+			limit = { has_modifier = salt_waste_patrols }
+			remove_modifier = salt_waste_patrols
+		}
+		set_variable = je_salt_waste_curse_resolved
+		remove_variable = block_clicking_any_salt_waste_buttons
+	}
+	
+	option = {
+		name = salt_waste_narrative_events.15.b
+		trigger = {
+			fully_owns_the_salt_wastes = no
+		}
+		remove_variable = block_clicking_any_salt_waste_buttons
+	}
+}
+
+salt_waste_narrative_events.16 = {
+	dlc = dlc_roe
+	type = country_event
+
+	title = salt_waste_narrative_events.16.t
+	desc = salt_waste_narrative_events.16.d
+	flavor = salt_waste_narrative_events.16.f
+
+	event_image = {
+		texture = "gfx/event_images/fiends_landscape.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	trigger = {
+		any_scope_state = {
+			has_state_trait = state_trait_salt_wastes
+			is_capital = no
+		}
+	}
+
+	immediate = {
+		remove_modifier = salt_waste_cure_ritual_1
+		remove_modifier = salt_waste_cure_ritual_2
+		remove_modifier = salt_waste_cure_ritual_2_druids
+		remove_modifier = salt_waste_cure_ritual_2_mage_hunters
+		remove_modifier = salt_waste_cure_ritual_3
+		remove_modifier = salt_waste_cure_ritual_3_druids
+		remove_modifier = salt_waste_cure_ritual_3_mage_hunters
+
+		random_scope_state = {
+			limit = {
+				has_state_trait = state_trait_salt_wastes
+				is_capital = no
+			}
+			convert_population = {
+				target = rel:lords_of_avarice
+				value = 0.15
+			}
+			save_scope_as = fiend_capital_state
+		}
+
+		create_country = {
+			tag = SWF
+			state = scope:fiend_capital_state
+		}
+
+		every_scope_state = {
+			limit = {
+				has_state_trait = state_trait_salt_wastes
+				is_capital = no
+			}
+			convert_population = {
+				target = rel:lords_of_avarice
+				value = 0.15
+			}
+			set_state_owner = c:SWF
+		}
+
+		c:SWF = {
+			effect_starting_technology_tier_6_tech = yes
+			effect_starting_politics_traditional = yes
+			effect_native_conscription_10 = yes
+			add_modifier = {
+				name = salt_waste_extra_evil
+			}
+			every_scope_character = {
+				change_character_religion = rel:lords_of_avarice
+				set_ideology = ideology:ideology_jingoist_leader
+			}
+		}
+
+		c:SWF = {
+			create_diplomatic_play = {
+				type = dp_annex_war
+				target_country = ROOT
+				add_war_goal = { holder = ROOT target_country = c:SWF type = annex_country }
+			}
+		}
+	}
+
+	option = {
+		name = salt_waste_narrative_events.16.a
+	}
+}
+
+salt_waste_narrative_events.17 = {
+	dlc = dlc_roe
+	type = country_event
+
+	title = salt_waste_narrative_events.17.t
+	desc = salt_waste_narrative_events.17.d
+	flavor = salt_waste_narrative_events.17.f
+
+	event_image = {
+		texture = "gfx/event_images/fiends_landscape.dds"
+	}
+	
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	trigger = {
+		religion = {
+			has_discrimination_trait = fiend_domain
+		}
+	}
+
+	option = {
+		name = salt_waste_narrative_events.17.a
+		default_option = yes
+		set_variable = harness_the_salt_waste_curse
+	}
+
+	option = {
+		name = salt_waste_narrative_events.17.b
+	}
+}
+
+salt_waste_narrative_events.18 = {
+	dlc = dlc_roe
+	type = country_event
+
+	title = salt_waste_narrative_events.18.t
+	desc = salt_waste_narrative_events.18.d
+	flavor = salt_waste_narrative_events.18.f
+
+	event_image = {
+		texture = "gfx/event_images/salt_wastes_tea.dds"
+	}
+	
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	trigger = {
+		c:TQL ?= THIS
+		NOT = { has_global_variable = has_formed_tql }
+	}
+	
+	immediate = {
+		set_global_variable = has_formed_tql
+		save_scope_as = formation_country
+		cu:rahoru = {
+			save_scope_as = unification_culture
+		}
+		cu:tqalt = {
+			save_scope_as = unification_culture_2
+		}
+		cu:waste_walker = {
+			save_scope_as = unification_culture_3
+		}
+		every_country = {
+			limit = {
+				has_diplomatic_relevance = ROOT
+			}
+			post_notification = unification_notification_three_culture
+		}
+		
+		if = {
+			limit = {
+				rel:salt_crucible = { is_state_religion = ROOT }
+			}
+			add_journal_entry = {
+				type = je_tql_salt_crucible
+			}
+		} else_if = {
+			limit = {
+				rel:skarrakhlot = { is_state_religion = ROOT }
+			}
+			add_journal_entry = {
+				type = je_tql_skarrakhlot
+			}
+		} else_if = {
+			limit = {
+				rel:vurzaratmoda = { is_state_religion = ROOT }
+			}
+			add_journal_entry = {
+				type = je_tql_vurzaratmoda
+			}
+		} else = {
+			add_journal_entry = {
+				type = je_tql_default
+			}
+		}
+	}
+
+	option = {
+		name = salt_waste_narrative_events.18.a
+		default_option = yes
+		
+		add_modifier = {
+			name = unification_prestige
+			months = very_long_modifier_time
+		}
+		unification_claims_effect = yes
+		
+		trigger_event = {
+			id = salt_waste_narrative_events.19
+			days = 3
+			popup = yes
+		}
+	}
+}
+
+salt_waste_narrative_events.19 = {
+	dlc = dlc_roe
+	type = country_event
+
+	title = salt_waste_narrative_events.19.t
+	desc = salt_waste_narrative_events.19.d
+	flavor = salt_waste_narrative_events.19.f
+
+	event_image = {
+		texture = "gfx/event_images/salt_wastes_tea.dds"
+	}
+	
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	trigger = {
+		c:TQL ?= THIS
+	}
+	
+	immediate = {
+		cu:rahoru = {
+			save_scope_as = rahoru_culture
+		}
+		cu:tqalt = {
+			save_scope_as = tqalt_culture
+		}
+		cu:waste_walker = {
+			save_scope_as = waste_walker_culture
+		}
+		s:STATE_TAYTAQOCHA = {
+			random_scope_state = {
+				save_scope_as = taytaqocha_state
+			}
+		}
+		s:STATE_BLOODTHORN_WASTES = {
+			random_scope_state = {
+				save_scope_as = bloodthorn_state
+			}
+		}
+		s:STATE_SNAILBANE = {
+			random_scope_state = {
+				save_scope_as = snailbane_state
+			}
+		}
+	}
+
+	option = {
+		name = salt_waste_narrative_events.19.n
+		default_option = yes
+	}
+
+	option = {
+		name = salt_waste_narrative_events.19.a
+		trigger = {
+			owns_entire_state_region = STATE_TAYTAQOCHA
+			NOT = { capital = { state_region = s:STATE_TAYTAQOCHA } }
+		}
+
+		set_capital = STATE_TAYTAQOCHA
+	}
+	
+	option = {
+		name = salt_waste_narrative_events.19.b
+		trigger = {
+			owns_entire_state_region = STATE_BLOODTHORN_WASTES
+			NOT = { capital = { state_region = s:STATE_BLOODTHORN_WASTES } }
+		}
+
+		set_capital = STATE_BLOODTHORN_WASTES
+	}
+	
+	option = {
+		name = salt_waste_narrative_events.19.c
+		trigger = {
+			owns_entire_state_region = STATE_SNAILBANE
+			NOT = { capital = { state_region = s:STATE_SNAILBANE } }
+		}
+
+		set_capital = STATE_SNAILBANE
+	}
+}

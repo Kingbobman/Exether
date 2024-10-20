@@ -143,7 +143,7 @@ sikh = {
 church_of_man = {
 	texture = "gfx/interface/icons/religion_icons/church_of_man.dds"
 	traits = {
-		uriks_pantheon light_domain cosmopolitan
+		justice_domain unicorn_domain uriks_pantheon
 	}
 	color = { 0.8 0.55 0.2 }
 }
@@ -151,36 +151,34 @@ church_of_man = {
 creed_of_hasal = {
 	texture = "gfx/interface/icons/religion_icons/hasal.dds"
 	traits = {
-		hasalian_heritage death_domain
+		angel_domain justice_domain hasalian_heritage
 	}
 	color = { 0.2 0.3 0.55 }
 }
 
-
 old_faith = {
 	texture = "gfx/interface/icons/religion_icons/protestant.dds"
 	traits = {
-		animist_heritage ancestor_worship
+		golem_domain phoenix_domain animist_heritage ancestor_worship
 	}
-	color = { 0.7 0.4 0.4 }
+	color = { 0.6 0.7 0.55 }
 }
 
 salt_crucible = {
 	texture = "gfx/interface/icons/religion_icons/protestant.dds"
 	traits = {
-		animist_heritage war_domain
+		fiend_domain unicorn_domain animist_heritage
 	}
 	color = { 0.8 0.7 0.4 }
 	
 	taboos = {
-		fruit
 	} 
 }
 
 cult_of_the_sun = {
 	texture = "gfx/interface/icons/religion_icons/sun.dds"
 	traits = {
-		uriks_pantheon light_domain order_domain
+		dragon_domain unicorn_domain uriks_pantheon
 	}
 	color = { 0.45 0.25 0.5 }
 }
@@ -188,7 +186,7 @@ cult_of_the_sun = {
 cult_of_knowledge = {
 	texture = "gfx/interface/icons/religion_icons/orthodox.dds"
 	traits = {
-		uriks_pantheon knowledge_domain arcana_domain
+		kraken_domain sphinx_domain uriks_pantheon
 	}
 	color = { 0.22 0.24 0.8 }
 }
@@ -196,7 +194,7 @@ cult_of_knowledge = {
 house_of_fate = {
 	texture = "gfx/interface/icons/religion_icons/die.dds"
 	traits = {
-		chiin_heritage cosmopolitan fate_domain 
+		djinn_domain sphinx_domain chiin_heritage cosmopolitan
 	}
 	color = { 0.1 0.5 0.6 }
 }
@@ -204,7 +202,19 @@ house_of_fate = {
 druidic = {
 	texture = "gfx/interface/icons/religion_icons/druidic.dds"
 	traits = {
-		animist_heritage nature_domain life_domain
+		djinn_domain fey_domain animist_heritage
+	}
+	color = { 0.1 0.5 0.3 }
+	
+	taboos = {
+		meat
+	} 
+}
+
+human_druidism = {
+	texture = "gfx/interface/icons/religion_icons/druidic.dds"
+	traits = {
+		kraken_domain fey_domain uriks_pantheon
 	}
 	color = { 0.1 0.5 0.3 }
 	
@@ -216,7 +226,7 @@ druidic = {
 avian_druidism = {
 	texture = "gfx/interface/icons/religion_icons/druidic.dds"
 	traits = {
-		animist_heritage nature_domain life_domain
+		fey_domain gryphon_domain animist_heritage
 	}
 	color = { 0 0.9 0.5 }
 	
@@ -228,7 +238,7 @@ avian_druidism = {
 gnomish_druidism = {
 	texture = "gfx/interface/icons/religion_icons/druidic.dds"
 	traits = {
-		animist_heritage nature_domain life_domain
+		angel_domain fey_domain animist_heritage
 	}
 	color = { 0 0.6 0.5 }
 	
@@ -240,7 +250,7 @@ gnomish_druidism = {
 astral_path = {
 	texture = "gfx/interface/icons/religion_icons/astral_path.dds"
 	traits = {
-		nomadic_heritage fate_domain cosmopolitan
+		djinn_domain gryphon_domain nomadic_heritage cosmopolitan
 	}
 	color = { 0.4 0.7 0.3 }
 	
@@ -249,34 +259,42 @@ astral_path = {
 	}
 }
 
-dwarven_ancestors = {
+kragmorn = {
 	texture = "gfx/interface/icons/religion_icons/jewish.dds"
 	traits = {
-		dwarf_pantheon forge_domain ancestor_worship cosmopolitan
+		gryphon_domain phoenix_domain dwarf_pantheon ancestor_worship cosmopolitan
 	}
 	color = { 0.55 0.85 0.98 }
 }	
 
-elf_magic = {
+old_kragmorn = {
+	texture = "gfx/interface/icons/religion_icons/jewish.dds"
+	traits = {
+		dragon_domain phoenix_domain dwarf_pantheon ancestor_worship
+	}
+	color = { 0.55 0.85 0.98 }
+}
+
+orthodox_fosirmi = {
 	texture = "gfx/interface/icons/religion_icons/elf_harp.dds"
 	traits = {
-		elf_pantheon arcana_domain
+		sphinx_domain unicorn_domain elf_pantheon
 	}
 	color = { 0.7 0.35 0.1 }
 }
 
-elf_nature = {
+wild_fosirmi = {
 	texture = "gfx/interface/icons/religion_icons/oak.dds"
 	traits = {
-		animist_heritage elf_pantheon nature_domain
+		fey_domain unicorn_domain animist_heritage
 	}
 	color = { 0.1 0.4 0.9 }
 }
 
-elf_southern = {
+southern_fosirmi = {
 	texture = "gfx/interface/icons/religion_icons/southern_elf.dds"
 	traits = {
-		elf_pantheon twilight_domain cosmopolitan
+		gryphon_domain kraken_domain elf_pantheon
 	}
 	color = { 0.7 0.4 0.6 }
 }
@@ -284,15 +302,16 @@ elf_southern = {
 animist = {
 	texture = "gfx/interface/icons/religion_icons/animist.dds"
 	traits = {
-		animist_heritage nature_domain
+		golem_domain fey_domain animist_heritage
 	}
 	color = { 0.6 0.3 0.2 }
 }
+
 gnollstianity = {
 	texture = "gfx/interface/icons/religion_icons/animist.dds"
 
 	traits = {
-		animist_heritage nature_domain
+		golem_domain phoenix_domain animist_heritage
 	}
 	color = { 0.6 0.3 0.3 }
 	taboos = {
@@ -303,33 +322,43 @@ gnollstianity = {
 lords_of_avarice = {
 	texture = "gfx/interface/icons/religion_icons/bloody_coins.dds"
 	traits = {
-		evil_heritage trickery_domain
+		angel_domain fiend_domain evil_heritage materialistic
 	}
-	color = { 0.6 0.6 0.0 }
+	color = { 0.7 0.4 0.3 }
 	taboos = {
 	}
 }
 
-hobgoblin_faith = {
+lunar_masquerade = {
+	texture = "gfx/interface/icons/religion_icons/bloody_coins.dds"
+	traits = {
+		angel_domain fiend_domain evil_heritage
+	}
+	color = { 0.2 0.2 0.3 }
+	taboos = {
+	}
+}
+
+scourgelore = {
 	texture = "gfx/interface/icons/religion_icons/axe.dds"
 	traits = {
-		goblin_pantheon order_domain magoclast
+		dragon_domain justice_domain goblin_pantheon
 	}
 	color = { 0.4 0.1 0.2 }
 }
 
-goblin_faith = {
+nilbogism = {
 	texture = "gfx/interface/icons/religion_icons/sikh.dds"
 	traits = {
-		goblin_pantheon war_domain trickery_domain
+		djinn_domain phoenix_domain goblin_pantheon
 	}
-	color = { 0.3 0.2 0.2 }
+	color = { 1 1 0.1 }
 }
 
-orc_father = {
-	texture = "gfx/interface/icons/religion_icons/orc_father.dds"
+skarrakhlot  = {
+	texture = "gfx/interface/icons/religion_icons/skarrakhlot.dds"
 	traits = {
-		orc_pantheon war_domain
+		fiend_domain golem_domain orc_pantheon
 	}
 	color = { 0.5 1 0.1 }
 
@@ -338,26 +367,34 @@ orc_father = {
 	} 
 }
 
-orc_mother = {
+vurzaratmoda  = {
 	texture = "gfx/interface/icons/religion_icons/sikh.dds"
 	traits = {
-		orc_pantheon life_domain
+		fey_domain phoenix_domain orc_pantheon
 	}
 	color = { 1 0.5 0.1 }
 }
 
-horse_worship = {
+zmikamki = {
+	texture = "gfx/interface/icons/religion_icons/theravada.dds"
+	traits = {
+		dragon_domain golem_domain orc_pantheon
+	}
+	color = { 0.1 0.5 1 }
+}
+
+skystride = {
 	texture = "gfx/interface/icons/religion_icons/horse.dds"
 	traits = {
-		nomadic_heritage tempest_domain war_domain shamanic
+		golem_domain gryphon_domain nomadic_heritage
 	}
 	color = { 0.2 0.3 0.2 }
 }
 
-mountain_worship = {
+viticist = {
 	texture = "gfx/interface/icons/religion_icons/animist.dds"
 	traits = {
-		vitic_heritage tempest_domain shamanic
+		gryphon_domain justice_domain vitic_heritage shamanic
 	}
 	color = { 0.8 0.6 0.6 }
 }
@@ -365,7 +402,7 @@ mountain_worship = {
 bonepicker = {
 	texture = "gfx/interface/icons/religion_icons/animist.dds"
 	traits = {
-		vitic_heritage death_domain shamanic
+		angel_domain gryphon_domain vitic_heritage shamanic
 	}
 	color = { 0.6 0.6 0.6 }
 }
@@ -373,7 +410,7 @@ bonepicker = {
 marktarian = {
 	texture = "gfx/interface/icons/religion_icons/marktarian.dds"
 	traits = {
-		marktarian_heritage arcana_domain knowledge_domain
+		phoenix_domain sphinx_domain marktarian_heritage
 	}
 	color = { 0.3 0.1 0.2 }
 }
@@ -381,18 +418,18 @@ marktarian = {
 marktarian_antimagic = {
 	texture = "gfx/interface/icons/religion_icons/marktarian_new.dds"
 	traits = {
-		marktarian_heritage peace_domain knowledge_domain magoclast
+		dragon_domain unicorn_domain marktarian_heritage
 	}
 	taboos = {
 		opium
 	} 
-	color = { 0.3 0.5 0.2 }
+	color = { 0.3 0.1 0.2 }
 }
 
-giant_hierarchy = {
+stigveldio = {
 	texture = "gfx/interface/icons/religion_icons/giant_order.dds"
 	traits = {
-		giant_religion_heritage order_domain tempest_domain shamanic
+		golem_domain justice_domain giant_religion_heritage shamanic
 	}
 	color = { 0.3 0.8 0.2 }
 }
@@ -400,35 +437,34 @@ giant_hierarchy = {
 mortals_burden = {
 	texture = "gfx/interface/icons/religion_icons/hourglass.dds"
 	traits = {
-		monastic_heritage knowledge_domain life_domain
+		fey_domain sphinx_domain monastic_heritage
 	}
 	taboos = {
 		liquor wine
 	}
-	color = { 0.5 0.6 0.5 }
+	color = { 0.9 0.2 0.2 }
 }
 
-
-death_worship = {
+raven_queen = {
 	texture = "gfx/interface/icons/religion_icons/raven.dds"
 	traits = {
-		vitic_heritage grave_domain twilight_domain
+		angel_domain unicorn_domain vitic_heritage
 	}
-	color = { 0.4 0.0 0.4 }
+	color = { 0.9 0.2 0.2 }
 }
 
-dwarven_dark_magic = {
+buried_gods = {
 	texture = "gfx/interface/icons/religion_icons/dark_arrow.dds"
 	traits = {
-		evil_heritage psionic_heritage death_domain forge_domain
+		fiend_domain siren_domain evil_heritage psionic_heritage
 	}
-	color = { 0.3 0.2 0.2 }
+	color = { 0.9 0.2 0.2 }
 }
 
 cult_of_the_sea = {
 	texture = "gfx/interface/icons/religion_icons/anchor.dds"
 	traits = {
-		uriks_pantheon tempest_domain
+		gryphon_domain kraken_domain uriks_pantheon
 	}
 	color = { 0.2 0.3 0.5 }
 }
@@ -436,7 +472,16 @@ cult_of_the_sea = {
 cult_of_war = {
 	texture = "gfx/interface/icons/religion_icons/shinto.dds"
 	traits = {
-		uriks_pantheon war_domain
+		fiend_domain phoenix_domain uriks_pantheon
+	}
+	color = { 0.7 0.2 0.2 }
+}
+
+
+cult_of_commerce = {
+	texture = "gfx/interface/icons/religion_icons/shinto.dds"
+	traits = {
+		golem_domain kraken_domain uriks_pantheon materialistic
 	}
 	color = { 0.7 0.2 0.2 }
 }
@@ -444,23 +489,23 @@ cult_of_war = {
 draconic_oath = {
 	texture = "gfx/interface/icons/religion_icons/shinto.dds"
 	traits = {
-		dragon_religion_heritage order_domain 
+		golem_domain justice_domain dragon_religion_heritage
 	}
 	color = { 0.9 0.2 0.2 }
 }
 
-dragonbone_worship = {
+ossarian = {
 	texture = "gfx/interface/icons/religion_icons/dragonbone.dds"
 	traits = {
-		dragon_religion_heritage grave_domain ancestor_worship
+		angel_domain djinn_domain dragon_religion_heritage ancestor_worship
 	}
-	color = { 0.6 0.6 0.6 }
+	color = { 0.9 0.2 0.2 }
 }
 
 opened_eye = {
 	texture = "gfx/interface/icons/religion_icons/shiite.dds"
 	traits = {
-		psionic_heritage monastic_heritage knowledge_domain
+		siren_domain sphinx_domain psionic_heritage monastic_heritage
 	}
 	color = { 0.4 0.7 0.3 }
 	
@@ -469,10 +514,10 @@ opened_eye = {
 	}
 }
 
-halfling_faith = {
+yondallas_guests = {
 	texture = "gfx/interface/icons/religion_icons/halfling.dds"
 	traits = {
-		halfling_pantheon peace_domain trickery_domain cosmopolitan
+		djinn_domain unicorn_domain halfling_pantheon cosmopolitan
 	}
 	color = { 0.4 0.7 0.3 }
 	
@@ -483,7 +528,7 @@ halfling_faith = {
 xocarakti = {
 	texture = "gfx/interface/icons/religion_icons/naga_blood.dds"
 	traits = {
-		naga_heritage war_domain nature_domain
+		fiend_domain siren_domain naga_heritage
 	}
 	color = { 0.8 0.1 0.2 }
 	
@@ -495,7 +540,7 @@ xocarakti = {
 teomakti = {
 	texture = "gfx/interface/icons/religion_icons/naga.dds"
 	traits = {
-		naga_heritage psionic_heritage nature_domain 
+		kraken_domain siren_domain naga_heritage psionic_heritage
 	}
 	color = { 0.5 0.8 0.3 }
 	
@@ -507,19 +552,7 @@ teomakti = {
 rose_court = {
 	texture = "gfx/interface/icons/religion_icons/rose.dds"
 	traits = {
-		naga_heritage psionic_heritage nature_domain 
-	}
-	color = { 0.5 0.8 0.3 }
-	
-	taboos = {
-		luxury_furniture
-	}
-}
-
-rose_court = {
-	texture = "gfx/interface/icons/religion_icons/rose.dds"
-	traits = {
-		chivalrous_heritage order_domain nature_domain 
+		fey_domain justice_domain chivalrous_heritage 
 	}
 	color = { 0.8 0.6 0.8 }
 	
@@ -531,7 +564,7 @@ rose_court = {
 verglas_crown = {
 	texture = "gfx/interface/icons/religion_icons/ice_crown.dds"
 	traits = {
-		evil_heritage tempest_domain trickery_domain 
+		fiend_domain kraken_domain evil_heritage
 	}
 	color = { 0.6 0.6 0.8 }
 	
@@ -540,8 +573,15 @@ verglas_crown = {
 	}
 }
 
-
 atheist = {
 	texture = "gfx/interface/icons/religion_icons/atheist.dds"
+	traits = {
+		dragon_domain
+	}
 	color = { 1.0 1.0 1.0 }
+}
+
+dummy_religion = {
+    texture = "gfx/interface/icons/religion_icons/atheist.dds"
+    color = { 128 128 128 }
 }

@@ -124,7 +124,7 @@ law_women_in_the_workplace = {
 	progressiveness = 0
 	
 	unlocking_technologies = {
-		feminism
+		labor_movement
 	}
 	
 	on_enact = {
@@ -273,19 +273,7 @@ law_womens_suffrage = {
 		}
 	}
 
-	is_visible = {
-		NOT = {
-			OR = {
-				religion = rel:orc_mother
-				any_primary_culture = {
-					has_discrimination_trait = southern_elf
-				}
-				any_primary_culture = {
-					this = cu:hag
-				}
-			}
-		}
-	}
+
 
 }
 
@@ -296,12 +284,6 @@ law_matriarchy = {
 	progressiveness = 100
 
 	unlocking_laws = {
-		law_census_voting
-		law_landed_voting
-		law_wealth_voting
-		law_universal_suffrage
-		law_single_party_state
-		law_anarchy
 	}
 	
 	on_enact = {
@@ -309,9 +291,7 @@ law_matriarchy = {
 	}
 
 	modifier = {
-		state_working_adult_ratio_add = 0.15
-		state_birth_rate_mult = -0.05
-		state_dependent_political_participation_add = 0.33
+		state_dependent_wage_mult = 0.50
 	}
 	
 	possible_political_movements = {
@@ -357,7 +337,7 @@ law_matriarchy = {
 
 	is_visible = {
 		OR = {
-			religion = rel:orc_mother
+			religion = rel:vurzaratmoda
 			any_primary_culture = {
 				has_discrimination_trait = southern_elf
 			}

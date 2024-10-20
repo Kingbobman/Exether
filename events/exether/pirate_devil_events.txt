@@ -1,0 +1,37 @@
+﻿namespace = pirate_devil
+
+#The Devils Due
+pirate_devil.1 = {
+    type = country_event
+    placement = root
+
+    title = pirate_devil.1.t
+    desc = pirate_devil.1.d
+    flavor = pirate_devil.1.f
+    dlc = dlc_roe
+    duration = 1
+
+    event_image = {
+        video = "unspecific_fire"
+    }
+
+    option = {
+        name = pirate_devil.1.a
+        default_option = yes
+        limit = {
+            treasury >= 20000
+        }
+        add_treasury = -20000
+    }
+
+    option = {
+        name = pirate_devil.1.b
+        default_option = no
+        every_state = {
+            modify_pop = {
+                pop_type = all_pops
+                mortality_rate = 0.01
+            }
+        }
+    }
+}

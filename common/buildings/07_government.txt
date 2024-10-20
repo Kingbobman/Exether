@@ -128,6 +128,8 @@ building_observatory = {
 
 	building_group = bg_technology
 
+	has_max_level = yes
+
 	city_type = city
 
 	levels_per_mesh = 5
@@ -144,6 +146,12 @@ building_observatory = {
 	texture = "gfx/interface/icons/building_icons/observatory.dds"
 
 	required_construction = construction_cost_medium
+
+	possible = {
+		AND = {
+			state_has_mountain = yes
+		}
+	}
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 }

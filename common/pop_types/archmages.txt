@@ -34,51 +34,6 @@
 	qualifications_growth_desc = "ARCHMAGES_QUALIFICATIONS_DESC"
 	qualifications = {
 		if = {
-			limit = {
-				is_peasant_under_serfdom = no
-				literacy_rate > 0.2
-			}
-			# baseline: ( literacy - 0.2 ) * 10 + ( wealth / 10 ), norm 5
-			add = {
-				value = literacy_rate
-				subtract = 0.2
-				multiply = 20
-				desc = "QUALIFICATIONS_LITERACY_FACTOR"
-			}
-			add = {
-				value = wealth
-				divide = 10
-				desc = "QUALIFICATIONS_WEALTH_FACTOR"
-			}
-			if = {
-				limit = {
-					is_pop_type = wizards
-				}
-				multiply = {
-					value = 5
-					desc = "QUALIFICATIONS_FAVORED_TYPE"
-				}
-			}
-			if = {
-				limit = {
-					is_pop_type = academics
-				}
-				multiply = {
-					value = 5
-					desc = "QUALIFICATIONS_FAVORED_TYPE"
-				}
-			}
-			if = {
-				limit = {
-					culture_accepted = no
-				}
-				multiply = {
-					value = 0.1
-					desc = "QUALIFICATIONS_CULTURAL_DISCRIMINATION"
-				}
-			}
-		}
-		else_if = {
 			limit = { 
 				is_peasant_under_serfdom = yes 
 			}
@@ -87,10 +42,43 @@
 				value = 0
 			}
 		}
-		else = {
+		else_if = {
+			limit = {
+				AND = {
+					OR = {
+						is_pop_type = wizards
+						is_pop_type = academics
+					}
+					literacy_rate > 0.5
+					wealth > 15
+				}
+			}
+			# baseline: literacy * 4 + ( wealth - 10 / 10 ) norm 2 for Wealth 10 and Literacy 50%
+			add = {
+				value = literacy_rate
+				multiply = 10
+				desc = "QUALIFICATIONS_LITERACY_FACTOR"
+			}
+			add = {
+				value = wealth
+				subtract = 15
+				divide = 10
+				desc = "QUALIFICATIONS_WEALTH_FACTOR"
+			}
+		}
+		else_if = {
+			limit = {
+				literacy_rate <= 0.5
+			}
 			value = {
 				desc = "QUALIFICATIONS_INSUFFICIENT_LITERACY_DECAY"
-				value = -1
+				value = -2
+			}
+		}
+		else = {		
+			value = {
+				desc = "QUALIFICATIONS_INSUFFICIENT_WEALTH_DECAY"
+				value = -2
 			}
 		}
 	}

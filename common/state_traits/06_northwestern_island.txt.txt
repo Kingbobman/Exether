@@ -1,0 +1,68 @@
+﻿state_trait_rimeroot_frost = {
+	icon = "gfx/interface/icons/state_trait_icons/resources_lumber.dds"
+	required_techs_for_colonization = {
+		"watertube_boiler"
+	}
+	disabling_technologies = {
+		"rubber_mastication"
+	}
+	modifier = {
+		state_construction_mult = -0.2
+		state_infrastructure_mult = -0.1
+	}
+}
+
+state_trait_rimeroot_jungle = {
+	icon = "gfx/interface/icons/state_trait_icons/resources_lumber.dds"
+	modifier = {
+		goods_output_hardwood_mult = 0.2
+		goods_output_wood_mult = 0.25
+		goods_output_coal_mult = 0.15
+	}
+}
+
+state_trait_razorwind_desert = {
+	icon = "gfx/interface/icons/state_trait_icons/cold_climate.dds"
+	modifier = {
+		building_group_bg_ranching_throughput_add = -0.1
+		building_group_bg_agriculture_throughput_add = -0.15
+		building_group_bg_mining_throughput_add = 0.15
+		state_infrastructure_mult = -0.05
+		state_migration_pull_mult = -0.2
+	}
+}
+
+state_trait_razorwinds = {
+	icon = "gfx/interface/icons/state_trait_icons/dry_climate.dds"
+	required_techs_for_colonization = {
+		"gantry_cranes"
+	}
+	disabling_technologies = {
+		"steel_frame_buildings"
+	}
+	modifier = {
+		building_group_bg_ranching_throughput_add = -0.05
+		building_group_bg_agriculture_throughput_add = -0.05
+		state_colony_growth_speed_mult = -0.5
+		state_laborers_mortality_mult = 0.1
+		state_migration_pull_mult = -0.3
+		building_group_bg_mining_throughput_add = -0.25
+	}
+}
+
+state_trait_short_grow = {
+	icon = "gfx/interface/icons/state_trait_icons/cold_climate.dds"
+	modifier = {
+		building_group_bg_agriculture_throughput_add = -0.15
+		building_group_bg_plantations_throughput_add = -0.15
+
+	}
+}
+
+state_trait_leviathan_killers = {
+	icon = "gfx/interface/icons/state_trait_icons/resources_fish.dds"
+	modifier = {
+		building_leviathan_outpost_throughput_add = 0.15
+
+	}
+}
