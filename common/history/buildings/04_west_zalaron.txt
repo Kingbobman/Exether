@@ -2519,14 +2519,13 @@
 			reserves=1
 			activate_production_methods={ "pm_simple_organization" }
 		}
-			create_building={
-				create_building={
+		create_building={
 					building="building_port"
 					level=1
 					reserves=1
 					activate_production_methods={ "pm_basic_port" }
 				}
-				create_building={
+		create_building={
 					building="building_logging_camp"
 					add_ownership={ 
 						building={ 
@@ -2539,7 +2538,7 @@
 					reserves=1
 					activate_production_methods={ "pm_saw_mills" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts" }
 				}
-				create_building={
+		create_building={
 					building="building_furniture_manufacturies"
 						add_ownership={ 
 							building={ 
@@ -2552,7 +2551,8 @@
 					reserves=1
 					activate_production_methods={ "pm_handcrafted_furniture" "pm_no_luxuries" "pm_automation_disabled" }
 				}
-        building="building_coffee_plantation"
+		create_building = {
+			building="building_coffee_plantation"
 				add_ownership={ 
 					building={ 
 						type="building_manor_house"
@@ -2564,8 +2564,9 @@
         reserves=1
         activate_production_methods={  "default_building_coffee_plantation" "pm_road_carts"  }
       }
+		}
+        
 	}
-  }
   s:STATE_LISIJA = {
 	region_state:EKA={
 		create_building={
@@ -3077,7 +3078,7 @@
 			  }
 		}
   }
-  s:STATE_BONGSAF = {
+  s:STATE_NYOLMAFUM = {
 		region_state:THK={
 			create_building={
 				building="building_coffee_plantation"
@@ -3086,7 +3087,7 @@
 								type="building_manor_house"
 								country="c:THK"
 								levels=2
-								region="STATE_BONGSAF"
+								region="STATE_NYOLMAFUM"
 						   }
 						}
 				reserves=1
@@ -3099,7 +3100,7 @@
 						type="building_manor_house"
 						country="c:THK"
 						levels=5
-						region="STATE_BONGSAF"
+						region="STATE_NYOLMAFUM"
 				   }
 				}
 				reserves=1
@@ -3112,7 +3113,7 @@
 						type="building_manor_house"
 						country="c:THK"
 						levels=5
-						region="STATE_BONGSAF"
+						region="STATE_NYOLMAFUM"
 				   }
 				}
 				reserves=1
@@ -3125,7 +3126,7 @@
                         type="building_financial_district"
                         country="c:THK"
                         levels=2
-                        region="STATE_BONGSAF"
+                        region="STATE_NYOLMAFUM"
                    }
                 }
 				reserves=1
@@ -4036,7 +4037,7 @@
 		}
 	}
   }
-  s:STATE_SHANAKONG = {
+  s:STATE_TAYIGAMU = {
 	region_state:THK = {	
 		create_building={
 			building="building_government_administration"
@@ -4051,7 +4052,7 @@
 					type="building_manor_house"
 					country="c:THK"
 					levels=2
-					region="STATE_SHANAKONG"
+					region="STATE_TAYIGAMU"
 			   }
 			}
 			reserves=1
@@ -4064,7 +4065,7 @@
                         type="building_financial_district"
                         country="c:THK"
                         levels=1
-                        region="STATE_SHANAKONG"
+                        region="STATE_TAYIGAMU"
                    }
                 }
 			reserves=1
@@ -4077,7 +4078,7 @@
 						type="building_financial_district"
 						country="c:THK"
 						levels=1
-						region="STATE_SHANAKONG"
+						region="STATE_TAYIGAMU"
 				   }
 				}
 			reserves=1
@@ -4090,7 +4091,7 @@
                         type="building_financial_district"
                         country="c:THK"
                         levels=1
-                        region="STATE_SHANAKONG"
+                        region="STATE_TAYIGAMU"
                    }
                 }
 			reserves=1
@@ -4103,7 +4104,7 @@
                         type="building_financial_district"
                         country="c:THK"
                         levels=1
-                        region="STATE_SHANAKONG"
+                        region="STATE_TAYIGAMU"
                    }
                 }
 			reserves=1
@@ -4116,7 +4117,7 @@
                         type="building_financial_district"
                         country="c:THK"
                         levels=1
-                        region="STATE_SHANAKONG"
+                        region="STATE_TAYIGAMU"
                    }
                 }
 			reserves=1
@@ -4129,7 +4130,7 @@
 					type="building_financial_district"
 					country="c:THK"
 					levels=3
-					region="STATE_SHANAKONG"
+					region="STATE_TAYIGAMU"
 			   }
 			}
 		reserves=1
@@ -4142,7 +4143,7 @@
 							  type="building_financial_district"
 							  country="c:THK"
 							  levels=2
-							  region="STATE_SHANAKONG"
+							  region="STATE_TAYIGAMU"
 						 }
 					  }
 			reserves=1
@@ -4155,7 +4156,7 @@
 						type="building_financial_district"
 						country="c:THK"
 						levels=2
-						region="STATE_SHANAKONG"
+						region="STATE_TAYIGAMU"
 				   }
 				}
 			reserves=1
@@ -4168,7 +4169,7 @@
 					type="building_financial_district"
 					country="c:THK"
 					levels=2
-					region="STATE_SHANAKONG"
+					region="STATE_TAYIGAMU"
 			   }
 			}
 			reserves=1
@@ -4181,7 +4182,7 @@
 					type="building_financial_district"
 					country="c:THK"
 					levels=2
-					region="STATE_SHANAKONG"
+					region="STATE_TAYIGAMU"
 			   }
 			}
 			reserves=1
@@ -5100,7 +5101,6 @@
 			reserves=1
 			activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts"  }
 		}
-		region_state:HOZ = {
 			create_building={
 			building="building_cotton_plantation"
 				add_ownership={ 
@@ -5127,7 +5127,6 @@
 			reserves=1
 			activate_production_methods={ "pm_saw_mills" "pm_no_equipment" "pm_road_carts" "pm_no_hardwood" }
 		}
-	}
 	}
   }
   s:STATE_SHINOGOZH = {

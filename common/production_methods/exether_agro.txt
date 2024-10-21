@@ -12,14 +12,14 @@ pm_farms_basic_earth_shaping = {
 	building_modifiers = {
 		workforce_scaled = {
 			#input goods
-			goods_input_wishstone_add = 2
-			goods_output_grain_add = 5
+			goods_input_wishstone_add = 2				# 100 = 50 * 2
+			goods_output_grain_add = 5					# 100 = 20 * 5
 		}
 
 		level_scaled = {
 			#employment
 			building_employment_wizards_add = 500
-			building_employment_laborers_add = -1000
+			building_employment_farmers_add = -500
 		}
 		unscaled = {
 			#building modifiers
@@ -51,16 +51,15 @@ pm_farms_mass_plant_growth = {  #could also be "hastened growth cycles"
 		level_scaled = {
 			#employment
 			building_employment_wizards_add = 500
-			building_employment_laborers_add = -1000
+			building_employment_farmers_add = -500
 		}
 		unscaled = {
 			#building modifiers
 			goods_input_fertilizer_mult = -0.1
 
-			goods_output_grain_mult = 0.20
-			goods_output_liquor_mult = 0.20
-			goods_output_sugar_mult = 0.20
-			goods_output_fruit_mult = 0.20
+			#Previously, dyes did not get modified while everything else did.
+			#Also is cleaner in the UI
+			building_goods_output_mult = 0.2
 		}
 	}
 }
@@ -86,13 +85,12 @@ pm_rice_farms_basic_earth_shaping = {
 		level_scaled = {
 			#employment
 			building_employment_wizards_add = 1000
-			building_employment_laborers_add = -2000
+			building_employment_laborers_add = -1000
+			building_employment_farmers_add = -500
 		}
 		unscaled = {
 			#building modifiers
-			goods_output_grain_mult = 0.15
-			goods_output_sugar_mult = 0.15
-			goods_output_fruit_mult = 0.15
+			building_goods_output_mult = 0.15
 		}
 	}
 }
@@ -119,15 +117,14 @@ pm_rice_farms_mass_plant_growth = {  #could also be "hastened growth cycles"
 		level_scaled = {
 			#employment
 			building_employment_wizards_add = 1000
-			building_employment_laborers_add = -2000
+			building_employment_laborers_add = -1000
+			building_employment_farmers_add = -500
 		}
 		unscaled = {
 			#building modifiers
 			goods_input_fertilizer_mult = -0.1
-
-			goods_output_grain_mult = 0.20
-			goods_output_sugar_mult = 0.20
-			goods_output_fruit_mult = 0.20
+			
+			building_goods_output_mult = 0.2
 		}
 	}
 }
@@ -153,7 +150,8 @@ pm_livestock_fertility_rites = {
 		level_scaled = {
 			#employment
 			building_employment_wizards_add = 500
-			building_employment_laborers_add = -1000
+			building_employment_laborers_add = -250
+			building_employment_farmers_add = -250
 		}
 		unscaled = {
 			#building modifiers
@@ -186,7 +184,8 @@ pm_livestock_magical_selection = {  #magical selection is a METAL fucking name o
 		level_scaled = {
 			#employment
 			building_employment_wizards_add = 500
-			building_employment_laborers_add = -1000
+			building_employment_laborers_add = -250
+			building_employment_farmers_add = -250
 		}
 		unscaled = {
 			#building modifiers
