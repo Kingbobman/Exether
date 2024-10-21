@@ -438,31 +438,32 @@ integration_effect = {
 	}
 }
 
-purification_effect = {
+reformation_effect = {
 	effect = {
 		if = {
 			limit = {
-				modifier:state_purification_mult > 0
+				modifier:state_reformation_mult > 0
 			}
 	
 			save_scope_value_as = {
-				name = purify_amount
-				value = modifier:state_purification_mult
+				name = reform_amount
+				value = modifier:state_reformation_mult
+			}
+
+			owner = {
+				religion = {
+					save_scope_as = convert_to_religion
+				}
 			}
 	
 			every_scope_pop = {
 				limit = {
-					pop_is_discriminated = yes
+					religion_accepted = no
 				}
 				change_pop_religion = {
-					target = rel:dummy_religion
-					value = scope:purify_amount
+					target = scope:convert_to_religion
+					value = scope:reform_amount
 				}
-			}
-
-			kill_population_percent_in_state = {
-				percent = 1
-				religion = rel:dummy_religion
 			}
 		}
 	}

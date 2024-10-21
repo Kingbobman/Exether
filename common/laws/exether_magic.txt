@@ -82,7 +82,7 @@ law_divine_miracles = { #Tradational Presedent
 	institution_modifier = {
 		country_clergymen_pol_str_mult = 0.15
 		country_aristocrats_pol_str_mult = 0.10
-		state_mortality_mult = -0.01
+		country_attunement_add = 1
 	}
 	
 	possible_political_movements = {
@@ -194,6 +194,7 @@ law_druidic_circles = {
 	institution_modifier = {
 		country_peasants_pol_str_mult = 0.10
 		country_farmers_pol_str_mult = 0.10
+		country_attunement_add = 1
 	}
 
 	on_enact = {
@@ -281,6 +282,7 @@ law_artificer_guilds = {
 	institution_modifier = {
 		country_artificers_pol_str_mult = 0.10
 		country_machinists_pol_str_mult = 0.05
+		country_attunement_add = 1
 	}
 	
 	possible_political_movements = {
@@ -387,7 +389,7 @@ law_astrological_studies = {
 	institution_modifier = {
 		country_academics_pol_str_mult = 0.05
 		country_wizards_pol_str_mult = 0.10
-		country_tech_spread_mult = 0.05
+		country_attunement_add = 1
 	}
 	
 	possible_political_movements = {
@@ -491,9 +493,10 @@ law_mage_hunters = {
 	institution = institution_magical_focus
 
 	institution_modifier = {
+		country_authority_add = 50
 		country_archmages_pol_str_mult = -0.10
 		country_wizards_pol_str_mult = -0.15
-		country_authority_add = 50
+		country_attunement_add = -1
 
 	}
 	

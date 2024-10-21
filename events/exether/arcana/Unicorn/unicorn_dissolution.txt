@@ -22,12 +22,8 @@ unicorn_dissolution.1 = {
 		default_option = yes
 		name = unicorn.dissolution.1.a
 
-        custom_tooltip = {
-            text = arcana_dogmatic_add_three
-            change_variable = {
-                name = arcana_alignment_dogmatic
-                add = 3
-            }
+        shift_alignment_dogmatic = {
+            AMOUNT = 10
         }
 
         every_scope_state = {
@@ -49,12 +45,8 @@ unicorn_dissolution.1 = {
 	option = {
 		name = unicorn.dissolution.1.b
 
-        custom_tooltip = {
-            text = arcana_iconoclast_add_three
-            change_variable = {
-                name = arcana_alignment_iconoclast
-                add = 3
-            }
+        shift_alignment_iconoclast = {
+            AMOUNT = 10
         }
 
         add_modifier = {
@@ -84,17 +76,13 @@ unicorn_dissolution.1 = {
         highlighted_option = yes
 
 		trigger = {
-			arcana_heretical_devotion_one = yes
+			arcana_fanatical_devotion_one = yes
 		}
 
 		show_as_unavailable = { always = yes }
 
-        custom_tooltip = {
-            text = arcana_heretical_add_three
-            change_variable = {
-                name = arcana_alignment_heretical
-                add = 3
-            }
+        shift_alignment_fanatical = {
+            AMOUNT = 10
         }
 
         every_scope_state = {
