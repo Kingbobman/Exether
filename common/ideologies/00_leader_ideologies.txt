@@ -131,6 +131,8 @@ ideology_traditionalist = {
 							is_interest_group_type = ig_devout
 						}
 					}
+				}
+				owner = {
 					NOT = {
 						is_country_type = preindustrial
 					}
@@ -3531,7 +3533,10 @@ ideology_liberal_leader = {
 		}
 		if = {
 			limit = {
-				is_country_type = preindustrial
+				owner = {
+					is_country_type = preindustrial
+				}
+
 			}
 			add = -1000
 		}
