@@ -30,6 +30,19 @@
 				value = 1.5
 			}		
 		}		
+
+		multiply = {
+			desc = "decentralized_power"
+			value = 1.0
+			if = {
+				limit = {
+					owner = {
+						is_country_type = preindustrial
+					}
+				}
+				value = 0.0
+			}
+		}
 	}
 	
 	qualifications_growth_desc = "CLERKS_QUALIFICATIONS_DESC"

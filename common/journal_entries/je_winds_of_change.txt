@@ -29,9 +29,16 @@
 			has_law = law_type:law_chiefdom
 		}
 
-		ig:ig_clans = {
-			is_marginal = yes 
+		OR = {
+			ig:ig_clans = {
+				is_marginal = yes 
+			}
+			literacy_rate >= 0.50
+			top_overlord = {
+				is_country_type = recognized
+			}
 		}
+
 	}
 
 	on_complete = {

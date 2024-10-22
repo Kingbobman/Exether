@@ -1,20 +1,13 @@
 ﻿newspaper_trigger_decision = {
     is_shown = {
-        always = no
+        always = yes
     }
     possible = {
         is_player = yes
     }
 
     when_taken = {
-        set_variable = {
-            name = newspaper_events_bool
-        }
-        trigger_event = {
-            id = newspaper_toggle.1
-            days = 0
-            popup = yes
-        }
+        recalculate_pop_ig_support = yes
     }
 
     ai_chance = {

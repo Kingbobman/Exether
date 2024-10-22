@@ -25,18 +25,19 @@
 		}
 	}
 
-	on_disable = {}
+	on_disable = {
+		recalculate_pop_ig_support = yes
+	}
 	on_character_ig_membership = {}
 
 	pop_potential = {
 		OR = {
 			is_pop_type = peasants
-			is_pop_type = clansmen
 		}
 	}
 
 	pop_weight = {
-		value = 50
+		value = 0
 
 		add = {
 			desc = "POP_PEASANTS"
@@ -48,85 +49,16 @@
 			}
 		}
 
-		
-		add = {
-			desc = "POP_CLANSMEN"
-			if = {
-				limit = {
-					is_pop_type = clansmen
-				}
-				value = 1000
-			}
-		}
-
 		multiply = {
 			desc = "decentralized_power"
 			value = 1.0
 			if = {
 				limit = {
-					NOT = {
-						OR = {
-							is_pop_type = peasants
-							is_pop_type = clansmen
-						}
+					NOR = {
+						is_pop_type = peasants
 					}
-					
 				}
-				value = 0.0
-			}
-		}
-
-		multiply = {
-			desc = "LEADER_POPULARITY"
-			scope:interest_group = {
-				leader ?= {
-					value = popularity
-					multiply = 0.0025
-					add = 1
-					max = 1.25
-					min = 0.75
-				}
-			}
-		}
-
-		if = {
-			limit = {
-				scope:interest_group = {
-					is_in_government = yes
-				}
-			}
-			multiply = {
-				desc = "IN_GOVERNMENT_ATTRACTION"
-				value = 1
-				add = scope:interest_group.modifier:interest_group_in_government_attraction_mult
-				min = 0
-			}
-		}
-		
-		if = {
-			limit = {
-				scope:interest_group = {
-					is_in_government = yes
-				}
-			}
-			multiply = { # Multiplied by 1.25x max
-				desc = "POP_LOYALISTS"
-				value = pop_loyalist_fraction
-				divide = 4
-				add = 1
-			}
-		}
-		if = {
-			limit = {
-				scope:interest_group = {
-					is_in_government = no
-				}
-			}
-			multiply = { # Multiplied by 1.25x max
-				desc = "POP_RADICALS"
-				value = pop_radical_fraction
-				divide = 4
-				add = 1
+				value = 0
 			}
 		}
 	}

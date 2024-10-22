@@ -110,6 +110,12 @@
 					has_law = law_type:law_druidic_circles
 				}
 			}
+			AND = {
+				is_pop_type = laborers
+				owner = {
+					is_country_type = preindustrial
+				}
+			}
 		}
 	}
 
@@ -154,6 +160,17 @@
 		add = {
 			desc = "POP_FARMERS"
 			if = {
+				limit = {
+					AND = {
+						is_pop_type = farmers
+						owner = {
+							is_country_type = preindustrial
+						}
+					}
+				}
+				value = 1000
+			}
+			else_if = {
 				limit = {
 					is_pop_type = farmers
 				}

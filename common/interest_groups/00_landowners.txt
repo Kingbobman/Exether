@@ -187,6 +187,12 @@
 			is_pop_type = clergymen
 			is_pop_type = officers
 			is_pop_type = farmers
+			AND = {
+				is_pop_type = laborers
+				owner = {
+					is_country_type = preindustrial
+				}
+			}
 		}
 	}
 
@@ -200,6 +206,21 @@
 					is_pop_type = aristocrats
 				}
 				value = 250
+			}
+		}
+
+		add = {
+			desc = "POP_LABORERS"
+			if = {
+				limit = {
+					AND = {
+						owner = {
+							is_country_type = preindustrial
+						}
+							is_pop_type = laborers
+					}
+				}
+				value = 50
 			}
 		}
 
