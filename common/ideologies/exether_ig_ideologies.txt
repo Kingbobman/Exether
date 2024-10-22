@@ -707,6 +707,7 @@ ideology_hobgoblin_moralist = {
 	
 	lawgroup_governance_principles = {
 		law_monarchy = strongly_approve
+		law_chiefdom = strongly_approve
 		law_theocracy = approve	
 		law_presidential_republic = neutral
 		law_parliamentary_republic = neutral
@@ -760,6 +761,7 @@ ideology_ancestral_moralist = {
 	lawgroup_governance_principles = {
 		law_theocracy = approve
 		law_monarchy = strongly_approve	
+		law_chiefdom = strongly_approve
 		law_presidential_republic = neutral
 		law_parliamentary_republic = neutral
 		law_council_republic = strongly_disapprove
@@ -785,4 +787,56 @@ ideology_ancestral_moralist = {
 		law_appointed_bureaucrats = neutral
 		law_elected_bureaucrats = disapprove
 	}
+}
+
+ideology_ig_traditionalist = {
+	icon = "gfx/interface/icons/ideology_icons/traditionalist.dds"
+	
+	lawgroup_governance_principles = {
+		law_chiefdom = strongly_approve
+		law_monarchy = strongly_disapprove
+		law_theocracy = strongly_disapprove
+		law_magocracy = strongly_disapprove		
+		law_presidential_republic = strongly_disapprove
+		law_parliamentary_republic = strongly_disapprove
+		law_council_republic = strongly_disapprove
+	}
+	
+	lawgroup_distribution_of_power = {
+		law_elder_council = strongly_approve
+		law_single_party_state = strongly_disapprove
+		law_landed_voting = strongly_disapprove
+		law_autocracy = strongly_disapprove
+		law_oligarchy = strongly_disapprove
+		law_wealth_voting = strongly_disapprove
+		law_census_voting = strongly_disapprove
+		law_universal_suffrage = strongly_disapprove
+		law_anarchy = strongly_disapprove
+		law_technocracy = strongly_disapprove
+	}
+	
+	lawgroup_bureaucracy = {
+		law_hereditary_bureaucrats = strongly_approve
+		law_court_mages = neutral
+		law_appointed_bureaucrats = neutral
+		law_elected_bureaucrats = disapprove
+	}
+	
+	lawgroup_economic_system = {		
+		law_traditionalism = strongly_approve
+		law_agrarianism = approve
+		law_interventionism = neutral
+		law_industry_banned = strongly_approve
+		law_laissez_faire = disapprove
+		law_cooperative_ownership = strongly_disapprove
+		law_command_economy = strongly_disapprove
+	}
+	
+	lawgroup_trade_policy = {		
+		law_isolationism = strongly_approve
+		law_mercantilism = approve
+		law_protectionism = neutral
+		law_free_trade = disapprove
+	}
+
 }

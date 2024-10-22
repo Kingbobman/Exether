@@ -63,6 +63,14 @@ ideology_traditionalist = {
 		law_total_separation = strongly_disapprove
 		law_state_atheism = strongly_disapprove
 	}
+
+	lawgroup_governance_principles = {
+		law_chiefdom = strongly_approve
+	}
+
+	lawgroup_distribution_of_power = {
+		law_elder_council = strongly_approve
+	}
 	
 	possible = {
 		# Agitatos should have an ideology at odds with current laws
@@ -76,12 +84,12 @@ ideology_traditionalist = {
 		scope:interest_group = {
 			OR = {
 				is_interest_group_type = ig_rural_folk
-				is_interest_group_type = ig_trade_unions
 				is_interest_group_type = ig_armed_forces
 				is_interest_group_type = ig_petty_bourgeoisie
 				is_interest_group_type = ig_landowners
 				is_interest_group_type = ig_devout
 				is_interest_group_type = ig_mages
+				is_interest_group_type = ig_clans
 			}
 		}
 		scope:interest_group = {
@@ -105,13 +113,26 @@ ideology_traditionalist = {
 			}
 			add = -75
 		}
+		if = {
+			limit = {
+				scope:interest_group = {
+					is_interest_group_type = ig_clans
+				}
+			}
+			add = 1000
+		}
 		# more likely for landowners and devout
 		if = {
 			limit = {
 				scope:interest_group = {
-					OR = {
-						is_interest_group_type = ig_landowners
-						is_interest_group_type = ig_devout
+					AND = {
+						OR = {
+							is_interest_group_type = ig_landowners
+							is_interest_group_type = ig_devout
+						}
+					}
+					NOT = {
+						is_country_type = preindustrial
 					}
 				}
 			}
@@ -3507,6 +3528,12 @@ ideology_liberal_leader = {
 		}
 		else = {
 			add = -50
+		}
+		if = {
+			limit = {
+				is_country_type = preindustrial
+			}
+			add = -1000
 		}
 	}
 }
