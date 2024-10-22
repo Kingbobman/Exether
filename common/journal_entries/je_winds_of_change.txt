@@ -1,0 +1,48 @@
+﻿je_winds_of_change = {
+	icon = "gfx/interface/icons/event_icons/event_centralization.dds"
+	
+	group = je_group_internal_affairs
+
+	immediate = {
+		add_modifier = {
+			name = clan_dominance
+			months = very_long_modifier_time
+			is_decaying = yes
+		}
+	}
+
+	is_shown_when_inactive = {
+		is_country_type = preindustrial
+	}
+	
+	possible = {
+		always = yes
+	}
+
+	complete = {
+
+		NOT = {
+			has_law = law_type:law_elder_council
+		}
+
+		NOT = {
+			has_law = law_type:law_chiefdom
+		}
+
+		ig:ig_clans = {
+			is_marginal = yes 
+		}
+	}
+
+	on_complete = {
+		set_country_type = unrecognized
+		add_modifier = {
+			name = winds_of_change
+			months = 60
+		}
+	}
+
+	should_be_pinned_by_default = yes
+
+	weight = 1000
+}
