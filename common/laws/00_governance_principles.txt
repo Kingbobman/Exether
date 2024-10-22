@@ -10,16 +10,23 @@ law_chiefdom = {
 	progressiveness = -100
 	
 	can_enact = {
-		is_country_type = decentralized
+		OR = {
+			is_country_type = decentralized
+			is_country_type = preindustrial
+		}
 	}
 	
 	is_visible = {
-		is_country_type = decentralized
+		OR = {
+			is_country_type = decentralized
+			is_country_type = preindustrial
+		}
 	}
 	
 	modifier = {
 		country_legitimacy_headofstate_add = 20
 		country_authority_add = 100
+		interest_group_ig_clans_pol_str_mult = 0.25
 	}
 	
 	pop_support = {
@@ -492,8 +499,19 @@ law_council_republic = {
 	unlocking_technologies = {
 		socialism
 	}
+
+	is_visible = {
+		NOR = {
+			is_country_type = decentralized
+			is_country_type = preindustrial
+		}
+	}
 	
 	can_enact = {
+		NOR = {
+			is_country_type = decentralized
+			is_country_type = preindustrial
+		}
 		NOT = { has_government_type = gov_chartered_company }
 	}		
 	
