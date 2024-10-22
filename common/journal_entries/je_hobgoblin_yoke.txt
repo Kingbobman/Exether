@@ -8,9 +8,12 @@
 			has_law = law_type:law_ethnostate
 		}
 		exists = c:YUL
-		is_subject_of = c:YUL
-		is_subject_type = subject_type_tributary
-		is_subject_type = subject_type_banner
+		OR ={
+			is_subject_type = subject_type_tributary
+			is_subject_type = subject_type_banner
+		}
+		
+
 	}
 
 	on_complete = {
