@@ -1,0 +1,50 @@
+unicorn_chosen_one = {
+	type = personality
+	texture = "gfx/interface/icons/character_trait_icons/unicorn_chosen_one.dds"
+
+	character_modifier = {
+		character_health_add = 0.5
+		character_popularity_add = 50
+	}
+	country_modifier = {
+		country_legitimacy_base_add = 10
+        country_opposition_ig_approval_add = 2
+	}
+
+	possible = {
+		always = no
+	}
+
+	value = 0
+}
+
+fiend_false_life = {
+	type = personality
+	texture = "gfx/interface/icons/character_trait_icons/fiend_false_life.dds"
+
+	character_modifier = {
+		character_health_add = 1
+	}
+
+	country_modifier = {
+		country_prestige_mult = 0.05
+		country_influence_mult = 0.25
+	}
+
+	interest_group_modifier = {
+		interest_group_pol_str_mult = 0.25
+		interest_group_pop_attraction_mult = 0.25
+	}
+
+	command_modifier = {
+		unit_offense_mult = 0.2
+		unit_morale_recovery_mult = 0.2
+		character_battle_condition_surprise_maneuver_mult = 1.5
+	}
+
+	possible = {
+		always = no
+	}
+
+	value = 0
+}

@@ -1,0 +1,27 @@
+﻿l_english:
+  arcana_overview_tt: "[concept_attunement] is #tooltippable;tooltip:[Country.GetTooltipTag],attunement_tt [Country.MakeScope.ScriptValue('arcana_attunement')|V0]#! and magic is currently [GetPlayer.GetCustom('magic_opinion_loc')]"
+  attunement_tt: "[AccessPlayer.GetModifier.GetDescFor('country_attunement_add')]"
+  arcana_fanatical_devotion_one_tt: "[ROOT.GetCountry.GetName] has a @arcana_fanatical_color! [concept_fanatical] [concept_arcana_alignment] of atleast #bold 100#!"
+  arcana_outcome_depends_on_attunement: "[ROOT.GetCountry.GetName]'s outcomes are determined by [concept_attunement]." 
+
+  # UNICORN
+  unicorn_ascension_tt: "[ROOT.GetCountry.GetName] #default_text starts #! @information! #yellow The Ordained Ascension#! ([concept_events]) #variable immediately#!"
+  unicorn_dissolution_tt: "[ROOT.GetCountry.GetName] #default_text starts #! @information! #yellow Age of Tranquility#! ([concept_events]) #variable immediately#!"
+  arcana_unicorn_has_basillica: "[ROOT.GetCountry.GetName] #default_text has atleast#! #variable 1#! [GetBuildingType('building_basillica_of_dawn').GetName] ([concept_building])"
+  arcana_unicorn_has_radicals: "[ROOT.GetCountry.GetName] #default_text has atleast#! #variable 1#! [concept_state] #default_text with greater than#! #bold #red 25%#!#! [Concept('concept_radical', '$concept_radicals$')]"
+  arcana_unicorn_2_tt: "[ROOT.GetCountry.GetName] #default_text unlocks#! [GetBuildingType('building_basillica_of_dawn').GetName] ([concept_building])"
+  # SIREN
+  arcana_siren_2_tt: "[ROOT.GetCountry.GetName] #default_text replaces#! [GetBuildingType('building_government_administration').GetName] ([concept_building]) #default_text with#! [GetBuildingType('building_psi_corps').GetName] ([concept_building])"
+  dispel_arcana_siren_2_tt: "[ROOT.GetCountry.GetName] #default_text replaces#! [GetBuildingType('building_psi_corps').GetName] ([concept_building]) #default_text with#! [GetBuildingType('building_government_administration').GetName] ([concept_building])"
+  arcana_siren_4_tt: "[ROOT.GetCountry.GetName] #default_text replaces#! [GetDiplomaticActionType('increase_relations').GetName] ([concept_diplomatic_action]) #default_text with#! [GetDiplomaticActionType('shared_vision').GetName] ([concept_diplomatic_action])"
+  dispel_arcana_siren_4_tt: "[ROOT.GetCountry.GetName] #default_text replaces#! [GetDiplomaticActionType('shared_vision').GetName] ([concept_diplomatic_action]) #default_text with#! [GetDiplomaticActionType('increase_relations').GetName] ([concept_diplomatic_action])"
+  # FIEND
+  fiend_bargain_1_tt: "[ROOT.GetCountry.GetName] #default_text contacts #! @information! #yellow Undying One#! ([concept_events]) #variable immediately#!"
+  fiend_bargain_2_tt: "[ROOT.GetCountry.GetName] #default_text contacts #! @information! #yellow Crimson Oathkeeper#! ([concept_events]) #variable immediately#!"
+  fiend_bargain_3_tt: "[ROOT.GetCountry.GetName] #default_text contacts #! @information! #yellow Harvest Reaver#! ([concept_events]) #variable immediately#!"
+  fiend_bargain_4_tt: "[ROOT.GetCountry.GetName] #default_text contacts #! @information! #yellow Whisperweave Apostle#! ([concept_events]) #variable immediately#!"
+  fiend_bargain_5_tt: "[ROOT.GetCountry.GetName] #default_text contacts #! @information! #yellow Gilded Pactkeeper#! ([concept_events]) #variable immediately#!"
+
+  arcana_shift_dogmatic_tt: "[ROOT.GetCountry.GetName] shifts [Concept('concept_alignment', '$arcana_alignment_lc$')] towards @arcana_dogmatic_color! [concept_dogmatic] by #variable [SCOPE.GetValue('shift_amount')]#!"
+  arcana_shift_iconoclast_tt: "[ROOT.GetCountry.GetName] shifts [Concept('concept_alignment', '$arcana_alignment_lc$')] towards @arcana_iconoclast_color! [concept_iconoclast] by #variable [SCOPE.GetValue('shift_amount')]#!"
+  arcana_shift_fanatical_tt: "[ROOT.GetCountry.GetName] shifts [Concept('concept_alignment', '$arcana_alignment_lc$')] towards @arcana_fanatical_color! [concept_fanatical] by #variable [SCOPE.GetValue('shift_amount')]#!"

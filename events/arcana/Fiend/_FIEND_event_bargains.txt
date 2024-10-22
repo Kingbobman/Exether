@@ -1,0 +1,207 @@
+namespace = fiend_bargain_begin
+
+fiend_bargain_begin.1 = {
+	type = country_event
+    hidden = yes
+
+    immediate = {
+        ig:ig_mages = {
+            save_scope_as = mages_ig
+        }
+
+        random_scope_character = {
+			limit = {
+   			has_role = general
+            NOT = { age < define:NCharacters|ADULT_AGE }
+            NOT = { has_role = agitator }
+			}
+			save_scope_as = chosen_general
+		}
+
+        if = {
+            limit = {
+                exists = scope:chosen_general
+            }
+            trigger_event = {
+                id = fiend_bargain_begin.2
+                popup = yes
+            }
+        }
+        else = {
+            trigger_event = {
+                id = fiend_bargain_begin.3
+                popup = yes
+            }
+        }
+    }
+}
+
+fiend_bargain_begin.2 = {
+	type = country_event
+    placement = ROOT
+    
+	title = fiend_bargain_begin.1.t
+    desc = fiend_bargain_begin.1.desc
+    flavor = fiend_bargain_begin.1.f
+
+	event_image = {
+		video = "europenorthamerica_capitalists_meeting"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_magic.dds"
+    
+    duration = 1
+
+	option = {
+		default_option = yes
+		name = fiend_bargain_begin.1.a
+
+        shift_alignment_dogmatic = {
+            AMOUNT = 10
+        }
+
+        ig:ig_mages.leader = {
+            add_trait = fiend_false_life
+        }
+	}
+
+	option = {
+		name = fiend_bargain_begin.1.b
+
+        shift_alignment_dogmatic = {
+            AMOUNT = 10
+        }
+
+        random_scope_character = {
+            limit = {
+                is_ruler = yes
+            }
+            add_trait = fiend_false_life
+        }
+
+	}
+
+    option = {
+        name = fiend_bargain_begin.1.d
+
+        shift_alignment_iconoclast = {
+            AMOUNT = 15
+        }
+
+        custom_tooltip = {
+            text = arcana_outcome_depends_on_attunement
+        }
+
+        random_list = {
+			1 = {
+                modifier = {
+                    add = arcana_attunement
+                    min = 0
+                }
+				add_modifier = {
+                    name = country_stolen_vigor
+                    years = 5
+                }
+			}
+			5 = {
+				add_modifier = {
+                    name = country_poisoned_life
+                    years = 5
+                }
+			}
+		}
+    }
+
+    option = {
+        name = fiend_bargain_begin.1.c
+
+        shift_alignment_fanatical = {
+            AMOUNT = 10
+        }
+
+        scope:chosen_general = {
+            add_trait = fiend_false_life
+        }
+    }
+    
+}
+
+fiend_bargain_begin.3 = {
+	type = country_event
+    placement = ROOT
+    
+	title = fiend_bargain_begin.1.t
+    desc = fiend_bargain_begin.1.desc
+    flavor = fiend_bargain_begin.1.f
+
+	event_image = {
+		video = "europenorthamerica_capitalists_meeting"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_magic.dds"
+    
+    duration = 1
+
+	option = {
+		default_option = yes
+		name = fiend_bargain_begin.1.a
+
+        shift_alignment_dogmatic = {
+            AMOUNT = 10
+        }
+
+        ig:ig_mages.leader = {
+            add_trait = fiend_false_life
+        }
+	}
+
+    option = {
+        name = fiend_bargain_begin.1.d
+
+        shift_alignment_iconoclast = {
+            AMOUNT = 15
+        }
+
+        custom_tooltip = {
+            text = arcana_outcome_depends_on_attunement
+        }
+
+        random_list = {
+			1 = {
+                modifier = {
+                    add = arcana_attunement
+                    min = 0
+                }
+				add_modifier = {
+                    name = country_stolen_vigor
+                    years = 5
+                }
+			}
+			5 = {
+				add_modifier = {
+                    name = country_poisoned_life
+                    years = 5
+                }
+			}
+		}
+    }
+
+	option = {
+		name = fiend_bargain_begin.1.b
+
+        shift_alignment_dogmatic = {
+            AMOUNT = 10
+        }
+
+        random_scope_character = {
+            limit = {
+                is_ruler = yes
+            }
+            add_trait = fiend_false_life
+        }
+	}
+}
