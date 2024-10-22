@@ -11,7 +11,10 @@
 	}
 
 	enable = {
-		always = yes
+		NOR = {
+			is_country_type = preindustrial
+			is_country_type = decentralized
+		}
 	}
 
 	# Deprecated; use on_enable effect to assign traits instead
@@ -81,6 +84,7 @@
 		NOR = {
 			is_pop_type = aristocrats
 			is_pop_type = capitalists
+			is_pop_type = archmages
 		}
 		OR = {
 			pop_employment_building_group = bg_manufacturing

@@ -323,6 +323,11 @@
 			desc = "POP_PEASANTS"
 			if = {
 				limit = {
+					owner = {
+						NOT = {
+							is_country_type = preindustrial
+						}
+					}
 					is_pop_type = peasants
 				}
 				value = 100
